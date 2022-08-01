@@ -21,6 +21,7 @@ import { GuideMovieCardsWithApi } from "../component/guideMovieClicp/GuideMovieC
 import { ProductViewsLineHeader } from "../component/productViewCard/ProductViewsLineHeader";
 import { useRouter } from "next/router";
 import RecommendGuide from "../component/RecommendGuide/RecommendGuide";
+import Aboutus from "../component/Aboutus/Aboutus";
 
 type TIntroList = {
     title: string;
@@ -178,6 +179,7 @@ const TourLayout = () => {
             <TourAndActivities />
             <LocalGuideAndPrivateTour />
             <RecommendGuide randomSort key={locale + "ProductViewCard1"} />
+            <Aboutus />
         </BookLayout>
     );
 };

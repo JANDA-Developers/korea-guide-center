@@ -16,6 +16,11 @@ a {
     animation:ani_downtop 1000ms 300ms ease-in-out forwards;
 }
 
+
+.aboutAs {
+
+}
+
 .region {
     &__RegionDetailButton{
         all: unset;
@@ -109,7 +114,6 @@ a {
         padding: 25px 15px;
         width: 16.875rem;
         height: 19.875rem;
-        background-color: skyblue;
         border-radius: 10px;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
