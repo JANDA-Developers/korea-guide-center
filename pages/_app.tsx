@@ -19,6 +19,7 @@ import { isIE } from "../utils/isIE";
 import { useGa4Next } from "../hook/useGa4Next";
 import { useDummyLogin } from "../hook/useDummyLogin";
 import { consoleCover } from "../utils/console-config";
+import { RecoilRoot } from "recoil";
 
 const PrivacyModal = lazy(
     () => import("../component/privacyModal/PrivacyModal")
@@ -204,9 +205,11 @@ function App({ Component, pageProps }: any) {
 export const AppWrap = (props: any) => {
     return (
         <div>
-            <ApolloProvider client={apolloClient}>
-                <App {...props} />
-            </ApolloProvider>
+            <RecoilRoot>
+                <ApolloProvider client={apolloClient}>
+                    <App {...props} />
+                </ApolloProvider>
+            </RecoilRoot>
         </div>
     );
 };

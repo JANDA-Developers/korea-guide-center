@@ -83,6 +83,8 @@
 	}
 
 	&__inside-wrap {
+		display: flex;
+		justify-content: center;
 		position: relative;
 		height: min-content;
 	}

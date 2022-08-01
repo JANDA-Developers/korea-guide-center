@@ -1,11 +1,26 @@
 import { Flex, JDalign } from "@janda-com/front";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import BookLayout from "../component/layout/BookLayout";
 import { AppContext } from "../context/context";
 import { SHOPPING_LINK } from "../types/const";
 import { Paths } from "./index[depre]";
+import DragTextSlider from "../component/Slider/DragTextSlider";
+import { InputText, useInput } from "@janda-com/front";
+import { whenEnter } from "../utils/whenEnter";
+import { searchPageQueryGenerate } from "./product/search";
+import styled from "styled-components";
+import { useRecoilState } from "recoil";
+import { menuOpenState } from "../recoil/atoms";
+import Tours from "../component/TourAndActivities/TourAndActivities";
+import DragImageSlider from "../component/Slider/DragImageSlider";
+import TourAndActivities from "../component/TourAndActivities/TourAndActivities";
+import LocalGuideAndPrivateTour from "../component/LocalGuideAndPrivateTour/LocalGuideAndPrivateTour";
+import { GuideMovieCardsWithApi } from "../component/guideMovieClicp/GuideMovieClipList";
+import { ProductViewsLineHeader } from "../component/productViewCard/ProductViewsLineHeader";
+import { useRouter } from "next/router";
+import RecommendGuide from "../component/RecommendGuide/RecommendGuide";
 
 type TIntroList = {
     title: string;
@@ -18,10 +33,37 @@ const svg_arrow_right = `<svg width="40" height="35" viewBox="0 0 40 35" fill="n
 
 const TourLayout = () => {
     const { s } = useContext(AppContext);
+    const { locale } = useRouter();
     const tour_title = "Korea Guide";
     const tour_subtitle = s("tourTitleSubTitle");
     const tour_subUnder = s("everyGuideHasLicense");
-    const tour_bgImage = "/img/main-99.jpeg";
+    const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
+    const onClickMenu = () => {
+        setMenuOpen((prev) => !prev);
+    };
+    const images = [
+        {
+            url: "/img/bgmain/bgmain1.jpg",
+        },
+        {
+            url: "/img/bgmain/bgmain2.jpg",
+        },
+        {
+            url: "/img/bgmain/bgmain3.jpg",
+        },
+    ];
+
+    const texts = [
+        {
+            title: "Locale Tour",
+        },
+        {
+            title: "The Original Korea Guide Tour",
+        },
+        {
+            title: "Private Guide Tour",
+        },
+    ];
 
     const tour_introList: TIntroList[] = [
         {
@@ -50,6 +92,18 @@ const TourLayout = () => {
             icon: "/img/mainIcon/shopping.png",
         },
     ];
+
+    const searchHook = useInput("");
+
+    const onSearchFocus = () => {
+        setMenuOpen((prev) => !prev);
+    };
+
+    const toSearchPage = () => {
+        const to = searchPageQueryGenerate({ title: searchHook.value });
+        location.href = to;
+        // router.push(to);
+    };
 
     const checkOn = (checkTarget: any) => {
         if (checkTarget === "전체") {
@@ -87,28 +141,43 @@ const TourLayout = () => {
         <BookLayout>
             <div className="tour">
                 <div className="tour__container">
-                    <Image
-                        src={tour_bgImage}
-                        layout="fill"
-                        objectFit="cover"
-                        className="tour__bgimage"
-                        loading="eager"
-                        priority
-                    />
-                    <div className="tour__filter"></div>
-                    <div className="tour__titlewrap ani_downtop">
-                        <h1 className="tour__title">{tour_title}</h1>
-                        <p
-                            className="tour__subtitle"
-                            dangerouslySetInnerHTML={{ __html: tour_subtitle }}
-                        ></p>
-                        <p className="tour__mini">{tour_subUnder}</p>
+                    <DragImageSlider images={images} />
+                    {/* <div className="tour__filter"></div> */}
+                    <DragTextSlider texts={texts} />
+                    <div className="tour__searchBar">
+                        <div className="tour__searchBarInnerBox">
+                            <InputText
+                                onFocus={onSearchFocus}
+                                type="text"
+                                autoComplete="false"
+                                className="tour__searchInput"
+                                placeholder={s("searchCitiesGuidesTours")}
+                                {...searchHook}
+                                onKeyDown={whenEnter(toSearchPage)}
+                            ></InputText>
+                            <svg
+                                className="tour__searchIcon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                                width="28"
+                                height="28"
+                            >
+                                <path
+                                    className="tour__searchIconPath"
+                                    fill="#D0242B"
+                                    d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"
+                                />
+                            </svg>
+                        </div>
                     </div>
                     <div className="tour__introwrap">
                         {displayIntroList(tour_introList)}
                     </div>
                 </div>
             </div>
+            <TourAndActivities />
+            <LocalGuideAndPrivateTour />
+            <RecommendGuide randomSort key={locale + "ProductViewCard1"} />
         </BookLayout>
     );
 };

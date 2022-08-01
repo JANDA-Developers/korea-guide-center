@@ -50,6 +50,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                             center
                             mb="largest"
                         >
+                            {/*  */}
                             {selectedRegiion && (
                                 <div className="locationalGuide__regionSecotr">
                                     <RegionDescriptionSecotr
@@ -88,7 +89,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         />
                     )}
                     <Mb mb="largest" />
-                    <Banner
+                    {/* <Banner
                         sliderProps={{
                             autoplay: true,
                         }}
@@ -101,7 +102,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                                 )
                             ) || []
                         }
-                    />
+                    /> */}
                     <Mb mb="largest" />
 
                     <GuideMovieCardsWithApi

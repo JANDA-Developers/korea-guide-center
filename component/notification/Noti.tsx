@@ -106,7 +106,7 @@ export const Noti: React.FC<INotiProp> = ({
                         undefined,
                         offset || {
                             top: "1.5rem",
-                            right: 0,
+                            right: "1.5rem",
                             left: "auto",
                         }
                     );
