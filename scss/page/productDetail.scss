@@ -20,6 +20,18 @@
         }
 
     }
+
+    &__location{
+        display: flex;
+        color:#848c94;
+        font-size: 14px;
+        margin-left: 0.5vh;
+    }
+
+    &__locationMargin{
+        margin-Left: 0.5vh
+    }
+
     .detailNavCardMobile {
         padding: space(2);
         background-color: white;

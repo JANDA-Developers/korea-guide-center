@@ -30,7 +30,7 @@ export const DetailHeader: React.FC<IProp> = ({ tour, product }) => {
                 >{`(${reviewCount})`}</JDtypho>
             </Flex>
             <JDhorizen margin={3} />
-            <IconInfo
+            {/**<IconInfo
                 mb
                 icon="global"
                 label={<Badges items={languages || []}>{(l) => s(l)}</Badges>}
@@ -39,7 +39,7 @@ export const DetailHeader: React.FC<IProp> = ({ tour, product }) => {
                 hide={!!l(address)}
                 icon="location"
                 label={l(address) || ""}
-            />
+            /> */}
         </div>
     );
 };

@@ -51,6 +51,7 @@ import {
     NewstProductViewsLineHeader,
     ProductViewsLineHeader,
     RegionProductViewsLineHeader,
+    RegionProductViewsLineHeader2,
 } from "../../component/productViewCard/ProductViewsLineHeader";
 import { useHistory } from "react-router-dom";
 import { Galley } from "../../component/gallery/Gallery";
@@ -66,6 +67,7 @@ import { ReviewSummaryBox } from "../../component/reviewSummaryBox/ReviewSummary
 import { merge } from "../../utils/merge";
 import { cloneDeep } from "lodash";
 import RenderIfVisible from "../../component/renderIfVisible/RenderIfVisible";
+import LocationMarker from "./LocationMarker";
 
 export interface IProductDetailQuery {
     tourId?: string;
@@ -219,8 +221,19 @@ export const ProductDetail: React.FC<IProp> = ({
             >
                 <Flex oneone>
                     <JDalign className="ProductDetail__body" mr="large">
+                        {/* 동진 */}
+                        {product.region && (
+                            <LocationMarker
+                                location={
+                                    <RegionProductViewsLineHeader2
+                                        // 지역명 + ~~
+                                        region={product.region}
+                                    />
+                                }
+                            ></LocationMarker>
+                        )}
                         <DetailHeader product={product} tour={Tour} />
-                        <JDhorizen margin={3} />
+                        {/*<JDhorizen margin={3} />* */}
                         <Galley photos={Tour.productInfomation.images || []} />
                         <Mb />
                         <InfoCard>
@@ -240,6 +253,10 @@ export const ProductDetail: React.FC<IProp> = ({
                         {videos?.[0]?.uri && <Video src={videos[0]?.uri} />}
                         <JDhorizen margin={3} />
                         {HeadInfo(s("dateSelect"))}
+
+                        {
+                            // 기존 날짜 선택 부분
+                            /* 
                         <DetailTourPicker
                             className="ProductDetail__datepicker"
                             handleSelectTour={handleSelectTour}
@@ -262,7 +279,6 @@ export const ProductDetail: React.FC<IProp> = ({
                         ) : (
                             <Red>{s("noTourDayCanSelect")}</Red>
                         )}
-
                         <Mb mb="largest" />
                         {hasAvilalbeTour && (
                             <JDalign mb="largest">
@@ -288,9 +304,14 @@ export const ProductDetail: React.FC<IProp> = ({
                             <JDalign mb="largest">
                                 <SubPlanViewers subPlanes={subPlanes} />
                             </JDalign>
-                        )}
+                        )} */
+                        }
                         <JDhorizen margin={3} />
-
+                        <JDalign>
+                            {HeadInfo(`투어 소개`)}
+                            <br /> 사진
+                        </JDalign>
+                        <JDhorizen margin={3} />
                         <JDalign
                             hide={!l(include) && !l(unInclude) && !l(address)}
                         >
@@ -317,7 +338,6 @@ export const ProductDetail: React.FC<IProp> = ({
                         {(!l(include) && !l(unInclude)) || (
                             <JDhorizen margin={3} />
                         )}
-
                         <JDalign hide={!l(startPoint)}>
                             <JDalign>{HeadInfo(s("useInfo"))}</JDalign>
                             <JDalign hide={!l(startPoint)}>
@@ -336,7 +356,6 @@ export const ProductDetail: React.FC<IProp> = ({
                             </JDalign>
                             <JDhorizen margin={3} />
                         </JDalign>
-
                         <JDalign hide={!l(importantNotice)}>
                             {HeadInfo(s("importantInfo"))}
                             <Small style={{ whiteSpace: "pre-line" }}>
@@ -385,16 +404,18 @@ export const ProductDetail: React.FC<IProp> = ({
 
                 {!isPreveiw && (
                     <div>
-                        <ProductViewsLineHeader
+                        {/* 여행자들이 본 상품
+                         <ProductViewsLineHeader
                             title={s("TravelerwithProduct")}
                         />
                         <JDalign mb="largest">
                             <ProductViewCardsWithApi />
-                        </JDalign>
+                        </JDalign> */}
                         {product.region && (
                             <JDalign mb="largest">
                                 <RegionProductViewsLineHeader
-                                    region={product.region}
+                                // 지역명 + ~~
+                                // region={product.region}
                                 />
                                 <div>
                                     <ProductViewCardsWithApi
@@ -411,8 +432,9 @@ export const ProductDetail: React.FC<IProp> = ({
                                 </div>
                             </JDalign>
                         )}
-                        <JDhorizen margin={6} />
-                        <RenderIfVisible>
+                        {/* <JDhorizen margin={7} /> */}
+                        {/* 투어&여행 베스트셀러 , 최신&트렌드 투어
+                         <RenderIfVisible>
                             <BestProductViewsLineHeader />
                         </RenderIfVisible>
                         <RenderIfVisible>
@@ -423,8 +445,10 @@ export const ProductDetail: React.FC<IProp> = ({
                         <RenderIfVisible>
                             <NewstProductViewsLineHeader />
                             <ProductViewCardsWithApi {...NewsProductList} />
-                        </RenderIfVisible>
-                        <Mb mb />
+                        </RenderIfVisible> */}
+
+                        {/* 상품 더보기
+                         <Mb mb />
                         <JDbutton
                             mode="flat"
                             thema="primary"
@@ -437,7 +461,7 @@ export const ProductDetail: React.FC<IProp> = ({
                         </JDbutton>
                         {reviewModalHook.isOpen && (
                             <ReviewModal modalHook={reviewModalHook} />
-                        )}
+                        )} */}
                     </div>
                 )}
             </JDcontainer>

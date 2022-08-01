@@ -29,6 +29,7 @@ import { AppContext } from "../../context/context";
 import { QuestionTypes } from "../../types/board";
 import { TElements } from "../../types/interface";
 import { useS4 } from "../../hook/useUniqkey";
+import BadgeDetail from "./BadgeDetail";
 
 interface IProp {
     disabled: boolean | null | undefined;
@@ -166,6 +167,7 @@ interface IBdagesProps<T> extends Partial<IJDbadge> {
 }
 
 export const Badges = <_, T>({
+    // 기존 뱃지 스타일
     items,
     children,
     className,
@@ -176,15 +178,33 @@ export const Badges = <_, T>({
         <Flex vCenter center wrap className={className}>
             {items?.map((item, index) => (
                 <JDbadge
+                    style={{ opacity: "0.7" }}
                     className="textTransformClear"
                     mb="superTiny"
                     key={uniqKey + index}
                     mr={isLast(index, items) ? "no" : "normal"}
-                    thema="grey1"
+                    thema="point"
                     {...props}
                 >
                     {children(item)}
                 </JDbadge>
+            ))}
+        </Flex>
+    );
+};
+
+export const Badges2 = <_, T>({
+    // NEW 뱃지 스타일
+    items,
+    children,
+    className,
+    ...props
+}: IBdagesProps<T>) => {
+    const uniqKey = useS4();
+    return (
+        <Flex vCenter center wrap className={className}>
+            {items?.map((item, index) => (
+                <BadgeDetail name={children(item)}></BadgeDetail>
             ))}
         </Flex>
     );

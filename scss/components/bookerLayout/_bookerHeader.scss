@@ -2,6 +2,17 @@
     @extend %z-depth-1;
    
 
+    &__menu {
+        margin-left: 15px;
+        width: 30px;
+        height: 30px;
+        path {
+            stroke: white;
+            stroke-width: 2;
+        }
+        cursor: pointer;
+    }
+
     &__split {
         color: $grey-level1;
     }
@@ -10,11 +21,11 @@
         width: 55px!important;
     }
     &__top {
-        padding-left: 0px;
-        padding: space(4);
-        padding-top: space(2);
-        padding-left: 0px;
-        padding-right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        margin: 0px 100px;
     }
     
     &__pcHeader {
@@ -51,18 +62,17 @@
     }
 
     &__searchInput {
-        width: 16rem;
+        height: 2.5rem;
+        width: 70vw;
         padding: 0 1.2rem;
         background-color: white;
-        border: 1px solid $grey-level3;
-
         @include response(1000px) {
             width: 200px;
         }
 
         &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
             color: $grey-level4!important;
-            font-size: $typho-small;
+            font-size: $typho-normal;
         }
         
         &:focus {
@@ -81,8 +91,6 @@
                 stroke-width:3px!important;
             }
         }
-        
-        
     }
 
     &__btn {
@@ -92,5 +100,71 @@
         font-weight: 600!important;
         font-size: 1rem!important;
         color: $grey-level4;
+    }
+}
+
+.userContainer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px 100px;
+    box-sizing: border-box;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+}
+
+.logoTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    justify-content: center;
+}
+
+.logoText{
+    &__top {
+        color: black;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    &__bottom{
+        color: black;
+        font-weight: 600;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+.citySelector {
+    &__dropDownContainer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    &__dropDown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 165px;
+        height: 45px;
+        background-color: #d0242b;
+        color: white;
+        border-radius: 7px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    &__textBox {
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
     }
 }

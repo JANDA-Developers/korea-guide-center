@@ -290,10 +290,10 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
         photos: [],
         title: {
             en: `
-            chhungchengnamdo
+            chhungchengnam-Do
             `,
             ot: `
-            chhungchengnamdo
+            chhungchengnam-Do
             `,
             ko: `
             충청남도

@@ -22,21 +22,37 @@ import { genrateOption } from "../../utils/query";
 import { randomArraySort } from "../../utils/shuffle";
 import {
     HorizenGrider,
+    HorizenGrider2,
     IHorizenGriderProp,
 } from "../horizenGrider/HorizenGrider";
 import { mapRegion } from "../koreaMap/KoreaData";
 import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
-import { GuideMovieClip } from "./GuideMovieClip";
+import { GuideMovieClip, GuideMovieClip2 } from "./GuideMovieClip";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
 }
 
+// 원본
 export const GuideMoviewClipList: React.FC<IProp> = ({ guides, ...props }) => {
     return (
         <HorizenGrider
             itemRedner={(item, props) => {
                 return <GuideMovieClip user={item} {...props} />;
+            }}
+            items={guides}
+            align={"auto"}
+            wrap={props.align === "wrap"}
+            {...props}
+        />
+    );
+};
+
+export const GuideMoviewClipList2: React.FC<IProp> = ({ guides, ...props }) => {
+    return (
+        <HorizenGrider2
+            itemRedner={(item, props) => {
+                return <GuideMovieClip2 user={item} {...props} />;
             }}
             items={guides}
             align={"auto"}
@@ -125,6 +141,45 @@ export const HyperRegionByGuideViewCarsGroup: React.FC<
                 description={s("regionGuideDescribe")}
             />
             <GuideMoviewClipList
+                empty={<Empty msg={s("guideNotFoundInArea")} />}
+                guides={guides}
+            />
+        </JDalign>
+    );
+};
+
+export const HyperRegionByGuideViewCarsGroup2: React.FC<
+    IHyperProductGroupProp
+> = ({ hyper }) => {
+    const { locale, push } = useRouter();
+    const { s } = useContext(AppContext);
+    const { items: guides } = useUserList({
+        fixingFilter: {
+            role__not_in: [UserRole.BUYER],
+            isDeleted__not_eq: true,
+            regions_hyper__eq: hyper,
+            profileVideo__notNull: "true",
+            langs__in: [(locale as LANGUAGES) || LANGUAGES.ko],
+        },
+        random: true,
+    });
+
+    const isKr = locale === Locales.ko;
+
+    return (
+        <JDalign mb>
+            <ProductViewsLineHeader
+                title={
+                    (isKr ? MapRegionKr[hyper as mapRegion] : hyper) +
+                    " " +
+                    s("regionGuideTitle")
+                }
+                onSeeMore={() => {
+                    push("/guides");
+                }}
+                description={s("regionGuideDescribe")}
+            />
+            <GuideMoviewClipList2
                 empty={<Empty msg={s("guideNotFoundInArea")} />}
                 guides={guides}
             />

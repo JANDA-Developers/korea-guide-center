@@ -55,8 +55,17 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
         <BookLayout>
             <div className="guideProfile">
                 <div className="guideProfile__bg">
-                    <Img
-                        layout="fill"
+                    <img className="guideProfile__bgimg"
+                        src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
+                    />
+                    <img className="guideProfile__bgimg"
+                        src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
+                    />
+                    <img className="guideProfile__bgimg"
+
+                        src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
+                    />
+                    <img className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
                 </div>

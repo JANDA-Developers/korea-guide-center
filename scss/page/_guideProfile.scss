@@ -1,9 +1,19 @@
 .guideProfile {
     text-align: center;
+
+
+
     &__bg {
         background-color: $grey-level4;
         position: relative;
-        height: space(44);
+        height: space(50);
+        display: flex;
+    
+    }
+
+    &__bgimg{
+        width: 25%;
+        height: auto;
     }
 
     &__profile {

@@ -24,6 +24,8 @@ import { RatingStar } from "../rating/Rating";
 import { ResolutionImg } from "../resolutionImg/ResoulutionImg";
 import { WishIcon } from "../wisthIcon/WishIcon";
 
+// 투어 상품
+
 export interface IProductViewCard extends IJDalignProp {
     product: Fproduct;
     withoutLink?: boolean;
