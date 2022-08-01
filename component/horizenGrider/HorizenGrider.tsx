@@ -4,6 +4,7 @@ import React, { PropsWithChildren, useLayoutEffect, useState } from "react";
 import { useResizeDetector } from "react-resize-detector";
 import { TElements } from "../../types/interface";
 import { AnimationOnScroll } from "../scrollAnimation/ScrollAnimation";
+import GuideIntro from "./GuideIndtro";
 
 export interface IHorizenGriderProp<T> {
     align?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | "auto" | "wrap";
@@ -126,13 +127,11 @@ export const HorizenGrider2 = <_, T>({
                         <div className="ProductViewCards__empty">{empty}</div>
                     )}
 
-                    {items.map((item) =>
-                        itemRedner(item, {
-                            className: "ProductViewCards__card",
-                            mr: true,
-                            mb: true,
-                        })
-                    )}
+                    {items.map((item) => console.log(item))}
+
+                    {items.map((item) => (
+                        <GuideIntro item={item}></GuideIntro>
+                    ))}
 
                     <JDalign
                         mr

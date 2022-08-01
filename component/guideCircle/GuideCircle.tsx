@@ -45,3 +45,13 @@ export const GuideCircle: React.FC<Iprops> = ({
         />
     );
 };
+
+export const GuideCircle2: React.FC<Iprops> = ({
+    guideId,
+    guideProfile,
+    ...props
+}) => {
+    const { img } = useResizedImgLoadFailPreventer(guideProfile || "");
+    const router = useRouter();
+    return <img style={{ width: "20vh", height: "20vh" }} src={img}></img>;
+};
