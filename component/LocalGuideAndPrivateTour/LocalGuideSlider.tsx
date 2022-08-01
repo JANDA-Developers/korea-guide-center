@@ -185,6 +185,13 @@ const LocalGuideSlider = () => {
                     <button
                         onClick={onClickNext}
                         className="slider__ShortSliderRightArrow"
+                        style={{
+                            display:
+                                index ===
+                                Math.ceil(localGuideData.length / offset) - 1
+                                    ? "none"
+                                    : "block",
+                        }}
                     >
                         <svg
                             width="40"

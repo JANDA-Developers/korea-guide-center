@@ -160,6 +160,12 @@ const TourSlider = () => {
                     <button
                         onClick={onClickNext}
                         className="slider__LongSliderRightArrow"
+                        style={{
+                            display:
+                                index === Math.ceil(data.length / offset) - 1
+                                    ? "none"
+                                    : "block",
+                        }}
                     >
                         <svg
                             width="40"

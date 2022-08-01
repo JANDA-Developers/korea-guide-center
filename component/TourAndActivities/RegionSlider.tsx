@@ -273,6 +273,13 @@ const RegionSlider = () => {
                     <button
                         onClick={onClickNext}
                         className="slider__ShortSliderRightArrow"
+                        style={{
+                            display:
+                                index ===
+                                Math.ceil(regionData.length / offset) - 1
+                                    ? "none"
+                                    : "block",
+                        }}
                     >
                         <svg
                             width="40"

@@ -16,17 +16,6 @@ import { genrateOption } from "../../utils/query";
 import { TElements } from "../../types/interface";
 import RecommendGuideSlider from "./RecommendGuideSlider";
 
-const Container = styled.div`
-    width: 100%;
-    margin-top: 30px;
-`;
-
-const SectionTitle = styled.h1`
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 80px;
-`;
-
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
 }
@@ -67,8 +56,8 @@ const RecommendGuide: React.FC<IGuideMovieCardsWithApi> = ({
     console.log(users);
 
     return (
-        <Container>
-            <SectionTitle>
+        <div className="slider__RecommendGuideContainer">
+            <h1 className="slider__RecommendGuideSectionTitle">
                 <span
                     style={{
                         color: "#D0242B",
@@ -77,9 +66,9 @@ const RecommendGuide: React.FC<IGuideMovieCardsWithApi> = ({
                     Recommend
                 </span>{" "}
                 Guides
-            </SectionTitle>
+            </h1>
             <RecommendGuideSlider />
-        </Container>
+        </div>
     );
 };
 
