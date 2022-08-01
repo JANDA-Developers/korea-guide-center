@@ -7,5 +7,6 @@ const PROD = "https://api.koreaguide.center/graphql";
 export const SERVER_URI = process.env.NODE_ENV === "development" ? LOCAL : PROD;
 
 export default (() => {
+    console.log("dfdsafaf: " + SERVER_URI);
     return SERVER_URI;
 })();

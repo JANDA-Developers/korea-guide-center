@@ -30,7 +30,7 @@ interface IProp extends IJDalignProp {
 export const Info: React.FC<IProp> = ({ children, label, value, ...props }) => {
     return (
         <JDalign vCenter {...props}>
-            <JDtypho size="small" mb="tiny" color="grey3">
+            <JDtypho size="small" mb="tiny" color="black">
                 {label}
             </JDtypho>
             {value || children}

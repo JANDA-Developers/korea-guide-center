@@ -14,9 +14,7 @@ export const RatingStar: React.FC<IProp> = ({ startProp, ...props }) => {
             emptySymbol={
                 <JDicon color="primary" {...startProp} icon="emptyStar" />
             }
-            fullSymbol={
-                <JDicon color="primary" {...startProp} icon="fullStar" />
-            }
+            fullSymbol={<JDicon color="point" {...startProp} icon="fullStar" />}
             fractions={2}
             {...props}
         />

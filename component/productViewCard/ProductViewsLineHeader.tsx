@@ -162,3 +162,12 @@ export const RegionProductViewsLineHeader: React.FC<
         />
     );
 };
+
+export const RegionProductViewsLineHeader2: React.FC<
+    Partial<IRegionPVLProp>
+> = ({ region, ...props }) => {
+    const { l, s } = useContext(AppContext);
+    const router = useRouter();
+
+    return <div>{l(region?.label)}</div>;
+};

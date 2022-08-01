@@ -38,13 +38,13 @@ export const LoginPage: React.FC<IProp> = () => {
                 size={bannerExsist ? WindowSize.md : WindowSize.sm}
             >
                 <Flex oneone>
-                    <Banner
+                    {/* <Banner
                         hide={isEmpty(loginBannerImgs)}
                         className="LoginBanner"
                         mb
                         bannerImages={loginBannerImgs}
                         ratio={0.75}
-                    />
+                    /> */}
                     <JDcard
                         mb
                         style={{ maxWidth: 500, margin: "0 auto" }}

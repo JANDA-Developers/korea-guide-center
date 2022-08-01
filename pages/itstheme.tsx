@@ -30,9 +30,8 @@ export const LocationalGuide: React.FC<IProp> = () => {
     return (
         <BookLayout>
             <JDcontainer verticalPadding size={WindowSize.lg}>
-                <ItemMiniCategories />
                 <Mb mb="largest" />
-                <Banner
+                {/**<Banner
                     ratio={1}
                     slideToShow={8}
                     className="tourCircleBanner"
@@ -46,7 +45,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                             )
                         ) || []
                     }
-                />
+                /> */}
                 <ProductsGroupRenders />
 
                 <ProductViewCardsWithApi

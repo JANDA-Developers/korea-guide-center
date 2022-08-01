@@ -1,4 +1,51 @@
-.detailNavCard__badges {
-    justify-content: flex-start!important;
-    font-size: $typho-tiny;
+
+.detailNavCard{
+    &__badges {
+        justify-content: flex-start!important;
+        font-size: $typho-tiny;
+    }
+    &__introduce{
+        width: 200px;
+        font-size: 0.8em;
+        background: #FFF0F0;
+        padding: 10px 9px 10px 17px;
+        border-radius: 18px;
+        margin-top: 1vh;
+    }
+    
+    &__logoComponent{
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    &__img{
+        margin-left: -3vh;
+        width: 60px;
+        height: 50px;
+    }
+    
+    &__logobox{
+        align-self: center;
+        margin-left: 2vh;    
+        font-size: 1.3em;
+        font-weight: bold;   
+    }
+    
+    &__jdButtonWidth{
+        width:80px;
+    }
+    
+    &__InfoboxWidth{
+        width: 31vh;
+    }
+    
+    &__jdCard{
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+        width: 29vh;
+    }
+    
 }
+
+

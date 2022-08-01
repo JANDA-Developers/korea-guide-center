@@ -29,6 +29,7 @@ export const MovieClipCard: React.FC<IProp> = ({
                     secondImg={secondImg}
                 />
             )}
+
             <div className="movieClipCard__body">{Body}</div>
         </JDalign>
     );
