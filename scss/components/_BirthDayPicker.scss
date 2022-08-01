@@ -1,0 +1,17 @@
+.birthDayPicker {
+    &__year {
+        min-width: 120px!important;
+        min-width: max-content;
+    }
+
+    &__month {
+        min-width: 80px!important;
+        min-width: max-content;
+
+    }
+
+    &__day {
+        min-width: 80px!important;
+        min-width: max-content;
+    }
+}

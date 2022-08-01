@@ -1,0 +1,63 @@
+.iconWrapper {
+	line-height: 0;
+	position: relative;
+	display: inline-block;
+}
+
+.JDicon__svg {
+	display: inline-flex;
+	align-self: center;
+	position: relative;
+	text-decoration: inherit;
+
+	path,
+	polygon,
+	rect,
+	line,
+	circle {
+		fill: currentColor;
+	}
+
+	&--selected {
+		color: $primary-color-light-ie;
+		color: $primary-color-light;
+
+		&:hover {
+			color: $primary-color-dark;
+
+		}
+	}
+}
+
+// 🍡 그냥 도큐먼트를 위한겁니다.
+.Icon__label {
+	font-size: $typho-superTiny;
+	width: 100%;
+	color: black;
+
+	&--large {
+		font-size: $typho-normal;
+	}
+}
+
+.JDicon {
+	width: 1em;
+	height: auto;
+
+	@include iconSize--prefixer();
+}
+
+.JDicon__badge {
+	top: -1 * space(1);
+	right: -1 * space(1);
+	position: absolute !important;
+}
+
+html .JDicon--small {
+	width: .8rem;
+    height: .8rem;
+}
+html .JDicon--normal {
+	width: 1.2rem;
+    height: 1.2rem;
+}

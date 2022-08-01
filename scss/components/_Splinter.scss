@@ -1,0 +1,11 @@
+.splinter {
+	display: inline-block;
+	box-sizing: border-box;
+	color: $splinter-color;
+	transform: scaleY(#{$splinter-yzoom});
+	align-self: center;
+	vertical-align: center;
+	padding-right: $standard-space;
+	padding-left: $standard-space;
+	font-weight: 100;
+}

@@ -1,0 +1,21 @@
+.userProfileCard {
+    flex: 0;
+    background-color: white;
+    max-width: 16rem;
+    min-width: 14rem;
+    border-radius: $br2;
+    overflow: hidden;
+    border: 1px solid $outborder-color;
+    position: relative;
+    text-align: center;
+
+    &__bgImg {
+        background-color: $grey-level4;
+    }
+    &__profileZone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }   
+}

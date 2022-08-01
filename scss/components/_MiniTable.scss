@@ -1,0 +1,32 @@
+.miniTable {
+    width: 100%;
+    font-size: $typho-small;
+    border-bottom: 1px solid $grey-level1;
+    height: max-content;
+    &__row {
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+    &__col {
+        border-top: 1px solid $grey-level1;
+    }
+    &__label {
+        white-space: nowrap;
+        padding: space(2) space(2);
+        background-color: $primary-color-light2-ie;
+        background-color: $primary-color-light2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__value {
+        flex-wrap: wrap;
+        padding: space(2) space(2);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+}

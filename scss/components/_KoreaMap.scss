@@ -1,0 +1,87 @@
+
+.KoreaMpWrap {
+    @include response($tablet) {
+        width: 33.125rem!important;
+        transform: scale(.8);
+    }
+
+    &__dmzWrap {
+        position:absolute;
+        pointer-events: none;
+    }
+
+    &__dmzFlag {
+        position: absolute;
+        left : 140px;
+        top: -35px;
+        width:95px;
+        height:65px;
+    }
+
+    &__gray_dmzFlag{
+        position: absolute;
+        left : 140px;
+        top: -50px;
+        width:95px;
+        height:65px;
+    }
+
+
+    &__dmzLine {
+        position: absolute;
+        width: 13.5rem!important;
+        top: -98px;
+        left: 72px;
+        z-index: 0;
+
+        @include response($tablet) {
+            width: 14rem!important;
+        }
+
+        @include response($mobile) {
+            width: 16.5rem!important;
+        }
+    }
+
+}
+.KoreaMap {
+    position: relative;
+    z-index: 1;
+    width: 28.125rem!important;
+   
+    
+    path {
+        fill: transparent!important;
+    }
+
+    &--selected {
+
+        .KoreaMap__region:not(.KoreaMap__region--selected) { 
+        }
+        .KoreaMap__region--selected { 
+            
+            position : absolute;
+            fill: $primary-color-dark!important
+        }
+    }
+    &__img {
+        z-index: 1;
+        // position:absolute;
+        display : block;
+        border: black 3px solid;
+    }
+
+    &__region {
+        outline: none;
+        stroke: $grey-level3;
+        stroke: rgba(0,0,0,.35);
+        stroke-width: 1px;
+
+
+        &:hover {
+            
+            cursor: pointer;
+            fill: $primary-color-dark!important
+        }
+    }
+}

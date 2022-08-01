@@ -1,0 +1,96 @@
+.bookHeader {
+    @extend %z-depth-1;
+   
+
+    &__split {
+        color: $grey-level1;
+    }
+    
+    &__logo {
+        width: 55px!important;
+    }
+    &__top {
+        padding-left: 0px;
+        padding: space(4);
+        padding-top: space(2);
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    &__pcHeader {
+        @include response($tablet) {
+            display: none!important;
+        }
+    }
+
+    &__mobileHeader {
+        padding-top: space(3);
+        display: none!important;
+        @include response($tablet) {
+            display: block!important;
+        }
+    }
+
+    
+    &__bottom {
+        padding-left: 0px;
+        padding-top: 0px;
+        border-bottom: $html-color;
+    }
+
+    &__bottomBtn {
+        cursor: pointer;
+        padding: space(1.5);
+        padding-bottom: space(1.5);
+        border-bottom: 3px solid white;
+        transition: border-bottom 1s;
+
+        &:hover {
+            border-bottom: 3px solid $primary-color;
+        }
+    }
+
+    &__searchInput {
+        width: 16rem;
+        padding: 0 1.2rem;
+        background-color: white;
+        border: 1px solid $grey-level3;
+
+        @include response(1000px) {
+            width: 200px;
+        }
+
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: $grey-level4!important;
+            font-size: $typho-small;
+        }
+        
+        &:focus {
+            color: $primary-color!important;
+            & + .JDinput-iconWrap {
+                    svg.JDicon {
+                        color: $primary-color!important;
+                    }
+                }
+                
+            
+        }
+        & + .JDinput-iconWrap .JDicon  {
+            color: $grey-level4!important;
+            path,line {
+                stroke-width:3px!important;
+            }
+        }
+        
+        
+    }
+
+    &__btn {
+        margin-left: space(1)!important;
+        padding-left: space(2)!important;
+        padding-right: space(2)!important;
+        font-weight: 600!important;
+        font-size: 1rem!important;
+        color: $grey-level4;
+    }
+}

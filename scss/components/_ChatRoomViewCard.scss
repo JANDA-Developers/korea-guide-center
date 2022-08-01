@@ -1,0 +1,19 @@
+.ChatRoomViewCard {
+    padding: space(4);
+    border: 1px solid $outborder-color;
+    background-color: white;
+
+
+    &:hover  {
+        cursor: pointer;
+        background-color: $grey-level0;
+    }
+
+    &__avatar + .ChatRoomViewCard__avatar {
+        margin-left: -1 * space(1);
+    }
+
+    &__profileZone {
+        min-width: 5.25rem;
+    }
+}

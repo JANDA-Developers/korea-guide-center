@@ -1,0 +1,38 @@
+.productConfig {
+
+    &--addRoundMode {
+
+        .productConfig__body  {
+            flex-direction: column-reverse;
+        }
+        
+        .productConfig__stepCard {
+            margin-right: 0px!important;
+            display: none;
+            &--datePick {
+                display: block;
+            }
+        }
+        .productConfig__stepBox {
+            display: none;
+        }
+    }
+
+    &__pcStepBtn {
+        @include response($tablet) {
+            display: none;
+        }
+    }
+    &__mbStepBtn {
+        display: none;
+        @include response($tablet) {
+            display: block;
+        }
+    }
+
+    &__body {
+        @include response($tablet) {
+            margin-right:  -1 * space(2);
+        }
+    }
+}

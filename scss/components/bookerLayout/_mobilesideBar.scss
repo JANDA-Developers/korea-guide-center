@@ -1,0 +1,45 @@
+.mobilesideBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: $z-index-8;
+
+    &__btns {
+        width: 100%;
+        margin-top: .4rem;
+        .JDbtn__contents {
+            justify-content: flex-start;
+        }
+    }
+
+    &__textBtn {
+        padding: space(1.5) space(3);
+    }
+   
+    
+    &__unLoginHead {
+        padding: space(3);
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        padding: space(4);
+    }
+
+    &__content {
+        max-width: 15rem;
+        background-color: white;
+    }
+
+    &__head {
+        padding: space(3);
+    }
+
+    &__curton {
+        height: 100%;
+        background-color: rgba(0,0,0,.3);
+    }
+}

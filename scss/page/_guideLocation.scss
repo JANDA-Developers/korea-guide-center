@@ -1,0 +1,55 @@
+.locationalGuide {
+
+
+
+    &__regionArea {
+        // background: url("/img/koreaMapBG.jpg");
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        position: relative;
+        .container  {
+            padding-bottom: 0px!important;
+        }
+
+        &-bg {
+            opacity: 0.3;
+        }
+
+        &-on {
+            position: relative;
+            z-index: 1;
+        }
+
+    }
+
+    &__region {
+        margin-top: 6rem;
+        @include response($tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__regionSecotr {
+        margin-top: -7rem;
+        @include response($tablet) {
+            margin-top:0;
+        }
+        
+    }
+    
+    &__mapWrapper {
+        flex: 0;
+    }
+
+    &__mapWrapper {
+        @include response($tablet) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        transform: scale(.8);
+    }
+    
+}

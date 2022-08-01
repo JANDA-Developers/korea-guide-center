@@ -1,0 +1,39 @@
+.dobuleRangeSlider {
+    &__thumb {
+        height: space(4.5);
+        width: space(4.5);
+        border-radius:  50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $grey-level1;
+        @extend %z-depth-1;
+    }
+
+    &__thumbIn {
+        border-radius: 50%;
+        width: space(2);
+        height: space(2);
+    }
+}
+
+.rangeSlider {
+    &__thumb {
+        height: space(4.5);
+        width: space(4.5);
+        border-radius:  50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $grey-level1;
+        @extend %z-depth-1;
+    }
+
+    &__thumbIn {
+        border-radius: 50%;
+        width: space(2);
+        height: space(2);
+    }
+}

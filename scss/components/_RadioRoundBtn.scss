@@ -1,0 +1,28 @@
+.JDroundRadioBtn {
+    .JDbtn {
+        &:first-child {
+            border-radius: 4px 0px 0px 4px !important;
+        }
+    }
+    .JDbtn {
+        border-radius: 0px!important;
+        
+        &:not(:last-child) {
+            border-right: 0px!important;
+        }
+
+    }
+    .JDborderColor--primary + .JDbtn {
+        border-left: 1px solid $primary-color-ie!important;
+        border-left: 1px solid $primary-color!important;
+    }
+
+    .JDbtn {
+        &:last-child {
+            border-radius: 0px 4px 4px 0px !important;
+        }
+    }
+}
+.radioBox .JDbtn {
+    border-color: #989898 !important;
+}

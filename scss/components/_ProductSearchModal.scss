@@ -1,0 +1,20 @@
+.ProductSearchModal {
+    .ProductViewCards__card {
+        transition: none;
+        box-sizing: border-box;
+        border:  1px solid $grey-level1;
+        &:hover {
+        border: 2px solid $primary-color-light-ie;
+        border: 2px solid $primary-color-light;
+        @extend %z-depth-1;
+        }
+
+        &--placeholder {
+            opacity: 0;
+        }
+    }
+
+    .productViewCard__thumbImg {
+        transition: none;
+    }
+}

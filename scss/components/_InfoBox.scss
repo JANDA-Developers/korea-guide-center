@@ -1,0 +1,14 @@
+.infoBox {
+    padding: space(1) space(2);
+    border-left: 3px solid $primary-color;
+    font-size: $grey-level4;
+    font-size: $typho-small;
+    background-color: $grey-level-1;
+    border-radius: $br1;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &__icon {
+        color: $grey-level4;
+    }
+}

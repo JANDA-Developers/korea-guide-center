@@ -1,0 +1,29 @@
+.GroupGroup {
+
+    &__inner {
+    overflow: auto;
+    overflow-y: hidden;
+    }
+    
+    .formCreater__draggWrap {
+        display: flex!important;
+    }
+
+    &__closer {
+        position: absolute;
+        right: space(1);
+        top: space(1);
+        z-index: 10;
+        color: $error-color;
+        cursor: pointer!important;
+    }
+
+    &__box {
+        position: relative;
+    }
+
+    &__viewCard {
+        height: 22rem;
+        width: 16rem;
+    }
+}

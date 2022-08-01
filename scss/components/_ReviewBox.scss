@@ -1,0 +1,26 @@
+.reviewBox {
+    &__imgBox {
+        cursor: pointer;
+        position: relative;
+    }
+    &__imgHasMore {
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+        color: white;
+    }   
+
+    &__tourInfo {
+        display: none;
+    }
+
+    &__comment {
+        .commentViewer {
+            padding-left: space(4);
+        }
+    }
+
+
+}
+
+

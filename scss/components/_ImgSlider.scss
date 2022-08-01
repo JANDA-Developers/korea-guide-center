@@ -1,0 +1,12 @@
+.imageSliderModal {
+    @include response($tablet) {
+        .slick-slider {
+            width: 100%!important;
+            max-height: 300px;
+        }
+        .photoFrame__bgimg {
+            width: 100%!important;
+            max-height: 300px;
+        }
+    }
+}

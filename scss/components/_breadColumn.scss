@@ -1,0 +1,7 @@
+.breadColumn__link + .breadColumn__link {
+    &::before {
+        font-size: 12px;
+    content: ">";
+    margin: 0 space(1);
+    }
+}

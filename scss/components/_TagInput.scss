@@ -1,0 +1,46 @@
+
+.JDtagInput {
+    width: 100%;
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    padding: $input-padding;
+    min-height: $standard-line-height;
+	height:auto;
+    font-size: $input-font-size;
+    border: 1px solid $outborder-color;
+    border-radius: $br1;
+
+    &__tags {
+        .JDicon {
+            margin-left: space(1);
+            font-size: .7rem;
+            font-weight: bold;
+            &:hover {
+                color: $error-color;
+            }
+        }
+    }
+    &__tag {
+        height: space(4);
+        padding: space(.5) space(1);
+        margin-right:space(1);
+        border-radius: $br1;
+        background-color: $blue-opacity1;
+        cursor: pointer;
+        margin: 2px;
+        font-size: $typho-small;
+        height: 1.4rem;
+        display: flex;
+        align-items: center;
+        
+        &:hover {
+            background-color: $blue-opacity2;
+        }
+    }
+    &__input {
+        flex-grow: 1;
+        outline: none;
+        border: none;
+    }
+}

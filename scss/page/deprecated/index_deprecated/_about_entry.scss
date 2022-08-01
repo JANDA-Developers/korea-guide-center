@@ -1,0 +1,75 @@
+
+
+.about {
+
+    .entry {
+        &__container {
+            position:relative;
+            height:40vh;
+        }
+
+        &__filter {
+            position:absolute;
+            top:0; left:0; right:0; bottom:0;
+            background:rgba(0,0,0,0.3);
+        }
+    
+        &__image {
+            position:absolute;
+            top:0; left:0; right:0; bottom:0;
+            height:100%;
+            @include mixin_bgImg;
+        }
+    
+        &__title {
+            @include mixin_center_absolute;
+            font-size:2rem;
+            color:#ffffff;
+        }
+    }
+
+}
+
+
+@media screen and (min-width:768px) {
+
+    .about {
+    
+        .entry {
+            &__container {
+                height:45vw;
+            }
+            &__title {
+                font-size:2.3rem;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .about {
+
+        .entry {
+            &__container {
+                position:relative;
+                height:500px;
+            }
+        
+            &__title {
+                font-size:2.8125rem;
+            }
+        }
+    
+    }
+
+}
+
+@media screen and (min-width:1680px) {
+    
+}
+
+
+

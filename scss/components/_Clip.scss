@@ -1,0 +1,8 @@
+html .JDclip {
+    background-color: $grey-level-1;
+    width: max-content;
+    text-transform: none!important;
+    &:hover {
+        background-color: $grey-level0;
+    }
+}

@@ -1,0 +1,39 @@
+
+
+
+.mainMenu {
+    flex: 1;
+    background: $side-bg;
+    max-width: $main-menu-width;
+
+    &__list {
+        cursor: pointer;
+        display: block;
+        padding: space(1.5);
+        text-align: center;
+        border-radius: $br2;
+        transition: background 300ms;
+        color: $primary-color-light2-ie;
+        color: $primary-color-light2;
+        display: block;
+        margin: space(2) 0 ;
+        margin-left: space(1);
+        
+        border-radius: 5px 0px 0px 5px;
+        &:hover {
+        }
+
+
+        &--active {
+            background: $side-second-bg!important;
+            border-radius: $br4 0px 0px $br4;
+            color: $primary-color-ie;
+            color: $primary-color;
+        }
+
+        .iconWrapper {
+            display: block;
+            margin: 0 auto space(1) auto;
+        }
+    }
+}

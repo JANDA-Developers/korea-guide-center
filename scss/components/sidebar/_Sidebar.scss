@@ -1,0 +1,157 @@
+
+$side-bg:  $primary-color;
+
+@import "./MainMenu";
+@import "./SubMenu";
+
+.sidebar {
+    position: sticky;
+    top:0;
+    min-width: $sidebar-width;
+    z-index: $z-index-7;
+    max-width: $sidebar-width;
+    height: 100vh;
+    @include shadow(1);
+
+    &--close {
+
+        .logo {
+            width: 3.375rem!important;
+        }
+        .sidebar__logo {
+            margin-left: space(2);
+        }
+    }
+
+    &--unLogined {
+        display: none!important;
+    }
+
+    &--close {
+        min-width: $main-menu-width;
+        max-width: $main-menu-width;
+
+        .subMenu {
+            display: none;
+        }
+
+        .sidebar__infozone {
+            display:none;
+        }
+
+        .sidebar__mo-curtain {
+            display: none;
+        }
+    }
+
+    &__foot {
+        position: absolute;
+        bottom: 0;
+        color: $html-color;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: space(4);
+    }
+    
+
+    &__head {
+        position: relative;
+        padding: space(2);
+        padding-left: 0px;
+        padding-right: 0px;
+        box-sizing: border-box;
+        color: white;
+        background: white;
+        height: $header-height;
+    }
+
+    &__latest {
+        opacity: 0.5;
+    }
+
+
+    &__close {
+        position: absolute;
+        bottom: space(5);
+        right: space(4);
+    }
+
+    &__menu {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        min-height: 700;
+        height: calc(100% - #{$header-height});
+        overflow: auto;
+
+        ul {
+            flex: 1 1;
+        }
+    }
+
+    &__subMenu {
+        flex: 2;
+        background: $side-second-bg;
+
+    }
+
+    
+    &__memberNav {
+        font-size: $typho-small;
+
+        .off {
+            display: none;
+        }
+
+        a {
+            display: inline-block;
+            position: relative;
+            padding: 0 space(2);
+            font-weight: bold;
+
+            &.sidebar__login {
+                padding-left: 0;
+            }
+
+            &.sidebar__logout {
+                padding-left: 0;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 2px;
+                    height: 100%;
+                    background: white;
+                }
+            }
+        }
+    }
+
+    
+    @include response($tablet) {
+
+        &--close {
+            display: none;
+        }
+
+        position: absolute;
+        .sidebar__mo-curtain {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            top:0;
+            right:0;
+            left: 0;
+            background-color: rgba(0,0,0,.3);
+            backdrop-filter: blur(3px);
+            z-index: -1;
+        }
+    }
+}
+

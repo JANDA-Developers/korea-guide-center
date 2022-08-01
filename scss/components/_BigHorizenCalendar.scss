@@ -1,0 +1,71 @@
+.bigHorizenCalendar {
+    position: relative;
+    display: flex;
+    &__day {
+        min-width: 7.25rem;
+        padding:  space(2) space(1);
+        transition: 0.3s;
+        border-radius: $br2;
+        box-sizing: border-box;
+        border: 1px solid #fff;
+        &--selected {
+            border: 1px solid $primary-color;
+
+            color: $primary-color;
+            
+            &:hover {
+                background-color: $primary-color-light;
+            }
+        }
+        
+        cursor: pointer;
+        &:hover {
+            background-color: $grey-level0;
+        }
+    }
+    &__icons {
+        position: absolute;
+        background-color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 2.125rem;
+        height: 2.125rem;
+        transition: .3s;
+        border: 1px solid $grey-level0;
+
+        &--left {
+            top: 50%;
+            left: 0;
+            @extend %z-depth-1;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        &--right {
+            top: 50%;
+            right: 0;
+            @extend %z-depth-1;
+            transform: translateY(-50%) translateX(50%);
+        }
+        
+        &:hover {
+            @extend %z-depth-3;
+        }
+
+        @include response($tablet) {
+            display: none;
+        }
+    }
+
+    &__daysWrap {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        @extend %hideScroll;
+        display: flex;
+        overflow: auto;
+        max-width: 100%;
+        transition: 0.5s;
+        scroll-behavior: smooth;
+    }
+}

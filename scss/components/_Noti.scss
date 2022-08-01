@@ -1,0 +1,46 @@
+.JDnoti {
+
+    .react-tabs__tab-list {
+        margin-bottom: 0 !important;
+    }
+    
+
+    &__search {
+        padding: space(1) space(2);
+        border-bottom: 1px solid $outborder-color;
+    }
+
+    &__ul {
+        @extend %JDscrollbar;
+        height: space(50);
+    }
+
+    &__dropBox {
+        max-height: space(60);
+        overflow: auto!important;
+        width: space(60);
+    }
+
+    &__tabListWrap {
+        padding: 0 space(2);
+        display: flex;
+        height: $standard-small-line-height;
+        line-height: $standard-small-line-height;
+        border-bottom: 1px solid $outborder-color;
+    }
+
+    #{&}Line {
+        padding: space(2) space(2);
+        border-bottom: 1px solid $grey-level1;
+        box-sizing: border-box;
+    }
+
+}
+
+.JDnotiLine {
+    &__contentWrap {
+        line-break: anywhere;
+        white-space: pre-line;
+
+    }
+}

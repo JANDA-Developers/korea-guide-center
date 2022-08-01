@@ -1,0 +1,90 @@
+
+@mixin mixin_bgImg {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin mixin_center_absolute {
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+}
+
+$color_about:rgb(99, 99, 245);
+$color_about_bg_grey:#F5F5F5;
+
+$padding_section_mb:50px 20px;
+$padding_section_pc:80px 0px;
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:1024px) {
+
+}
+
+@media screen and (min-width:1680px) {
+    
+}
+
+
+/* ::::::::::::::::::::::::::::::::
+
+About Common 
+
+:::::::::::::::::::::::::::::::: */
+
+ul {
+    padding:0;
+    list-style: none;
+}
+
+.about {
+    &__pagetitle {
+        text-align: center;
+        padding:50px 0;
+        font-size: 1.3rem;
+        font-weight:700; 
+    }
+
+    &__deco {
+        
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .about {
+        &__pagetitle {
+            padding:60px 0;
+            font-size: 1.7rem;
+        }
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    
+    .about {
+        &__pagetitle {
+            padding:80px 0;
+            font-size: 1.875rem;
+        }
+    }
+}
+
+@media screen and (min-width:1680px) {
+    
+}
+
+@import './_about_entry.scss';
+@import './_about_intro.scss';
+@import './_about_highlight.scss';
+@import './_about_vision.scss';
+@import './_about_history.scss';
+
+
+
+

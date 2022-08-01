@@ -1,0 +1,251 @@
+
+.about {
+
+    .vision {
+        background:$color_about_bg_grey;
+        padding:$padding_section_mb;
+
+        &__container {
+            max-width:1400px;
+            margin:0 auto;
+        }
+
+        &__titlewrap {
+            text-align: center;
+        }
+
+        &__title {
+            margin-top:15px;
+            font-size:2.1875rem;
+            font-weight:300;
+        }
+
+        &__contentwrap {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-top:30px;
+        }
+
+        &__listwrap {
+            margin-top:30px;
+            text-align: left;
+        }
+
+        &__listblock {
+            margin-top:50px;
+        }
+
+        &__listblock:nth-of-type(1) {
+            margin-top:0;
+        }
+
+        &__list {
+            display:inline-block;
+            position:relative;
+            text-align:center;
+        }
+
+        &__listnum {
+            position:absolute;
+            top:-50px; left:-10px;
+            font-size:3.4375rem; 
+            font-weight:bold;
+            letter-spacing: -3px;
+            color:#e0e0e0;
+        }
+   
+        &__listtext {
+            position:relative;
+            font-size:1.0625rem;
+        }
+
+        &__listtextbold {
+            position:relative;
+            margin-top:3px;
+            font-size:1.5625rem;
+            font-weight:bold;
+        }
+
+        &__highlight {
+            margin-top:50px;
+        }
+
+        &__blockwrap {
+   
+        }
+
+        &__block {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:20px;
+            padding:15px 0;
+            font-size:1.125rem;
+            line-height: 1.5;
+            border-radius:15px;
+            color:#ffffff;
+            background:skyblue;
+        }
+
+        &__block:nth-of-type(1) {
+            margin-top:0;
+        }
+
+        &__blockdecowrap {
+            display:none;
+        }
+
+        &__blockdeco {
+            display:inline-block;
+            margin:0 5px;
+            width:4px;
+            height:4px;
+            background:#202020;
+            border-radius: 100%;;
+        }
+
+        &__desc {
+            margin-top:50px;
+            font-size:1.125rem;
+            line-height:1.6;
+            text-align: left;
+            color:#666666;
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:768px) {
+
+    .about {
+
+        .vision {
+
+            &__highlight {
+                width:90%;
+            }
+
+            &__listnum {
+                position:absolute;
+                top:-60px; left:-20px;
+                font-size:4.5rem; 
+            }
+       
+            &__listtext {
+                font-size:1.25rem;
+            }
+    
+            &__listtextbold {
+                font-size:1.75rem;
+            }
+
+            &__block {
+                font-size:1.375rem;
+            }
+
+            &__desc {
+                margin-top:50px;
+                font-size:1.3rem;
+            }
+            
+        }
+    
+    }
+
+}
+
+
+@media screen and (min-width:1024px) {
+
+    .about {
+
+        .vision {
+            padding:$padding_section_pc;
+            &__titlewrap {
+                text-align: left;
+            }
+
+            &__listwrap {
+                margin-top:0px;
+            }
+
+            &__blockwrap {
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &__blockdecowrap {
+                display:block;
+            }
+
+            &__block {
+                width:220px;
+                height:220px;
+                font-size:1.25rem;
+                border-radius:100%;
+            }
+
+            &__list {
+                padding-left:70px;
+                text-align:left;
+            }
+
+            &__listnum {
+                position:absolute;
+                top:-40px; left:0px;
+                font-size:4.6875rem; 
+            }
+       
+            &__listtext {
+                font-size:1.25rem;
+            }
+    
+            &__listtextbold {
+                margin-top:3px;
+                font-size:1.75rem;
+            }
+        }
+
+    
+    }
+
+}
+
+
+@media screen and (min-width:1300px) {
+        
+    .about {
+
+        .vision {
+            
+            &__contentwrap {
+                display:flex;
+                flex-direction: row;
+            }
+
+            &__listwrap {
+                width:35%;
+            }
+
+            &__highlight {
+                margin-top:0;
+                width:65%;
+            }
+            
+        }
+    
+    }
+
+}
+
+
+
+@media screen and (min-width:1680px) {
+    
+}

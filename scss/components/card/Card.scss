@@ -1,0 +1,258 @@
+@import "./cardHeader";
+@import "./cardSection";
+
+$card-radius: $br2;
+$card-hover-bg: $grey-level1;
+
+.JDcard {
+	color: $black-color;
+	position: relative;
+	padding: $card-padding;
+	text-align: left;
+	border-radius: $card-radius;
+	background-color: $card-bg;
+	@include shadow($card-shadow);
+
+	@include response($tablet) {
+		padding: $card-padding--md;
+	}
+
+
+	&--smPadding {
+		padding: $card-padding /2
+	}
+
+	&--border {
+		box-shadow: none;
+		background-color: transparent;
+		border: 1px solid $input-outborder-color;
+		background-color: white;
+	}
+
+	&__head {
+		padding: $card-padding;
+		padding-bottom: 0;
+		@include response($tablet) {
+			padding-left: space(2);
+			padding-right: space(2);
+		}
+	}
+
+	&__head+.JDcard__body {
+		padding-top: $card-padding/2 !important;
+
+		@include response($tablet) {
+			padding-left: space(2);
+			padding-right: space(2);
+		}
+	}
+
+	&__headContent {
+		padding-bottom: $card-padding /2;
+		border-bottom: 1px solid $grey-level1;
+	}
+
+	&__foot {
+		padding: $card-padding;
+		padding-top: 0;
+		padding-bottom: $card-padding /2;
+		@include response($tablet) {
+			padding-left: space(2);
+			padding-right: space(2);
+		}
+	}
+
+	&__footContent {
+		padding-top: $card-padding /2;
+		border-top: 1px solid $grey-level1;
+	}
+
+	&--bookMarks {
+		margin-top: space(7);
+
+		&:after {
+			content: "";
+			display: block;
+			background-color: white;
+			position: absolute;
+			border-radius: $card-radius;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: $card-padding;
+		}
+	}
+
+	&__bookMarkDeco {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		align-items: center;
+		display: flex;
+
+		&:after {
+			height: space(1.5);
+			content: "";
+			border: 2px solid;
+		}
+	}
+
+	&__badges {
+		position: absolute;
+		top: 0;
+		display: flex;
+		align-items: center;
+		right: $card-padding;
+		display: flex;
+	}
+
+	&__bookMarks {
+		position: absolute;
+		top: -2.9rem;
+		display: flex;
+		z-index: 0;
+		left: 0;
+		width: 100%;
+		font-size: $typho-small;
+	}
+
+	&__bookMark {
+		flex: 1 1;
+		position: relative;
+		padding: space(2) space(1);
+		margin: space(1);
+		text-align: center;
+		border-radius: $br2 $br2 0 0;
+		background-color: $grey-level1;
+		color: $grey-level3;
+		@include shadow(2);
+		cursor: pointer;
+
+		&--active {
+			background-color: white;
+			color: $html-color;
+		}
+	}
+
+	&__head {
+		h6 {
+			margin-bottom: 0
+		}
+	}
+
+	&__foot {
+		&--fit {
+			border-top: 1px solid $grey-opacity1;
+			background-color: $grey-level0;
+
+			.JDbtn {
+				color: $grey-level4;
+				font-weight: 400;
+				border-right: 1px solid $grey-opacity1;
+				margin: 0 !important;
+				background-color: transparent !important;
+
+				&:hover {
+					background-color: $grey-level1 !important;
+				}
+
+				box-shadow: none !important;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+		}
+	}
+
+	&__clearIcon {
+		position: absolute;
+		top: $standard-tiny-space;
+		right: $standard-tiny-space;
+
+		&:hover {
+			cursor: pointer;
+			color: $grey-level3;
+		}
+	}
+
+	&--withPart {
+		padding: 0;
+
+		& > .JDcard__body {
+			padding: $card-padding;
+			@include response($tablet) {
+				padding-left: space(2);
+				padding-right: space(2);
+			}
+		}
+	}
+
+	&--align {
+		text-align: center;
+	}
+
+	&--fullWidth {
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	&--noMargin {
+		margin: 0;
+	}
+
+	// ⭐️ 이거 잘 키워서 좋게만들자
+	&--fullHeight {
+		box-sizing: border-box;
+		min-height: 100%;
+
+		&-wmd {
+			@include response($phablet) {
+				min-height: none;
+			}
+		}
+	}
+
+	&--selected {
+		border: 1px solid $primary-color;
+	}
+
+	&--hover:hover {
+		background-color: $card-hover-bg;
+		cursor: pointer;
+
+		.JDcard__badges {
+			position: absolute;
+			top: 0;
+			right: $card-padding;
+
+			.JDbadge {
+				&:before {
+					border-color: $card-hover-bg;
+				}
+			}
+		}
+
+		.JDhelp {
+			color: $grey-level2;
+		}
+
+		* {
+			cursor: inherit;
+		}
+	}
+
+	.JDbtn {
+		margin-bottom: 0;
+	}
+
+	&>*:last-child {
+		margin-bottom: 0;
+	}
+
+	// drragable 을 위해서
+	&>* {
+		cursor: auto;
+	}
+}

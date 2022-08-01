@@ -1,0 +1,22 @@
+.guideProfile {
+    text-align: center;
+    &__bg {
+        background-color: $grey-level4;
+        position: relative;
+        height: space(44);
+    }
+
+    &__profile {
+        transform: translateY(-34%);
+        margin-bottom: -2.8rem!important;
+    }
+
+    &__video {
+        object-fit: contain;
+        width: 100%;
+        max-height: 550px;
+        background-color: black;
+        margin: 0 auto;
+        outline: none;
+    }
+}

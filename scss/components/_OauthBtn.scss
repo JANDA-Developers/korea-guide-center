@@ -1,0 +1,26 @@
+.oauthBtns {
+    &__icon {
+        width: 1.2rem;
+        margin-right: .8rem;
+        display: flex;
+        position: relative;
+    }
+    &__btn {
+        width: space(40);
+        font-weight: 600;
+        @include response($tablet) {
+            width: 100%;
+        }
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .JDbtn__contents {
+        font-weight: 600!important;
+        letter-spacing: -1px;
+        font-size: $typho-normal;
+    }
+}

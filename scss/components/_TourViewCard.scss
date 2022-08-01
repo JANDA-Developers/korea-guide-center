@@ -1,0 +1,11 @@
+.tourViewCard {
+    &__imageWrap {
+        position: relative;
+    }
+
+    &__imgBox {
+        @include response($tablet) {
+            display: none;
+        }
+    }
+}

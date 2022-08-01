@@ -1,0 +1,46 @@
+.subPlanViewer {
+    display: flex;
+    margin: 4px;
+    justify-content: space-between;
+    &__decoBox {
+        margin: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+    &__bar {
+        width: 4px;
+        flex: 1 1;
+        margin: 4px;
+        background-color: $grey-level1;
+        margin-bottom: 0px;
+    }
+
+    &__title {
+        margin: 4px;
+    }
+
+    &__photo {
+        margin: 8px;
+        max-width: 12.5rem;
+        min-width: 12.5rem;
+        height: 8.25rem;
+        position: relative;
+        @include response($tablet) {
+            max-width: 8.5rem;
+            min-width: 8.5rem;
+            height: 7rem;
+        }
+    }
+
+    &__content {
+        max-width: 21.875rem;
+        margin: 4px;
+        margin-bottom: 8px;
+        white-space: pre-wrap;
+        white-space: break-spaces;
+    }
+
+    background-color: $grey-level0;
+}

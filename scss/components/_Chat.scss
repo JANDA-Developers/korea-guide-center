@@ -1,0 +1,29 @@
+.Chat {
+    &__nameCircle {
+        border: 1px solid $outborder-color;
+        min-width: 2em;
+        min-height: 2em;
+        max-width: 2em;
+        max-height: 2em;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__circleZone {
+        margin-top: space(2);
+    }
+
+    &--myChat {
+
+        .Chat__circleZone {
+            padding-left: space(2);
+        }
+
+        .Chat__inWrap {
+            margin-right: -1 * space(2);
+        flex-direction: row-reverse;
+        }
+    }
+}

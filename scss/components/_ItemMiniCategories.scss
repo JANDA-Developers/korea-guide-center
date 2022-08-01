@@ -1,0 +1,15 @@
+.itemMiniCategories {
+    &__mobile {
+        display: none;
+        @include response($tablet) {
+            display: block;
+        }
+    }
+
+    &__pc {
+        display: block;
+        @include response($tablet) {
+            display: none;
+        }
+    }
+}

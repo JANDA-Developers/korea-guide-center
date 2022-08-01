@@ -1,0 +1,635 @@
+@import "./hack/card";
+@import "./hack/horizenDayPicker";
+@import "./hack/photoFrame";
+@import "./hack/horizen";
+@import "./hack/dayPicker";
+@import "./hack/ie";
+
+.JDtextColor--blue {
+    color: $blue-color;
+}
+
+html, body, #body, #JDoutWrapper {
+    overflow-x: hidden;
+}
+html {
+    overflow-y: hidden!important;
+    background-color: white;
+}
+body {
+    position: relative;
+    z-index: 0;
+}
+
+.JDflex--vEnd {
+    align-items: flex-end;
+}
+
+.__react_component_tooltip {
+    bottom: unset!important;
+    max-height: 20px;
+}
+
+.JDtextColor--positive {
+    color: $positive-color;
+}
+
+
+.JDbox {
+    border-radius: $br1;
+    border:  $input-border;
+}
+
+.rt-noData {
+    margin: 20px;
+}
+
+.photoFrame  {
+    position: relative;
+    overflow: visible;
+}
+
+.DayPicker--unDisplayNavbar ~ div  {
+    display: none;
+}
+
+.timepicker__input  {
+    &:first-child {
+        margin-right: space(1);
+    }
+}
+
+.counter__inner  {
+    border-radius: $br1;
+}
+
+.JDhorizen {
+    
+    width: auto!important;
+    margin-left:  0px!important;
+    margin-right: 0px!important;
+}
+
+.JDflex--around {
+    justify-content: space-around;
+}
+
+.disabledBadge {
+    margin: auto;
+}
+
+.JDtagInput {
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+#mainTooltip {
+    display: none;
+}
+
+#body .counter__btn {
+    background-color: transparent;
+}
+
+html .container--vps {
+    padding-bottom: space(12);
+}
+
+.JDlist {
+    margin-bottom: 0px;
+}
+
+#body .countSelecter {
+padding: 0.8rem;
+background-color: #d9d9d9;
+display: flex;
+justify-content: space-around; }
+@media only screen and (max-width: 550px) and (min-width: 0px) {
+#body .countSelecter {
+padding: 0 !important; } }
+#body .counter {
+display: inline-block; }
+#body .counter__btn,
+#body .counter .counter__count {
+border-radius: 0px;
+margin: 0px !important;
+font-weight: 600; }
+#body .counter__count {
+background-color: #d9d9d9; }
+#body .counter__btn {
+background-color: white;
+color: #989898 !important;
+border: none; }
+#body .counter__btn:disabled {
+background-color: #eee; }
+#body .counter .react-select__control {
+border-radius: 0px !important;
+border: 1px solid #bebebe!important;
+}
+#body .counter__inner {
+border: 1px solid #bebebe; }
+
+// .JDtable .rt-td {
+//     white-space: pre-line;
+// }
+
+
+
+// 라이브러리에 추가해도 좋음
+.JDflex--grow  > select {
+    flex-grow: 1;
+}
+
+// 라이브러리에 추가해도 좋음
+.ReactModalPortal .DayPicker.DayPicker--right {
+    // position: absolute!important;
+}
+
+html .JDtextColor--black {
+    color: $html-color;
+}
+
+.JDselect--native {
+    min-height: 2.325rem;
+    width: 100%;
+}
+
+.counter 
+.JDselect--native {
+    border-radius: 0px;
+    min-height: 2.2rem
+}
+
+.JDradios__circle {
+    height: 24px!important;
+    line-height: 24px!important;
+}
+
+.JDselect .react-select__control {
+    min-height: 2.325rem
+}
+
+
+#body .counter {
+    &__btn {
+        border: 1px solid $outborder-color;
+        &:first-child {
+            border-right: none;
+            border-radius: $br1 0px 0px $br1;
+        }
+        &:last-child {
+            border-left: none;
+            border-radius: 0px $br1 $br1 0px;
+        }
+    }
+    &__inner {
+        border: none;
+    }
+}
+
+html .JDtabs--tabsAlign-normal .react-tabs__tab {
+    white-space: nowrap;
+}
+.JDbadge--border {
+    padding: .2em 1em !important;
+}
+
+canvas {
+    width: 100% !important;
+    max-width: 800px;
+    height: auto !important;
+}
+
+.JDinput-wrap--big  .JDinput-iconWrap {
+    padding: 1.2rem!important; 
+}
+.JDtable {
+    overflow: auto;
+    @extend %JDscrollbar;
+}
+.JDbtn__contents {
+    font-weight: 600;
+}
+
+//  overflow overlay 는 안먹힘
+#root .DayPicker--horizen .DayPicker-Months:hover, 
+.configer__enables:hover, .configer__unables:hover, 
+.JDnoti__dropBox:hover, .JDnoti__ul:hover, 
+.JDscrollBox--small:hover, .JDscrollBox:hover, 
+.JDsearchInput .dataModal__body:hover, 
+.JDselect .react-select-container 
+.react-select__menu-list:hover, 
+.JDtextarea.JDtextarea--scroll:hover, 
+.photoGrider:hover, 
+.radioBox__inner--noWrap:hover, 
+.ReactModal__Content:hover, 
+.statistic__shortBtnsWrap:hover, 
+.summaryCard__cell:hover, 
+.summaryCard__list:hover {
+    overflow: auto;
+    overflow: overlay;
+
+}
+.textButton {
+    cursor: pointer;
+}
+
+.DayPicker-Day__month--sat {
+    color: $blue-color;
+}
+
+.DayPicker-Day__month--sun {
+    color: $error-color;
+}
+
+
+.DayPicker-Day__dotWrap {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.DayPicker-Day__dot {
+    background-color: #286ef0;
+    background-color: $primary-color;
+    height: 4px;
+    width: 4px;
+}
+
+.rbc-agenda-date-cell {
+    border: 1px solid #d9d9d9;
+}
+
+.rbc-timeslot-group {
+    min-height: 50px!important;
+}
+
+.rbc-event-content {
+    font-size: $typho-small;
+}
+
+
+.avatar {
+    background-size: cover;
+    background-position: center center;
+    &--largest {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+.iconButton i {
+    margin: 0px;
+}
+
+// .resignModal {
+//     text-align: center;
+//     width: 400px;
+//     height:350px;
+// }
+
+.resignModal .JDradios__radio {
+    margin-bottom: space(1);
+}
+
+.JDlist__li {
+    display: flex;
+}
+.JDlist__index {
+    margin-right: space(1);
+}
+
+
+
+.imageCropModal .JDmodal__body {
+    width: 100%;
+    padding: 0px!important;
+    height: 100%;
+}
+
+
+.JDbtn--large.JDbtn--border {
+    border-width: 1px!important;
+}
+
+
+.Toastify__toast-container--bottom-center {
+    margin: 0 auto;
+    left:0;
+    right:0;
+    width: max-content;
+}
+
+
+.rbc-event.rbc-selected,  .rbc-day-slot .rbc-selected .rbc-background-event {
+    border: 1px solid white!important
+}
+
+.rbc-event  {
+    border: 1px solid white;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    select,
+    textarea,
+    input {
+      font-size: 16px!important;
+    }
+  }
+@include response($tablet) {
+    #BuyerRouter {
+        .JDinput,.JDbtn,.JDselect  {
+            height: 3rem;  
+        }
+    }
+}
+
+.JDbadge--small.JDbadge--round {
+    padding-right: 1px!important;
+    padding-bottom: 1px!important;
+    font-weight: 900!important;
+}
+
+
+
+.ReactModalPortal .fr-quick-insert {
+    transform: translateX(30px);
+}
+
+.JDselect--menuCanOverflow {
+    .react-select-container {
+        .react-select {
+        &__menu-list {
+            padding: 0;
+            max-height: $select-option-height * 4;
+            @extend %JDscrollbar;
+            overflow: auto!important;
+        }
+    }
+}
+}
+
+
+
+.JDglobalFocus {
+    outline: 1px auto;
+}
+
+.smsTemplates__smsCard {
+    min-width: 47%;
+    .JDcard__body {
+        height: space(10);
+        overflow: auto;
+    }
+    @include response($tablet) {
+        min-width: 95%
+    }
+}
+.smsTemplates__smsCardWrap {
+    margin-right: -1 * space(2);
+}
+.JDmodal__head {
+    font-weight: 600;
+}
+
+.ProductBookingViewModal {
+    width:  1000px;
+}
+
+ @keyframes appear {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+  }
+
+
+  @keyframes disappear {
+    from {
+        opacity: 1;
+        max-height: 300px;
+    }
+  
+    to {
+        max-height: 0px;
+        opacity: 0;
+        display: none;
+    }
+  }
+
+
+
+.loadingEffect {
+    &--disappear {
+        animation-duration: 1s;
+        animation-name: disappear;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+    }
+
+    &--appear {
+        animation-duration: 1s;
+        animation-name: appear;
+    }
+}
+
+canvas {
+    image-rendering: optimizeSpeed;             /* Older versions of FF          */
+    image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+    image-rendering: -webkit-optimize-contrast; /* Safari                        */
+    image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+    image-rendering: pixelated;                 /* Awesome future-browsers       */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+}
+
+.HIDDEN_DEVELOPE {
+    display: none!important;
+    opacity: 0.3;
+}
+
+.rt-tbody {
+    overflow: hidden!important;
+}
+
+.rt-noData {
+    display: none!important;
+}
+
+.lineCutter {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.JDinput--withIcon {
+    padding-right: 0.6rem!important;
+}
+
+
+.JDicon--tiny {
+    width: 0.6rem!important;
+    height: 0.6rem!important;
+}
+
+.DayPicker-Day--disabled {
+    pointer-events: none;
+}
+
+
+
+.ITSpasswordChecker .JDtextColor--point{
+    color:#286ef0;
+    color:$primary-color;
+}
+
+
+
+.JDtextColor--darkPrimary {
+    color: $primary-color-dark;
+}
+
+.ExcelBtn {
+    background-color: #206F44;
+    color: white;
+    &:hover {
+    background-color: #298653;
+    }
+}
+
+// .JDtable .rt-tbody {
+//     overflow-y: auto!important;
+    
+//     @extend %JDscrollbar;
+//     max-height: 600px;
+//     @include response($mobile) {
+//         max-height: none;
+//     }
+// }
+
+ 
+.JDtypho  {
+    word-break: keep-all;
+}
+
+.GenderBadge {
+    margin: 0px!important;
+    padding: space(1);
+}
+
+.NextCustomImage {
+    background-color: $grey-level4;
+}
+
+
+
+.JDdropDown--fullInmobile {
+    @include response($tablet) {
+    position: fixed!important;
+    top:0!important;
+    right: 0!important;
+    bottom: 0!important;
+    left: 0!important;
+    width: auto;
+    height: auto;
+    max-height: none;
+        .JDnotiLine  {
+            padding: .4rem;
+        }
+    }
+}
+
+.JDdropDown__head {
+    padding: 1rem;
+    padding-bottom: 0px;
+    border-bottom: 1px solid $grey-level1;
+
+}
+
+html {
+    word-break: keep-all;
+}
+
+
+.slick-arrow {
+    padding: space(2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,.3);
+    cursor: pointer;
+    
+    &:hover {
+        background-color: rgba(255,255,255,.6);
+    }
+}
+
+.JDtypho {
+    word-break: keep-all;
+    text-transform: capitalize!important;
+}
+
+.textTransformClear {
+    text-transform: none!important;
+}
+
+#APP {
+    min-width: 1050px;
+    @include response($tablet) {
+        min-width: unset;
+    }
+}
+
+.JDbtn {
+    text-transform: capitalize;
+}
+.JDlabel {
+    text-transform: capitalize;
+}
+.JDslider__slide {
+    margin: 1px;
+}
+
+
+.empty {
+    display: flex;
+    max-width: 100%;
+    padding: 0.4rem;
+    padding-left: 1.2rem!important;
+    padding-right: 1.2rem!important;
+}
+
+
+
+.JDcheck_box_wrap  {
+    .JDcheck_box_label {
+        text-transform: capitalize;
+    }
+}
+
+.CapitalLize {
+    text-transform: capitalize;
+}
+
+.react-select__single-value {
+    line-height: 1.3;
+}
+
+
+
+.OfferRegionSelect .react-select__menu-list {
+    max-height: $select-option-height * 8!important;
+}
+
+
+.rbc-agenda-event-cell,.rbc-agenda-time-cell,.rbc-agenda-date-cell,.rbc-agenda-event-cell {
+    background-color: white!important;
+}

@@ -1,0 +1,20 @@
+.JDscrollBox {
+    overflow-x: hidden;
+    white-space: nowrap;
+    &--pc {
+        @extend %JDscrollbar;
+    }
+
+    @include response($tablet) {
+        overflow: auto!important
+    }
+
+    &--small {
+        &.JDscrollBox--pc {
+        @extend %JDscrollbar--slender;
+        }
+    }
+    &--horizien {
+        overflow-y: hidden!important;
+    }
+}

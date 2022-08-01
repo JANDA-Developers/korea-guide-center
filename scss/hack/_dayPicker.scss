@@ -1,0 +1,12 @@
+.DayPicker {
+    &--multiMode {
+        .DayPicker-Day--selected {
+            background-color: $primary-color-ie!important;
+            background-color: $primary-color!important;
+        }
+    }
+}
+
+#root .DayPicker .DayPicker-Months .DayPicker-Month .DayPicker-Body .DayPicker-Week .DayPicker-Day--disabled, .ReactModalPortal .DayPicker .DayPicker-Months .DayPicker-Month .DayPicker-Body .DayPicker-Week .DayPicker-Day--disabled {
+    opacity: 0.5;
+}

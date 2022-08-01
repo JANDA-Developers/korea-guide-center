@@ -1,0 +1,30 @@
+.iconUploader {
+        display: inline-block;
+        padding: $standard-superTiny-space;
+        position: absolute;
+        right: -$standard-small-space;
+        bottom: -$standard-superTiny-space;
+        border-radius: 50%;
+
+        &__inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $icon-size-superTiny * 2;
+            height: $icon-size-superTiny * 2;
+            background-color: white;
+            border-radius: 50%;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $grey-level1;
+            }
+            color: $html-color;
+
+            @include shadow(1);
+        }
+
+        .JDicon__svg {
+            top: 0;
+        }
+}

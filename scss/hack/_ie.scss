@@ -1,0 +1,58 @@
+#KoreaGuideCeneter.IE {
+    #APP {
+        min-width: 1200px!important;
+    }
+    .ProductViewCards {
+        .empty  {
+            min-width: 100%;
+        }
+    }
+    .ProductViewCards__empty {
+        min-width: 500px;
+    }
+    .productViewCard__body {
+        min-height: 200px;
+    }
+    .JDbtn.JDbgColor--lightPrimary {
+        color: white;
+    }
+
+    .JDbtn__contents {
+        height: 10px;
+    }
+    .ballon--form {
+        flex: 1;
+    }
+
+    .JDicon {
+        height: 1em;
+    }
+
+    .miniTable__col {
+        min-width: 200px;
+    }
+
+    .DayPicker-Month {
+        flex: 1 1
+    }
+
+    .miniTable__col > div {
+        flex: unset
+    }
+    .miniTable {
+        max-width: 350px;
+    }
+    .JDselect .react-select-container .react-select__value-container {
+        position: absolute;
+        top:0;
+        bottom: 0;
+        width: 100%;
+    }
+    .JDselect  {
+        min-width: 60px;
+    }
+
+    .infoCards .JDAlign {
+        min-width: 1em;
+    }
+}

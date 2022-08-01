@@ -1,0 +1,43 @@
+.imgCard {
+    border: 1px solid $grey-level1;
+    border-radius: $br2;
+    overflow: hidden;
+    background-color: white;
+    @include shadow($card-shadow);
+
+    &--horizen {
+        .imgCard__contents {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    &__photo {
+    }
+
+    &__body {
+        line-height: 1.3;
+        white-space: pre-wrap;
+        padding-top: space(1);
+        padding-bottom: space(1);
+    }
+
+    &__contents {
+        padding:  space(2);
+    }
+    .imgCard__contents {
+        flex: 1.5;
+    }
+    &__head {
+        padding-bottom: space(1);
+        border-bottom: 1px solid $grey-level1;
+        margin-bottom: space(1);
+    }
+
+    &--hover {
+        &:hover {
+            cursor: pointer;
+            filter: brightness(0.9);
+        }
+    }
+}

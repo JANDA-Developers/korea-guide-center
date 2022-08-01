@@ -1,0 +1,25 @@
+.ballon {
+    padding: space(2) space(3);
+    border-radius: $br4;
+    overflow: hidden;
+    background-color: #F2F6F9;
+
+
+    &--left {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    &--right {
+        background-color: #DBF4FD;
+    }
+
+    &--form {
+        border: none;
+        outline: none;
+
+        &:focus {
+        }
+
+    }
+}

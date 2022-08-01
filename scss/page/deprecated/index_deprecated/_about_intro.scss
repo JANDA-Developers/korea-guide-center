@@ -1,0 +1,162 @@
+
+.about {
+    
+    .intro {
+        padding:$padding_section_mb;
+        &__container {
+            display:flex;
+            flex-direction: row;
+        }
+
+        &__imagewrap {
+            display:none;
+        }
+
+        &__image {
+            max-width:95%;
+        }
+
+        &__textwrap {
+            padding:0;
+            width:100%;
+            text-align: left;
+        }
+
+        &__title {
+            font-size:1rem;
+            font-weight:300;
+        }
+
+        &__subtitle {
+            font-size:2rem;
+            font-weight:700;
+        }
+
+        &__decowrap {
+            margin-top:15px;
+        }
+
+        &__deco {
+            
+        }
+
+        &__decobar {
+            margin-top:15px;
+            width:130px;
+            height:5px;
+            background:$color_about;
+        }
+
+        &__highlight {
+            margin-top:20px;
+            font-size:1.1rem;
+            font-weight:700; 
+            color:rgb(211, 17, 17);
+        }
+
+        &__desc {
+            margin-top:30px;
+            font-size:1rem; 
+            font-weight:500;
+            line-height:1.6;
+            opacity:0.7;
+        }
+        
+    }
+
+}
+
+
+@media screen and (min-width:768px) {
+    
+    .about {
+    
+        .intro {
+    
+            &__title {
+                font-size:1.2rem;
+            }
+    
+            &__subtitle {
+                font-size:2.2rem;
+            }
+    
+            &__highlight {
+                font-size:1.3rem;
+            }
+    
+            &__desc {
+                font-size:1.2rem; 
+            }
+            
+        }
+    
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+    
+    .about {
+        
+        .intro {
+            padding:0;
+            &__container {
+                display:flex;
+                flex-direction: row;
+                max-width:1400px;
+                margin:0 auto;
+            }
+
+            &__imagewrap {
+                display:flex;
+                align-items:center;
+                width:50%;
+            }
+
+            &__image {
+                width:100%;
+            }
+
+            &__textwrap {
+                padding:100px 50px 100px 0;
+                width:50%;
+                text-align: left;
+            }
+            &__textwrap.p_botttom {
+                padding:0 50px 100px 50px;
+            }
+
+            &__title {
+                font-size:1.1rem;
+            }
+
+            &__subtitle {
+                font-size:2.5rem;
+            }
+
+            &__decobar {
+                width:130px;
+                height:5px;
+            }
+
+            &__highlight {
+                margin-top:20px;
+                font-size:1.25rem;
+            }
+
+            &__desc {
+                margin-top:30px;
+                font-size:1.125rem; 
+            }
+            
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:1680px) {
+    
+}

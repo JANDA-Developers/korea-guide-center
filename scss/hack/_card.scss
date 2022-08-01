@@ -1,0 +1,44 @@
+$cardside-padding: space(4.5);
+
+#root .JDcard {
+
+    &__head {
+        font-weight: 900;
+        font-size: $typho-huge;
+        padding: space(4) $cardside-padding 0;    
+        @include response($tablet) {
+            padding-left: space(2);
+            padding-right: space(2);
+        }
+    }
+
+    &--withPart {
+        & > .JDcard__body {
+            padding-left: $cardside-padding;
+            padding-right: $cardside-padding; 
+            @include response($tablet) {
+                padding-left: space(2);
+                padding-right: space(2);
+            }
+        }        
+    }
+
+    &__foot {
+        padding: space(4) $cardside-padding;
+        padding-top: 0;
+        @include response($tablet) {
+            padding-left: space(2);
+            padding-right: space(2);
+        }
+    }
+
+    &--selected {
+        border-width: 3px;
+    }
+}
+
+
+html .JDcard__head + .JDcard__body {
+    padding-top: space(2)!important;
+}
+

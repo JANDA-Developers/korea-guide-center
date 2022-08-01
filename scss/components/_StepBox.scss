@@ -1,0 +1,44 @@
+.stepBox {
+    position: sticky;
+    top: calc(#{$header-height} + 10px);
+    width: 14rem;
+    padding: 0px!important;
+
+    @include response($tablet) {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border-bottom: $outborder-color;
+        margin-top: 3.8rem;
+        -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+        &--mobileOpen {
+            display: block;
+        }
+    }
+
+    &__step {
+        padding: space(2);
+        border-bottom: 1px solid $grey-level1;
+        
+        &:hover {
+            cursor: pointer;
+            background-color: $grey-level0;
+        }
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__close {
+        display: none;
+        @include response($tablet) {
+            display: block;
+        }
+    } 
+}

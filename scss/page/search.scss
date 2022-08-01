@@ -1,0 +1,46 @@
+.search {
+    &__wrapper {
+        @include response($tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__searchCount {
+        display: flex;
+        align-items: flex-end;
+        
+        @include response($tablet) {
+            display:  none;
+        }
+    }
+
+    &__detailSearchBtn {
+        @include response($tablet) {
+            display:  none;
+        }
+    }
+
+    &__filterzone {
+        min-width: 20.625rem;
+        @include response($tablet) {
+            margin-bottom: space(3);
+        }
+    }
+
+    &__mobileSearchResult {
+        display:  none;
+        @include response($tablet) {
+            display:  block;
+        }
+    }
+}
+
+
+.categoryFilter {
+    border: 1px solid $outborder-color;
+    border-radius: $br2;
+    overflow: hidden;
+    &__btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,71 @@
+.ProductDetail {
+    &__navCard {
+        position: sticky;
+        top: space(1);
+        margin-bottom: space(1);
+        flex: 0 0;
+        min-width: 20rem;
+        max-width: 21.25rem;
+        height: min-content;
+        @include response($desktop) {
+            display: none;
+        }
+    }
+
+    &__body {
+        width: calc(100% - 21rem);
+        @include response($desktop) {
+            width: 100%;
+            margin-right: 0px!important;
+        }
+
+    }
+    .detailNavCardMobile {
+        padding: space(2);
+        background-color: white;
+        z-index: $z-index-3;
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left:0;
+        right:0;
+        @include response($desktop) {
+            display: block;
+        }
+    }
+
+    &__daypikcerInDate {
+        &--ongoing {
+            background-color: $primary-color-light2-ie;
+            background-color: $primary-color-light2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__datepicker {
+        .DayPicker-Months {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .DayPicker-Month {
+            flex: 1 1;
+            padding: 0 1rem;
+        }
+    }
+}
+.DayPicker-Day--selected .ProductDetail__daypikcerInDate--ongoing {
+        background-color: $primary-color-ie!important;
+        background-color: $primary-color!important;
+}
+#root .DayPicker-box .cls-2 {
+    stroke: white!important;
+    stroke-width: 2px!important;
+}
+
+
+

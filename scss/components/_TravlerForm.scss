@@ -1,0 +1,8 @@
+.TravlerForm {
+    &__birthDay {
+        @include response($tablet) {
+        min-width: 100%;
+        margin-bottom: space(1);
+        }
+    }
+} 

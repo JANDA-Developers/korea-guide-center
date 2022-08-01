@@ -1,0 +1,35 @@
+.Banner {
+    .JDslider__slide {
+        overflow: hidden;
+        border-radius: .8rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+        @include response($tablet) {
+            margin: 0;
+            border-radius: 0px!important;
+        }
+    }
+}
+
+.LoginBanner.Banner {
+    @include response($tablet) {
+        display: none!important;
+    }
+    .JDslider__slide {
+        border-radius: space(1)!important;
+    }
+}
+
+.tourCircleBanner {
+    .JDslider__slide {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 50%!important;
+    }
+    
+    .slick-slide {
+        max-width: 12.5rem;
+
+    }
+}

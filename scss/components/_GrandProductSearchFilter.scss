@@ -1,0 +1,23 @@
+.GrandProductSearchFilter {
+    width: 18rem;
+
+    &__searchInput {
+    }
+
+    &--pc {
+        @include response($tablet) {
+            display: none;
+        }
+    }
+    &--mb {
+        width: 100%;
+        display: none;
+        @include response($tablet) {
+            display: block;
+        }
+    }
+
+    &__hideMobile {
+        display: none;
+    }
+}

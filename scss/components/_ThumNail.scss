@@ -1,0 +1,12 @@
+.thumNail {
+    margin: .5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    
+    &:hover {
+        transition: 0.5s!important;
+        @include shadow(3);
+    }
+}

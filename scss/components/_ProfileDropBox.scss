@@ -1,0 +1,14 @@
+.profileDropBox {
+    margin-top: space(1);
+    margin-bottom: space(1);
+    &__service {
+        padding: space(1);
+    }
+}
+
+.FileBox {
+    cursor: pointer;
+    &:hover {
+        background-color: $grey-level0;
+    }
+}

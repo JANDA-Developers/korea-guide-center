@@ -1,0 +1,63 @@
+$header-bgcolor: white;
+$header-white-1: $grey-level0;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: $z-index-7;
+    height: $header-height;
+    background: $header-bgcolor;
+    padding: space(2) space(4);
+    box-sizing: border-box;
+    border-bottom: 1px solid $grey-level1;
+
+    .iconSearch {
+        color: white !important;
+    }
+
+    .iconSearch--open {
+        color: $html-color !important;
+    }
+
+    .header__logo {
+        width: 80px;
+    }
+    .JDsearchInput {
+        background-color: white;
+    }
+
+    &__welecomMessage {
+        @include response($tablet) {
+            display: none;
+        }
+    }
+
+    &__middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &__items {
+        height: 100%;
+
+        .JDicon {
+            width: 1.3rem!important;
+            height: 1.3rem!important;
+        }
+        .JDnoti {
+            line-height: 0!important;
+        }
+    }
+
+}
+
+@media screen and (min-width:600px) {}
+
+@media screen and (min-width:1024px) {}

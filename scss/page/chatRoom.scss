@@ -1,0 +1,22 @@
+.ChatRoom {
+    &__bg {
+        position: relative;
+        height: 16rem;
+        background-color: $grey-level4;
+    }
+
+    &__room {
+        max-height: 36rem;
+        overflow: auto;
+        @include response($tablet) {
+            margin-right: 0px!important;
+        }
+    }
+
+    &__profileCard {
+        @include response($tablet) {
+            display: none;
+        }
+    }
+}
+

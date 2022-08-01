@@ -1,0 +1,28 @@
+.imageCropper {
+    &__outWrap {
+        position: relative;
+    }
+    &__cropArea {
+        &--round {
+            border-radius: 50%;
+        }
+    }
+}
+
+.imageCropModal {
+    .imageCropper {
+        &__outWrap {
+            position: relative;
+        }
+        &__inWrap {
+            padding:  space(1) space(2);
+        }
+        &__rangeSlider {
+            padding:  space(4) space(4);
+        }
+        &__zoombar {
+            margin-bottom: space(2);
+        }
+
+    }
+}

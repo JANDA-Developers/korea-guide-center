@@ -1,0 +1,13 @@
+.mouseMovieClip {
+    position: relative;
+    height: 800px;
+    &__img {
+        position: absolute;
+        width: 101%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__video {
+        position: absolute;
+    }
+}

@@ -1,0 +1,37 @@
+.lineTable {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: $typho-small;
+
+
+    &__column{
+        width:100%;
+        border:1px solid $grey-level1;
+        border-left:none;
+        border-right:none;
+        box-sizing: border-box;
+        
+        & + .lineTable__column {
+            margin-left: -1px;
+        }
+    }
+    
+    &__columnHeader {
+        padding: space(1);
+        font-weight: bold;
+    }
+
+    &__row {
+        padding: space(1);
+        width:100%;
+        padding:10px;
+        border-top:1px solid $grey-level1;
+        box-sizing: border-box;
+    }
+
+
+
+}
+

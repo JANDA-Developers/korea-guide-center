@@ -1,0 +1,48 @@
+#root {
+    .countSelecter {
+        padding: $standard-space;
+        background-color: $grey-level1;
+        display: flex;
+        justify-content: space-around;
+
+        @include response($phablet) {
+            padding: 0 !important;
+        }
+    }
+
+    .counter {
+        display: inline-block;
+
+        &__btn,
+        .counter__count {
+            border-radius: 0px;
+            margin: 0px !important;
+            font-weight: 600;
+        }
+
+        &__count {
+            background-color: $grey-level1;
+        }
+
+        &__btn {
+            background-color: white;
+            color: $grey-level3 !important;
+            border: none;
+
+            &:disabled {
+                background-color: $grey-level0;
+            }
+        }
+
+        .react-select__control {
+            border: none;
+            border-radius: 0px !important;
+            border-left: 1px solid $outborder-color;
+            border-right: 1px solid $outborder-color;
+        }
+
+        &__inner {
+            border: 1px solid $outborder-color;
+        }
+    }
+}

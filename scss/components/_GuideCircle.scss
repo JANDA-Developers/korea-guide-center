@@ -1,0 +1,19 @@
+
+.guideCircle {
+    cursor: pointer;
+    &:hover {
+        @extend %z-depth-1
+    }
+}
+
+.Circle {
+    white-space: nowrap;
+    border-radius: 50%;
+    background-size: 100%;
+    position: relative;
+    outline: none;
+    border: 1px solid $grey-level1;
+
+    @include iconSize--prefixer(1);  
+}
+
