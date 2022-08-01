@@ -64,6 +64,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                             center
                             mb="largest"
                         >
+                            {/*  */}
                             {selectedRegiion && (
                                 <div className="locationalGuide__regionSecotr">
                                     <RegionDescriptionSecotr3
@@ -158,6 +159,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         />
                     )}
                     <Mb mb="largest" />
+
                     {/*<Banner
                         sliderProps={{
                             autoplay: true,
@@ -172,6 +174,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                             ) || []
                         }
                     /> */}
+
                     {/* <Mb mb="largest" /> */}
 
                     {/* 추천 가이드 */}

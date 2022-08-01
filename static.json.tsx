@@ -63,10 +63,22 @@ const utils_message = {
         chi: `欢迎光临`,
     },
     itsguide: {
-        ko: "코리아가이드",
-        en: `Koreaguide`,
-        ja: `Koreaguide`,
-        chi: `Koreaguide`,
+        ko: "코리아 가이드",
+        en: `Korea guide`,
+        ja: `Korea guide`,
+        chi: `Korea guide`,
+    },
+    joyful: {
+        ko: "즐거운 한국여행",
+        en: `Joyful Korea Trip`,
+        ja: `Joyful Korea Trip`,
+        chi: `Joyful Korea Trip`,
+    },
+    selectCity: {
+        ko: "도시 선택",
+        en: `Select a City`,
+        ja: `Select a City`,
+        chi: `Select a City`,
     },
     itstour: {
         ko: "코리아투어",
@@ -1497,6 +1509,12 @@ const utils_message = {
         en: `These are local products.`,
         ja: `現地ローカルツアー商品です`,
         chi: `这些是本地产品.`,
+    },
+    searchCitiesGuidesTours: {
+        ko: "도시, 가이드, 투어 검색",
+        ja: `Search cities, guides, tours...`,
+        en: `Search cities, guides, tours...`,
+        chi: `Search cities, guides, tours...`,
     },
     searchWithKeyWard: {
         ko: "키워드로 찾아 보세요.",

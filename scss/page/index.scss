@@ -16,17 +16,366 @@ a {
     animation:ani_downtop 1000ms 300ms ease-in-out forwards;
 }
 
-.tour {
+.region {
+    &__RegionDetailButton{
+        all: unset;
+        text-align: center;
+        color: black;
+        font-weight: 500;
+        width: 40%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px 0px;
+    }
+}
+
+.slider {
+
+    &__RegionSliderItemTitle {
+        font-weight: 600;
+        color: white;
+        text-shadow: 2px 2px 2px gray;
+    }
+
+    // Short
+    &__ShortSliderEmptyBox {
+        width: 16.875rem;
+        height: 19.875rem;
+        background-color: white;
+    }
+
+    &__ShortSliderLeftArrow {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+        right: -1.875rem;
+        border: 1px solid #0000001f;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+
+    &__ShortSliderRightArrow {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+        left: -1.875rem;
+        border: 1px solid #0000001f;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+
+
+    &__ShortSliderLeftArrowContainer {
+        width: 16.875rem;
+        height: 19.875rem;
+        background-color: white;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__ShortSliderRightArrowContainer {
+        width: 16.875rem;
+        height: 19.875rem;
+        background-color: white;
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__ShortSliderItems {
+        display:flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: space-between;
+        cursor:pointer;
+        position:relative;
+        padding: 25px 15px;
+        width: 16.875rem;
+        height: 19.875rem;
+        background-color: skyblue;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    &__ShortSliderRow {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 13px;
+        width: 100%;
+        position: absolute;
+        place-items: center;
+        overflow-x: hidden;
+    }
+
+    &__ShortSliderContainer{
+        position: relative;
+        display: flex;
+    }
+
+    // Guide {
+        &__GuideSliderItemImage {
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 16.875rem;
+            height: 16rem;
+        }
+    // Tour
+
+    &__TourSliderItemImage {
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 16.875rem;
+        height: 16rem;
+    }
+
+    &__TourSliderItemTitle {
+        margin-top: 0.625rem;
+        font-weight: 600;
+        color: #d0242b;
+        text-align: center;
+    }
+
+
+    &__TourSliderItemTextAndDesc {
+        position: relative;
+        padding: 0 15px;
+        overflow-y: hidden;
+        height: 30.875rem;
+    }
+
+    &__TourSliderItemPriceAndBooking {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    &__TourSliderItemPrice {
+        font-weight: 600;
+    }
+
+    &__TourSliderItemBookingButton {
+        all: unset;
+        background-color: #d0242b;
+        cursor: point;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    // Long
+
+    &__LongSliderEmptyBox {
+        width: 16.875rem;
+        height: 30.875rem;
+        background-color: white;
+    }
+
+    &__LongSliderLeftArrow {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+        right: -1.875rem;
+        border: 1px solid #0000001f;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+
+    &__LongSliderRightArrow {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+        left: -1.875rem;
+        border: 1px solid #0000001f;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+
+
+    &__LongSliderLeftArrowContainer {
+        width: 16.875rem;
+        height: 31.875rem;
+        background-color: white;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__LongSliderRightArrowContainer {
+        width: 16.875rem;
+        height: 31.875rem;
+        background-color: white;
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__LongSliderItems {
+        box-sizing: border-box;
+        position:relative;
+        width: 16.875rem;
+        height: 30.875rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    &__LongSliderRow {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 13px;
+        width: 100%;
+        position: absolute;
+        place-items: center;
+        overflow: hidden;
+        padding-bottom: 5px;
+
+    }
+
+    &__LongSliderContainer{
+        position: relative;
+        display: flex;
+    }
+
+
     
+}
+
+.tour {
+
+    &__sectionTitleContainer {
+        margin-bottom: 5.25rem;
+    }
+
+    &__sectionTitle {
+        text-align: center;
+        margin-top: 5rem;
+        font-weight: 600;
+    }
+
+    &__searchIconPath {
+        transition: all 0.3s linear;
+        &::hover {
+            fill: #3a3a3a;
+        }
+    }
+
+    &__TextsliderContainer {
+        width: 100%;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-bottom: 40px;
+    }
+
+    &__sliderText {
+        font-size: 40px;
+        font-weight: 600;
+        color: white;
+        border-bottom: 3px solid #D0242B;
+
+    }
+    
+    &__searchBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__searchBarInnerBox {
+        display: flex;
+        align-items: center;
+    }
+
+    &__searchIcon {
+        margin: 0px 25px;
+        z-index: 20;
+        position: absolute;
+        right: 29%;
+        cursor: pointer;
+    }
+
+    &__searchInput {
+        height: 60px;
+        width: 42vw;
+        padding: 0 1.2rem;
+        background-color: white;
+        @include response(1000px) {
+            width: 200px;
+        }
+
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: $grey-level4!important;
+            font-size: $typho-normal;
+        }
+        
+        &:focus {
+            color: $primary-color!important;
+            & + .JDinput-iconWrap {
+                    svg.JDicon {
+                        color: $primary-color!important;
+                    }
+                }
+                
+            
+        }
+        & + .JDinput-iconWrap .JDicon  {
+            color: $grey-level4!important;
+            path,line {
+                stroke-width:3px!important;
+            }
+        }
+    }
 
     &__container {
         position:relative;
-        height:100vh;
-        padding-top:20vh;
+        height:80vh;
     }
 
     &__bgimage {
         position:absolute;
+        background-size: contain;
         top:0; left:0; right:0; bottom:0;
         @include mixin_bgImg;
         background-position: 50% 80%;
