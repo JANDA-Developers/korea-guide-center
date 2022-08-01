@@ -43,10 +43,11 @@ const RecommendGuideSliderItem = ({
                                 : l(i.introduce)}
                         </div>
                         <div className="slider__GuideCategoryContainer">
-                            {i.guideCategory?.slice(0, 4).map((item) => {
+                            {i.guideCategory?.slice(0, 4).map((item, index) => {
                                 return (
                                     <span className="slider__GuideCategoryText">
                                         {l(item.label)}
+                                        {index === 3 ? null : " · "}
                                     </span>
                                 );
                             })}
