@@ -130,6 +130,18 @@ a {
     }
 
     // Guide {
+
+        &__RecommendGuideContainer {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        &__RecommendGuideSectionTitle {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 80px;
+        }
+
         &__GuideSliderItemImage {
             background-size: cover;
             background-repeat: no-repeat;
@@ -138,6 +150,48 @@ a {
             width: 16.875rem;
             height: 16rem;
         }
+
+        &__GuideBadgeAndNameContainer {
+            margin: 15px 0px;
+            display: flex;
+            align-items: center;
+            padding: 0px 10px;
+        }
+
+        &__GuideDesc {
+            padding: 0px 10px;
+            font-size: 14px;
+        }
+
+        &__GuideCategoryContainer {
+            box-sizing: border-box;
+            padding: 10px 20px;
+            position: absolute;
+            bottom: 0;
+        }
+        &__GuideCategoryText {
+            font-size: 13px;
+            font-weight: 600;
+            margin-right: 5px;
+            color: black;
+        }
+        &__GuideBadge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d0242b;
+            color: white;
+            font-weight: 600;
+            padding: 3px 15px;
+            border-radius: 20px;
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+        &__GuideName {
+            font-weight: 600;
+        }
+
+
     // Tour
 
     &__TourSliderItemImage {
