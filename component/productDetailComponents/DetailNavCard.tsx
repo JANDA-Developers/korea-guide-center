@@ -33,8 +33,11 @@ import { GuideCircle } from "../guideCircle/GuideCircle";
 import { InfoBox } from "../infoBox/InfoBox";
 import { Head } from "../ProfileForm/ProfileForm";
 import { IReviewModalInfo } from "../ReviewModal/ReviewModal";
-import { Badges } from "../statusBadges/StatusBadges";
+import { Badges, Badges2 } from "../statusBadges/StatusBadges";
 import { WishIcon } from "../wisthIcon/WishIcon";
+import LogoComponent from "./DetailNavCardLogo";
+import Introduce from "./DetailNavCardIntroduce";
+import { Direction } from "react-range";
 
 interface IProp extends IJDcardProps {
     tours: Ftour[];
@@ -93,8 +96,13 @@ export const DetailNavCard: React.FC<IProp> = ({
     const remain = (maxMember || 0) - totalMember;
 
     return (
-        <div className={className}>
-            <JDcard {...props} mb>
+        <div
+            className={className}
+            style={{
+                marginLeft: "3vh",
+            }}
+        >
+            <JDcard {...props} mb style={{ width: "29vh" }}>
                 <div>
                     <Flex vCenter between>
                         <Bold flex={{ vEnd: true }} size="h6">
@@ -123,7 +131,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                             />
                         </ShareMaster>
                     </Flex>
-                    <MiniTable
+                    {/**<MiniTable
                         mb
                         labelWidth="6rem"
                         valueWidth="6rem"
@@ -151,7 +159,8 @@ export const DetailNavCard: React.FC<IProp> = ({
                                 },
                             ],
                         ]}
-                    />
+                    /> */}
+
                     {remain === 0 ? (
                         <Red mb="tiny" size="small">
                             {s("partyIsOvered")} <br />{" "}
@@ -163,13 +172,17 @@ export const DetailNavCard: React.FC<IProp> = ({
                         onClick={onSelect}
                         br="square"
                         size="long"
-                        thema="primary"
+                        thema="point"
                     >
                         {s("select")}
                     </JDbutton>
                     <WishIcon productId={product._id} mode="button" />
                     <JDhorizen margin={3} />
-
+                    <LogoComponent />
+                </div>
+            </JDcard>
+            <JDcard className="detailNavCard__jdCard">
+                <div>
                     <Flex mb vCenter between>
                         <Flex vCenter>
                             <GuideCircle
@@ -181,7 +194,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                         </Flex>
                         <div style={{ width: "min-content" }}>
                             <JDbutton
-                                style={{ width: "100px" }}
+                                className="detailNavCard__jdButtonWidth"
                                 onClick={() => {
                                     router.push(Paths.profile + "/" + guideId);
                                 }}
@@ -193,7 +206,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                                 {s("seeMoreAboutGuide")}
                             </JDbutton>
                             <JDbutton
-                                style={{ width: "100px" }}
+                                className="detailNavCard__jdButtonWidth"
                                 onClick={() => {
                                     handleToChatRoomOrCreate();
                                 }}
@@ -206,15 +219,10 @@ export const DetailNavCard: React.FC<IProp> = ({
                         </div>
                     </Flex>
                 </div>
-                <div>
+
+                <div style={{}}>
                     {guide && (
                         <>
-                            <Tiny mb="small">
-                                <LineCutter line={2}>
-                                    {l(guide.introduce)}{" "}
-                                </LineCutter>
-                            </Tiny>
-                            <JDhorizen margin={1} />
                             <Flex mb column>
                                 <Info
                                     typho={{
@@ -225,7 +233,8 @@ export const DetailNavCard: React.FC<IProp> = ({
                                     label={s("workArea")}
                                     value={
                                         <Badges
-                                            mb
+                                            mb="tiny"
+                                            mr="tiny"
                                             className="detailNavCard__badges"
                                             items={guide?.regions || []}
                                         >
@@ -239,6 +248,8 @@ export const DetailNavCard: React.FC<IProp> = ({
                                     hide={isEmpty(guide?.langs)}
                                     value={
                                         <Badges
+                                            mb="tiny"
+                                            mr="tiny"
                                             className="detailNavCard__badges"
                                             items={guide?.langs}
                                         >
@@ -255,8 +266,8 @@ export const DetailNavCard: React.FC<IProp> = ({
                                         value={
                                             <Badges
                                                 className="detailNavCard__badges"
-                                                mb="small"
-                                                mr="small"
+                                                mb="tiny"
+                                                mr="tiny"
                                                 items={
                                                     guide?.guideCategory || []
                                                 }
@@ -268,9 +279,17 @@ export const DetailNavCard: React.FC<IProp> = ({
                                         }
                                     />
                                 )}
+                                <Introduce
+                                    children={
+                                        <LineCutter line={10}>
+                                            {l(guide.introduce)}{" "}
+                                        </LineCutter>
+                                    }
+                                />
                             </Flex>
                         </>
                     )}
+                    {/* 리뷰, 현재 운영페이지에는 없음.
                     <JDbutton
                         hide={!reviewAb}
                         mode="border"
@@ -283,10 +302,10 @@ export const DetailNavCard: React.FC<IProp> = ({
                         }}
                     >
                         {s("reviewWrite")}
-                    </JDbutton>
+                    </JDbutton> */}
                 </div>
             </JDcard>
-            <InfoBox>
+            <InfoBox className="detailNavCard__InfoboxWidth">
                 <Head
                     headIcon="triWarn"
                     require={false}

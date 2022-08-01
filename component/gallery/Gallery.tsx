@@ -6,6 +6,7 @@ import { AppContext } from "../../context/context";
 import { Ffile } from "../../types/api";
 import { Ratio } from "../../types/const";
 import { beforeExtention } from "../../utils/fileExtendDivider";
+import { Example, Item } from "./Slider";
 
 interface IProp {
     photos: Ffile[];
@@ -64,32 +65,8 @@ export const Galley: React.FC<IProp> = ({ photos }) => {
     const plus = photos.length - 4;
     const over4 = photos.length > 4;
     return (
-        <div className="gallery">
-            <ImgBox
-                noResize
-                onClick={handleViewDetail(0)}
-                mb
-                src={photos[0]?.uri}
-            />
-            <Flex oneone>
-                <ImgBox onClick={handleViewDetail(2)} mr src={photos[1]?.uri} />
-                <ImgBox
-                    onClick={handleViewDetail(3)}
-                    mr={photos.length > 3 ? "normal" : "no"}
-                    src={photos[2]?.uri}
-                />
-                <ImgBox onClick={handleViewDetail(4)} src={photos[3]?.uri}>
-                    {over4 && (
-                        <div
-                            onClick={handleViewDetail(4)}
-                            className="gallery__plus"
-                        >
-                            {" "}
-                            +{plus}
-                        </div>
-                    )}
-                </ImgBox>
-            </Flex>
+        <div>
+            <Example imgs={imgs} />
         </div>
     );
 };
