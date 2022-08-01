@@ -71,7 +71,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         />
                     )}
                     <Mb mb="largest" />
-                    <Banner
+                    {/**<Banner
                         bannerImages={
                             homepage?.bannerImages?.filter((banner) =>
                                 FileTagManager.getTagByTagNameAndValue(
@@ -81,7 +81,8 @@ export const LocationalGuide: React.FC<IProp> = () => {
                                 )
                             ) || []
                         }
-                    />
+                    /> */}
+
                     <GuideMovieCardsWithApi />
                     <Mb mb="largest" />
                     <BestProductViewsLineHeader />

@@ -21,6 +21,7 @@ interface IProp {
     onSelectRegion: (region: mapRegion) => void;
 }
 
+// 원본
 export const RegionDescriptionSecotr: React.FC<IProp> = ({
     region,
     onSelectRegion,
@@ -66,6 +67,133 @@ export const RegionDescriptionSecotr: React.FC<IProp> = ({
                     }}
                 />
             )}
+            <Flex>
+                {photos.map((photo) => (
+                    <div className="RegionDescriptionSecotr__photo">
+                        <Photo src={photo} />
+                    </div>
+                ))}
+            </Flex>
+            <Horizen
+                className="JDbgColor--darkPrimary"
+                margin={3}
+                color="primary"
+                height={3}
+                br={5}
+            />
+            {mapRegionArr.map((_region) => {
+                const target =
+                    regionableData[_region as keyof typeof regionableData];
+                const isSelected = region === _region;
+                return (
+                    <JDbutton
+                        onClick={handleSelectRegion(_region)}
+                        className="RegionDescriptionSecotr__regionBtn"
+                        mr="tiny"
+                        mb="tiny"
+                        padding="small"
+                        mode={"flat"}
+                        br="square"
+                        size="small"
+                        thema={isSelected ? "darkPrimary" : undefined}
+                        style={{
+                            backgroundColor: isSelected
+                                ? undefined
+                                : "transparent",
+                        }}
+                    >
+                        {l(target.title)}
+                    </JDbutton>
+                );
+            })}
+        </JDalign>
+    );
+};
+
+// 지역 상품 선택 상단 대표 이미지
+//동진 locationalGuide 컴포넌트 새로 생성
+export const RegionDescriptionSecotr2: React.FC<IProp> = ({
+    region,
+    onSelectRegion,
+}) => {
+    const [viewMoreText, setViewMoreText] = useState(false);
+    const { l } = useContext(AppContext);
+    const data = regionableData[region];
+    const { title, description, photos } = data;
+
+    const handleSelectRegion = (region: mapRegion) => () => {
+        onSelectRegion(region);
+    };
+
+    return (
+        <JDalign mr className="RegionDescriptionSecotr">
+            <div
+                style={{
+                    height: "45vh",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginBottom: "10vh",
+                }}
+            >
+                <Flex vCenter mb="no">
+                    <Bold color="white" size="h2">
+                        {l(title as any)}
+                    </Bold>
+                </Flex>
+                <Small
+                    weight={700}
+                    className="textTransformClear"
+                    color="white"
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignSelf: "center",
+                        whiteSpace: "pre-line",
+                        fontSize: "0.95rem",
+                    }}
+                    dangerouslySetInnerHTML={{
+                        __html: cutStr(
+                            l(description as any),
+                            viewMoreText ? 9999 : 400
+                        ),
+                    }}
+                />
+                <Flex>
+                    {photos.map((photo) => (
+                        <div className="RegionDescriptionSecotr__photo">
+                            <Photo src={photo} />
+                        </div>
+                    ))}
+                </Flex>
+            </div>
+        </JDalign>
+    );
+};
+
+// 지역 가이드 페이지용
+export const RegionDescriptionSecotr3: React.FC<IProp> = ({
+    region,
+    onSelectRegion,
+}) => {
+    const [viewMoreText, setViewMoreText] = useState(false);
+    const { l } = useContext(AppContext);
+    const data = regionableData[region];
+    const { title, description, photos } = data;
+
+    const handleSelectRegion = (region: mapRegion) => () => {
+        onSelectRegion(region);
+    };
+
+    return (
+        <JDalign mr className="RegionDescriptionSecotr">
+            <Flex vCenter mb="huge">
+                <JDicon color="darkPrimary" mr size="large" icon="flag" />
+                <Bold color="darkPrimary" size="h3">
+                    {l(title as any)}
+                </Bold>
+            </Flex>
             <Flex>
                 {photos.map((photo) => (
                     <div className="RegionDescriptionSecotr__photo">
