@@ -94,8 +94,6 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
 
     const data: userList_UserList_items[] = users;
 
-    console.log(data);
-
     return (
         <>
             <div className="slider__LongSliderContainer">
@@ -152,6 +150,12 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
                     <button
                         onClick={onClickNext}
                         className="slider__LongSliderRightArrow"
+                        style={{
+                            display:
+                                index === Math.ceil(data.length / offset) - 1
+                                    ? "none"
+                                    : "block",
+                        }}
                     >
                         <svg
                             width="40"
