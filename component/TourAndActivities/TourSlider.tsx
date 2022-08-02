@@ -101,10 +101,16 @@ const TourSlider = () => {
                     textAlign: "center",
                     marginBottom: "50px",
                     fontWeight: "bold",
-                    color: "#d0242b",
                 }}
             >
-                Tour Item
+                <span
+                    style={{
+                        color: "#d0242b",
+                    }}
+                >
+                    Tour
+                </span>{" "}
+                Item
             </h1>
             <div className="slider__LongSliderContainer">
                 <div className="slider__LongSliderLeftArrowContainer">
