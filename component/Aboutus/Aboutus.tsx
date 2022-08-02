@@ -3,7 +3,14 @@ const Aboutus = () => {
         <div className="aboutUs__Container">
             <div className="aboutUs__top">
                 <h1 style={{ textAlign: "center", fontWeight: "bold" }}>
-                    About us
+                    <span
+                        style={{
+                            color: "#d0242b",
+                        }}
+                    >
+                        About
+                    </span>{" "}
+                    us
                 </h1>
             </div>
             <div className="aboutUs__imageContainer">
@@ -42,6 +49,7 @@ const Aboutus = () => {
                                 viewBox="0 0 512 512"
                                 width="45px"
                                 height="45px"
+                                fill="rgb(128, 128, 128)"
                                 style={{
                                     marginRight: "20px",
                                 }}
@@ -58,6 +66,7 @@ const Aboutus = () => {
                                 viewBox="0 0 384 512"
                                 width="45px"
                                 height="45px"
+                                fill="rgb(128, 128, 128)"
                                 style={{
                                     marginRight: "20px",
                                 }}
