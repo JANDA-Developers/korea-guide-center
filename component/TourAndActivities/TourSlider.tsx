@@ -1,66 +1,59 @@
-import { useState } from "react";
-import styled from "styled-components";
+import { useProductList } from "../../hook/useProduct";
+import { AppContext } from "../../context/context";
+import { IProductViewCard } from "../productViewCard/ProductViewCard";
+import { useState, useContext } from "react";
+import {
+    Fproduct,
+    productList,
+    productListVariables,
+    productList_ProductList_items,
+    _ProductFilter,
+    _ProductSort,
+} from "../../types/api";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWindowSize } from "usehooks-ts";
-import { ITourSliderItem } from "./TourSliderItem";
 import TourSliderItem from "./TourSliderItem";
+import { TElements } from "../../types/interface";
+import { ListInitOptions } from "../../hook/useListQuery";
+import { genrateOption } from "../../utils/query";
+
+interface IProp extends Partial<IProductViewCard> {
+    align?: 1 | 2 | 3 | 4 | "auto" | "wrap";
+    wrap?: boolean;
+    products: productList_ProductList_items[];
+    onClickProduct?: (product: Fproduct) => void;
+    empty?: TElements;
+}
+
+interface IProductViewCardsWithApi extends Omit<IProp, "products"> {
+    queryParam?: Partial<ListInitOptions<_ProductFilter, _ProductSort>>;
+    queryControl?: genrateOption<productList, productListVariables>;
+    Head?: TElements;
+}
 
 // scss/page/index.scss 파일에서 css 작업함
 
-const data: ITourSliderItem[] = [
-    {
-        title: "서울 투어",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..",
-        imageUrl: "img/cities/seoul.jpg",
-        price: 300000,
-    },
-    {
-        title: "부산 투어",
-        desc: "놀러오세요.",
-        imageUrl: "img/cities/busan.jpg",
-        price: 300000,
-    },
-    {
-        title: "대구 투어",
-        desc: "놀러오세요.",
-        imageUrl: "img/cities/daegu.jpg",
-        price: 300000,
-    },
-    {
-        title: "인천 투어",
-        desc: "놀러오세요.",
-        imageUrl: "img/cities/incheon.jpg",
-        price: 300000,
-    },
-    {
-        title: "광주 투어",
-        desc: "놀러오세요.",
-        imageUrl: "img/cities/gwangju.jpg",
-        price: 300000,
-    },
-    {
-        title: "대전 투어",
-        desc: "놀러오세요.",
-        imageUrl: "img/cities/daejeon.jpg",
-        price: 300000,
-    },
-    {
-        title: "울산 투어",
-        desc: "놀러오세요.",
-        imageUrl: "img/cities/ulsan.jpg",
-        price: 300000,
-    },
-    {
-        title: "제주 투어",
-        desc: "놀러오세요",
-        imageUrl: "img/cities/jeju.jpg",
-        price: 300000,
-    },
-];
-
 const offset = 4;
 
-const TourSlider = () => {
+const TourSlider: React.FC<IProductViewCardsWithApi> = ({
+    queryControl,
+    queryParam,
+}) => {
+    const { commonProductFilter } = useContext(AppContext);
+    const { items: products } = useProductList(
+        {
+            initialViewCount: 8,
+            ...queryParam,
+            fixingFilter: {
+                ...queryParam?.fixingFilter,
+                ...commonProductFilter,
+            },
+        },
+        queryControl
+    );
+
+    console.log(products);
+
     const { width } = useWindowSize();
 
     const rowVariants = {
@@ -77,7 +70,7 @@ const TourSlider = () => {
         if (leaving) return;
         setLeaving(true);
         setBack(false);
-        const maxIndex = Math.ceil(data.length / offset) - 1;
+        const maxIndex = Math.ceil(products.length / offset) - 1;
         setIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
     };
 
@@ -108,9 +101,9 @@ const TourSlider = () => {
                         color: "#d0242b",
                     }}
                 >
-                    Tour
+                    Popular
                 </span>{" "}
-                Item
+                Tour
             </h1>
             <div className="slider__LongSliderContainer">
                 <div className="slider__LongSliderLeftArrowContainer">
@@ -155,7 +148,7 @@ const TourSlider = () => {
                     >
                         <div className="slider__LongSliderEmptyBox" />
                         <TourSliderItem
-                            item={data}
+                            products={products}
                             offset={offset}
                             index={index}
                         />
@@ -168,7 +161,8 @@ const TourSlider = () => {
                         className="slider__LongSliderRightArrow"
                         style={{
                             display:
-                                index === Math.ceil(data.length / offset) - 1
+                                index ===
+                                Math.ceil(products.length / offset) - 1
                                     ? "none"
                                     : "block",
                         }}

@@ -22,7 +22,6 @@ import { ProductViewsLineHeader } from "../component/productViewCard/ProductView
 import { useRouter } from "next/router";
 import RecommendGuide from "../component/RecommendGuide/RecommendGuide";
 import Aboutus from "../component/Aboutus/Aboutus";
-import PopularTour from "../component/PopularTour/PopularTour";
 
 type TIntroList = {
     title: string;
@@ -181,7 +180,6 @@ const TourLayout = () => {
             <LocalGuideAndPrivateTour />
             <RecommendGuide randomSort key={locale + "ProductViewCard1"} />
             <Aboutus />
-            <PopularTour />
         </BookLayout>
     );
 };
