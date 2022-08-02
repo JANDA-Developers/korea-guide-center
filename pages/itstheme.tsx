@@ -47,7 +47,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
                     }
                 /> */}
                 <ProductsGroupRenders />
-
                 <ProductViewCardsWithApi
                     Head={<BestProductViewsLineHeader />}
                     {...BestProductList}
