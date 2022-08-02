@@ -55,17 +55,20 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
         <BookLayout>
             <div className="guideProfile">
                 <div className="guideProfile__bg">
-                    <img className="guideProfile__bgimg"
+                    <img
+                        className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img className="guideProfile__bgimg"
+                    <img
+                        className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img className="guideProfile__bgimg"
-
+                    <img
+                        className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img className="guideProfile__bgimg"
+                    <img
+                        className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
                 </div>
@@ -125,6 +128,7 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             src={profileVideo?.uri}
                         />
                     </Flex>
+
                     {!isEmpty(
                         filterVisibleProduct(
                             products || [],

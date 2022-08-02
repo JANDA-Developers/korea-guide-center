@@ -1,4 +1,4 @@
-import { Flex, isEmpty, JDhorizen } from "@janda-com/front";
+import { Flex, isEmpty, JDbutton, JDhorizen } from "@janda-com/front";
 import { useContext } from "react";
 import { Info2 } from "../../atom/Info";
 import { GuideCircle2 } from "../guideCircle/GuideCircle";
@@ -6,14 +6,29 @@ import { AppContext } from "../../context/context";
 import { Badges2 } from "../statusBadges/StatusBadges";
 import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
 import { LineCutter } from "../../atom/LineCutter";
+import { Paths } from "../../pages/index[depre]";
+import router from "next/router";
+import { useStartChat } from "../../hook/useChatRoom";
+import { filterVisibleProduct } from "../../utils/product";
+import { LANGUAGES } from "../../types/api";
+import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
+import {
+    ProductViewCardsWithApi,
+    ProductViewCardsWithApi2,
+} from "../productViewCard/ProductViewCards";
 
 function GuideIntro({ item }) {
     const context = useContext(AppContext);
     const { s, l } = context;
+    const guideId = item._id;
+    const guideNickName = item.nickName;
+    const { handleToChatRoomOrCreate } = useStartChat(
+        guideId,
+        guideNickName || ""
+    );
     return (
-        <div
+        <Flex
             style={{
-                display: "flex",
                 marginBottom: "3vh",
                 borderWidth: "1.3px",
                 borderStyle: "solid",
@@ -24,22 +39,46 @@ function GuideIntro({ item }) {
                 alignSelf: "center",
             }}
         >
-            <div
+            <Flex
                 style={{
-                    display: "flex",
                     flexDirection: "column",
                     width: "21vh",
                 }}
             >
                 <GuideCircle2
                     mr
-                    guideId={item._id}
+                    guideId={guideId}
                     guideProfile={item.profileImage.uri}
                 />
+                <Flex style={{ width: "min-content", marginLeft: "15px" }}>
+                    <JDbutton
+                        className="detailNavCard__jdButtonWidth"
+                        onClick={() => {
+                            router.push(Paths.profile + "/" + guideId);
+                        }}
+                        mb="small"
+                        thema="lightPrimary"
+                        size="tiny"
+                        mode="flat"
+                    >
+                        {s("seeMoreAboutGuide")}
+                    </JDbutton>
+                    <JDbutton
+                        className="detailNavCard__jdButtonWidth"
+                        onClick={() => {
+                            handleToChatRoomOrCreate();
+                        }}
+                        thema="lightPrimary"
+                        size="tiny"
+                        mode="flat"
+                    >
+                        {s("talkWith")}
+                    </JDbutton>
+                </Flex>
                 <br></br>
                 <br></br>
                 <br></br>
-            </div>
+            </Flex>
             <div
                 style={{
                     fontWeight: "bold",
@@ -48,7 +87,7 @@ function GuideIntro({ item }) {
                     width: "620px",
                 }}
             >
-                {item.nickName}
+                {guideNickName}
                 <JDhorizen margin={2} />
                 <Flex mb column>
                     <Info2
@@ -109,9 +148,28 @@ function GuideIntro({ item }) {
                             </LineCutter>
                         }
                     />
+                    {!isEmpty(
+                        filterVisibleProduct(
+                            item.products || [],
+                            router.locale || LANGUAGES.ko
+                        )
+                    ) && (
+                        <div>
+                            <ProductViewsLineHeader
+                                title={s("viewGuideTours")}
+                            />
+                            <ProductViewCardsWithApi2
+                                queryParam={{
+                                    fixingFilter: {
+                                        guideId__eq: item._id,
+                                    },
+                                }}
+                            />
+                        </div>
+                    )}
                 </Flex>
             </div>
-        </div>
+        </Flex>
     );
 }
 

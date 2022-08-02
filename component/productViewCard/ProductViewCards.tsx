@@ -24,7 +24,11 @@ import { groupProductMap } from "../../utils/categoryMap";
 import { genrateOption } from "../../utils/query";
 import { mapRegion } from "../koreaMap/KoreaData";
 import { AnimationOnScroll } from "../scrollAnimation/ScrollAnimation";
-import { IProductViewCard, ProductViewCard } from "./ProductViewCard";
+import {
+    IProductViewCard,
+    ProductViewCard,
+    ProductViewCard2,
+} from "./ProductViewCard";
 import { ProductViewsLineHeader } from "./ProductViewsLineHeader";
 
 interface IProp extends Partial<IProductViewCard> {
@@ -107,6 +111,78 @@ export const ProductViewCards: React.FC<IProp> = ({
     );
 };
 
+export const ProductViewCards2: React.FC<IProp> = ({
+    products,
+    align = "auto",
+    wrap,
+    empty = null,
+    onClickProduct,
+    ...props
+}) => {
+    const uniqKey = useS4();
+    const [_align, _setAlign] = useState<number | null>(null);
+    const { ref, width, height } = useResizeDetector();
+    const Align = _align || align;
+    const className = classNames("ProductViewCards", undefined, {
+        "ProductViewCards--1": Align === 1,
+        "ProductViewCards--2": Align === 2,
+        "ProductViewCards--3": Align === 3,
+        "ProductViewCards--4": Align === 4,
+        "ProductViewCards--wrap": Align === "wrap",
+        "ProductViewCards--empty": isEmpty(products),
+    });
+
+    useLayoutEffect(() => {
+        if (align === "auto" || align === "wrap") {
+            if (width) {
+                if (width < 400) {
+                    _setAlign(2);
+                } else if (width < 850) _setAlign(3);
+                else {
+                    _setAlign(4);
+                }
+            }
+        }
+    }, [width]);
+
+    return (
+        <div ref={ref}>
+            <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
+                <Flex oneone className={className} wrap={wrap}>
+                    {isEmpty(products) && (
+                        <div className="ProductViewCards__empty">{empty}</div>
+                    )}
+                    {products.map((product) => (
+                        <ProductViewCard2
+                            mb={wrap ? "normal" : undefined}
+                            onClick={() => {
+                                onClickProduct?.(product);
+                            }}
+                            key={product._id + uniqKey}
+                            className="ProductViewCards__card"
+                            mr
+                            {...props}
+                            product={product}
+                        />
+                    ))}
+                    <JDalign
+                        mr
+                        className="ProductViewCards__card ProductViewCards__card--placeholder"
+                    />
+                    <JDalign
+                        mr
+                        className="ProductViewCards__card ProductViewCards__card--placeholder"
+                    />
+                    <JDalign
+                        mr
+                        className="ProductViewCards__card ProductViewCards__card--placeholder"
+                    />
+                </Flex>
+            </AnimationOnScroll>
+        </div>
+    );
+};
+
 interface IProductViewCardsWithApi extends Omit<IProp, "products"> {
     queryParam?: Partial<ListInitOptions<_ProductFilter, _ProductSort>>;
     queryControl?: genrateOption<productList, productListVariables>;
@@ -138,6 +214,35 @@ export const ProductViewCardsWithApi: React.FC<IProductViewCardsWithApi> = ({
         <div>
             {Head}
             <ProductViewCards {...props} products={products} />
+        </div>
+    );
+};
+
+export const ProductViewCardsWithApi2: React.FC<IProductViewCardsWithApi> = ({
+    queryControl,
+    queryParam,
+    Head,
+    ...props
+}) => {
+    const { commonProductFilter } = useContext(AppContext);
+
+    const { items: products } = useProductList(
+        {
+            initialViewCount: 8,
+            ...queryParam,
+            fixingFilter: {
+                ...queryParam?.fixingFilter,
+                ...commonProductFilter,
+            },
+        },
+        queryControl
+    );
+
+    if (isEmpty(products)) return null;
+    return (
+        <div>
+            {Head}
+            <ProductViewCards2 {...props} products={products} />
         </div>
     );
 };
