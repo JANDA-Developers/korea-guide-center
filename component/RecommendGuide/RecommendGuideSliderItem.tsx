@@ -1,7 +1,7 @@
 import { userList_UserList_items } from "../../types/api";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
-import styled from "styled-components";
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 interface IRecommendGuideSliderProps {
@@ -15,6 +15,13 @@ const RecommendGuideSliderItem = ({
     offset,
     index,
 }: IRecommendGuideSliderProps) => {
+    const SliderVariants = {
+        hover: {
+            y: -5,
+            boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+            cursor: "pointer",
+        },
+    };
     const { l } = useContext(AppContext);
     const router = useRouter();
     const onClickGuide = () => {
@@ -25,7 +32,11 @@ const RecommendGuideSliderItem = ({
         <>
             {item.slice(offset * index, offset * index + offset).map((i) => {
                 return (
-                    <div className="slider__LongSliderItems">
+                    <motion.div
+                        className="slider__LongSliderItems"
+                        variants={SliderVariants}
+                        whileHover="hover"
+                    >
                         <div
                             className="slider__GuideSliderItemImage"
                             style={{
@@ -52,7 +63,7 @@ const RecommendGuideSliderItem = ({
                                 );
                             })}
                         </div>
-                    </div>
+                    </motion.div>
                 );
             })}
         </>

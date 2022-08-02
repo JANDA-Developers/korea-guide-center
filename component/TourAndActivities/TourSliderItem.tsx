@@ -1,8 +1,8 @@
-import styled from "styled-components";
 import { useRouter } from "next/router";
 import { productList_ProductList_items } from "../../types/api";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
+import { motion } from "framer-motion";
 
 interface ITourSliderItemProps {
     products: productList_ProductList_items[];
@@ -20,13 +20,25 @@ const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
 
+    const SliderVariants = {
+        hover: {
+            y: -5,
+            boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+            cursor: "pointer",
+        },
+    };
+
     return (
         <>
             {products
                 .slice(offset * index, offset * index + offset)
                 .map((i, index) => {
                     return (
-                        <div className="slider__LongSliderItems">
+                        <motion.div
+                            className="slider__LongSliderItems"
+                            variants={SliderVariants}
+                            whileHover="hover"
+                        >
                             <div
                                 className="slider__TourSliderItemImage"
                                 style={{
@@ -55,7 +67,7 @@ const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
                                     <span>정보 & 예약하기</span>
                                 </button>
                             </div>
-                        </div>
+                        </motion.div>
                     );
                 })}
         </>
