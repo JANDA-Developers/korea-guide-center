@@ -57,7 +57,7 @@ export const GuideCircle2: React.FC<Iprops> = ({
             style={{
                 display: "flex",
                 width: "14vh",
-                height: "18vh",
+                height: "17vh",
                 marginLeft: "2.4vh",
                 marginTop: "3vh",
                 marginBottom: "2vh",
