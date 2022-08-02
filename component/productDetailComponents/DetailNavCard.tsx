@@ -36,7 +36,7 @@ import { IReviewModalInfo } from "../ReviewModal/ReviewModal";
 import { Badges, Badges2 } from "../statusBadges/StatusBadges";
 import { WishIcon } from "../wisthIcon/WishIcon";
 import LogoComponent from "./DetailNavCardLogo";
-import Introduce from "./DetailNavCardIntroduce";
+import { Introduce } from "./DetailNavCardIntroduce";
 import { Direction } from "react-range";
 
 interface IProp extends IJDcardProps {

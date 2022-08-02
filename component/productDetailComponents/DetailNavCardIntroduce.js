@@ -3,4 +3,8 @@ function Introduce({ children }) {
     return <div className="detailNavCard__introduce">{children}</div>;
 }
 
-export default Introduce;
+function Introduce2({ children }) {
+    return <div className="detailNavCard__introduce2">{children}</div>;
+}
+
+export { Introduce, Introduce2 };
