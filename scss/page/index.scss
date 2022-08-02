@@ -148,6 +148,12 @@ a {
 }
 
 .region {
+    &__RegionSliderItemTitle {
+        font-weight: 600;
+        color: white;
+        text-shadow: 2px 2px 2px gray;
+    }
+
     &__RegionDetailButton{
         all: unset;
         text-align: center;
@@ -158,16 +164,31 @@ a {
         border-radius: 5px;
         padding: 10px 0px;
     }
+    &__bgImage{
+        border-radius: 10px;
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        vertical-align: middle;
+    }
+
+    &__contents {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+        z-index: 10;
+        justify-content: space-between;
+        padding: 25px 15px;
+        
+    }
+
+
 }
 
 .slider {
-
-    &__RegionSliderItemTitle {
-        font-weight: 600;
-        color: white;
-        text-shadow: 2px 2px 2px gray;
-    }
-
     // Short
     &__ShortSliderEmptyBox {
         width: 16.875rem;
@@ -232,16 +253,27 @@ a {
 
     &__ShortSliderItems {
         display:flex;
-        flex-direction: column;
         box-sizing: border-box;
-        justify-content: space-between;
         cursor:pointer;
         position:relative;
-        padding: 25px 15px;
         width: 16.875rem;
         height: 19.875rem;
         border-radius: 10px;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        overflow: hidden;
+
+        img {
+            flex-shrink: 0;
+            min-width: 100%;
+            min-height: 100%;
+            transition: transform 3s ease;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
     }
 
     &__ShortSliderRow {
