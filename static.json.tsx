@@ -1901,10 +1901,10 @@ const utils_message = {
         chi: `预约日`,
     },
     workArea: {
-        ko: "주 활동지역 :",
-        en: `activity area :`,
-        ja: `活動地域 :`,
-        chi: `活动区 :`,
+        ko: "주 활동지역 : ",
+        en: `activity area : `,
+        ja: `活動地域 : `,
+        chi: `活动区 : `,
     },
     useLanguage: {
         ko: "사용 가능 언어 :",

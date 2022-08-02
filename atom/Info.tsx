@@ -38,5 +38,23 @@ export const Info: React.FC<IProp> = ({ children, label, value, ...props }) => {
     );
 };
 
+//동진
+export const Info2: React.FC<IProp> = ({
+    children,
+    label,
+    value,
+    ...props
+}) => {
+    return (
+        <JDalign {...props} style={{ display: "flex" }}>
+            <JDtypho size="small" color="black" style={{ display: "flex" }}>
+                <div style={{ marginRight: "0.5vh", flexShrink: "0" }}>
+                    {label}
+                </div>
+                {value || children}
+            </JDtypho>
+        </JDalign>
+    );
+};
 // 필터바
 // [] 날자 검색가능  키워드가 어떤 키워드인지 검색가능 []키워드 검색가능 // 키워드가능

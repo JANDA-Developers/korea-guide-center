@@ -193,16 +193,15 @@ export const Badges = <_, T>({
     );
 };
 
+// 상품페이지 뱃지 스타일
 export const Badges2 = <_, T>({
-    // NEW 뱃지 스타일
     items,
     children,
     className,
     ...props
 }: IBdagesProps<T>) => {
-    const uniqKey = useS4();
     return (
-        <Flex vCenter center wrap className={className}>
+        <Flex vCenter wrap className={className} style={{ fontSize: "13px" }}>
             {items?.map((item, index) => (
                 <BadgeDetail name={children(item)}></BadgeDetail>
             ))}
