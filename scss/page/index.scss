@@ -17,8 +17,134 @@ a {
 }
 
 
-.aboutAs {
+.aboutUs {
+    &__Container {
+        position: relative;
+        width: 100vw;
+        height: 90vh;
+        margin-top: 10.375rem;
+    }
 
+    &__top {
+        color: black;
+    }
+
+    &__bottomContainer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: absolute;
+        width: 100vw;
+        height: 50vh;
+        bottom: 0;
+        background-color: #d0242b;
+    }
+
+    &__bottomLeft {
+        display: flex;
+        align-items: center;
+        width: 34.375rem;
+        height: 100%;
+        margin-right: 1.875rem;
+    }
+
+    &__bottomRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 34.375rem;
+        height: 100%;
+        position: relative;
+    }
+
+    &__imageContainer {
+        position: absolute;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        top: 6.25rem;
+        z-index: 10;
+    }
+
+    &__imageFirst {
+        width: 34.375rem;
+        height: 25rem;
+        margin-right: 1.875rem;
+        background-size: cover;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    &__imageSecond {
+        position: relative;
+        width: 34.375rem;
+        height: 25rem;
+        background-size: cover;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    &__imageTextBox {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 1.875rem;
+        color: white;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__imageTextTop{
+        margin-bottom: 0.625rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-shadow: 2px 2px 2px gray;
+    }
+
+    &__imageTextBottom {
+        font-weight: 600;
+        font-size: 1.563rem;
+        margin-bottom: 0.625rem;
+        text-shadow: 2px 2px 2px gray;
+    }
+
+    &__bottomLeftTop {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4.063rem;
+    }
+
+    &__bottomLeftBottom {
+        display: flex;
+        align-items: center;
+    }
+
+    &__bottomLeftText {
+        color: white;
+        font-weight: 600;
+    }
+
+    &__bottomRightTop {
+        color: white;
+        font-weight: 600;
+        font-size: 1.563rem;
+        margin-bottom: 1.563rem;
+    }
+
+    &__bottomRightBottom {
+        color: white;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    &__whiteLine {
+        background-color: white;
+        position: absolute;
+        left: 0;
+        bottom: 15.625rem;
+        width: 62.5rem;
+        height: 0.635rem;
+    }
 }
 
 .region {
