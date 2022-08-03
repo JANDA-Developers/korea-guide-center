@@ -18,43 +18,6 @@ import { Logo } from "../logo/Logo";
 import { Paths } from "../../pages/index[depre]";
 import JDIcon from "../icons/Icons";
 
-const InnerContainer = styled.div`
-    display: flex;
-`;
-
-const Cities = styled.div``;
-
-const CitiesTitle = styled.h1`
-    color: #8d8d89;
-`;
-
-const City = styled.div`
-    display: flex;
-`;
-
-const CityPartOne = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-right: 300px;
-`;
-const CityPartTwo = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
-const CityText = styled.span`
-    color: white;
-    margin-bottom: 15px;
-`;
-
-const Info = styled.div`
-    margin-top: 80px;
-`;
-
-const InfoDetail = styled.div`
-    color: white;
-`;
-
 interface IProp {
     footerContainerSize?: WindowSize;
 }
@@ -82,35 +45,47 @@ export const BookFooter: React.FC<IProp> = ({
             }}
         >
             <JDcontainer verticalPadding size={footerContainerSize}>
-                <InnerContainer>
-                    <Cities>
-                        <CitiesTitle>Cities</CitiesTitle>
-                        <City>
-                            <CityPartOne>
-                                <CityText>서울</CityText>
-                                <CityText>인천</CityText>
-                                <CityText>부산</CityText>
-                                <CityText>대구</CityText>
-                                <CityText>울산</CityText>
-                                <CityText>대전</CityText>
-                                <CityText>제주</CityText>
-                                <CityText>광주</CityText>
-                                <CityText>세종</CityText>
-                            </CityPartOne>
-                            <CityPartTwo>
-                                <CityText>경기도</CityText>
-                                <CityText>강원도</CityText>
-                                <CityText>충청북도</CityText>
-                                <CityText>충청남도</CityText>
-                                <CityText>경상북도</CityText>
-                                <CityText>경상남도</CityText>
-                                <CityText>전라북도</CityText>
-                                <CityText>전라남도</CityText>
-                            </CityPartTwo>
-                        </City>
-                    </Cities>
-                </InnerContainer>
-                <Info>
+                <div className="footer__innerContainer">
+                    <div>
+                        <h1 className="footer__citiesTitle">Cities</h1>
+                        <div className="footer__city">
+                            <div className="footer__cityPartOne">
+                                <span className="footer__cityText">서울</span>
+                                <span className="footer__cityText">인천</span>
+                                <span className="footer__cityText">부산</span>
+                                <span className="footer__cityText">대구</span>
+                                <span className="footer__cityText">울산</span>
+                                <span className="footer__cityText">대전</span>
+                                <span className="footer__cityText">제주</span>
+                                <span className="footer__cityText">광주</span>
+                                <span className="footer__cityText">세종</span>
+                            </div>
+                            <div className="footer__cityPartTwo">
+                                <span className="footer__cityText">경기도</span>
+                                <span className="footer__cityText">강원도</span>
+                                <span className="footer__cityText">
+                                    충청북도
+                                </span>
+                                <span className="footer__cityText">
+                                    충청남도
+                                </span>
+                                <span className="footer__cityText">
+                                    경상북도
+                                </span>
+                                <span className="footer__cityText">
+                                    경상남도
+                                </span>
+                                <span className="footer__cityText">
+                                    전라북도
+                                </span>
+                                <span className="footer__cityText">
+                                    전라남도
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="footer__info">
                     <div
                         className="logoContainer"
                         style={{
@@ -145,7 +120,7 @@ export const BookFooter: React.FC<IProp> = ({
                             </div>
                         </div>
                     </div>
-                    <InfoDetail>
+                    <div className="footer__infoDetail">
                         <BottomInfo
                             label={s("footer_ceo")}
                             value={s("itsguide_CEO")}
@@ -172,8 +147,8 @@ export const BookFooter: React.FC<IProp> = ({
                             label={s("footer_address")}
                             value={s("itsguide_adress")}
                         />
-                    </InfoDetail>
-                </Info>
+                    </div>
+                </div>
                 <JDhorizen margin={2} />
                 <div
                     style={{

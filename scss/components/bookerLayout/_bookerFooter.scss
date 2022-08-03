@@ -6,3 +6,40 @@
     }
 }
 
+.footer {
+    &__innerContainer {
+        display: flex;
+    }
+
+    &__citiesTitle {
+        color: #8d8d89;
+    }
+
+    &__city {
+        display: flex;
+    }
+
+    &__cityPartOne, 
+    &__cityPartTwo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__cityPartOne {
+        margin-right: 300px;
+    }
+
+    &__cityText {
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    &__info {
+        margin-top: 80px;
+    }
+
+    &__infoDetail {
+        color: white;
+    }
+
+}
