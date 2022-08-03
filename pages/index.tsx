@@ -1,5 +1,4 @@
 import { Flex, JDalign } from "@janda-com/front";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useContext, useState } from "react";
 import BookLayout from "../component/layout/BookLayout";
@@ -10,19 +9,16 @@ import DragTextSlider from "../component/Slider/DragTextSlider";
 import { InputText, useInput } from "@janda-com/front";
 import { whenEnter } from "../utils/whenEnter";
 import { searchPageQueryGenerate } from "./product/search";
-import styled from "styled-components";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "../recoil/atoms";
-import Tours from "../component/TourAndActivities/TourAndActivities";
 import DragImageSlider from "../component/Slider/DragImageSlider";
 import TourAndActivities from "../component/TourAndActivities/TourAndActivities";
 import LocalGuideAndPrivateTour from "../component/LocalGuideAndPrivateTour/LocalGuideAndPrivateTour";
-import { GuideMovieCardsWithApi } from "../component/guideMovieClicp/GuideMovieClipList";
-import { ProductViewsLineHeader } from "../component/productViewCard/ProductViewsLineHeader";
 import { useRouter } from "next/router";
 import RecommendGuide from "../component/RecommendGuide/RecommendGuide";
 import Aboutus from "../component/Aboutus/Aboutus";
 import FindGuide from "../component/FindGuide/FindGuide";
+import SNS from "../component/SNS/SNS";
 
 type TIntroList = {
     title: string;
@@ -182,6 +178,7 @@ const TourLayout = () => {
             <RecommendGuide randomSort key={locale + "ProductViewCard1"} />
             <Aboutus />
             <FindGuide />
+            <SNS />
         </BookLayout>
     );
 };
