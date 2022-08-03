@@ -58,9 +58,10 @@ export const GuideCircle2: React.FC<Iprops> = ({
                 display: "flex",
                 width: "14vh",
                 height: "17vh",
-                marginLeft: "2.4vh",
-                marginTop: "3vh",
+                marginLeft: "24px",
+                marginTop: "30px",
                 marginBottom: "2vh",
+                marginRight: "22px",
                 justifyContent: "center",
             }}
             src={img}

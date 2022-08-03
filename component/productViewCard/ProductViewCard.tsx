@@ -167,8 +167,7 @@ export const ProductViewCard2: React.FC<IProductViewCard> = ({
     } = product;
     return (
         <JDalign
-            className={`productViewCard ${className}`}
-            {...alignProp}
+            className={`productViewCard2 ${className}`}
             onClick={(e) => {
                 alignProp.onClick?.(e);
                 if (withoutLink) return;
@@ -184,56 +183,9 @@ export const ProductViewCard2: React.FC<IProductViewCard> = ({
                 }
             }}
         >
-            <Flex style={{ height: "100%" }} column between>
-                <div className="productViewCard__body">
-                    <Flex
-                        className="productViewCard__inWrap"
-                        style={{ height: "100%" }}
-                        column
-                        between
-                    >
-                        <div className="productViewCard__inTop">
-                            <Tiny color="grey2">
-                                {l(category?.label)} · {l(region?.label)}
-                            </Tiny>
-                            <Bold flex mb>
-                                <LineCutter line={2}>
-                                    {l(product.title)}
-                                </LineCutter>
-                            </Bold>
-                            {/* <Small>{cutStr(l(product.shortDecsription) || "", 50)}</Small> */}
-                        </div>
-                        <div className="productViewCard__inBottom">
-                            <Flex className="productViewCard__ratingWrap" vEnd>
-                                <Small>
-                                    <RatingStar
-                                        readonly
-                                        initialRating={rating || 5}
-                                    />
-                                </Small>
-                                {/* <Tiny color="grey3">({reviewCount})</Tiny> */}
-                            </Flex>
-                            <Flex vEnd className="productViewCard__priceWrap">
-                                <JDtypho mr="tiny">
-                                    {autoComma(product.priceAdult || 0)}
-                                </JDtypho>
-                                <Tiny color="grey3">{s("money_unit")}</Tiny>
-                            </Flex>
-                            <div className="productViewCard__guide">
-                                <Tip message={guideNickName || ""}>
-                                    <GuideCircle
-                                        className="productViewCard__guideCircle"
-                                        guideId={guideId}
-                                        guideProfile={beforeExtention(
-                                            guideImage?.uri || "",
-                                            "---200"
-                                        )}
-                                    />
-                                </Tip>
-                            </div>
-                        </div>
-                    </Flex>
-                </div>
+            <Flex between>
+                <Flex>{l(product.title)}</Flex>
+                <Flex style={{}}>{autoComma(product.priceAdult || 0)}원</Flex>
             </Flex>
         </JDalign>
     );

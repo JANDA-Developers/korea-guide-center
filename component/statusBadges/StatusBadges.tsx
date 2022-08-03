@@ -193,7 +193,7 @@ export const Badges = <_, T>({
     );
 };
 
-// 상품페이지 뱃지 스타일
+// 가이드 리스트 뱃지 스타일
 export const Badges2 = <_, T>({
     items,
     children,

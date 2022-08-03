@@ -148,7 +148,12 @@ export const ProductViewCards2: React.FC<IProp> = ({
     return (
         <div ref={ref}>
             <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
-                <Flex oneone className={className} wrap={wrap}>
+                <Flex
+                    oneone
+                    className={className}
+                    wrap={wrap}
+                    style={{ flexDirection: "column" }}
+                >
                     {isEmpty(products) && (
                         <div className="ProductViewCards__empty">{empty}</div>
                     )}

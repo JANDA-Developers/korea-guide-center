@@ -2145,6 +2145,12 @@ const utils_message = {
         ja: `現地ガイドが直接企画したツアーをおすすめします`,
         chi: `请您见当地导游的旅行.`,
     },
+    guideTours: {
+        ko: "서비스 상품",
+        en: `Service tours`,
+        ja: `サービスツアー`,
+        chi: `服务之旅`,
+    },
     peopleSelectTitle: {
         ko: "아래에서 투어 인원을 선택해주세요.",
         en: `Please select the number of people on your tour.`,

@@ -2,9 +2,13 @@ function BadgeDetail({ name }) {
     return (
         <div
             style={{
-                color: "#9F9D9D",
-                fontSize: "1.2em",
+                display: "flex",
+                color: "#4D4D4D",
+                fontSize: "13.6px",
                 marginRight: "0.5vh",
+                marginTop: "0.4vh",
+                marginBottom: "0.5vh ",
+                alignItems: "center",
             }}
         >
             {name}

@@ -22,9 +22,8 @@ export const ProductViewsLineHeader: React.FC<IProp> = ({
     return (
         <JDalign className="productViewsLineHeader">
             <Flex>
-                <Bold mb={description ? "tiny" : "normal"} size="h6">
-                    {title}
-                </Bold>
+                <Flex style={{ fontSize: "0.85em" }}>{title}</Flex>
+
                 {onSeeMore && (
                     <SeeMore
                         className="productViewsLineHeader__seeMore"

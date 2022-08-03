@@ -19,3 +19,20 @@
         flex-direction: column;
     }   
 }
+
+.guideCardWrapper{
+    margin-bottom: 3vh;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #D5CECE;
+    width: 90vh;
+    height: 200vh;
+    align-self: center;
+}
+
+.infoDiv{
+    font-weight: bold;
+    margin-top: 3vh;
+    font-size: 1.3em;
+    width: 620px;
+}
