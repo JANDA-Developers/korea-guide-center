@@ -1,47 +1,17 @@
 import styled from "styled-components";
 import EmblaCarousel from "../EmblaCarousel/EmblaCarousel";
 
-const Container = styled.div`
-    width: 100%;
-    display: flex;
-    margin-top: 400px;
-`;
-
-const ImageSliderContainer = styled.div`
-    width: 60%;
-    height: 500px;
-`;
-
-const TextContainer = styled.div`
-    width: 40%;
-    padding: 50px 40px;
-    background-color: black;
-    color: white;
-`;
-
-const Button = styled.button`
-    all: unset;
-    background-color: #d0242b;
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: 600;
-`;
-
-const Title = styled.h1`
-    font-weight: 600;
-`;
-
 const SLIDE_COUNT = 5;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 const FindGuide = () => {
     return (
-        <Container>
-            <ImageSliderContainer>
+        <div className="findGuide__Container">
+            <div className="findGuide__imageSliderContainer">
                 <EmblaCarousel slides={slides} />
-            </ImageSliderContainer>
-            <TextContainer>
-                <Title>파트너 가이드를 찾습니다.</Title>
+            </div>
+            <div className="findGuide__textContainer">
+                <h1 className="findGuide__title">파트너 가이드를 찾습니다.</h1>
                 <p>
                     단순한 정보는 구글등 웹사이트만으로도 충분합니다. 사람의
                     여행에 통역 앱, 지도 앱, AI의 안내만으로는 소통, 체험,
@@ -57,9 +27,9 @@ const FindGuide = () => {
                     개인의 취향이 존중받고 여행의 다름을 인정받기 위해 다양한
                     한국여행을 만드는 회사 'KoreaGuide'입니다.
                 </p>
-                <Button>가이드 등록하기</Button>
-            </TextContainer>
-        </Container>
+                <button className="findGuide__button">가이드 등록하기</button>
+            </div>
+        </div>
     );
 };
 

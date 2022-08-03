@@ -16,6 +16,39 @@ a {
     animation:ani_downtop 1000ms 300ms ease-in-out forwards;
 }
 
+.findGuide {
+    &__Container {
+        width: 100%;
+        display: flex;
+        margin-top: 400px;
+    }
+
+    &__title {
+        font-weight: 600;
+    }
+
+    &__imageSliderContainer {
+        width: 60%;
+        height: 500px;
+    }
+
+    &__textContainer {
+        width: 40%;
+        padding: 50px 40px;
+        background-color: black;
+        color: white;
+    }
+    &__button {
+        all: unset;
+        background-color: #d0242b;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 4rem;
+    }
+}
+
 
 .aboutUs {
     &__Container {
