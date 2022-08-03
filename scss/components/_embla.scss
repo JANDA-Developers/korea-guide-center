@@ -1,8 +1,7 @@
 .embla {
     position: relative;
     background-color: #f7f7f7;
-    padding: 20px;
-    max-width: 670px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -39,7 +38,7 @@
   .embla__slide__inner {
     position: relative;
     overflow: hidden;
-    height: 190px;
+    height: 500px;
   }
   
   .embla__slide__img {
@@ -68,7 +67,7 @@
     height: 30px;
     justify-content: center;
     align-items: center;
-    fill: #1bcacd;
+    fill: #d0242b;
     padding: 0;
   }
   
@@ -101,6 +100,7 @@
     background-color: transparent;
     cursor: pointer;
     position: relative;
+    top: -60px;
     padding: 0;
     outline: 0;
     border: 0;
@@ -121,7 +121,7 @@
   }
   
   .embla__dot.is-selected:after {
-    background-color: #1bcacd;
+    background-color: #d0242b;
     opacity: 1;
   }
   
