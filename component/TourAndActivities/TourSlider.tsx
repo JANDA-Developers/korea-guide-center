@@ -92,7 +92,6 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
             <h1
                 style={{
                     textAlign: "center",
-                    marginBottom: "50px",
                     fontWeight: "bold",
                 }}
             >

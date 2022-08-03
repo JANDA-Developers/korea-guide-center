@@ -5,7 +5,7 @@ import RegionSlider from "./RegionSlider";
 const TourAndActivities = () => {
     return (
         <>
-            <div className="tour__sectionTitleContainer">
+            <div>
                 <h1 className="tour__sectionTitle">
                     <span
                         style={{

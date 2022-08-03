@@ -106,7 +106,7 @@ a {
         position: relative;
         width: 100%;
         height: 90vh;
-        margin-top: 10.375rem;
+        margin-top: 9.375rem;
     }
 
     &__top {
@@ -376,16 +376,13 @@ a {
     }
 
     // Guide {
-
         &__RecommendGuideContainer {
             width: 100%;
-            margin-top: 30px;
         }
 
         &__RecommendGuideSectionTitle {
             text-align: center;
             font-weight: 600;
-            margin-bottom: 80px;
         }
 
         &__GuideSliderItemImage {
@@ -583,10 +580,6 @@ a {
 }
 
 .tour {
-
-    &__sectionTitleContainer {
-        margin-bottom: 5.25rem;
-    }
 
     &__sectionTitle {
         text-align: center;

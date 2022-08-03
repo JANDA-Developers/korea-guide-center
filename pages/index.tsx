@@ -1,6 +1,6 @@
 import { Flex, JDalign } from "@janda-com/front";
 import Link from "next/link";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import BookLayout from "../component/layout/BookLayout";
 import { AppContext } from "../context/context";
 import { SHOPPING_LINK } from "../types/const";
@@ -19,6 +19,7 @@ import RecommendGuide from "../component/RecommendGuide/RecommendGuide";
 import Aboutus from "../component/Aboutus/Aboutus";
 import FindGuide from "../component/FindGuide/FindGuide";
 import SNS from "../component/SNS/SNS";
+import { JDhorizen } from "@janda-com/front";
 
 type TIntroList = {
     title: string;
