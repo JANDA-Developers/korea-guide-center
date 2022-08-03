@@ -1,9 +1,7 @@
 .guideProfile {
     text-align: center;
-
-
-
     &__bg {
+        
         background-color: $grey-level4;
         position: relative;
         height: space(50);
@@ -12,21 +10,50 @@
     }
 
     &__bgimg{
-        width: 25%;
-        height: auto;
+        width: 25% ;
+        height: auto ;
     }
 
-    &__profile {
-        transform: translateY(-34%);
-        margin-bottom: -2.8rem!important;
+   
+    &__introduceBox{
+        
+        width: 75%;
+        background-color: rgba(255,0,0,0.1);
+        transform: translateY(3%);
+        margin:0 auto;
+    }
+
+    &__secter1{
+        display: flex;
+
+    }
+
+    &__profile {        transform: translateY(15%);
+        // margin-bottom: -2.8rem!important;
+    }
+
+
+    &__text {
+        margin-top: 2rem;
+       
     }
 
     &__video {
         object-fit: contain;
-        width: 100%;
+                width: 50%;
         max-height: 550px;
         background-color: black;
         margin: 0 auto;
         outline: none;
+        margin-bottom: 3rem;
     }
+
+    &__productcard {
+        justify-content: center!important;
+    }
+
+    
+
+
+
 }

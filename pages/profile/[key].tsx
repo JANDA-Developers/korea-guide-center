@@ -52,27 +52,27 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
     } = item;
 
     return (
+    
         <BookLayout>
             <div className="guideProfile">
                 <div className="guideProfile__bg">
-                    <img
-                        className="guideProfile__bgimg"
+                    <img className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img
-                        className="guideProfile__bgimg"
+                    <img className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img
-                        className="guideProfile__bgimg"
+                    <img className="guideProfile__bgimg"
+
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img
-                        className="guideProfile__bgimg"
+                    <img className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                </div>
-                <JDcontainer size={WindowSize.md}>
+                </div>              
+                    <div className="guideProfile__introduceBox" >
+                    {/*가이드 사진 */}
+                    <div className="guideProfile__secter1">
                     <Flex
                         mb="small"
                         className="guideProfile__profile"
@@ -87,6 +87,24 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                         />
                         <Bold mb>{item?.nickName}</Bold>
                     </Flex>
+                    
+                    <JDalign className="guideProfile__text" mb="largest" >
+                        {l(introduce) || s("noIntroductionForLanguage")}
+                    </JDalign>
+                    </div>
+                    <JDbutton
+                        mb="largest"
+                        onClick={() => {
+                            handleToChatRoomOrCreate(
+                                item._id,
+                                item.nickName || ""
+                            );
+                        }}
+                        mode="border"
+                    >
+                        <JDicon mr icon="chat" />
+                        {s("talkWith")}
+                    </JDbutton>
                     <Flex mb="huge" center wrap>
                         <Badges
                             size="large"
@@ -105,37 +123,21 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             {(guideCat) => l(guideCat.label)}
                         </Badges>
                     </Flex>
-                    <JDalign mb="largest">
-                        {l(introduce) || s("noIntroductionForLanguage")}
-                    </JDalign>
-                    <JDbutton
-                        mb="largest"
-                        onClick={() => {
-                            handleToChatRoomOrCreate(
-                                item._id,
-                                item.nickName || ""
-                            );
-                        }}
-                        mode="border"
-                    >
-                        <JDicon mr icon="chat" />
-                        {s("talkWith")}
-                    </JDbutton>
-
                     <Flex hide={!profileVideo?.uri} mb="large">
                         <Video
                             className="guideProfile__video"
                             src={profileVideo?.uri}
                         />
                     </Flex>
-
+                    
+                    </div>
                     {!isEmpty(
                         filterVisibleProduct(
                             products || [],
                             (router.locale as LANGUAGES) || LANGUAGES.ko
                         )
                     ) && (
-                        <div>
+                        <div className="guideProfile__productcard">
                             <ProductViewsLineHeader
                                 title={s("viewGuideTours")}
                             />
@@ -150,9 +152,10 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                     )}
                     <Mb mb="largest" />
                     <SNSIcons mb="largest" sns={item.sns} />
-                </JDcontainer>
-            </div>
+                    </div>
+                    
         </BookLayout>
+        
     );
 };
 
