@@ -6,6 +6,7 @@ import {
     JDavatar,
     JDbutton,
     JDcontainer,
+    JDhorizen,
     Mb,
     WindowSize,
 } from "@janda-com/front";
@@ -52,45 +53,57 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
     } = item;
 
     return (
-    
         <BookLayout>
             <div className="guideProfile">
                 <div className="guideProfile__bg">
-                    <img className="guideProfile__bgimg"
+                    <img
+                        className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img className="guideProfile__bgimg"
+                    <img
+                        className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img className="guideProfile__bgimg"
-
+                    <img
+                        className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                    <img className="guideProfile__bgimg"
+                    <img
+                        className="guideProfile__bgimg"
                         src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
                     />
-                </div>              
-                    <div className="guideProfile__introduceBox" >
-                    {/*가이드 사진 */}
+                </div>
+                <div className="guideProfile__introduceBox">
                     <div className="guideProfile__secter1">
-                    <Flex
-                        mb="small"
-                        className="guideProfile__profile"
-                        center
-                        vCenter
-                        column
-                    >
-                        <JDavatar
-                            mb
-                            size="largest2"
-                            img={profileImage?.uri || DEFAULT_PROFILE_IMG}
-                        />
-                        <Bold mb>{item?.nickName}</Bold>
-                    </Flex>
-                    
-                    <JDalign className="guideProfile__text" mb="largest" >
-                        {l(introduce) || s("noIntroductionForLanguage")}
-                    </JDalign>
+                        {/*가이드 사진 */}
+                        {/* 자기소개 박스 왼쪽 */}
+                        <Flex
+                            mb="small"
+                            className="guideProfile__profile"
+                            center
+                            vCenter
+                            column
+                        >
+                            <JDavatar
+                                mb
+                                size="largest2"
+                                img={profileImage?.uri || DEFAULT_PROFILE_IMG}
+                            />
+                        </Flex>
+                        {/* 자기소개 박스 오른쪽 */}
+                        {/* 이름의 스타일이 secter2에 포함됨 */}
+                        <div className="guideProfile__secter2">
+                            <Bold mb size="h6">
+                                {item?.nickName}
+                            </Bold>
+                            <div className="guideProfile__horizon"></div>
+                            <JDalign
+                                className="guideProfile__text"
+                                mb="largest"
+                            >
+                                {l(introduce) || s("noIntroductionForLanguage")}
+                            </JDalign>
+                        </div>
                     </div>
                     <JDbutton
                         mb="largest"
@@ -129,8 +142,6 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             src={profileVideo?.uri}
                         />
                     </Flex>
-                    
-                    </div>
                     {!isEmpty(
                         filterVisibleProduct(
                             products || [],
@@ -152,10 +163,9 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                     )}
                     <Mb mb="largest" />
                     <SNSIcons mb="largest" sns={item.sns} />
-                    </div>
-                    
+                </div>
+            </div>
         </BookLayout>
-        
     );
 };
 

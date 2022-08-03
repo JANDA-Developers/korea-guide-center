@@ -65,14 +65,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                             mb="largest"
                         >
                             {/*  */}
-                            {selectedRegiion && (
-                                <div className="locationalGuide__regionSecotr">
-                                    <RegionDescriptionSecotr3
-                                        onSelectRegion={selectRegion}
-                                        region={selectedRegiion}
-                                    />
-                                </div>
-                            )}
+                           
                             <JDtypho
                                 hide={!!selectedRegiion}
                                 mr
