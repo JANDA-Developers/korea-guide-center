@@ -1,10 +1,22 @@
-import styled from "styled-components";
+import { useContext } from "react";
+
+import { useRouter } from "next/router";
+import { Paths } from "../../pages/index[depre]";
+import { GuidePath } from "../../page/GuideRouter";
 import EmblaCarousel from "../EmblaCarousel/EmblaCarousel";
+import { AppContext } from "../../context/context";
 
 const SLIDE_COUNT = 5;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 const FindGuide = () => {
+    const context = useContext(AppContext);
+    const router = useRouter();
+    const { isLogin, isGuide, isMaster } = context;
+    console.log("isLogin -> " + isLogin);
+    console.log("isGuide -> " + isGuide);
+    console.log("isMaster -> " + isMaster);
+
     return (
         <div className="findGuide__Container">
             <div className="findGuide__imageSliderContainer">
@@ -13,21 +25,34 @@ const FindGuide = () => {
             <div className="findGuide__textContainer">
                 <h1 className="findGuide__title">파트너 가이드를 찾습니다.</h1>
                 <p>
-                    단순한 정보는 구글등 웹사이트만으로도 충분합니다. 사람의
-                    여행에 통역 앱, 지도 앱, AI의 안내만으로는 소통, 체험,
-                    교류등 궁극의 여행에 다 다를수 없습니다. ‘KoreaGuide’에서는
-                    여러 가지 형태의 여행을 위해 전원이 국가고시 자격취득 전문
-                    지식가이드가 안내합니다. 이제 한국여행도 'Korea Guide'를
-                    선택하시면 획일적인 여행, 커미션베이스의 쇼핑과 옵션투어에서
-                    벗어날 수 있습니다. 여행사가 가이드를 랜덤으로 배정하는
-                    구조가 아닌 방문 목적, 취향중심의 맞춤 서비스로 지금까지의
-                    패키지투어 가이드와는 다른 프리미엄 가이드투어를 경험해
-                    보시기 바랍니다. 저렴하지는 않습니다. 그러나 그만큼 가치가
-                    있는 여행이 될 것 입니다. 더 다양하게 행복한 세상을 위해
-                    개인의 취향이 존중받고 여행의 다름을 인정받기 위해 다양한
-                    한국여행을 만드는 회사 'KoreaGuide'입니다.
+                    Korea Guide Center는 전 세계의 현명한 여행자와 연결 할 수
+                    있는 무한한 가능성을 열어줍니다. 투어 가이딩은 신선한 공기를
+                    마시며 사랑하는 그 지역을 거닐며, 그 지역여행을 즐기는
+                    사람들과 매혹적인 지역의 문화, 역사 와 즐거움 발견하는
+                    동시에 전 세계 사람들과 공유할 수 있는 가장 보람 있고
+                    즐거움을 선사합니다. 도시와 그 역사에 대해 깊은 관심과
+                    스토리텔링에 대한 소질, 매력적이고 재미있는 방식으로 정보를
+                    전달할 수 있는 능력을 Korea Guide Center에서 펼쳐 보시기
+                    바랍니다. Korea Guide Center와 함께 가이드님의 여행을
+                    홍보하세요. 우리는 당신의 지역을, 여행을 세계와 공유할
+                    것입니다!
                 </p>
-                <button className="findGuide__button">가이드 등록하기</button>
+                <button
+                    className="findGuide__button"
+                    onClick={() => {
+                        if (isLogin || isMaster) {
+                            router.push(
+                                Paths.guide + "/#" + GuidePath.join,
+                                undefined,
+                                { locale: "ko" }
+                            );
+                        } else {
+                            alert("로그인을 먼저 해주세요!");
+                        }
+                    }}
+                >
+                    가이드 등록하기
+                </button>
             </div>
         </div>
     );
