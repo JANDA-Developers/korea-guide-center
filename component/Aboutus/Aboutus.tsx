@@ -1,3 +1,6 @@
+import { Paths } from "../../pages/index[depre]";
+import Link from "next/link";
+
 const Aboutus = () => {
     return (
         <div className="aboutUs__Container">
@@ -31,7 +34,9 @@ const Aboutus = () => {
                             코리아 가이드
                         </span>
                         <span className="aboutUs__imageTextBottom">
-                            자세히 알아보기
+                            <Link href={Paths.companyIntroduction}>
+                                <a>자세히 알아보기</a>
+                            </Link>
                         </span>
                     </div>
                 </div>

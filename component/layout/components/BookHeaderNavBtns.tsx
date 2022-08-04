@@ -25,32 +25,32 @@ export const BookHeaderNavBtns: React.FC<IProp> = ({ ...props }) => {
 
     return (
         <Flex className="bookHeader__bottom" {...props}>
-            <Bold className="bookHeader__bottomBtn" mr="large">
+            {/* <Bold className="bookHeader__bottomBtn" mr="large">
                 <Link href={"/"}>
                     <a>{s("goToHome")}</a>
                 </Link>
-            </Bold>
-            <Bold hide={isMain} className="bookHeader__bottomBtn" mr="large">
+            </Bold> */}
+            <Bold className="bookHeader__bottomBtn" mr="large">
                 <Link href={Paths.locationalGuide}>
                     <a>{s("localtionalGuide")}</a>
                 </Link>
             </Bold>
-            <Bold hide={isMain} className="bookHeader__bottomBtn" mr="large">
+            <Bold className="bookHeader__bottomBtn" mr="large">
                 <Link href={Paths.itstheme}>
                     <a>{s("itsThemaTravel")}</a>
                 </Link>
             </Bold>
-            <Bold hide={isMain} className="bookHeader__bottomBtn" mr="large">
+            <Bold className="bookHeader__bottomBtn" mr="large">
                 <span onClick={handleToCustomTour}>
                     <a>{s("customTour")}</a>
                 </span>
             </Bold>
-            <Bold hide={isMain} className="bookHeader__bottomBtn" mr="large">
+            <Bold className="bookHeader__bottomBtn" mr="large">
                 <Link href={Paths.kpopCulture}>
                     <a>{s("kpopCulture")}</a>
                 </Link>
             </Bold>
-            <Bold hide={isMain} className="bookHeader__bottomBtn" mr="large">
+            <Bold className="bookHeader__bottomBtn" mr="large">
                 <a href={SHOPPING_LINK} target="_blank">
                     {s("shopping")}
                 </a>
@@ -60,11 +60,11 @@ export const BookHeaderNavBtns: React.FC<IProp> = ({ ...props }) => {
                     <a>{s("customerCenter")}</a>
                 </Link>
             </Bold>
-            <Bold hide={!isMain} className="bookHeader__bottomBtn">
+            {/* <Bold className="bookHeader__bottomBtn">
                 <Link href={Paths.companyIntroduction}>
                     <a>{s("footer_site_info")}</a>
                 </Link>
-            </Bold>
+            </Bold> */}
             {/* 
             <Bold className="bookHeader__bottomBtn">
                 <Link href={Paths.localTour}>

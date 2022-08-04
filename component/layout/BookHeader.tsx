@@ -26,7 +26,7 @@ import { MobileBookerSideBar } from "./components/MobileBookerSideBar";
 import { useState } from "react";
 import Noti from "../notification/Noti";
 import { AutoCompeletePreventer } from "../AutoCompeltePreventer/AutoCompletePreventer";
-import { BookHeaderNavBtns } from "./components/BookHeaderUnder";
+import { BookHeaderNavBtns } from "./components/BookHeaderNavBtns";
 import styled from "styled-components";
 import { CitySelecter } from "../citySelector/citySelecter";
 import { AnimatePresence, motion } from "framer-motion";
@@ -282,6 +282,7 @@ export const BookHeader: React.FC<IProp> = () => {
                         </Flex>
                     </Flex>
                     <div className="userContainer">
+                        <BookHeaderNavBtns />
                         <Flex hide={!isLogin} vCenter>
                             {/* 로그인 */}
                             <JDbutton

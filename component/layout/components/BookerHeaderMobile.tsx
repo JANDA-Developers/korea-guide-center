@@ -6,7 +6,7 @@ import Link from "next/link";
 import { JDicon } from "../../icons/Icons";
 import { LanguageSelecter } from "../../langSelecter/LangSelecter";
 import { ScrollBox } from "../../scrollBox/ScrollBox";
-import { BookHeaderNavBtns } from "./BookHeaderUnder";
+import { BookHeaderNavBtns } from "./BookHeaderNavBtns";
 
 interface IProp extends IJDalignProp {
     onMenuClick: () => void;

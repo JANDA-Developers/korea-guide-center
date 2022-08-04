@@ -169,9 +169,9 @@ const TourLayout = () => {
                             </svg>
                         </div>
                     </div>
-                    <div className="tour__introwrap">
+                    {/* <div className="tour__introwrap">
                         {displayIntroList(tour_introList)}
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <TourAndActivities />
