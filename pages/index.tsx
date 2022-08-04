@@ -19,7 +19,6 @@ import RecommendGuide from "../component/RecommendGuide/RecommendGuide";
 import Aboutus from "../component/Aboutus/Aboutus";
 import FindGuide from "../component/FindGuide/FindGuide";
 import SNS from "../component/SNS/SNS";
-import { JDhorizen } from "@janda-com/front";
 
 type TIntroList = {
     title: string;

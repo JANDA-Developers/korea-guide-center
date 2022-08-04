@@ -46,9 +46,9 @@ const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
                                 }}
                             />
                             <div className="slider__TourSliderItemTextAndDesc">
-                                <h5 className="slider__TourSliderItemTitle">
+                                <h6 className="slider__TourSliderItemTitle">
                                     {l(i.title)}
-                                </h5>
+                                </h6>
                                 <p>
                                     {l(i.shortDecsription).length >= 40
                                         ? l(i.shortDecsription).slice(0, 40) +

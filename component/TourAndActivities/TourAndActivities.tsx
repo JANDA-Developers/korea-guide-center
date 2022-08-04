@@ -1,6 +1,20 @@
 import React from "react";
 import TourSlider from "./TourSlider";
 import RegionSlider from "./RegionSlider";
+import {
+    BestProductList,
+    NewsProductList,
+    ProductsGroupRenders,
+    ProductViewCardsWithApi,
+} from "../../component/productViewCard/ProductViewCards";
+import {
+    Fproduct,
+    productList,
+    productListVariables,
+    productList_ProductList_items,
+    _ProductFilter,
+    _ProductSort,
+} from "../../types/api";
 
 const TourAndActivities = () => {
     return (
@@ -25,7 +39,11 @@ const TourAndActivities = () => {
                 </h1>
             </div>
             <RegionSlider />
-            <TourSlider />
+            <TourSlider
+                queryParam={{
+                    initialSort: [_ProductSort.rating__desc],
+                }}
+            />
         </>
     );
 };
