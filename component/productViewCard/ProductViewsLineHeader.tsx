@@ -38,6 +38,30 @@ export const ProductViewsLineHeader: React.FC<IProp> = ({
     );
 };
 
+export const ProductViewsLineHeader2: React.FC<IProp> = ({
+    title,
+    description,
+    onSeeMore,
+}) => {
+    return (
+        <JDalign className="productViewsLineHeader">
+            <Flex>
+                <button className="regionGuideButton">{title}</button>
+
+                {onSeeMore && (
+                    <SeeMore
+                        className="productViewsLineHeader__seeMore"
+                        onSeeMore={onSeeMore}
+                    />
+                )}
+            </Flex>
+            <JDtypho mb hide={!description} color="grey3">
+                {description}
+            </JDtypho>
+        </JDalign>
+    );
+};
+
 export const BestProductViewsLineHeader: React.FC<Partial<IProp>> = ({
     title,
     description,

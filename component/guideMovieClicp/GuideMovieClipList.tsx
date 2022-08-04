@@ -26,7 +26,10 @@ import {
     IHorizenGriderProp,
 } from "../horizenGrider/HorizenGrider";
 import { mapRegion } from "../koreaMap/KoreaData";
-import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
+import {
+    ProductViewsLineHeader,
+    ProductViewsLineHeader2,
+} from "../productViewCard/ProductViewsLineHeader";
 import { GuideMovieClip, GuideMovieClip2 } from "./GuideMovieClip";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
@@ -168,16 +171,15 @@ export const HyperRegionByGuideViewCarsGroup2: React.FC<
 
     return (
         <JDalign mb>
-            <ProductViewsLineHeader
+            <ProductViewsLineHeader2
                 title={
                     (isKr ? MapRegionKr[hyper as mapRegion] : hyper) +
                     " " +
-                    s("regionGuideTitle")
+                    s("regionGuide")
                 }
                 onSeeMore={() => {
                     push("/guides");
                 }}
-                description={s("regionGuideDescribe")}
             />
             <GuideMoviewClipList2
                 empty={<Empty msg={s("guideNotFoundInArea")} />}

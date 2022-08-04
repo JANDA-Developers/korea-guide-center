@@ -40,7 +40,27 @@
     }
     
     &__jdButtonWidth{
-        width:100px;
+        width:80px;
+    }
+
+    &__jdButtonWidth2{
+        font-size: 16px;
+        color:white;
+        width:140px;
+        height: 38px;
+        margin-top: 0.1px;
+        background-color: #E5797E;
+        border-width: 0px;
+    }
+
+    &__jdButtonWidth3{
+        font-size: 18px;
+        color:white;
+        border-width: 0px;
+        background-color: #D0242B;
+        margin-bottom: -1px;
+        border-radius: 0px;
+        height:40px
     }
     
     &__InfoboxWidth{

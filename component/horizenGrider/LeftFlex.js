@@ -12,7 +12,7 @@ function LeftFlex({ item }) {
         <Flex
             style={{
                 flexDirection: "column",
-                width: "21vh",
+                width: "210px",
             }}
         >
             <GuideCircle2
@@ -20,19 +20,22 @@ function LeftFlex({ item }) {
                 guideId={item._id}
                 guideProfile={item.profileImage.uri}
             />
-            <Flex style={{ width: "min-content", marginLeft: "15px" }}>
-                <JDbutton
-                    className="detailNavCard__jdButtonWidth"
+            <Flex
+                style={{
+                    width: "min-content",
+                    marginLeft: "24px",
+                    marginBottom: "15px",
+                }}
+            >
+                <button
+                    className="detailNavCard__jdButtonWidth2"
                     onClick={() => {
                         router.push(Paths.profile + "/" + item._id);
                     }}
-                    mb="small"
-                    thema="lightPrimary"
-                    size="tiny"
-                    mode="flat"
+                    br="square"
                 >
                     {s("seeMoreAboutGuide")}
-                </JDbutton>
+                </button>
             </Flex>
             <br></br>
         </Flex>

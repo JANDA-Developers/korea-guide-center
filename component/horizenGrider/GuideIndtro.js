@@ -1,21 +1,9 @@
-import { Flex, isEmpty, JDbutton, JDhorizen } from "@janda-com/front";
+import { Flex, JDbutton, JDhorizen } from "@janda-com/front";
 import { useContext } from "react";
-import { Info2 } from "../../atom/Info";
 import { AppContext } from "../../context/context";
-import { Badges2 } from "../statusBadges/StatusBadges";
-import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
-import { LineCutter } from "../../atom/LineCutter";
-import router from "next/router";
 import { useStartChat } from "../../hook/useChatRoom";
-import { filterVisibleProduct } from "../../utils/product";
-import { LANGUAGES } from "../../types/api";
-import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
-import {
-    ProductViewCardsWithApi,
-    ProductViewCardsWithApi2,
-} from "../productViewCard/ProductViewCards";
-import LeftFlex from "./LeftFlex";
 import Info from "./Info";
+import LeftFlex from "./LeftFlex";
 
 function GuideIntro({ item }) {
     const context = useContext(AppContext);
@@ -27,24 +15,23 @@ function GuideIntro({ item }) {
         guideNickName || ""
     );
     return (
-        <Flex className="guideCardWrapper">
-            <LeftFlex item={item} />
-            <div className="infoDiv">
-                {guideNickName}
-                <JDhorizen margin={2} />
-                <Info item={item}></Info>
-            </div>
-            <JDbutton
-                className="detailNavCard__jdButtonWidth"
+        <Flex className="guideCardWrapper" column>
+            <Flex>
+                <LeftFlex item={item} />
+                <div className="infoDiv">
+                    {guideNickName}
+                    <JDhorizen margin={2} />
+                    <Info item={item}></Info>
+                </div>
+            </Flex>
+            <button
+                className="detailNavCard__jdButtonWidth3"
                 onClick={() => {
                     handleToChatRoomOrCreate();
                 }}
-                thema="lightPrimary"
-                size="tiny"
-                mode="flat"
             >
                 {s("talkWith")}
-            </JDbutton>
+            </button>
         </Flex>
     );
 }

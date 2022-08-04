@@ -2169,6 +2169,12 @@ const utils_message = {
         ja: `ローカルツアーを選択してみましょう`,
         chi: `选择当地旅游.`,
     },
+    regionGuide: {
+        ko: "가이드",
+        en: `Guide.`,
+        ja: `ガイド`,
+        chi: `指导`,
+    },
     regionLineDesc: {
         ko: "선택 지역의 상품들을 만나보세요.",
         en: `Discover products from selected regions`,
@@ -3515,7 +3521,7 @@ const utils_message = {
         chi: `该日期没有产品。`,
     },
     seeMoreAboutGuide: {
-        ko: "프로필",
+        ko: "프로필 보기",
         en: `Profile`,
         ja: `Profile`,
         chi: `Profile`,
