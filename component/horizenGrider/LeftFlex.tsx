@@ -5,7 +5,7 @@ import { AppContext } from "../../context/context";
 import { Paths } from "../../pages/index[depre]";
 import { GuideCircle2 } from "../guideCircle/GuideCircle";
 
-function LeftFlex({ item }) {
+function LeftFlex({ item }: any) {
     const context = useContext(AppContext);
     const { s, l } = context;
     return (
@@ -32,7 +32,6 @@ function LeftFlex({ item }) {
                     onClick={() => {
                         router.push(Paths.profile + "/" + item._id);
                     }}
-                    br="square"
                 >
                     {s("seeMoreAboutGuide")}
                 </button>

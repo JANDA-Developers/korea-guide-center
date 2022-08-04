@@ -1,16 +1,19 @@
 import { Flex, isEmpty, JDhorizen } from "@janda-com/front";
-import router from "next/router";
+import router, { useRouter } from "next/router";
 import { useContext } from "react";
 import { Info2 } from "../../atom/Info";
 import { LineCutter } from "../../atom/LineCutter";
 import { AppContext } from "../../context/context";
+import { Flangs, Fuser } from "../../types/api";
 import { filterVisibleProduct } from "../../utils/product";
 import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
 import { ProductViewCardsWithApi2 } from "../productViewCard/ProductViewCards";
 import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
+import { LANGUAGES } from "../../types/api";
 import { Badges2 } from "../statusBadges/StatusBadges";
 
-function Info({ item }) {
+function Info({ item }: any) {
+    const router = useRouter();
     const context = useContext(AppContext);
     const { s, l } = context;
     return (
@@ -29,7 +32,7 @@ function Info({ item }) {
                         className="detailNavCard__Badges"
                         items={item?.regions || []}
                     >
-                        {(region) => l(region.label)}
+                        {(region: { label: Flangs }) => l(region.label)}
                     </Badges2>
                 }
             />
@@ -44,7 +47,7 @@ function Info({ item }) {
                         className="detailNavCard__Badges"
                         items={item?.langs}
                     >
-                        {(item) => s(item)}
+                        {(item: any) => s(item)}
                     </Badges2>
                 }
             />
@@ -61,7 +64,7 @@ function Info({ item }) {
                             mr="tiny"
                             items={item?.guideCategory || []}
                         >
-                            {(guideCat) => l(guideCat.label)}
+                            {(guideCat: { label: Flangs }) => l(guideCat.label)}
                         </Badges2>
                     }
                 />
@@ -75,7 +78,7 @@ function Info({ item }) {
                 {!isEmpty(
                     filterVisibleProduct(
                         item.products || [],
-                        router.locale || LANGUAGES.ko
+                        (router.locale as LANGUAGES) || LANGUAGES.ko
                     )
                 ) && (
                     <div style={{ marginTop: "1vh" }}>
