@@ -26,7 +26,7 @@
     "**/*.tsx",
     "page/board/BoardConfiger",
     "../itsguide-renew-server/src/utils/isNicePayMethod.ts"
-  ],
+, "component/horizenGrider/Info.js"  ],
   "exclude": [
     "node_modules"
   ]
