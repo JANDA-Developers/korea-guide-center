@@ -29,18 +29,16 @@
     }
 
     &__secter2{
-        margin-top:1rem;
-        margin-bottom: auto;
+        margin-top:3rem;
         margin-right: 3rem;
         text-align:left;
-
+        position: relative;
     }
 
     &__horizon{
     height: 1px;
     width: 100%;
     background-color: $grey-level1;
-
     }
 
     &__profile {     
@@ -48,7 +46,31 @@
         // margin-bottom: -2.8rem!important;
         margin-left: 3rem;
         margin-right: 3rem;
-        margin-bottom: auto;
+        
+        
+
+    }
+
+    &__avatar{
+        border-radius: 50%;
+        height:9rem ;
+        width:9rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__infoarea{
+        margin-right: 8px;  
+        display: flex;
+
+    }
+
+    &__infolangs{
+        margin-top:1rem;
+        margin-right: 8px;  
+        display: flex;
+    
+
     }
 
 
@@ -58,6 +80,7 @@
         margin-top: 2rem;
         word-break: keep-all;
     }
+
 
     &__video {
         object-fit: contain;
@@ -69,9 +92,7 @@
         margin-bottom: 3rem;
     }
 
-    &__productcard {
-        justify-content: center!important;
-    }
+    
 
     
 
