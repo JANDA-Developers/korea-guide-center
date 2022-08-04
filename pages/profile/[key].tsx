@@ -38,6 +38,8 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
     const key = router.query.key as string;
     const { item } = useuserFindById(key);
 
+    console.log(item);
+
     const { handleToChatRoomOrCreate } = useStartChat(
         item?._id,
         item?.nickName || undefined
@@ -49,12 +51,15 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
         introduce,
         products,
         profileVideo,
+        name,
         profileMediumImage,
+        regions,
+        langs,
     } = item;
 
     return (
         <BookLayout>
-            <div className="guideProfile">
+            <div>
                 <div className="guideProfile__bg">
                     <img
                         className="guideProfile__bgimg"
@@ -80,15 +85,38 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                         <Flex
                             mb="small"
                             className="guideProfile__profile"
-                            center
-                            vCenter
                             column
                         >
-                            <JDavatar
-                                mb
-                                size="largest2"
-                                img={profileImage?.uri || DEFAULT_PROFILE_IMG}
+                            <img
+                                className="guideProfile__avatar"
+                                src={profileImage?.uri || DEFAULT_PROFILE_IMG}
                             />
+                            <div>
+                                <div>
+                                    <div>{s("workArea")}</div>
+                                    <span>
+                                        {regions?.map((i, index) => {
+                                            return (
+                                                <span className="guideProfile__infoarea">
+                                                    {l(i.label)}
+                                                </span>
+                                            );
+                                        })}
+                                    </span>
+                                </div>
+                                <div>
+                                    <div>{s("useLanguage")}</div>
+                                    <span>
+                                        {langs?.map((i, index) => {
+                                            return (
+                                                <span className="guideProfile__infolangs">
+                                                    {s(i)}
+                                                </span>
+                                            );
+                                        })}
+                                    </span>
+                                </div>
+                            </div>
                         </Flex>
                         {/* 자기소개 박스 오른쪽 */}
                         {/* 이름의 스타일이 secter2에 포함됨 */}
@@ -103,39 +131,46 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             >
                                 {l(introduce) || s("noIntroductionForLanguage")}
                             </JDalign>
+                            <div>
+                                <Flex mb="huge" center wrap>
+                                    <Badges
+                                        size="large"
+                                        mb="small"
+                                        mr="small"
+                                        items={item?.regions || []}
+                                    >
+                                        {(region) => l(region.label)}
+                                    </Badges>
+                                    <Badges
+                                        size="large"
+                                        mb="small"
+                                        mr="small"
+                                        items={item?.guideCategory || []}
+                                    >
+                                        {(guideCat) => l(guideCat.label)}
+                                    </Badges>
+                                </Flex>
+
+                                <Flex center>
+                                    <JDbutton
+                                        className="guideProfile__chatbutton"
+                                        mb="largest"
+                                        onClick={() => {
+                                            handleToChatRoomOrCreate(
+                                                item._id,
+                                                item.nickName || ""
+                                            );
+                                        }}
+                                        mode="border"
+                                    >
+                                        <JDicon mr icon="chat" />
+                                        {s("talkWith")}
+                                    </JDbutton>
+                                </Flex>
+                            </div>
                         </div>
                     </div>
-                    <JDbutton
-                        mb="largest"
-                        onClick={() => {
-                            handleToChatRoomOrCreate(
-                                item._id,
-                                item.nickName || ""
-                            );
-                        }}
-                        mode="border"
-                    >
-                        <JDicon mr icon="chat" />
-                        {s("talkWith")}
-                    </JDbutton>
-                    <Flex mb="huge" center wrap>
-                        <Badges
-                            size="large"
-                            mb="small"
-                            mr="small"
-                            items={item?.regions || []}
-                        >
-                            {(region) => l(region.label)}
-                        </Badges>
-                        <Badges
-                            size="large"
-                            mb="small"
-                            mr="small"
-                            items={item?.guideCategory || []}
-                        >
-                            {(guideCat) => l(guideCat.label)}
-                        </Badges>
-                    </Flex>
+
                     <Flex hide={!profileVideo?.uri} mb="large">
                         <Video
                             className="guideProfile__video"
@@ -148,7 +183,7 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             (router.locale as LANGUAGES) || LANGUAGES.ko
                         )
                     ) && (
-                        <div className="guideProfile__productcard">
+                        <div>
                             <ProductViewsLineHeader
                                 title={s("viewGuideTours")}
                             />

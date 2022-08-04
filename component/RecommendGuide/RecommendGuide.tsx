@@ -67,7 +67,7 @@ const RecommendGuide: React.FC<IGuideMovieCardsWithApi> = ({
                 </span>{" "}
                 Guides
             </h1>
-            <RecommendGuideSlider />
+            <RecommendGuideSlider randomSort />
         </div>
     );
 };

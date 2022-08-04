@@ -2,6 +2,8 @@ import { useRouter } from "next/router";
 import { productList_ProductList_items } from "../../types/api";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
+import { Link } from "react-router-dom";
+import { Paths } from "../../pages/index[depre]";
 import { motion } from "framer-motion";
 
 interface ITourSliderItemProps {
@@ -13,9 +15,6 @@ interface ITourSliderItemProps {
 const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
     const router = useRouter();
     const { l, s } = useContext(AppContext);
-    const onClickTour = () => {
-        router.push("/");
-    };
     const priceToString = (price: number) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
@@ -38,6 +37,10 @@ const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
                             className="slider__LongSliderItems"
                             variants={SliderVariants}
                             whileHover="hover"
+                            onClick={() => {
+                                location.href =
+                                    Paths.productDetailView + "/" + i._id;
+                            }}
                         >
                             <div
                                 className="slider__TourSliderItemImage"
@@ -46,9 +49,9 @@ const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
                                 }}
                             />
                             <div className="slider__TourSliderItemTextAndDesc">
-                                <h5 className="slider__TourSliderItemTitle">
+                                <h6 className="slider__TourSliderItemTitle">
                                     {l(i.title)}
-                                </h5>
+                                </h6>
                                 <p>
                                     {l(i.shortDecsription).length >= 40
                                         ? l(i.shortDecsription).slice(0, 40) +
@@ -60,10 +63,7 @@ const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
                                 <h6 className="slider__TourSliderItemPrice">
                                     {priceToString(i.priceAdult!)}
                                 </h6>
-                                <button
-                                    className="slider__TourSliderItemBookingButton"
-                                    onClick={onClickTour}
-                                >
+                                <button className="slider__TourSliderItemBookingButton">
                                     <span>정보 & 예약하기</span>
                                 </button>
                             </div>

@@ -25,8 +25,8 @@
     "**/*.ts",
     "**/*.tsx",
     "page/board/BoardConfiger",
-    "../itsguide-renew-server/src/utils/isNicePayMethod.ts"
-, "component/horizenGrider/LeftFlex.js", "component/horizenGrider/GuideIndtro.tsx", "component/horizenGrider/GuideIndtro.tsx", "component/productDetailComponents/DetailNavCardIntroduce.js","component/horizenGrider/Info.tsx","component/horizenGrider/Info.tsxjs" ],
+  ],
+  
   "exclude": [
     "node_modules"
   ]
