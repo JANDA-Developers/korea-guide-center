@@ -183,9 +183,11 @@ export const ProductViewCard2: React.FC<IProductViewCard> = ({
                 }
             }}
         >
-            <Flex between>
+            <Flex between style={{ fontSize: "15px", marginBottom: "13px" }}>
                 <Flex>{l(product.title)}</Flex>
-                <Flex style={{}}>{autoComma(product.priceAdult || 0)}원</Flex>
+                <Flex style={{ marginRight: "13px" }}>
+                    {autoComma(product.priceAdult || 0)}원
+                </Flex>
             </Flex>
         </JDalign>
     );

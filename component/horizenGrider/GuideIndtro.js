@@ -34,6 +34,17 @@ function GuideIntro({ item }) {
                 <JDhorizen margin={2} />
                 <Info item={item}></Info>
             </div>
+            <JDbutton
+                className="detailNavCard__jdButtonWidth"
+                onClick={() => {
+                    handleToChatRoomOrCreate();
+                }}
+                thema="lightPrimary"
+                size="tiny"
+                mode="flat"
+            >
+                {s("talkWith")}
+            </JDbutton>
         </Flex>
     );
 }

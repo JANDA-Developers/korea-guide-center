@@ -49,7 +49,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
     return (
         <BookLayout>
             <div className="locationalGuide">
-                {console.log("후훗... 여기닷!!")}
                 {console.log(selectedRegiion)}
 
                 <div className="locationalGuide__regionArea">
@@ -65,7 +64,14 @@ export const LocationalGuide: React.FC<IProp> = () => {
                             mb="largest"
                         >
                             {/*  */}
-                           
+                            {selectedRegiion && (
+                                <div className="locationalGuide__regionSecotr">
+                                    <RegionDescriptionSecotr3
+                                        onSelectRegion={selectRegion}
+                                        region={selectedRegiion}
+                                    />
+                                </div>
+                            )}
                             <JDtypho
                                 hide={!!selectedRegiion}
                                 mr
