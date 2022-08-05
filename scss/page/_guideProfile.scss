@@ -46,38 +46,80 @@
         // margin-bottom: -2.8rem!important;
         margin-left: 3rem;
         margin-right: 3rem;
-        
-        
+        position: relative;    
+    }
 
+    &__avatarContainer{
+        height: 240px;
+        border-bottom: 1px solid #d5cece;;
     }
 
     &__avatar{
+        box-sizing: border-box;
         border-radius: 50%;
         height:9rem ;
         width:9rem;
         margin-top: 3rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
-    &__infoarea{
-        margin-right: 8px;  
-        display: flex;
+    // &__infoarea{
+    //     margin-right: 8px;  
+    //     display: flex;
 
+    // }
+
+    &__earthIcon{
+        font-size: 20px;
+        line-height: 2px;
+        margin-right: 3px;
+    }
+
+    &__canLanguageContainer {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__canLanguage{
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 13px;
     }
 
     &__infolangs{
-        margin-top:1rem;
-        margin-right: 8px;  
         display: flex;
-    
+        flex-direction: column;
 
     }
 
+    &__infolang{
+        border: 1px solid #d5cece;
+        font-weight: 600;
+        font-size: 15px;
+        width: 80px;
+        margin: 3px 0px;
+        padding: 3px 2px;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    &__subtitle{
+    margin-top: 1rem;
+    margin-bottom : 1rem;
+    font-weight: bold;   
+    text-decoration:underline #EF4545;
+    
+    }
 
     &__text {
         align-items: center;
         width: 100%;
-        margin-top: 2rem;
         word-break: keep-all;
     }
 

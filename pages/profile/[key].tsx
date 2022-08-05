@@ -87,12 +87,16 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             className="guideProfile__profile"
                             column
                         >
-                            <img
-                                className="guideProfile__avatar"
-                                src={profileImage?.uri || DEFAULT_PROFILE_IMG}
-                            />
+                            <div className="guideProfile__avatarContainer">
+                                <img
+                                    className="guideProfile__avatar"
+                                    src={
+                                        profileImage?.uri || DEFAULT_PROFILE_IMG
+                                    }
+                                />
+                            </div>
                             <div>
-                                <div>
+                                {/* <div>
                                     <div>{s("workArea")}</div>
                                     <span>
                                         {regions?.map((i, index) => {
@@ -103,36 +107,52 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                             );
                                         })}
                                     </span>
-                                </div>
-                                <div>
-                                    <div>{s("useLanguage")}</div>
-                                    <span>
+                                </div> */}
+                                <div className="guideProfile__canLanguageContainer">
+                                    <div className="guideProfile__canLanguage">
+                                        <span className="guideProfile__earthIcon">
+                                            🌎
+                                        </span>{" "}
+                                        {s("useLanguage")}
+                                    </div>
+                                    <div className="guideProfile__infolangs">
                                         {langs?.map((i, index) => {
                                             return (
-                                                <span className="guideProfile__infolangs">
+                                                <span className="guideProfile__infolang">
                                                     {s(i)}
                                                 </span>
                                             );
                                         })}
-                                    </span>
+                                    </div>
                                 </div>
                             </div>
                         </Flex>
                         {/* 자기소개 박스 오른쪽 */}
                         {/* 이름의 스타일이 secter2에 포함됨 */}
                         <div className="guideProfile__secter2">
-                            <Bold mb size="h6">
+                            <h1
+                                style={{
+                                    fontWeight: "600",
+                                }}
+                            >
                                 {item?.nickName}
-                            </Bold>
+                            </h1>
                             <div className="guideProfile__horizon"></div>
+                            <h6 className="guideProfile__subtitle">About me</h6>
                             <JDalign
                                 className="guideProfile__text"
                                 mb="largest"
                             >
-                                {l(introduce) || s("noIntroductionForLanguage")}
+                                <p>
+                                    {l(introduce) ||
+                                        s("noIntroductionForLanguage")}
+                                </p>
                             </JDalign>
                             <div>
-                                <Flex mb="huge" center wrap>
+                                <h6 className="guideProfile__subtitle">
+                                    Guide Area
+                                </h6>
+                                <Flex mb="huge" wrap>
                                     <Badges
                                         size="large"
                                         mb="small"
@@ -141,6 +161,13 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                     >
                                         {(region) => l(region.label)}
                                     </Badges>
+                                </Flex>
+
+                                <h6 className="guideProfile__subtitle">
+                                    Guide Category
+                                </h6>
+
+                                <Flex mb="huge" wrap>
                                     <Badges
                                         size="large"
                                         mb="small"
@@ -171,12 +198,12 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                         </div>
                     </div>
 
-                    <Flex hide={!profileVideo?.uri} mb="large">
+                    {/* <Flex hide={!profileVideo?.uri} mb="large">
                         <Video
                             className="guideProfile__video"
                             src={profileVideo?.uri}
                         />
-                    </Flex>
+                    </Flex> */}
                     {!isEmpty(
                         filterVisibleProduct(
                             products || [],
