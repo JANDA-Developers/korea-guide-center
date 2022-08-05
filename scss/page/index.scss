@@ -311,7 +311,9 @@ a {
     }
 
 
+
     &__ShortSliderLeftArrowContainer {
+        width: 16.875rem;
         background-color: white;
         position: absolute;
         z-index: 10;
@@ -325,6 +327,7 @@ a {
     }
 
     &__ShortSliderRightArrowContainer {
+        width: 16.875rem;
         background-color: white;
         z-index: 10;
         right: 0;
