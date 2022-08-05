@@ -28,7 +28,7 @@ import {
     RegionDescriptionSecotr3,
 } from "../component/RegionDescriptionSector/RegionDescriptionSector";
 import { AppContext } from "../context/context";
-import { useKoreaMap } from "../hook/useKoreaMap";
+import { useGlobalKoreaMap, useKoreaMap } from "../hook/useKoreaMap";
 import { useSortBanner } from "../page/homepage/hook/useSortBanner";
 import { FileTagManager } from "../utils/tagManager";
 
@@ -42,15 +42,15 @@ export const LocationalGuide: React.FC<IProp> = () => {
     );
 
     const koreaHook = useKoreaMap();
-    const { selectedRegiion, onClick: selectRegion } = koreaHook;
+    const globalKoreaHook = useGlobalKoreaMap();
+    const { selectedGlobalRegion, onClick: selectGlobalRegion } =
+        globalKoreaHook;
 
-    const imgUrl = `/img/regionBg/${selectedRegiion}.jpg`;
+    const imgUrl = `/img/regionBg/${selectedGlobalRegion}.jpg`;
 
     return (
         <BookLayout>
             <div className="locationalGuide">
-                {console.log(selectedRegiion)}
-
                 <div className="locationalGuide__regionArea">
                     <JDcontainer
                         className="locationalGuide__regionArea-on"
@@ -64,16 +64,16 @@ export const LocationalGuide: React.FC<IProp> = () => {
                             mb="largest"
                         >
                             {/*  */}
-                            {selectedRegiion && (
+                            {selectedGlobalRegion && (
                                 <div className="locationalGuide__regionSecotr">
                                     <RegionDescriptionSecotr3
-                                        onSelectRegion={selectRegion}
-                                        region={selectedRegiion}
+                                        onSelectRegion={selectGlobalRegion}
+                                        region={selectedGlobalRegion}
                                     />
                                 </div>
                             )}
                             <JDtypho
-                                hide={!!selectedRegiion}
+                                hide={!!selectedGlobalRegion}
                                 mr
                                 weight={600}
                                 size="h6"
@@ -151,10 +151,10 @@ export const LocationalGuide: React.FC<IProp> = () => {
 
                 <JDcontainer verticalPadding size={WindowSize.lg}>
                     {/* 지역 가이드 */}
-                    {selectedRegiion && (
+                    {selectedGlobalRegion && (
                         <HyperRegionByGuideViewCarsGroup2
-                            key={selectedRegiion + "HyperProductViewCardS"}
-                            hyper={selectedRegiion}
+                            key={selectedGlobalRegion + "HyperProductViewCardS"}
+                            hyper={selectedGlobalRegion}
                         />
                     )}
                     <Mb mb="largest" />
