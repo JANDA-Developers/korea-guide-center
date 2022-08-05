@@ -20,14 +20,16 @@ function GuideIntro({ item }: IGuideIntroProps) {
         guideNickName || ""
     );
     return (
-        <Flex className="guideCardWrapper" column>
-            <Flex>
-                <LeftFlex item={item} />
-                <div className="infoDiv">
-                    {guideNickName}
-                    <JDhorizen margin={2} />
-                    <Info item={item}></Info>
-                </div>
+        <Flex column>
+            <Flex className="guideCardWrapper" column>
+                <Flex>
+                    <LeftFlex item={item} />
+                    <div className="infoDiv">
+                        {guideNickName}
+                        <JDhorizen margin={2} />
+                        <Info item={item}></Info>
+                    </div>
+                </Flex>
             </Flex>
             <button
                 className="detailNavCard__jdButtonWidth3"
