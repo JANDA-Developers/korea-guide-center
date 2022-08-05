@@ -54,52 +54,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
                 <div className="locationalGuide__regionArea">
                     <JDcontainer
                         className="locationalGuide__regionArea-on"
-                        verticalPadding
-                        size={WindowSize.lg}
-                    >
-                        <Flex
-                            className="locationalGuide__region"
-                            oneone
-                            center
-                            mb="largest"
-                        >
-                            {/*  */}
-                            {selectedGlobalRegion && (
-                                <div className="locationalGuide__regionSecotr">
-                                    <RegionDescriptionSecotr3
-                                        onSelectRegion={selectGlobalRegion}
-                                        region={selectedGlobalRegion}
-                                    />
-                                </div>
-                            )}
-                            <JDtypho
-                                hide={!!selectedGlobalRegion}
-                                mr
-                                weight={600}
-                                size="h6"
-                            >
-                                {s("selectRegion")}
-                            </JDtypho>
-                            <div className="locationalGuide__mapWrapper">
-                                <KoreaMap {...koreaHook} />
-                            </div>
-                        </Flex>
-                    </JDcontainer>
-                    <Image
-                        className="locationalGuide__regionArea-bg"
-                        src={imgUrl}
-                        objectFit="cover"
-                        loading="eager"
-                        layout="fill"
-                        priority
-                    />
-                </div>
-
-                {/*
-                //상단 지역 대표그림 동진
-                <div className="locationalGuide__regionArea">
-                    <JDcontainer
-                        className="locationalGuide__regionArea-on"
                         verticalPadding="normal"
                         size={WindowSize.md}
                     >
@@ -109,11 +63,11 @@ export const LocationalGuide: React.FC<IProp> = () => {
                             center
                             mb="largest"
                         >
-                            {selectedRegiion && (
+                            {selectedGlobalRegion && (
                                 <div className="locationalGuide__regionSecotr">
                                     <RegionDescriptionSecotr2
-                                        onSelectRegion={selectRegion}
-                                        region={selectedRegiion}
+                                        onSelectRegion={selectGlobalRegion}
+                                        region={selectedGlobalRegion}
                                     />
                                 </div>
                             )}
@@ -127,8 +81,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         layout="fill"
                         priority
                     />
-                </div> */}
-
+                </div>
                 {/*<div>
                     <RegionProductViewsLineHeader
                     // 지역명 + ~~
@@ -148,7 +101,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         </div>
                     )}
                 </div> */}
-
                 <JDcontainer verticalPadding size={WindowSize.lg}>
                     {/* 지역 가이드 */}
                     {selectedGlobalRegion && (
