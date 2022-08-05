@@ -1,8 +1,6 @@
-import { useRouter } from "next/router";
 import { productList_ProductList_items } from "../../types/api";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
-import { Link } from "react-router-dom";
 import { Paths } from "../../pages/index[depre]";
 import { motion } from "framer-motion";
 
@@ -13,7 +11,6 @@ interface ITourSliderItemProps {
 }
 
 const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
-    const router = useRouter();
     const { l, s } = useContext(AppContext);
     const priceToString = (price: number) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
