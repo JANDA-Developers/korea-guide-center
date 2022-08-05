@@ -146,89 +146,86 @@ const LocalGuideSlider = () => {
 
     const toggleLeaving = () => setLeaving(false);
     return (
-        <>
-            <div className="slider__ShortSliderContainer">
-                <div className="slider__ShortSliderLeftArrowContainer">
-                    <button
-                        className="slider__ShortSliderLeftArrow"
-                        onClick={onClickPrev}
-                        style={{
-                            display: index === 0 ? "none" : "block",
-                        }}
-                    >
-                        <svg
-                            width="40"
-                            height="40"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1}
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <AnimatePresence
-                    initial={false}
-                    custom={back}
-                    onExitComplete={toggleLeaving}
+        <div className="slider__ShortSliderContainer">
+            <div className="slider__ShortSliderLeftArrowContainer">
+                <button
+                    className="slider__ShortSliderLeftArrow"
+                    onClick={onClickPrev}
+                    style={{
+                        display: index === 0 ? "none" : "block",
+                    }}
                 >
-                    <motion.div
-                        className="slider__ShortSliderRow"
-                        custom={back}
-                        key={index}
-                        variants={rowVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ type: "tween", duration: 0.5 }}
+                    <svg
+                        width="40"
+                        height="40"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                     >
-                        <div className="slider__ShortSliderEmptyBox" />
-                        <LocalGuideSliderItems
-                            items={localGuideData}
-                            offset={offset}
-                            index={index}
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1}
+                            d="M15 19l-7-7 7-7"
                         />
-                        <div className="slider__ShortSliderEmptyBox" />
-                    </motion.div>
-                </AnimatePresence>
-                <div className="slider__ShortSliderRightArrowContainer">
-                    <button
-                        onClick={onClickNext}
-                        className="slider__ShortSliderRightArrow"
-                        style={{
-                            display:
-                                index ===
-                                Math.ceil(localGuideData.length / offset) - 1
-                                    ? "none"
-                                    : "block",
-                        }}
-                    >
-                        <svg
-                            width="40"
-                            height="40"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1}
-                                d="M9 5l7 7-7 7"
-                            />
-                        </svg>
-                    </button>
-                </div>
+                    </svg>
+                </button>
             </div>
-            <div style={{ width: "100%", height: "23rem" }}></div>
-        </>
+            <AnimatePresence
+                initial={false}
+                custom={back}
+                onExitComplete={toggleLeaving}
+            >
+                <motion.div
+                    className="slider__ShortSliderRow"
+                    custom={back}
+                    key={index}
+                    variants={rowVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ type: "tween", duration: 0.5 }}
+                >
+                    <div className="slider__ShortSliderEmptyBox" />
+                    <LocalGuideSliderItems
+                        items={localGuideData}
+                        offset={offset}
+                        index={index}
+                    />
+                    <div className="slider__ShortSliderEmptyBox" />
+                </motion.div>
+            </AnimatePresence>
+            <div className="slider__ShortSliderRightArrowContainer">
+                <button
+                    onClick={onClickNext}
+                    className="slider__ShortSliderRightArrow"
+                    style={{
+                        display:
+                            index ===
+                                Math.ceil(localGuideData.length / offset) - 1
+                                ? "none"
+                                : "block",
+                    }}
+                >
+                    <svg
+                        width="40"
+                        height="40"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1}
+                            d="M9 5l7 7-7 7"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </div>
     );
 };
 

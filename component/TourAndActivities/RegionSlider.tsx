@@ -6,6 +6,8 @@ import { useWindowSize } from "usehooks-ts";
 import { AppContext } from "../../context/context";
 import { mapRegion, regionableData } from "../koreaMap/KoreaData";
 import TourSliderItem, { IRegionSliderItem } from "./RegionSliderItem";
+import RightArrowIcon from "../../icons/RightArrowIcon";
+import LeftArrowIcon from "../../icons/LeftArrowIcon";
 
 // scss/page/index.scss 파일에서 css 작업함
 
@@ -217,90 +219,64 @@ const RegionSlider = () => {
     const [back, setBack] = useState(false);
 
     const toggleLeaving = () => setLeaving(false);
+
     return (
-        <>
-            <div className="slider__ShortSliderContainer">
-                <div className="slider__ShortSliderLeftArrowContainer">
-                    <button
-                        className="slider__ShortSliderLeftArrow"
-                        onClick={onClickPrev}
-                        style={{
-                            display: index === 0 ? "none" : "block",
-                        }}
-                    >
-                        <svg
-                            width="40"
-                            height="40"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1}
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <AnimatePresence
-                    initial={false}
-                    custom={back}
-                    onExitComplete={toggleLeaving}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'sticky' }}>
+            <div className="slider__ShortSliderLeftArrowContainer">
+                <button
+                    className="slider__ShortSliderLeftArrow"
+                    onClick={onClickPrev}
+                    style={{
+                        display: index === 0 ? "none" : "block",
+                    }}
                 >
-                    <motion.div
-                        className="slider__ShortSliderRow"
-                        custom={back}
-                        key={index}
-                        variants={rowVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ type: "tween", duration: 0.5 }}
-                    >
-                        <div className="slider__ShortSliderEmptyBox" />
-                        <TourSliderItem
-                            item={regionData}
-                            offset={offset}
-                            index={index}
-                        />
-                        <div className="slider__ShortSliderEmptyBox" />
-                    </motion.div>
-                </AnimatePresence>
-                <div className="slider__ShortSliderRightArrowContainer">
-                    <button
-                        onClick={onClickNext}
-                        className="slider__ShortSliderRightArrow"
-                        style={{
-                            display:
-                                index ===
-                                Math.ceil(regionData.length / offset) - 1
-                                    ? "none"
-                                    : "block",
-                        }}
-                    >
-                        <svg
-                            width="40"
-                            height="40"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1}
-                                d="M9 5l7 7-7 7"
-                            />
-                        </svg>
-                    </button>
-                </div>
+                    <LeftArrowIcon />
+                </button>
             </div>
-            <div style={{ width: "100%", height: "23rem" }}></div>
-        </>
+            <div className="slider__ShortSliderContainer" style={{ width: "70vw" }}>
+                <div className="slider__ShortSliderContentAeea">
+                    <AnimatePresence
+                        initial={false}
+                        custom={back}
+                        onExitComplete={toggleLeaving}
+                    >
+                        <motion.div
+                            className="slider__ShortSliderRow"
+                            custom={back}
+                            key={index}
+                            variants={rowVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            transition={{ type: "tween", duration: 0.5 }}
+                        >
+                            <TourSliderItem
+                                item={regionData}
+                                offset={offset}
+                                index={index}
+                            />
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+
+            </div>
+            <div className="slider__ShortSliderRightArrowContainer">
+                <button
+                    onClick={onClickNext}
+                    className="slider__ShortSliderRightArrow"
+                    style={{
+                        display:
+                            index ===
+                                Math.ceil(regionData.length / offset) - 1
+                                ? "none"
+                                : "block",
+                    }}
+                >
+                    <RightArrowIcon />
+                </button>
+            </div>
+        </div>
+
     );
 };
 
