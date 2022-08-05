@@ -188,14 +188,15 @@ const RegionSlider = () => {
         },
     ];
 
+    let w = width * 0.75;
     const rowVariants = {
         hidden: (isBack: boolean) => ({
-            x: isBack ? -width : width,
+            x: isBack ? -w : w,
         }),
         visible: {
             x: 0,
         },
-        exit: (isBack: boolean) => ({ x: isBack ? width : -width }),
+        exit: (isBack: boolean) => ({ x: isBack ? w : -w, }),
     };
 
     const onClickNext = () => {
