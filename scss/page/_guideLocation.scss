@@ -1,7 +1,4 @@
 .locationalGuide {
-
-
-
     &__regionArea {
         // background: url("/img/koreaMapBG.jpg");
         // background-size: cover;
@@ -34,6 +31,7 @@
         @include response($tablet) {
             margin-top:0;
         }
+        text-shadow: 1px 1px 1px #000;;
         
     }
     

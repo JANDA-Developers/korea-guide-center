@@ -1907,10 +1907,10 @@ const utils_message = {
         chi: `活动区 : `,
     },
     useLanguage: {
-        ko: "사용 가능 언어 :",
-        en: `language spoken :`,
-        ja: `使用言語 :`,
-        chi: `使用语言 :`,
+        ko: "사용 가능 언어",
+        en: `language spoken`,
+        ja: `使用言語`,
+        chi: `使用语言`,
     },
     guideType: {
         ko: "활동 가능 지역 :",

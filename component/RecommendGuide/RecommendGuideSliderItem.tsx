@@ -2,6 +2,7 @@ import { userList_UserList_items } from "../../types/api";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { motion } from "framer-motion";
+import { Paths } from "../../pages/index[depre]";
 import { useRouter } from "next/router";
 
 interface IRecommendGuideSliderProps {
@@ -24,9 +25,6 @@ const RecommendGuideSliderItem = ({
     };
     const { l } = useContext(AppContext);
     const router = useRouter();
-    const onClickGuide = () => {
-        router.push("/");
-    };
 
     return (
         <>
@@ -36,6 +34,9 @@ const RecommendGuideSliderItem = ({
                         className="slider__LongSliderItems"
                         variants={SliderVariants}
                         whileHover="hover"
+                        onClick={() => {
+                            router.push(Paths.profile + "/" + i._id);
+                        }}
                     >
                         <div
                             className="slider__GuideSliderItemImage"

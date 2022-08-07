@@ -1,95 +1,111 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWindowSize } from "usehooks-ts";
-import LocalGuideSliderItem, {
-    ILocalGuideSliderItem,
-} from "./LocalGuideSliderItem";
+import LocalGuideSliderItems from "./LocalGuideSliderItems";
+import { ILocalGuideSliderItem } from "./LocalGuideSliderItem";
 
 const localGuideData: ILocalGuideSliderItem[] = [
     {
         title: "GUIDES IN SEOUL",
         desc: "서울 지역의 가이드",
         imageUrl: "img/cities/seoul.jpg",
+        region: "seoul",
     },
     {
         title: "GUIDES IN BUSAN",
         desc: "부산 지역의 가이드",
         imageUrl: "img/cities/busan.jpg",
+        region: "busan",
     },
     {
         title: "GUIDES IN DAEGU",
         desc: "대구 지역의 가이드",
         imageUrl: "img/cities/daegu.jpg",
+        region: "daegu",
     },
     {
         title: "GUIDES IN INCHEON",
         desc: "인천 지역의 가이드",
         imageUrl: "img/cities/incheon.jpg",
+        region: "Incheon",
     },
     {
         title: "GUIDES IN GWANGJU",
         desc: "광주 지역의 가이드",
         imageUrl: "img/cities/gwangju.jpg",
+        region: "Gwangju",
     },
     {
         title: "GUIDES IN DAEJEON",
         desc: "대전 지역의 가이드",
         imageUrl: "img/cities/daejeon.jpg",
+        region: "Daejeon",
     },
     {
         title: "GUIDES IN ULSAN",
         desc: "울산 지역의 가이드",
         imageUrl: "img/cities/ulsan.jpg",
+        region: "Ulsan",
     },
     {
         title: "GUIDES IN SEJONG",
         desc: "세종 지역의 가이드",
         imageUrl: "img/cities/sejong.jpg",
+        region: "Sejong",
     },
     {
         title: "GUIDES IN JEJU",
         desc: "제주 지역의 가이드",
         imageUrl: "img/cities/jeju.jpg",
+        region: "Jeju",
     },
     {
         title: "GUIDES IN GYEONSANGNAM-DO",
         desc: "경남 지역의 가이드",
         imageUrl: "img/cities/gyeongnam.jpg",
+        region: "SouthGyeongsang",
     },
     {
         title: "GUIDES IN GYEONSANGBUK-DO",
         desc: "경북 지역의 가이드",
         imageUrl: "img/cities/gyeongbuk.jpg",
+        region: "NorthGyeongsang",
     },
     {
         title: "GUIDES IN JEOLLANAM-DO",
         desc: "전남 지역의 가이드",
         imageUrl: "img/cities/jeonnam.jpg",
+        region: "SouthJeolla",
     },
     {
         title: "GUIDES IN JEOLLABUK-DO",
         desc: "전북 지역의 가이드",
         imageUrl: "img/cities/jeonbuk.jpg",
+        region: "NorthJeolla",
     },
     {
         title: "GUIDES IN CHUNGCHEONGNAM-DO",
         desc: "충남 지역의 가이드",
         imageUrl: "img/cities/chungnam.jpg",
+        region: "SouthChungcheong",
     },
     {
         title: "GUIDES IN CHUNGCHEONGBUK-DO",
         desc: "충북 지역의 가이드",
         imageUrl: "img/cities/chungbuk.jpg",
+        region: "NorthChungcheong",
     },
     {
         title: "GUIDES IN GANGWON-DO",
         desc: "강원 지역의 가이드",
         imageUrl: "img/cities/gangwon.jpg",
+        region: "Gangwon",
     },
     {
         title: "GUIDES IN GYEONGGI-DO",
         desc: "경기 지역의 가이드",
         imageUrl: "img/cities/gyeonggi.jpg",
+        region: "Gyeonggi",
     },
 ];
 
@@ -130,89 +146,86 @@ const LocalGuideSlider = () => {
 
     const toggleLeaving = () => setLeaving(false);
     return (
-        <>
-            <div className="slider__ShortSliderContainer">
-                <div className="slider__ShortSliderLeftArrowContainer">
-                    <button
-                        className="slider__ShortSliderLeftArrow"
-                        onClick={onClickPrev}
-                        style={{
-                            display: index === 0 ? "none" : "block",
-                        }}
-                    >
-                        <svg
-                            width="40"
-                            height="40"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1}
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <AnimatePresence
-                    initial={false}
-                    custom={back}
-                    onExitComplete={toggleLeaving}
+        <div className="slider__ShortSliderContainer">
+            <div className="slider__ShortSliderLeftArrowContainer">
+                <button
+                    className="slider__ShortSliderLeftArrow"
+                    onClick={onClickPrev}
+                    style={{
+                        display: index === 0 ? "none" : "block",
+                    }}
                 >
-                    <motion.div
-                        className="slider__ShortSliderRow"
-                        custom={back}
-                        key={index}
-                        variants={rowVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ type: "tween", duration: 0.5 }}
+                    <svg
+                        width="40"
+                        height="40"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
                     >
-                        <div className="slider__ShortSliderEmptyBox" />
-                        <LocalGuideSliderItem
-                            item={localGuideData}
-                            offset={offset}
-                            index={index}
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1}
+                            d="M15 19l-7-7 7-7"
                         />
-                        <div className="slider__ShortSliderEmptyBox" />
-                    </motion.div>
-                </AnimatePresence>
-                <div className="slider__ShortSliderRightArrowContainer">
-                    <button
-                        onClick={onClickNext}
-                        className="slider__ShortSliderRightArrow"
-                        style={{
-                            display:
-                                index ===
-                                Math.ceil(localGuideData.length / offset) - 1
-                                    ? "none"
-                                    : "block",
-                        }}
-                    >
-                        <svg
-                            width="40"
-                            height="40"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1}
-                                d="M9 5l7 7-7 7"
-                            />
-                        </svg>
-                    </button>
-                </div>
+                    </svg>
+                </button>
             </div>
-            <div style={{ width: "100%", height: "23rem" }}></div>
-        </>
+            <AnimatePresence
+                initial={false}
+                custom={back}
+                onExitComplete={toggleLeaving}
+            >
+                <motion.div
+                    className="slider__ShortSliderRow"
+                    custom={back}
+                    key={index}
+                    variants={rowVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ type: "tween", duration: 0.5 }}
+                >
+                    <div className="slider__ShortSliderEmptyBox" />
+                    <LocalGuideSliderItems
+                        items={localGuideData}
+                        offset={offset}
+                        index={index}
+                    />
+                    <div className="slider__ShortSliderEmptyBox" />
+                </motion.div>
+            </AnimatePresence>
+            <div className="slider__ShortSliderRightArrowContainer">
+                <button
+                    onClick={onClickNext}
+                    className="slider__ShortSliderRightArrow"
+                    style={{
+                        display:
+                            index ===
+                                Math.ceil(localGuideData.length / offset) - 1
+                                ? "none"
+                                : "block",
+                    }}
+                >
+                    <svg
+                        width="40"
+                        height="40"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1}
+                            d="M9 5l7 7-7 7"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </div>
     );
 };
 
