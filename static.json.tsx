@@ -237,7 +237,7 @@ const utils_message = {
         chi: `[中] 选择`,
     },
     talkWith: {
-        ko: "대화하기",
+        ko: "이 가이드와 상담하기",
         en: `Start chat`,
         ja: `チャットで問い合わせ&確認`,
         chi: `开始聊天`,
