@@ -1,11 +1,29 @@
 .locationalGuide {
+
+    &__regionTopImage {
+        position: absolute;
+        inset: 0px;
+        box-sizing: border-box;
+        padding: 0px;
+        border: none;
+        margin: auto;
+        display: block;
+        width: 0px;
+        height: 0px;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    
+
+    }
+
     &__regionArea {
-        // background: url("/img/koreaMapBG.jpg");
-        // background-size: cover;
-        // background-repeat: no-repeat;
         position: relative;
         .container  {
             padding-bottom: 0px!important;
+
         }
 
         &-bg {
@@ -177,5 +195,24 @@
         right: 1rem;
         border: 1px solid #0000001f;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+}
+
+.regionTopImage {
+    &__container {
+        height: 40vh;
+        width: 100%;
+    }
+
+    &__titleAndDescContainer {
+
+    }
+
+    &__title {
+
+    }
+
+    &__desc {
+        
     }
 }

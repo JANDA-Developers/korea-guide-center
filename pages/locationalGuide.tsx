@@ -33,6 +33,7 @@ import { useGlobalKoreaMap, useKoreaMap } from "../hook/useKoreaMap";
 import { useSortBanner } from "../page/homepage/hook/useSortBanner";
 import { localGuideData } from "../component/LocalGuideAndPrivateTour/LocalGuideSlider";
 import { FileTagManager } from "../utils/tagManager";
+import RegionTopImage from "../component/RegionTopImage/RegionTopImage";
 
 interface IProp {}
 
@@ -54,34 +55,9 @@ export const LocationalGuide: React.FC<IProp> = () => {
         <BookLayout>
             <div className="locationalGuide">
                 <div className="locationalGuide__regionArea">
-                    <JDcontainer
-                        className="locationalGuide__regionArea-on"
-                        verticalPadding="normal"
-                        size={WindowSize.md}
-                    >
-                        <Flex
-                            className="locationalGuide__region"
-                            oneone
-                            center
-                            mb="largest"
-                        >
-                            {selectedGlobalRegion && (
-                                <div className="locationalGuide__regionSecotr">
-                                    <RegionDescriptionSecotr2
-                                        onSelectRegion={selectGlobalRegion}
-                                        region={selectedGlobalRegion}
-                                    />
-                                </div>
-                            )}
-                        </Flex>
-                    </JDcontainer>
-                    <Image
-                        className="locationalGuide__regionArea"
-                        src={imgUrl}
-                        objectFit="cover"
-                        loading="eager"
-                        layout="fill"
-                        priority
+                    <RegionTopImage
+                        onSelectRegion={selectGlobalRegion}
+                        region={selectedGlobalRegion}
                     />
                     {selectedGlobalRegion && (
                         <div className="locationalGuide__regionSelectorSectorContainer">
