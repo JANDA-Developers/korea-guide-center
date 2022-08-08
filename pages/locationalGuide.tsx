@@ -34,17 +34,17 @@ import { useSortBanner } from "../page/homepage/hook/useSortBanner";
 import { localGuideData } from "../component/LocalGuideAndPrivateTour/LocalGuideSlider";
 import { FileTagManager } from "../utils/tagManager";
 import RegionTopImage from "../component/RegionTopImage/RegionTopImage";
+import RegionGuides from "../component/RegionGuides/RegionGuides";
 
 interface IProp {}
 
 export const LocationalGuide: React.FC<IProp> = () => {
-    const { locale } = useRouter();
-    const { homepage, s } = useContext(AppContext);
-    const { locationalBannerImgs } = useSortBanner(
-        homepage?.bannerImages || []
-    );
+    // const { locale } = useRouter();
+    // const { homepage, s } = useContext(AppContext);
+    // const { locationalBannerImgs } = useSortBanner(
+    //     homepage?.bannerImages || []
+    // );
 
-    const koreaHook = useKoreaMap();
     const globalKoreaHook = useGlobalKoreaMap();
     const { selectedGlobalRegion, onClick: selectGlobalRegion } =
         globalKoreaHook;
@@ -69,77 +69,10 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         </div>
                     )}
                 </div>
-                {/*<div>
-                    <RegionProductViewsLineHeader
-                    // 지역명 + ~~
-                    // region={product.region}
-                    />
-                    
-                    {true && (
-                        <div>
-                            <ProductViewCardsWithApi
-                                queryParam={{
-                                    fixingFilter: {
-                                        ...regionIn("613b06e8c5b0cb5fd53cabdc"),
-                                    },
-                                }}
-                            />
-                            <Mb />
-                        </div>
-                    )}
-                </div> */}
-                <JDcontainer verticalPadding size={WindowSize.lg}>
-                    {/* 지역 가이드 */}
-                    {selectedGlobalRegion && (
-                        <HyperRegionByGuideViewCarsGroup2
-                            key={selectedGlobalRegion + "HyperProductViewCardS"}
-                            hyper={selectedGlobalRegion}
-                        />
-                    )}
-                    <Mb mb="largest" />
-
-                    {/*<Banner
-                        sliderProps={{
-                            autoplay: true,
-                        }}
-                        bannerImages={
-                            locationalBannerImgs?.filter((banner) =>
-                                FileTagManager.getTagByTagNameAndValue(
-                                    banner?.tags || [],
-                                    "lang",
-                                    locale || "ko"
-                                )
-                            ) || []
-                        }
-                    /> */}
-
-                    {/* <Mb mb="largest" /> */}
-
-                    {/* 추천 가이드 */}
-                    {/* <GuideMovieCardsWithApi
-                        Head={
-                            <ProductViewsLineHeader
-                                description={s("bestSubGuideTitle")}
-                                title={s("bestGuideTitle")}
-                            />
-                        }
-                        randomSort
-                        key={locale + "ProductViewCard1"}
-                    />
-                    <Mb mb="largest" /> */}
-
-                    {/* 스페셜 가이드 */}
-                    {/* <GuideMovieCardsWithApi
-                        Head={
-                            <ProductViewsLineHeader
-                                description={s("mianSubGuideLineTitle2")}
-                                title={s("mianGuideLineTitle2")}
-                            />
-                        }
-                        randomSort
-                        key={locale + "ProductViewCard2"}
-                    /> */}
-                </JDcontainer>
+                <RegionGuides
+                    key={selectedGlobalRegion + "HyperProductViewCardS"}
+                    hyper={selectedGlobalRegion}
+                />
             </div>
         </BookLayout>
     );
