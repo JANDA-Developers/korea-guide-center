@@ -85,10 +85,11 @@ export const LocationalGuide: React.FC<IProp> = () => {
                     />
                 </div>
                 {selectedGlobalRegion && (
-                    <div>
+                    <div className="locationalGuide__regionSelectorSectorContainer">
                         <SelectRegionSector
                             onSelectRegion={selectGlobalRegion}
                             region={selectedGlobalRegion}
+                            items={localGuideData}
                         />
                     </div>
                 )}

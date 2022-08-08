@@ -15,8 +15,6 @@ const LocalGuideSliderItems = ({
 }: ILocalGuideSliderItemProps) => {
     const koreaHook = useGlobalKoreaMap();
     const { selectedGlobalRegion, onClick: selectGlobalRegion } = koreaHook;
-
-    console.log(items);
     return (
         <>
             {items

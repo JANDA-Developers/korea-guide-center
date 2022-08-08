@@ -49,5 +49,126 @@
         }
         transform: scale(.8);
     }
+
+    &__sliderContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+
+    }
+
+    &__regionSelectorSectorContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__regionSelectButtonContainer {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        width: 100%;
+        position: absolute;
+        place-items: center;
+        overflow-x: hidden;
+    }
+
+    &__regionSelectButton {
+        position: relative;
+        cursor: pointer;
+        width: 200px;
+        height: 9rem;
+        overflow: hidden;
+        border-radius: 10px;
+        color: white;
+        text-shadow: 1px 1px 1px #000;
+        font-weight: 600;
+        font-size: 20px;
+        box-sizing: border-box;
+        padding: 20px;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    }
+
+    &__regionSelectButtonBg{
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        vertical-align: middle;
+        z-index: -1;
+        
+    }
+
+    &__regionSliderContainer {
+        position: relative;
+        display: flex;
+        overflow-x: hidden;
+        height: 9rem;
+        width: 80vw; 
+    }
     
+    &__regionSliderContentArea {
+        width: max-content;
+    }
+
+    &__sliderLeftArrowContainer {
+        width: 16.875rem;
+        background-color: white;
+        position: absolute;
+        left: -1.5rem;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+    }
+
+    &__sliderRightArrowContainer {
+        width: 16.875rem;
+        background-color: white;
+        position: absolute;
+        right: -1.5rem;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        bottom: 50%;
+
+    }
+    
+    &__sliderLeftArrow {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+        left: 1rem;
+        border: 1px solid #0000001f;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+    }
+
+    &__sliderRightArrow {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+        right: 1rem;
+        border: 1px solid #0000001f;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
 }
