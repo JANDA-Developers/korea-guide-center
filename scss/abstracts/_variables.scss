@@ -34,14 +34,14 @@ $typho-tiny: 0.7rem !default;
 $typho-superTiny: 0.5825rem !default;
 
 // -- 🌈 Colors 컬러 칼라
-$primary-color-ie: #612A89 !default;
-$primary-color-light-ie: #8c49bd!default;
-$primary-color-light2-ie: #8c49bd!default;
+$primary-color-ie: #D0242B !default;
+$primary-color-light-ie: #ce3e43!default;
+$primary-color-light2-ie: #ce3e43!default;
 :root {
   --primary-color: #D0242B;
-  --primary-color-light: #8c49bd;
+  --primary-color-light: #ce3e43;
   --primary-color-light2: #E5EEFD;
-  --primary-color-dark: #451c63;
+  --primary-color-dark: #ce1117;
   --primary-color-on: #fff;
 }
 
@@ -52,7 +52,7 @@ $html-color: #4d4d4d !default;
 $link-color: #337ab7 !default;
 $link-color-dark: darken(#337ab7, 15%) !default;
 $primary-color: var(--primary-color) !default;
-$primary-color-dark: #451c63 !default;
+$primary-color-dark: #D0242B !default;
 $primary-color-opacity: #E5EEFD !default;
 $primary-color-on: #fff !default;
 
@@ -66,7 +66,7 @@ $color_introblock:rgba(#59257e, 0.8);
 $color_introblock_active:#ca391c;
 
 //#a5c736
-$point-color: #612A89 !default;
+$point-color: #D0242B !default;
 $point-color-on: #fff !default;
 $point-color-light: lighten($point-color, 15%) !default;
 $point-color-dark: darken($point-color, 15%) !default;
