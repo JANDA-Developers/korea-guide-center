@@ -19,7 +19,7 @@ export const SelectRegionSector: React.FC<IProp> = ({
     region,
     onSelectRegion,
 }) => {
-    const [viewMoreText, setViewMoreText] = useState(false);
+    // const [viewMoreText, setViewMoreText] = useState(false);
     const { l } = useContext(AppContext);
     const { width } = useWindowSize();
     let w = width * 0.8;

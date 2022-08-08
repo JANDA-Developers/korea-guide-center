@@ -21,20 +21,21 @@ const RegionTopImage: React.FC<IProp> = ({ region, onSelectRegion }) => {
     const imgUrl = `/img/regionBg/${selectedGlobalRegion}.jpg`;
 
     return (
-        <div className="regionTopImage__container">
+        <>
             {selectedGlobalRegion && (
-                <div>
-                    <div className="regionTopImage__titleAndDescContainer">
+                <div className="regionTopImage__container">
+                    <div
+                        className="regionTopImage__titleAndDescContainer"
+                        style={{
+                            backgroundImage: `url(${imgUrl})`,
+                        }}
+                    >
                         <h1 className="regionTopImage__title">{l(title)}</h1>
                         <p className="regionTopImage__desc">{l(description)}</p>
                     </div>
-                    <img
-                        className="locationalGuide__regionTopImage"
-                        src={imgUrl}
-                    />
                 </div>
             )}
-        </div>
+        </>
     );
 };
 
