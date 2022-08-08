@@ -1,15 +1,19 @@
-import { Bold, Flex, JDalign, JDbutton } from "@janda-com/front";
 import { useContext, useState } from "react";
 import { AppContext } from "../../context/context";
-import Horizen from "../horizen/Horizen";
-import { JDicon } from "../icons/Icons";
+import { useWindowSize } from "usehooks-ts";
 import { mapRegion, mapRegionArr, regionableData } from "../koreaMap/KoreaData";
-import { Photo } from "../photoFrame/PhotoFram";
+import { motion, AnimatePresence } from "framer-motion";
+import RightArrowIcon from "../../icons/RightArrowIcon";
+import LeftArrowIcon from "../../icons/LeftArrowIcon";
+import { ILocalGuideSliderItem } from "../LocalGuideAndPrivateTour/LocalGuideSliderItem";
 
 interface IProp {
     region: mapRegion;
     onSelectRegion: (region: mapRegion) => void;
+    items: ILocalGuideSliderItem[];
 }
+
+const offset = 6;
 
 export const SelectRegionSector: React.FC<IProp> = ({
     region,
@@ -17,38 +21,120 @@ export const SelectRegionSector: React.FC<IProp> = ({
 }) => {
     const [viewMoreText, setViewMoreText] = useState(false);
     const { l } = useContext(AppContext);
+    const { width } = useWindowSize();
+    let w = width * 0.75;
+
+    const rowVariants = {
+        hidden: (isBack: boolean) => ({
+            x: isBack ? -w : w,
+        }),
+        visible: {
+            x: 0,
+        },
+        exit: (isBack: boolean) => ({ x: isBack ? w : -w }),
+    };
+
+    const onClickNext = () => {
+        if (leaving) return;
+        setLeaving(true);
+        setBack(false);
+        const maxIndex = Math.ceil(mapRegionArr.length / offset) - 1;
+        setIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
+    };
+
+    const onClickPrev = () => {
+        if (leaving) return;
+        if (index !== 0) {
+            setLeaving(true);
+            setBack(true);
+        }
+        setIndex((prev) => (prev === 0 ? 0 : prev - 1));
+    };
+    const [index, setIndex] = useState(0);
+    const [leaving, setLeaving] = useState(false);
+    const [back, setBack] = useState(false);
+
+    const toggleLeaving = () => setLeaving(false);
 
     const handleSelectRegion = (region: mapRegion) => () => {
         onSelectRegion(region);
     };
 
     return (
-        <JDalign mr className="RegionDescriptionSecotr">
-            {mapRegionArr.map((_region) => {
-                const target =
-                    regionableData[_region as keyof typeof regionableData];
-                const isSelected = region === _region;
-                return (
-                    <JDbutton
-                        onClick={handleSelectRegion(_region)}
-                        className="RegionDescriptionSecotr__regionBtn"
-                        mr="tiny"
-                        mb="tiny"
-                        padding="small"
-                        mode={"flat"}
-                        br="square"
-                        size="small"
-                        thema={isSelected ? "darkPrimary" : undefined}
-                        style={{
-                            backgroundColor: isSelected
-                                ? undefined
-                                : "transparent",
-                        }}
+        <div className="locationalGuide__sliderContainer">
+            <div>
+                <button
+                    onClick={onClickPrev}
+                    style={{
+                        display: index === 0 ? "none" : "block",
+                    }}
+                >
+                    <LeftArrowIcon />
+                </button>
+            </div>
+            <div className="locationalGuide__regionSliderContainer">
+                <div className="locationalGuide__regionSliderContentArea">
+                    <AnimatePresence
+                        initial={false}
+                        custom={back}
+                        onExitComplete={toggleLeaving}
                     >
-                        {l(target.title)}
-                    </JDbutton>
-                );
-            })}
-        </JDalign>
+                        <motion.div
+                            className="locationalGuide__regionSelectButtonContainer"
+                            custom={back}
+                            key={index}
+                            variants={rowVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            transition={{ type: "tween", duration: 0.5 }}
+                        >
+                            {mapRegionArr
+                                .slice(offset * index, offset * index + offset)
+                                .map((_region) => {
+                                    const target =
+                                        regionableData[
+                                            _region as keyof typeof regionableData
+                                        ];
+                                    const isSelected = region === _region;
+                                    return (
+                                        <div
+                                            className="locationalGuide__regionSelectButton"
+                                            onClick={handleSelectRegion(
+                                                _region
+                                            )}
+                                            style={{
+                                                backgroundColor: isSelected
+                                                    ? undefined
+                                                    : "transparent",
+                                            }}
+                                        >
+                                            <span>{l(target.title)}</span>
+                                            <img
+                                                className="locationalGuide__regionSelectButtonBg"
+                                                src={`/img/regionBg/${_region}.jpg`}
+                                            />
+                                        </div>
+                                    );
+                                })}
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </div>
+            <div>
+                <button
+                    onClick={onClickNext}
+                    style={{
+                        display:
+                            index ===
+                            Math.ceil(mapRegionArr.length / offset) - 1
+                                ? "none"
+                                : "block",
+                    }}
+                >
+                    <RightArrowIcon />
+                </button>
+            </div>
+        </div>
     );
 };
