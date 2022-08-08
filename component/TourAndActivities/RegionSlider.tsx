@@ -196,7 +196,7 @@ const RegionSlider = () => {
         visible: {
             x: 0,
         },
-        exit: (isBack: boolean) => ({ x: isBack ? w : -w, }),
+        exit: (isBack: boolean) => ({ x: isBack ? w : -w }),
     };
 
     const onClickNext = () => {
@@ -222,7 +222,7 @@ const RegionSlider = () => {
     const toggleLeaving = () => setLeaving(false);
 
     return (
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'sticky' }}>
+        <div className="slider__sliderContainer">
             <div className="slider__ShortSliderLeftArrowContainer">
                 <button
                     className="slider__ShortSliderLeftArrow"
@@ -234,8 +234,8 @@ const RegionSlider = () => {
                     <LeftArrowIcon />
                 </button>
             </div>
-            <div className="slider__ShortSliderContainer" style={{ width: "70vw" }}>
-                <div className="slider__ShortSliderContentAeea">
+            <div className="slider__ShortSliderContainer">
+                <div className="slider__ShortSliderContentArea">
                     <AnimatePresence
                         initial={false}
                         custom={back}
@@ -259,7 +259,6 @@ const RegionSlider = () => {
                         </motion.div>
                     </AnimatePresence>
                 </div>
-
             </div>
             <div className="slider__ShortSliderRightArrowContainer">
                 <button
@@ -267,8 +266,7 @@ const RegionSlider = () => {
                     className="slider__ShortSliderRightArrow"
                     style={{
                         display:
-                            index ===
-                                Math.ceil(regionData.length / offset) - 1
+                            index === Math.ceil(regionData.length / offset) - 1
                                 ? "none"
                                 : "block",
                     }}
@@ -277,7 +275,6 @@ const RegionSlider = () => {
                 </button>
             </div>
         </div>
-
     );
 };
 

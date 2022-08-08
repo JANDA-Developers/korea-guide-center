@@ -18,6 +18,8 @@ import { TElements } from "../../types/interface";
 import { userList_UserList_items } from "../../types/api";
 import { useRouter } from "next/router";
 import RecommendGuideSliderItem from "./RecommendGuideSliderItem";
+import RightArrowIcon from "../../icons/RightArrowIcon";
+import LeftArrowIcon from "../../icons/LeftArrowIcon";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
@@ -44,14 +46,16 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
     const { width } = useWindowSize();
     const { locale } = useRouter();
 
+    let w = width * 0.75;
+
     const rowVariants = {
         hidden: (isBack: boolean) => ({
-            x: isBack ? -width : width,
+            x: isBack ? -w : w,
         }),
         visible: {
             x: 0,
         },
-        exit: (isBack: boolean) => ({ x: isBack ? width : -width }),
+        exit: (isBack: boolean) => ({ x: isBack ? w : -w }),
     };
 
     const onClickNext = () => {
@@ -95,88 +99,59 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
     const data: userList_UserList_items[] = users;
 
     return (
-        <>
-            <div className="slider__LongSliderContainer">
-                <div className="slider__LongSliderLeftArrowContainer">
-                    <button
-                        className="slider__LongSliderLeftArrow"
-                        onClick={onClickPrev}
-                        style={{
-                            display: index === 0 ? "none" : "block",
-                        }}
-                    >
-                        <svg
-                            width="40"
-                            height="40"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1}
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <AnimatePresence
-                    initial={false}
-                    custom={back}
-                    onExitComplete={toggleLeaving}
+        <div className="slider__sliderContainer">
+            <div className="slider__LongSliderLeftArrowContainer">
+                <button
+                    className="slider__LongSliderLeftArrow"
+                    onClick={onClickPrev}
+                    style={{
+                        display: index === 0 ? "none" : "block",
+                    }}
                 >
-                    <motion.div
-                        className="slider__LongSliderRow"
+                    <LeftArrowIcon />
+                </button>
+            </div>
+            <div className="slider__LongSliderContainer">
+                <div className="slider__LongSliderContentArea">
+                    <AnimatePresence
+                        initial={false}
                         custom={back}
-                        key={index}
-                        variants={rowVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ type: "tween", duration: 0.5 }}
+                        onExitComplete={toggleLeaving}
                     >
-                        <div className="slider__LongSliderEmptyBox" />
-                        <RecommendGuideSliderItem
-                            item={data}
-                            offset={offset}
-                            index={index}
-                        />
-                        <div className="slider__LongSliderEmptyBox" />
-                    </motion.div>
-                </AnimatePresence>
-                <div className="slider__LongSliderRightArrowContainer">
-                    <button
-                        onClick={onClickNext}
-                        className="slider__LongSliderRightArrow"
-                        style={{
-                            display:
-                                index === Math.ceil(data.length / offset) - 1
-                                    ? "none"
-                                    : "block",
-                        }}
-                    >
-                        <svg
-                            width="40"
-                            height="40"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
+                        <motion.div
+                            className="slider__LongSliderRow"
+                            custom={back}
+                            key={index}
+                            variants={rowVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            transition={{ type: "tween", duration: 0.5 }}
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={1}
-                                d="M9 5l7 7-7 7"
+                            <RecommendGuideSliderItem
+                                item={data}
+                                offset={offset}
+                                index={index}
                             />
-                        </svg>
-                    </button>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
             </div>
-            <div style={{ width: "100%", height: "35rem" }}></div>
-        </>
+            <div className="slider__LongSliderRightArrowContainer">
+                <button
+                    onClick={onClickNext}
+                    className="slider__LongSliderRightArrow"
+                    style={{
+                        display:
+                            index === Math.ceil(data.length / offset) - 1
+                                ? "none"
+                                : "block",
+                    }}
+                >
+                    <RightArrowIcon />
+                </button>
+            </div>
+        </div>
     );
 };
 

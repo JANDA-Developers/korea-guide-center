@@ -274,6 +274,13 @@ a {
 
 .slider {
 
+    &__sliderContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+    }
+
     // Short
     &__ShortSliderEmptyBox {
         width: 16.875rem;
@@ -290,7 +297,7 @@ a {
         position: absolute;
         background-color: white;
         border-radius: 100%;
-        right: -1.875rem;
+        right: 1rem;
         border: 1px solid #0000001f;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
@@ -305,7 +312,7 @@ a {
         position: absolute;
         background-color: white;
         border-radius: 100%;
-        left: -1.875rem;
+        left: 1rem;
         border: 1px solid #0000001f;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
@@ -379,9 +386,10 @@ a {
         display: flex;
         overflow-x: hidden;
         height: 19.875rem;
+        width: 70vw; 
     }
 
-    &__ShortSliderContentAeea {
+    &__ShortSliderContentArea {
         width: max-content;
     }
 
@@ -515,7 +523,7 @@ a {
         position: absolute;
         background-color: white;
         border-radius: 100%;
-        right: -1.875rem;
+        right: 1rem;
         border: 1px solid #0000001f;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
@@ -530,7 +538,7 @@ a {
         position: absolute;
         background-color: white;
         border-radius: 100%;
-        left: -1.875rem;
+        left: 1rem;
         border: 1px solid #0000001f;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
@@ -539,26 +547,28 @@ a {
 
     &__LongSliderLeftArrowContainer {
         width: 16.875rem;
-        height: 35.875rem;
         background-color: white;
-        position: absolute;
         z-index: 10;
         left: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
     }
 
     &__LongSliderRightArrowContainer {
         width: 16.875rem;
-        height: 35.875rem;
         background-color: white;
-        position: absolute;
         z-index: 10;
         right: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
     }
 
     &__LongSliderItems {
@@ -573,23 +583,29 @@ a {
 
     &__LongSliderRow {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 13px;
         width: 100%;
         position: absolute;
         place-items: center;
         overflow: hidden;
         padding-bottom: 5px;
+        padding : 5px 0px
 
     }
 
     &__LongSliderContainer {
         position: relative;
         display: flex;
+        overflow-x: hidden;
+        height: 32.875rem;
+        width: 70vw; 
+        box-sizing: border-box;
     }
 
-
-
+    &__LongSliderContentArea {
+        width: max-content;
+    }
 }
 
 .tour {

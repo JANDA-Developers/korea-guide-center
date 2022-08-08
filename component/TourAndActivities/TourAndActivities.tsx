@@ -39,6 +39,23 @@ const TourAndActivities = () => {
                 </h1>
             </div>
             <RegionSlider />
+            <div>
+                <h1
+                    style={{
+                        textAlign: "center",
+                        fontWeight: "bold",
+                    }}
+                >
+                    <span
+                        style={{
+                            color: "#d0242b",
+                        }}
+                    >
+                        Popular
+                    </span>{" "}
+                    Tour
+                </h1>
+            </div>
             <TourSlider
                 queryParam={{
                     initialSort: [_ProductSort.rating__desc],

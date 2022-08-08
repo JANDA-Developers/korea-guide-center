@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useWindowSize } from "usehooks-ts";
 import LocalGuideSliderItems from "./LocalGuideSliderItems";
 import { ILocalGuideSliderItem } from "./LocalGuideSliderItem";
+import RightArrowIcon from "../../icons/RightArrowIcon";
+import LeftArrowIcon from "../../icons/LeftArrowIcon";
 
 const localGuideData: ILocalGuideSliderItem[] = [
     {
@@ -113,15 +115,16 @@ const offset = 4;
 
 const LocalGuideSlider = () => {
     const { width } = useWindowSize();
+    let w = width * 0.75;
 
     const rowVariants = {
         hidden: (isBack: boolean) => ({
-            x: isBack ? -width : width,
+            x: isBack ? -w : w,
         }),
         visible: {
             x: 0,
         },
-        exit: (isBack: boolean) => ({ x: isBack ? width : -width }),
+        exit: (isBack: boolean) => ({ x: isBack ? w : -w }),
     };
 
     const onClickNext = () => {
@@ -146,7 +149,7 @@ const LocalGuideSlider = () => {
 
     const toggleLeaving = () => setLeaving(false);
     return (
-        <div className="slider__ShortSliderContainer">
+        <div className="slider__sliderContainer">
             <div className="slider__ShortSliderLeftArrowContainer">
                 <button
                     className="slider__ShortSliderLeftArrow"
@@ -155,47 +158,35 @@ const LocalGuideSlider = () => {
                         display: index === 0 ? "none" : "block",
                     }}
                 >
-                    <svg
-                        width="40"
-                        height="40"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1}
-                            d="M15 19l-7-7 7-7"
-                        />
-                    </svg>
+                    <LeftArrowIcon />
                 </button>
             </div>
-            <AnimatePresence
-                initial={false}
-                custom={back}
-                onExitComplete={toggleLeaving}
-            >
-                <motion.div
-                    className="slider__ShortSliderRow"
-                    custom={back}
-                    key={index}
-                    variants={rowVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    transition={{ type: "tween", duration: 0.5 }}
-                >
-                    <div className="slider__ShortSliderEmptyBox" />
-                    <LocalGuideSliderItems
-                        items={localGuideData}
-                        offset={offset}
-                        index={index}
-                    />
-                    <div className="slider__ShortSliderEmptyBox" />
-                </motion.div>
-            </AnimatePresence>
+            <div className="slider__ShortSliderContainer">
+                <div className="slider__ShortSliderContentArea">
+                    <AnimatePresence
+                        initial={false}
+                        custom={back}
+                        onExitComplete={toggleLeaving}
+                    >
+                        <motion.div
+                            className="slider__ShortSliderRow"
+                            custom={back}
+                            key={index}
+                            variants={rowVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            transition={{ type: "tween", duration: 0.5 }}
+                        >
+                            <LocalGuideSliderItems
+                                items={localGuideData}
+                                offset={offset}
+                                index={index}
+                            />
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </div>
             <div className="slider__ShortSliderRightArrowContainer">
                 <button
                     onClick={onClickNext}
@@ -203,26 +194,12 @@ const LocalGuideSlider = () => {
                     style={{
                         display:
                             index ===
-                                Math.ceil(localGuideData.length / offset) - 1
+                            Math.ceil(localGuideData.length / offset) - 1
                                 ? "none"
                                 : "block",
                     }}
                 >
-                    <svg
-                        width="40"
-                        height="40"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1}
-                            d="M9 5l7 7-7 7"
-                        />
-                    </svg>
+                    <RightArrowIcon />
                 </button>
             </div>
         </div>
