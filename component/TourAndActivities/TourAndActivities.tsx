@@ -19,7 +19,11 @@ import {
 const TourAndActivities = () => {
     return (
         <>
-            <div>
+            <div
+                style={{
+                    marginBottom: "50px",
+                }}
+            >
                 <h1 className="tour__sectionTitle">
                     <span
                         style={{
@@ -37,15 +41,14 @@ const TourAndActivities = () => {
                         Activities
                     </span>
                 </h1>
+                <RegionSlider />
             </div>
-            <RegionSlider />
-            <div>
-                <h1
-                    style={{
-                        textAlign: "center",
-                        fontWeight: "bold",
-                    }}
-                >
+            <div
+                style={{
+                    marginBottom: "50px",
+                }}
+            >
+                <h1 className="tour__sectionTitle">
                     <span
                         style={{
                             color: "#d0242b",
@@ -55,12 +58,12 @@ const TourAndActivities = () => {
                     </span>{" "}
                     Tour
                 </h1>
+                <TourSlider
+                    queryParam={{
+                        initialSort: [_ProductSort.rating__desc],
+                    }}
+                />
             </div>
-            <TourSlider
-                queryParam={{
-                    initialSort: [_ProductSort.rating__desc],
-                }}
-            />
         </>
     );
 };

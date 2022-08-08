@@ -394,9 +394,6 @@ a {
     }
 
     // Guide {
-    &__RecommendGuideContainer {
-        width: 100%;
-    }
 
     &__RecommendGuideSectionTitle {
         text-align: center;
@@ -613,6 +610,7 @@ a {
     &__sectionTitle {
         text-align: center;
         margin-top: 5rem;
+        border-top: 50px;
         font-weight: 600;
     }
 

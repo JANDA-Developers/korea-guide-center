@@ -56,7 +56,11 @@ const RecommendGuide: React.FC<IGuideMovieCardsWithApi> = ({
     console.log(users);
 
     return (
-        <div className="slider__RecommendGuideContainer">
+        <div
+            style={{
+                marginBottom: "50px",
+            }}
+        >
             <h1 className="slider__RecommendGuideSectionTitle">
                 <span
                     style={{
