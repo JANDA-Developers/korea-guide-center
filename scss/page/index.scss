@@ -281,13 +281,6 @@ a {
         position: sticky;
     }
 
-    // Short
-    &__ShortSliderEmptyBox {
-        width: 16.875rem;
-        height: 19.875rem;
-        background-color: white;
-    }
-
     &__ShortSliderLeftArrow {
         all: unset;
         display: flex;
@@ -505,11 +498,6 @@ a {
 
     // Long
 
-    &__LongSliderEmptyBox {
-        width: 16.875rem;
-        height: 35.875rem;
-        background-color: white;
-    }
 
     &__LongSliderLeftArrow {
         all: unset;

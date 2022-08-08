@@ -55,13 +55,13 @@
         align-items: center;
         justify-content: center;
         position: sticky;
-
     }
 
     &__regionSelectorSectorContainer {
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     &__regionSelectButtonContainer {
@@ -69,9 +69,10 @@
         grid-template-columns: repeat(6, 1fr);
         gap: 10px;
         width: 100%;
+        padding: 5px 0px;
         position: absolute;
         place-items: center;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     &__regionSelectButton {
@@ -103,17 +104,21 @@
         
     }
 
+
     &__regionSliderContainer {
         position: relative;
         display: flex;
         overflow-x: hidden;
-        height: 9rem;
+        height: 10rem;
         width: 80vw; 
     }
     
     &__regionSliderContentArea {
         width: max-content;
     }
+
+
+    // Arrow
 
     &__sliderLeftArrowContainer {
         width: 16.875rem;

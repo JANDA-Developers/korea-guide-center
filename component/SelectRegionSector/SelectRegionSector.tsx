@@ -34,6 +34,13 @@ export const SelectRegionSector: React.FC<IProp> = ({
         exit: (isBack: boolean) => ({ x: isBack ? w : -w }),
     };
 
+    const SliderVariants = {
+        hover: {
+            boxShadow: "rgba(0, 0, 0, 0.8) 0px 2px 2px",
+            cursor: "pointer",
+        },
+    };
+
     const onClickNext = () => {
         if (leaving) return;
         setLeaving(true);
@@ -99,7 +106,9 @@ export const SelectRegionSector: React.FC<IProp> = ({
                                         ];
                                     const isSelected = region === _region;
                                     return (
-                                        <div
+                                        <motion.div
+                                            variants={SliderVariants}
+                                            whileHover="hover"
                                             className="locationalGuide__regionSelectButton"
                                             onClick={handleSelectRegion(
                                                 _region
@@ -115,7 +124,7 @@ export const SelectRegionSector: React.FC<IProp> = ({
                                                 className="locationalGuide__regionSelectButtonBg"
                                                 src={`/img/regionBg/${_region}.jpg`}
                                             />
-                                        </div>
+                                        </motion.div>
                                     );
                                 })}
                         </motion.div>
