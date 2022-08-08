@@ -211,9 +211,11 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                         )
                     ) && (
                         <div>
-                            <ProductViewsLineHeader
-                                title={s("viewGuideTours")}
-                            />
+                            <div className="guideProfile__viewTours">
+                                <ProductViewsLineHeader
+                                    title={s("viewGuideTours")}
+                                />
+                            </div>
                             <ProductViewCardsWithApi
                                 queryParam={{
                                     fixingFilter: {
