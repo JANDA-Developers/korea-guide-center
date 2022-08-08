@@ -27,9 +27,11 @@ import {
     RegionDescriptionSecotr2,
     RegionDescriptionSecotr3,
 } from "../component/RegionDescriptionSector/RegionDescriptionSector";
+import { SelectRegionSector } from "../component/SelectRegionSector/SelectRegionSector";
 import { AppContext } from "../context/context";
 import { useGlobalKoreaMap, useKoreaMap } from "../hook/useKoreaMap";
 import { useSortBanner } from "../page/homepage/hook/useSortBanner";
+import { localGuideData } from "../component/LocalGuideAndPrivateTour/LocalGuideSlider";
 import { FileTagManager } from "../utils/tagManager";
 
 interface IProp {}
@@ -82,6 +84,14 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         priority
                     />
                 </div>
+                {selectedGlobalRegion && (
+                    <div>
+                        <SelectRegionSector
+                            onSelectRegion={selectGlobalRegion}
+                            region={selectedGlobalRegion}
+                        />
+                    </div>
+                )}
                 {/*<div>
                     <RegionProductViewsLineHeader
                     // 지역명 + ~~

@@ -6,7 +6,7 @@ import { ILocalGuideSliderItem } from "./LocalGuideSliderItem";
 import RightArrowIcon from "../../icons/RightArrowIcon";
 import LeftArrowIcon from "../../icons/LeftArrowIcon";
 
-const localGuideData: ILocalGuideSliderItem[] = [
+export const localGuideData: ILocalGuideSliderItem[] = [
     {
         title: "GUIDES IN SEOUL",
         desc: "서울 지역의 가이드",
