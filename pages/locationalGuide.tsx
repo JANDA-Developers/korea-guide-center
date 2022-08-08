@@ -83,16 +83,16 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         layout="fill"
                         priority
                     />
+                    {selectedGlobalRegion && (
+                        <div className="locationalGuide__regionSelectorSectorContainer">
+                            <SelectRegionSector
+                                onSelectRegion={selectGlobalRegion}
+                                region={selectedGlobalRegion}
+                                items={localGuideData}
+                            />
+                        </div>
+                    )}
                 </div>
-                {selectedGlobalRegion && (
-                    <div className="locationalGuide__regionSelectorSectorContainer">
-                        <SelectRegionSector
-                            onSelectRegion={selectGlobalRegion}
-                            region={selectedGlobalRegion}
-                            items={localGuideData}
-                        />
-                    </div>
-                )}
                 {/*<div>
                     <RegionProductViewsLineHeader
                     // 지역명 + ~~

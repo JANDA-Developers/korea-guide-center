@@ -129,7 +129,7 @@ export const RegionDescriptionSecotr2: React.FC<IProp> = ({
         <JDalign mr className="RegionDescriptionSecotr">
             <div
                 style={{
-                    height: "45vh",
+                    height: "25vh",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
