@@ -31,21 +31,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
         <BookLayout>
             <JDcontainer verticalPadding size={WindowSize.lg}>
                 <Mb mb="largest" />
-                {/**<Banner
-                    ratio={1}
-                    slideToShow={8}
-                    className="tourCircleBanner"
-                    mb="largest"
-                    bannerImages={
-                        circleBannerImages?.filter((banner) =>
-                            FileTagManager.getTagByTagNameAndValue(
-                                banner?.tags || [],
-                                "lang",
-                                locale || "ko"
-                            )
-                        ) || []
-                    }
-                /> */}
+
                 <ProductsGroupRenders />
                 <ProductViewCardsWithApi
                     Head={<BestProductViewsLineHeader />}
