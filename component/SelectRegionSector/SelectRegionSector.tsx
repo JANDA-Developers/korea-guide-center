@@ -22,7 +22,7 @@ export const SelectRegionSector: React.FC<IProp> = ({
     const [viewMoreText, setViewMoreText] = useState(false);
     const { l } = useContext(AppContext);
     const { width } = useWindowSize();
-    let w = width * 0.75;
+    let w = width * 0.8;
 
     const rowVariants = {
         hidden: (isBack: boolean) => ({
@@ -62,8 +62,9 @@ export const SelectRegionSector: React.FC<IProp> = ({
 
     return (
         <div className="locationalGuide__sliderContainer">
-            <div>
+            <div className="locationalGuide__sliderLeftArrowContainer">
                 <button
+                    className="locationalGuide__sliderLeftArrow"
                     onClick={onClickPrev}
                     style={{
                         display: index === 0 ? "none" : "block",
@@ -121,8 +122,9 @@ export const SelectRegionSector: React.FC<IProp> = ({
                     </AnimatePresence>
                 </div>
             </div>
-            <div>
+            <div className="locationalGuide__sliderRightArrowContainer">
                 <button
+                    className="locationalGuide__sliderRightArrow"
                     onClick={onClickNext}
                     style={{
                         display:
