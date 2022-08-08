@@ -13,11 +13,14 @@ import {
 import { ProductViewCardsWithHorizenCalendar } from "../component/productViewCard/ProductViewCardsWithHorizenCalendar";
 import {
     BestProductViewsLineHeader,
+    KPOPBestProductViewsLineHeader,
+    KPOPNewestProductViewsLineHeader,
     NewstProductViewsLineHeader,
 } from "../component/productViewCard/ProductViewsLineHeader";
 import { AppContext } from "../context/context";
 import { useSortBanner } from "../page/homepage/hook/useSortBanner";
 import { FileTagManager } from "../utils/tagManager";
+import { ProductType } from "../types/api";
 
 interface IProp {}
 
@@ -27,9 +30,17 @@ export const LocationalGuide: React.FC<IProp> = () => {
     const { tourCircleBannerImgs: circleBannerImages } = useSortBanner(
         homepage?.bannerImages || []
     );
+    const commonFilter = {
+        queryParam: {
+            fixingFilter: {
+                type__eq: ProductType?.KPOP,
+            },
+        },
+    };
     return (
         <BookLayout>
             <JDcontainer verticalPadding size={WindowSize.lg}>
+                <ItemMiniCategories />
                 <Mb mb="largest" />
 
                 <ProductsGroupRenders />
@@ -43,6 +54,29 @@ export const LocationalGuide: React.FC<IProp> = () => {
                     {...NewsProductList}
                 />
                 <Mb mb="largest" />
+
+                <KPOPBestProductViewsLineHeader />
+                <ProductViewCardsWithApi
+                    {...{
+                        ...NewsProductList,
+                        queryParam: {
+                            ...NewsProductList.queryParam,
+                            ...commonFilter.queryParam,
+                        },
+                    }}
+                />
+                <Mb mb="largest" />
+                <KPOPNewestProductViewsLineHeader />
+                <ProductViewCardsWithApi
+                    {...{
+                        ...NewsProductList,
+                        queryParam: {
+                            ...NewsProductList.queryParam,
+                            ...commonFilter.queryParam,
+                        },
+                    }}
+                />
+
                 <ProductViewCardsWithHorizenCalendar />
             </JDcontainer>
         </BookLayout>
