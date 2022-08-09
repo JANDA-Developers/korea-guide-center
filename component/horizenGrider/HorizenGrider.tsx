@@ -132,7 +132,6 @@ export const HorizenGrider2 = <_, T>({
                     {items.map((item) => (
                         <GuideIntro item={item}></GuideIntro>
                     ))}
-
                     <JDalign
                         mr
                         className="ProductViewCards__card ProductViewCards__card--placeholder"

@@ -6,9 +6,8 @@ import { useGlobalKoreaMap } from "../../hook/useKoreaMap";
 import { useUserList } from "../../hook/useUser";
 import { LANGUAGES, UserRole } from "../../types/api";
 import { Locales, MapRegionKr } from "../../types/const";
-import { GuideMoviewClipList2 } from "../guideMovieClicp/GuideMovieClipList";
 import { mapRegion } from "../koreaMap/KoreaData";
-import { ProductViewsLineHeader2 } from "../productViewCard/ProductViewsLineHeader";
+import RegionGuidesBody from "./RegionGuidesBody";
 import RegionGuidesHeader from "./RegionGuidesHeader";
 
 interface IHyperProductGroupProp {
@@ -38,13 +37,30 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
     return (
         <div className="regionGuides__container">
             {selectedGlobalRegion && (
-                <div>
+                <>
                     <RegionGuidesHeader hyper={hyper} />
-                    <GuideMoviewClipList2
-                        empty={<Empty msg={s("guideNotFoundInArea")} />}
-                        guides={guides}
-                    />
-                </div>
+                    <div className="regionGuides__bodyContainer">
+                        <RegionGuidesBody
+                            empty={<Empty msg={s("guideNotFoundInArea")} />}
+                            guides={guides}
+                        />
+                        <div className="regionGuides__bodyRightSection">
+                            <div className="regionGuides__popularGuides">
+                                <div>
+                                    <span
+                                        style={{
+                                            fontWeight: 600,
+                                            fontSize: "24px",
+                                        }}
+                                    >
+                                        인기 가이드
+                                    </span>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </>
             )}
         </div>
     );
