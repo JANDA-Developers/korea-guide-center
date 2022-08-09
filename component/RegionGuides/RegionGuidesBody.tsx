@@ -1,4 +1,5 @@
 import { Fuser } from "../../types/api";
+import { GuideMovieClip2 } from "../guideMovieClicp/GuideMovieClip";
 import { IHorizenGriderProp } from "../horizenGrider/HorizenGrider";
 import RegionGuidesBodyHorizonGrider from "./RegionGuidesBodyHorizonGrider";
 
