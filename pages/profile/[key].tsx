@@ -197,13 +197,20 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             </div>
                         </div>
                     </div>
+                    {!isEmpty(
+                        filterVisibleProduct(
+                            products || [],
+                            (router.locale as LANGUAGES) || LANGUAGES.ko
+                        )
+                    ) && (
+                        <Flex hide={!profileVideo?.uri} mb="large">
+                            <Video
+                                className="guideProfile__video"
+                                src={profileVideo?.uri}
+                            />
+                        </Flex>
+                    )}
 
-                    {/* <Flex hide={!profileVideo?.uri} mb="large">
-                        <Video
-                            className="guideProfile__video"
-                            src={profileVideo?.uri}
-                        />
-                    </Flex> */}
                     {!isEmpty(
                         filterVisibleProduct(
                             products || [],
@@ -225,6 +232,7 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             />
                         </div>
                     )}
+
                     <Mb mb="largest" />
                     <SNSIcons mb="largest" sns={item.sns} />
                 </div>
