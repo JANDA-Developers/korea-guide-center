@@ -33,12 +33,13 @@
         margin-right: 3rem;
         text-align:left;
         position: relative;
+        width: 100%;
     }
 
     &__horizon{
-    height: 1px;
-    width: 100%;
-    background-color: $grey-level1;
+        height: 1px;
+        width: 100%;
+        background-color: $grey-level1;
     }
 
     &__profile {     
