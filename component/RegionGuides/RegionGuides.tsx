@@ -35,7 +35,7 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
 
     const isKr = locale === Locales.ko;
 
-    const containerSize = WindowSize.full;
+    const containerSize = WindowSize.lg;
 
     return (
         <div className="regionGuides__container">
