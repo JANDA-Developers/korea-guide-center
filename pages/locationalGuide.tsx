@@ -51,6 +51,8 @@ export const LocationalGuide: React.FC<IProp> = () => {
 
     const imgUrl = `/img/regionBg/${selectedGlobalRegion}.jpg`;
 
+    const containerSize = WindowSize.lg;
+
     return (
         <BookLayout>
             <div className="locationalGuide">
@@ -60,13 +62,15 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         region={selectedGlobalRegion}
                     />
                     {selectedGlobalRegion && (
-                        <div className="locationalGuide__regionSelectorSectorContainer">
-                            <SelectRegionSector
-                                onSelectRegion={selectGlobalRegion}
-                                region={selectedGlobalRegion}
-                                items={localGuideData}
-                            />
-                        </div>
+                        <JDcontainer size={containerSize}>
+                            <div className="locationalGuide__regionSelectorSectorContainer">
+                                <SelectRegionSector
+                                    onSelectRegion={selectGlobalRegion}
+                                    region={selectedGlobalRegion}
+                                    items={localGuideData}
+                                />
+                            </div>
+                        </JDcontainer>
                     )}
                 </div>
                 <RegionGuides
