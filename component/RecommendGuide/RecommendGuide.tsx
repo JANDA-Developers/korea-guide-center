@@ -15,6 +15,7 @@ import { ListInitOptions } from "../../hook/useListQuery";
 import { genrateOption } from "../../utils/query";
 import { TElements } from "../../types/interface";
 import RecommendGuideSlider from "./RecommendGuideSlider";
+import { JDcontainer, WindowSize } from "@janda-com/front";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
@@ -53,26 +54,28 @@ const RecommendGuide: React.FC<IGuideMovieCardsWithApi> = ({
         queryControl
     );
 
-    console.log(users);
+    const containerSize = WindowSize.full;
 
     return (
-        <div
-            style={{
-                marginBottom: "50px",
-            }}
-        >
-            <h1 className="slider__RecommendGuideSectionTitle">
-                <span
-                    style={{
-                        color: "#D0242B",
-                    }}
-                >
-                    Recommend
-                </span>{" "}
-                Guides
-            </h1>
-            <RecommendGuideSlider randomSort />
-        </div>
+        <JDcontainer size={containerSize}>
+            <div
+                style={{
+                    marginBottom: "50px",
+                }}
+            >
+                <h1 className="slider__RecommendGuideSectionTitle">
+                    <span
+                        style={{
+                            color: "#D0242B",
+                        }}
+                    >
+                        Recommend
+                    </span>{" "}
+                    Guides
+                </h1>
+                <RecommendGuideSlider randomSort />
+            </div>
+        </JDcontainer>
     );
 };
 
