@@ -45,16 +45,16 @@ export const BookHeaderNavBtns: React.FC<IProp> = ({ ...props }) => {
                     <a>{s("customTour")}</a>
                 </span>
             </Bold>
-            <Bold className="bookHeader__bottomBtn" mr="large">
+            {/* <Bold className="bookHeader__bottomBtn" mr="large">
                 <Link href={Paths.kpopCulture}>
                     <a>{s("kpopCulture")}</a>
                 </Link>
-            </Bold>
-            <Bold className="bookHeader__bottomBtn" mr="large">
+            </Bold> */}
+            {/* <Bold className="bookHeader__bottomBtn" mr="large">
                 <a href={SHOPPING_LINK} target="_blank">
                     {s("shopping")}
                 </a>
-            </Bold>
+            </Bold> */}
             <Bold className="bookHeader__bottomBtn">
                 <Link href={Paths.boardList + `?boardKey=${boardKeys.alert}`}>
                     <a>{s("customerCenter")}</a>
