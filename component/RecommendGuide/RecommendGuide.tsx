@@ -57,25 +57,23 @@ const RecommendGuide: React.FC<IGuideMovieCardsWithApi> = ({
     const containerSize = WindowSize.full;
 
     return (
-        <JDcontainer size={containerSize}>
-            <div
-                style={{
-                    marginBottom: "50px",
-                }}
-            >
-                <h1 className="slider__RecommendGuideSectionTitle">
-                    <span
-                        style={{
-                            color: "#D0242B",
-                        }}
-                    >
-                        Recommend
-                    </span>{" "}
-                    Guides
-                </h1>
-                <RecommendGuideSlider randomSort />
-            </div>
-        </JDcontainer>
+        <div
+            style={{
+                marginBottom: "50px",
+            }}
+        >
+            <h1 className="slider__RecommendGuideSectionTitle">
+                <span
+                    style={{
+                        color: "#D0242B",
+                    }}
+                >
+                    Recommend
+                </span>{" "}
+                Guides
+            </h1>
+            <RecommendGuideSlider randomSort />
+        </div>
     );
 };
 

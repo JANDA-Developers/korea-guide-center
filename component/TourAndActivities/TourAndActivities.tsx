@@ -20,7 +20,7 @@ import { JDcontainer, WindowSize } from "@janda-com/front";
 const TourAndActivities = () => {
     const containerSize = WindowSize.full;
     return (
-        <JDcontainer size={containerSize}>
+        <>
             <div
                 style={{
                     marginBottom: "50px",
@@ -66,7 +66,7 @@ const TourAndActivities = () => {
                     }}
                 />
             </div>
-        </JDcontainer>
+        </>
     );
 };
 
