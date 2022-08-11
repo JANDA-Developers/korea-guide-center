@@ -55,13 +55,18 @@
         position: sticky;
     }
 
+
     &__regionSelectorSectorContainer {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        bottom: -80px;
+        box-sizing: border-box;
+        position: relative;
+        max-width: 87.75rem;
+        margin: 0 auto;
+        padding: 0 2.4rem;
+        bottom: 5rem;
     }
 
     &__regionSelectButtonContainer {
