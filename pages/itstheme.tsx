@@ -65,17 +65,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         },
                     }}
                 />
-                <Mb mb="largest" />
-                <KPOPNewestProductViewsLineHeader />
-                <ProductViewCardsWithApi
-                    {...{
-                        ...NewsProductList,
-                        queryParam: {
-                            ...NewsProductList.queryParam,
-                            ...commonFilter.queryParam,
-                        },
-                    }}
-                />
 
                 <ProductViewCardsWithHorizenCalendar />
             </JDcontainer>
