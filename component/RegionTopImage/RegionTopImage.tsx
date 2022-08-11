@@ -3,6 +3,8 @@ import { AppContext } from "../../context/context";
 import { regionableData } from "../koreaMap/KoreaData";
 import { useGlobalKoreaMap } from "../../hook/useKoreaMap";
 import { mapRegion } from "../koreaMap/KoreaData";
+import { SelectRegionSector } from "../SelectRegionSector/SelectRegionSector";
+import { localGuideData } from "../LocalGuideAndPrivateTour/LocalGuideSlider";
 
 interface IProp {
     region: mapRegion;
@@ -33,6 +35,15 @@ const RegionTopImage: React.FC<IProp> = ({ region, onSelectRegion }) => {
                         <h1 className="regionTopImage__title">{l(title)}</h1>
                         <p className="regionTopImage__desc">{l(description)}</p>
                     </div>
+                    {selectedGlobalRegion && (
+                        <div className="locationalGuide__regionSelectorSectorContainer">
+                            <SelectRegionSector
+                                onSelectRegion={selectGlobalRegion}
+                                region={selectedGlobalRegion}
+                                items={localGuideData}
+                            />
+                        </div>
+                    )}
                 </div>
             )}
         </>

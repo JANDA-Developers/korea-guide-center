@@ -1,9 +1,7 @@
 import { WindowSize } from "@janda-com/front";
 import React from "react";
 import { BookLayout } from "../component/layout/BookLayout";
-import { SelectRegionSector } from "../component/SelectRegionSector/SelectRegionSector";
 import { useGlobalKoreaMap, useKoreaMap } from "../hook/useKoreaMap";
-import { localGuideData } from "../component/LocalGuideAndPrivateTour/LocalGuideSlider";
 import RegionTopImage from "../component/RegionTopImage/RegionTopImage";
 import RegionGuides from "../component/RegionGuides/RegionGuides";
 
@@ -32,15 +30,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         onSelectRegion={selectGlobalRegion}
                         region={selectedGlobalRegion}
                     />
-                    {selectedGlobalRegion && (
-                        <div className="locationalGuide__regionSelectorSectorContainer">
-                            <SelectRegionSector
-                                onSelectRegion={selectGlobalRegion}
-                                region={selectedGlobalRegion}
-                                items={localGuideData}
-                            />
-                        </div>
-                    )}
                 </div>
                 <RegionGuides
                     key={selectedGlobalRegion + "HyperProductViewCardS"}
