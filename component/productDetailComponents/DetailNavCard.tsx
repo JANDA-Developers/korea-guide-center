@@ -214,7 +214,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                                 size="tiny"
                                 mode="flat"
                             >
-                                {s("talkWith")}
+                                {s("talkWith2")}
                             </JDbutton>
                         </div>
                     </Flex>

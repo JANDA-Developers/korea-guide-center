@@ -35,20 +35,9 @@ export const KPOPCulture: React.FC<IProp> = () => {
                 <KPOPBestProductViewsLineHeader />
                 <ProductViewCardsWithApi
                     {...{
-                        ...NewsProductList,
+                        ...BestProductList,
                         queryParam: {
-                            ...NewsProductList.queryParam,
-                            ...commonFilter.queryParam,
-                        },
-                    }}
-                />
-                <Mb mb="largest" />
-                <KPOPNewestProductViewsLineHeader />
-                <ProductViewCardsWithApi
-                    {...{
-                        ...NewsProductList,
-                        queryParam: {
-                            ...NewsProductList.queryParam,
+                            ...BestProductList.queryParam,
                             ...commonFilter.queryParam,
                         },
                     }}
