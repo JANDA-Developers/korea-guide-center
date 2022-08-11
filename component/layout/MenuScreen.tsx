@@ -165,7 +165,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
     };
 
     const onClickItems = (city: string) => {
-        router.push(`cities/search?title=${city}`);
+        router.push(`/cities/search?title=${city}`);
         setMenuOpen(false);
     };
 
