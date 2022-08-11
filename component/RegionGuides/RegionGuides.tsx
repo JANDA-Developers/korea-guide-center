@@ -10,7 +10,6 @@ import { Locales, MapRegionKr } from "../../types/const";
 import { mapRegion } from "../koreaMap/KoreaData";
 import RegionGuidesBody from "./RegionGuidesBody";
 import RegionGuidesHeader from "./RegionGuidesHeader";
-
 interface IHyperProductGroupProp {
     hyper: string;
 }
