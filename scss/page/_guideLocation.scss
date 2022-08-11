@@ -178,6 +178,8 @@
     }
 }
 
+
+
 .regionTopImage {
     &__container {
         position: relative;
@@ -213,6 +215,16 @@
 }
 
 .regionGuides {
+    &__guidesContainer {
+        margin: 0 auto;
+        max-width: 1404px;
+        padding: 0 2.4rem;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 90%;
+    }
+
     &__container {
         margin-top: 10rem;
     }

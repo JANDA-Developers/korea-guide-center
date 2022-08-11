@@ -39,7 +39,7 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
 
     return (
         <div className="regionGuides__container">
-            <JDcontainer size={containerSize}>
+            <div className="regionGuides__guidesContainer">
                 {selectedGlobalRegion && (
                     <>
                         <RegionGuidesHeader hyper={hyper} />
@@ -66,7 +66,7 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
                         </div>
                     </>
                 )}
-            </JDcontainer>
+            </div>
         </div>
     );
 };
