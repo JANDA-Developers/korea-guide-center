@@ -70,8 +70,8 @@
     }
 
     &__regionSelectButtonContainer {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         width: 100%;
         padding: 5px 0px;
         position: absolute;
