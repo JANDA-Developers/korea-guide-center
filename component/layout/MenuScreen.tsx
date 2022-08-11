@@ -134,11 +134,6 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
     const searchHook = useInput("");
     const toSearchPage = () => {
         const to = searchPageQueryGenerate({ title: searchHook.value });
-        {
-            console.log("asdf");
-            console.log({ searchHook });
-            alert("123123");
-        }
         location.href = to;
         // router.push(to);
     };
