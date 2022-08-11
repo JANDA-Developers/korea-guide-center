@@ -128,7 +128,11 @@ export const BookHeader: React.FC<IProp> = () => {
 
     return (
         <div className="bookHeader">
-            <MenuScreen onClickMenu={onClickMenu} menuOpen={menuOpen} />
+            <MenuScreen
+                onClickMenu={onClickMenu}
+                menuOpen={menuOpen}
+                setMenuOpen={setMenuOpen}
+            />
             <div>
                 {/* 모바일 뷰 사이드 바 */}
                 <MobileBookerSideBar

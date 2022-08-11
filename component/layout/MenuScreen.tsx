@@ -7,6 +7,7 @@ import { searchPageQueryGenerate } from "../../pages/product/search";
 import { useState, useContext, SyntheticEvent } from "react";
 import { AppContext } from "../../context/context";
 import { mapRegion, regionableData } from "../koreaMap/KoreaData";
+import router from "next/router";
 
 const Container = styled(motion.div)`
     display: flex;
@@ -122,9 +123,10 @@ const menu = {
 interface IMenuScreenProps {
     menuOpen?: boolean;
     onClickMenu?: () => void;
+    setMenuOpen?: any;
 }
 
-function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
+function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
     const [view, setView] = useState({
         cities: true,
         partnerNetwork: false,
@@ -160,6 +162,11 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                 searchBar: false,
             });
         }
+    };
+
+    const onClickItems = (city: string) => {
+        router.push(`cities/search?title=${city}`);
+        setMenuOpen(false);
     };
 
     return (
@@ -226,21 +233,36 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                         {view.cities ? (
                             <CityContainer>
                                 <CitySet>
-                                    <City background="img/cities/seoul.jpg">
+                                    <City
+                                        background="img/cities/seoul.jpg"
+                                        onClick={() => {
+                                            onClickItems("서울");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.seoul as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/busan.jpg">
+                                    <City
+                                        background="img/cities/busan.jpg"
+                                        onClick={() => {
+                                            onClickItems("부산");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.busan as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/daegu.jpg">
+                                    <City
+                                        background="img/cities/daegu.jpg"
+                                        onClick={() => {
+                                            onClickItems("대구");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.daegu as keyof typeof regionableData
@@ -249,21 +271,36 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     </City>
                                 </CitySet>
                                 <CitySet>
-                                    <City background="img/cities/incheon.jpg">
+                                    <City
+                                        background="img/cities/incheon.jpg"
+                                        onClick={() => {
+                                            onClickItems("인천");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.Incheon as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/gwangju.jpg">
+                                    <City
+                                        background="img/cities/gwangju.jpg"
+                                        onClick={() => {
+                                            onClickItems("광주");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.Gwangju as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/daejeon.jpg">
+                                    <City
+                                        background="img/cities/daejeon.jpg"
+                                        onClick={() => {
+                                            onClickItems("대전");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.Daejeon as keyof typeof regionableData
@@ -272,21 +309,36 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     </City>
                                 </CitySet>
                                 <CitySet>
-                                    <City background="img/cities/ulsan.jpg">
+                                    <City
+                                        background="img/cities/ulsan.jpg"
+                                        onClick={() => {
+                                            onClickItems("울산");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.Ulsan as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/sejong.jpg">
+                                    <City
+                                        background="img/cities/sejong.jpg"
+                                        onClick={() => {
+                                            onClickItems("세종");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.Sejong as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/jeju.jpg">
+                                    <City
+                                        background="img/cities/jeju.jpg"
+                                        onClick={() => {
+                                            onClickItems("제주");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.Jeju as keyof typeof regionableData
@@ -295,21 +347,36 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     </City>
                                 </CitySet>
                                 <CitySet>
-                                    <City background="img/cities/gyeongnam.jpg">
+                                    <City
+                                        background="img/cities/gyeongnam.jpg"
+                                        onClick={() => {
+                                            onClickItems("경남");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.SouthGyeongsang as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/gyeongbuk.jpg">
+                                    <City
+                                        background="img/cities/gyeongbuk.jpg"
+                                        onClick={() => {
+                                            onClickItems("경북");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.NorthGyeongsang as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/jeonnam.jpg">
+                                    <City
+                                        background="img/cities/jeonnam.jpg"
+                                        onClick={() => {
+                                            onClickItems("전남");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.SouthJeolla as keyof typeof regionableData
@@ -318,21 +385,36 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     </City>
                                 </CitySet>
                                 <CitySet>
-                                    <City background="img/cities/jeonbuk.jpg">
+                                    <City
+                                        background="img/cities/jeonbuk.jpg"
+                                        onClick={() => {
+                                            onClickItems("전북");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.NorthJeolla as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/chungnam.jpg">
+                                    <City
+                                        background="img/cities/chungnam.jpg"
+                                        onClick={() => {
+                                            onClickItems("충남");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.SouthChungcheong as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/chungbuk.jpg">
+                                    <City
+                                        background="img/cities/chungbuk.jpg"
+                                        onClick={() => {
+                                            onClickItems("충북");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.NorthChungcheong as keyof typeof regionableData
@@ -341,14 +423,24 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     </City>
                                 </CitySet>
                                 <CitySet>
-                                    <City background="img/cities/gangwon.jpg">
+                                    <City
+                                        background="img/cities/gangwon.jpg"
+                                        onClick={() => {
+                                            onClickItems("강원");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.Gangwon as keyof typeof regionableData
                                             ].title
                                         )}
                                     </City>
-                                    <City background="img/cities/gyeonggi.jpg">
+                                    <City
+                                        background="img/cities/gyeonggi.jpg"
+                                        onClick={() => {
+                                            onClickItems("경기");
+                                        }}
+                                    >
                                         {l(
                                             regionableData[
                                                 mapRegion.Gyeonggi as keyof typeof regionableData
