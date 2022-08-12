@@ -2,7 +2,6 @@ import {
     Flex,
     JDavatar,
     JDbutton,
-    Mr,
     useDropDown,
     useInput,
     JDalign,
@@ -16,8 +15,6 @@ import ProfileModal, { Tservice } from "../profile/ProfileModal";
 import { DEFAULT_PROFILE_IMG } from "../../types/const";
 import { useRouter } from "next/router";
 import { Paths } from "../../pages/index[depre]";
-import { whenEnter } from "../../utils/whenEnter";
-import { searchPageQueryGenerate } from "../../pages/product/search";
 import { completeMsg } from "../../utils/onCompletedMessage";
 import { GuidePath } from "../../page/GuideRouter";
 import { LanguageSelecter } from "../langSelecter/LangSelecter";
@@ -25,11 +22,10 @@ import { BookerHeaderMobile } from "./components/BookerHeaderMobile";
 import { MobileBookerSideBar } from "./components/MobileBookerSideBar";
 import { useState } from "react";
 import Noti from "../notification/Noti";
-import { AutoCompeletePreventer } from "../AutoCompeltePreventer/AutoCompletePreventer";
 import { BookHeaderNavBtns } from "./components/BookHeaderNavBtns";
 import styled from "styled-components";
 import { CitySelecter } from "../citySelector/citySelecter";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import MenuScreen from "./MenuScreen";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "../../recoil/atoms";
@@ -103,18 +99,6 @@ export const BookHeader: React.FC<IProp> = () => {
         },
     ].filter((s) => !s.skip);
 
-    const toSearchPage = () => {
-        const to = searchPageQueryGenerate({ title: searchHook.value });
-        location.href = to;
-        // router.push(to);
-    };
-
-    const handleToCustomTour = () => {
-        loginAnd(() => {
-            router.push(Paths.offer);
-        });
-    };
-
     const menuVariants = {
         hover: {
             fill: "#D0242B",
@@ -128,11 +112,7 @@ export const BookHeader: React.FC<IProp> = () => {
 
     return (
         <div className="bookHeader">
-            <MenuScreen
-                onClickMenu={onClickMenu}
-                menuOpen={menuOpen}
-                setMenuOpen={setMenuOpen}
-            />
+            <MenuScreen onClickMenu={onClickMenu} menuOpen={menuOpen} />
             <div>
                 {/* 모바일 뷰 사이드 바 */}
                 <MobileBookerSideBar

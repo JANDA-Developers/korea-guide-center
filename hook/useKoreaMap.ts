@@ -30,8 +30,7 @@ export const useCitiesKoreaMap = () => {
     const [selectedCitiesRegion, setSelectedCitiesRegion] =
         useRecoilState(citiesMapState);
 
-    const onClick = (mapRegion: mapRegion, setMenuOpen: any) => {
-        setMenuOpen(false);
+    const onClick = (mapRegion: mapRegion) => {
         setSelectedCitiesRegion(mapRegion);
     };
 

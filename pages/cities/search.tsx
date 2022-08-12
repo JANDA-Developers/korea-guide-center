@@ -39,13 +39,57 @@ import { ScrollBox } from "../../component/scrollBox/ScrollBox";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
 import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
-import { regionableData } from "../../component/koreaMap/KoreaData";
+import {
+    regionableData,
+    mapRegionArr,
+} from "../../component/koreaMap/KoreaData";
+import { useRecoilState } from "recoil";
+import { menuOpenState } from "../../recoil/atoms";
 
 interface ISearchPageQuery {
     title?: string;
     filter?: _ProductFilter;
     sort?: _ProductSort[];
 }
+
+const translateKoreanToEnglish = (title: string) => {
+    // 하드코딩이라 죄송합니다 😭
+    if (title === "서울") {
+        return mapRegionArr[0];
+    } else if (title === "부산") {
+        return mapRegionArr[1];
+    } else if (title === "대구") {
+        return mapRegionArr[2];
+    } else if (title === "인천") {
+        return mapRegionArr[3];
+    } else if (title === "광주") {
+        return mapRegionArr[4];
+    } else if (title === "대전") {
+        return mapRegionArr[5];
+    } else if (title === "울산") {
+        return mapRegionArr[6];
+    } else if (title === "세종") {
+        return mapRegionArr[7];
+    } else if (title === "제주") {
+        return mapRegionArr[8];
+    } else if (title === "경남") {
+        return mapRegionArr[9];
+    } else if (title === "경북") {
+        return mapRegionArr[10];
+    } else if (title === "전남") {
+        return mapRegionArr[11];
+    } else if (title === "전북") {
+        return mapRegionArr[12];
+    } else if (title === "충남") {
+        return mapRegionArr[13];
+    } else if (title === "충북") {
+        return mapRegionArr[14];
+    } else if (title === "강원") {
+        return mapRegionArr[15];
+    } else if (title === "경기") {
+        return mapRegionArr[16];
+    }
+};
 
 export const getSearchPageQuery = () => {
     let { filter, sort, ...others } = getAllFromUrl() as ISearchPageQuery;
@@ -117,11 +161,14 @@ export const Search: React.FC<IProp> = () => {
     console.log(urlSearchParam);
     const { title } = urlSearchParam;
     const { s, catMap, l } = useContext(AppContext);
+    const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
 
     const { filter: _filter, sort: _sort } = generateFilter(urlSearchParam);
 
     const citiesKoreaHook = useCitiesKoreaMap();
-    const { selectedCitiesRegion } = citiesKoreaHook;
+
+    const { selectedCitiesRegion, onClick: selectCitiesRegion } =
+        citiesKoreaHook;
 
     const data = regionableData[selectedCitiesRegion];
 
@@ -152,7 +199,7 @@ export const Search: React.FC<IProp> = () => {
         networkStatus,
     } = productListHook;
 
-    console.log(filter);
+    console.log(title);
 
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
@@ -167,6 +214,8 @@ export const Search: React.FC<IProp> = () => {
             productListHook.setFilter({
                 ...filter,
             });
+            setMenuOpen(false);
+            selectCitiesRegion(translateKoreanToEnglish(title!));
         }
     }, [title]);
 
@@ -182,10 +231,10 @@ export const Search: React.FC<IProp> = () => {
                         }}
                     >
                         <h1 className="regionTopImage__title">
-                            {l(data.title)}
+                            {data && l(data.title)}
                         </h1>
                         <p className="regionTopImage__desc">
-                            {l(data.description)}
+                            {data && l(data.description)}
                         </p>
                     </div>
                 </div>

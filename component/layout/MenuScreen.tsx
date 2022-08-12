@@ -127,7 +127,7 @@ interface IMenuScreenProps {
     setMenuOpen?: any;
 }
 
-function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
+function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
     const router = useRouter();
     const [view, setView] = useState({
         cities: true,
@@ -235,13 +235,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/seoul.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[0],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=서울`
-                                            );
+                                            location.href = `/cities/search?title=서울`;
                                         }}
                                     >
                                         {l(
@@ -253,13 +247,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/busan.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[1],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=부산`
-                                            );
+                                            location.href = `/cities/search?title=부산`;
                                         }}
                                     >
                                         {l(
@@ -271,13 +259,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/daegu.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[2],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=대구`
-                                            );
+                                            location.href = `/cities/search?title=대구`;
                                         }}
                                     >
                                         {l(
@@ -291,13 +273,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Incheon.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[3],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=인천`
-                                            );
+                                            location.href = `/cities/search?title=인천`;
                                         }}
                                     >
                                         {l(
@@ -309,13 +285,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Gwangju.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[4],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=광주`
-                                            );
+                                            location.href = `/cities/search?title=광주`;
                                         }}
                                     >
                                         {l(
@@ -327,13 +297,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/daejeon.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[5],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=대전`
-                                            );
+                                            location.href = `/cities/search?title=대전`;
                                         }}
                                     >
                                         {l(
@@ -347,13 +311,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Ulsan.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[6],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=울산`
-                                            );
+                                            location.href = `/cities/search?title=울산`;
                                         }}
                                     >
                                         {l(
@@ -365,13 +323,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Sejong.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[7],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=세종`
-                                            );
+                                            location.href = `/cities/search?title=세종`;
                                         }}
                                     >
                                         {l(
@@ -383,13 +335,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Jeju.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[8],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=제주`
-                                            );
+                                            location.href = `/cities/search?title=제주`;
                                         }}
                                     >
                                         {l(
@@ -403,13 +349,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/SouthGyeongsang.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[9],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=경남`
-                                            );
+                                            location.href = `/cities/search?title=경남`;
                                         }}
                                     >
                                         {l(
@@ -421,13 +361,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/NorthGyeongsang.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[10],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=경북`
-                                            );
+                                            location.href = `/cities/search?title=경북`;
                                         }}
                                     >
                                         {l(
@@ -439,13 +373,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/SouthJeolla.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[11],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=전남`
-                                            );
+                                            location.href = `/cities/search?title=전남`;
                                         }}
                                     >
                                         {l(
@@ -459,13 +387,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/NorthJeolla.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[12],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=전북`
-                                            );
+                                            location.href = `/cities/search?title=전북`;
                                         }}
                                     >
                                         {l(
@@ -477,13 +399,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/SouthChungcheong.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[13],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=충남`
-                                            );
+                                            location.href = `/cities/search?title=충남`;
                                         }}
                                     >
                                         {l(
@@ -495,13 +411,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/NorthChungcheong.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[14],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=충북`
-                                            );
+                                            location.href = `/cities/search?title=충북`;
                                         }}
                                     >
                                         {l(
@@ -515,13 +425,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Gangwon.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[15],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=강원`
-                                            );
+                                            location.href = `/cities/search?title=강원`;
                                         }}
                                     >
                                         {l(
@@ -533,13 +437,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Gyeonggi.jpg"
                                         onClick={() => {
-                                            selectCitiesRegion(
-                                                mapRegionArr[16],
-                                                setMenuOpen
-                                            );
-                                            router.push(
-                                                `/cities/search?title=경기`
-                                            );
+                                            location.href = `/cities/search?title=경기`;
                                         }}
                                     >
                                         {l(
