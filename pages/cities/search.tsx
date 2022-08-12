@@ -7,7 +7,6 @@ import {
     JDbutton,
     JDcontainer,
     JDhorizen,
-    JDswitch,
     JDtypho,
     Mb,
     Mr,
@@ -16,11 +15,10 @@ import {
     WindowSize,
 } from "@janda-com/front";
 import { BookLayout } from "../../component/layout/BookLayout";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { Paths } from "../index[depre]";
-import { Empty } from "../../atom/Empty";
 import { GrandProductSearchFilter } from "../../component/grandProductSearchFilter/GrandProductSearchFilter";
 import Pagination from "../../component/pagination/Pagination";
 import {
@@ -48,21 +46,11 @@ import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
 import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
 import { localGuideData } from "../../component/LocalGuideAndPrivateTour/LocalGuideSlider";
-import {
-    mapRegion,
-    mapRegionArr,
-    regionableData,
-} from "../../component/koreaMap/KoreaData";
+import { regionableData } from "../../component/koreaMap/KoreaData";
 interface ISearchPageQuery {
     title?: string;
     filter?: _ProductFilter;
     sort?: _ProductSort[];
-}
-
-interface IRegionableaData {
-    title: Omit<Flangs, "__typename">;
-    description: Omit<Flangs, "__typename">;
-    photos: string[];
 }
 
 export const getSearchPageQuery = () => {
@@ -130,7 +118,6 @@ export const searchPageQueryGenerate = (query: ISearchPageQuery) => {
 
 export const Search: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
-    const router = useRouter();
     const [detailSearch, setDetailSearch] = useState<boolean>(true);
     const urlSearchParam = getSearchPageQuery();
     const { title } = urlSearchParam;
@@ -142,8 +129,6 @@ export const Search: React.FC<IProp> = () => {
     const { selectedCitiesRegion } = citiesKoreaHook;
 
     const data = regionableData[selectedCitiesRegion];
-
-    console.log(selectedCitiesRegion);
 
     const productListHook = useProductList(
         {
@@ -164,7 +149,6 @@ export const Search: React.FC<IProp> = () => {
     const {
         sort,
         setSort,
-        page,
         pageInfo,
         paginatorHook,
         items: products,
