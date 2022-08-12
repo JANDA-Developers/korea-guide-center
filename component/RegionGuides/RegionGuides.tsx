@@ -1,4 +1,3 @@
-import { JDcontainer, WindowSize } from "@janda-com/front";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { Empty } from "../../atom/Empty";
@@ -6,8 +5,6 @@ import { AppContext } from "../../context/context";
 import { useGlobalKoreaMap } from "../../hook/useKoreaMap";
 import { useUserList } from "../../hook/useUser";
 import { LANGUAGES, UserRole } from "../../types/api";
-import { Locales, MapRegionKr } from "../../types/const";
-import { mapRegion } from "../koreaMap/KoreaData";
 import RegionGuidesBody from "./RegionGuidesBody";
 import RegionGuidesHeader from "./RegionGuidesHeader";
 interface IHyperProductGroupProp {
@@ -16,8 +13,7 @@ interface IHyperProductGroupProp {
 
 const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
     const globalKoreaHook = useGlobalKoreaMap();
-    const { selectedGlobalRegion, onClick: selectGlobalRegion } =
-        globalKoreaHook;
+    const { selectedGlobalRegion } = globalKoreaHook;
 
     const { locale } = useRouter();
     const { s } = useContext(AppContext);
@@ -31,10 +27,6 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
         },
         random: true,
     });
-
-    const isKr = locale === Locales.ko;
-
-    const containerSize = WindowSize.lg;
 
     return (
         <div className="regionGuides__container">
