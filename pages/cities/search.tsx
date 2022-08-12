@@ -44,17 +44,15 @@ import {
     _ProductSort,
 } from "../../types/api";
 import { ScrollBox } from "../../component/scrollBox/ScrollBox";
-import { InfoBox } from "../../component/infoBox/InfoBox";
-import { LinkText } from "../../component/link/Link";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
-import RegionTopImage from "../../component/RegionTopImage/RegionTopImage";
-import { SelectRegionSector } from "../../component/SelectRegionSector/SelectRegionSector";
-import { useGlobalKoreaMap } from "../../hook/useKoreaMap";
+import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
 import { localGuideData } from "../../component/LocalGuideAndPrivateTour/LocalGuideSlider";
-import { regionableData } from "../../component/koreaMap/KoreaData";
-import RegionMap from "./RegionMap";
-
+import {
+    mapRegion,
+    mapRegionArr,
+    regionableData,
+} from "../../component/koreaMap/KoreaData";
 interface ISearchPageQuery {
     title?: string;
     filter?: _ProductFilter;
@@ -65,27 +63,6 @@ interface IRegionableaData {
     title: Omit<Flangs, "__typename">;
     description: Omit<Flangs, "__typename">;
     photos: string[];
-}
-
-export enum mapRegion {
-    // "dmz" = "dmz",
-    "seoul" = "seoul",
-    "busan" = "busan",
-    "daegu" = "daegu",
-    "Incheon" = "Incheon",
-    Gwangju = "Gwangju",
-    Daejeon = "Daejeon",
-    Ulsan = "Ulsan",
-    Sejong = "Sejong",
-    Jeju = "Jeju",
-    SouthGyeongsang = "SouthGyeongsang",
-    NorthGyeongsang = "NorthGyeongsang",
-    SouthJeolla = "SouthJeolla",
-    NorthJeolla = "NorthJeolla",
-    SouthChungcheong = "SouthChungcheong",
-    NorthChungcheong = "NorthChungcheong",
-    Gangwon = "Gangwon",
-    Gyeonggi = "Gyeonggi",
 }
 
 export const getSearchPageQuery = () => {
@@ -161,17 +138,12 @@ export const Search: React.FC<IProp> = () => {
 
     const { filter: _filter, sort: _sort } = generateFilter(urlSearchParam);
 
-    const globalKoreaHook = useGlobalKoreaMap();
-    const { selectedGlobalRegion, onClick: selectGlobalRegion } =
-        globalKoreaHook;
+    const citiesKoreaHook = useCitiesKoreaMap();
+    const { selectedCitiesRegion } = citiesKoreaHook;
 
-    const region: Record<mapRegion, IRegionableaData> = RegionMap(title);
-    const imgUrl = `/img/regionBg/${region}.jpg`;
-    console.log("여기닷!!!!!! 리젼!");
-    console.log(region);
-    const data = regionableData[region];
+    const data = regionableData[selectedCitiesRegion];
 
-    const { title: title1, description } = data;
+    console.log(selectedCitiesRegion);
 
     const productListHook = useProductList(
         {
@@ -225,16 +197,17 @@ export const Search: React.FC<IProp> = () => {
                     <div
                         className="regionTopImage__titleAndDescContainer"
                         style={{
-                            backgroundImage: `url(${imgUrl})`,
+                            backgroundImage: `url(/img/regionBg/${selectedCitiesRegion}.jpg)`,
                         }}
                     >
-                        <h1 className="regionTopImage__title">{l(title1)}</h1>
-                        <p className="regionTopImage__desc">{l(description)}</p>
+                        <h1 className="regionTopImage__title">
+                            {l(data.title)}
+                        </h1>
+                        <p className="regionTopImage__desc">
+                            {l(data.description)}
+                        </p>
                     </div>
                 </div>
-
-                {console.log("여기야~~")}
-                {console.log("selectedGlobalRegion : " + selectedGlobalRegion)}
             </div>
             <JDcontainer
                 className="search"

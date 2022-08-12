@@ -15,7 +15,6 @@ const RegionTopImage: React.FC<IProp> = ({ region, onSelectRegion }) => {
     const globalKoreaHook = useGlobalKoreaMap();
     const { selectedGlobalRegion, onClick: selectGlobalRegion } =
         globalKoreaHook;
-    const [viewMoreText, setViewMoreText] = useState(false);
     const { l } = useContext(AppContext);
     const data = regionableData[region];
     const { title, description, photos } = data;
