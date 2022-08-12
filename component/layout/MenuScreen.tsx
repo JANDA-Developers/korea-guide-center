@@ -272,7 +272,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/incheon.jpg"
+                                        background="img/cities/Incheon.jpg"
                                         onClick={() => {
                                             onClickItems("인천");
                                         }}
@@ -284,7 +284,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/gwangju.jpg"
+                                        background="img/cities/Gwangju.jpg"
                                         onClick={() => {
                                             onClickItems("광주");
                                         }}
@@ -310,7 +310,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/ulsan.jpg"
+                                        background="img/cities/Ulsan.jpg"
                                         onClick={() => {
                                             onClickItems("울산");
                                         }}
@@ -322,7 +322,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/sejong.jpg"
+                                        background="img/cities/Sejong.jpg"
                                         onClick={() => {
                                             onClickItems("세종");
                                         }}
@@ -334,7 +334,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/jeju.jpg"
+                                        background="img/cities/Jeju.jpg"
                                         onClick={() => {
                                             onClickItems("제주");
                                         }}
@@ -348,7 +348,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/gyeongnam.jpg"
+                                        background="img/cities/SouthGyeongsang.jpg"
                                         onClick={() => {
                                             onClickItems("경남");
                                         }}
@@ -360,7 +360,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/gyeongbuk.jpg"
+                                        background="img/cities/NorthGyeongsang.jpg"
                                         onClick={() => {
                                             onClickItems("경북");
                                         }}
@@ -372,7 +372,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/jeonnam.jpg"
+                                        background="img/cities/SouthJeolla.jpg"
                                         onClick={() => {
                                             onClickItems("전남");
                                         }}
@@ -386,7 +386,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/jeonbuk.jpg"
+                                        background="img/cities/NorthJeolla.jpg"
                                         onClick={() => {
                                             onClickItems("전북");
                                         }}
@@ -398,7 +398,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/chungnam.jpg"
+                                        background="img/cities/SouthChungcheong.jpg"
                                         onClick={() => {
                                             onClickItems("충남");
                                         }}
@@ -410,7 +410,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/chungbuk.jpg"
+                                        background="img/cities/NorthChungcheong.jpg"
                                         onClick={() => {
                                             onClickItems("충북");
                                         }}
@@ -424,7 +424,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/gangwon.jpg"
+                                        background="img/cities/Gangwon.jpg"
                                         onClick={() => {
                                             onClickItems("강원");
                                         }}
@@ -436,7 +436,7 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/gyeonggi.jpg"
+                                        background="img/cities/Gyeonggi.jpg"
                                         onClick={() => {
                                             onClickItems("경기");
                                         }}
