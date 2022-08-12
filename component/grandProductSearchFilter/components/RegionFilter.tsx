@@ -27,8 +27,8 @@ export const RegionFilter: React.FC<IProp> = ({ filter, setFilter }) => {
                 onChange={handleSet(undefined)}
                 checked={!region__id__eq}
             />
-            {regions.map((region) => (
-                <JDalign mb>
+            {regions.map((region, index) => (
+                <JDalign mb key={index}>
                     <JDcheckBox
                         key={region.value + "filterBox"}
                         label={region.label}

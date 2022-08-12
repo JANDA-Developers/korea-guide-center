@@ -48,8 +48,9 @@ export const CategoryFilter: React.FC<IProp> = ({
             >
                 {s("seeAll")}
             </JDbutton>
-            {options.map((op) => (
+            {options.map((op, index) => (
                 <JDbutton
+                    key={index}
                     className="categoryFilter__btn"
                     br="no"
                     mode="flat"

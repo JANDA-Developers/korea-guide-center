@@ -40,6 +40,7 @@ import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
 import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
 import { regionableData } from "../../component/koreaMap/KoreaData";
+
 interface ISearchPageQuery {
     title?: string;
     filter?: _ProductFilter;
@@ -113,6 +114,7 @@ export const Search: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
     const [detailSearch, setDetailSearch] = useState<boolean>(true);
     const urlSearchParam = getSearchPageQuery();
+    console.log(urlSearchParam);
     const { title } = urlSearchParam;
     const { s, catMap, l } = useContext(AppContext);
 
@@ -149,6 +151,8 @@ export const Search: React.FC<IProp> = () => {
         filter,
         networkStatus,
     } = productListHook;
+
+    console.log(filter);
 
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
