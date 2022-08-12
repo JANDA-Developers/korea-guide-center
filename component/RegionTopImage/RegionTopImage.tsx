@@ -8,16 +8,15 @@ import { localGuideData } from "../LocalGuideAndPrivateTour/LocalGuideSlider";
 
 interface IProp {
     region: mapRegion;
-    onSelectRegion: (region: mapRegion) => void;
 }
 
-const RegionTopImage: React.FC<IProp> = ({ region, onSelectRegion }) => {
+const RegionTopImage: React.FC<IProp> = ({ region }) => {
     const globalKoreaHook = useGlobalKoreaMap();
     const { selectedGlobalRegion, onClick: selectGlobalRegion } =
         globalKoreaHook;
     const { l } = useContext(AppContext);
     const data = regionableData[region];
-    const { title, description, photos } = data;
+    const { title, description } = data;
 
     const imgUrl = `/img/regionBg/${selectedGlobalRegion}.jpg`;
 
