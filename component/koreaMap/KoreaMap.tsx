@@ -45,7 +45,7 @@ export const KoreaMap: React.FC<IProp> = ({ onClick, selectedRegiion }) => {
 
     return (
         <div className="KoreaMpWrap" style={{ position: "relative" }}>
-            <div className="KoreaMpWrap__dmzWrap">
+            {/* <div className="KoreaMpWrap__dmzWrap">
                 <img
                     className="KoreaMpWrap__gray_dmzFlag"
                     src="/img/map/gray_dmzFlag.png"
@@ -65,7 +65,7 @@ export const KoreaMap: React.FC<IProp> = ({ onClick, selectedRegiion }) => {
                         id="KR-DMZ"
                     />
                 </svg>
-            </div>
+            </div> */}
 
             <svg
                 className={`KoreaMap ${
@@ -230,11 +230,11 @@ const Flags: Record<
         xlinkHref: string;
     }
 > = {
-    dmz: {
-        x: 110,
-        y: 40,
-        xlinkHref: "/img/map/dmzFlag.png",
-    },
+    // dmz: {
+    //     x: 110,
+    //     y: 40,
+    //     xlinkHref: "/img/map/dmzFlag.png",
+    // },
     seoul: {
         x: 140,
         y: 50,
