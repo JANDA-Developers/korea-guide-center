@@ -3,7 +3,6 @@ import React from "react";
 import LocalGuideSlider from "./LocalGuideSlider";
 
 const LocalGuideAndPrivateTour = () => {
-    const containerSize = WindowSize.full;
     return (
         <div
             style={{

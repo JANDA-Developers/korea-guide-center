@@ -64,7 +64,7 @@ const RegionSlider = () => {
                     .title
             ),
             products: 0,
-            imageUrl: "img/cities/daejeon.jpg",
+            imageUrl: "img/cities/Daejeon.jpg",
         },
         {
             title: l(
