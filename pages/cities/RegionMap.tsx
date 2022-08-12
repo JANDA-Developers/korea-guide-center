@@ -41,14 +41,15 @@ function RegionMap(
     region.set("울산", "Ulsan");
     region.set("세종", "Sejong");
     region.set("제주", "Jeju");
-    region.set("경상남도", "SouthGyeongsang");
-    region.set("경상북도", "NorthGyeongsang");
-    region.set("전라남도", "SouthJeolla");
-    region.set("전라북도", "NorthJeolla");
-    region.set("충청남도", "SouthChungcheong");
-    region.set("충청북도", "NorthChungcheong");
-    region.set("강원도", "Gangwon");
-    region.set("경기도", "Gyeonggi");
+    region.set("경남", "SouthGyeongsang");
+    region.set("경북", "NorthGyeongsang");
+    region.set("전남", "SouthJeolla");
+    region.set("전북", "NorthJeolla");
+    region.set("충남", "SouthChungcheong");
+    region.set("충북", "NorthChungcheong");
+    region.set("강원", "Gangwon");
+    region.set("경기", "Gyeonggi");
+    region.set("대구", "daegu");
 
     // 영어는 그냥 사용
 
