@@ -1,5 +1,4 @@
 import {
-    Bold,
     Flex,
     getAllFromUrl,
     isEmpty,
@@ -35,17 +34,11 @@ import {
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
 import { updateURLParameters, UrlParam } from "../../utils/getUpdateUrlParam";
-import {
-    Flangs,
-    ProductStatus,
-    _ProductFilter,
-    _ProductSort,
-} from "../../types/api";
+import { ProductStatus, _ProductFilter, _ProductSort } from "../../types/api";
 import { ScrollBox } from "../../component/scrollBox/ScrollBox";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
 import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
-import { localGuideData } from "../../component/LocalGuideAndPrivateTour/LocalGuideSlider";
 import { regionableData } from "../../component/koreaMap/KoreaData";
 interface ISearchPageQuery {
     title?: string;

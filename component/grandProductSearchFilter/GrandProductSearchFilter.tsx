@@ -5,7 +5,6 @@ import {
     JDcard,
     JDhorizen,
     JDtypho,
-    Language,
     useInput,
     useModal,
     InputText,
@@ -41,6 +40,8 @@ export const GrandProductSearchFilter: React.FC<IProp> = ({
     const modalHook = useModal<{ type: TFilterType }>();
     const mobileType = modalHook.info?.type;
     const searchHook = useInput("");
+
+    console.log(filter);
 
     const handleOpenMobile = (type: TFilterType) => () => {
         modalHook.openModal({ type });
