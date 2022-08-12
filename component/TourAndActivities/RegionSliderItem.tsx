@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 export interface IRegionSliderItem {
     title: string;
     products?: number; // 혹시 몰라서 만들어둠
