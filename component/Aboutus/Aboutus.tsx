@@ -13,7 +13,7 @@ const Aboutus = () => {
                     >
                         About
                     </span>{" "}
-                    us
+                    KoreaGuide
                 </h1>
             </div>
             <div className="aboutUs__imageContainer">

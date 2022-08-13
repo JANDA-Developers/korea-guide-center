@@ -2,7 +2,6 @@ import { Flex, JDcontainer, JDtypho, Mb, WindowSize } from "@janda-com/front";
 import { useRouter } from "next/router";
 import React from "react";
 import { useContext } from "react";
-import { Banner } from "../component/banner/Banner";
 import { GuideMovieCardsWithApi } from "../component/guideMovieClicp/GuideMovieClipList";
 import { KoreaMap } from "../component/koreaMap/KoreaMap";
 import { BookLayout } from "../component/layout/BookLayout";
@@ -20,7 +19,6 @@ import {
 import { RegionDescriptionSecotr } from "../component/RegionDescriptionSector/RegionDescriptionSector";
 import { AppContext } from "../context/context";
 import { useKoreaMap } from "../hook/useKoreaMap";
-import { FileTagManager } from "../utils/tagManager";
 
 interface IProp {}
 
@@ -71,17 +69,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         />
                     )}
                     <Mb mb="largest" />
-                    {/**<Banner
-                        bannerImages={
-                            homepage?.bannerImages?.filter((banner) =>
-                                FileTagManager.getTagByTagNameAndValue(
-                                    banner?.tags || [],
-                                    "lang",
-                                    locale || "ko"
-                                )
-                            ) || []
-                        }
-                    /> */}
 
                     <GuideMovieCardsWithApi />
                     <Mb mb="largest" />
