@@ -5,7 +5,7 @@ const Aboutus = () => {
     return (
         <div className="aboutUs__Container">
             <div className="aboutUs__top">
-                <h1 style={{ textAlign: "center", fontWeight: "bold" }}>
+                <h5 style={{ textAlign: "center", fontWeight: "bold" }}>
                     <span
                         style={{
                             color: "#d0242b",
@@ -14,7 +14,7 @@ const Aboutus = () => {
                         About
                     </span>{" "}
                     KoreaGuide
-                </h1>
+                </h5>
             </div>
             <div className="aboutUs__imageContainer">
                 <div
