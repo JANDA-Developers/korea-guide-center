@@ -71,7 +71,6 @@ const TourLayout = () => {
             <div className="tour">
                 <div className="tour__container">
                     <DragImageSlider images={images} />
-                    {/* <div className="tour__filter"></div> */}
                     <DragTextSlider texts={texts} />
                     <div className="tour__searchBar">
                         <div className="tour__searchBarInnerBox">

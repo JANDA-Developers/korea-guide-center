@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import SimpleImageSlider from "react-simple-image-slider";
 
 interface IDragImageSlider {
@@ -19,6 +18,8 @@ const DragImageSlider = ({ images }: IDragImageSlider) => {
                 images={images}
                 showBullets={true}
                 showNavs={true}
+                autoPlay={true}
+                autoPlayDelay={3}
             />
         </div>
     );
