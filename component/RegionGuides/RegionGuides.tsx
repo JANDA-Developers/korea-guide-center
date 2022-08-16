@@ -41,7 +41,11 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
                             />
                             <div className="regionGuides__bodyRightSection">
                                 <div className="regionGuides__popularGuides">
-                                    <div>
+                                    <div
+                                        style={{
+                                            marginBottom: "10px",
+                                        }}
+                                    >
                                         <span
                                             style={{
                                                 fontWeight: 600,
@@ -51,7 +55,24 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
                                             인기 가이드
                                         </span>
                                     </div>
-                                    <div></div>
+                                    <div className="regionGuides__popularGuide--container">
+                                        <div className="regionGuides__popularGuide--profileImage" />
+                                        <div className="regionGuides__popularGuide--guideInfo">
+                                            <span className="regionGuides__popularGuide--guideName">
+                                                최미란
+                                            </span>
+                                            <span className="regionGuides__popularGuide--guideDesc">
+                                                부산에 방문 계획은 있지만 무엇을
+                                                할지 고민이신가요? 부산에서 영어
+                                                가이드로 활동 중입니다. 저는
+                                                다양한 국적의 동료와 일을 해왔고
+                                                MICE 분야에 근무한 경험이 있어서
+                                                부산을 방문하는 여러분이
+                                                만족하는 맞춤형 여행을 제안할 수
+                                                있을 것 같습니다.
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

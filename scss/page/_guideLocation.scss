@@ -269,4 +269,32 @@
         box-sizing: border-box;
         padding: 20px;
     }
+
+    &__popularGuide--container {
+        display: flex;
+        width: 100%;
+    }
+
+    &__popularGuide--profileImage{
+        width: 100px;
+        height: 100px;
+        background-color: azure;
+        margin-right: 10px;
+
+    }
+    
+    &__popularGuide--guideInfo{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+
+    }
+
+    &__popularGuide--guideName {
+
+    }
+
+    &__popularGuide--guideDesc {
+
+    }
 }
