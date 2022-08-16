@@ -1,5 +1,4 @@
 import {
-    Bold,
     Flex,
     getAllFromUrl,
     isEmpty,
@@ -7,7 +6,6 @@ import {
     JDbutton,
     JDcontainer,
     JDhorizen,
-    JDswitch,
     JDtypho,
     Mb,
     Mr,
@@ -16,11 +14,10 @@ import {
     WindowSize,
 } from "@janda-com/front";
 import { BookLayout } from "../../component/layout/BookLayout";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { Paths } from "../index[depre]";
-import { Empty } from "../../atom/Empty";
 import { GrandProductSearchFilter } from "../../component/grandProductSearchFilter/GrandProductSearchFilter";
 import Pagination from "../../component/pagination/Pagination";
 import {
@@ -37,23 +34,17 @@ import {
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
 import { updateURLParameters, UrlParam } from "../../utils/getUpdateUrlParam";
-import {
-    Flangs,
-    ProductStatus,
-    _ProductFilter,
-    _ProductSort,
-} from "../../types/api";
+import { ProductStatus, _ProductFilter, _ProductSort } from "../../types/api";
 import { ScrollBox } from "../../component/scrollBox/ScrollBox";
-import { InfoBox } from "../../component/infoBox/InfoBox";
-import { LinkText } from "../../component/link/Link";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
-import RegionTopImage from "../../component/RegionTopImage/RegionTopImage";
-import { SelectRegionSector } from "../../component/SelectRegionSector/SelectRegionSector";
-import { useGlobalKoreaMap } from "../../hook/useKoreaMap";
-import { localGuideData } from "../../component/LocalGuideAndPrivateTour/LocalGuideSlider";
-import { regionableData } from "../../component/koreaMap/KoreaData";
-import RegionMap from "./RegionMap";
+import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
+import {
+    regionableData,
+    mapRegionArr,
+} from "../../component/koreaMap/KoreaData";
+import { useRecoilState } from "recoil";
+import { menuOpenState } from "../../recoil/atoms";
 
 interface ISearchPageQuery {
     title?: string;
@@ -61,32 +52,44 @@ interface ISearchPageQuery {
     sort?: _ProductSort[];
 }
 
-interface IRegionableaData {
-    title: Omit<Flangs, "__typename">;
-    description: Omit<Flangs, "__typename">;
-    photos: string[];
-}
-
-export enum mapRegion {
-    // "dmz" = "dmz",
-    "seoul" = "seoul",
-    "busan" = "busan",
-    "daegu" = "daegu",
-    "Incheon" = "Incheon",
-    Gwangju = "Gwangju",
-    Daejeon = "Daejeon",
-    Ulsan = "Ulsan",
-    Sejong = "Sejong",
-    Jeju = "Jeju",
-    SouthGyeongsang = "SouthGyeongsang",
-    NorthGyeongsang = "NorthGyeongsang",
-    SouthJeolla = "SouthJeolla",
-    NorthJeolla = "NorthJeolla",
-    SouthChungcheong = "SouthChungcheong",
-    NorthChungcheong = "NorthChungcheong",
-    Gangwon = "Gangwon",
-    Gyeonggi = "Gyeonggi",
-}
+const translateKoreanToEnglish = (title: string) => {
+    // 하드코딩이라 죄송합니다 😭
+    if (title === "서울") {
+        return mapRegionArr[0];
+    } else if (title === "부산") {
+        return mapRegionArr[1];
+    } else if (title === "대구") {
+        return mapRegionArr[2];
+    } else if (title === "인천") {
+        return mapRegionArr[3];
+    } else if (title === "광주") {
+        return mapRegionArr[4];
+    } else if (title === "대전") {
+        return mapRegionArr[5];
+    } else if (title === "울산") {
+        return mapRegionArr[6];
+    } else if (title === "세종") {
+        return mapRegionArr[7];
+    } else if (title === "제주") {
+        return mapRegionArr[8];
+    } else if (title === "경남") {
+        return mapRegionArr[9];
+    } else if (title === "경북") {
+        return mapRegionArr[10];
+    } else if (title === "전남") {
+        return mapRegionArr[11];
+    } else if (title === "전북") {
+        return mapRegionArr[12];
+    } else if (title === "충남") {
+        return mapRegionArr[13];
+    } else if (title === "충북") {
+        return mapRegionArr[14];
+    } else if (title === "강원") {
+        return mapRegionArr[15];
+    } else if (title === "경기") {
+        return mapRegionArr[16];
+    }
+};
 
 export const getSearchPageQuery = () => {
     let { filter, sort, ...others } = getAllFromUrl() as ISearchPageQuery;
@@ -153,22 +156,21 @@ export const searchPageQueryGenerate = (query: ISearchPageQuery) => {
 
 export const Search: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
-    const router = useRouter();
     const [detailSearch, setDetailSearch] = useState<boolean>(true);
     const urlSearchParam = getSearchPageQuery();
+    console.log(urlSearchParam);
     const { title } = urlSearchParam;
     const { s, catMap, l } = useContext(AppContext);
+    const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
 
     const { filter: _filter, sort: _sort } = generateFilter(urlSearchParam);
 
-    const globalKoreaHook = useGlobalKoreaMap();
-    const { selectedGlobalRegion, onClick: selectGlobalRegion } =
-        globalKoreaHook;
+    const citiesKoreaHook = useCitiesKoreaMap();
 
-    const region: Record<mapRegion, IRegionableaData> = RegionMap(title);
-    const imgUrl = `/img/regionBg/${region}.jpg`;
+    const { selectedCitiesRegion, onClick: selectCitiesRegion } =
+        citiesKoreaHook;
 
-    const { title: title1, description } = data;
+    const data = regionableData[selectedCitiesRegion];
 
     const productListHook = useProductList(
         {
@@ -189,7 +191,6 @@ export const Search: React.FC<IProp> = () => {
     const {
         sort,
         setSort,
-        page,
         pageInfo,
         paginatorHook,
         items: products,
@@ -197,6 +198,8 @@ export const Search: React.FC<IProp> = () => {
         filter,
         networkStatus,
     } = productListHook;
+
+    console.log(title);
 
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
@@ -211,6 +214,8 @@ export const Search: React.FC<IProp> = () => {
             productListHook.setFilter({
                 ...filter,
             });
+            setMenuOpen(false);
+            selectCitiesRegion(translateKoreanToEnglish(title!));
         }
     }, [title]);
 
@@ -222,16 +227,17 @@ export const Search: React.FC<IProp> = () => {
                     <div
                         className="regionTopImage__titleAndDescContainer"
                         style={{
-                            backgroundImage: `url(${imgUrl})`,
+                            backgroundImage: `url(/img/regionBg/${selectedCitiesRegion}.jpg)`,
                         }}
                     >
-                        <h1 className="regionTopImage__title">{l(title1)}</h1>
-                        <p className="regionTopImage__desc">{l(description)}</p>
+                        <h1 className="regionTopImage__title">
+                            {data && l(data.title)}
+                        </h1>
+                        <p className="regionTopImage__desc">
+                            {data && l(data.description)}
+                        </p>
                     </div>
                 </div>
-
-                {console.log("여기야~~")}
-                {console.log("selectedGlobalRegion : " + selectedGlobalRegion)}
             </div>
             <JDcontainer
                 className="search"

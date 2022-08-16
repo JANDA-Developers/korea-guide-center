@@ -1,10 +1,6 @@
-import { Flex, JDalign } from "@janda-com/front";
-import Link from "next/link";
 import React, { useContext } from "react";
 import BookLayout from "../component/layout/BookLayout";
 import { AppContext } from "../context/context";
-import { SHOPPING_LINK } from "../types/const";
-import { Paths } from "./index[depre]";
 import DragTextSlider from "../component/Slider/DragTextSlider";
 import { InputText, useInput } from "@janda-com/front";
 import { whenEnter } from "../utils/whenEnter";
@@ -32,13 +28,8 @@ const svg_arrow_right = `<svg width="40" height="35" viewBox="0 0 40 35" fill="n
 const TourLayout = () => {
     const { s } = useContext(AppContext);
     const { locale } = useRouter();
-    const tour_title = "Korea Guide";
-    const tour_subtitle = s("tourTitleSubTitle");
-    const tour_subUnder = s("everyGuideHasLicense");
     const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
-    const onClickMenu = () => {
-        setMenuOpen((prev) => !prev);
-    };
+
     const images = [
         {
             url: "/img/bgmain/bgmain1.jpg",
@@ -63,34 +54,6 @@ const TourLayout = () => {
         },
     ];
 
-    const tour_introList: TIntroList[] = [
-        {
-            title: s("localtionalGuide"),
-            link: Paths.locationalGuide,
-            icon: "/img/mainIcon/guide.png",
-        },
-        {
-            title: s("itsThemaTravel"),
-            link: Paths.itstheme,
-            icon: "/img/mainIcon/theme.png",
-        },
-        {
-            title: s("kpopCulture"),
-            link: Paths.kpopCulture,
-            icon: "/img/mainIcon/kpop.png",
-        },
-        {
-            title: s("customTour"),
-            link: Paths.offer,
-            icon: "/img/mainIcon/carrer.png",
-        },
-        {
-            title: s("shopping"),
-            link: SHOPPING_LINK,
-            icon: "/img/mainIcon/shopping.png",
-        },
-    ];
-
     const searchHook = useInput("");
 
     const onSearchFocus = () => {
@@ -103,44 +66,11 @@ const TourLayout = () => {
         // router.push(to);
     };
 
-    const checkOn = (checkTarget: any) => {
-        if (checkTarget === "전체") {
-            return "on";
-        }
-        return "off";
-    };
-
-    const displayIntroList = (introList: TIntroList[]) => {
-        return introList.map(function (list, index) {
-            return (
-                <Link href={`${list.link}`}>
-                    <a
-                        className={`tour__introblock ${checkOn(list.title)}`}
-                        key={`introlist_${index}`}
-                    >
-                        <Flex vCenter center>
-                            <JDalign mr className="tour__introtitle">
-                                {list.title}
-                            </JDalign>
-                            <img
-                                width={40}
-                                height={40}
-                                src={list.icon}
-                                className="tour__icon"
-                            />
-                        </Flex>
-                    </a>
-                </Link>
-            );
-        });
-    };
-
     return (
         <BookLayout>
             <div className="tour">
                 <div className="tour__container">
                     <DragImageSlider images={images} />
-                    {/* <div className="tour__filter"></div> */}
                     <DragTextSlider texts={texts} />
                     <div className="tour__searchBar">
                         <div className="tour__searchBarInnerBox">

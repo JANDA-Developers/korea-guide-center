@@ -390,7 +390,9 @@ a {
 
     &__RecommendGuideSectionTitle {
         text-align: center;
-        font-weight: 600;
+        margin: 3rem 0;
+        font-weight: 500;
+        color: black;
     }
 
     &__GuideSliderItemImage {
@@ -597,9 +599,9 @@ a {
 
     &__sectionTitle {
         text-align: center;
-        margin-top: 5rem;
-        border-top: 50px;
-        font-weight: 600;
+        margin: 3rem 0;
+        font-weight: 500;
+        color: black;
     }
 
     &__searchIconPath {

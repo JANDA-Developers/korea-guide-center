@@ -354,7 +354,7 @@ export const UserRoleKr: Record<UserRole, string> = {
 };
 
 export const MapRegionKr: Record<mapRegion, string> = {
-    dmz: "DMZ",
+    // dmz: "DMZ",
     Daejeon: "대전",
     Gangwon: "강원",
     Gwangju: "광주",

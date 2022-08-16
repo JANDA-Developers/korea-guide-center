@@ -1,24 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import TourSlider from "./TourSlider";
 import RegionSlider from "./RegionSlider";
-import {
-    BestProductList,
-    NewsProductList,
-    ProductsGroupRenders,
-    ProductViewCardsWithApi,
-} from "../../component/productViewCard/ProductViewCards";
-import {
-    Fproduct,
-    productList,
-    productListVariables,
-    productList_ProductList_items,
-    _ProductFilter,
-    _ProductSort,
-} from "../../types/api";
-import { JDcontainer, WindowSize } from "@janda-com/front";
+import { _ProductFilter, _ProductSort } from "../../types/api";
+import { AppContext } from "../../context/context";
 
 const TourAndActivities = () => {
-    const containerSize = WindowSize.full;
+    const { s } = useContext(AppContext);
     return (
         <>
             <div
@@ -26,23 +13,7 @@ const TourAndActivities = () => {
                     marginBottom: "50px",
                 }}
             >
-                <h1 className="tour__sectionTitle">
-                    <span
-                        style={{
-                            color: "#D0242B",
-                        }}
-                    >
-                        Tour&nbsp;
-                    </span>
-                    &&nbsp;
-                    <span
-                        style={{
-                            color: "#D0242B",
-                        }}
-                    >
-                        Activities
-                    </span>
-                </h1>
+                <h5 className="tour__sectionTitle">{s("mainCityTour")}</h5>
                 <RegionSlider />
             </div>
             <div
@@ -50,16 +21,7 @@ const TourAndActivities = () => {
                     marginBottom: "50px",
                 }}
             >
-                <h1 className="tour__sectionTitle">
-                    <span
-                        style={{
-                            color: "#d0242b",
-                        }}
-                    >
-                        Popular
-                    </span>{" "}
-                    Tour
-                </h1>
+                <h5 className="tour__sectionTitle">{s("mainPopularTour")}</h5>
                 <TourSlider
                     queryParam={{
                         initialSort: [_ProductSort.rating__desc],

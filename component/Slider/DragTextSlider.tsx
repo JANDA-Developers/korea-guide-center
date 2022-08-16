@@ -18,6 +18,8 @@ const DragTextSlider = ({ texts }: IDragTextSlider) => {
         slidesToShow: 1,
         swipeToSlide: true,
         arrows: false,
+        autoplay: true,
+        autoplaySpeed: 7000,
     };
     return (
         <Slider {...settings}>

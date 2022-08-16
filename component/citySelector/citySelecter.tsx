@@ -62,119 +62,187 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
             </div>
             {open && (
                 <ItemList>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=서울`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.seoul as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=부산`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.busan as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=대구`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.daegu as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=인천`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.Incheon as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=광주`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.Gwangju as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=대전`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.Daejeon as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=울산`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.Ulsan as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=세종`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.Sejong as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=제주`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.Jeju as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=경남`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.SouthGyeongsang as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=경북`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.NorthGyeongsang as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=전남`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.SouthJeolla as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=전북`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.NorthJeolla as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=충남`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.SouthChungcheong as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=충북`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.NorthChungcheong as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=강원`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.Gangwon as keyof typeof regionableData
                             ].title
                         )}
                     </Item>
-                    <Item>
+                    <Item
+                        onClick={() => {
+                            location.href = `/cities/search?title=경기`;
+                        }}
+                    >
                         {l(
                             regionableData[
                                 mapRegion.Gyeonggi as keyof typeof regionableData

@@ -122,7 +122,7 @@ export const SelectRegionSector: React.FC<IProp> = ({
                                             <span>{l(target.title)}</span>
                                             <img
                                                 className="locationalGuide__regionSelectButtonBg"
-                                                src={`/img/regionBg/${_region}.jpg`}
+                                                src={`/img/cities/${_region}.jpg`}
                                             />
                                         </motion.div>
                                     );

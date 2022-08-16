@@ -20,6 +20,7 @@ import { useRouter } from "next/router";
 import RecommendGuideSliderItem from "./RecommendGuideSliderItem";
 import RightArrowIcon from "../../icons/RightArrowIcon";
 import LeftArrowIcon from "../../icons/LeftArrowIcon";
+import { randomArraySort } from "../../utils/shuffle";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
@@ -97,6 +98,8 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
     );
 
     const data: userList_UserList_items[] = users;
+
+    // const randomSorted = randomArraySort([...users]);
 
     return (
         <div className="slider__sliderContainer">

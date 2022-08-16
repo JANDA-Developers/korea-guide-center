@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { mapRegion } from "../component/koreaMap/KoreaData";
-import { globalMapState } from "../recoil/atoms";
+import { citiesMapState, globalMapState } from "../recoil/atoms";
 
 export const useKoreaMap = () => {
     const [selectedRegiion, setSelectedMapPart] = useState<mapRegion>(
@@ -24,4 +24,15 @@ export const useGlobalKoreaMap = () => {
     };
 
     return { onClick, selectedGlobalRegion };
+};
+
+export const useCitiesKoreaMap = () => {
+    const [selectedCitiesRegion, setSelectedCitiesRegion] =
+        useRecoilState(citiesMapState);
+
+    const onClick = (mapRegion: mapRegion) => {
+        setSelectedCitiesRegion(mapRegion);
+    };
+
+    return { onClick, selectedCitiesRegion };
 };

@@ -48,7 +48,7 @@ const RegionSlider = () => {
                     .title
             ),
             products: 0,
-            imageUrl: "img/cities/incheon.jpg",
+            imageUrl: "img/cities/Incheon.jpg",
         },
         {
             title: l(
@@ -56,7 +56,7 @@ const RegionSlider = () => {
                     .title
             ),
             products: 0,
-            imageUrl: "img/cities/gwangju.jpg",
+            imageUrl: "img/cities/Gwangju.jpg",
         },
         {
             title: l(
@@ -64,7 +64,7 @@ const RegionSlider = () => {
                     .title
             ),
             products: 0,
-            imageUrl: "img/cities/daejeon.jpg",
+            imageUrl: "img/cities/Daejeon.jpg",
         },
         {
             title: l(
@@ -72,7 +72,7 @@ const RegionSlider = () => {
                     .title
             ),
             products: 0,
-            imageUrl: "img/cities/ulsan.jpg",
+            imageUrl: "img/cities/Ulsan.jpg",
         },
         {
             title: l(
@@ -80,7 +80,7 @@ const RegionSlider = () => {
                     .title
             ),
             products: 0,
-            imageUrl: "img/cities/sejong.jpg",
+            imageUrl: "img/cities/Sejong.jpg",
         },
         {
             title: l(
@@ -88,7 +88,7 @@ const RegionSlider = () => {
                     .title
             ),
             products: 0,
-            imageUrl: "img/cities/jeju.jpg",
+            imageUrl: "img/cities/Jeju.jpg",
         },
         {
             title: l(
@@ -97,7 +97,7 @@ const RegionSlider = () => {
                 ].title
             ),
             products: 0,
-            imageUrl: "img/cities/gyeongnam.jpg",
+            imageUrl: "img/cities/SouthGyeongsang.jpg",
         },
         {
             title: l(
@@ -106,7 +106,7 @@ const RegionSlider = () => {
                 ].title
             ),
             products: 0,
-            imageUrl: "img/cities/gyeongbuk.jpg",
+            imageUrl: "img/cities/NorthGyeongsang.jpg",
         },
         {
             title: l(
@@ -115,7 +115,7 @@ const RegionSlider = () => {
                 ].title
             ),
             products: 0,
-            imageUrl: "img/cities/jeonnam.jpg",
+            imageUrl: "img/cities/SouthJeolla.jpg",
         },
         {
             title: l(
@@ -124,7 +124,7 @@ const RegionSlider = () => {
                 ].title
             ),
             products: 0,
-            imageUrl: "img/cities/jeonbuk.jpg",
+            imageUrl: "img/cities/NorthJeolla.jpg",
         },
         {
             title: l(
@@ -133,7 +133,7 @@ const RegionSlider = () => {
                 ].title
             ),
             products: 0,
-            imageUrl: "img/cities/chungnam.jpg",
+            imageUrl: "img/cities/SouthChungcheong.jpg",
         },
         {
             title: l(
@@ -142,7 +142,7 @@ const RegionSlider = () => {
                 ].title
             ),
             products: 0,
-            imageUrl: "img/cities/chungbuk.jpg",
+            imageUrl: "img/cities/NorthChungcheong.jpg",
         },
         {
             title: l(
@@ -150,7 +150,7 @@ const RegionSlider = () => {
                     .title
             ),
             products: 0,
-            imageUrl: "img/cities/gangwon.jpg",
+            imageUrl: "img/cities/Gangwon.jpg",
         },
         {
             title: l(
@@ -159,7 +159,7 @@ const RegionSlider = () => {
                 ].title
             ),
             products: 0,
-            imageUrl: "img/cities/gyeonggi.jpg",
+            imageUrl: "img/cities/Gyeonggi.jpg",
         },
         {
             title: "CUSTOM",

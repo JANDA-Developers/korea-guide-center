@@ -1,4 +1,3 @@
-import router from "next/router";
 import { Flangs } from "./types/api";
 import { QuestionTypes } from "./types/board";
 
@@ -3609,6 +3608,30 @@ const utils_message = {
         en: `This is a non-member reservation inquiry. Members can check in My Reservation after logging in.`,
         ja: `非会員予約照会です。あなたはログインしてから私の予約部分で確認することができます。`,
         chi: `这是非会员预订查询。会员登录后可在“我的预订”中查看。`,
+    },
+    mainCityTour: {
+        ko: "지역별 투어",
+        en: "Regional Tour",
+        ja: "地域別ツアー",
+        chi: "各地旅游",
+    },
+    mainPopularTour: {
+        ko: "인기 투어",
+        en: "Popular Tour",
+        ja: "人気ツアー",
+        chi: "人气旅游",
+    },
+    mainLocalGuides: {
+        ko: "지역별 가이드",
+        en: "Guides by Region",
+        ja: "地域別ガイド",
+        chi: "各地导游",
+    },
+    mainRecommendGuides: {
+        ko: "추천 가이드",
+        en: "Recommended Guide",
+        ja: "おすすめガイド",
+        chi: "推荐指南",
     },
 };
 

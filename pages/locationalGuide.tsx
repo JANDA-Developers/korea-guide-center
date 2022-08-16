@@ -1,4 +1,3 @@
-import { WindowSize } from "@janda-com/front";
 import React from "react";
 import { BookLayout } from "../component/layout/BookLayout";
 import { useGlobalKoreaMap, useKoreaMap } from "../hook/useKoreaMap";
@@ -15,21 +14,13 @@ export const LocationalGuide: React.FC<IProp> = () => {
     // );
 
     const globalKoreaHook = useGlobalKoreaMap();
-    const { selectedGlobalRegion, onClick: selectGlobalRegion } =
-        globalKoreaHook;
-
-    const imgUrl = `/img/regionBg/${selectedGlobalRegion}.jpg`;
-
-    const containerSize = WindowSize.lg;
+    const { selectedGlobalRegion } = globalKoreaHook;
 
     return (
         <BookLayout>
             <div className="locationalGuide">
                 <div className="locationalGuide__regionArea">
-                    <RegionTopImage
-                        onSelectRegion={selectGlobalRegion}
-                        region={selectedGlobalRegion}
-                    />
+                    <RegionTopImage region={selectedGlobalRegion} />
                 </div>
                 <RegionGuides
                     key={selectedGlobalRegion + "HyperProductViewCardS"}

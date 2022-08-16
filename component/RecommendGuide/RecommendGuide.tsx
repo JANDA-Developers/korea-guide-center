@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import styled from "styled-components";
 import { useUserList } from "../../hook/useUser";
 import { IHorizenGriderProp } from "../horizenGrider/HorizenGrider";
 import {
@@ -15,7 +14,8 @@ import { ListInitOptions } from "../../hook/useListQuery";
 import { genrateOption } from "../../utils/query";
 import { TElements } from "../../types/interface";
 import RecommendGuideSlider from "./RecommendGuideSlider";
-import { JDcontainer, WindowSize } from "@janda-com/front";
+import { useContext } from "react";
+import { AppContext } from "../../context/context";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
@@ -37,41 +37,16 @@ const RecommendGuide: React.FC<IGuideMovieCardsWithApi> = ({
     videoRelease,
     ...props
 }) => {
-    const { locale } = useRouter();
-
-    const { items: users } = useUserList(
-        {
-            initialViewCount: 8,
-            ...queryParam,
-            fixingFilter: {
-                isDeleted__not_eq: true,
-                profileVideo__notNull: videoRelease ? undefined : "true",
-                role__not_in: [UserRole.BUYER],
-                langs__in: [(locale as LANGUAGES) || LANGUAGES.ko],
-            },
-            random: true,
-        },
-        queryControl
-    );
-
-    const containerSize = WindowSize.full;
-
+    const { s } = useContext(AppContext);
     return (
         <div
             style={{
                 marginBottom: "50px",
             }}
         >
-            <h1 className="slider__RecommendGuideSectionTitle">
-                <span
-                    style={{
-                        color: "#D0242B",
-                    }}
-                >
-                    Recommend
-                </span>{" "}
-                Guides
-            </h1>
+            <h5 className="slider__RecommendGuideSectionTitle">
+                {s("mainRecommendGuides")}
+            </h5>
             <RecommendGuideSlider randomSort />
         </div>
     );

@@ -36,8 +36,9 @@ export const MiniCategoryFilter: React.FC<IProp> = ({
                 >
                     {s("seeAll")}
                 </JDbutton>
-                {catOpMap.ITEM_SMALL.map((op) => (
+                {catOpMap.ITEM_SMALL.map((op, index) => (
                     <JDbutton
+                        key={index}
                         className="categoryFilter__btn"
                         br="no"
                         mode="flat"

@@ -6,8 +6,9 @@ import { AutoCompeletePreventer } from "../AutoCompeltePreventer/AutoCompletePre
 import { searchPageQueryGenerate } from "../../pages/product/search";
 import { useState, useContext, SyntheticEvent } from "react";
 import { AppContext } from "../../context/context";
-import { mapRegion, regionableData } from "../koreaMap/KoreaData";
-import router from "next/router";
+import { mapRegion, regionableData, mapRegionArr } from "../koreaMap/KoreaData";
+import { useRouter } from "next/router";
+import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
 
 const Container = styled(motion.div)`
     display: flex;
@@ -126,7 +127,8 @@ interface IMenuScreenProps {
     setMenuOpen?: any;
 }
 
-function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
+function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
+    const router = useRouter();
     const [view, setView] = useState({
         cities: true,
         partnerNetwork: false,
@@ -139,6 +141,8 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
         location.href = to;
         // router.push(to);
     };
+    const citiesKoreaMap = useCitiesKoreaMap();
+    const { onClick: selectCitiesRegion } = citiesKoreaMap;
     const onSearchFocus = () => {
         setView({
             cities: false,
@@ -162,11 +166,6 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                 searchBar: false,
             });
         }
-    };
-
-    const onClickItems = (city: string) => {
-        router.push(`cities/search?title=${city}`);
-        setMenuOpen(false);
     };
 
     return (
@@ -234,9 +233,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                             <CityContainer>
                                 <CitySet>
                                     <City
-                                        background="img/cities/seoul.jpg"
+                                        background="/img/cities/seoul.jpg"
                                         onClick={() => {
-                                            onClickItems("서울");
+                                            location.href = `/cities/search?title=서울`;
                                         }}
                                     >
                                         {l(
@@ -246,9 +245,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/busan.jpg"
+                                        background="/img/cities/busan.jpg"
                                         onClick={() => {
-                                            onClickItems("부산");
+                                            location.href = `/cities/search?title=부산`;
                                         }}
                                     >
                                         {l(
@@ -258,9 +257,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/daegu.jpg"
+                                        background="/img/cities/daegu.jpg"
                                         onClick={() => {
-                                            onClickItems("대구");
+                                            location.href = `/cities/search?title=대구`;
                                         }}
                                     >
                                         {l(
@@ -272,9 +271,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/incheon.jpg"
+                                        background="/img/cities/Incheon.jpg"
                                         onClick={() => {
-                                            onClickItems("인천");
+                                            location.href = `/cities/search?title=인천`;
                                         }}
                                     >
                                         {l(
@@ -284,9 +283,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/gwangju.jpg"
+                                        background="/img/cities/Gwangju.jpg"
                                         onClick={() => {
-                                            onClickItems("광주");
+                                            location.href = `/cities/search?title=광주`;
                                         }}
                                     >
                                         {l(
@@ -296,9 +295,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/daejeon.jpg"
+                                        background="/img/cities/daejeon.jpg"
                                         onClick={() => {
-                                            onClickItems("대전");
+                                            location.href = `/cities/search?title=대전`;
                                         }}
                                     >
                                         {l(
@@ -310,9 +309,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/ulsan.jpg"
+                                        background="/img/cities/Ulsan.jpg"
                                         onClick={() => {
-                                            onClickItems("울산");
+                                            location.href = `/cities/search?title=울산`;
                                         }}
                                     >
                                         {l(
@@ -322,9 +321,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/sejong.jpg"
+                                        background="/img/cities/Sejong.jpg"
                                         onClick={() => {
-                                            onClickItems("세종");
+                                            location.href = `/cities/search?title=세종`;
                                         }}
                                     >
                                         {l(
@@ -334,9 +333,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/jeju.jpg"
+                                        background="/img/cities/Jeju.jpg"
                                         onClick={() => {
-                                            onClickItems("제주");
+                                            location.href = `/cities/search?title=제주`;
                                         }}
                                     >
                                         {l(
@@ -348,9 +347,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/gyeongnam.jpg"
+                                        background="/img/cities/SouthGyeongsang.jpg"
                                         onClick={() => {
-                                            onClickItems("경남");
+                                            location.href = `/cities/search?title=경남`;
                                         }}
                                     >
                                         {l(
@@ -360,9 +359,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/gyeongbuk.jpg"
+                                        background="/img/cities/NorthGyeongsang.jpg"
                                         onClick={() => {
-                                            onClickItems("경북");
+                                            location.href = `/cities/search?title=경북`;
                                         }}
                                     >
                                         {l(
@@ -372,9 +371,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/jeonnam.jpg"
+                                        background="/img/cities/SouthJeolla.jpg"
                                         onClick={() => {
-                                            onClickItems("전남");
+                                            location.href = `/cities/search?title=전남`;
                                         }}
                                     >
                                         {l(
@@ -386,9 +385,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/jeonbuk.jpg"
+                                        background="/img/cities/NorthJeolla.jpg"
                                         onClick={() => {
-                                            onClickItems("전북");
+                                            location.href = `/cities/search?title=전북`;
                                         }}
                                     >
                                         {l(
@@ -398,9 +397,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/chungnam.jpg"
+                                        background="/img/cities/SouthChungcheong.jpg"
                                         onClick={() => {
-                                            onClickItems("충남");
+                                            location.href = `/cities/search?title=충남`;
                                         }}
                                     >
                                         {l(
@@ -410,9 +409,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/chungbuk.jpg"
+                                        background="/img/cities/NorthChungcheong.jpg"
                                         onClick={() => {
-                                            onClickItems("충북");
+                                            location.href = `/cities/search?title=충북`;
                                         }}
                                     >
                                         {l(
@@ -424,9 +423,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                 </CitySet>
                                 <CitySet>
                                     <City
-                                        background="img/cities/gangwon.jpg"
+                                        background="/img/cities/Gangwon.jpg"
                                         onClick={() => {
-                                            onClickItems("강원");
+                                            location.href = `/cities/search?title=강원`;
                                         }}
                                     >
                                         {l(
@@ -436,9 +435,9 @@ function MenuScreen({ onClickMenu, menuOpen, setMenuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="img/cities/gyeonggi.jpg"
+                                        background="/img/cities/Gyeonggi.jpg"
                                         onClick={() => {
-                                            onClickItems("경기");
+                                            location.href = `/cities/search?title=경기`;
                                         }}
                                     >
                                         {l(
