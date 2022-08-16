@@ -167,9 +167,6 @@ export const Search: React.FC<IProp> = () => {
 
     const region: Record<mapRegion, IRegionableaData> = RegionMap(title);
     const imgUrl = `/img/regionBg/${region}.jpg`;
-    console.log("여기닷!!!!!! 리젼!");
-    console.log(region);
-    const data = regionableData[region];
 
     const { title: title1, description } = data;
 

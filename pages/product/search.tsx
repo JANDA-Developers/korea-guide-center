@@ -109,6 +109,7 @@ export const searchPageQueryGenerate = (query: ISearchPageQuery) => {
     }
 
     // if( ) location.protocol + "://" + host +
+
     return updateURLParameters(Paths.search, urlQueries);
 };
 
