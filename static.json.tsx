@@ -242,6 +242,12 @@ const utils_message = {
         ja: `チャットで問い合わせ&確認`,
         chi: `开始聊天`,
     },
+    talkWith2: {
+        ko: "대화하기",
+        en: `Start chat`,
+        ja: `チャットで問い合わせ&確認`,
+        chi: `开始聊天`,
+    },
     questions: {
         ko: "문의하기",
         en: `Make Inquiry`,
