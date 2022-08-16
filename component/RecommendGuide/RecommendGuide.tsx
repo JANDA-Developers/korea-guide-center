@@ -1,13 +1,9 @@
-import { useRouter } from "next/router";
-import { useUserList } from "../../hook/useUser";
 import { IHorizenGriderProp } from "../horizenGrider/HorizenGrider";
 import {
     Fuser,
     _IUserSort,
     _IUserFilter,
     userList,
-    LANGUAGES,
-    UserRole,
     userListVariables,
 } from "../../types/api";
 import { ListInitOptions } from "../../hook/useListQuery";

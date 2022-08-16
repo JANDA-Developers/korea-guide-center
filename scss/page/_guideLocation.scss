@@ -264,22 +264,24 @@
         background-color: #F6F5ED;
         width: 100%;
         max-width: 50rem;
-        height: 40rem;
+        height: auto;
         margin-right: 1.875rem;
         box-sizing: border-box;
-        padding: 20px;
+        padding: 1.25rem;
     }
 
     &__popularGuide--container {
         display: flex;
         width: 100%;
+        margin-bottom: 0.625rem;
     }
 
     &__popularGuide--profileImage{
-        width: 100px;
-        height: 100px;
-        background-color: azure;
-        margin-right: 10px;
+        width: 6.25rem;
+        height: 6.25rem;
+        margin-right: 0.625rem;
+        background-size: cover;
+        background-position: center;
 
     }
     
@@ -291,10 +293,12 @@
     }
 
     &__popularGuide--guideName {
+        font-weight: 500;
+        margin-bottom: 0.313rem;
 
     }
 
     &__popularGuide--guideDesc {
-
+        font-size: 0.938rem;
     }
 }
