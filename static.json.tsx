@@ -3633,6 +3633,24 @@ const utils_message = {
         ja: "おすすめガイド",
         chi: "推荐指南",
     },
+    profileAboutMe: {
+        ko: "자기 소개",
+        en: "Introduce",
+        ja: "自己紹介",
+        chi: "自我介绍",
+    },
+    profileGuideArea: {
+        ko: "주 활동지역",
+        en: "Main Area",
+        ja: "主な活動地域",
+        chi: "主要活动地区",
+    },
+    profileCategory: {
+        ko: "카테고리",
+        en: "Category",
+        ja: "カテゴリー",
+        chi: "范畴",
+    },
 };
 
 export const info = {

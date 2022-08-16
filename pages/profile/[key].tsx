@@ -1,18 +1,6 @@
-import {
-    Bold,
-    Flex,
-    isEmpty,
-    JDalign,
-    JDavatar,
-    JDbutton,
-    JDcontainer,
-    JDhorizen,
-    Mb,
-    WindowSize,
-} from "@janda-com/front";
+import { Flex, isEmpty, JDalign, JDbutton, Mb } from "@janda-com/front";
 import { useRouter } from "next/router";
 import { useContext } from "react";
-import { Img } from "../../atom/Image";
 import { JDicon } from "../../component/icons/Icons";
 import BookLayout from "../../component/layout/BookLayout";
 import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCards";
@@ -21,7 +9,7 @@ import { AppContext } from "../../context/context";
 import { useStartChat } from "../../hook/useChatRoom";
 import { useuserFindById } from "../../hook/useUser";
 import { LANGUAGES, userFindById_UserFindById } from "../../types/api";
-import { DEFAULT_BG_IMG, DEFAULT_PROFILE_IMG } from "../../types/const";
+import { DEFAULT_PROFILE_IMG } from "../../types/const";
 import { filterVisibleProduct } from "../../utils/product";
 import { Badges } from "../../component/statusBadges/StatusBadges";
 import { Video } from "../../component/video/Video";
@@ -46,16 +34,7 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
     );
 
     if (!item) return null;
-    const {
-        profileImage,
-        introduce,
-        products,
-        profileVideo,
-        name,
-        profileMediumImage,
-        regions,
-        langs,
-    } = item;
+    const { profileImage, introduce, products, profileVideo, langs } = item;
 
     return (
         <BookLayout>
@@ -138,7 +117,9 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                 {item?.name}
                             </h1>
                             <div className="guideProfile__horizon"></div>
-                            <h6 className="guideProfile__subtitle">About me</h6>
+                            <h6 className="guideProfile__subtitle">
+                                {s("profileAboutMe")}
+                            </h6>
                             <JDalign
                                 className="guideProfile__text"
                                 mb="largest"
@@ -150,7 +131,7 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             </JDalign>
                             <div>
                                 <h6 className="guideProfile__subtitle">
-                                    Guide Area
+                                    {s("profileGuideArea")}
                                 </h6>
                                 <Flex mb="huge" wrap>
                                     <Badges
@@ -164,7 +145,7 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                 </Flex>
 
                                 <h6 className="guideProfile__subtitle">
-                                    Guide Category
+                                    {s("profileCategory")}
                                 </h6>
 
                                 <Flex mb="huge" wrap>
