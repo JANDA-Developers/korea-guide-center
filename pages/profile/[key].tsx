@@ -135,7 +135,7 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                     fontWeight: "600",
                                 }}
                             >
-                                {item?.nickName}
+                                {item?.name}
                             </h1>
                             <div className="guideProfile__horizon"></div>
                             <h6 className="guideProfile__subtitle">About me</h6>
