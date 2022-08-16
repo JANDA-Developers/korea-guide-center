@@ -74,6 +74,10 @@
         width:858px;
         border : 1px solid #D0242B;
         cursor:pointer;
+
+        &:hover {
+            background-color: #cd060c;
+        }
     }
     
     &__InfoboxWidth{
