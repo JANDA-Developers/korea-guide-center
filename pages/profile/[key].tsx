@@ -219,7 +219,6 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                     )}
 
                     <Mb mb="largest" />
-                    <SNSIcons mb="largest" sns={item.sns} />
                 </div>
             </div>
         </BookLayout>
