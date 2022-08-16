@@ -1,5 +1,7 @@
+import router from "next/router";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
+import { Paths } from "../../pages/index[depre]";
 import { Fuser } from "../../types/api";
 import { IHorizenGriderProp } from "../horizenGrider/HorizenGrider";
 
@@ -19,6 +21,9 @@ const PopularGuideList: React.FC<IProp> = ({ guides, ...props }) => {
                                 className="regionGuides__popularGuide--profileImage"
                                 style={{
                                     backgroundImage: `url(${item.profileImage?.uri})`,
+                                }}
+                                onClick={() => {
+                                    router.push(Paths.profile + "/" + item._id);
                                 }}
                             />
                             <div className="regionGuides__popularGuide--guideInfo">
