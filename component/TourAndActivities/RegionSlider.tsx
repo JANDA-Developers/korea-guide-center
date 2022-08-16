@@ -23,6 +23,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.seoul as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "서울",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
@@ -31,6 +32,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.busan as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "부산",
             products: 0,
             imageUrl: "img/cities/busan.jpg",
         },
@@ -39,6 +41,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.daegu as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "대구",
             products: 0,
             imageUrl: "img/cities/daegu.jpg",
         },
@@ -47,6 +50,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.Incheon as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "인천",
             products: 0,
             imageUrl: "img/cities/Incheon.jpg",
         },
@@ -55,6 +59,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.Gwangju as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "광주",
             products: 0,
             imageUrl: "img/cities/Gwangju.jpg",
         },
@@ -63,6 +68,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.Daejeon as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "대전",
             products: 0,
             imageUrl: "img/cities/Daejeon.jpg",
         },
@@ -71,6 +77,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.Ulsan as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "울산",
             products: 0,
             imageUrl: "img/cities/Ulsan.jpg",
         },
@@ -79,6 +86,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.Sejong as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "세종",
             products: 0,
             imageUrl: "img/cities/Sejong.jpg",
         },
@@ -87,6 +95,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.Jeju as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "제주",
             products: 0,
             imageUrl: "img/cities/Jeju.jpg",
         },
@@ -96,6 +105,7 @@ const RegionSlider = () => {
                     mapRegion.SouthGyeongsang as keyof typeof regionableData
                 ].title
             ),
+            queryTitle: "경남",
             products: 0,
             imageUrl: "img/cities/SouthGyeongsang.jpg",
         },
@@ -105,6 +115,7 @@ const RegionSlider = () => {
                     mapRegion.NorthGyeongsang as keyof typeof regionableData
                 ].title
             ),
+            queryTitle: "경북",
             products: 0,
             imageUrl: "img/cities/NorthGyeongsang.jpg",
         },
@@ -114,6 +125,7 @@ const RegionSlider = () => {
                     mapRegion.SouthJeolla as keyof typeof regionableData
                 ].title
             ),
+            queryTitle: "전남",
             products: 0,
             imageUrl: "img/cities/SouthJeolla.jpg",
         },
@@ -123,6 +135,7 @@ const RegionSlider = () => {
                     mapRegion.NorthJeolla as keyof typeof regionableData
                 ].title
             ),
+            queryTitle: "전북",
             products: 0,
             imageUrl: "img/cities/NorthJeolla.jpg",
         },
@@ -132,6 +145,7 @@ const RegionSlider = () => {
                     mapRegion.SouthChungcheong as keyof typeof regionableData
                 ].title
             ),
+            queryTitle: "충남",
             products: 0,
             imageUrl: "img/cities/SouthChungcheong.jpg",
         },
@@ -141,6 +155,7 @@ const RegionSlider = () => {
                     mapRegion.NorthChungcheong as keyof typeof regionableData
                 ].title
             ),
+            queryTitle: "충북",
             products: 0,
             imageUrl: "img/cities/NorthChungcheong.jpg",
         },
@@ -149,6 +164,7 @@ const RegionSlider = () => {
                 regionableData[mapRegion.Gangwon as keyof typeof regionableData]
                     .title
             ),
+            queryTitle: "강원",
             products: 0,
             imageUrl: "img/cities/Gangwon.jpg",
         },
@@ -158,31 +174,38 @@ const RegionSlider = () => {
                     mapRegion.Gyeonggi as keyof typeof regionableData
                 ].title
             ),
+            queryTitle: "경기",
             products: 0,
             imageUrl: "img/cities/Gyeonggi.jpg",
         },
+
         {
             title: "CUSTOM",
+            queryTitle: "커스텀",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
             title: "MICE",
+            queryTitle: "마이스",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
             title: "DRIVING",
+            queryTitle: "드라이빙가이드",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
             title: "MEDICAL",
+            queryTitle: "의료관광",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
             title: "LOCAL FESTIVAL",
+            queryTitle: "축제",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },

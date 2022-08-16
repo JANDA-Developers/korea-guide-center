@@ -1,5 +1,6 @@
 export interface IRegionSliderItem {
     title: string;
+    queryTitle: string;
     products?: number; // 혹시 몰라서 만들어둠
     imageUrl: string;
 }
@@ -15,7 +16,12 @@ const TourSliderItem = ({ item, offset, index }: IRegionSliderItemProps) => {
         <>
             {item.slice(offset * index, offset * index + offset).map((i) => {
                 return (
-                    <div className="slider__ShortSliderItems">
+                    <div
+                        className="slider__ShortSliderItems"
+                        onClick={() => {
+                            location.href = `/cities/search?title=${i.queryTitle}`;
+                        }}
+                    >
                         <img
                             src={`${i.imageUrl}`}
                             className="region__bgImage"
