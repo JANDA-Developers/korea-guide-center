@@ -178,7 +178,7 @@ export const Badges = <_, T>({
         <Flex vCenter center wrap className={className}>
             {items?.map((item, index) => (
                 <JDbadge
-                    style={{ opacity: "0.7" }}
+                    style={{ opacity: "0.7", borderRadius: "8px" }}
                     className="textTransformClear"
                     mb="superTiny"
                     key={uniqKey + index}
