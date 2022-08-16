@@ -44,17 +44,23 @@
     }
 
     &__jdButtonWidth2{
+        all:unset;
+        text-align: center;
         font-size: 18px;
-        color:#D0242B;
+        color:black;
         width:140px;
         height: 38px;
         margin-top: 12px;
         background-color: white;
-        border-width: 4px;
-        border-color:#D0242B;
-        border-radius: 18px;
+        border: 1px solid #D0242B;
+        border-radius: 5px;
         cursor:pointer;
-        
+        transition: all 0.2s linear;
+
+        &:hover {
+            background-color: #D0242B;
+            color: white;
+        }
     }
 
     &__jdButtonWidth3{
