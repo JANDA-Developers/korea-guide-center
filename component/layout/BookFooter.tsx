@@ -1,22 +1,16 @@
 import {
     Bold,
     Flex,
-    JDbutton,
     JDcontainer,
     JDhorizen,
-    Small,
-    Tiny,
     WindowSize,
 } from "@janda-com/front";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
 import { useContext } from "react";
-import styled from "styled-components";
 import { AppContext } from "../../context/context";
 import { Logo } from "../logo/Logo";
 import { Paths } from "../../pages/index[depre]";
-import JDIcon from "../icons/Icons";
 
 interface IProp {
     footerContainerSize?: WindowSize;
@@ -25,8 +19,7 @@ interface IProp {
 export const BookFooter: React.FC<IProp> = ({
     footerContainerSize = WindowSize.lg,
 }) => {
-    const { s, isGuide, isMaster, isLogin } = useContext(AppContext);
-    const router = useRouter();
+    const { s } = useContext(AppContext);
     const TitleText = s("itsguide").split(" ");
 
     const BottomInfo = ({ label, value }: { label: string; value: string }) => {
@@ -58,7 +51,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=서울`;
                                     }}
                                 >
-                                    서울
+                                    {s("citySeoul")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -66,7 +59,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=인천`;
                                     }}
                                 >
-                                    인천
+                                    {s("cityIncheon")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -74,7 +67,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=부산`;
                                     }}
                                 >
-                                    부산
+                                    {s("cityBusan")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -82,7 +75,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=대구`;
                                     }}
                                 >
-                                    대구
+                                    {s("cityDaegu")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -90,7 +83,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=울산`;
                                     }}
                                 >
-                                    울산
+                                    {s("cityUlsan")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -98,7 +91,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=대전`;
                                     }}
                                 >
-                                    대전
+                                    {s("cityDaejeon")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -106,7 +99,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=제주`;
                                     }}
                                 >
-                                    제주
+                                    {s("cityJeju")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -114,7 +107,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=광주`;
                                     }}
                                 >
-                                    광주
+                                    {s("cityGwangju")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -122,7 +115,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=세종`;
                                     }}
                                 >
-                                    세종
+                                    {s("citySejong")}
                                 </span>
                             </div>
                             <div className="footer__cityPartTwo">
@@ -132,7 +125,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=경기`;
                                     }}
                                 >
-                                    경기도
+                                    {s("cityGyeonggi")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -140,7 +133,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=강원`;
                                     }}
                                 >
-                                    강원도
+                                    {s("cityGangwon")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -148,7 +141,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=충북`;
                                     }}
                                 >
-                                    충청북도
+                                    {s("cityNorthChungCheon")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -156,7 +149,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=충남`;
                                     }}
                                 >
-                                    충청남도
+                                    {s("citySouthChungCheon")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -164,7 +157,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=경북`;
                                     }}
                                 >
-                                    경상북도
+                                    {s("cityNorthGyeonSang")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -172,7 +165,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=경남`;
                                     }}
                                 >
-                                    경상남도
+                                    {s("citySouthGyeonSang")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -180,7 +173,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=전북`;
                                     }}
                                 >
-                                    전라북도
+                                    {s("cityNorthJeonla")}
                                 </span>
                                 <span
                                     className="footer__cityText"
@@ -188,7 +181,7 @@ export const BookFooter: React.FC<IProp> = ({
                                         location.href = `/cities/search?title=전남`;
                                     }}
                                 >
-                                    전라남도
+                                    {s("citySouthJeonla")}
                                 </span>
                             </div>
                         </div>

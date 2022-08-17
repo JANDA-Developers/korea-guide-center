@@ -3687,6 +3687,108 @@ const utils_message = {
         ja: "フォロー",
         chi: "关注",
     },
+    citySeoul: {
+        ko: "서울",
+        en: "Seoul",
+        ja: "ソウル",
+        chi: "首爾",
+    },
+    cityIncheon: {
+        ko: "인천",
+        en: "Incheon",
+        ja: "インチョン",
+        chi: "仁川",
+    },
+    cityBusan: {
+        ko: "부산",
+        en: "Busan",
+        ja: "プサン",
+        chi: "釜山",
+    },
+    cityDaegu: {
+        ko: "대구",
+        en: "Daegu",
+        ja: "テグ",
+        chi: "大邱",
+    },
+    cityUlsan: {
+        ko: "울산",
+        en: "Ulsan",
+        ja: "ウルサン",
+        chi: "蔚山",
+    },
+    cityDaejeon: {
+        ko: "대전",
+        en: "Daejeon",
+        ja: "テジョン",
+        chi: "大田",
+    },
+    cityJeju: {
+        ko: "제주",
+        en: "Jeju",
+        ja: "チェジュド",
+        chi: "济州道",
+    },
+    cityGwangju: {
+        ko: "광주",
+        en: "Gwangju",
+        ja: "クァンジュ",
+        chi: "广州",
+    },
+    citySejong: {
+        ko: "세종",
+        en: "Sejong",
+        ja: "世宗市",
+        chi: "世宗",
+    },
+    cityGyeonggi: {
+        ko: "경기도",
+        en: "Gyeonggi-Do",
+        ja: "京畿道",
+        chi: "京畿道",
+    },
+    cityGangwon: {
+        ko: "강원도",
+        en: "Gangwon-Do",
+        ja: "江原道",
+        chi: "江原道",
+    },
+    cityNorthChungCheon: {
+        ko: "충청북도",
+        en: "Chungcheongbuk-Do",
+        ja: "忠清北道",
+        chi: "忠清北道",
+    },
+    citySouthChungCheon: {
+        ko: "충청남도",
+        en: "Chungcheongnam-Do",
+        ja: "忠清南道",
+        chi: "忠清南道",
+    },
+    cityNorthGyeonSang: {
+        ko: "경상북도",
+        en: "Gyeonsangbuk-Do",
+        ja: "慶尚北道",
+        chi: "慶尚北道",
+    },
+    citySouthGyeonSang: {
+        ko: "경상남도",
+        en: "Gyeonsangnam-Do",
+        ja: "慶尚南道",
+        chi: "慶尚南道",
+    },
+    cityNorthJeonla: {
+        ko: "전라남도",
+        en: "Jeonlanam-Do",
+        ja: "全羅南道",
+        chi: "全羅南道",
+    },
+    citySouthJeonla: {
+        ko: "전라북도",
+        en: "Jeonlabuk-Do",
+        ja: "全羅北道",
+        chi: "全羅北道",
+    },
 };
 
 export const info = {
