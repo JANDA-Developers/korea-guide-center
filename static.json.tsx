@@ -3663,6 +3663,30 @@ const utils_message = {
         ja: "都市",
         chi: "城市",
     },
+    SNSYoutube: {
+        ko: "코리아 가이드 유튜브",
+        en: "Korea Guide Youtube",
+        ja: "コリアガイドユーチューブ",
+        chi: "韩国导游YouTube",
+    },
+    youtubeSubscribe: {
+        ko: "구독하기",
+        en: "Subscribe",
+        ja: "購読",
+        chi: "订阅",
+    },
+    SNSInstagram: {
+        ko: "코리아 가이드 인스타그램",
+        en: "Korea Guide Instagram",
+        ja: "コリアガイドインスタグラム",
+        chi: "韩国导游Instagram",
+    },
+    instaFollow: {
+        ko: "팔로우",
+        en: "Follow",
+        ja: "フォロー",
+        chi: "关注",
+    },
 };
 
 export const info = {
