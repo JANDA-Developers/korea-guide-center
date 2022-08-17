@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { useStartChat } from "../../hook/useChatRoom";
 import Info from "./Info";
-import { Fuser } from "../../types/api";
 import LeftFlex from "./LeftFlex";
 
 interface IGuideIntroProps {

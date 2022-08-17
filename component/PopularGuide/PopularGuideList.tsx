@@ -4,6 +4,7 @@ import { AppContext } from "../../context/context";
 import { Paths } from "../../pages/index[depre]";
 import { Fuser } from "../../types/api";
 import { IHorizenGriderProp } from "../horizenGrider/HorizenGrider";
+import PopularGuideTalk from "./PopularGuideTalk";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
@@ -11,6 +12,7 @@ interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
 
 const PopularGuideList: React.FC<IProp> = ({ guides, ...props }) => {
     const { l } = useContext(AppContext);
+
     return (
         <div>
             {guides.map((item) => {
@@ -31,11 +33,11 @@ const PopularGuideList: React.FC<IProp> = ({ guides, ...props }) => {
                                     {item.name}
                                 </span>
                                 <span className="regionGuides__popularGuide--guideDesc">
-                                    {l(item.introduce).length >= 100
-                                        ? l(item.introduce).slice(0, 100) +
-                                          "..."
+                                    {l(item.introduce).length >= 70
+                                        ? l(item.introduce).slice(0, 70) + "..."
                                         : l(item.introduce)}
                                 </span>
+                                <PopularGuideTalk item={item} />
                             </div>
                         </div>
                         <hr
