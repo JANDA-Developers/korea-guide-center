@@ -3657,6 +3657,12 @@ const utils_message = {
         ja: "人気ガイド",
         chi: "热门导游",
     },
+    footerCities: {
+        ko: "도시",
+        en: "Cities",
+        ja: "都市",
+        chi: "城市",
+    },
 };
 
 export const info = {

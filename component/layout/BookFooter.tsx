@@ -47,7 +47,9 @@ export const BookFooter: React.FC<IProp> = ({
             <JDcontainer verticalPadding size={footerContainerSize}>
                 <div className="footer__innerContainer">
                     <div>
-                        <h1 className="footer__citiesTitle">Cities</h1>
+                        <h1 className="footer__citiesTitle">
+                            {s("footerCities")}
+                        </h1>
                         <div className="footer__city">
                             <div className="footer__cityPartOne">
                                 <span
