@@ -50,35 +50,142 @@ export const BookFooter: React.FC<IProp> = ({
                         <h1 className="footer__citiesTitle">Cities</h1>
                         <div className="footer__city">
                             <div className="footer__cityPartOne">
-                                <span className="footer__cityText">서울</span>
-                                <span className="footer__cityText">인천</span>
-                                <span className="footer__cityText">부산</span>
-                                <span className="footer__cityText">대구</span>
-                                <span className="footer__cityText">울산</span>
-                                <span className="footer__cityText">대전</span>
-                                <span className="footer__cityText">제주</span>
-                                <span className="footer__cityText">광주</span>
-                                <span className="footer__cityText">세종</span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=서울`;
+                                    }}
+                                >
+                                    서울
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=인천`;
+                                    }}
+                                >
+                                    인천
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=부산`;
+                                    }}
+                                >
+                                    부산
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=대구`;
+                                    }}
+                                >
+                                    대구
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=울산`;
+                                    }}
+                                >
+                                    울산
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=대전`;
+                                    }}
+                                >
+                                    대전
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=제주`;
+                                    }}
+                                >
+                                    제주
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=광주`;
+                                    }}
+                                >
+                                    광주
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=세종`;
+                                    }}
+                                >
+                                    세종
+                                </span>
                             </div>
                             <div className="footer__cityPartTwo">
-                                <span className="footer__cityText">경기도</span>
-                                <span className="footer__cityText">강원도</span>
-                                <span className="footer__cityText">
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=경기`;
+                                    }}
+                                >
+                                    경기도
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=강원`;
+                                    }}
+                                >
+                                    강원도
+                                </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=충북`;
+                                    }}
+                                >
                                     충청북도
                                 </span>
-                                <span className="footer__cityText">
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=충남`;
+                                    }}
+                                >
                                     충청남도
                                 </span>
-                                <span className="footer__cityText">
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=경북`;
+                                    }}
+                                >
                                     경상북도
                                 </span>
-                                <span className="footer__cityText">
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=경남`;
+                                    }}
+                                >
                                     경상남도
                                 </span>
-                                <span className="footer__cityText">
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=전북`;
+                                    }}
+                                >
                                     전라북도
                                 </span>
-                                <span className="footer__cityText">
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=전남`;
+                                    }}
+                                >
                                     전라남도
                                 </span>
                             </div>

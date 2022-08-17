@@ -31,7 +31,13 @@
 
     &__cityText {
         color: white;
-        margin-bottom: 15px;
+        margin-bottom: 0.938rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.188rem;
+        }
     }
 
     &__info {
