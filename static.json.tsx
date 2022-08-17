@@ -3657,6 +3657,42 @@ const utils_message = {
         ja: "人気ガイド",
         chi: "热门导游",
     },
+    aboutKoreaGuide: {
+        ko: "코리아 가이드",
+        en: "Korea Guide",
+        ja: "コリアガイド",
+        chi: "韩国导游",
+    },
+    aboutKoreaGuideDetail: {
+        ko: "자세히 알아보기",
+        en: "Show More",
+        ja: "詳しく調べる",
+        chi: "详细了解",
+    },
+    aboutKoreaGuideAmazingCities: {
+        ko: "대한민국의 놀라운 도시들",
+        en: "Amazing Cities in Korea",
+        ja: "大韓民国の驚くべき都市",
+        chi: "韩国惊人的城市",
+    },
+    aboutKoreaGuideHighTour: {
+        ko: "현지 가이드와 함께하는 최고급 투어",
+        en: "Top-of-the-line tour with local guides",
+        ja: "現地ガイド付きの最高級ツアー",
+        chi: "与当地导游一起进行的最高级旅行",
+    },
+    aboutKoreaGuideTop: {
+        ko: "모처럼 찾은 한국여행 더욱 즐거운 여행, 더 안전한 여행, 새롭게 한국을 발견하는 여행을 지향합니다.",
+        en: "We aim for a more enjoyable trip to Korea, a safer trip, and a new trip to Korea.",
+        ja: "せっかく訪れた韓国旅行、より楽しい旅行、より安全な旅行、新たに韓国を発見する旅行を目指します。",
+        chi: "好不容易找到的韩国旅行指向更愉快的旅行、更安全的旅行、新发现韩国的旅行。",
+    },
+    aboutKoreaGuideBottom: {
+        ko: "더욱 즐거운 한국여행 더 안전한 한국여행 새롭게 한국을 발견하는 여행을 위해 각 분야별 전문 가이드들이 여러분의 여행을 서포트 합니다. 여행일정에 커미션투어, 쇼핑은 처음부터 없습니다. 한국 여행 전문 프레너들과 프리미엄 가이드들이 자신의 재능을 발휘하여 프라이빗 여행, 로컬 여행, 리얼한 한국을 경험해 보시기 바랍니다.",
+        en: "For a more enjoyable trip to Korea, a safer trip to Korea, and a trip to discover new Korea, professional guides in each field support your trip. There is no commission tour or shopping in the itinerary from the beginning. I hope that Korean travel professionals and premium guides will use their talents to experience private travel, local travel, and real Korea.",
+        ja: "より楽しい韓国旅行、より安全な韓国旅行、新たに韓国を発見する旅行のために、各分野の専門ガイドが皆様の旅行をサポートしています。 旅行日程にコミッションツアー、ショッピングは初めからありません。 韓国旅行専門のプレナーとプレミアムガイドが自分の才能を発揮してプライベート旅行、ローカル旅行、リアルな韓国を体験してみてください。",
+        chi: "为了更愉快的韩国旅行、更安全的韩国旅行、新发现韩国的旅行,各领域的专业导游将支持各位的旅行。 旅行日程上没有佣金旅行和购物。 希望韩国旅行专门记者和高级导游发挥自己的才能,体验私人旅行、当地旅行、真实的韩国。",
+    },
     footerCities: {
         ko: "도시",
         en: "Cities",
