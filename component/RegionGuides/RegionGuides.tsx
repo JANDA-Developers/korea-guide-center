@@ -44,7 +44,7 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
                                 <div className="regionGuides__popularGuides">
                                     <div
                                         style={{
-                                            marginBottom: "10px",
+                                            marginBottom: "20px",
                                         }}
                                     >
                                         <span
@@ -53,7 +53,7 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
                                                 fontSize: "24px",
                                             }}
                                         >
-                                            인기 가이드
+                                            {s("locationalGuidePopularGuide")}
                                         </span>
                                     </div>
                                     <PopularGuide />

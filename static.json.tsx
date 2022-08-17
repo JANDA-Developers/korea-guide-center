@@ -3651,6 +3651,12 @@ const utils_message = {
         ja: "カテゴリー",
         chi: "范畴",
     },
+    locationalGuidePopularGuide: {
+        ko: "인기 가이드",
+        en: "Popular Guides",
+        ja: "人気ガイド",
+        chi: "热门导游",
+    },
 };
 
 export const info = {
