@@ -41,8 +41,6 @@ export const SubPlanForms: React.FC<IProp> = ({
         onChange([...subPlanes]);
     };
 
-    console.log(subPlanes);
-
     const handlePreview = () => {
         subPlanPreveiwModalHook.openModal({
             subPlanes,
@@ -59,7 +57,6 @@ export const SubPlanForms: React.FC<IProp> = ({
                     key={"subPlanForm" + index}
                 >
                     <Tiny weight={600}>{index + 1}번째 일정</Tiny>
-                    {index + 1}
                     <JDhorizen margin={1} />
                     <SubPlanForm
                         mb="small"
