@@ -41,6 +41,8 @@ export const SubPlanForms: React.FC<IProp> = ({
         onChange([...subPlanes]);
     };
 
+    console.log(subPlanes);
+
     const handlePreview = () => {
         subPlanPreveiwModalHook.openModal({
             subPlanes,
@@ -50,8 +52,14 @@ export const SubPlanForms: React.FC<IProp> = ({
     return (
         <JDalign className={`subPlanForms ${className}`} {...props}>
             {subPlanes.map((plan, index) => (
-                <div key={"subPlanForm" + index}>
+                <div
+                    style={{
+                        marginBottom: "2rem",
+                    }}
+                    key={"subPlanForm" + index}
+                >
                     <Tiny weight={600}>{index + 1}번째 일정</Tiny>
+                    {index + 1}
                     <JDhorizen margin={1} />
                     <SubPlanForm
                         mb="small"
@@ -65,6 +73,27 @@ export const SubPlanForms: React.FC<IProp> = ({
                             onChange([...subPlanes]);
                         }}
                     />
+                    <JDbutton
+                        mr
+                        onClick={() => {
+                            subPlanes.splice(index + 1, 0, {
+                                __typename: "SubPlan",
+                                description: DEFAULT_LANGS,
+                                time: DEFAULT_LANGS,
+                                title: DEFAULT_LANGS,
+                                photo: null,
+                            });
+                            onChange([...subPlanes]);
+                        }}
+                        thema="grey4"
+                        mode="flat"
+                        br="square"
+                        style={{
+                            width: "100%",
+                        }}
+                    >
+                        일정추가
+                    </JDbutton>
                 </div>
             ))}
             <JDbutton
