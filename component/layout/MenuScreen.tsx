@@ -186,9 +186,9 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                             id="cities"
                             onClick={onClickMenus}
                         >
-                            Our Cities
+                            도시
                         </SideNavItem>
-                        <SideNavItem
+                        {/* <SideNavItem
                             kind="medium"
                             id="partnerNetwork"
                             onClick={onClickMenus}
@@ -196,7 +196,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                             Partner Network
                         </SideNavItem>
                         <SideNavItem kind="medium">Blog</SideNavItem>
-                        <SideNavItem kind="medium">Guide With us</SideNavItem>
+                        <SideNavItem kind="medium">Guide With us</SideNavItem> */}
                     </SideNav>
                     <SearchAndCities>
                         <SearchBar>
