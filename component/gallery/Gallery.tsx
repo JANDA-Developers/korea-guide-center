@@ -6,7 +6,7 @@ import { AppContext } from "../../context/context";
 import { Ffile } from "../../types/api";
 import { Ratio } from "../../types/const";
 import { beforeExtention } from "../../utils/fileExtendDivider";
-import { Example, Item } from "./Slider";
+import { Slider } from "./Slider";
 
 interface IProp {
     photos: Ffile[];
@@ -62,11 +62,5 @@ export const Galley: React.FC<IProp> = ({ photos }) => {
             </Flex>
         );
 
-    const plus = photos.length - 4;
-    const over4 = photos.length > 4;
-    return (
-        <div>
-            <Example imgs={imgs} />
-        </div>
-    );
+    return <Slider imgs={imgs} />;
 };
