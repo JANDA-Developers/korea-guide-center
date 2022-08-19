@@ -367,7 +367,7 @@ export const ProductDetail: React.FC<IProp> = ({
                         <Small style={{ whiteSpace: "pre-line" }}>
                             {l(Refund)}
                         </Small>
-                        <JDhorizen margin={3} />
+                        <JDhorizen margin={5} />
                         {product.reviewCount ? (
                             <JDalign mb="largest">
                                 <Flex>
