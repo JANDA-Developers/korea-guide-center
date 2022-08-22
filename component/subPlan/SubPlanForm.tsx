@@ -57,15 +57,6 @@ export const SubPlanForm: React.FC<IProp> = ({
                         onChange({ ...subplan });
                     }}
                 />
-                <JDbutton
-                    onClick={onDelete}
-                    br="square"
-                    mode="flat"
-                    thema="error"
-                    padding="small"
-                >
-                    삭제
-                </JDbutton>
             </Flex>
             <InputWithGlobal
                 mb
