@@ -40,7 +40,6 @@ export const SubPlanForms: React.FC<IProp> = ({
         });
         onChange([...subPlanes]);
     };
-
     const handlePreview = () => {
         subPlanPreveiwModalHook.openModal({
             subPlanes,
@@ -73,8 +72,7 @@ export const SubPlanForms: React.FC<IProp> = ({
                     {/* 버그 : 
                     1. 각 항목의 "일정내용"란이 비어있을시에는 동작에 문제가 없으나 "일정내용"란을 채우고, 일정내용이 채워져있는 항목의 전 index의 항목에서 일정을 추가하면,
                      시스템 상 내용은 비어있으니 보이는 부분에서 일정내용을 채운 항목과 같은 내용이 복사됨
-                    2. 회차수정페이지에서 어떤 항목이든 채우려고 클릭하면 에러가 발생함
-                    3. 일정내용이 빈 항목 - 일정내용이 빈 항목 - 일정내용이 채워진 항목 이런 순서로 있으면 중간에 새로운 일정이 추가되지않고, 맨 뒤에서 추가 됌 */}
+                    2. 회차수정페이지에서 어떤 항목이든 채우려고 클릭하면 에러가 발생함  */}
                     <JDbutton
                         mr
                         onClick={() => {
@@ -86,27 +84,46 @@ export const SubPlanForms: React.FC<IProp> = ({
                                 photo: null,
                             });
                             onChange([...subPlanes]);
+                            console.log(subPlanes);
                         }}
                         thema="grey4"
                         mode="flat"
                         br="square"
                         style={{
                             width: "100%",
+                            marginBottom: "0.3rem",
                         }}
                     >
                         일정추가
                     </JDbutton>
+                    <JDbutton
+                        onClick={() => {
+                            subPlanes.splice(index, 1);
+                            onChange([...subPlanes]);
+                        }}
+                        br="square"
+                        mode="flat"
+                        thema="error"
+                        style={{
+                            width: "100%",
+                        }}
+                    >
+                        삭제
+                    </JDbutton>
                 </div>
             ))}
-            <JDbutton
-                mr
-                onClick={handleAddPlan}
-                thema="grey4"
-                mode="flat"
-                br="square"
-            >
-                일정추가
-            </JDbutton>
+            {subPlanes.length <= 0 ? (
+                <JDbutton
+                    mr
+                    onClick={handleAddPlan}
+                    thema="grey4"
+                    mode="flat"
+                    br="square"
+                >
+                    일정추가
+                </JDbutton>
+            ) : null}
+
             <JDbutton
                 disabled={subPlanes.length < 1}
                 onClick={handlePreview}

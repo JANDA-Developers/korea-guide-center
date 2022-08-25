@@ -27,6 +27,7 @@ import { InputWithCheckButton } from "../InputWithCheckButton/InputWithCheckButt
 import { InputWithGlobal } from "../InputWithGlobal/InputWithGlobal";
 import { MultiFileInput } from "../multiFileInput/MultiFileInput";
 import SingleUploader from "../singleUploader/SingleUploader";
+import Select from "react-select";
 import { SNSInput } from "../snsInput/SNSinput";
 
 interface IProp {
