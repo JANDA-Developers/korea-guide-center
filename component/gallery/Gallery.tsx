@@ -51,16 +51,6 @@ export const Galley: React.FC<IProp> = ({ photos }) => {
     };
 
     if (photos.length === 0) return null;
-    if (photos.length === 1)
-        return <ImgBox noResize onClick={handleViewDetail(0)} src={imgs[0]} />;
-
-    if (photos.length < 3)
-        return (
-            <Flex oneone>
-                <ImgBox onClick={handleViewDetail(0)} mr src={photos[0]?.uri} />
-                <ImgBox onClick={handleViewDetail(1)} src={photos[1]?.uri} />
-            </Flex>
-        );
 
     return <Slider imgs={imgs} />;
 };
