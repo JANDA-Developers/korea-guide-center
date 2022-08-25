@@ -51,7 +51,7 @@ export const SubPlanForm: React.FC<IProp> = ({
                 />
                 <InputWithGlobal
                     mr="small"
-                    label="시간(20자이하"
+                    label="시간(20자이하)"
                     maxLength={20}
                     globalModalHook={globalModalHook}
                     langs={time}
