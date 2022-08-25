@@ -84,7 +84,6 @@ export const SubPlanForms: React.FC<IProp> = ({
                                 photo: null,
                             });
                             onChange([...subPlanes]);
-                            console.log(subPlanes);
                         }}
                         thema="grey4"
                         mode="flat"

@@ -420,8 +420,8 @@ export const Refund: Flangs = {
    `,
     en: `
     - 3 days before the tour, before 6pm: Full refund
-    - 3 days before the tour, after 6 pm ~ 2 days before 6 pm: 50% refund
-    - 2 days before the tour, after 6 pm - on the day of use: non-refundable
+    - 3 days before the tour, after 6 pm ~ 2 days before 6 pm: 50% refund0
+    - 2 days before the tour, after 6 pm - on the day of use: non-refundable00
     - Cancellation fee rules are applied based on the business day of the company.
     
     (Business days: Monday-Friday (closed on weekends and holidays)/9:00-18:00)

@@ -18450,7 +18450,7 @@ export interface FsubPlan {
   __typename: "SubPlan";
   title: FsubPlan_title;
   time: FsubPlan_time;
-  description: FsubPlan_description;
+  description: FsubPlan_description | any;
   photo: FsubPlan_photo | null;
 }
 

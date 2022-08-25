@@ -39,23 +39,15 @@ export const InputWithGlobal: React.FC<IProp> = ({
         });
     };
 
+    console.log(langs.ko);
+
     return (
         <InputText
             onClick={handleChange}
             value={langs.ko!}
             placeholder={"언어별 입력하기"}
             readOnly
-            label={
-                label
-                    ? ((
-                          <JDlabel
-                              mb="superTiny"
-                              txt={label}
-                              require={require}
-                          />
-                      ) as any)
-                    : undefined
-            }
+            label={label}
             {...props}
         />
     );
