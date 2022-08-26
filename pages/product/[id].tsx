@@ -254,9 +254,6 @@ export const ProductDetail: React.FC<IProp> = ({
                         <JDhorizen margin={3} />
                         {HeadInfo(s("dateSelect"))}
 
-                        {
-                            // 기존 날짜 선택 부분
-                            /* 
                         <DetailTourPicker
                             className="ProductDetail__datepicker"
                             handleSelectTour={handleSelectTour}
@@ -304,8 +301,8 @@ export const ProductDetail: React.FC<IProp> = ({
                             <JDalign mb="largest">
                                 <SubPlanViewers subPlanes={subPlanes} />
                             </JDalign>
-                        )} */
-                        }
+                        )}
+
                         <JDhorizen margin={3} />
                         <JDalign>
                             {HeadInfo(`투어 소개`)}
