@@ -12,7 +12,6 @@ export const TourDetailWrap = () => {
         params: { tourId, step },
     } = routeMatch;
     const { item, getData } = useTourFindById(tourId);
-
     if (!item) return null;
     return (
         <ProductDetail

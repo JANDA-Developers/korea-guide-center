@@ -39,6 +39,8 @@ export const InputWithGlobal: React.FC<IProp> = ({
         });
     };
 
+    console.log(langs.ko);
+
     return (
         <InputText
             onClick={handleChange}
@@ -56,6 +58,7 @@ export const InputWithGlobal: React.FC<IProp> = ({
             //           ) as any)
             //         : undefined
             // }
+
             label={label}
             {...props}
         />

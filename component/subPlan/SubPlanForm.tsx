@@ -6,6 +6,9 @@ import { FsubPlan } from "../../types/api";
 import { DEFAULT_LANGS } from "../../types/const";
 import { InputWithGlobal } from "../InputWithGlobal/InputWithGlobal";
 import SingleUploader from "../singleUploader/SingleUploader";
+// import SubPlanInputContent from "./subPlanInputContents";
+// import SubPlanInputTime from "./subPlanInputTime";
+// import SubPlanInputTitle from "./subPlanInputTitle";
 
 interface IProp extends Omit<IJDalignProp, "onChange"> {
     subplan: FsubPlan;
@@ -48,7 +51,7 @@ export const SubPlanForm: React.FC<IProp> = ({
                 />
                 <InputWithGlobal
                     mr="small"
-                    label="시간(20자이하"
+                    label="시간(20자이하)"
                     maxLength={20}
                     globalModalHook={globalModalHook}
                     langs={time}
@@ -60,7 +63,6 @@ export const SubPlanForm: React.FC<IProp> = ({
             </Flex>
             <InputWithGlobal
                 mb
-                textarea
                 label="일정내용 (200자이하)"
                 maxLength={200}
                 globalModalHook={globalModalHook}
