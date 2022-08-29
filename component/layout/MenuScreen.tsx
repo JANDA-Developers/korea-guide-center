@@ -67,13 +67,18 @@ const CityContainer = styled(motion.div)`
     overflow-y: auto;
 `;
 
+const CitySet = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+`;
+
 const City = styled.div<{ background?: string }>`
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32rem;
-    height: 21rem;
+    width: 100%;
+    height: 22rem;
     cursor: pointer;
     background-image: url(${(props) => props.background});
     background-repeat: no-repeat;
@@ -83,10 +88,6 @@ const City = styled.div<{ background?: string }>`
     font-size: 1.5rem;
     font-weight: 600;
     text-shadow: 1px 1px 1px #000;
-`;
-
-const CitySet = styled.div`
-    display: flex;
 `;
 
 const SearchBar = styled.div`
