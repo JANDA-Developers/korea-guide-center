@@ -1,6 +1,5 @@
 import { IUseModal, JDmodal } from "@janda-com/front";
 import React from "react";
-import { useEffect } from "react";
 import { useSingleUpload } from "../../hook/useUpload";
 import { Ffile } from "../../types/api";
 import { ICropperProps, ImageCropper } from "./ImageCropper";

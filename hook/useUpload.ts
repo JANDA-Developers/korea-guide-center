@@ -213,7 +213,7 @@ export const useSingleUpload = (defaultFile?: Ffile) => {
             tags,
             mineType: file.type,
         }));
-//file upload resolver 
+        //file upload resolver
         return uploadMu({
             variables: {
                 files,
@@ -252,6 +252,12 @@ export const useSingleUpload = (defaultFile?: Ffile) => {
           }
         : undefined;
 
+    console.log(file);
+    console.log(fileUpload);
+    console.log(onChange);
+    console.log(onChangeFile);
+    console.log(createInput);
+
     return {
         fileUpload,
         fileUploading,
@@ -262,7 +268,7 @@ export const useSingleUpload = (defaultFile?: Ffile) => {
         file,
         createInput,
     };
-};
+}; // useSingleUpload End
 
 type TUploadOptuon = {
     group?: string;
