@@ -39,16 +39,19 @@ const SearchAndCities = styled.div`
     flex-direction: column;
 `;
 
-const SideNavItem = styled.div<{ kind: string }>`
+const SideNavItem = styled.div<{ kind: string; isSelected?: boolean }>`
     box-sizing: border-box;
     display: flex;
     align-items: center;
     height: 5rem;
-    padding: 0px 30px;
+    padding: 0rem 1.875rem;
     color: white;
-    font-size: ${(props) => (props.kind === "small" ? "18px" : "30px")};
+    font-size: ${(props) => (props.kind === "small" ? "1.125rem" : "1.875rem")};
     cursor: ${(props) => (props.kind === "small" ? "normal" : "pointer")};
     transition: background-color 0.2s linear;
+    background-color: ${(props) =>
+        props.isSelected ? "rgba(255, 255, 255, 0.3);" : "none"};
+    border-left: ${(props) => (props.isSelected ? "3px solid white" : "none")};
     &:hover {
         background-color: ${(props) =>
             props.kind === "small" ? "none" : "rgba(255, 255, 255, 0.3);"};
@@ -152,7 +155,6 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
     };
 
     const onClickMenus = (event: SyntheticEvent) => {
-        console.log(event.currentTarget);
         if (event.currentTarget.id === "cities") {
             setView({
                 cities: true,
@@ -185,6 +187,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                             kind="medium"
                             id="cities"
                             onClick={onClickMenus}
+                            isSelected={view.cities}
                         >
                             도시
                         </SideNavItem>
