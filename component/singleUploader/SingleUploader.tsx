@@ -101,6 +101,8 @@ export const SingleUploader: React.FC<ISingleUploadProp> = ({
 
     const hasFile = !!name;
 
+    console.log(fileUploading);
+
     if (fileUploading) {
         fileButtonText = <div>로딩중</div>;
     } else if (hasFile) {

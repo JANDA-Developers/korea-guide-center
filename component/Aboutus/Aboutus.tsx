@@ -90,8 +90,8 @@ const Aboutus = () => {
                 <div className="aboutUs__bottomRight">
                     <div className="aboutUs__bottomRightTop">
                         <p>{s("aboutKoreaGuideTop")}</p>
+                        <div className="aboutUs__whiteLine" />
                     </div>
-                    <div className="aboutUs__whiteLine" />
                     <div className="aboutUs__bottomRightBottom">
                         <p>{s("aboutKoreaGuideBottom")}</p>
                     </div>

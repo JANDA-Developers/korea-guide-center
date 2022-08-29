@@ -42,6 +42,7 @@ import { useDuplicateCheck, useSignUp, useUserUpdate } from "./useUser";
 type profileRole = "GuideProfile" | "BookerProfile" | "JoinGuide" | "SignUp";
 
 export type IUseProfile = ReturnType<typeof useProfile>;
+
 export const useProfile = (role: profileRole) => {
     const { s } = useContext(AppContext);
     const { oauthEmail, oauthCompany: _oauthCompany } = getAllFromUrl() as any;
@@ -50,9 +51,9 @@ export const useProfile = (role: profileRole) => {
     const [securityInfoChange, setSecurityInfoChange] = useState(false);
     const { me, catOpMap, catMap } = useContext(AppContext);
     const { mylangsOps, myCatOps } = useContext(GuideContext);
-    const isJoinGuide = role === "JoinGuide";
-    const isGuideProfile = role === "GuideProfile";
-    const isSingUp = role === "SignUp";
+    const isJoinGuide = role === "JoinGuide"; // 가이드 신청인지?
+    const isGuideProfile = role === "GuideProfile"; // 가이드 프로필인지?
+    const isSingUp = role === "SignUp"; // 회원가입인지?
     const isApplying = me?.role === UserRole.BUYER && me.applyAt;
     const isOauthProfiling = isSingUp && !!oauthEmail;
     const resginModalHook = useModal();
