@@ -26,7 +26,6 @@ export const ProductViewsLineHeader: React.FC<IProp> = ({
                     style={{
                         fontSize: "20.8px",
                         fontWeight: 600,
-                        marginBottom: "30px",
                     }}
                 >
                     {title}
