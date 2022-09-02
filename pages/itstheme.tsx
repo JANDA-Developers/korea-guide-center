@@ -37,6 +37,8 @@ export const LocationalGuide: React.FC<IProp> = () => {
             },
         },
     };
+    console.log(NewsProductList);
+
     return (
         <BookLayout>
             <JDcontainer verticalPadding size={WindowSize.lg}>

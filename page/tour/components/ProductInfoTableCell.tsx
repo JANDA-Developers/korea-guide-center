@@ -23,7 +23,7 @@ export const ProductInfoTableCell: React.FC<IProp> = ({
     return (
         <Flex vCenter center>
             <JDalign mr>
-                <Img src={thumbNail} width={100} height={100} />
+                <img src={thumbNail} width={100} height={100} />
             </JDalign>
             <div>
                 <Small weight={600} mb="small">

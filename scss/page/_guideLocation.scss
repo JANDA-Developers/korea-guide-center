@@ -262,13 +262,17 @@
     }
 
     &__popularGuides {
-        background-color: #F6F5ED;
+        background-color: #f6f1ed;
         width: 100%;
         max-width: 50rem;
         height: auto;
         margin-right: 1.875rem;
         box-sizing: border-box;
         padding: 1.25rem;
+        border-radius: 15px;
+        border-color: rgb(242, 246, 223);
+        border-width: 3px;
+        border-style: solid;
     }
 
     &__popularGuide--container {

@@ -12,6 +12,7 @@ module.exports = {
             "k.kakaocdn.net",
             "s3.ap-northeast-2.amazonaws.com",
             "itsguide-storage.s3.ap-northeast-2.amazonaws.com",
+            "korea-guide-bucket.s3.ap-northeast-2.amazonaws.com",
         ],
     },
     webpack: (config) => {
