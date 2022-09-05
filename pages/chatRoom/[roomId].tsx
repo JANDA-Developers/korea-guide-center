@@ -63,50 +63,56 @@ const ChatRoom: React.FC<IGudeProfilePage> = () => {
                 </div>
                 <JDcontainer verticalPadding size={WindowSize.md}>
                     <Flex oneone>
-                        <JDcard
-                            className="ChatRoom__room"
-                            style={{
-                                overflowWrap: "anywhere",
-                            }}
-                            head={
-                                <CardHead
-                                    description={s("doNotSendPersonalInfo")}
-                                    title={
-                                        <Flex vCenter>
-                                            <GuideCircle
-                                                hide={!checkMobile()}
-                                                mr
-                                                guideProfile={
-                                                    targetProfileImage?.uri
+                        <div>
+                            <JDcard
+                                className="ChatRoom__room"
+                                style={{
+                                    overflowWrap: "anywhere",
+                                }}
+                                head={
+                                    <CardHead
+                                        description={s("doNotSendPersonalInfo")}
+                                        title={
+                                            <Flex vCenter>
+                                                <GuideCircle
+                                                    hide={!checkMobile()}
+                                                    mr
+                                                    guideProfile={
+                                                        targetProfileImage?.uri
+                                                    }
+                                                />{" "}
+                                                {s("guide")} {nickNameOrName}
+                                            </Flex>
+                                        }
+                                    />
+                                }
+                                mode="border"
+                                mr
+                            >
+                                <div>
+                                    {chats.map((chat) => {
+                                        const { userId, profileImg } = chat;
+                                        const isMyChat = me._id === userId;
+                                        return (
+                                            <Chat
+                                                mb
+                                                key={chat._id}
+                                                dir={
+                                                    isMyChat ? "right" : "left"
                                                 }
-                                            />{" "}
-                                            {s("guide")} {nickNameOrName}
-                                        </Flex>
-                                    }
-                                />
-                            }
-                            mode="border"
-                            mr
-                        >
-                            <div>
-                                {chats.map((chat) => {
-                                    const { userId, profileImg } = chat;
-                                    const isMyChat = me._id === userId;
-                                    return (
-                                        <Chat
-                                            mb
-                                            key={chat._id}
-                                            dir={isMyChat ? "right" : "left"}
-                                            chat={chat}
-                                            profileImg={profileImg || undefined}
-                                        />
-                                    );
-                                })}
-                                {canSendChat && (
-                                    <ChatForm onSubmit={handleSubmit} />
-                                )}
-                            </div>
-                        </JDcard>
+                                                chat={chat}
+                                                profileImg={
+                                                    profileImg || undefined
+                                                }
+                                            />
+                                        );
+                                    })}
+                                </div>
+                            </JDcard>
+                            {canSendChat && (
+                                <ChatForm onSubmit={handleSubmit} />
+                            )}
+                        </div>
                         <UserProfileCardApi
                             className="ChatRoom__profileCard"
                             userId={opponentId}
