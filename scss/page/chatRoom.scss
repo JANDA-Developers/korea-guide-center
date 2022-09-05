@@ -6,7 +6,7 @@
     }
 
     &__room {
-        max-height: 36rem;
+        height: 36rem;
         overflow: auto;
         @include response($tablet) {
             margin-right: 0px!important;
