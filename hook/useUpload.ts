@@ -252,10 +252,8 @@ export const useSingleUpload = (defaultFile?: Ffile) => {
           }
         : undefined;
 
+    console.log(defaultFile);
     console.log(file);
-    console.log(fileUpload);
-    console.log(onChange);
-    console.log(onChangeFile);
     console.log(createInput);
 
     return {

@@ -64,6 +64,7 @@ export const SubPlanForm: React.FC<IProp> = ({
             <InputWithGlobal
                 mb
                 label="일정내용 (200자이하)"
+                textarea
                 maxLength={200}
                 globalModalHook={globalModalHook}
                 langs={description}

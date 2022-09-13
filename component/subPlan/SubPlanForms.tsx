@@ -73,7 +73,7 @@ export const SubPlanForms: React.FC<IProp> = ({
                     1. 각 항목의 "일정내용"란이 비어있을시에는 동작에 문제가 없으나 "일정내용"란을 채우고, 일정내용이 채워져있는 항목의 전 index의 항목에서 일정을 추가하면,
                      시스템 상 내용은 비어있으니 보이는 부분에서 일정내용을 채운 항목과 같은 내용이 복사됨
                     2. 회차수정페이지에서 어떤 항목이든 채우려고 클릭하면 에러가 발생함  */}
-                    <JDbutton
+                    {/* <JDbutton
                         mr
                         onClick={() => {
                             subPlanes.splice(index + 1, 0, {
@@ -94,7 +94,7 @@ export const SubPlanForms: React.FC<IProp> = ({
                         }}
                     >
                         일정추가
-                    </JDbutton>
+                    </JDbutton> */}
                     <JDbutton
                         onClick={() => {
                             subPlanes.splice(index, 1);
@@ -111,7 +111,7 @@ export const SubPlanForms: React.FC<IProp> = ({
                     </JDbutton>
                 </div>
             ))}
-            {subPlanes.length <= 0 ? (
+            {/* {subPlanes.length <= 0 ? (
                 <JDbutton
                     mr
                     onClick={handleAddPlan}
@@ -121,7 +121,16 @@ export const SubPlanForms: React.FC<IProp> = ({
                 >
                     일정추가
                 </JDbutton>
-            ) : null}
+            ) : null} */}
+            <JDbutton
+                mr
+                onClick={handleAddPlan}
+                thema="grey4"
+                mode="flat"
+                br="square"
+            >
+                일정추가
+            </JDbutton>
 
             <JDbutton
                 disabled={subPlanes.length < 1}
