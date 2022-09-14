@@ -266,6 +266,7 @@ const RegionSlider = () => {
                     >
                         <motion.div
                             className="slider__ShortSliderRow"
+                            drag
                             custom={back}
                             key={index}
                             variants={rowVariants}

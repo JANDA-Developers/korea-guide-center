@@ -1,8 +1,10 @@
 import React from "react";
+import { useWindowSize } from "usehooks-ts";
 
-function LeftArrowIcon(props: React.SVGProps<
-    SVGSVGElement
-> & { title?: string }) {
+function LeftArrowIcon(
+    props: React.SVGProps<SVGSVGElement> & { title?: string }
+) {
+    const { width } = useWindowSize();
     return (
         <svg
             width="40"
@@ -20,7 +22,7 @@ function LeftArrowIcon(props: React.SVGProps<
                 d="M15 19l-7-7 7-7"
             />
         </svg>
-    )
+    );
 }
 
 export default React.memo(LeftArrowIcon);
