@@ -30,11 +30,9 @@ a {
      font-size: 20px;
     }
     .slider__ShortSliderRightArrowContainer {
-        display: none !important;
         width: 4.875rem !important;
     }
     .slider__ShortSliderLeftArrowContainer {
-        display: none !important;
         width: 4.875rem !important;
     }
     .slider__ShortSliderItems {
@@ -44,6 +42,12 @@ a {
     .slider__ShortSliderContainer {
         width: 98vw !important;
         height: 14.875rem !important;
+    }
+    .slider__ShortSliderContentArea {
+        display: flex !important;
+    }
+    .slider__ShortSliderItems {
+        margin-right: 1.25rem;
     }
 }
 

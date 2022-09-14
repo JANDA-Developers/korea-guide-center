@@ -1,5 +1,4 @@
-import { useState, useContext } from "react";
-import styled from "styled-components";
+import { useState, useContext, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWindowSize } from "usehooks-ts";
 
@@ -244,60 +243,99 @@ const RegionSlider = () => {
 
     const toggleLeaving = () => setLeaving(false);
 
+    const ItemContainer = useRef<HTMLDivElement>(null);
+
     return (
         <div className="slider__sliderContainer">
-            <div className="slider__ShortSliderLeftArrowContainer">
-                <button
-                    className="slider__ShortSliderLeftArrow"
-                    onClick={onClickPrev}
-                    style={{
-                        display: index === 0 ? "none" : "block",
-                    }}
-                >
-                    <LeftArrowIcon />
-                </button>
-            </div>
-            <div className="slider__ShortSliderContainer">
-                <div className="slider__ShortSliderContentArea">
-                    <AnimatePresence
-                        initial={false}
-                        custom={back}
-                        onExitComplete={toggleLeaving}
+            {width <= 415 ? null : (
+                <div className="slider__ShortSliderLeftArrowContainer">
+                    <button
+                        className="slider__ShortSliderLeftArrow"
+                        onClick={onClickPrev}
+                        style={{
+                            display: index === 0 ? "none" : "block",
+                        }}
                     >
-                        <motion.div
-                            className="slider__ShortSliderRow"
-                            drag
-                            custom={back}
-                            key={index}
-                            variants={rowVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            transition={{ type: "tween", duration: 0.5 }}
-                        >
-                            <TourSliderItem
-                                item={regionData}
-                                offset={offset}
-                                index={index}
-                            />
-                        </motion.div>
-                    </AnimatePresence>
+                        <LeftArrowIcon />
+                    </button>
                 </div>
-            </div>
-            <div className="slider__ShortSliderRightArrowContainer">
-                <button
-                    onClick={onClickNext}
-                    className="slider__ShortSliderRightArrow"
-                    style={{
-                        display:
-                            index === Math.ceil(regionData.length / offset) - 1
-                                ? "none"
-                                : "block",
-                    }}
-                >
-                    <RightArrowIcon />
-                </button>
-            </div>
+            )}
+            <motion.div
+                ref={ItemContainer}
+                className="slider__ShortSliderContainer"
+            >
+                {width <= 415 ? (
+                    <motion.div
+                        drag="x"
+                        dragConstraints={ItemContainer}
+                        className="slider__ShortSliderContentArea"
+                    >
+                        {regionData.map((i) => (
+                            <div className="slider__ShortSliderItems">
+                                <img
+                                    src={`${i.imageUrl}`}
+                                    className="region__bgImage"
+                                />
+                                <div className="region__contents">
+                                    <h5 className="region__RegionSliderItemTitle">
+                                        {i.title}
+                                    </h5>
+                                    <button
+                                        className="region__RegionDetailButton"
+                                        onClick={() => {
+                                            location.href = `/cities/search?title=${i.queryTitle}`;
+                                        }}
+                                    >
+                                        둘러보기
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </motion.div>
+                ) : (
+                    <motion.div className="slider__ShortSliderContentArea">
+                        <AnimatePresence
+                            initial={false}
+                            custom={back}
+                            onExitComplete={toggleLeaving}
+                        >
+                            <motion.div
+                                className="slider__ShortSliderRow"
+                                custom={back}
+                                key={index}
+                                variants={rowVariants}
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                                transition={{ type: "tween", duration: 0.5 }}
+                            >
+                                <TourSliderItem
+                                    item={regionData}
+                                    offset={offset}
+                                    index={index}
+                                />
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
+                )}
+            </motion.div>
+            {width <= 415 ? null : (
+                <div className="slider__ShortSliderRightArrowContainer">
+                    <button
+                        onClick={onClickNext}
+                        className="slider__ShortSliderRightArrow"
+                        style={{
+                            display:
+                                index ===
+                                Math.ceil(regionData.length / offset) - 1
+                                    ? "none"
+                                    : "block",
+                        }}
+                    >
+                        <RightArrowIcon />
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
