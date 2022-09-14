@@ -1,4 +1,5 @@
 import React from "react";
+import { useWindowSize } from "usehooks-ts";
 import SimpleImageSlider from "react-simple-image-slider";
 
 interface IDragImageSlider {
@@ -8,16 +9,17 @@ interface IDragImageSlider {
 }
 
 const DragImageSlider = ({ images }: IDragImageSlider) => {
+    const { width } = useWindowSize();
     // state should start with the index you want to start the slide on
 
     return (
         <div className="tour__bgimage">
             <SimpleImageSlider
                 width={"100%"}
-                height={"80vh"}
+                height={width <= 415 ? "30vh" : "80vh"}
                 images={images}
                 showBullets={true}
-                showNavs={true}
+                showNavs={width <= 415 ? false : true}
                 autoPlay={true}
                 autoPlayDelay={3}
             />

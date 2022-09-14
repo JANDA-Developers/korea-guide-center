@@ -7,36 +7,38 @@ export interface IRegionSliderItem {
 
 interface IRegionSliderItemProps {
     item: IRegionSliderItem[];
-    offset: number;
-    index: number;
+    offset?: number;
+    index?: number;
 }
 
 const TourSliderItem = ({ item, offset, index }: IRegionSliderItemProps) => {
     return (
         <>
-            {item.slice(offset * index, offset * index + offset).map((i) => {
-                return (
-                    <div
-                        className="slider__ShortSliderItems"
-                        onClick={() => {
-                            location.href = `/cities/search?title=${i.queryTitle}`;
-                        }}
-                    >
-                        <img
-                            src={`${i.imageUrl}`}
-                            className="region__bgImage"
-                        />
-                        <div className="region__contents">
-                            <h5 className="region__RegionSliderItemTitle">
-                                {i.title}
-                            </h5>
-                            <button className="region__RegionDetailButton">
-                                둘러보기
-                            </button>
+            {item
+                .slice(offset! * index!, offset! * index! + offset!)
+                .map((i) => {
+                    return (
+                        <div className="slider__ShortSliderItems">
+                            <img
+                                src={`${i.imageUrl}`}
+                                className="region__bgImage"
+                            />
+                            <div className="region__contents">
+                                <h5 className="region__RegionSliderItemTitle">
+                                    {i.title}
+                                </h5>
+                                <button
+                                    className="region__RegionDetailButton"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=${i.queryTitle}`;
+                                    }}
+                                >
+                                    둘러보기
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                );
-            })}
+                    );
+                })}
         </>
     );
 };

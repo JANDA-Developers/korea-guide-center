@@ -3,9 +3,11 @@ import TourSlider from "./TourSlider";
 import RegionSlider from "./RegionSlider";
 import { _ProductFilter, _ProductSort } from "../../types/api";
 import { AppContext } from "../../context/context";
+import { useWindowSize } from "usehooks-ts";
 
 const TourAndActivities = () => {
     const { s } = useContext(AppContext);
+    const { width } = useWindowSize();
     return (
         <>
             <div

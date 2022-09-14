@@ -9,6 +9,49 @@ a {
     color: inherit;
 }
 
+@media screen and (max-width:415px) {
+    .tour__container {
+        height: 30vh !important;
+    }
+    .tour__searchBar{
+        display: none !important;
+    }
+
+    .tour__TextsliderContainer {
+        margin-bottom: 0px !important;
+    }
+
+    .tour__sliderText {
+        font-size:20px !important;
+        margin-top: 5rem !important;
+    }
+
+    .tour__sectionTitle {
+     font-size: 20px;
+    }
+    .slider__ShortSliderRightArrowContainer {
+        width: 4.875rem !important;
+    }
+    .slider__ShortSliderLeftArrowContainer {
+        width: 4.875rem !important;
+    }
+    .slider__ShortSliderItems {
+        width: 12.875rem !important;
+        height: 14.875rem !important;
+    }
+    .slider__ShortSliderContainer {
+        width: 98vw !important;
+        height: 14.875rem !important;
+    }
+    .slider__ShortSliderContentArea {
+        display: flex !important;
+    }
+    .slider__ShortSliderItems {
+        margin-right: 1.25rem;
+    }
+}
+
+
 .ani_downtop {
     opacity: 0;
     animation: ani_downtop 1000ms 300ms ease-in-out forwards;
@@ -687,14 +730,15 @@ a {
         height: 80vh;
     }
 
+
     &__bgimage {
         position: absolute;
         background-size: contain;
+        height: auto;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        @include mixin_bgImg;
         background-position: 50% 80%;
     }
 

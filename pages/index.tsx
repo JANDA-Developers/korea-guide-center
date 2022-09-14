@@ -68,6 +68,7 @@ const TourLayout = () => {
 
     return (
         <BookLayout>
+            {/* PC View */}
             <div className="tour">
                 <div className="tour__container">
                     <DragImageSlider images={images} />

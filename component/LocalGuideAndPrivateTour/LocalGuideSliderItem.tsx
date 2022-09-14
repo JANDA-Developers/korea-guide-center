@@ -30,13 +30,7 @@ const LocalGuideSliderItem = ({
     };
 
     return (
-        <div
-            className="slider__ShortSliderItems"
-            onClick={() => {
-                handleSelectRegion(selectedRegion);
-                router.push(Paths.locationalGuide);
-            }}
-        >
+        <div className="slider__ShortSliderItems">
             <img src={`${item.imageUrl}`} className="region__bgImage" />
             <div className="region__contents">
                 <h5 className="region__RegionSliderItemTitle">{item.title}</h5>
@@ -56,7 +50,13 @@ const LocalGuideSliderItem = ({
                     >
                         {item.desc}
                     </span>
-                    <button className="region__RegionDetailButton">
+                    <button
+                        className="region__RegionDetailButton"
+                        onClick={() => {
+                            handleSelectRegion(selectedRegion);
+                            router.push(Paths.locationalGuide);
+                        }}
+                    >
                         둘러보기
                     </button>
                 </div>

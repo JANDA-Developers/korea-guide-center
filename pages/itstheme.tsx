@@ -44,19 +44,32 @@ export const LocationalGuide: React.FC<IProp> = () => {
             <JDcontainer verticalPadding size={WindowSize.lg}>
                 <ItemMiniCategories />
                 <Mb mb="largest" />
-
                 <ProductsGroupRenders />
                 <ProductViewCardsWithApi
                     Head={<BestProductViewsLineHeader />}
                     {...BestProductList}
                 />
                 <Mb mb="largest" />
+                <Banner
+                    ratio={1}
+                    slideToShow={8}
+                    className="tourCircleBanner"
+                    mb="largest"
+                    bannerImages={
+                        circleBannerImages?.filter((banner) =>
+                            FileTagManager.getTagByTagNameAndValue(
+                                banner?.tags || [],
+                                "lang",
+                                locale || "ko"
+                            )
+                        ) || []
+                    }
+                />
                 <ProductViewCardsWithApi
                     Head={<NewstProductViewsLineHeader />}
                     {...NewsProductList}
                 />
                 <Mb mb="largest" />
-
                 <KPOPBestProductViewsLineHeader />
                 <ProductViewCardsWithApi
                     {...{
@@ -67,7 +80,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         },
                     }}
                 />
-
                 <ProductViewCardsWithHorizenCalendar />
             </JDcontainer>
         </BookLayout>
