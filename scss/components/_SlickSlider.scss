@@ -38,12 +38,63 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 20px;
 }
 
+//
+
+
+
+.slick-list {
+    width: 100% !important;
+    margin: 0 auto;
+}
+
+.slick-slider {
+    position: relative !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -ms-touch-action: pan-y !important;
+    touch-action: pan-y !important;
+    -webkit-tap-highlight-color: transparent !important;
+}
+.slick-list {
+    position: relative !important;
+    overflow: hidden !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    &:focus {
+        outline: none !important;
+    }
+
+    &.dragging {
+        cursor: pointer !important;
+        cursor: hand !important;
+    }
+}
+
+
+
+.slick-arrow.slick-hidden {
+    display: none !important;
+}
+
+
+//
+
+
 /* Icons */
 
 /* Arrows */
 .slick-arrow {
     border-radius: 0px !important;
 }
+
 
 .slick-prev,
 .slick-next {
@@ -84,7 +135,16 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: 80px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 45% !important;
+    left: 10px !important;
+    border-radius: 100% !important;
+    width: 25px !important;
+    height: 25px !important;
+    background: rgba(255, 255, 255, 0.445) !important;
+    color: transparent !important;
     [dir="rtl"] & {
         left: auto !important;
         right: -25px !important;
@@ -97,7 +157,16 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: 80px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 45% !important;
+    right: 10px !important;
+    border-radius: 100% !important;
+    width: 25px !important;
+    height: 25px !important;
+    background: rgb(150, 144, 144) !important;
+    color: transparent !important;
     [dir="rtl"] & {
         left: -25px !important;
         right: auto !important;
