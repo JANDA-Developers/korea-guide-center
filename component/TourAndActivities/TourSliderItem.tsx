@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 
 interface ITourSliderItemProps {
     products: productList_ProductList_items[];
-    offset: number;
-    index: number;
+    offset?: number;
+    index?: number;
 }
 
 const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
-    const { l, s } = useContext(AppContext);
+    const { l } = useContext(AppContext);
     const priceToString = (price: number) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
@@ -27,7 +27,7 @@ const TourSliderItem = ({ products, offset, index }: ITourSliderItemProps) => {
     return (
         <>
             {products
-                .slice(offset * index, offset * index + offset)
+                .slice(offset! * index!, offset! * index! + offset!)
                 .map((i, index) => {
                     return (
                         <motion.div

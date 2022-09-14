@@ -47,7 +47,27 @@ a {
         display: flex !important;
     }
     .slider__ShortSliderItems {
-        margin-right: 1.25rem;
+        margin-right: 1.25rem !important;
+    }
+    .slider__LongSliderLeftArrowContainer {
+        width: 4.875rem !important;
+    }
+    .slider__LongSliderRightArrowContainer{
+        width: 4.875rem !important;
+    }
+    .slider__LongSliderContentArea {
+        display: flex !important;
+    }
+    .slider__LongSliderItems {
+        margin-right: 1.25rem !important;
+    }
+
+    .slider__LongSliderContainer {
+        width: 98vw !important;
+    }
+
+    .slider__TourSliderItemTextAndDesc {
+        height: auto !important;
     }
 }
 

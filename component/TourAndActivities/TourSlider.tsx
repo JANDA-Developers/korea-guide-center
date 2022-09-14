@@ -1,7 +1,7 @@
 import { useProductList } from "../../hook/useProduct";
 import { AppContext } from "../../context/context";
 import { IProductViewCard } from "../productViewCard/ProductViewCard";
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import {
     Fproduct,
     productList,
@@ -18,6 +18,7 @@ import { ListInitOptions } from "../../hook/useListQuery";
 import { genrateOption } from "../../utils/query";
 import RightArrowIcon from "../../icons/RightArrowIcon";
 import LeftArrowIcon from "../../icons/LeftArrowIcon";
+import { Paths } from "../../pages/index[depre]";
 
 interface IProp extends Partial<IProductViewCard> {
     align?: 1 | 2 | 3 | 4 | "auto" | "wrap";
@@ -41,6 +42,10 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
     queryControl,
     queryParam,
 }) => {
+    const { l } = useContext(AppContext);
+    const priceToString = (price: number) => {
+        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
     const { commonProductFilter } = useContext(AppContext);
     const { items: products } = useProductList(
         {
@@ -89,59 +94,125 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
     const [back, setBack] = useState(false);
 
     const toggleLeaving = () => setLeaving(false);
+
+    const SliderVariants = {
+        hover: {
+            y: -5,
+            boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+            cursor: "pointer",
+        },
+    };
+
+    const ItemContainer = useRef<HTMLDivElement>(null);
     return (
         <div className="slider__sliderContainer">
-            <div className="slider__LongSliderLeftArrowContainer">
-                <button
-                    className="slider__LongSliderLeftArrow"
-                    onClick={onClickPrev}
-                    style={{
-                        display: index === 0 ? "none" : "block",
-                    }}
-                >
-                    <LeftArrowIcon />
-                </button>
-            </div>
-            <div className="slider__LongSliderContainer">
-                <div className="slider__LongSliderContentArea">
-                    <AnimatePresence
-                        initial={false}
-                        custom={back}
-                        onExitComplete={toggleLeaving}
+            {width <= 415 ? null : (
+                <div className="slider__LongSliderLeftArrowContainer">
+                    <button
+                        className="slider__LongSliderLeftArrow"
+                        onClick={onClickPrev}
+                        style={{
+                            display: index === 0 ? "none" : "block",
+                        }}
                     >
-                        <motion.div
-                            className="slider__LongSliderRow"
-                            custom={back}
-                            key={index}
-                            variants={rowVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            transition={{ type: "tween", duration: 0.5 }}
-                        >
-                            <TourSliderItem
-                                products={products}
-                                offset={offset}
-                                index={index}
-                            />
-                        </motion.div>
-                    </AnimatePresence>
+                        <LeftArrowIcon />
+                    </button>
                 </div>
-            </div>
-            <div className="slider__LongSliderRightArrowContainer">
-                <button
-                    onClick={onClickNext}
-                    className="slider__LongSliderRightArrow"
-                    style={{
-                        display:
-                            index === Math.ceil(products.length / offset) - 1
-                                ? "none"
-                                : "block",
-                    }}
-                >
-                    <RightArrowIcon />
-                </button>
-            </div>
+            )}
+            <motion.div
+                ref={ItemContainer}
+                className="slider__LongSliderContainer"
+            >
+                {width <= 415 ? (
+                    <motion.div
+                        drag="x"
+                        dragConstraints={ItemContainer}
+                        className="slider__LongSliderContentArea"
+                    >
+                        {products.map((i) => (
+                            <motion.div
+                                className="slider__LongSliderItems"
+                                variants={SliderVariants}
+                                whileHover="hover"
+                                onClick={() => {
+                                    location.href =
+                                        Paths.productDetailView + "/" + i._id;
+                                }}
+                            >
+                                <div
+                                    className="slider__TourSliderItemImage"
+                                    style={{
+                                        backgroundImage: `url(${i.thumbNail?.uri})`,
+                                    }}
+                                />
+                                <div className="slider__TourSliderItemTextAndDesc">
+                                    <h6 className="slider__TourSliderItemTitle">
+                                        {l(i.title)}
+                                    </h6>
+                                    <p>
+                                        {l(i.shortDecsription).length >= 40
+                                            ? l(i.shortDecsription).slice(
+                                                  0,
+                                                  40
+                                              ) + "..."
+                                            : l(i.shortDecsription)}
+                                    </p>
+                                </div>
+                                <div className="slider__TourSliderItemPriceAndBooking">
+                                    <h6 className="slider__TourSliderItemPrice">
+                                        {priceToString(i.priceAdult!)}
+                                    </h6>
+                                    <button className="slider__TourSliderItemBookingButton">
+                                        <span>정보 & 예약하기</span>
+                                    </button>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                ) : (
+                    <motion.div className="slider__LongSliderContentArea">
+                        <AnimatePresence
+                            initial={false}
+                            custom={back}
+                            onExitComplete={toggleLeaving}
+                        >
+                            <motion.div
+                                className="slider__LongSliderRow"
+                                custom={back}
+                                key={index}
+                                variants={rowVariants}
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                                transition={{ type: "tween", duration: 0.5 }}
+                            >
+                                <TourSliderItem
+                                    products={products}
+                                    offset={offset}
+                                    index={index}
+                                />
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
+                )}
+            </motion.div>
+            {width <= 415 ? null : (
+                <div className="slider__LongSliderRightArrowContainer">
+                    <button
+                        onClick={onClickNext}
+                        className="slider__LongSliderRightArrow"
+                        style={{
+                            display:
+                                index ===
+                                Math.ceil(products.length / offset) - 1
+                                    ? "none"
+                                    : "block",
+                        }}
+                    >
+                        <RightArrowIcon />
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
