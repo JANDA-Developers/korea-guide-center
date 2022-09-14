@@ -1,4 +1,4 @@
-import { useGlobalKoreaMap, useKoreaMap } from "../../hook/useKoreaMap";
+import { useGlobalKoreaMap } from "../../hook/useKoreaMap";
 import LocalGuideSliderItem from "./LocalGuideSliderItem";
 import { ILocalGuideSliderItem } from "./LocalGuideSliderItem";
 
