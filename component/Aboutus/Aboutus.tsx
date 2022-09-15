@@ -8,7 +8,13 @@ const Aboutus = () => {
     return (
         <div className="aboutUs__Container">
             <div className="aboutUs__top">
-                <h5 style={{ textAlign: "center", fontWeight: "bold" }}>
+                <h5
+                    style={{
+                        textAlign: "center",
+                        fontWeight: "bold",
+                        fontSize: "20px",
+                    }}
+                >
                     <span
                         style={{
                             color: "#d0242b",

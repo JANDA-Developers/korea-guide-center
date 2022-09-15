@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWindowSize } from "usehooks-ts";
 import { useUserList } from "../../hook/useUser";
@@ -21,6 +21,8 @@ import RecommendGuideSliderItem from "./RecommendGuideSliderItem";
 import RightArrowIcon from "../../icons/RightArrowIcon";
 import LeftArrowIcon from "../../icons/LeftArrowIcon";
 import { randomArraySort } from "../../utils/shuffle";
+import { Paths } from "../../pages/index[depre]";
+import { AppContext } from "../../context/context";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
@@ -46,6 +48,7 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
 }) => {
     const { width } = useWindowSize();
     const { locale } = useRouter();
+    const router = useRouter();
 
     let w = width * 0.75;
 
@@ -101,59 +104,130 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
 
     // const randomSorted = randomArraySort([...users]);
 
+    const SliderVariants = {
+        hover: {
+            y: -5,
+            boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+            cursor: "pointer",
+        },
+    };
+
+    const ItemContainer = useRef<HTMLDivElement>(null);
+
+    const { l } = useContext(AppContext);
+
     return (
         <div className="slider__sliderContainer">
-            <div className="slider__LongSliderLeftArrowContainer">
-                <button
-                    className="slider__LongSliderLeftArrow"
-                    onClick={onClickPrev}
-                    style={{
-                        display: index === 0 ? "none" : "block",
-                    }}
-                >
-                    <LeftArrowIcon />
-                </button>
-            </div>
-            <div className="slider__LongSliderContainer">
-                <div className="slider__LongSliderContentArea">
-                    <AnimatePresence
-                        initial={false}
-                        custom={back}
-                        onExitComplete={toggleLeaving}
+            {width <= 415 ? null : (
+                <div className="slider__LongSliderLeftArrowContainer">
+                    <button
+                        className="slider__LongSliderLeftArrow"
+                        onClick={onClickPrev}
+                        style={{
+                            display: index === 0 ? "none" : "block",
+                        }}
                     >
-                        <motion.div
-                            className="slider__LongSliderRow"
-                            custom={back}
-                            key={index}
-                            variants={rowVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            transition={{ type: "tween", duration: 0.5 }}
-                        >
-                            <RecommendGuideSliderItem
-                                item={data}
-                                offset={offset}
-                                index={index}
-                            />
-                        </motion.div>
-                    </AnimatePresence>
+                        <LeftArrowIcon />
+                    </button>
                 </div>
-            </div>
-            <div className="slider__LongSliderRightArrowContainer">
-                <button
-                    onClick={onClickNext}
-                    className="slider__LongSliderRightArrow"
-                    style={{
-                        display:
-                            index === Math.ceil(data.length / offset) - 1
-                                ? "none"
-                                : "block",
-                    }}
-                >
-                    <RightArrowIcon />
-                </button>
-            </div>
+            )}
+            <motion.div
+                ref={ItemContainer}
+                className="slider__LongSliderContainer"
+            >
+                {width <= 415 ? (
+                    <motion.div
+                        drag="x"
+                        dragConstraints={ItemContainer}
+                        className="slider__LongSliderContentArea"
+                    >
+                        {data.map((i) => (
+                            <motion.div
+                                className="slider__LongSliderItems"
+                                variants={SliderVariants}
+                                whileHover="hover"
+                                onClick={() => {
+                                    router.push(Paths.profile + "/" + i._id);
+                                }}
+                            >
+                                <div
+                                    className="slider__GuideSliderItemImage"
+                                    style={{
+                                        backgroundImage: `url(${i.profileMediumImage?.uri})`,
+                                    }}
+                                />
+                                <div className="slider__GuideBadgeAndNameContainer">
+                                    <div className="slider__GuideBadge">
+                                        {i.role}
+                                    </div>
+                                    <span className="slider__GuideName">
+                                        {i.name}
+                                    </span>
+                                </div>
+                                <hr />
+                                <div className="slider__GuideDesc">
+                                    {l(i.introduce).length > 90
+                                        ? l(i.introduce).slice(0, 90) + "..."
+                                        : l(i.introduce)}
+                                </div>
+                                <div className="slider__GuideCategoryContainer">
+                                    {i.guideCategory
+                                        ?.slice(0, 4)
+                                        .map((item, index) => {
+                                            return (
+                                                <span className="slider__GuideCategoryText">
+                                                    {l(item.label)}
+                                                    {index === 3 ? null : " · "}
+                                                </span>
+                                            );
+                                        })}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                ) : (
+                    <motion.div className="slider__LongSliderContentArea">
+                        <AnimatePresence
+                            initial={false}
+                            custom={back}
+                            onExitComplete={toggleLeaving}
+                        >
+                            <motion.div
+                                className="slider__LongSliderRow"
+                                custom={back}
+                                key={index}
+                                variants={rowVariants}
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                                transition={{ type: "tween", duration: 0.5 }}
+                            >
+                                <RecommendGuideSliderItem
+                                    item={data}
+                                    offset={offset}
+                                    index={index}
+                                />
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
+                )}
+            </motion.div>
+            {width <= 415 ? null : (
+                <div className="slider__LongSliderRightArrowContainer">
+                    <button
+                        onClick={onClickNext}
+                        className="slider__LongSliderRightArrow"
+                        style={{
+                            display:
+                                index === Math.ceil(data.length / offset) - 1
+                                    ? "none"
+                                    : "block",
+                        }}
+                    >
+                        <RightArrowIcon />
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

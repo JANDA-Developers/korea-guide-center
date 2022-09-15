@@ -13,9 +13,6 @@ const FindGuide = () => {
     const context = useContext(AppContext);
     const router = useRouter();
     const { isLogin, isGuide, isMaster } = context;
-    console.log("isLogin -> " + isLogin);
-    console.log("isGuide -> " + isGuide);
-    console.log("isMaster -> " + isMaster);
 
     return (
         <div className="findGuide__Container">

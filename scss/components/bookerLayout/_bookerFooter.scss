@@ -6,6 +6,17 @@
     }
 }
 
+@media screen and (max-width:415px) {
+    .footer__CopyRight {
+        flex-direction: column !important;
+        font-size: 12px !important;
+    }
+
+    .footer__city {
+        display: block !important;
+    }
+}
+
 .footer {
     &__innerContainer {
         display: flex;
@@ -45,6 +56,11 @@
     }
 
     &__infoDetail {
+        color: white;
+    }
+
+    &__CopyRight {
+        display: flex;
         color: white;
     }
 

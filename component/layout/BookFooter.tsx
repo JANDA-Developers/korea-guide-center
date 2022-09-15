@@ -252,12 +252,7 @@ export const BookFooter: React.FC<IProp> = ({
                     </div>
                 </div>
                 <JDhorizen margin={2} />
-                <div
-                    style={{
-                        display: "flex",
-                        color: "white",
-                    }}
-                >
+                <div className="footer__CopyRight">
                     <Link href={Paths.termsAndConditions}>
                         <a>
                             <Bold size="normal" mr>

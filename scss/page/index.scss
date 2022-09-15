@@ -27,7 +27,7 @@ a {
     }
 
     .tour__sectionTitle {
-     font-size: 20px;
+     font-size: 20px !important;
     }
     .slider__ShortSliderRightArrowContainer {
         width: 4.875rem !important;
@@ -69,6 +69,97 @@ a {
     .slider__TourSliderItemTextAndDesc {
         height: auto !important;
     }
+
+    .slider__RecommendGuideSectionTitle {
+        font-size: 20px !important;
+    }
+
+    .aboutUs__Container {
+        height: auto !important;
+    }
+    
+    .aboutUs__imageContainer {
+        position: relative !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        top: 0.5rem !important;
+    }
+
+    .aboutUs__imageFirst {
+        width:  90% !important;
+        height: 300px !important;
+        margin-right: 0px !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    .aboutUs__imageSecond {
+        width: 90% !important;
+        height: 300px !important;
+    }
+
+    .aboutUs__whiteLine {
+        width: 100% !important;
+    }
+
+    .aboutUs__bottomContainer {
+        position: relative !important;
+        flex-direction: column !important;
+    }
+
+    .aboutUs__bottomLeft {
+        width: 100% !important;
+        margin-right: 0px !important;
+    }
+
+    .aboutUs__bottomRight {
+        width: 100% !important;
+    }
+
+    .aboutUs__bottomRightTop {
+        font-size: 20px !important;
+        padding: 0px 10px !important;
+    }
+
+    .aboutUs__bottomRightBottom {
+        font-size: 16px !important;
+        padding: 0px 10px !important;
+    }
+
+    .findGuide__Container {
+    flex-direction: column !important;
+    }
+
+    .findGuide__imageSliderContainer {
+        width: 100% !important;
+    }
+    .findGuide__textContainer {
+        width: 100% !important;
+
+    }
+
+    .sns__Container {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .sns__Title {
+        width: 100% !important;
+    }
+
+    .sns__youtube {
+        width: 100% !important;
+        padding: 0px 10px !important;
+        margin-bottom: 50px !important;
+    }
+
+    .sns__insta{
+        width: 100% !important;
+        padding: 0px 10px !important;
+    }
+
+    .sns__image {
+        width: 100% !important;
+    }
 }
 
 
@@ -86,6 +177,14 @@ a {
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 9.375rem;
+    }
+
+    &__youtube {
+        box-sizing: border-box;
+    }
+
+    &__insta {
+        box-sizing: border-box;
     }
 
     &__Title {
@@ -145,6 +244,7 @@ a {
     }
 
     &__textContainer {
+        box-sizing: border-box;
         width: 40%;
         padding: 3.125rem 2.5rem;
         background-color: black;
@@ -248,7 +348,6 @@ a {
     }
 
     &__imageTextBottom {
-        font-weight: 600;
         font-size: 1.563rem;
         margin-bottom: 0.625rem;
         text-shadow: 2px 2px 2px gray;
@@ -267,19 +366,16 @@ a {
 
     &__bottomLeftText {
         color: white;
-        font-weight: 600;
     }
 
     &__bottomRightTop {
         color: white;
-        font-weight: 600;
         font-size: 1.563rem;
         margin-bottom: 1.563rem;
     }
 
     &__bottomRightBottom {
         color: white;
-        font-weight: 600;
         font-size: 1rem;
     }
 

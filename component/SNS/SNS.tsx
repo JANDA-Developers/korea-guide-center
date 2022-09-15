@@ -5,7 +5,7 @@ const SNS = () => {
     const { s } = useContext(AppContext);
     return (
         <div className="sns__Container">
-            <div>
+            <div className="sns__youtube">
                 <div className="sns__Title">
                     <div className="sns__LogoAndTextBox">
                         <img
@@ -27,7 +27,7 @@ const SNS = () => {
                 </div>
                 <img className="sns__image" src="img/sns/youtubeImage.jpeg" />
             </div>
-            <div>
+            <div className="sns__insta">
                 <div className="sns__Title">
                     <div className="sns__LogoAndTextBox">
                         <img
