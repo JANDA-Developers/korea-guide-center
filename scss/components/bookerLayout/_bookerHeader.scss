@@ -36,6 +36,8 @@
 
     &__mobileHeader {
         padding-top: space(3);
+        padding-left: 10px;
+        padding-right: 10px;
         display: none!important;
         @include response($tablet) {
             display: block!important;
