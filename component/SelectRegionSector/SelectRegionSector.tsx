@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { AppContext } from "../../context/context";
 import { useWindowSize } from "usehooks-ts";
 import { mapRegion, mapRegionArr, regionableData } from "../koreaMap/KoreaData";
@@ -67,85 +67,132 @@ export const SelectRegionSector: React.FC<IProp> = ({
         onSelectRegion(region);
     };
 
+    const ItemContainer = useRef<HTMLDivElement>(null);
+
     return (
         <div className="locationalGuide__sliderContainer">
-            <div className="locationalGuide__sliderLeftArrowContainer">
-                <button
-                    className="locationalGuide__sliderLeftArrow"
-                    onClick={onClickPrev}
-                    style={{
-                        display: index === 0 ? "none" : "block",
-                    }}
-                >
-                    <LeftArrowIcon />
-                </button>
-            </div>
-            <div className="locationalGuide__regionSliderContainer">
-                <div className="locationalGuide__regionSliderContentArea">
-                    <AnimatePresence
-                        initial={false}
-                        custom={back}
-                        onExitComplete={toggleLeaving}
+            {width <= 415 ? null : (
+                <div className="locationalGuide__sliderLeftArrowContainer">
+                    <button
+                        className="locationalGuide__sliderLeftArrow"
+                        onClick={onClickPrev}
+                        style={{
+                            display: index === 0 ? "none" : "block",
+                        }}
                     >
-                        <motion.div
-                            className="locationalGuide__regionSelectButtonContainer"
-                            custom={back}
-                            key={index}
-                            variants={rowVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            transition={{ type: "tween", duration: 0.5 }}
-                        >
-                            {mapRegionArr
-                                .slice(offset * index, offset * index + offset)
-                                .map((_region) => {
-                                    const target =
-                                        regionableData[
-                                            _region as keyof typeof regionableData
-                                        ];
-                                    const isSelected = region === _region;
-                                    return (
-                                        <motion.div
-                                            variants={SliderVariants}
-                                            whileHover="hover"
-                                            className="locationalGuide__regionSelectButton"
-                                            onClick={handleSelectRegion(
-                                                _region
-                                            )}
-                                            style={{
-                                                backgroundColor: isSelected
-                                                    ? undefined
-                                                    : "transparent",
-                                            }}
-                                        >
-                                            <span>{l(target.title)}</span>
-                                            <img
-                                                className="locationalGuide__regionSelectButtonBg"
-                                                src={`/img/cities/${_region}.jpg`}
-                                            />
-                                        </motion.div>
-                                    );
-                                })}
-                        </motion.div>
-                    </AnimatePresence>
+                        <LeftArrowIcon />
+                    </button>
                 </div>
-            </div>
-            <div className="locationalGuide__sliderRightArrowContainer">
-                <button
-                    className="locationalGuide__sliderRightArrow"
-                    onClick={onClickNext}
-                    style={{
-                        display:
-                            index ===
-                            Math.ceil(mapRegionArr.length / offset) - 1
-                                ? "none"
-                                : "block",
-                    }}
-                >
-                    <RightArrowIcon />
-                </button>
-            </div>
+            )}
+            <motion.div
+                ref={ItemContainer}
+                className="locationalGuide__regionSliderContainer"
+            >
+                {width <= 415 ? (
+                    <motion.div
+                        drag="x"
+                        dragConstraints={ItemContainer}
+                        className="locationalGuide__regionSliderContentArea"
+                    >
+                        {mapRegionArr.map((_region) => {
+                            const target =
+                                regionableData[
+                                    _region as keyof typeof regionableData
+                                ];
+                            const isSelected = region === _region;
+                            return (
+                                <motion.div
+                                    variants={SliderVariants}
+                                    whileHover="hover"
+                                    className="locationalGuide__regionSelectButton"
+                                    onClick={handleSelectRegion(_region)}
+                                    style={{
+                                        backgroundColor: isSelected
+                                            ? undefined
+                                            : "transparent",
+                                    }}
+                                >
+                                    <span>{l(target.title)}</span>
+                                    <img
+                                        className="locationalGuide__regionSelectButtonBg"
+                                        src={`/img/cities/${_region}.jpg`}
+                                    />
+                                </motion.div>
+                            );
+                        })}
+                    </motion.div>
+                ) : (
+                    <motion.div className="locationalGuide__regionSliderContentArea">
+                        <AnimatePresence
+                            initial={false}
+                            custom={back}
+                            onExitComplete={toggleLeaving}
+                        >
+                            <motion.div
+                                className="locationalGuide__regionSelectButtonContainer"
+                                custom={back}
+                                key={index}
+                                variants={rowVariants}
+                                initial="hidden"
+                                animate="visible"
+                                exit="exit"
+                                transition={{ type: "tween", duration: 0.5 }}
+                            >
+                                {mapRegionArr
+                                    .slice(
+                                        offset * index,
+                                        offset * index + offset
+                                    )
+                                    .map((_region) => {
+                                        const target =
+                                            regionableData[
+                                                _region as keyof typeof regionableData
+                                            ];
+                                        const isSelected = region === _region;
+                                        return (
+                                            <motion.div
+                                                variants={SliderVariants}
+                                                whileHover="hover"
+                                                className="locationalGuide__regionSelectButton"
+                                                onClick={handleSelectRegion(
+                                                    _region
+                                                )}
+                                                style={{
+                                                    backgroundColor: isSelected
+                                                        ? undefined
+                                                        : "transparent",
+                                                }}
+                                            >
+                                                <span>{l(target.title)}</span>
+                                                <img
+                                                    className="locationalGuide__regionSelectButtonBg"
+                                                    src={`/img/cities/${_region}.jpg`}
+                                                />
+                                            </motion.div>
+                                        );
+                                    })}
+                            </motion.div>
+                        </AnimatePresence>
+                    </motion.div>
+                )}
+            </motion.div>
+            {width <= 415 ? null : (
+                <div className="locationalGuide__sliderRightArrowContainer">
+                    <button
+                        className="locationalGuide__sliderRightArrow"
+                        onClick={onClickNext}
+                        style={{
+                            display:
+                                index ===
+                                Math.ceil(mapRegionArr.length / offset) - 1
+                                    ? "none"
+                                    : "block",
+                        }}
+                    >
+                        <RightArrowIcon />
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

@@ -1,3 +1,8 @@
+@media screen and (max-width:415px) {
+    .detailNavCard__jdButtonWidth3 {
+        width: auto !important;
+    }
+}
 
 .detailNavCard{
     &__badges {

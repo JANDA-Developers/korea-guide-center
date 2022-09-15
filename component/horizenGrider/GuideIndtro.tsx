@@ -1,4 +1,4 @@
-import { Flex, JDbutton, JDhorizen } from "@janda-com/front";
+import { Flex, JDhorizen } from "@janda-com/front";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { useStartChat } from "../../hook/useChatRoom";
@@ -20,11 +20,13 @@ function GuideIntro({ item }: IGuideIntroProps) {
     );
     return (
         <Flex column>
-            <Flex className="guideCardWrapper" column>
-                <Flex>
+            <Flex className="guideCardWrapper " column>
+                <Flex className="regionGuides__infoWrapper">
                     <LeftFlex item={item} />
                     <div className="infoDiv">
-                        {guideNickName}
+                        <div className="infoDiv__guideNickName">
+                            {guideNickName}
+                        </div>
                         <JDhorizen margin={2} />
                         <Info item={item}></Info>
                     </div>

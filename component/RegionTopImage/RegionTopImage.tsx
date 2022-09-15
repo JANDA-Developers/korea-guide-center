@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { regionableData } from "../koreaMap/KoreaData";
 import { useGlobalKoreaMap } from "../../hook/useKoreaMap";

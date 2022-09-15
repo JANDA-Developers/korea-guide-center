@@ -1,3 +1,27 @@
+@media screen and (max-width:415px) {
+    .guideCardWrapper {
+        width: 100% !important;
+    }
+
+    .infoDiv {
+        width: auto !important;
+        padding: 0px 10px !important;
+    }
+
+    .infoDiv__guideNickName {
+        text-align: center !important;
+    }
+
+    .regionGuides__avatar {
+        width: 100% !important;
+        align-items: center !important;
+    }
+
+    .regionGuides__avater--button {
+        margin-left: 0px !important;
+    }
+}
+
 .userProfileCard {
     flex: 0;
     background-color: white;
