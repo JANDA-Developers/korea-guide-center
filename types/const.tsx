@@ -309,6 +309,10 @@ export const PAY_METHOD_OPS: IselectedOption<Paymethod>[] = [
 
 export const PAY_METHOD_LANGS_OPS = (s: any) => [
     {
+        label: s("paypal"),
+        value: Paymethod.PAY_PAL,
+    },
+    {
         label: s("bankPay"),
         value: Paymethod.BANK_TRANSFER,
     },
@@ -323,10 +327,6 @@ export const PAY_METHOD_LANGS_OPS = (s: any) => [
     {
         label: s("NAVER"),
         value: Paymethod.NAVER,
-    },
-    {
-        label: s("paypal"),
-        value: Paymethod.PAY_PAL,
     },
 ];
 
