@@ -686,10 +686,10 @@ const utils_message = {
         chi: "还没有旅游商品。",
     },
     itsguide_adress: {
-        ko: "부산광역시 영도구 봉래나루로 33, 306-27",
-        en: `(49037)306-27, 33 Bongnaenaru-ro, Yeongdo-gu, Busan, Republic of Korea`,
-        ja: `(49037)306-27, 33 Bongnaenaru-ro, Yeongdo-gu, Busan, Republic of Korea`,
-        chi: `釜山广域市 影岛区 Bongnaenaru路 33， 306-27 (49037)`,
+        ko: "부산광역시 영도구 봉래나루로 33",
+        en: `(49037) 33 Bongnaenaru-ro, Yeongdo-gu, Busan, Republic of Korea`,
+        ja: `(49037) 33 Bongnaenaru-ro, Yeongdo-gu, Busan, Republic of Korea`,
+        chi: `釜山广域市 影岛区 Bongnaenaru路 33 (49037)`,
     },
     itsguide_name: {
         ko: "코리아가이드센터(주)",
@@ -2685,10 +2685,10 @@ const utils_message = {
         chi: `NH 351-1150-2295-63`,
     },
     itsguide_FAX: {
-        ko: "051-715-0728",
-        en: `(+82) 051-715-0728`,
-        ja: `(+82) 051-715-0728`,
-        chi: `(+82) 051-715-0728`,
+        ko: "070-4580-8788",
+        en: `(+82) 070-4580-8788`,
+        ja: `(+82) 070-4580-8788`,
+        chi: `(+82) 070-4580-8788`,
     },
     itsguide_phone: {
         ko: "051-715-0727",

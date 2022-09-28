@@ -238,7 +238,7 @@ export const BookFooter: React.FC<IProp> = ({
                         <div className="textTransformClear">
                             <BottomInfo
                                 label={s("footer_email")}
-                                value={"kgcenter727@gmail.com"}
+                                value={"kguidecenter@gmail.com"}
                             />
                         </div>
                         <BottomInfo
@@ -248,6 +248,10 @@ export const BookFooter: React.FC<IProp> = ({
                         <BottomInfo
                             label={s("footer_address")}
                             value={s("itsguide_adress")}
+                        />
+                        <BottomInfo
+                            label={s("footer_accountNum")}
+                            value={`301-0308-0055-81`}
                         />
                     </div>
                 </div>
