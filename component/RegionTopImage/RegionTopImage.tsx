@@ -18,7 +18,7 @@ const RegionTopImage: React.FC<IProp> = ({ region }) => {
     const data = regionableData[region];
     const { title, description } = data;
 
-    const imgUrl = `/img/regionBg/${selectedGlobalRegion}.jpg`;
+    const imgUrl = `/img/cities/${selectedGlobalRegion}.jpg`;
 
     return (
         <>
