@@ -179,11 +179,10 @@ export const Badges = <_, T>({
             {items?.map((item, index) => (
                 <JDbadge
                     style={{ opacity: "0.7", borderRadius: "8px" }}
-                    className="textTransformClear"
+                    className="textTransformClear ProductDetail__profileBadge"
                     mb="superTiny"
                     key={uniqKey + index}
                     mr={isLast(index, items) ? "no" : "normal"}
-                    thema="point"
                     {...props}
                 >
                     {children(item)}

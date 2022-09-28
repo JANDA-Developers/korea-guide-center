@@ -1906,7 +1906,7 @@ const utils_message = {
         chi: `预约日`,
     },
     workArea: {
-        ko: "주 활동지역 : ",
+        ko: "활동지역",
         en: `activity area : `,
         ja: `活動地域 : `,
         chi: `活动区 : `,
@@ -1918,7 +1918,7 @@ const utils_message = {
         chi: `使用语言`,
     },
     guideType: {
-        ko: "활동 가능 지역 :",
+        ko: "가이드 타입",
         en: `Guide type :`,
         ja: `ガイドタイプ :`,
         chi: `导游类型 :`,
@@ -3640,7 +3640,7 @@ const utils_message = {
         chi: "自我介绍",
     },
     profileGuideArea: {
-        ko: "주 활동지역",
+        ko: "활동지역",
         en: "Main Area",
         ja: "主な活動地域",
         chi: "主要活动地区",

@@ -13,7 +13,6 @@ import { DEFAULT_PROFILE_IMG } from "../../types/const";
 import { filterVisibleProduct } from "../../utils/product";
 import { Badges } from "../../component/statusBadges/StatusBadges";
 import { Video } from "../../component/video/Video";
-import { SNSIcons } from "../../component/snsInput/SNSIcons";
 
 interface IGudeProfilePage {
     guideData: userFindById_UserFindById;
@@ -145,7 +144,7 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                 </Flex>
 
                                 <h6 className="guideProfile__subtitle">
-                                    {s("profileCategory")}
+                                    {s("guideType")}
                                 </h6>
 
                                 <Flex mb="huge" wrap>
