@@ -180,19 +180,19 @@ const RegionSlider = () => {
 
         {
             title: "CUSTOM",
-            queryTitle: "커스텀",
+            queryTitle: "CUSTOM",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
             title: "MICE",
-            queryTitle: "마이스",
+            queryTitle: "MICE",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
             title: "DRIVING",
-            queryTitle: "드라이빙가이드",
+            queryTitle: "DRIVING",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
