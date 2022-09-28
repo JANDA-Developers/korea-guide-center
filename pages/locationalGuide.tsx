@@ -1,6 +1,6 @@
 import React from "react";
 import { BookLayout } from "../component/layout/BookLayout";
-import { useGlobalKoreaMap, useKoreaMap } from "../hook/useKoreaMap";
+import { useGlobalKoreaMap } from "../hook/useKoreaMap";
 import RegionTopImage from "../component/RegionTopImage/RegionTopImage";
 import RegionGuides from "../component/RegionGuides/RegionGuides";
 

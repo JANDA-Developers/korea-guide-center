@@ -326,16 +326,16 @@
         margin-right: 1.875rem;
         box-sizing: border-box;
         padding: 1.25rem;
+        border-color: #d9d9d9;
         border-radius: 15px;
-        border-color: rgb(242, 246, 223);
-        border-width: 3px;
+        border-width: 1.5px;
         border-style: solid;
     }
 
     &__popularGuide--container {
         display: flex;
         width: 100%;
-        margin-bottom: 0.625rem;
+        margin-bottom: 1rem;
     }
 
     &__popularGuide--profileImage{
