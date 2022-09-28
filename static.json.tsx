@@ -3825,6 +3825,24 @@ const utils_message = {
         ja: "全羅北道",
         chi: "全羅北道",
     },
+    findGuidesTitle: {
+        ko: "파트너 가이드를 찾습니다.",
+        en: "Locate the Partner Guide.",
+        ja: "パートナーガイドを探します。",
+        chi: "寻找合作伙伴指南。",
+    },
+    findGuidesDesc: {
+        ko: "Korea Guide Center는 전 세계의 현명한 여행자와 연결 할 수 있는 무한한 가능성을 열어줍니다. 투어 가이딩은 신선한 공기를 마시며 사랑하는 그 지역을 거닐며, 그 지역여행을 즐기는 사람들과 매혹적인 지역의 문화, 역사 와 즐거움 발견하는 동시에 전 세계 사람들과 공유할 수 있는 가장 보람 있고 즐거움을 선사합니다. 도시와 그 역사에 대해 깊은 관심과 스토리텔링에 대한 소질, 매력적이고 재미있는 방식으로 정보를 전달할 수 있는 능력을 Korea Guide Center에서 펼쳐 보시기 바랍니다. Korea Guide Center와 함께 가이드님의 여행을 홍보하세요. 우리는 당신의 지역을, 여행을 세계와 공유할 것입니다!",
+        en: "The Korea Guide Center opens up endless possibilities for connecting with smart travelers around the world. Tour Guiding takes a stroll through the area, breathing fresh air, discovering the culture, history and enjoyment of the area and its fascinating local culture, history, and enjoyment, while providing the most rewarding and enjoyable experience to share with people around the world. We invite you to develop your deep interest in cities and their history, your talent for storytelling, and your ability to deliver information in an attractive and interesting way at the Korea Guide Center. Promote your trip with the Korea Guide Center. We will share your region, travel with the world!",
+        ja: "KoreaGuideCenterは、世界中の賢明な旅行者と繋がる無限の可能性を切り開きます。 ツアーガイドは新鮮な空気を吸いながら愛するその地域を歩き、その地域旅行を楽しむ人々と魅惑的な地域の文化、歴史と楽しさを発見すると同時に、世界中の人々と共有できる最もやりがいのある楽しさをお届けします。 都市とその歴史について深い関心とストーリーテリングに対する素質、魅力的で面白い方法で情報を伝える能力をKoreaGuideCenterで広げてみてください。 KoreaGuideCenterと一緒にガイドさんの旅行を広報してください。 私たちはあなたの地域を、旅行を世界と共有します！",
+        chi: "Korea Guide Center为连接全世界明智的旅行者提供了无限的可能性。 导游可以呼吸新鲜空气,漫步于心爱的那个地区,与喜欢旅行的人一起发现迷人的地区文化、历史和快乐,同时带来与全世界人民共享的最有意义和快乐。 请在Korea Guide Center上展开对城市及其历史的深切关心和对讲故事的素质,以有魅力、有趣的方式传达信息的能力。 请与Korea Guide Center一起宣传导游的旅行。 我们将与世界分享您的地区，旅行！",
+    },
+    findGuidesButton: {
+        ko: "가이드 등록하기",
+        en: "To register a Guide",
+        ja: "ガイド登録",
+        chi: "注册向导",
+    },
 };
 
 export const info = {
