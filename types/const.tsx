@@ -314,14 +314,14 @@ export const PAY_METHOD_LANGS_OPS = (s: any) => [
         icon: "/img/payments/paypal.png",
     },
     {
-        label: s("bankPay"),
-        value: Paymethod.BANK_TRANSFER,
-        icon: "/img/payments/bankbook.png",
-    },
-    {
         label: s("cardPay"),
         value: Paymethod.CARD,
         icon: "/img/payments/credit-card.png",
+    },
+    {
+        label: s("bankPay"),
+        value: Paymethod.BANK_TRANSFER,
+        icon: "/img/payments/bankbook.png",
     },
 ];
 
