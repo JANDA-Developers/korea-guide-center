@@ -49,20 +49,23 @@ export const PaymethodRadios: React.FC<IProp> = ({
                 }
 
                 return (
-                    <JDbutton
-                        className="payMethodRadio__btn"
-                        br="square"
-                        onClick={() => {
-                            onChange({
-                                ...method,
-                            });
-                        }}
-                        {...buttonProp}
-                        mr
-                        mb
-                    >
-                        {method.label}
-                    </JDbutton>
+                    <div className="payMethodRadio__btnWrapper">
+                        <img src={method.icon} />
+                        <JDbutton
+                            className="payMethodRadio__btn"
+                            br="square"
+                            onClick={() => {
+                                onChange({
+                                    ...method,
+                                });
+                            }}
+                            {...buttonProp}
+                            mr
+                            mb
+                        >
+                            {method.label}
+                        </JDbutton>
+                    </div>
                 );
             })}
         </div>

@@ -1,0 +1,17 @@
+.payMethodRadio {
+    display: flex;
+
+    &__btnWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__btnWrapper img {
+        width: 60px;
+        height: 60px;
+        margin-right: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+}

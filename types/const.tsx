@@ -311,22 +311,17 @@ export const PAY_METHOD_LANGS_OPS = (s: any) => [
     {
         label: s("paypal"),
         value: Paymethod.PAY_PAL,
+        icon: "/img/payments/paypal.png",
     },
     {
         label: s("bankPay"),
         value: Paymethod.BANK_TRANSFER,
+        icon: "/img/payments/bankbook.png",
     },
     {
         label: s("cardPay"),
         value: Paymethod.CARD,
-    },
-    {
-        label: s("KAKAO"),
-        value: Paymethod.KAKAO,
-    },
-    {
-        label: s("NAVER"),
-        value: Paymethod.NAVER,
+        icon: "/img/payments/credit-card.png",
     },
 ];
 
@@ -372,6 +367,11 @@ export const MapRegionKr: Record<mapRegion, string> = {
     busan: "부산",
     daegu: "대구",
     seoul: "서울",
+    "Custom Tour": "Custom Tour",
+    MICE: "MICE",
+    "Driving Tour": "Driving Tour",
+    "Medical Tour": "Medical Tour",
+    "Local Festival": "Local Festival",
 };
 
 export const Refund: Flangs = {
