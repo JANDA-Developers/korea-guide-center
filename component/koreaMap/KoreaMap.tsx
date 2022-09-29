@@ -320,4 +320,29 @@ const Flags: Record<
         y: 337,
         xlinkHref: "/img/map/Gwangju.png",
     },
+    "Custom Tour": {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    MICE: {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    "Driving Tour": {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    "Medical Tour": {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    "Local Festival": {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
 };
