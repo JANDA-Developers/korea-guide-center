@@ -170,7 +170,6 @@ interface IReviewBoxWithApi extends Partial<IProp> {
     queryControl?: genrateOption<reviewList, reviewListVariables>;
 }
 
-
 export const ReviewBoxsWithApi: React.FC<IReviewBoxWithApi> = ({
     queryControl,
     queryParam,
@@ -184,8 +183,7 @@ export const ReviewBoxsWithApi: React.FC<IReviewBoxWithApi> = ({
         getLoading,
     } = useReviewList(queryParam, queryControl);
 
-    if (!getLoading && isEmpty(reviews))
-        return <Empty msg={s("non_review")} />;
+    if (!getLoading && isEmpty(reviews)) return <Empty msg={s("non_review")} />;
 
     return (
         <div>

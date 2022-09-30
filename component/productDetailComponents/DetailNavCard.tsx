@@ -32,7 +32,7 @@ import { getRangeStringByNumber } from "../../utils/product";
 import { GuideCircle } from "../guideCircle/GuideCircle";
 import { InfoBox } from "../infoBox/InfoBox";
 import { Head } from "../ProfileForm/ProfileForm";
-import { IReviewModalInfo } from "../ReviewModal/ReviewModal";
+import { IReviewModalInfo, ReviewModalWrap } from "../ReviewModal/ReviewModal";
 import { Badges, Badges2 } from "../statusBadges/StatusBadges";
 import { WishIcon } from "../wisthIcon/WishIcon";
 import LogoComponent from "./DetailNavCardLogo";
@@ -301,6 +301,10 @@ export const DetailNavCard: React.FC<IProp> = ({
                     >
                         {s("reviewWrite")}
                     </JDbutton>
+                    <ReviewModalWrap
+                        key={reviewModalHook.info?.tour?._id}
+                        modalHook={reviewModalHook}
+                    />
                 </div>
             </JDcard>
             <InfoBox className="detailNavCard__InfoboxWidth">
