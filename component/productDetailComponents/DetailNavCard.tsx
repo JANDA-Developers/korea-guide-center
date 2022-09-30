@@ -131,7 +131,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                             />
                         </ShareMaster>
                     </Flex>
-                    {/**<MiniTable
+                    <MiniTable
                         mb
                         labelWidth="6rem"
                         valueWidth="6rem"
@@ -159,8 +159,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                                 },
                             ],
                         ]}
-                    /> */}
-
+                    />
                     {remain === 0 ? (
                         <Red mb="tiny" size="small">
                             {s("partyIsOvered")} <br />{" "}
@@ -289,7 +288,6 @@ export const DetailNavCard: React.FC<IProp> = ({
                             </Flex>
                         </>
                     )}
-                    {/* 리뷰, 현재 운영페이지에는 없음.
                     <JDbutton
                         hide={!reviewAb}
                         mode="border"
@@ -302,7 +300,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                         }}
                     >
                         {s("reviewWrite")}
-                    </JDbutton> */}
+                    </JDbutton>
                 </div>
             </JDcard>
             <InfoBox className="detailNavCard__InfoboxWidth">
