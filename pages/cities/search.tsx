@@ -88,6 +88,16 @@ const translateKoreanToEnglish = (title: string) => {
         return mapRegionArr[15];
     } else if (title === "경기") {
         return mapRegionArr[16];
+    } else if (title === "CUSTOM") {
+        return mapRegionArr[17];
+    } else if (title === "MICE") {
+        return mapRegionArr[18];
+    } else if (title === "DRIVING") {
+        return mapRegionArr[19];
+    } else if (title === "의료관광") {
+        return mapRegionArr[20];
+    } else if (title === "축제") {
+        return mapRegionArr[21];
     }
 };
 

@@ -478,11 +478,11 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
         },
         photos: [],
         title: {
-            en: ``,
-            ot: ``,
-            ko: ``,
-            chi: ``,
-            ja: ``,
+            en: `Custom Tour`,
+            ot: `Custom Tour`,
+            ko: `Custom Tour`,
+            chi: `Custom Tour`,
+            ja: `Custom Tour`,
         },
     },
     MICE: {
