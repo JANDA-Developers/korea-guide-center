@@ -170,7 +170,7 @@ export const BookFooter: React.FC<IProp> = ({
                                 <span
                                     className="footer__cityText"
                                     onClick={() => {
-                                        location.href = `/cities/search?title=전북`;
+                                        location.href = `/cities/search?title=전남`;
                                     }}
                                 >
                                     {s("cityNorthJeonla")}
@@ -178,7 +178,7 @@ export const BookFooter: React.FC<IProp> = ({
                                 <span
                                     className="footer__cityText"
                                     onClick={() => {
-                                        location.href = `/cities/search?title=전남`;
+                                        location.href = `/cities/search?title=전북`;
                                     }}
                                 >
                                     {s("citySouthJeonla")}
