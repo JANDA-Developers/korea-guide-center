@@ -30,6 +30,7 @@ export const BirthDayPicker: React.FC<IProp> = ({
     const month = birthDate.getMonth();
     const date = birthDate.getDate();
     const year = birthDate.getFullYear();
+
     const handleMonth = (day: number) => {
         birthDate.setMonth(day);
     };
