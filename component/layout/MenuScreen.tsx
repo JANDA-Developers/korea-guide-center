@@ -299,7 +299,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                         )}
                                     </City>
                                     <City
-                                        background="/img/cities/daejeon.jpg"
+                                        background="/img/cities/Daejeon.jpg"
                                         onClick={() => {
                                             location.href = `/cities/search?title=대전`;
                                         }}
