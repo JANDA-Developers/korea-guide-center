@@ -3843,6 +3843,18 @@ const utils_message = {
         ja: "ガイド登録",
         chi: "注册向导",
     },
+    LookAround: {
+        ko: "둘러보기",
+        en: "Look Around",
+        ja: "見回す",
+        chi: "浏览",
+    },
+    AboutAndSchedule: {
+        ko: "정보 & 예약하기",
+        en: "About & Schedule",
+        ja: "情報&予約",
+        chi: "信息&预约",
+    },
 };
 
 export const info = {

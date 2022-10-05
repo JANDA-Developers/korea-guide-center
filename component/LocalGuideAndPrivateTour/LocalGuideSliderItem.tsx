@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { mapRegion, regionableData } from "../koreaMap/KoreaData";
 import { Paths } from "../../pages/index[depre]";
+import { useContext } from "react";
+import { AppContext } from "../../context/context";
 
 export interface ILocalGuideSliderItem {
     title: string;
@@ -19,12 +21,10 @@ interface IGuideSliderItemProps {
 const LocalGuideSliderItem = ({
     item,
     onSelectRegion,
-    region,
     selectedRegion,
 }: IGuideSliderItemProps) => {
-    const data = regionableData[region];
+    const { s } = useContext(AppContext);
     const router = useRouter();
-    const { title, description, photos } = data;
     const handleSelectRegion = (region: any) => {
         onSelectRegion(region);
     };
@@ -57,7 +57,7 @@ const LocalGuideSliderItem = ({
                             router.push(Paths.locationalGuide);
                         }}
                     >
-                        둘러보기
+                        {s("LookAround")}
                     </button>
                 </div>
             </div>

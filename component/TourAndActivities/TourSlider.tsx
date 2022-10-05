@@ -42,7 +42,7 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
     queryControl,
     queryParam,
 }) => {
-    const { l } = useContext(AppContext);
+    const { s, l } = useContext(AppContext);
     const priceToString = (price: number) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
@@ -163,7 +163,7 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
                                         {priceToString(i.priceAdult!)}
                                     </h6>
                                     <button className="slider__TourSliderItemBookingButton">
-                                        <span>정보 & 예약하기</span>
+                                        <span>{s("AboutAndSchedule")}</span>
                                     </button>
                                 </div>
                             </motion.div>

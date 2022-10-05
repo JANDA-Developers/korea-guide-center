@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { AppContext } from "../../context/context";
+
 export interface IRegionSliderItem {
     title: string;
     queryTitle: string;
@@ -12,6 +15,7 @@ interface IRegionSliderItemProps {
 }
 
 const TourSliderItem = ({ item, offset, index }: IRegionSliderItemProps) => {
+    const { s } = useContext(AppContext);
     return (
         <>
             {item
@@ -33,7 +37,7 @@ const TourSliderItem = ({ item, offset, index }: IRegionSliderItemProps) => {
                                         location.href = `/cities/search?title=${i.queryTitle}`;
                                     }}
                                 >
-                                    둘러보기
+                                    {s("LookAround")}
                                 </button>
                             </div>
                         </div>

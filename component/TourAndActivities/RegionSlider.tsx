@@ -286,7 +286,7 @@ const RegionSlider = () => {
                                             location.href = `/cities/search?title=${i.queryTitle}`;
                                         }}
                                     >
-                                        둘러보기
+                                        {s("LookAround")}
                                     </button>
                                 </div>
                             </div>
