@@ -16,14 +16,14 @@ import Aboutus from "../component/Aboutus/Aboutus";
 import FindGuide from "../component/FindGuide/FindGuide";
 import SNS from "../component/SNS/SNS";
 
-type TIntroList = {
-    title: string;
-    link: string;
-    icon: string;
-};
+// type TIntroList = {
+//     title: string;
+//     link: string;
+//     icon: string;
+// };
 
-const svg_arrow_right = `<svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg_arrow_right"><path d="M2.85711 17.1429L37.1428 17.1429" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22.1428 2.14285L37.1428 17.1429L22.1428 32.1429" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+// const svg_arrow_right = `<svg width="40" height="35" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg_arrow_right"><path d="M2.85711 17.1429L37.1428 17.1429" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+// <path d="M22.1428 2.14285L37.1428 17.1429L22.1428 32.1429" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
 const TourLayout = () => {
     const { s } = useContext(AppContext);

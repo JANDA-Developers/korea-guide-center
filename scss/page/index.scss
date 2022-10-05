@@ -9,7 +9,11 @@ a {
     color: inherit;
 }
 
-@media screen and (max-width:415px) {
+// 반응형
+
+
+// Phone
+@media screen and (max-width:768px) {
     .tour__container {
         height: 30vh !important;
     }
@@ -161,6 +165,161 @@ a {
         width: 100% !important;
     }
 }
+
+// Tablet
+@media screen and (min-width:376px) and (max-width:465px) {
+    .tour__container {
+        height: 30vh !important;
+    }
+    .tour__searchBar{
+        display: none !important;
+    }
+
+    .tour__TextsliderContainer {
+        margin-bottom: 0px !important;
+    }
+
+    .tour__sliderText {
+        font-size:20px !important;
+        margin-top: 5rem !important;
+    }
+
+    .tour__sectionTitle {
+     font-size: 20px !important;
+    }
+    .slider__ShortSliderRightArrowContainer {
+        width: 4.875rem !important;
+    }
+    .slider__ShortSliderLeftArrowContainer {
+        width: 4.875rem !important;
+    }
+    .slider__ShortSliderItems {
+        width: 12.875rem !important;
+        height: 14.875rem !important;
+    }
+    .slider__ShortSliderContainer {
+        width: 98vw !important;
+        height: 14.875rem !important;
+    }
+    .slider__ShortSliderContentArea {
+        display: flex !important;
+    }
+    .slider__ShortSliderItems {
+        margin-right: 1.25rem !important;
+    }
+    .slider__LongSliderLeftArrowContainer {
+        width: 4.875rem !important;
+    }
+    .slider__LongSliderRightArrowContainer{
+        width: 4.875rem !important;
+    }
+    .slider__LongSliderContentArea {
+        display: flex !important;
+    }
+    .slider__LongSliderItems {
+        margin-right: 1.25rem !important;
+    }
+
+    .slider__LongSliderContainer {
+        width: 98vw !important;
+    }
+
+    .slider__TourSliderItemTextAndDesc {
+        height: auto !important;
+    }
+
+    .slider__RecommendGuideSectionTitle {
+        font-size: 20px !important;
+    }
+
+    .aboutUs__Container {
+        height: auto !important;
+    }
+    
+    .aboutUs__imageContainer {
+        position: relative !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        top: 0.5rem !important;
+    }
+
+    .aboutUs__imageFirst {
+        width:  90% !important;
+        height: 300px !important;
+        margin-right: 0px !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    .aboutUs__imageSecond {
+        width: 90% !important;
+        height: 300px !important;
+    }
+
+    .aboutUs__whiteLine {
+        width: 100% !important;
+    }
+
+    .aboutUs__bottomContainer {
+        position: relative !important;
+        flex-direction: column !important;
+    }
+
+    .aboutUs__bottomLeft {
+        width: 100% !important;
+        margin-right: 0px !important;
+    }
+
+    .aboutUs__bottomRight {
+        width: 100% !important;
+    }
+
+    .aboutUs__bottomRightTop {
+        font-size: 20px !important;
+        padding: 0px 10px !important;
+    }
+
+    .aboutUs__bottomRightBottom {
+        font-size: 16px !important;
+        padding: 0px 10px !important;
+    }
+
+    .findGuide__Container {
+    flex-direction: column !important;
+    }
+
+    .findGuide__imageSliderContainer {
+        width: 100% !important;
+    }
+    .findGuide__textContainer {
+        width: 100% !important;
+
+    }
+
+    .sns__Container {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    .sns__Title {
+        width: 100% !important;
+    }
+
+    .sns__youtube {
+        width: 100% !important;
+        padding: 0px 10px !important;
+        margin-bottom: 50px !important;
+    }
+
+    .sns__insta{
+        width: 100% !important;
+        padding: 0px 10px !important;
+    }
+
+    .sns__image {
+        width: 100% !important;
+    }
+}
+
 
 
 .ani_downtop {
