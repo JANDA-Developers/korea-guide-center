@@ -86,19 +86,19 @@ a {
         position: relative !important;
         flex-direction: column !important;
         align-items: center !important;
-        top: 0.5rem !important;
+        top : 0 !important
     }
 
     .aboutUs__imageFirst {
         width:  90% !important;
-        height: 300px !important;
+        height: 250px !important;
         margin-right: 0px !important;
         margin-bottom: 1.25rem !important;
     }
 
     .aboutUs__imageSecond {
         width: 90% !important;
-        height: 300px !important;
+        height: 250px !important;
     }
 
     .aboutUs__whiteLine {
@@ -111,21 +111,39 @@ a {
     }
 
     .aboutUs__bottomLeft {
+        display: flex !important;
+        align-items: center !important;
         width: 100% !important;
+        height: 50% !important;
         margin-right: 0px !important;
     }
 
     .aboutUs__bottomRight {
         width: 100% !important;
+        display: block !important;
+    }
+
+    .aboutUs__bottomLeftTop {
+        margin-bottom: 1rem !important;
+    }
+
+    .aboutUs__bottomLeftTop svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .aboutUs__bottomLeftBottom svg {
+        width: 30px;
+        height: 30px;
     }
 
     .aboutUs__bottomRightTop {
-        font-size: 20px !important;
+        font-size: 15px !important;
         padding: 0px 10px !important;
     }
 
     .aboutUs__bottomRightBottom {
-        font-size: 16px !important;
+        font-size: 13px !important;
         padding: 0px 10px !important;
     }
 
@@ -167,7 +185,7 @@ a {
 }
 
 // Tablet
-@media screen and (min-width:376px) and (max-width:465px) {
+@media screen and (min-width:769px) and (max-width:1025px) {
     .tour__container {
         height: 30vh !important;
     }
@@ -463,11 +481,11 @@ a {
     }
 
     &__imageContainer {
-        position: absolute;
+        position: relative;
         width: 100%;
         display: flex;
         justify-content: center;
-        top: 6.25rem;
+        top: 2rem;
         z-index: 10;
     }
 
