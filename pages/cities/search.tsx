@@ -237,7 +237,7 @@ export const Search: React.FC<IProp> = () => {
                     <div
                         className="regionTopImage__titleAndDescContainer"
                         style={{
-                            backgroundImage: `url(/img/regionBg/${selectedCitiesRegion}.jpg)`,
+                            backgroundImage: `url(/img/cities/${selectedCitiesRegion}.jpg)`,
                         }}
                     >
                         <h1 className="regionTopImage__title">
