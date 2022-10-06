@@ -304,11 +304,6 @@ export const ProductDetail: React.FC<IProp> = ({
                         )}
 
                         <JDhorizen margin={3} />
-                        <JDalign>
-                            {HeadInfo(`투어 소개`)}
-                            <br /> 사진
-                        </JDalign>
-                        <JDhorizen margin={3} />
                         <JDalign
                             hide={!l(include) && !l(unInclude) && !l(address)}
                         >
