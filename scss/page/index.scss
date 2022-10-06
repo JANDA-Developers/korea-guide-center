@@ -13,7 +13,7 @@ a {
 
 
 // Phone
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
     .tour__container {
         height: 30vh !important;
     }
@@ -185,9 +185,13 @@ a {
 }
 
 // Tablet
-@media screen and (min-width:769px) and (max-width:1025px) {
+@media screen and (min-width:540px) and (max-width:1025px) {
     .tour__container {
-        height: 30vh !important;
+        height: 80vh !important;
+    }
+
+    .tour__searchBar{
+        display: none !important;
     }
 
 
@@ -196,7 +200,7 @@ a {
     }
 
     .tour__sliderText {
-        font-size:20px !important;
+        font-size:40px !important;
         margin-top: 5rem !important;
     }
 

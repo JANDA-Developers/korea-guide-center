@@ -29,6 +29,9 @@
     }
     
     &__pcHeader {
+        @include response($mobile) {
+            display: none!important;
+        }
         @include response($tablet) {
             display: none!important;
         }

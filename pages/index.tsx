@@ -104,9 +104,11 @@ const TourLayout = () => {
                     </div> */}
                 </div>
             </div>
-            <TourAndActivities />
-            <LocalGuideAndPrivateTour />
-            <RecommendGuide randomSort key={locale + "ProductViewCard1"} />
+            <div>
+                <TourAndActivities />
+                <LocalGuideAndPrivateTour />
+                <RecommendGuide randomSort key={locale + "ProductViewCard1"} />
+            </div>
             <Aboutus />
             <FindGuide />
             <SNS />
