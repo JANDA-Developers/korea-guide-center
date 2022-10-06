@@ -1,4 +1,5 @@
-@media screen and (max-width:415px) {
+// mobile
+@media screen and (max-width:767px) {
 
     
     .locationalGuide__sliderContainer {
@@ -36,6 +37,57 @@
 
     .regionGuides__infoWrapper {
         flex-direction: column !important;
+    }
+
+    .locationalGuide__regionSelectorSectorContainer {
+        padding: 0px 10px !important;
+    }
+
+    .locationalGuide__regionArea {
+        width: 100% !important;
+    }
+
+    .regionTopImage__titleAndDescContainer {
+        padding: 0px !important
+    }
+
+}
+
+// tablet
+@media screen and (min-width:540px) and (max-width:1368px) {
+
+    
+    .locationalGuide__sliderContainer {
+        width: 100% !important;
+    }
+
+    .locationalGuide__regionSliderContainer {
+        width: 100% !important;
+    }
+
+    .locationalGuide__regionSliderContentArea {
+        
+        display: flex !important;
+    }
+
+    .regionTopImage__title {
+        font-size: 40px !important;
+    }
+
+    .regionTopImage__desc {
+        display: none !important;
+    }
+
+    .locationalGuide__regionSelectButton {
+        margin-right: 20px !important;
+    }
+
+    .regionGuides__bodyContainer {
+        width: 100% !important;
+    }
+
+    .regionGuides__bodyRightSection {
+        display: none !important;
     }
 
     .locationalGuide__regionSelectorSectorContainer {

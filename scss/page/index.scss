@@ -185,7 +185,7 @@ a {
 }
 
 // Tablet
-@media screen and (min-width:540px) and (max-width:1025px) {
+@media screen and (min-width:540px) and (max-width:1368px) {
     .tour__container {
         height: 80vh !important;
     }
@@ -294,12 +294,16 @@ a {
     }
 
     .aboutUs__bottomRightTop {
-        font-size: 20px !important;
+        font-size: 16px !important;
         padding: 0px 10px !important;
     }
 
+    .aboutUs__bottomLeftTop {
+        margin-bottom: 1rem !important;
+    }
+
     .aboutUs__bottomRightBottom {
-        font-size: 16px !important;
+        font-size: 12px !important;
         padding: 0px 10px !important;
     }
 

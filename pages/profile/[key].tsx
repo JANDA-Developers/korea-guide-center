@@ -132,7 +132,11 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                 <h6 className="guideProfile__subtitle">
                                     {s("profileGuideArea")}
                                 </h6>
-                                <Flex mb="huge" wrap>
+                                <Flex
+                                    className="guideProfile__Badges--wrapper"
+                                    mb="huge"
+                                    wrap
+                                >
                                     <Badges
                                         size="large"
                                         mb="small"
@@ -147,7 +151,11 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                     {s("guideType")}
                                 </h6>
 
-                                <Flex mb="huge" wrap>
+                                <Flex
+                                    className="guideProfile__Badges--wrapper"
+                                    mb="huge"
+                                    wrap
+                                >
                                     <Badges
                                         size="large"
                                         mb="small"

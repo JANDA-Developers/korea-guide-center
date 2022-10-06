@@ -57,7 +57,7 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
                     {items.map((item) => (
                         <GuideIntro item={item}></GuideIntro>
                     ))}
-                    <JDalign
+                    {/* <JDalign
                         mr
                         className="ProductViewCards__card ProductViewCards__card--placeholder"
                     />
@@ -68,7 +68,7 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
                     <JDalign
                         mr
                         className="ProductViewCards__card ProductViewCards__card--placeholder"
-                    />
+                    /> */}
                 </Flex>
             </AnimationOnScroll>
         </div>

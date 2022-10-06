@@ -1,3 +1,39 @@
+@media screen and (max-width:767px) {
+    .guideProfile__secter1 {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .guideProfile__avatarContainer {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .guideProfile__secter2 h1{
+        font-size: 26px !important;
+        text-align: center !important;
+    }
+
+    .guideProfile__subtitle{
+        font-size: 20px !important;
+       text-align: center !important; 
+    }
+
+    .guideProfile__text {
+        font-size: 16px !important;
+        text-align: center !important;
+    }
+
+    .guideProfile__Badges--wrapper {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items:  center !important;
+    }
+}
+
+
 .guideProfile {
     text-align: center;
     &__bg {

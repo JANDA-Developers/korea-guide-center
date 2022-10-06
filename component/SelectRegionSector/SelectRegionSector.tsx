@@ -71,7 +71,7 @@ export const SelectRegionSector: React.FC<IProp> = ({
 
     return (
         <div className="locationalGuide__sliderContainer">
-            {width <= 415 ? null : (
+            {width <= 1368 ? null : (
                 <div className="locationalGuide__sliderLeftArrowContainer">
                     <button
                         className="locationalGuide__sliderLeftArrow"
@@ -88,7 +88,7 @@ export const SelectRegionSector: React.FC<IProp> = ({
                 ref={ItemContainer}
                 className="locationalGuide__regionSliderContainer"
             >
-                {width <= 415 ? (
+                {width <= 1368 ? (
                     <motion.div
                         drag="x"
                         dragConstraints={ItemContainer}
@@ -176,7 +176,7 @@ export const SelectRegionSector: React.FC<IProp> = ({
                     </motion.div>
                 )}
             </motion.div>
-            {width <= 415 ? null : (
+            {width <= 1368 ? null : (
                 <div className="locationalGuide__sliderRightArrowContainer">
                     <button
                         className="locationalGuide__sliderRightArrow"
