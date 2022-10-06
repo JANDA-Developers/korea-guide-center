@@ -247,7 +247,7 @@ const RegionSlider = () => {
 
     return (
         <div className="slider__sliderContainer">
-            {width <= 415 ? null : (
+            {width <= 1025 ? null : (
                 <div className="slider__ShortSliderLeftArrowContainer">
                     <button
                         className="slider__ShortSliderLeftArrow"
@@ -264,7 +264,7 @@ const RegionSlider = () => {
                 ref={ItemContainer}
                 className="slider__ShortSliderContainer"
             >
-                {width <= 415 ? (
+                {width <= 1025 ? (
                     <motion.div
                         drag="x"
                         dragConstraints={ItemContainer}
@@ -319,7 +319,7 @@ const RegionSlider = () => {
                     </motion.div>
                 )}
             </motion.div>
-            {width <= 415 ? null : (
+            {width <= 1025 ? null : (
                 <div className="slider__ShortSliderRightArrowContainer">
                     <button
                         onClick={onClickNext}

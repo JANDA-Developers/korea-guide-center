@@ -106,7 +106,7 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
     const ItemContainer = useRef<HTMLDivElement>(null);
     return (
         <div className="slider__sliderContainer">
-            {width <= 415 ? null : (
+            {width <= 1025 ? null : (
                 <div className="slider__LongSliderLeftArrowContainer">
                     <button
                         className="slider__LongSliderLeftArrow"
@@ -123,7 +123,7 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
                 ref={ItemContainer}
                 className="slider__LongSliderContainer"
             >
-                {width <= 415 ? (
+                {width <= 1025 ? (
                     <motion.div
                         drag="x"
                         dragConstraints={ItemContainer}
@@ -196,7 +196,7 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
                     </motion.div>
                 )}
             </motion.div>
-            {width <= 415 ? null : (
+            {width <= 1025 ? null : (
                 <div className="slider__LongSliderRightArrowContainer">
                     <button
                         onClick={onClickNext}
