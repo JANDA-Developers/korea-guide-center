@@ -250,13 +250,13 @@ const RegionSlider = () => {
             title: s("ServicesLongStay"),
             queryTitle: "장기체류",
             products: 0,
-            imageUrl: "img/cities/seoul.jpg",
+            imageUrl: "img/cities/LongStay.jpg",
         },
         {
             title: s("ServicesCook"),
             queryTitle: "요리",
             products: 0,
-            imageUrl: "img/cities/seoul.jpg",
+            imageUrl: "img/cities/CookTour.jpg",
         },
     ];
 
