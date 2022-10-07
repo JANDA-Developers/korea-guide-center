@@ -1,4 +1,4 @@
-import { Flex, IJDalignProp, JDalign, JDbutton } from "@janda-com/front";
+import { Flex, IJDalignProp, JDalign } from "@janda-com/front";
 import React, { useEffect } from "react";
 import { TUseGlobalModal } from "../../hook/useGlobalModal";
 import { useSingleUpload } from "../../hook/useUpload";

@@ -39,7 +39,7 @@ export const InputWithGlobal: React.FC<IProp> = ({
         });
     };
 
-    console.log(langs.ko);
+    console.log("langs.ko :" + langs.ko);
 
     return (
         <InputText
@@ -58,7 +58,6 @@ export const InputWithGlobal: React.FC<IProp> = ({
             //           ) as any)
             //         : undefined
             // }
-
             label={label}
             {...props}
         />
