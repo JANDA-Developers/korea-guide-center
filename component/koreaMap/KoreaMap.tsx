@@ -319,7 +319,7 @@ const Flags: Record<
         y: 40,
         xlinkHref: "/img/map/dmzFlag.png",
     },
-    "Custom Tour": {
+    CustomTour: {
         x: 0,
         y: 0,
         xlinkHref: "",
@@ -329,7 +329,7 @@ const Flags: Record<
         y: 0,
         xlinkHref: "",
     },
-    "Driving Tour": {
+    DrivingTour: {
         x: 0,
         y: 0,
         xlinkHref: "",
@@ -339,12 +339,12 @@ const Flags: Record<
         y: 0,
         xlinkHref: "",
     },
-    "Local Festival": {
+    LocalFestival: {
         x: 0,
         y: 0,
         xlinkHref: "",
     },
-    "Interpreter and Guide": {
+    InterpreterGuide: {
         x: 0,
         y: 0,
         xlinkHref: "",
@@ -354,7 +354,7 @@ const Flags: Record<
         y: 0,
         xlinkHref: "",
     },
-    "VIP exhibition": {
+    VIPexhibition: {
         x: 0,
         y: 0,
         xlinkHref: "",
@@ -364,7 +364,7 @@ const Flags: Record<
         y: 0,
         xlinkHref: "",
     },
-    StudyingAbroad: {
+    StudyAbroad: {
         x: 0,
         y: 0,
         xlinkHref: "",

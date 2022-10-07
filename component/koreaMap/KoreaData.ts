@@ -495,7 +495,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             `,
         },
     },
-    "Custom Tour": {
+    CustomTour: {
         description: {
             chi: ``,
             en: ``,
@@ -523,7 +523,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
         photos: [],
         title: { en: `MICE`, ot: `MICE`, ko: `MICE`, chi: `MICE`, ja: `MICE` },
     },
-    "Driving Tour": {
+    DrivingTour: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
         photos: [],
         title: {
@@ -545,7 +545,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `Wellness&Medical`,
         },
     },
-    "Local Festival": {
+    LocalFestival: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
         photos: [],
         title: {
@@ -556,15 +556,15 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `Local Festival`,
         },
     },
-    "Interpreter and Guide": {
+    InterpreterGuide: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
         photos: [],
         title: {
-            en: `Interpreter and Guide`,
-            ot: `Interpreter and Guide`,
-            ko: `Interpreter and Guide`,
-            chi: `Interpreter and Guide`,
-            ja: `Interpreter and Guide`,
+            en: `Interpreter Guide`,
+            ot: `Interpreter Guide`,
+            ko: `Interpreter Guide`,
+            chi: `Interpreter Guide`,
+            ja: `Interpreter Guide`,
         },
     },
     BarrierFree: {
@@ -578,7 +578,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `BarrierFree`,
         },
     },
-    "VIP exhibition": {
+    VIPexhibition: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
         photos: [],
         title: {
@@ -593,22 +593,22 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
         photos: [],
         title: {
-            en: `RealEstate`,
-            ot: `RealEstate`,
-            ko: `RealEstate`,
-            chi: `RealEstate`,
-            ja: `RealEstate`,
+            en: `Real Estate`,
+            ot: `Real Estate`,
+            ko: `Real Estate`,
+            chi: `Real Estate`,
+            ja: `Real Estate`,
         },
     },
-    StudyingAbroad: {
+    StudyAbroad: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
         photos: [],
         title: {
-            en: `StudyingAbroad`,
-            ot: `StudyingAbroad`,
-            ko: `StudyingAbroad`,
-            chi: `StudyingAbroad`,
-            ja: `StudyingAbroad`,
+            en: `Study Abroad`,
+            ot: `Study Abroad`,
+            ko: `Study Abroad`,
+            chi: `Study Abroad`,
+            ja: `Study Abroad`,
         },
     },
     LongStay: {
@@ -655,17 +655,17 @@ export enum mapRegion {
     Gangwon = "Gangwon",
     Gyeonggi = "Gyeonggi",
     //
-    Custom = "Custom Tour",
+    Custom = "CustomTour",
     Mice = "MICE",
-    Driving = "Driving Tour",
+    Driving = "DrivingTour",
     WellnessMedical = "WellnessMedical",
-    LocalFestival = "Local Festival",
+    LocalFestival = "LocalFestival",
     //
-    Interpreter = "Interpreter and Guide",
+    Interpreter = "InterpreterGuide",
     BarrierFree = "BarrierFree",
-    VIPexhibition = "VIP exhibition",
+    VIPexhibition = "VIPexhibition",
     RealEstate = "RealEstate",
-    StudyingAbroad = "StudyingAbroad",
+    StudyAbroad = "StudyAbroad",
     LongStay = "LongStay",
     Cook = "CookTour",
 }
