@@ -468,6 +468,33 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             `,
         },
     },
+    dmz: {
+        description: {
+            chi: `非武装地带是用英文来说 DMZ(Demilitarized Zone)。从休战线到南2公里到北2公里的区域。不动员军事力,不安排兵力。中立国监视人们是否维持非武装监视着。这区域南北任何民间人也禁止出入。但可以看到北朝鲜。40年之间禁止人们出入，所以是保存完好自然的地区。收到了自然生态系研究的关注。这地区是韩国战争的历史到现在为止还继续下来的现场。只要收到出入认可才进去观看，所以很独特的旅游景点。 `,
+            en: `DMZ is Demiliterized Zone. From cease fire lin, 2km to north 2km to south. Without military power, without troops area. Neutral monitoring team watch over Demiliterized  area. Both North and South, civilian access is restricted. You can see North Korea from here. Over 40 years, people are restricted from entering this area, so nature is well preserved. People pay attention as an academic subject of natural ecosystem research. It’s the area that Korean war history continues until now. So Tour is possible only with a permit. Rather, it’s a different attraction for sightseeing.`,
+            ot: `DMZ is Demiliterized Zone. From cease fire lin, 2km to north 2km to south. Without military power, without troops area. Neutral monitoring team watch over Demiliterized  area. Both North and South, civilian access is restricted. You can see North Korea from here. Over 40 years, people are restricted from entering this area, so nature is well preserved. People pay attention as an academic subject of natural ecosystem research. It’s the area that Korean war history continues until now. So Tour is possible only with a permit. Rather, it’s a different attraction for sightseeing.`,
+            ja: `非武装地帯は英語ではDMZ(Demilitarized Zone)と表記し、休戦ラインから南北にそれぞれ2kmずつ指定された場所で、軍事力を動員して兵力を配置しないことに指定し、中立国監視団が非武装で維持されているか監視活動を繰り広げる場所で、南北とも民間人の出入りも徹底して統制されているが、北朝鮮を肉眼で見ることもできる場所です。40年以上人々の出入りが統制されているため自然がよく保存されており、自然生態系研究の学術的対象として注目されており、韓国における激動の戦争の歴史が現在も続いている現場であるため、特別出入許可を受けなければ観光できないため、むしろ旅行客にはユニークな名所です。 `,
+            ko: `비무장지대는 영어로는 DMZ(Demilitarized Zone)라고 표기하며, 휴전선으로부터 남·북으로 각각 2km씩 지정된 곳으로 군사력을 동원해서 병력을 배치하지 않기로 지정하여 중립국 감시단이 비무장으로 잘 유지되고 있는지 감시 활동을 펼치는 곳으로 남,북측 모두 민간인의 출입도 철처하게 통제되고 있으나 북한을 육안으로도 볼수있는 곳입니다. 40년 넘도록 사람들의 출입이 통제되었기 때문에 자연이 잘 보존되어 있어 자연생태계 연구의 학술적 대상으로 주목받고 있으며, 한국의 격동의 전쟁의 역사가 현재에도 이어지고 있는 현장이므로 특별출입허가를 받아야 관광을 할수 있기때문에 오히려 여행객들에게는 색다른 명소입니다.`,
+        },
+        photos: [],
+        title: {
+            en: `
+            DMZ
+            `,
+            ot: `
+            DMZ
+            `,
+            ko: `
+            DMZ
+            `,
+            chi: `
+            DMZ
+            `,
+            ja: `
+            DMZ
+            `,
+        },
+    },
     "Custom Tour": {
         description: {
             chi: ``,
@@ -507,15 +534,15 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `Driving Tour`,
         },
     },
-    "Medical Tour": {
+    WellnessMedical: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
         photos: [],
         title: {
-            en: `Medical Tour`,
-            ot: `Medical Tour`,
-            ko: `Medical Tour`,
-            chi: `Medical Tour`,
-            ja: `Medical Tour`,
+            en: `Wellness&Medical`,
+            ot: `Wellness&Medical`,
+            ko: `Wellness&Medical`,
+            chi: `Wellness&Medical`,
+            ja: `Wellness&Medical`,
         },
     },
     "Local Festival": {
@@ -529,10 +556,87 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `Local Festival`,
         },
     },
+    "Interpreter and Guide": {
+        description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
+        photos: [],
+        title: {
+            en: `Interpreter and Guide`,
+            ot: `Interpreter and Guide`,
+            ko: `Interpreter and Guide`,
+            chi: `Interpreter and Guide`,
+            ja: `Interpreter and Guide`,
+        },
+    },
+    BarrierFree: {
+        description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
+        photos: [],
+        title: {
+            en: `BarrierFree`,
+            ot: `BarrierFree`,
+            ko: `BarrierFree`,
+            chi: `BarrierFree`,
+            ja: `BarrierFree`,
+        },
+    },
+    "VIP exhibition": {
+        description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
+        photos: [],
+        title: {
+            en: `VIP exhibition`,
+            ot: `VIP exhibition`,
+            ko: `VIP exhibition`,
+            chi: `VIP exhibition`,
+            ja: `VIP exhibition`,
+        },
+    },
+    RealEstate: {
+        description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
+        photos: [],
+        title: {
+            en: `RealEstate`,
+            ot: `RealEstate`,
+            ko: `RealEstate`,
+            chi: `RealEstate`,
+            ja: `RealEstate`,
+        },
+    },
+    StudyingAbroad: {
+        description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
+        photos: [],
+        title: {
+            en: `StudyingAbroad`,
+            ot: `StudyingAbroad`,
+            ko: `StudyingAbroad`,
+            chi: `StudyingAbroad`,
+            ja: `StudyingAbroad`,
+        },
+    },
+    LongStay: {
+        description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
+        photos: [],
+        title: {
+            en: `LongStay`,
+            ot: `LongStay`,
+            ko: `LongStay`,
+            chi: `LongStay`,
+            ja: `LongStay`,
+        },
+    },
+    CookTour: {
+        description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
+        photos: [],
+        title: {
+            en: `CookTour`,
+            ot: `CookTour`,
+            ko: `CookTour`,
+            chi: `CookTour`,
+            ja: `CookTour`,
+        },
+    },
 };
 
 export enum mapRegion {
-    // "dmz" = "dmz",
+    "dmz" = "dmz",
     "seoul" = "seoul",
     "busan" = "busan",
     "daegu" = "daegu",
@@ -550,11 +654,20 @@ export enum mapRegion {
     NorthChungcheong = "NorthChungcheong",
     Gangwon = "Gangwon",
     Gyeonggi = "Gyeonggi",
+    //
     Custom = "Custom Tour",
     Mice = "MICE",
     Driving = "Driving Tour",
-    Medical = "Medical Tour",
+    WellnessMedical = "WellnessMedical",
     LocalFestival = "Local Festival",
+    //
+    Interpreter = "Interpreter and Guide",
+    BarrierFree = "BarrierFree",
+    VIPexhibition = "VIP exhibition",
+    RealEstate = "RealEstate",
+    StudyingAbroad = "StudyingAbroad",
+    LongStay = "LongStay",
+    Cook = "CookTour",
 }
 
 export const mapRegionArr = enumToArray(mapRegion);

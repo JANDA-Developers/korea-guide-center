@@ -177,34 +177,84 @@ const RegionSlider = () => {
             products: 0,
             imageUrl: "img/cities/Gyeonggi.jpg",
         },
-
         {
-            title: "CUSTOM",
-            queryTitle: "CUSTOM",
+            title: l(
+                regionableData[mapRegion.dmz as keyof typeof regionableData]
+                    .title
+            ),
+            queryTitle: "dmz",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
-            title: "MICE",
+            title: s("ServicesCustom"),
+            queryTitle: "Custom",
+            products: 0,
+            imageUrl: "img/cities/seoul.jpg",
+        },
+        {
+            title: s("ServicesMICE"),
             queryTitle: "MICE",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
-            title: "DRIVING",
+            title: s("ServicesDriving"),
             queryTitle: "DRIVING",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
-            title: "MEDICAL",
+            title: s("ServicesWellness"),
             queryTitle: "의료관광",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
         {
-            title: "LOCAL FESTIVAL",
+            title: s("ServicesLocalFestival"),
             queryTitle: "축제",
+            products: 0,
+            imageUrl: "img/cities/seoul.jpg",
+        },
+        {
+            title: s("ServicesTranlate"),
+            queryTitle: "통역",
+            products: 0,
+            imageUrl: "img/cities/seoul.jpg",
+        },
+        {
+            title: s("ServicesBarrierFree"),
+            queryTitle: "Barrier-Free",
+            products: 0,
+            imageUrl: "img/cities/seoul.jpg",
+        },
+        {
+            title: s("ServicesVIP"),
+            queryTitle: "VIP의전",
+            products: 0,
+            imageUrl: "img/cities/seoul.jpg",
+        },
+        {
+            title: s("ServicesRealEstate"),
+            queryTitle: "부동산",
+            products: 0,
+            imageUrl: "img/cities/seoul.jpg",
+        },
+        {
+            title: s("ServicesStudyingAbroad"),
+            queryTitle: "유학",
+            products: 0,
+            imageUrl: "img/cities/seoul.jpg",
+        },
+        {
+            title: s("ServicesLongStay"),
+            queryTitle: "장기체류",
+            products: 0,
+            imageUrl: "img/cities/seoul.jpg",
+        },
+        {
+            title: s("ServicesCook"),
+            queryTitle: "요리",
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },

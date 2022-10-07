@@ -183,7 +183,150 @@ export const BookFooter: React.FC<IProp> = ({
                                 >
                                     {s("citySouthJeonla")}
                                 </span>
+                                <span
+                                    className="footer__cityText"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=dmz`;
+                                    }}
+                                >
+                                    DMZ
+                                </span>
                             </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 className=" text-[#8d8d89]">
+                            {s("footerServices")}
+                        </h1>
+                        <div className="flex flex-col text-white space-y-[0.938rem]">
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesDriving"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesDriving")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesMICE"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesMICE")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesTranlate"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesTranlate")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesBarrierFree"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesBarrierFree")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesVIP"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesVIP")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesWellness"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesWellness")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/offer`;
+                                }}
+                            >
+                                {s("ServicesPrivate")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesLocalFestival"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesLocalFestival")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesRealEstate"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesRealEstate")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesStudyingAbroad"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesStudyingAbroad")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesLongStay"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesLongStay")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `/cities/search?title=${s(
+                                        "ServicesCook"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesCook")}
+                            </span>
+                            <span
+                                className="cursor-pointer"
+                                onClick={() => {
+                                    location.href = `cities/search?title=${s(
+                                        "ServicesCustom"
+                                    )}`;
+                                }}
+                            >
+                                {s("ServicesCustom")}
+                            </span>
                         </div>
                     </div>
                 </div>

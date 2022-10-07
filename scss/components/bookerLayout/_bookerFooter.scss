@@ -20,6 +20,7 @@
 .footer {
     &__innerContainer {
         display: flex;
+        justify-content: space-between;
     }
 
     &__citiesTitle {

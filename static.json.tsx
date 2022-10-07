@@ -3699,6 +3699,12 @@ const utils_message = {
         ja: "都市",
         chi: "城市",
     },
+    footerServices: {
+        ko: "서비스",
+        en: "Services",
+        ja: "サービス",
+        chi: "服务",
+    },
     SNSYoutube: {
         ko: "코리아 가이드 유튜브",
         en: "Korea Guide Youtube",
@@ -3854,6 +3860,79 @@ const utils_message = {
         en: "About & Schedule",
         ja: "情報&予約",
         chi: "信息&预约",
+    },
+    ServicesDriving: {
+        ko: "드라이빙가이드",
+        en: "Driving Guide",
+        ja: "ドライビングガイド",
+        chi: "驾驶导游",
+    },
+    ServicesMICE: { ko: "MICE", en: "MICE", ja: "MICE", chi: "MICE" },
+    ServicesTranlate: {
+        ko: "통역&가이드",
+        en: "Interpreter & Guide",
+        ja: "通訳&ガイド",
+        chi: "翻译导游",
+    },
+    ServicesBarrierFree: {
+        ko: "Barrier-Free",
+        en: "Barrier-Free",
+        ja: "Barrier-Free",
+        chi: "Barrier-Free",
+    },
+    ServicesVIP: {
+        ko: "VIP의전",
+        en: "VIP exhibition",
+        ja: "VIP儀典",
+        chi: "VIP礼宾",
+    },
+    ServicesWellness: {
+        ko: "웰니스&의료관광",
+        en: "Wellness&Medical",
+        ja: "ウェルネス&メディカル",
+        chi: "健康与医疗",
+    },
+    ServicesPrivate: {
+        ko: "프라이빗 투어",
+        en: "Private Tour",
+        ja: "プライベートツアー",
+        chi: "私人旅游",
+    },
+    ServicesLocalFestival: {
+        ko: "로컬페스티벌",
+        en: "LocalFestival",
+        ja: "ローカルフェスティバル",
+        chi: "当地庆典",
+    },
+    ServicesRealEstate: {
+        ko: "부동산",
+        en: "Real estate",
+        ja: "不動産",
+        chi: "房地产",
+    },
+    ServicesStudyingAbroad: {
+        ko: "유학",
+        en: "Studying abroad",
+        ja: "留学",
+        chi: "留学",
+    },
+    ServicesLongStay: {
+        ko: "장기체류",
+        en: "LongStay",
+        ja: "長期滞在",
+        chi: "长期滞留",
+    },
+    ServicesCook: {
+        ko: "요리투어",
+        en: "Cooking tour",
+        ja: "料理ツアー",
+        chi: "料理旅行",
+    },
+    ServicesCustom: {
+        ko: "커스텀투어",
+        en: "Custom tour",
+        ja: "カスタムツアー",
+        chi: "定制旅游",
     },
 };
 

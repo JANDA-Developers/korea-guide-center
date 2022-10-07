@@ -45,7 +45,7 @@ export const KoreaMap: React.FC<IProp> = ({ onClick, selectedRegiion }) => {
 
     return (
         <div className="KoreaMpWrap" style={{ position: "relative" }}>
-            {/* <div className="KoreaMpWrap__dmzWrap">
+            <div className="KoreaMpWrap__dmzWrap">
                 <img
                     className="KoreaMpWrap__gray_dmzFlag"
                     src="/img/map/gray_dmzFlag.png"
@@ -65,8 +65,7 @@ export const KoreaMap: React.FC<IProp> = ({ onClick, selectedRegiion }) => {
                         id="KR-DMZ"
                     />
                 </svg>
-            </div> */}
-
+            </div>
             <svg
                 className={`KoreaMap ${
                     selectedRegiion ? "KoreaMap--selected" : ""
@@ -230,11 +229,6 @@ const Flags: Record<
         xlinkHref: string;
     }
 > = {
-    // dmz: {
-    //     x: 110,
-    //     y: 40,
-    //     xlinkHref: "/img/map/dmzFlag.png",
-    // },
     seoul: {
         x: 140,
         y: 50,
@@ -320,6 +314,11 @@ const Flags: Record<
         y: 337,
         xlinkHref: "/img/map/Gwangju.png",
     },
+    dmz: {
+        x: 110,
+        y: 40,
+        xlinkHref: "/img/map/dmzFlag.png",
+    },
     "Custom Tour": {
         x: 0,
         y: 0,
@@ -335,12 +334,47 @@ const Flags: Record<
         y: 0,
         xlinkHref: "",
     },
-    "Medical Tour": {
+    WellnessMedical: {
         x: 0,
         y: 0,
         xlinkHref: "",
     },
     "Local Festival": {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    "Interpreter and Guide": {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    BarrierFree: {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    "VIP exhibition": {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    RealEstate: {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    StudyingAbroad: {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    LongStay: {
+        x: 0,
+        y: 0,
+        xlinkHref: "",
+    },
+    CookTour: {
         x: 0,
         y: 0,
         xlinkHref: "",
