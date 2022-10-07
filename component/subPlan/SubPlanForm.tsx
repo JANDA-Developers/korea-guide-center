@@ -63,9 +63,9 @@ export const SubPlanForm: React.FC<IProp> = ({
             </Flex>
             <InputWithGlobal
                 mb
-                label="일정내용 (200자이하)"
+                label="일정내용 (500자이하)"
                 textarea
-                maxLength={200}
+                maxLength={500}
                 globalModalHook={globalModalHook}
                 langs={description}
                 setLangs={(value: any) => {
