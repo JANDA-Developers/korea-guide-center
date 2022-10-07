@@ -63,7 +63,7 @@ export const TourModal: React.FC<IProp> = ({
             }}
             {...modalHook}
         >
-            {/* <JDbutton
+            <JDbutton
                 size="long"
                 mb
                 thema="primary"
@@ -74,7 +74,7 @@ export const TourModal: React.FC<IProp> = ({
                 }}
             >
                 모든회차 수정하기
-            </JDbutton> */}
+            </JDbutton>
             <TourTable
                 editMode
                 Controller={(tour) => {
