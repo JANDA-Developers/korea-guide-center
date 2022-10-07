@@ -48,6 +48,30 @@ export const SubPlanForms: React.FC<IProp> = ({
 
     return (
         <JDalign className={`subPlanForms ${className}`} {...props}>
+            <div
+                style={{
+                    marginBottom: "12.8px",
+                }}
+            >
+                <JDbutton
+                    mr
+                    onClick={handleAddPlan}
+                    thema="grey4"
+                    mode="flat"
+                    br="square"
+                >
+                    일정추가
+                </JDbutton>
+                <JDbutton
+                    disabled={subPlanes.length < 1}
+                    onClick={handlePreview}
+                    thema="grey4"
+                    mode="flat"
+                    br="square"
+                >
+                    미리보기
+                </JDbutton>
+            </div>
             {subPlanes.map((plan, index) => (
                 <div
                     style={{
@@ -111,26 +135,6 @@ export const SubPlanForms: React.FC<IProp> = ({
                     </JDbutton>
                 </div>
             ))}
-            {subPlanes.length <= 0 ? (
-                <JDbutton
-                    mr
-                    onClick={handleAddPlan}
-                    thema="grey4"
-                    mode="flat"
-                    br="square"
-                >
-                    일정추가
-                </JDbutton>
-            ) : null}
-            <JDbutton
-                disabled={subPlanes.length < 1}
-                onClick={handlePreview}
-                thema="grey4"
-                mode="flat"
-                br="square"
-            >
-                미리보기
-            </JDbutton>
             <SubPlanPreveiwModal modalHook={subPlanPreveiwModalHook} />
         </JDalign>
     );
