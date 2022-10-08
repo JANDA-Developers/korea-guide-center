@@ -367,11 +367,19 @@ export const MapRegionKr: Record<mapRegion, string> = {
     busan: "부산",
     daegu: "대구",
     seoul: "서울",
-    "Custom Tour": "Custom Tour",
+    CustomTour: "Custom Tour",
     MICE: "MICE",
-    "Driving Tour": "Driving Tour",
-    "Medical Tour": "Medical Tour",
-    "Local Festival": "Local Festival",
+    DrivingTour: "Driving Tour",
+    WellnessMedical: "Medical Tour",
+    LocalFestival: "Local Festival",
+    InterpreterGuide: "InterpreterGuide",
+    BarrierFree: "Barrier Free",
+    VIPexhibition: "VIP exhibition",
+    RealEstate: "Real Estate",
+    StudyAbroad: "Study Abroad",
+    LongStay: "Long Stay",
+    CookTour: "Cook Tour",
+    dmz: "dmz",
 };
 
 export const Refund: Flangs = {
