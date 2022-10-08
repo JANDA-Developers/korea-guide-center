@@ -141,10 +141,10 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
                                             : l(i.title)}
                                     </h6>
                                     <p>
-                                        {l(i.shortDecsription).length >= 40
+                                        {l(i.shortDecsription).length >= 30
                                             ? l(i.shortDecsription).slice(
                                                   0,
-                                                  40
+                                                  30
                                               ) + "..."
                                             : l(i.shortDecsription)}
                                     </p>
