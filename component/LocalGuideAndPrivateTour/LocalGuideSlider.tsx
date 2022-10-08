@@ -8,6 +8,8 @@ import LocalGuideSliderItem, {
 import RightArrowIcon from "../../icons/RightArrowIcon";
 import LeftArrowIcon from "../../icons/LeftArrowIcon";
 import { useGlobalKoreaMap } from "../../hook/useKoreaMap";
+import Section from "../MultiCarousel/Section";
+import MultiGuideCarousel from "../MultiCarousel/MultiGuideCarousel";
 
 export const localGuideData: ILocalGuideSliderItem[] = [
     {
@@ -158,84 +160,63 @@ const LocalGuideSlider = () => {
     const ItemContainer = useRef<HTMLDivElement>(null);
 
     return (
-        <div className="slider__sliderContainer">
-            {width <= 1025 ? null : (
-                <div className="slider__ShortSliderLeftArrowContainer">
-                    <button
-                        className="slider__ShortSliderLeftArrow"
-                        onClick={onClickPrev}
-                        style={{
-                            display: index === 0 ? "none" : "block",
-                        }}
-                    >
-                        <LeftArrowIcon />
-                    </button>
-                </div>
-            )}
-            <motion.div
-                ref={ItemContainer}
-                className="slider__ShortSliderContainer"
-            >
-                {width <= 1025 ? (
-                    <motion.div
-                        drag="x"
-                        dragConstraints={ItemContainer}
-                        className="slider__ShortSliderContentArea"
-                    >
-                        {localGuideData.map((i) => (
-                            <LocalGuideSliderItem
-                                item={i}
-                                region={selectedGlobalRegion}
-                                onSelectRegion={selectGlobalRegion}
-                                selectedRegion={i.region}
-                            />
-                        ))}
-                    </motion.div>
-                ) : (
-                    <motion.div className="slider__ShortSliderContentArea">
-                        <AnimatePresence
-                            initial={false}
-                            custom={back}
-                            onExitComplete={toggleLeaving}
+        <>
+            {width <= 1025 ? (
+                <motion.div
+                    ref={ItemContainer}
+                    className="slider__ShortSliderContainer"
+                >
+                    {width <= 1025 ? (
+                        <motion.div
+                            drag="x"
+                            dragConstraints={ItemContainer}
+                            className="slider__ShortSliderContentArea"
                         >
-                            <motion.div
-                                className="slider__ShortSliderRow"
-                                custom={back}
-                                key={index}
-                                variants={rowVariants}
-                                initial="hidden"
-                                animate="visible"
-                                exit="exit"
-                                transition={{ type: "tween", duration: 0.5 }}
-                            >
-                                <LocalGuideSliderItems
-                                    items={localGuideData}
-                                    offset={offset}
-                                    index={index}
+                            {localGuideData.map((i) => (
+                                <LocalGuideSliderItem
+                                    item={i}
+                                    region={selectedGlobalRegion}
+                                    onSelectRegion={selectGlobalRegion}
+                                    selectedRegion={i.region}
                                 />
-                            </motion.div>
-                        </AnimatePresence>
-                    </motion.div>
-                )}
-            </motion.div>
-            {width <= 1025 ? null : (
-                <div className="slider__ShortSliderRightArrowContainer">
-                    <button
-                        onClick={onClickNext}
-                        className="slider__ShortSliderRightArrow"
-                        style={{
-                            display:
-                                index ===
-                                Math.ceil(localGuideData.length / offset) - 1
-                                    ? "none"
-                                    : "block",
-                        }}
-                    >
-                        <RightArrowIcon />
-                    </button>
-                </div>
+                            ))}
+                        </motion.div>
+                    ) : (
+                        <motion.div className="slider__ShortSliderContentArea">
+                            <AnimatePresence
+                                initial={false}
+                                custom={back}
+                                onExitComplete={toggleLeaving}
+                            >
+                                <motion.div
+                                    className="slider__ShortSliderRow"
+                                    custom={back}
+                                    key={index}
+                                    variants={rowVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                    transition={{
+                                        type: "tween",
+                                        duration: 0.5,
+                                    }}
+                                >
+                                    <LocalGuideSliderItems
+                                        items={localGuideData}
+                                        offset={offset}
+                                        index={index}
+                                    />
+                                </motion.div>
+                            </AnimatePresence>
+                        </motion.div>
+                    )}
+                </motion.div>
+            ) : (
+                <Section>
+                    <MultiGuideCarousel items={localGuideData} />
+                </Section>
             )}
-        </div>
+        </>
     );
 };
 

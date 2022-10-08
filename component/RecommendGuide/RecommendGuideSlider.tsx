@@ -23,6 +23,8 @@ import LeftArrowIcon from "../../icons/LeftArrowIcon";
 import { randomArraySort } from "../../utils/shuffle";
 import { Paths } from "../../pages/index[depre]";
 import { AppContext } from "../../context/context";
+import Section from "../MultiCarousel/Section";
+import MultiRecommendGuideCarousel from "../MultiCarousel/MultiRecommendGuideCarousel";
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];
@@ -102,7 +104,7 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
 
     const data: userList_UserList_items[] = users;
 
-    // const randomSorted = randomArraySort([...users]);
+    const randomSorted = randomArraySort([...users]);
 
     const SliderVariants = {
         hover: {
@@ -117,25 +119,12 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
     const { l } = useContext(AppContext);
 
     return (
-        <div className="slider__sliderContainer">
-            {width <= 1025 ? null : (
-                <div className="slider__LongSliderLeftArrowContainer">
-                    <button
-                        className="slider__LongSliderLeftArrow"
-                        onClick={onClickPrev}
-                        style={{
-                            display: index === 0 ? "none" : "block",
-                        }}
-                    >
-                        <LeftArrowIcon />
-                    </button>
-                </div>
-            )}
-            <motion.div
-                ref={ItemContainer}
-                className="slider__LongSliderContainer"
-            >
-                {width <= 1025 ? (
+        <>
+            {width <= 1025 ? (
+                <motion.div
+                    ref={ItemContainer}
+                    className="slider__LongSliderContainer"
+                >
                     <motion.div
                         drag="x"
                         dragConstraints={ItemContainer}
@@ -185,50 +174,13 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
                             </motion.div>
                         ))}
                     </motion.div>
-                ) : (
-                    <motion.div className="slider__LongSliderContentArea">
-                        <AnimatePresence
-                            initial={false}
-                            custom={back}
-                            onExitComplete={toggleLeaving}
-                        >
-                            <motion.div
-                                className="slider__LongSliderRow"
-                                custom={back}
-                                key={index}
-                                variants={rowVariants}
-                                initial="hidden"
-                                animate="visible"
-                                exit="exit"
-                                transition={{ type: "tween", duration: 0.5 }}
-                            >
-                                <RecommendGuideSliderItem
-                                    item={data}
-                                    offset={offset}
-                                    index={index}
-                                />
-                            </motion.div>
-                        </AnimatePresence>
-                    </motion.div>
-                )}
-            </motion.div>
-            {width <= 1025 ? null : (
-                <div className="slider__LongSliderRightArrowContainer">
-                    <button
-                        onClick={onClickNext}
-                        className="slider__LongSliderRightArrow"
-                        style={{
-                            display:
-                                index === Math.ceil(data.length / offset) - 1
-                                    ? "none"
-                                    : "block",
-                        }}
-                    >
-                        <RightArrowIcon />
-                    </button>
-                </div>
+                </motion.div>
+            ) : (
+                <Section>
+                    <MultiRecommendGuideCarousel items={randomSorted} />
+                </Section>
             )}
-        </div>
+        </>
     );
 };
 

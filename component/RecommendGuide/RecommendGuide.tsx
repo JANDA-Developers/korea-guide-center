@@ -35,11 +35,7 @@ const RecommendGuide: React.FC<IGuideMovieCardsWithApi> = ({
 }) => {
     const { s } = useContext(AppContext);
     return (
-        <div
-            style={{
-                marginBottom: "50px",
-            }}
-        >
+        <div className="mb-40">
             <h5 className="slider__RecommendGuideSectionTitle">
                 {s("mainRecommendGuides")}
             </h5>

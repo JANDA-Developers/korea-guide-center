@@ -10,19 +10,11 @@ const TourAndActivities = () => {
     const { width } = useWindowSize();
     return (
         <>
-            <div
-                style={{
-                    marginBottom: "50px",
-                }}
-            >
+            <div className=" my-40">
                 <h5 className="tour__sectionTitle">{s("mainCityTour")}</h5>
                 <RegionSlider />
             </div>
-            <div
-                style={{
-                    marginBottom: "50px",
-                }}
-            >
+            <div className="mb-40">
                 <h5 className="tour__sectionTitle">{s("mainPopularTour")}</h5>
                 <TourSlider
                     queryParam={{

@@ -4,9 +4,9 @@ import { useWindowSize } from "usehooks-ts";
 
 import { AppContext } from "../../context/context";
 import { mapRegion, regionableData } from "../koreaMap/KoreaData";
-import TourSliderItem, { IRegionSliderItem } from "./RegionSliderItem";
-import RightArrowIcon from "../../icons/RightArrowIcon";
-import LeftArrowIcon from "../../icons/LeftArrowIcon";
+import { IRegionSliderItem } from "./RegionSliderItem";
+import Section from "../MultiCarousel/Section";
+import MultiRegionCarousel from "../MultiCarousel/MultiRegionCarousel";
 
 // scss/page/index.scss 파일에서 css 작업함
 
@@ -256,7 +256,7 @@ const RegionSlider = () => {
             title: s("ServicesCook"),
             queryTitle: "요리",
             products: 0,
-            imageUrl: "img/cities/CookTour.jpg",
+            imageUrl: "img/cities/seoul.jpg",
         },
     ];
 
@@ -296,25 +296,12 @@ const RegionSlider = () => {
     const ItemContainer = useRef<HTMLDivElement>(null);
 
     return (
-        <div className="slider__sliderContainer">
-            {width <= 1025 ? null : (
-                <div className="slider__ShortSliderLeftArrowContainer">
-                    <button
-                        className="slider__ShortSliderLeftArrow"
-                        onClick={onClickPrev}
-                        style={{
-                            display: index === 0 ? "none" : "block",
-                        }}
-                    >
-                        <LeftArrowIcon />
-                    </button>
-                </div>
-            )}
-            <motion.div
-                ref={ItemContainer}
-                className="slider__ShortSliderContainer"
-            >
-                {width <= 1025 ? (
+        <>
+            {width <= 1025 ? (
+                <motion.div
+                    ref={ItemContainer}
+                    className="slider__ShortSliderContainer"
+                >
                     <motion.div
                         drag="x"
                         dragConstraints={ItemContainer}
@@ -342,51 +329,13 @@ const RegionSlider = () => {
                             </div>
                         ))}
                     </motion.div>
-                ) : (
-                    <motion.div className="slider__ShortSliderContentArea">
-                        <AnimatePresence
-                            initial={false}
-                            custom={back}
-                            onExitComplete={toggleLeaving}
-                        >
-                            <motion.div
-                                className="slider__ShortSliderRow"
-                                custom={back}
-                                key={index}
-                                variants={rowVariants}
-                                initial="hidden"
-                                animate="visible"
-                                exit="exit"
-                                transition={{ type: "tween", duration: 0.5 }}
-                            >
-                                <TourSliderItem
-                                    item={regionData}
-                                    offset={offset}
-                                    index={index}
-                                />
-                            </motion.div>
-                        </AnimatePresence>
-                    </motion.div>
-                )}
-            </motion.div>
-            {width <= 1025 ? null : (
-                <div className="slider__ShortSliderRightArrowContainer">
-                    <button
-                        onClick={onClickNext}
-                        className="slider__ShortSliderRightArrow"
-                        style={{
-                            display:
-                                index ===
-                                Math.ceil(regionData.length / offset) - 1
-                                    ? "none"
-                                    : "block",
-                        }}
-                    >
-                        <RightArrowIcon />
-                    </button>
-                </div>
+                </motion.div>
+            ) : (
+                <Section>
+                    <MultiRegionCarousel items={regionData} />
+                </Section>
             )}
-        </div>
+        </>
     );
 };
 

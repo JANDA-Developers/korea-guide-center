@@ -5,11 +5,7 @@ import LocalGuideSlider from "./LocalGuideSlider";
 const LocalGuideAndPrivateTour = () => {
     const { s } = useContext(AppContext);
     return (
-        <div
-            style={{
-                marginBottom: "50px",
-            }}
-        >
+        <div className="mb-40">
             <h5 className="tour__sectionTitle">{s("mainLocalGuides")}</h5>
             <LocalGuideSlider />
         </div>

@@ -33,12 +33,7 @@ a {
     .tour__sectionTitle {
      font-size: 20px !important;
     }
-    .slider__ShortSliderRightArrowContainer {
-        width: 4.875rem !important;
-    }
-    .slider__ShortSliderLeftArrowContainer {
-        width: 4.875rem !important;
-    }
+
     .slider__ShortSliderItems {
         width: 12.875rem !important;
         height: 14.875rem !important;
@@ -53,17 +48,30 @@ a {
     .slider__ShortSliderItems {
         margin-right: 1.25rem !important;
     }
-    .slider__LongSliderLeftArrowContainer {
-        width: 4.875rem !important;
-    }
-    .slider__LongSliderRightArrowContainer{
-        width: 4.875rem !important;
-    }
+    
     .slider__LongSliderContentArea {
         display: flex !important;
     }
+    
     .slider__LongSliderItems {
         margin-right: 1.25rem !important;
+        width: 12rem !important;
+        height: 25.875rem !important;
+    }
+
+    .slider__TourSliderItemTitle {
+        font-size: 1.2rem !important;
+    }
+
+    .slider__TourSliderItemImage {
+        width: 12rem !important;
+        height: 13rem !important
+        ;
+    }
+
+    .slider__GuideSliderItemImage {
+        width: 12rem !important;
+        height: 13rem !important
     }
 
     .slider__LongSliderContainer {
@@ -72,6 +80,32 @@ a {
 
     .slider__TourSliderItemTextAndDesc {
         height: auto !important;
+    }
+
+    .slider__TourSliderItemTextAndDesc p {
+        font-size : 0.9rem;
+    }
+
+    .slider__GuideBadgeAndNameContainer {
+        margin: 7px 0px !important;
+    }
+
+    .slider__GuideBadge {
+        padding: 1.5px 7.5px !important;
+        font-size: 0.7rem !important;
+    }
+
+    .slider__GuideName {
+        font-size: 0.8rem !important;
+    }
+
+    .slider__GuideDesc {
+        margin-top: 0.3rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    .slider__TourSliderItemPrice {
+        font-size : 1rem;
     }
 
     .slider__RecommendGuideSectionTitle {
@@ -679,6 +713,7 @@ a {
     &__ShortSliderItems {
         display: flex;
         box-sizing: border-box;
+        align-items: center;
         cursor: pointer;
         position: relative;
         width: 16.875rem;
