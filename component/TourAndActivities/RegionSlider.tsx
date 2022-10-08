@@ -256,7 +256,7 @@ const RegionSlider = () => {
             title: s("ServicesCook"),
             queryTitle: "요리",
             products: 0,
-            imageUrl: "img/cities/seoul.jpg",
+            imageUrl: "img/cities/CookTour.jpg",
         },
     ];
 

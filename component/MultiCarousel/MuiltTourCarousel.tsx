@@ -66,7 +66,9 @@ const MultiTourCarousel = ({ deviceType, items }: any) => {
                         />
                         <div className="slider__TourSliderItemTextAndDesc">
                             <h6 className="slider__TourSliderItemTitle">
-                                {l(i.title)}
+                                {l(i.title).length >= 14
+                                    ? l(i.title).slice(0, 12) + "..."
+                                    : l(i.title)}
                             </h6>
                             <p>
                                 {l(i.shortDecsription).length >= 40

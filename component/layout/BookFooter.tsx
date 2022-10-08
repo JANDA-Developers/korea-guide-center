@@ -202,9 +202,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesDriving"
-                                    )}`;
+                                    location.href = `/cities/search?title=DRIVING`;
                                 }}
                             >
                                 {s("ServicesDriving")}
@@ -212,9 +210,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesMICE"
-                                    )}`;
+                                    location.href = `/cities/search?title=MICE`;
                                 }}
                             >
                                 {s("ServicesMICE")}
@@ -222,9 +218,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesTranlate"
-                                    )}`;
+                                    location.href = `/cities/search?title=통역`;
                                 }}
                             >
                                 {s("ServicesTranlate")}
@@ -232,9 +226,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesBarrierFree"
-                                    )}`;
+                                    location.href = `/cities/search?title=Barrier-Free`;
                                 }}
                             >
                                 {s("ServicesBarrierFree")}
@@ -242,9 +234,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesVIP"
-                                    )}`;
+                                    location.href = `/cities/search?title=VIP의전`;
                                 }}
                             >
                                 {s("ServicesVIP")}
@@ -252,9 +242,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesWellness"
-                                    )}`;
+                                    location.href = `/cities/search?title=의료관광`;
                                 }}
                             >
                                 {s("ServicesWellness")}
@@ -270,9 +258,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesLocalFestival"
-                                    )}`;
+                                    location.href = `/cities/search?title=축제`;
                                 }}
                             >
                                 {s("ServicesLocalFestival")}
@@ -280,9 +266,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesRealEstate"
-                                    )}`;
+                                    location.href = `/cities/search?title=부동산`;
                                 }}
                             >
                                 {s("ServicesRealEstate")}
@@ -290,9 +274,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesStudyingAbroad"
-                                    )}`;
+                                    location.href = `/cities/search?title=유학`;
                                 }}
                             >
                                 {s("ServicesStudyingAbroad")}
@@ -300,9 +282,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesLongStay"
-                                    )}`;
+                                    location.href = `/cities/search?title=장기체류`;
                                 }}
                             >
                                 {s("ServicesLongStay")}
@@ -310,9 +290,7 @@ export const BookFooter: React.FC<IProp> = ({
                             <span
                                 className="cursor-pointer"
                                 onClick={() => {
-                                    location.href = `/cities/search?title=${s(
-                                        "ServicesCook"
-                                    )}`;
+                                    location.href = `/cities/search?title=요리`;
                                 }}
                             >
                                 {s("ServicesCook")}
