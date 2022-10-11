@@ -38,6 +38,7 @@ a {
         width: 12.875rem !important;
         height: 14.875rem !important;
         margin-right: 1.25rem !important;
+        padding : 0px !important
     }
     .slider__ShortSliderContainer {
         width: 98vw !important;
@@ -256,6 +257,8 @@ a {
     .slider__ShortSliderItems {
         width: 12.875rem !important;
         height: 14.875rem !important;
+        padding : 0px !important;
+        margin-right: 1.25rem !important;
     }
     .slider__ShortSliderContainer {
         width: 98vw !important;
@@ -264,9 +267,7 @@ a {
     .slider__ShortSliderContentArea {
         display: flex !important;
     }
-    .slider__ShortSliderItems {
-        margin-right: 1.25rem !important;
-    }
+
     .slider__LongSliderLeftArrowContainer {
         width: 4.875rem !important;
     }
