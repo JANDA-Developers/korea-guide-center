@@ -8,8 +8,7 @@ import { motion } from "framer-motion";
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3,
-        paritialVisibilityGutter: 60,
+        items: 6,
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -45,14 +44,15 @@ const MultiTourCarousel = ({ deviceType, items }: any) => {
             partialVisbile
             deviceType={deviceType}
             responsive={responsive}
-            itemClass="w-72 h-[32.875rem] mr-4 cursor-pointer p-2 !important"
+            itemClass="px-2"
+            containerClass="w-10/12 py-4"
         >
             {items.map((i: any) => {
                 return (
                     <motion.div
                         variants={SliderVariants}
                         whileHover="hover"
-                        className="slider__LongSliderItems w-72 h-[31.875rem] !important"
+                        className="slider__LongSliderItems"
                         onClick={() => {
                             location.href =
                                 Paths.productDetailView + "/" + i._id;

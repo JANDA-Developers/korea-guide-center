@@ -51,7 +51,7 @@ const MultiGuideCarousel = ({
             deviceType={deviceType}
             responsive={responsive}
             itemClass="px-2"
-            containerClass="w-full"
+            containerClass="w-10/12"
         >
             {items.map((i: any) => {
                 return (
