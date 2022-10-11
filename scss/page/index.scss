@@ -37,6 +37,7 @@ a {
     .slider__ShortSliderItems {
         width: 12.875rem !important;
         height: 14.875rem !important;
+        margin-right: 1.25rem !important;
     }
     .slider__ShortSliderContainer {
         width: 98vw !important;
@@ -45,10 +46,6 @@ a {
     .slider__ShortSliderContentArea {
         display: flex !important;
     }
-    .slider__ShortSliderItems {
-        margin-right: 1.25rem !important;
-    }
-    
     .slider__LongSliderContentArea {
         display: flex !important;
     }
@@ -629,6 +626,7 @@ a {
     }
 
     &__bgImage {
+        box-sizing: border-box;
         border-radius: 10px;
         position: absolute;
         object-fit: cover;
@@ -722,14 +720,13 @@ a {
     &__ShortSliderItems {
         display: flex;
         box-sizing: border-box;
-        align-items: center;
         cursor: pointer;
         position: relative;
         width: 16.875rem;
         height: 19.875rem;
         border-radius: 10px;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         overflow: hidden;
+        
 
         img {
             flex-shrink: 0;
