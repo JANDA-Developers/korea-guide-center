@@ -154,6 +154,9 @@ const LocalGuideSlider = () => {
 
     const toggleLeaving = () => setLeaving(false);
 
+    // koreaHook
+    // selectedGlobalRegion : 현재 선택중인 지역
+    // selectGlobalRegion : 지역 선택 함수
     const koreaHook = useGlobalKoreaMap();
     const { selectedGlobalRegion, onClick: selectGlobalRegion } = koreaHook;
 
@@ -166,54 +169,28 @@ const LocalGuideSlider = () => {
                     ref={ItemContainer}
                     className="slider__ShortSliderContainer"
                 >
-                    {width <= 1025 ? (
-                        <motion.div
-                            drag="x"
-                            dragConstraints={ItemContainer}
-                            className="slider__ShortSliderContentArea"
-                        >
-                            {localGuideData.map((i) => (
-                                <LocalGuideSliderItem
-                                    item={i}
-                                    region={selectedGlobalRegion}
-                                    onSelectRegion={selectGlobalRegion}
-                                    selectedRegion={i.region}
-                                />
-                            ))}
-                        </motion.div>
-                    ) : (
-                        <motion.div className="slider__ShortSliderContentArea">
-                            <AnimatePresence
-                                initial={false}
-                                custom={back}
-                                onExitComplete={toggleLeaving}
-                            >
-                                <motion.div
-                                    className="slider__ShortSliderRow"
-                                    custom={back}
-                                    key={index}
-                                    variants={rowVariants}
-                                    initial="hidden"
-                                    animate="visible"
-                                    exit="exit"
-                                    transition={{
-                                        type: "tween",
-                                        duration: 0.5,
-                                    }}
-                                >
-                                    <LocalGuideSliderItems
-                                        items={localGuideData}
-                                        offset={offset}
-                                        index={index}
-                                    />
-                                </motion.div>
-                            </AnimatePresence>
-                        </motion.div>
-                    )}
+                    <motion.div
+                        drag="x"
+                        dragConstraints={ItemContainer}
+                        className="slider__ShortSliderContentArea"
+                    >
+                        {localGuideData.map((i) => (
+                            <LocalGuideSliderItem
+                                item={i}
+                                region={selectedGlobalRegion}
+                                onSelectRegion={selectGlobalRegion}
+                                selectedRegion={i.region}
+                            />
+                        ))}
+                    </motion.div>
                 </motion.div>
             ) : (
                 <Section>
-                    <MultiGuideCarousel items={localGuideData} />
+                    <MultiGuideCarousel
+                        items={localGuideData}
+                        region={selectedGlobalRegion}
+                        onSelectRegion={selectGlobalRegion}
+                    />
                 </Section>
             )}
         </>

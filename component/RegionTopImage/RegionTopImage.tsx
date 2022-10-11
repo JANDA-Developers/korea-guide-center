@@ -18,6 +18,10 @@ const RegionTopImage: React.FC<IProp> = ({ region }) => {
     const data = regionableData[region];
     const { title, description } = data;
 
+    console.log("data : " + data);
+
+    console.log("selected : " + selectedGlobalRegion);
+
     const imgUrl = `/img/cities/${selectedGlobalRegion}.jpg`;
 
     return (
@@ -28,6 +32,7 @@ const RegionTopImage: React.FC<IProp> = ({ region }) => {
                         className="regionTopImage__titleAndDescContainer"
                         style={{
                             backgroundImage: `url(${imgUrl})`,
+                            backgroundRepeat: "no-repeat",
                         }}
                     >
                         <h1 className="regionTopImage__title">{l(title)}</h1>

@@ -5,6 +5,7 @@ import { AppContext } from "../../context/context";
 import { useGlobalKoreaMap } from "../../hook/useKoreaMap";
 import { useRouter } from "next/router";
 import { Paths } from "../../pages/index[depre]";
+import { mapRegion } from "../koreaMap/KoreaData";
 
 const responsive = {
     desktop: {
@@ -24,15 +25,24 @@ const responsive = {
     },
 };
 
+interface MultiGuideCarousel {
+    onSelectRegion: (region: mapRegion) => void;
+    region: mapRegion;
+    selectedRegion: string;
+}
+
 // Because this is an inframe, so the SSR mode doesn't not do well here.
 // It will work on real devices.
-const MultiGuideCarousel = ({ deviceType, items }: any) => {
-    const koreaHook = useGlobalKoreaMap();
-    const { selectedGlobalRegion, onClick: selectGlobalRegion } = koreaHook;
+const MultiGuideCarousel = ({
+    deviceType,
+    items,
+    onSelectRegion,
+    selectedRegion,
+}: any) => {
     const { s, l } = useContext(AppContext);
     const router = useRouter();
     const handleSelectRegion = (region: any) => {
-        selectGlobalRegion(region);
+        onSelectRegion(region);
     };
 
     return (
@@ -48,7 +58,7 @@ const MultiGuideCarousel = ({ deviceType, items }: any) => {
                     <div
                         className="slider__ShortSliderItems w-72 h-72 !important"
                         onClick={() => {
-                            handleSelectRegion(selectedGlobalRegion);
+                            handleSelectRegion(i.region);
                             router.push(Paths.locationalGuide);
                         }}
                     >
