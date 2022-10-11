@@ -31,6 +31,7 @@ const MultiRegionCarousel = ({ deviceType, items }: any) => {
             partialVisbile
             deviceType={deviceType}
             responsive={responsive}
+            itemClass="px-2"
             containerClass="w-full"
         >
             {items.map((i: any) => {
