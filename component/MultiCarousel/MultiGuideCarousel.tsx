@@ -10,8 +10,7 @@ import { mapRegion } from "../koreaMap/KoreaData";
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3,
-        paritialVisibilityGutter: 60,
+        items: 6,
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -51,28 +50,31 @@ const MultiGuideCarousel = ({
             partialVisbile
             deviceType={deviceType}
             responsive={responsive}
-            itemClass="w-72 h-72 mr-4 cursor-pointer px-2 !important"
+            itemClass="px-2"
+            containerClass="w-full"
         >
             {items.map((i: any) => {
                 return (
-                    <div
-                        className="slider__ShortSliderItems w-72 h-72 !important"
-                        onClick={() => {
-                            handleSelectRegion(i.region);
-                            router.push(Paths.locationalGuide);
-                        }}
-                    >
-                        <img
-                            src={`${i.imageUrl}`}
-                            className="w-72 h-72 rounded-lg !important region__bgImage"
-                        />
-                        <div className="region__contents">
-                            <h5 className="region__RegionSliderItemTitle">
-                                {i.title}
-                            </h5>
-                            <button className="region__RegionDetailButton">
-                                {s("LookAround")}
-                            </button>
+                    <div>
+                        <div
+                            className="slider__ShortSliderItems"
+                            onClick={() => {
+                                handleSelectRegion(i.region);
+                                router.push(Paths.locationalGuide);
+                            }}
+                        >
+                            <img
+                                src={`${i.imageUrl}`}
+                                className="region__bgImage"
+                            />
+                            <div className="region__contents">
+                                <h5 className="region__RegionSliderItemTitle">
+                                    {i.title}
+                                </h5>
+                                <button className="region__RegionDetailButton">
+                                    {s("LookAround")}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 );
