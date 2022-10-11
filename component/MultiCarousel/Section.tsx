@@ -3,7 +3,7 @@ import React from "react";
 const Section = ({ children }: any) => {
     return (
         <section
-            className="px-80"
+            className=""
             style={{
                 margin: "20px 0 20px 0",
             }}
