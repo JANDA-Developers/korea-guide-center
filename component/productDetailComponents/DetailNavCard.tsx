@@ -289,7 +289,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                         </>
                     )}
                     <JDbutton
-                        hide={!reviewAb}
+                        // hide={!reviewAb}
                         mode="border"
                         br="square"
                         size="long"
