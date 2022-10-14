@@ -288,7 +288,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                             </Flex>
                         </>
                     )}
-                    <JDbutton
+                    {/* <JDbutton
                         // hide={!reviewAb}
                         mode="border"
                         br="square"
@@ -304,7 +304,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                     <ReviewModalWrap
                         key={reviewModalHook.info?.tour?._id}
                         modalHook={reviewModalHook}
-                    />
+                    /> */}
                 </div>
             </JDcard>
             <InfoBox className="detailNavCard__InfoboxWidth">

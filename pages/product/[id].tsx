@@ -43,6 +43,7 @@ import { AppContext } from "../../context/context";
 import {
     IReviewModalInfo,
     ReviewModal,
+    ReviewModalWrap,
 } from "../../component/ReviewModal/ReviewModal";
 import { IBuyPageQuery } from "../../page/pay/Pay";
 import { Paths } from "../index[depre]";
@@ -219,7 +220,7 @@ export const ProductDetail: React.FC<IProp> = ({
                 className="ProductDetail"
                 verticalPadding
             >
-                <Flex oneone>
+                <Flex oneone mb="largest">
                     <JDalign className="ProductDetail__body" mr="large">
                         {/* 동진 */}
                         {product.region && (
@@ -377,6 +378,23 @@ export const ProductDetail: React.FC<IProp> = ({
                                 </Flex>
                             </JDalign>
                         ) : null}
+                        <JDbutton
+                            // hide={!reviewAb}
+                            mode="border"
+                            br="square"
+                            size="long"
+                            onClick={() => {
+                                reviewModalHook.openModal({
+                                    tour,
+                                });
+                            }}
+                        >
+                            {s("reviewWrite")}
+                        </JDbutton>
+                        <ReviewModalWrap
+                            key={reviewModalHook.info?.tour?._id}
+                            modalHook={reviewModalHook}
+                        />
                     </JDalign>
                     <DetailNavCardMobile
                         onSelect={handleScrollToResv}
@@ -393,16 +411,15 @@ export const ProductDetail: React.FC<IProp> = ({
                         className="ProductDetail__navCard"
                     />
                 </Flex>
-
                 {!isPreveiw && (
                     <div>
-                        {/* 여행자들이 본 상품
-                         <ProductViewsLineHeader
+                        여행자들이 본 상품
+                        <ProductViewsLineHeader
                             title={s("TravelerwithProduct")}
                         />
                         <JDalign mb="largest">
                             <ProductViewCardsWithApi />
-                        </JDalign> */}
+                        </JDalign>
                         {product.region && (
                             <JDalign mb="largest">
                                 <RegionProductViewsLineHeader
@@ -424,23 +441,20 @@ export const ProductDetail: React.FC<IProp> = ({
                                 </div>
                             </JDalign>
                         )}
-                        {/* <JDhorizen margin={7} /> */}
                         {/* 투어&여행 베스트셀러 , 최신&트렌드 투어
-                         <RenderIfVisible>
+                        <RenderIfVisible>
                             <BestProductViewsLineHeader />
                         </RenderIfVisible>
                         <RenderIfVisible>
                             <JDalign mb="largest">
                                 <ProductViewCardsWithApi {...BestProductList} />
                             </JDalign>
-                        </RenderIfVisible>
-                        <RenderIfVisible>
+                        </RenderIfVisible> */}
+                        {/* <RenderIfVisible>
                             <NewstProductViewsLineHeader />
                             <ProductViewCardsWithApi {...NewsProductList} />
                         </RenderIfVisible> */}
-
-                        {/* 상품 더보기
-                         <Mb mb />
+                        <Mb mb />
                         <JDbutton
                             mode="flat"
                             thema="primary"
@@ -453,7 +467,7 @@ export const ProductDetail: React.FC<IProp> = ({
                         </JDbutton>
                         {reviewModalHook.isOpen && (
                             <ReviewModal modalHook={reviewModalHook} />
-                        )} */}
+                        )}
                     </div>
                 )}
             </JDcontainer>
