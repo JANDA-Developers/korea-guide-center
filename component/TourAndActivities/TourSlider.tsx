@@ -49,6 +49,7 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
     const { commonProductFilter } = useContext(AppContext);
+
     const { items: products } = useProductList(
         {
             initialViewCount: 8,
