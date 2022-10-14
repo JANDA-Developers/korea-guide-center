@@ -37,7 +37,6 @@ export const LocationalGuide: React.FC<IProp> = () => {
             },
         },
     };
-    console.log(NewsProductList);
 
     return (
         <BookLayout>

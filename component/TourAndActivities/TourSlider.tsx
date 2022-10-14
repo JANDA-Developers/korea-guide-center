@@ -10,17 +10,15 @@ import {
     _ProductFilter,
     _ProductSort,
 } from "../../types/api";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useWindowSize } from "usehooks-ts";
-import TourSliderItem from "./TourSliderItem";
 import { TElements } from "../../types/interface";
 import { ListInitOptions } from "../../hook/useListQuery";
 import { genrateOption } from "../../utils/query";
-import RightArrowIcon from "../../icons/RightArrowIcon";
-import LeftArrowIcon from "../../icons/LeftArrowIcon";
 import { Paths } from "../../pages/index[depre]";
 import Section from "../MultiCarousel/Section";
 import MultiTourCarousel from "../MultiCarousel/MuiltTourCarousel";
+import { isEmpty } from "@janda-com/front";
 
 interface IProp extends Partial<IProductViewCard> {
     align?: 1 | 2 | 3 | 4 | "auto" | "wrap";
@@ -43,6 +41,8 @@ const offset = 4;
 const TourSlider: React.FC<IProductViewCardsWithApi> = ({
     queryControl,
     queryParam,
+    Head,
+    ...props
 }) => {
     const { s, l } = useContext(AppContext);
     const priceToString = (price: number) => {
@@ -106,6 +106,8 @@ const TourSlider: React.FC<IProductViewCardsWithApi> = ({
     };
 
     const ItemContainer = useRef<HTMLDivElement>(null);
+
+    if (isEmpty(products)) return null;
     return (
         <>
             {width <= 1025 ? (

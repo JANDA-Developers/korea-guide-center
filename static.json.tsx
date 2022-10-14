@@ -3615,11 +3615,11 @@ const utils_message = {
         ja: "地域別ツアー",
         chi: "各地旅游",
     },
-    mainPopularTour: {
-        ko: "인기 투어",
-        en: "Popular Tour",
-        ja: "人気ツアー",
-        chi: "人气旅游",
+    mainLatestTour: {
+        ko: "최신 투어",
+        en: "Latest Tour",
+        ja: "最新ツアー",
+        chi: "最新巡演",
     },
     mainLocalGuides: {
         ko: "지역별 가이드",
