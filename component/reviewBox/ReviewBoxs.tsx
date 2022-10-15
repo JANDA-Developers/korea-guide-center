@@ -50,6 +50,8 @@ interface IProp extends IJDalignProp {
     reviewControlModalHook?: IUseModal<IReviewModalWrapInfo>;
 }
 
+// 👇 ReviewBoxs
+
 export const ReviewBoxs: React.FC<IProp> = ({
     tour,
     reviews,
@@ -63,6 +65,8 @@ export const ReviewBoxs: React.FC<IProp> = ({
     const [deleteReviewMu] = useReviewDelete();
     const { l, s, confirmModalHook, isMaster, promptModalHook } =
         useContext(AppContext);
+
+    // 👇 Controller
 
     const Controller = (review: Freview) => {
         const { deleteAb, updateAb, myReview, replayAb, writeAb, iamTarget } =
@@ -141,6 +145,8 @@ export const ReviewBoxs: React.FC<IProp> = ({
 
     const TargetWrap = cardView ? CardWrap : DivWrap;
 
+    // 👇 ReviewBoxs가 실제 렌더링되는 부분
+
     return (
         <JDalign {...props}>
             {reviews.map((review) => (
@@ -164,6 +170,8 @@ export const ReviewBoxs: React.FC<IProp> = ({
         </JDalign>
     );
 };
+
+// 👇 ReviewBoxsWithApi
 
 interface IReviewBoxWithApi extends Partial<IProp> {
     queryParam?: Partial<ListInitOptions<_ReviewFilter, _ReviewSort>>;

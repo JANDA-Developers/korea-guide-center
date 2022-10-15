@@ -24,6 +24,8 @@ interface IProp {
     Controller?: (review: Freview) => TElements | null;
 }
 
+// !! 이미지 박스 관련 문의 들어오면 이쪽에서 손보기
+
 export const ReviewBox: React.FC<IProp> = ({ review, Controller }) => {
     const { imgSliderModalHook, l } = useContext(AppContext);
     const {
