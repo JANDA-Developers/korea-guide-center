@@ -363,11 +363,11 @@ export const ProductDetail: React.FC<IProp> = ({
                         <JDhorizen margin={5} />
                         {product.reviewCount ? (
                             <JDalign mb="largest">
+                                <ReviewSummaryBox
+                                    mr="large"
+                                    product={product}
+                                />
                                 <Flex>
-                                    <ReviewSummaryBox
-                                        mr="large"
-                                        product={product}
-                                    />
                                     <ReviewBoxsWithApi
                                         queryParam={{
                                             fixingFilter: {
