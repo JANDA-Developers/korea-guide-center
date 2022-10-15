@@ -57,33 +57,33 @@ export const ReviewBox: React.FC<IProp> = ({ review, Controller }) => {
                     {yyyymmdd(createdAt)}
                 </Tiny>
             </Flex>
+            {img && (
+                <JDalign className="reviewBox__imgBox" mr>
+                    <Img
+                        onClick={() => {
+                            imgSliderModalHook.openModal({
+                                images: images?.map((img) => img?.uri) || [
+                                    img.uri,
+                                ],
+                                width: 400,
+                                height: 300,
+                            });
+                        }}
+                        placeholder="empty"
+                        blurDataURL={undefined}
+                        objectFit="none"
+                        width={100}
+                        height={100}
+                        src={img.uri || ""}
+                    />
+                    {hasMore && (
+                        <Tiny className="reviewBox__imgHasMore">
+                            +{images?.length}
+                        </Tiny>
+                    )}
+                </JDalign>
+            )}
             <Flex vCenter style={{ alignItems: "start" }}>
-                {img && (
-                    <JDalign className="reviewBox__imgBox" mr>
-                        <Img
-                            onClick={() => {
-                                imgSliderModalHook.openModal({
-                                    images: images?.map((img) => img?.uri) || [
-                                        img.uri,
-                                    ],
-                                    width: 400,
-                                    height: 300,
-                                });
-                            }}
-                            placeholder="empty"
-                            blurDataURL={undefined}
-                            objectFit="none"
-                            width={50}
-                            height={50}
-                            src={img.uri || ""}
-                        />
-                        {hasMore && (
-                            <Tiny className="reviewBox__imgHasMore">
-                                +{images?.length}
-                            </Tiny>
-                        )}
-                    </JDalign>
-                )}
                 <Small mr>{contents}</Small>
                 {Controller?.(review)}
             </Flex>
