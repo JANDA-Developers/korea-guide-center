@@ -61,7 +61,7 @@ export const getTourSummary = (
     const isPast = dayjs(startDate).isBefore(new Date());
     const isCanceld = tourStatus === TourStatus.CANCEL;
     const cancelAb = isMaster || ((minMember || 0) > totalMember && !isCanceld);
-    const reviewAb = isMaster || iBooked;
+    const reviewAb = isMaster || isPast;
     const settlementAb = isPast;
     const settlementRequestAb =
         !isCanceld && isSettlementReady && (isMaster || isPastCompleted);

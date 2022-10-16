@@ -69,6 +69,7 @@ import { merge } from "../../utils/merge";
 import { cloneDeep } from "lodash";
 import RenderIfVisible from "../../component/renderIfVisible/RenderIfVisible";
 import LocationMarker from "./LocationMarker";
+import dayjs from "dayjs";
 
 export interface IProductDetailQuery {
     tourId?: string;
@@ -89,6 +90,7 @@ export const ProductDetail: React.FC<IProp> = ({
     mode,
     product: propProduct,
 }) => {
+    const { isMaster, me } = useContext(AppContext);
     const router = useRouter();
     const id = propId || (router.query.id as string);
     const reviewModalHook = useModal<IReviewModalInfo>();
@@ -213,6 +215,12 @@ export const ProductDetail: React.FC<IProp> = ({
         subPlanes,
         marker,
     } = Tour?.productInfomation;
+
+    const { totalMember, productInfomation, tourStatus, startDate } = Tour;
+
+    const isPast = dayjs(startDate).isBefore(new Date());
+
+    const reviewAb = isMaster || isPast;
     return (
         <BookLayout layoutHide={isPreveiw}>
             <JDcontainer
@@ -361,6 +369,7 @@ export const ProductDetail: React.FC<IProp> = ({
                             {l(Refund)}
                         </Small>
                         <JDhorizen margin={5} />
+                        {/* 리뷰 */}
                         {product.reviewCount ? (
                             <JDalign mb="largest">
                                 <ReviewSummaryBox
@@ -379,7 +388,7 @@ export const ProductDetail: React.FC<IProp> = ({
                             </JDalign>
                         ) : null}
                         <JDbutton
-                            // hide={!reviewAb}
+                            hide={!reviewAb}
                             mode="border"
                             br="square"
                             size="long"

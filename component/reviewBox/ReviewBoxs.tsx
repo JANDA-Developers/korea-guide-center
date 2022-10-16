@@ -160,7 +160,7 @@ export const ReviewBoxs: React.FC<IProp> = ({
                 </TargetWrap>
             ))}
             <JDbutton
-                hide={!onViewMore || !hasMore}
+                // hide={!onViewMore || !hasMore}
                 mode="border"
                 br="square"
                 onClick={onViewMore}
