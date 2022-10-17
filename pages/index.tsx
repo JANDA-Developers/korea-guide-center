@@ -44,7 +44,7 @@ const TourLayout = () => {
 
     const texts = [
         {
-            title: "Locale Tour",
+            title: "Local Tour",
         },
         {
             title: "The Original Korea Guide Tour",
