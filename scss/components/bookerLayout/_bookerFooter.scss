@@ -17,7 +17,27 @@
 
     .footer__city {
         display: flex !important;
-        justify-content: space-evenly !important;
+        justify-content: space-between !important;
+    }
+
+    .footer__cityPartOne {
+        margin-right: 0 !important;
+    }
+
+    .footer__serviceContainer {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+
+    .footer__servicePartOne {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .footer__servicePartTwo {
+        display: flex !important;
+        flex-direction: column;
     }
 
 }
@@ -55,6 +75,24 @@
             text-decoration: underline;
             text-underline-offset: 0.188rem;
         }
+    }
+
+    &__serviceContainer {
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+    &__servicePartOne {
+        display: flex !important;
+        flex-direction: column;
+
+    }
+
+    &__servicePartTwo {
+        display: flex !important;
+        flex-direction: column;
+        margin-top: 0.938rem !important;
     }
 
     &__info {

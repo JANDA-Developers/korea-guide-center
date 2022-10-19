@@ -198,113 +198,117 @@ export const BookFooter: React.FC<IProp> = ({
                         <h1 className=" text-[#8d8d89]">
                             {s("footerServices")}
                         </h1>
-                        <div className="flex flex-col text-white space-y-[0.938rem]">
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=DRIVING`;
-                                }}
-                            >
-                                {s("ServicesDriving")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=MICE`;
-                                }}
-                            >
-                                {s("ServicesMICE")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=통역`;
-                                }}
-                            >
-                                {s("ServicesTranlate")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=Barrier-Free`;
-                                }}
-                            >
-                                {s("ServicesBarrierFree")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=VIP의전`;
-                                }}
-                            >
-                                {s("ServicesVIP")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=의료관광`;
-                                }}
-                            >
-                                {s("ServicesWellness")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/offer`;
-                                }}
-                            >
-                                {s("ServicesPrivate")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=축제`;
-                                }}
-                            >
-                                {s("ServicesLocalFestival")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=부동산`;
-                                }}
-                            >
-                                {s("ServicesRealEstate")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=유학`;
-                                }}
-                            >
-                                {s("ServicesStudyingAbroad")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=장기체류`;
-                                }}
-                            >
-                                {s("ServicesLongStay")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `/cities/search?title=요리`;
-                                }}
-                            >
-                                {s("ServicesCook")}
-                            </span>
-                            <span
-                                className="cursor-pointer"
-                                onClick={() => {
-                                    location.href = `cities/search?title=${s(
-                                        "ServicesCustom"
-                                    )}`;
-                                }}
-                            >
-                                {s("ServicesCustom")}
-                            </span>
+                        <div className="footer__serviceContainer">
+                            <div className="footer__servicePartOne space-y-[0.938rem]">
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=DRIVING`;
+                                    }}
+                                >
+                                    {s("ServicesDriving")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=MICE`;
+                                    }}
+                                >
+                                    {s("ServicesMICE")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=통역`;
+                                    }}
+                                >
+                                    {s("ServicesTranlate")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=Barrier-Free`;
+                                    }}
+                                >
+                                    {s("ServicesBarrierFree")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=VIP의전`;
+                                    }}
+                                >
+                                    {s("ServicesVIP")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=의료관광`;
+                                    }}
+                                >
+                                    {s("ServicesWellness")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/offer`;
+                                    }}
+                                >
+                                    {s("ServicesPrivate")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=축제`;
+                                    }}
+                                >
+                                    {s("ServicesLocalFestival")}
+                                </span>
+                            </div>
+                            <div className="footer__servicePartTwo space-y-[0.938rem]">
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=부동산`;
+                                    }}
+                                >
+                                    {s("ServicesRealEstate")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=유학`;
+                                    }}
+                                >
+                                    {s("ServicesStudyingAbroad")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=장기체류`;
+                                    }}
+                                >
+                                    {s("ServicesLongStay")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=요리`;
+                                    }}
+                                >
+                                    {s("ServicesCook")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `cities/search?title=${s(
+                                            "ServicesCustom"
+                                        )}`;
+                                    }}
+                                >
+                                    {s("ServicesCustom")}
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
