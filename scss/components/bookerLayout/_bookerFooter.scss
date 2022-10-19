@@ -6,15 +6,20 @@
     }
 }
 
-@media screen and (max-width:415px) {
+@media screen and (max-width:767px) {
     .footer__CopyRight {
         flex-direction: column !important;
         font-size: 12px !important;
     }
-
-    .footer__city {
+    .footer__innerContainer {
         display: block !important;
     }
+
+    .footer__city {
+        display: flex !important;
+        justify-content: space-evenly !important;
+    }
+
 }
 
 .footer {
