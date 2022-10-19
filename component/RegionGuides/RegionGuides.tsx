@@ -21,10 +21,7 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
     const { items: guides } = useUserList({
         fixingFilter: {
             role__not_in: [UserRole.BUYER],
-            isDeleted__not_eq: true,
             regions_hyper__eq: hyper,
-            profileVideo__notNull: "true",
-            langs__in: [(locale as LANGUAGES) || LANGUAGES.ko],
         },
         random: true,
     });

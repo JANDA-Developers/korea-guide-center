@@ -38,6 +38,7 @@
     .footer__servicePartTwo {
         display: flex !important;
         flex-direction: column;
+        margin-top: 0 !important;
     }
 
 }
@@ -92,7 +93,7 @@
     &__servicePartTwo {
         display: flex !important;
         flex-direction: column;
-        margin-top: 0.938rem !important;
+        margin-top: 0.938rem;
     }
 
     &__info {

@@ -256,14 +256,6 @@ export const BookFooter: React.FC<IProp> = ({
                                 >
                                     {s("ServicesPrivate")}
                                 </span>
-                                <span
-                                    className="cursor-pointer"
-                                    onClick={() => {
-                                        location.href = `/cities/search?title=축제`;
-                                    }}
-                                >
-                                    {s("ServicesLocalFestival")}
-                                </span>
                             </div>
                             <div className="footer__servicePartTwo space-y-[0.938rem]">
                                 <span
@@ -307,6 +299,14 @@ export const BookFooter: React.FC<IProp> = ({
                                     }}
                                 >
                                     {s("ServicesCustom")}
+                                </span>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        location.href = `/cities/search?title=축제`;
+                                    }}
+                                >
+                                    {s("ServicesLocalFestival")}
                                 </span>
                             </div>
                         </div>
