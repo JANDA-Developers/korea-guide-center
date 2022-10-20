@@ -19,9 +19,12 @@ const RegionGuides: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
     const { locale } = useRouter();
     const { s } = useContext(AppContext);
     const { items: guides } = useUserList({
+        initialViewCount: 120,
         fixingFilter: {
+            isDeleted__not_eq: true,
             role__not_in: [UserRole.BUYER],
             regions_hyper__eq: hyper,
+            langs__in: [(locale as LANGUAGES) || LANGUAGES.ko],
         },
         random: true,
     });

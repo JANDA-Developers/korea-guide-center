@@ -8,7 +8,6 @@ interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
 }
 
 const RegionGuidesBody: React.FC<IProp> = ({ guides, ...props }) => {
-    console.log(guides);
     return (
         <>
             <RegionGuidesBodyHorizonGrider

@@ -43,7 +43,9 @@ const PopularGuide: React.FC<IGuideMovieCardsWithApi> = ({
             initialViewCount: 8,
             ...queryParam,
             fixingFilter: {
+                isDeleted__not_eq: true,
                 role__not_in: [UserRole.BUYER],
+                langs__in: [(locale as LANGUAGES) || LANGUAGES.ko],
             },
             random: true,
         },
