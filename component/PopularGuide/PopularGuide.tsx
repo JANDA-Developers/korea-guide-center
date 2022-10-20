@@ -44,7 +44,7 @@ const PopularGuide: React.FC<IGuideMovieCardsWithApi> = ({
             ...queryParam,
             fixingFilter: {
                 isDeleted__not_eq: true,
-                role__not_in: [UserRole.BUYER],
+                role__not_in: [UserRole.BUYER, UserRole.ADMIN],
                 langs__in: [(locale as LANGUAGES) || LANGUAGES.ko],
             },
             random: true,
