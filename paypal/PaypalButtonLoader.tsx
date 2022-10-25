@@ -29,9 +29,7 @@ export const PaypalButtonLoader: React.FC<IProps> = ({ ...props }) => {
         <div>
             <Head>
                 <script
-                    src={`https://www.paypal.com/sdk/js?client-id=${
-                        process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || "test"
-                    }&locale=en_VG`}
+                    src={`https://www.paypal.com/sdk/js?client-id=${process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID}&locale=en_VG`}
                     type="text/javascript"
                 />
             </Head>
