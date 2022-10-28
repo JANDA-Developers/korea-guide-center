@@ -127,8 +127,6 @@ export const DetailTourPicker: React.FC<IProp> = ({
                         dayjs(td).isSame(date, "date")
                     );
 
-                    console.log(tours);
-
                     return (
                         <div
                             className={
