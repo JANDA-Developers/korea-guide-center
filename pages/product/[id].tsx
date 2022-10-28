@@ -103,7 +103,7 @@ export const ProductDetail: React.FC<IProp> = ({
             fixingFilter: {
                 productId__eq: id,
             },
-            initialViewCount: 1000,
+            initialViewCount: 365,
         },
         {
             skip: !id,
