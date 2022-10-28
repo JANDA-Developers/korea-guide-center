@@ -15,10 +15,13 @@ const PaypalButton: React.FC<IPaypalButtonProp> = ({
     amount,
     callBackApprove,
 }) => {
+    // amount : 상품가격
+
     // 환율 rate는 나중에 정리되면 fetch 하는 쪽으로 변경
-    const exchangeRate = 0.0012;
+    const exchangeRate = 0.0007;
     const dollor = amount * exchangeRate;
     const createOrder = (data: any, actions: any) => {
+        console.log(data);
         return actions.order.create({
             purchase_units: [
                 {
@@ -34,7 +37,7 @@ const PaypalButton: React.FC<IPaypalButtonProp> = ({
         return actions.order.capture().then(callBackApprove);
     };
 
-    return <PAY_PAL_BUTTOn  createOrder={createOrder} onApprove={onApprove} />;
+    return <PAY_PAL_BUTTOn createOrder={createOrder} onApprove={onApprove} />;
 };
 
 export default PaypalButton;

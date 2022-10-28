@@ -109,20 +109,26 @@ export const DetailTourPicker: React.FC<IProp> = ({
                 }}
                 isRange={false}
                 {...dayPickerhook}
+                // 노출할 달력 개수
                 numberOfMonths={2}
                 month={month}
                 renderDay={(date) => {
+                    // 클릭한 날짜
                     const everyTourDate = getEveryTourDate(
                         [selectedTour.startDate],
                         (selectedTour?.productInfomation?.rangeDay || 1) - 1 ||
                             0
                     );
 
+                    // 등록된 투어
                     const targetTour = findTourByDate(tours, date);
 
                     const inRange = everyTourDate?.find((td) =>
                         dayjs(td).isSame(date, "date")
                     );
+
+                    console.log(tours);
+
                     return (
                         <div
                             className={
