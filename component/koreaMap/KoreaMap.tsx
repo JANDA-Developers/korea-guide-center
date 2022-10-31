@@ -1,10 +1,7 @@
-import classNames from "classnames";
-import React, { useState } from "react";
+import React from "react";
 import { useEffect, useContext } from "react";
 import ReactTooltip from "react-tooltip";
-import { cursorTo } from "readline";
 import { AppContext } from "../../context/context";
-import { ProductPosition } from "../../types/api";
 import { mapRegion, regionableData } from "./KoreaData";
 
 interface IProp {
@@ -210,12 +207,6 @@ export const KoreaMap: React.FC<IProp> = ({ onClick, selectedRegiion }) => {
                     name={l(regionableData[mapRegion.Sejong].title)}
                     id="KR-50"
                 />
-                {/* <image
-                    width="70"
-                    height="70"
-                    {...selectedFlagProp}
-                    style={{ position: "absolute" }}
-                /> */}
             </svg>
         </div>
     );

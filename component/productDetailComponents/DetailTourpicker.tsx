@@ -1,5 +1,4 @@
-import { autoComma, Flex, JDalign, Tiny, useDayPicker } from "@janda-com/front";
-import { isSameDay } from "date-fns";
+import { JDalign, Tiny, useDayPicker } from "@janda-com/front";
 import dayjs from "dayjs";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -8,7 +7,7 @@ import JDdayPicker from "../../atom/dayPicker/DayPicker";
 import { getEveryTourDate } from "../../page/productDetail/ProductDetail";
 import { Fproduct, Ftour, TourStatus } from "../../types/api";
 import { IDiv } from "../../types/interface";
-import { mobileShortyFyWithOne, withWon } from "../../utils/formatter";
+import { mobileShortyFyWithOne } from "../../utils/formatter";
 import { JDicon } from "../icons/Icons";
 import { findTourByDate } from "./helper";
 

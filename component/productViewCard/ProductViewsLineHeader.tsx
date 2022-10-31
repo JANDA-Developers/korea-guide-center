@@ -1,4 +1,4 @@
-import { Bold, Flex, JDalign, JDtypho } from "@janda-com/front";
+import { Flex, JDalign, JDtypho } from "@janda-com/front";
 import { useRouter } from "next/router";
 import React from "react";
 import { useContext } from "react";

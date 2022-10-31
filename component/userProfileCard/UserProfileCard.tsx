@@ -1,13 +1,4 @@
-import {
-    Bold,
-    Flex,
-    isLast,
-    JDavatar,
-    JDbadge,
-    JDcard,
-    Mb,
-    Tiny,
-} from "@janda-com/front";
+import { Bold, Flex, Mb, Tiny } from "@janda-com/front";
 import React from "react";
 import { useContext } from "react";
 import { Img } from "../../atom/Image";
@@ -18,7 +9,6 @@ import { Fuser, UserRole } from "../../types/api";
 import { DEFAULT_BG_IMG } from "../../types/const";
 import { IDiv } from "../../types/interface";
 import { yyyymmdd } from "../../utils/dateFormat";
-import { langToKr } from "../../utils/enumToKr";
 import { GuideCircle } from "../guideCircle/GuideCircle";
 import { Badges } from "../statusBadges/StatusBadges";
 import { BookerProfileCard } from "./BookerProfileCard";

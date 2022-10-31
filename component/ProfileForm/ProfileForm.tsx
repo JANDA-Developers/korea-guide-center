@@ -18,7 +18,6 @@ import { IUseProfile } from "../../hook/useProfile";
 import GuideContext from "../../page/context";
 import { DEFAULT_PROFILE_IMG } from "../../types/const";
 import { LanguagesOps } from "../../utils/enumToKr";
-import { beforeExtention } from "../../utils/fileExtendDivider";
 import { BankInfoInput } from "../bankComponents/BankInfoInput";
 import { GenderInput } from "../genderInput/GenderInput";
 import { IIcons } from "../icons/declation";
@@ -27,7 +26,6 @@ import { InputWithCheckButton } from "../InputWithCheckButton/InputWithCheckButt
 import { InputWithGlobal } from "../InputWithGlobal/InputWithGlobal";
 import { MultiFileInput } from "../multiFileInput/MultiFileInput";
 import SingleUploader from "../singleUploader/SingleUploader";
-import Select from "react-select";
 import { SNSInput } from "../snsInput/SNSinput";
 
 interface IProp {
@@ -75,14 +73,12 @@ export const ProfileForm: React.FC<IProp> = ({ profileHook }) => {
         mediumVideoHook,
         nickNameDuplicateChecked,
         setNickNameDuplicateCheck,
-        handleEmailDuplicateCheck,
         handleNickNameDuplicateCheck,
         introduceHook,
         guideLicenses,
         setGuideLicenses,
         nickNameHook,
         profileUplodHook,
-        profileValidation,
         bankImgHook,
         langValues,
         bankInfoHook,

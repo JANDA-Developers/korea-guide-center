@@ -1,29 +1,17 @@
-import {
-    Bold,
-    Flex,
-    JDbadge,
-    JDbutton,
-    JDcard,
-    Small,
-    Tiny,
-} from "@janda-com/front";
+import { Bold, Flex, JDbadge, JDbutton, JDcard, Tiny } from "@janda-com/front";
 import { IJDcardProps } from "@janda-com/front/dist/components/cards/Card";
-import dayjs from "dayjs";
 import React from "react";
 import { useContext } from "react";
 import { Info } from "../../atom/Info";
 import { MiniTable } from "../../atom/miniTable/MiniTable";
 import { AppContext } from "../../context/context";
-import { useStartChat } from "../../hook/useChatRoom";
-import { useOfferDelete } from "../../hook/useOffer";
 import { getOfferSummary, useOfferManage } from "../../hook/useOfferManage";
 import { usePaths } from "../../hook/usePaths";
 import { TourTable } from "../../page/tour/components/TourTable";
 import { Foffer, LANGUAGES } from "../../types/api";
-import { AMPM, OfferStatusKr } from "../../types/const";
+import { AMPM } from "../../types/const";
 import { cutStr } from "../../utils/cutStr";
-import { yyyymmddLabelRange, yyyymmddRange } from "../../utils/dateFormat";
-import { langToKr } from "../../utils/enumToKr";
+import { yyyymmddRange } from "../../utils/dateFormat";
 import { autoComma } from "../../utils/formatter";
 import { getDateDiffText } from "../../utils/getDateDiffText";
 import { CardBtn, TableBtn } from "../btns/ModalBtn";
@@ -39,22 +27,11 @@ export const OfferViewCard: React.FC<IProp> = ({ offer, ...props }) => {
     const { l, travlerFormModalHook, s, me, isMaster } = useContext(AppContext);
     const { toProductDetailPage, toGuideProfileDetail } = usePaths();
     const { handleDelete } = useOfferManage();
-    const {
-        offerId,
-        tourTitle,
-        offerName,
-        status,
-        guideName,
-        guideNickName,
-        tourStart,
-        wishTour,
-        createdAt,
-        proposalTours,
-    } = offer;
+    const { offerId, status, guideName, wishTour, createdAt, proposalTours } =
+        offer;
     const {
         region,
         regionDetail,
-        category,
         contents,
         price,
         lang,

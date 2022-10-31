@@ -1,12 +1,4 @@
-import {
-    autoComma,
-    Bold,
-    Flex,
-    JDbadge,
-    Small,
-    Thin,
-    Tiny,
-} from "@janda-com/front";
+import { autoComma, Bold, Flex } from "@janda-com/front";
 import classNames from "classnames";
 import React from "react";
 import { Clip } from "../../atom/clip/Clip";

@@ -1,6 +1,5 @@
 import React from "react";
 import { JDtypho } from "@janda-com/front";
-import { IIcons } from "@janda-com/front/dist/components/icons/declation";
 import { IMenu } from "./Sidebar";
 import { JDicon } from "../icons/Icons";
 

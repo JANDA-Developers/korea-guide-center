@@ -1,12 +1,9 @@
-import { IJDalignProp, JDalign, JDtypho, useDropDown } from "@janda-com/front";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { IJDalignProp } from "@janda-com/front";
 import React, { useState } from "react";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import styled from "styled-components";
 import { mapRegion, regionableData } from "../koreaMap/KoreaData";
-import { Flangs } from "../../types/api";
 
 const ItemList = styled.ul`
     z-index: 20;

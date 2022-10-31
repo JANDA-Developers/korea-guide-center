@@ -3,13 +3,8 @@ import React, { useEffect } from "react";
 import { TUseGlobalModal } from "../../hook/useGlobalModal";
 import { useSingleUpload } from "../../hook/useUpload";
 import { FsubPlan } from "../../types/api";
-import { DEFAULT_LANGS } from "../../types/const";
 import { InputWithGlobal } from "../InputWithGlobal/InputWithGlobal";
 import SingleUploader from "../singleUploader/SingleUploader";
-// import SubPlanInputContent from "./subPlanInputContents";
-// import SubPlanInputTime from "./subPlanInputTime";
-// import SubPlanInputTitle from "./subPlanInputTitle";
-
 interface IProp extends Omit<IJDalignProp, "onChange"> {
     subplan: FsubPlan;
     onChange: (subPlan: FsubPlan) => void;

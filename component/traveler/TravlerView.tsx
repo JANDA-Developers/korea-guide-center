@@ -4,7 +4,6 @@ import { yyyymmdd } from "../../utils/dateFormat";
 import { ScrollBox } from "../scrollBox/ScrollBox";
 import LineTable from "../table/LineTable";
 import { AppContext } from "../../context/context";
-import { RepresentiveTourBadge } from "../statusBadges/StatusBadges";
 import { Flex, JDbadge } from "@janda-com/front";
 
 interface ITravelerViewsProps {

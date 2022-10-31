@@ -1,5 +1,4 @@
 import {
-    Bold,
     Flex,
     IJDalignProp,
     isEmpty,
@@ -8,7 +7,6 @@ import {
     JDbutton,
     JDcard,
     JDhorizen,
-    JDtypho,
     Tiny,
 } from "@janda-com/front";
 import React from "react";
@@ -19,10 +17,7 @@ import { AppContext } from "../../context/context";
 import { useCommentManage } from "../../hook/useComment";
 import { ListInitOptions } from "../../hook/useListQuery";
 import { useReviewDelete, useReviewList } from "../../hook/useReview";
-import {
-    getReviewSummary,
-    useReviewControl,
-} from "../../hook/useReviewControl";
+import { getReviewSummary } from "../../hook/useReviewControl";
 import {
     CommentTarget,
     Freview,
@@ -32,13 +27,9 @@ import {
     _ReviewFilter,
     _ReviewSort,
 } from "../../types/api";
-import { TElements } from "../../types/interface";
 import { genrateOption } from "../../utils/query";
 import { JDicon } from "../icons/Icons";
-import {
-    IReviewModalInfo,
-    IReviewModalWrapInfo,
-} from "../ReviewModal/ReviewModal";
+import { IReviewModalWrapInfo } from "../ReviewModal/ReviewModal";
 import { ReviewBox } from "./ReviewBox";
 
 interface IProp extends IJDalignProp {

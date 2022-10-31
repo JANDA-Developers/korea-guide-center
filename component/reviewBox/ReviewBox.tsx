@@ -2,7 +2,6 @@ import {
     Bold,
     Flex,
     JDalign,
-    JDbutton,
     JDhorizen,
     JDicon,
     Mr,

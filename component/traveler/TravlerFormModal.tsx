@@ -1,5 +1,5 @@
 import { Flex, IUseModal, JDmodal, Validater } from "@janda-com/front";
-import React, { useState } from "react";
+import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { useCopy } from "../../hook/useCopy";

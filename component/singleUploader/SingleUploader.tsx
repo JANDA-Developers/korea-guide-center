@@ -2,7 +2,6 @@ import {
     JDalign,
     JDlabel,
     JDatomClasses,
-    JDpreloader,
     JDbutton,
     Flex,
 } from "@janda-com/front";

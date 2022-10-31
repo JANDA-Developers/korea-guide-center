@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
-import { JDatomClasses, WindowSizeNumber } from "@janda-com/front";
+import { JDatomClasses } from "@janda-com/front";
 import {
     IDiv,
     JDatomExtentionSet,

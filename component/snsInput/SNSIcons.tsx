@@ -1,4 +1,4 @@
-import { Flex, IJDalignProp, JDicon, s4 } from "@janda-com/front";
+import { Flex, IJDalignProp, s4 } from "@janda-com/front";
 import React from "react";
 import { Fsns } from "../../types/api";
 import { omits } from "../../utils/omit";

@@ -3,12 +3,9 @@ import {
     JDmodal,
     JDtypho,
     useInput,
-    useModal,
     InputText,
     JDradio,
     useRadio,
-    JDcard,
-    toast,
 } from "@janda-com/front";
 import React from "react";
 import { useContext } from "react";

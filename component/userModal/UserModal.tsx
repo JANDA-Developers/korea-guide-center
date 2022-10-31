@@ -2,14 +2,10 @@ import {
     autoHypen,
     Bold,
     Flex,
-    isEmpty,
     IUseModal,
     JDalign,
     JDavatar,
-    JDbox,
     JDcard,
-    JDhorizen,
-    JDlabel,
     JDmodal,
     Mr,
 } from "@janda-com/front";
@@ -20,17 +16,13 @@ import { useBookingList } from "../../hook/useBooking";
 import { useTourList } from "../../hook/useTour";
 import { useuserFindById } from "../../hook/useUser";
 import { BookingTable } from "../../page/booking/components/BookingTable";
-import { MyChatRooms } from "../../page/my/ChatRooms";
 import { TourTable } from "../../page/tour/components/TourTable";
 import { Fuser, UserRole } from "../../types/api";
 import { DEFAULT_PROFILE_IMG, UserTypeKr } from "../../types/const";
 import { yyyymmdd } from "../../utils/dateFormat";
 import { GnederToKr, langToKr } from "../../utils/enumToKr";
 import { ChatRoomViewCards } from "../chatRoom/ChatRoomViewCard";
-import { FileBox } from "../filebox/FileBox";
-import { GuideCircle } from "../guideCircle/GuideCircle";
 import { CardHead } from "../modalHead/ModalHead";
-import { Badges } from "../statusBadges/StatusBadges";
 import { UserProfileCard } from "../userProfileCard/UserProfileCard";
 import { FilingCabinet } from "./component/FilingCabinet";
 
@@ -71,37 +63,17 @@ export const UserModal: React.FC<IProp> = ({ modalHook, item }) => {
             },
         });
     const {
-        _id,
-        introduce,
-        adminMemo,
-        bankImage,
-        chatRoomIds,
         createdAt,
         email,
-        guideCategory,
-        guideLicenses,
-        company,
-        isOauth,
-        regions,
         resginData,
         profileImage,
-        profileBgImage,
         role,
-        stop,
-        myWishList,
         gender,
-        langs,
-        location,
         birthDate,
-        products,
-        chatWiths,
         countryCode,
         name,
         nickName,
         passportNumber,
-        myProductInfoes,
-        myBookingInfoes,
-        myTourInfoes,
         phoneNumber,
     } = Item;
     const { isBooker, isGuide, isMaster, itsGuideAppling } =

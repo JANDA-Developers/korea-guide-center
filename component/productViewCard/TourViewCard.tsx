@@ -1,12 +1,4 @@
-import {
-    Bold,
-    Flex,
-    JDalign,
-    JDavatar,
-    JDcard,
-    Small,
-    Tiny,
-} from "@janda-com/front";
+import { Bold, Flex, JDalign, JDcard, Small, Tiny } from "@janda-com/front";
 import { IJDcardProps } from "@janda-com/front/dist/components/cards/Card";
 import { useRouter } from "next/router";
 import React from "react";
@@ -33,9 +25,8 @@ export const TourViewCard: React.FC<IProp> = ({
     className,
     ...alignProp
 }) => {
-    const { locale } = useRouter();
     const { l, s } = useContext(AppContext);
-    const { number, code, startDate } = tour;
+    const { code, startDate } = tour;
     const {
         category,
         region,

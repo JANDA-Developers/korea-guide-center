@@ -2,7 +2,6 @@ import {
     Bold,
     isLast,
     JDalign,
-    JDbutton,
     JDhorizen,
     JDtypho,
     Mr,

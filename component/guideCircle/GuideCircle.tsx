@@ -6,7 +6,6 @@ import {
 } from "@janda-com/front/dist/types/interface";
 import { useRouter } from "next/router";
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { useResizedImgLoadFailPreventer } from "../../hook/useResizeImgLoadFailPreventer";
 import { Paths } from "../../pages/index[depre]";
 import { DEFAULT_PROFILE_IMG } from "../../types/const";

@@ -1,7 +1,6 @@
 import { Bold, IJDalignProp, JDalign, Small } from "@janda-com/front";
 import React from "react";
 import { Fproduct } from "../../types/api";
-import { underDigit } from "../../utils/digits";
 import { RatingStar } from "../rating/Rating";
 
 interface IProp extends IJDalignProp {

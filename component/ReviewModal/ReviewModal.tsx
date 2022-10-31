@@ -9,7 +9,6 @@ import {
 import React from "react";
 import { useContext } from "react";
 import { LineCutter } from "../../atom/LineCutter";
-import { Red } from "../../atom/shortCut/Short";
 import { AppContext } from "../../context/context";
 import { useReviewControl } from "../../hook/useReviewControl";
 import { useTourFindById } from "../../hook/useTour";

@@ -2,7 +2,6 @@ import { createFFmpeg } from "@ffmpeg/ffmpeg";
 import { dataURLtoFile, JDbutton } from "@janda-com/front";
 import React, { useState, useRef } from "react";
 import { useEffect } from "react";
-import { useCommentUpdate } from "../../hook/useComment";
 import { useUpdateComponent } from "../../hook/useUpdateComponent";
 import { useSingleUpload } from "../../hook/useUpload";
 import { Ffile } from "../../types/api";
@@ -11,7 +10,6 @@ interface IProp {
 }
 
 export const VideoThumbNailGenerator: React.FC<IProp> = ({ onChange }) => {
-    const fileCoverHtml = useRef<HTMLInputElement>(null);
     const { updateComponent } = useUpdateComponent();
     const videoRefContainer = useRef<HTMLInputElement>(null);
     const [message, setMessage] = useState("Click Start to import");
@@ -43,11 +41,6 @@ export const VideoThumbNailGenerator: React.FC<IProp> = ({ onChange }) => {
         if (video) {
             const extention = getFileExtension(video);
             const mine = getFileMine(video);
-            // ffmpeg.FS(
-            //     "writeFile",
-            //     coverName,
-            //     new Uint8Array(await cover.arrayBuffer())
-            // );
 
             ffmpeg.FS(
                 "writeFile",
@@ -127,16 +120,6 @@ export const VideoThumbNailGenerator: React.FC<IProp> = ({ onChange }) => {
                 type="file"
                 accept="video/mp4,video/x-m4v,video/*"
             />
-            {/* <label htmlFor="img">image </label>{" "}
-       
-            <button onClick={doImport}>Start</button>
-            <p>{message}</p>{" "}
-            {downloadLink.length !== 0 && (
-                <a href={downloadLink} download="result">
-                    {" "}
-                    download{" "}
-                </a>
-            )} */}
         </div>
     );
 };

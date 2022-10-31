@@ -1,6 +1,4 @@
-import { NamedTypeNode } from "graphql";
 import React from "react";
-import { TElements } from "../../types/interface";
 
 interface IProp {
     children?: any;

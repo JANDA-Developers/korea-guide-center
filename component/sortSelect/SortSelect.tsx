@@ -1,9 +1,5 @@
 import { JDselect } from "@janda-com/front";
-import {
-    IselectedOption,
-    JDselectProps,
-} from "@janda-com/front/dist/components/select/SelectBox";
-import { enumToOption } from "@janda-com/front/dist/utils/selectOptionCreater";
+import { IselectedOption } from "@janda-com/front/dist/components/select/SelectBox";
 import React, { PropsWithChildren } from "react";
 import { IListHook } from "../../hook/useListQuery";
 import { enumToOp } from "../../utils/enumToOps";

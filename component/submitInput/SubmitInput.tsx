@@ -1,4 +1,4 @@
-import { InputText, Flex, JDalign, JDbutton, useInput } from "@janda-com/front";
+import { InputText, Flex, JDbutton, useInput } from "@janda-com/front";
 import { IInputTextCutsomProp } from "@janda-com/front/dist/components/InputText/InputText";
 import React from "react";
 

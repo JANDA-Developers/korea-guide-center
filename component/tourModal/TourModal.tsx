@@ -34,12 +34,6 @@ export const TourModal: React.FC<IProp> = ({ modalHook, item }) => {
         >
             <Bold mb>투어정보</Bold>
             <TourViewCard head={undefined} mb tour={Item} />
-            {/* <Bold mb>상품 노출</Bold>
-            <ProductViewCard mb product={Item.productInfomation} /> */}
-            {/* <div>
-            <Bold mb>가이드정보</Bold>
-            <UserProfileCard guide={guide} />
-            </div> */}
             <Bold mb>
                 예약현황{" "}
                 <span>

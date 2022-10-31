@@ -1,8 +1,10 @@
-import React from 'react';
-import classnames from 'classnames';
-import { ISpan, JDatomExtentionSet } from '@janda-com/front/dist/types/interface';
-import { JDatomClasses, JDColor, TextSize } from '@janda-com/front';
-// import { textColorClass } from "@janda-com/front/dist/utils/autoClasses";
+import React from "react";
+import classnames from "classnames";
+import {
+    ISpan,
+    JDatomExtentionSet,
+} from "@janda-com/front/dist/types/interface";
+import { JDatomClasses, JDColor, TextSize } from "@janda-com/front";
 
 interface Iprops extends ISpan, JDatomExtentionSet {
     color?: JDColor;
@@ -17,8 +19,8 @@ const TextButton: React.FC<Iprops> = ({
     className,
     ...props
 }) => {
-    const classNames = classnames('textButton', className, {
-        'textButton--anchor': anchor,
+    const classNames = classnames("textButton", className, {
+        "textButton--anchor": anchor,
         ...JDatomClasses(props),
     });
 

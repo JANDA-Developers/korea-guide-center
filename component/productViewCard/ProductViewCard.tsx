@@ -3,7 +3,6 @@ import {
     Flex,
     IJDalignProp,
     JDalign,
-    JDavatar,
     JDtypho,
     Small,
     Tiny,
@@ -21,7 +20,6 @@ import { beforeExtention } from "../../utils/fileExtendDivider";
 import { autoComma } from "../../utils/formatter";
 import { GuideCircle } from "../guideCircle/GuideCircle";
 import { RatingStar } from "../rating/Rating";
-import { ResolutionImg } from "../resolutionImg/ResoulutionImg";
 import { WishIcon } from "../wisthIcon/WishIcon";
 
 // 투어 상품

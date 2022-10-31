@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IUseInit } from "../hook/useInit";
-import { LANGUAGES, me_Me } from "../types/api";
+import { LANGUAGES } from "../types/api";
 import statics from "../static.json";
-import { TElements } from "../types/interface";
 
 export type TStaticLangFn = (key: keyof typeof statics) => any;
 

@@ -6,7 +6,6 @@ import {
     JDcard,
     JDhorizen,
     JDtypho,
-    Mr,
     Small,
 } from "@janda-com/front";
 import { TElements } from "@janda-com/front/dist/types/interface";

@@ -1,4 +1,3 @@
-import { JDhorizen } from "@janda-com/front";
 import React from "react";
 import { FsubPlan } from "../../types/api";
 import { SubPlanViewer } from "./SubPlanViewer";

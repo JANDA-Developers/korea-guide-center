@@ -1,14 +1,5 @@
 import React from "react";
-import {
-    Col,
-    Flex,
-    Grid,
-    InputText,
-    isLast,
-    JDlabel,
-    JDswitch,
-    JDtagInput,
-} from "@janda-com/front";
+import { InputText, JDlabel, JDswitch, JDtagInput } from "@janda-com/front";
 import JDEditor from "../editor/Editor";
 
 export enum JDinputType {

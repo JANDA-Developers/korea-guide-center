@@ -4,10 +4,8 @@ import {
     Flex,
     JDcard,
     JDcounter,
-    Small,
     Thin,
 } from "@janda-com/front";
-import { TElements } from "@janda-com/front/dist/types/interface";
 import React, { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { Ftour } from "../../types/api";
@@ -36,12 +34,7 @@ export const DetailPeopleSelecter: React.FC<IProp> = ({
     withOutPrice,
 }) => {
     const { s } = useContext(AppContext);
-    const {
-        totalAdult,
-        totalBaby,
-        totalKids,
-        totalMember: alreadyBookedTotalMember,
-    } = tour || {
+    const { totalMember: alreadyBookedTotalMember } = tour || {
         totalMember: 0,
     };
 

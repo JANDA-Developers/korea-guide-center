@@ -1,7 +1,5 @@
 import { IUseModal, JDmodal, JDmodalConfigProps } from "@janda-com/front";
-import { title } from "process";
 import React from "react";
-import { useCategoryUpdate } from "../../hook/useCategory";
 import { mapRegion } from "../koreaMap/KoreaData";
 import { KoreaMap } from "../koreaMap/KoreaMap";
 

@@ -1,11 +1,4 @@
-import {
-    Bold,
-    Flex,
-    JDalign,
-    JDbutton,
-    JDhorizen,
-    Small,
-} from "@janda-com/front";
+import { Bold, Flex, JDalign, JDbutton, Small } from "@janda-com/front";
 import React, { useState } from "react";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";

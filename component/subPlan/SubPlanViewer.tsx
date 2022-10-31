@@ -11,7 +11,7 @@ import {
 import React, { useContext } from "react";
 import { Img } from "../../atom/Image";
 import { AppContext } from "../../context/context";
-import { Ffile, FsubPlan } from "../../types/api";
+import { FsubPlan } from "../../types/api";
 import { beforeExtention } from "../../utils/fileExtendDivider";
 
 interface IProp extends Omit<IJDalignProp, "onChange"> {

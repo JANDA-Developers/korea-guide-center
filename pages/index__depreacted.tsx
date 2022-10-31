@@ -1,4 +1,4 @@
-import { JDalign, JDbutton, WindowSize } from "@janda-com/front";
+import { JDbutton, WindowSize } from "@janda-com/front";
 import { BookHeader } from "../component/layout/BookHeader";
 import { useProductList } from "../hook/useProduct";
 import ThumbNail from "../page/index/ThumNail";

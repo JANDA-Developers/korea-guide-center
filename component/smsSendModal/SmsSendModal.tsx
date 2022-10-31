@@ -4,21 +4,17 @@ import {
     InputText,
     isEmail as isEmailCheck,
     IUseModal,
-    JDalign,
     JDbox,
     JDbutton,
     JDlabel,
     JDmodal,
     JDselect,
-    JDswitch,
     JDtypho,
     Mr,
-    opFind,
     toast,
     useInput,
     useModal,
     useSelect,
-    useSwitch,
 } from "@janda-com/front";
 import _, { isEmpty } from "lodash";
 import React from "react";
@@ -48,7 +44,6 @@ import { ModalBtn } from "../btns/ModalBtn";
 import JDEditor from "../editor/Editor";
 import { JDicon } from "../icons/Icons";
 import { ScrollBox } from "../scrollBox/ScrollBox";
-import { TotalViewer } from "../totalViewer/TotalViewer";
 
 export interface ISmsSendModalInfo {
     receviers: string[];

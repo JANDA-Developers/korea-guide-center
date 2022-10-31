@@ -26,7 +26,6 @@ import { DEFAULT_PROFILE_IMG } from "../../types/const";
 import { cutStr } from "../../utils/cutStr";
 import { getDateDiffText } from "../../utils/getDateDiffText";
 import { genrateOption } from "../../utils/query";
-import Controller from "../formCreater/components/Controller";
 
 interface IProp extends IJDalignProp {
     chatRoom: FchatRoom;

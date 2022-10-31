@@ -6,7 +6,7 @@ import { AutoCompeletePreventer } from "../AutoCompeltePreventer/AutoCompletePre
 import { searchPageQueryGenerate } from "../../pages/product/search";
 import { useState, useContext, SyntheticEvent } from "react";
 import { AppContext } from "../../context/context";
-import { mapRegion, regionableData, mapRegionArr } from "../koreaMap/KoreaData";
+import { mapRegion, regionableData } from "../koreaMap/KoreaData";
 import { useRouter } from "next/router";
 import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
 
@@ -132,7 +132,6 @@ interface IMenuScreenProps {
 }
 
 function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
-    const router = useRouter();
     const [view, setView] = useState({
         cities: true,
         partnerNetwork: false,
@@ -143,7 +142,6 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
     const toSearchPage = () => {
         const to = searchPageQueryGenerate({ title: searchHook.value });
         location.href = to;
-        // router.push(to);
     };
     const citiesKoreaMap = useCitiesKoreaMap();
     const { onClick: selectCitiesRegion } = citiesKoreaMap;
@@ -192,15 +190,6 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                         >
                             도시
                         </SideNavItem>
-                        {/* <SideNavItem
-                            kind="medium"
-                            id="partnerNetwork"
-                            onClick={onClickMenus}
-                        >
-                            Partner Network
-                        </SideNavItem>
-                        <SideNavItem kind="medium">Blog</SideNavItem>
-                        <SideNavItem kind="medium">Guide With us</SideNavItem> */}
                     </SideNav>
                     <SearchAndCities>
                         <SearchBar>

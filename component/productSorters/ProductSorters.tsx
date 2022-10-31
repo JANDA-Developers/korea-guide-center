@@ -1,10 +1,9 @@
-import { IJDalignProp, JDalign, JDtypho } from "@janda-com/front";
+import { IJDalignProp, JDtypho } from "@janda-com/front";
 import { ISet } from "@janda-com/front/dist/types/interface";
 import React from "react";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { _ProductSort } from "../../types/api";
-import { TElements } from "../../types/interface";
 
 interface IProp extends IJDalignProp {
     sort: _ProductSort[];

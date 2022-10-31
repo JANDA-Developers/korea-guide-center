@@ -1,4 +1,4 @@
-import { JDicon, JDtypho } from "@janda-com/front";
+import { JDtypho } from "@janda-com/front";
 import React from "react";
 
 interface IProp {
@@ -15,12 +15,7 @@ export const DiscountViewer: React.FC<IProp> = ({
     const rate = priceDiscounted / priceOrigin;
     return (
         <div>
-            <JDtypho>
-                {priceOrigin}
-                {/* <JDicon icon="arrowDown" color="error">
-                    {rate}%
-                </JDicon> */}
-            </JDtypho>
+            <JDtypho>{priceOrigin}</JDtypho>
         </div>
     );
 };

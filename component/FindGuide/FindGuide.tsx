@@ -1,5 +1,4 @@
 import { useContext } from "react";
-
 import { useRouter } from "next/router";
 import { Paths } from "../../pages/index[depre]";
 import { GuidePath } from "../../page/GuideRouter";

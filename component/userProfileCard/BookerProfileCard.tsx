@@ -14,13 +14,11 @@ import { useContext } from "react";
 import { Img } from "../../atom/Image";
 import { Info } from "../../atom/Info";
 import { AppContext } from "../../context/context";
-import { useuserFindById } from "../../hook/useUser";
 import { Fuser } from "../../types/api";
 import { DEFAULT_BG_IMG, DEFAULT_PROFILE_IMG } from "../../types/const";
 import { yyyymmdd } from "../../utils/dateFormat";
-import { langToKr } from "../../utils/enumToKr";
 import { GuideCircle } from "../guideCircle/GuideCircle";
-import { Badges, GenderBade } from "../statusBadges/StatusBadges";
+import { GenderBade } from "../statusBadges/StatusBadges";
 
 interface IProp {
     booker: Fuser;
@@ -30,7 +28,6 @@ export const BookerProfileCard: React.FC<IProp> = ({ booker }) => {
     const { s, l } = useContext(AppContext);
     const {
         name,
-        birthDate,
         createdAt,
         gender,
         nationality,

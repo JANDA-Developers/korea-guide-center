@@ -32,12 +32,11 @@ import { getRangeStringByNumber } from "../../utils/product";
 import { GuideCircle } from "../guideCircle/GuideCircle";
 import { InfoBox } from "../infoBox/InfoBox";
 import { Head } from "../ProfileForm/ProfileForm";
-import { IReviewModalInfo, ReviewModalWrap } from "../ReviewModal/ReviewModal";
-import { Badges, Badges2 } from "../statusBadges/StatusBadges";
+import { IReviewModalInfo } from "../ReviewModal/ReviewModal";
+import { Badges } from "../statusBadges/StatusBadges";
 import { WishIcon } from "../wisthIcon/WishIcon";
 import LogoComponent from "./DetailNavCardLogo";
 import { Introduce } from "./DetailNavCardIntroduce";
-import { Direction } from "react-range";
 
 interface IProp extends IJDcardProps {
     tours: Ftour[];

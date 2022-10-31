@@ -1,10 +1,10 @@
 import { Flex, isEmpty, JDhorizen } from "@janda-com/front";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useContext } from "react";
 import { Info2 } from "../../atom/Info";
 import { LineCutter } from "../../atom/LineCutter";
 import { AppContext } from "../../context/context";
-import { Flangs, Fuser } from "../../types/api";
+import { Flangs } from "../../types/api";
 import { filterVisibleProduct } from "../../utils/product";
 import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
 import { ProductViewCardsWithApi2 } from "../productViewCard/ProductViewCards";

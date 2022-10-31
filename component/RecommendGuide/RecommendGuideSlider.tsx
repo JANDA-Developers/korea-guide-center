@@ -1,5 +1,5 @@
 import { useContext, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useWindowSize } from "usehooks-ts";
 import { useUserList } from "../../hook/useUser";
 import { IHorizenGriderProp } from "../horizenGrider/HorizenGrider";
@@ -17,9 +17,6 @@ import { genrateOption } from "../../utils/query";
 import { TElements } from "../../types/interface";
 import { userList_UserList_items } from "../../types/api";
 import { useRouter } from "next/router";
-import RecommendGuideSliderItem from "./RecommendGuideSliderItem";
-import RightArrowIcon from "../../icons/RightArrowIcon";
-import LeftArrowIcon from "../../icons/LeftArrowIcon";
 import { randomArraySort } from "../../utils/shuffle";
 import { Paths } from "../../pages/index[depre]";
 import { AppContext } from "../../context/context";

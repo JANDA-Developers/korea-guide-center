@@ -1,7 +1,6 @@
 import { Flex, JDbutton, JDcard, JDtypho, Mb } from "@janda-com/front";
 import { IDiv, ISet } from "@janda-com/front/dist/types/interface";
 import React from "react";
-import { useState } from "react";
 import { JDicon } from "../icons/Icons";
 
 interface IStep extends IDiv {

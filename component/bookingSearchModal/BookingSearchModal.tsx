@@ -57,9 +57,6 @@ export const BookingSearchModal: React.FC<IProp> = ({ modalHook }) => {
             }
             {...modalHook}
         >
-            {/* <BookingSearcher
-                bookingHook={bookingListHook}
-            /> */}
             <BookingTable
                 paginationHook={paginatorHook}
                 key={bookings.length}

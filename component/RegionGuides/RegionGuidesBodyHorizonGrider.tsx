@@ -1,6 +1,6 @@
 // HorizonGrider 복사본입니다.
 
-import { Flex, isEmpty, JDalign } from "@janda-com/front";
+import { Flex, isEmpty } from "@janda-com/front";
 import classNames from "classnames";
 import { PropsWithChildren, useLayoutEffect, useState } from "react";
 import { useResizeDetector } from "react-resize-detector";
@@ -13,10 +13,9 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
     items,
     wrap,
     empty,
-    itemRedner,
 }: PropsWithChildren<IHorizenGriderProp<T>>) => {
     const [_align, _setAlign] = useState<number | null>(null);
-    const { ref, width, height } = useResizeDetector();
+    const { ref, width } = useResizeDetector();
     const Align = _align || align;
     const noItem = isEmpty(items);
     const className = classNames("ProductViewCards", undefined, {

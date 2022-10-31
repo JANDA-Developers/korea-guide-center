@@ -1,4 +1,4 @@
-import { Flex, IJDalignProp, JDbutton } from "@janda-com/front";
+import { Flex } from "@janda-com/front";
 import router from "next/router";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";

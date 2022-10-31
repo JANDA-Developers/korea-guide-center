@@ -1,14 +1,12 @@
 import { Flex } from "@janda-com/front";
 import classNames from "classnames";
 import React from "react";
-import Scrollbars from "react-custom-scrollbars-2";
 import ReactTable, {
     TableProps,
     ReactTableDefaults,
     RowRenderProps,
     Column,
 } from "react-table-6";
-import { Empty } from "../../atom/Empty";
 import { Circle } from "../circle/Circle";
 import { JDicon } from "../icons/Icons";
 

@@ -1,10 +1,4 @@
-import {
-    InputText,
-    IUseModal,
-    JDmodal,
-    JDtypho,
-    useInput,
-} from "@janda-com/front";
+import { InputText, IUseModal, JDmodal, useInput } from "@janda-com/front";
 import { IInputTextCutsomProp } from "@janda-com/front/dist/components/InputText/InputText";
 import { TElements } from "@janda-com/front/dist/types/interface";
 import React from "react";

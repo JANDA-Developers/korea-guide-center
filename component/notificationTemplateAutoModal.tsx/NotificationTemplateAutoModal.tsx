@@ -1,17 +1,13 @@
 import {
     Flex,
     IUseModal,
-    JDalign,
     JDconfiger,
     JDlabel,
     JDmodal,
-    JDtypho,
-    Small,
 } from "@janda-com/front";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Info } from "../../atom/Info";
 import { useTemplateCreate } from "../../hook/useNotification";
-import GuideContext from "../../page/context";
 import { NotificationTemplateCreateInput } from "../../types/api";
 import { STATIC_PRICES } from "../../types/const";
 import { ModalBtn } from "../btns/ModalBtn";
