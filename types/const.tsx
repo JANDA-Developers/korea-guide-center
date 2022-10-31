@@ -534,7 +534,7 @@ export enum boardKeys {
 }
 
 export const emailVerificationLink = (email: string) => {
-    return "http://koreaguide.center/verification" + "?email=" + email;
+    return "https://koreaguide.center/verification" + "?email=" + email;
 };
 
 export const TourSortKr: Record<_TourSort, string> = {

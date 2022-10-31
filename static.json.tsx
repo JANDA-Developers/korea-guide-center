@@ -951,7 +951,7 @@ const utils_message = {
         // chi: `韩币`,
     },
     ko: {
-        ko: "한국어",
+        ko: "Korean",
         en: `Korean`,
         ja: `韓国語`,
         chi: `韩语`,
