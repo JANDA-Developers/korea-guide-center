@@ -38,21 +38,4 @@ export const PaypalButtonLoader: React.FC<IProps> = ({ ...props }) => {
     );
 };
 
-//     return loaded ? (
-//         <PayPalButton amount={0} {...props} />
-//     ) : (
-//         <Helmet>
-//             <script
-//                 src={`https://www.paypal.com/sdk/js?client-id=${
-//                     process.env.CLIENT_ID || "test"
-//                 }`}
-//                 type="text/javascript"
-//             />
-//         </Helmet>
-//     );
-// };
-
-// // 이녀석이 로드를 검증하고 나서 Button을 렌더함
-// export const PaypalButtonWrap = () => {};
-
 export default "";

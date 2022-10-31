@@ -1,5 +1,5 @@
 import "../utils/polifill";
-import React, { Suspense } from "react";
+import React from "react";
 import lazy from "next/dynamic";
 import "dayjs/locale/ko";
 import dayjs from "dayjs";
@@ -71,7 +71,6 @@ function App({ Component, pageProps }: any) {
         imageCropperModalHook,
         bookingCacnelModalHook,
         travlerFormModalHook,
-        isMaster,
         verificationModalHook,
         verificationHook,
         languageSelectModal,
@@ -92,15 +91,8 @@ function App({ Component, pageProps }: any) {
         const outWidth = window.outerWidth;
         if (outWidth < 1000) setIsMobile(true);
         else setIsMobile(false);
-
-        // if (process.env.NODE_ENV !== "development") {
-        //     if (prompt("개발중 비밀번호") !== "0825") {
-        //         window.history.go(-1);
-        //     }
-        // }
     }, []);
 
-    // if (process.env.NODE_ENV !== "development") {
     consoleCover();
     useRouterScroll();
     useDummyLogin();

@@ -7,12 +7,6 @@ import RegionGuides from "../component/RegionGuides/RegionGuides";
 interface IProp {}
 
 export const LocationalGuide: React.FC<IProp> = () => {
-    // const { locale } = useRouter();
-    // const { homepage, s } = useContext(AppContext);
-    // const { locationalBannerImgs } = useSortBanner(
-    //     homepage?.bannerImages || []
-    // );
-
     const globalKoreaHook = useGlobalKoreaMap();
     const { selectedGlobalRegion } = globalKoreaHook;
 

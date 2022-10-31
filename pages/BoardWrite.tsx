@@ -1,7 +1,6 @@
 import { getFromUrl, JDcontainer, WindowSize } from "@janda-com/front";
 import React from "react";
 import { useContext } from "react";
-import { Paths } from "./index[depre]";
 import { BackStepBar } from "../component/backstepBar/BackstepBar";
 import { BreadColumn } from "../component/breadColumn/BreadColumn";
 import BookLayout from "../component/layout/BookLayout";
@@ -13,9 +12,7 @@ import { BoardDocEditor } from "../page/board/components/BoardDocEditor";
 import { BoardFacotry } from "../types/board";
 import { boardKeys } from "../types/const";
 import { TRouteChange } from "./BoardList";
-import { FboardDoc } from "../types/api";
 import { useBoardRoute } from "../hook/useBoardRoute";
-import { useHistory, useLocation } from "react-router-dom";
 
 interface IProp {
     docId?: string;

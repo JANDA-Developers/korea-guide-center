@@ -155,17 +155,3 @@ export class LocalItemStorage<Item extends Partial<IBaseItem>> {
         return brakcet?.length || 0;
     }
 }
-
-// humanCountToCount(count: IHumanCount) {
-//     return [{ key: "kid", label: "성인", value: count.adult },
-//     { key: "kid", label: "소아", value: count.kids },
-//     { key: "baby", label: "유아", value: count.baby }]
-// }
-
-// countToHumanCount(count: TCount[]): IHumanCount {
-//     return {
-//         adult: count[0].value,
-//         kids: count[1].value,
-//         baby: count[2].value,
-//     }
-// }

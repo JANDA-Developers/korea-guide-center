@@ -11,7 +11,6 @@ import {
     SettlementStatus,
     TourStatus,
 } from "../types/api";
-import { QuestionTypes } from "../types/board";
 import { enumToOp } from "./enumToOps";
 
 export const languageConverter = <_, T>(obj: T, l: any): T => {

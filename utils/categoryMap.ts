@@ -31,10 +31,6 @@ interface IGroupWithProducts extends Fgroup {
     products: Fproduct[];
 }
 
-interface IGroupWithGuide extends Fuser {
-    guides: Fproduct[];
-}
-
 export const groupProductMap = (
     products: Fproduct[],
     group: Fgroup[]

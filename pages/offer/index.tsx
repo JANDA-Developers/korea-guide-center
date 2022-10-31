@@ -30,7 +30,6 @@ const Offer: React.FC<IGudeProfilePage> = () => {
     if (typeof window === "undefined") return null;
     const { s } = useContext(AppContext);
     const {
-        categoryHook,
         contentHook,
         langHook,
         memoHook,

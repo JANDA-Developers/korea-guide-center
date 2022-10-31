@@ -2,19 +2,16 @@ import {
     DocumentNode,
     LazyQueryHookOptions,
     MutationHookOptions,
-    operationName,
     QueryHookOptions,
     useMutation,
 } from "@apollo/client";
 import { ListInitOptions, useListQuery } from "../hook/useListQuery";
-import React, { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useLazyQuery } from "@apollo/client";
 import { DEFAULT_PAGE_INFO } from "@janda-com/front";
 import { FoffsetPagingInfo } from "../types/api";
 import { getOperationName } from "@apollo/client/utilities";
 import { completeMsg } from "./onCompletedMessage";
-import dayjs from "dayjs";
-import { useGA4React } from "ga-4-react";
 
 export const pageLoadingEffect = (loading: boolean, operationName: string) => {
     if (typeof document === "undefined") return;
@@ -263,14 +260,6 @@ export const generateMutationHook = <M, V = any>(
             const { data: resultData } = muhook[1] as any;
             const result = resultData[capitalize(operationName)];
             if (result?.ok === false) {
-                // if (ga && result.error) {
-                //     let err = "";
-                //     try {
-                //         err = JSON.stringify(result.error);
-                //     } catch {}
-                //     console.log({ ga });
-                //     ga.event(operationName, err, "error");
-                // }
             }
         }
 

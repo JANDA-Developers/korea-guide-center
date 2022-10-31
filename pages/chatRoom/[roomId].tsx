@@ -34,14 +34,12 @@ const ChatRoom: React.FC<IGudeProfilePage> = () => {
     const {
         chats,
         chatRoomBg,
-        targetId,
-        openerId,
         targetNicekName,
         targetName,
         targetProfileImage,
     } = item;
     const nickNameOrName = targetNicekName || targetName;
-    const { opnerIsMe, targetIsMe, opponentId } = getRelativeChatRoom(item);
+    const { opponentId } = getRelativeChatRoom(item);
 
     const handleSubmit = (input: ChatInput) => {
         chatSend({

@@ -30,8 +30,6 @@ import { DetailPeopleSelecter } from "../../component/productDetailComponents/De
 import { usePeopleCnt } from "../../hook/usePeopleCnt";
 import { ReviewBoxsWithApi } from "../../component/reviewBox/ReviewBoxs";
 import {
-    BestProductList,
-    NewsProductList,
     ProductViewCardsWithApi,
     regionIn,
 } from "../../component/productViewCard/ProductViewCards";
@@ -48,8 +46,6 @@ import {
 import { IBuyPageQuery } from "../../page/pay/Pay";
 import { Paths } from "../index[depre]";
 import {
-    BestProductViewsLineHeader,
-    NewstProductViewsLineHeader,
     ProductViewsLineHeader,
     RegionProductViewsLineHeader,
     RegionProductViewsLineHeader2,
@@ -96,7 +92,6 @@ export const ProductDetail: React.FC<IProp> = ({
     const reviewModalHook = useModal<IReviewModalInfo>();
     const { s, l, loginAnd } = useContext(AppContext);
     const [tour, setTour] = useState<Ftour>();
-    const history = useHistory();
     const { loading, item: findProduct } = useProductFindById(id);
     const { items: tours } = useTourList(
         {
@@ -212,12 +207,11 @@ export const ProductDetail: React.FC<IProp> = ({
         importantNotice,
         startPoint,
         videos,
-        startTime,
         subPlanes,
         marker,
     } = Tour?.productInfomation;
 
-    const { totalMember, productInfomation, tourStatus, startDate } = Tour;
+    const { startDate } = Tour;
 
     const isPast = dayjs(startDate).isBefore(new Date());
 
@@ -451,19 +445,6 @@ export const ProductDetail: React.FC<IProp> = ({
                                 </div>
                             </JDalign>
                         )}
-                        {/* 투어&여행 베스트셀러 , 최신&트렌드 투어
-                        <RenderIfVisible>
-                            <BestProductViewsLineHeader />
-                        </RenderIfVisible>
-                        <RenderIfVisible>
-                            <JDalign mb="largest">
-                                <ProductViewCardsWithApi {...BestProductList} />
-                            </JDalign>
-                        </RenderIfVisible> */}
-                        {/* <RenderIfVisible>
-                            <NewstProductViewsLineHeader />
-                            <ProductViewCardsWithApi {...NewsProductList} />
-                        </RenderIfVisible> */}
                         <Mb mb />
                         <JDbutton
                             mode="flat"

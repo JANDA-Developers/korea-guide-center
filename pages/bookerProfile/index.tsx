@@ -24,7 +24,6 @@ import { DEFAULT_PROFILE_IMG } from "../../types/const";
 import { ResignModal } from "../../component/components/ResignModal";
 import { CardHead, ModalHead } from "../../component/modalHead/ModalHead";
 import { BirthDayPicker } from "../../component/birthDayPicker/BirthDayPicker";
-import { SNSIcons } from "../../component/snsInput/SNSIcons";
 
 interface IProp {}
 

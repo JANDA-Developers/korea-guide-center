@@ -12,14 +12,12 @@ import { ListInitOptions } from "../hook/useListQuery";
 import {
     boardDocList,
     boardDocListVariables,
-    FboardDoc,
     _BoardFilter,
     _BoardSort,
 } from "../types/api";
 import { genrateOption } from "../utils/query";
 import { useBoardFindByKey } from "../hook/useBoard";
 import { AppContext } from "../context/context";
-import { Paths } from "./index[depre]";
 import Pagination from "../component/pagination/Pagination";
 import BookLayout from "../component/layout/BookLayout";
 import { useRouter } from "next/router";

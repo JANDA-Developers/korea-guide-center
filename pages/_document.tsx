@@ -5,7 +5,6 @@ import { LoadingPage } from "../component/pageLoading/PageLoading";
 class MyDocument extends Document {
     static async getInitialProps(ctx: any) {
         const initialProps = await Document.getInitialProps(ctx);
-        // console.log("initialProps", initialProps);
         return { ...initialProps };
     }
 

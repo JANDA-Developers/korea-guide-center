@@ -14,7 +14,6 @@ import { ProductViewCardsWithHorizenCalendar } from "../component/productViewCar
 import {
     BestProductViewsLineHeader,
     KPOPBestProductViewsLineHeader,
-    KPOPNewestProductViewsLineHeader,
     NewstProductViewsLineHeader,
 } from "../component/productViewCard/ProductViewsLineHeader";
 import { AppContext } from "../context/context";

@@ -38,24 +38,6 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
     return (
         <BookLayout>
             <div>
-                {/* <div className="guideProfile__bg">
-                    <img
-                        className="guideProfile__bgimg"
-                        src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
-                    />
-                    <img
-                        className="guideProfile__bgimg"
-                        src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
-                    />
-                    <img
-                        className="guideProfile__bgimg"
-                        src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
-                    />
-                    <img
-                        className="guideProfile__bgimg"
-                        src={item.profileBgImage?.uri || DEFAULT_BG_IMG}
-                    />
-                </div> */}
                 <div className="guideProfile__introduceBox">
                     <div className="guideProfile__secter1">
                         {/*가이드 사진 */}
@@ -74,18 +56,6 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                 />
                             </div>
                             <div>
-                                {/* <div>
-                                    <div>{s("workArea")}</div>
-                                    <span>
-                                        {regions?.map((i, index) => {
-                                            return (
-                                                <span className="guideProfile__infoarea">
-                                                    {l(i.label)}
-                                                </span>
-                                            );
-                                        })}
-                                    </span>
-                                </div> */}
                                 <div className="guideProfile__canLanguageContainer">
                                     <div className="guideProfile__canLanguage">
                                         <span className="guideProfile__earthIcon">

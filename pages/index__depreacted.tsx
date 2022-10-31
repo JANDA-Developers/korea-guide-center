@@ -52,10 +52,6 @@ export const Index: React.FC<IProp> = () => {
             <div className="main__container">
                 <div className="main__head">
                     <h1 className="main__title">{title}</h1>
-                    {/* <p
-                        className="main__subtitle"
-                        dangerouslySetInnerHTML={{ __html: subTitle }}
-                    ></p> */}
                     <div className="main__buttons">
                         <Link href={Paths.locationalGuide}>
                             <a>

@@ -366,15 +366,6 @@ export const Search: React.FC<IProp> = () => {
                                 msg="검색결과를 찾을 수 없습니다."
                                 padding={8}
                             />
-                            {/* <InfoBox hide={!isEmpty(products)} mb>
-                                <LinkText
-                                    onClick={() => {
-                                        router.push(Paths.offer);
-                                    }}
-                                >
-                                    {s("searchHowAboutCustomLink")}
-                                </LinkText>
-                            </InfoBox> */}
 
                             <ProductViewCards wrap products={products} />
                             {isEmpty(products) ? (
