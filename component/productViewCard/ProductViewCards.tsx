@@ -16,6 +16,7 @@ import {
     productList,
     productListVariables,
     productList_ProductList_items,
+    ProductStatus,
     _ProductFilter,
     _ProductSort,
 } from "../../types/api";
@@ -194,6 +195,7 @@ interface IProductViewCardsWithApi extends Omit<IProp, "products"> {
     Head?: TElements;
 }
 
+//
 export const ProductViewCardsWithApi: React.FC<IProductViewCardsWithApi> = ({
     queryControl,
     queryParam,
@@ -222,6 +224,7 @@ export const ProductViewCardsWithApi: React.FC<IProductViewCardsWithApi> = ({
         </div>
     );
 };
+//
 
 export const ProductViewCardsWithApi2: React.FC<IProductViewCardsWithApi> = ({
     queryControl,
@@ -254,7 +257,16 @@ export const ProductViewCardsWithApi2: React.FC<IProductViewCardsWithApi> = ({
 
 export const BestProductList: IProductViewCardsWithApi = {
     queryParam: {
-        initialSort: [_ProductSort.rating__desc],
+        initialSort: [_ProductSort.rating__desc, _ProductSort.createdAt__desc],
+        fixingFilter: {
+            status__eq: ProductStatus.OPEN,
+        },
+    },
+};
+
+export const KPOPBestProductList: IProductViewCardsWithApi = {
+    queryParam: {
+        initialSort: [_ProductSort.reviewCount__desc],
     },
 };
 
@@ -273,7 +285,10 @@ export const NewsProductList: IProductViewCardsWithApi = {
 //
 
 export const ProductsGroupRenders: React.FC = () => {
-    const { groupsNonIndex, l } = useContext(AppContext);
+    const { groupsNonIndex, commonProductFilter, l } = useContext(AppContext);
+
+    console.log(commonProductFilter);
+
     const evneryGroupProducts = groupsNonIndex?.flatMap(
         (group) => group.members
     );

@@ -1,5 +1,5 @@
 import "../utils/polifill";
-import React from "react";
+import React, { useMemo } from "react";
 import lazy from "next/dynamic";
 import "dayjs/locale/ko";
 import dayjs from "dayjs";
@@ -11,7 +11,7 @@ import apolloClient from "../apollo/apolloClient";
 import "../scss/all.scss";
 import { useInit } from "../hook/useInit";
 import { AppContext, useAppContext } from "../context/context";
-import { ReactTooltip, Toast, useModal } from "@janda-com/front";
+import { ReactTooltip, Toast } from "@janda-com/front";
 import { useState } from "react";
 import { useEffect } from "react";
 import useRouterScroll from "../hook/useRouterScroll";
@@ -20,6 +20,7 @@ import { useGa4Next } from "../hook/useGa4Next";
 import { useDummyLogin } from "../hook/useDummyLogin";
 import { consoleCover } from "../utils/console-config";
 import { RecoilRoot } from "recoil";
+import dynamic from "next/dynamic";
 
 const PrivacyModal = lazy(
     () => import("../component/privacyModal/PrivacyModal")

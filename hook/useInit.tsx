@@ -130,6 +130,7 @@ export const useInit = () => {
 
     const homepage = systemInfo?.homepage;
     const groups = systemInfo?.groups;
+    const PopularGroup = groups?.filter((g) => g.members);
     const groupsNonIndex = groups?.filter((g) => g.key !== "INDEX");
     const indexGroup = systemInfo?.groups?.find((g) => g.key === "INDEX");
     const catMap = categoryMap(systemInfo?.categories || []);
@@ -179,6 +180,7 @@ export const useInit = () => {
         me,
         groups,
         indexGroup,
+        PopularGroup,
         groupsNonIndex,
         homepage,
         loginAnd,

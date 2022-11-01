@@ -9,6 +9,7 @@ import {
     NewsProductList,
     ProductsGroupRenders,
     ProductViewCardsWithApi,
+    KPOPBestProductList,
 } from "../component/productViewCard/ProductViewCards";
 import { ProductViewCardsWithHorizenCalendar } from "../component/productViewCard/ProductViewCardsWithHorizenCalendar";
 import {
@@ -71,9 +72,9 @@ export const LocationalGuide: React.FC<IProp> = () => {
                 <KPOPBestProductViewsLineHeader />
                 <ProductViewCardsWithApi
                     {...{
-                        ...NewsProductList,
+                        ...KPOPBestProductList,
                         queryParam: {
-                            ...NewsProductList.queryParam,
+                            ...KPOPBestProductList.queryParam,
                             ...commonFilter.queryParam,
                         },
                     }}
