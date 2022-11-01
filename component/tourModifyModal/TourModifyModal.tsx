@@ -68,7 +68,6 @@ export const TourModal: React.FC<IProp> = ({
                 mb
                 thema="primary"
                 br="square"
-                hide={!everyTourIsUpdatable}
                 onClick={() => {
                     history.push(GuidePath.productDetail + "/" + product?._id);
                 }}
