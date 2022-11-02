@@ -255,6 +255,15 @@ export const ProductViewCardsWithApi2: React.FC<IProductViewCardsWithApi> = ({
     );
 };
 
+export const PopularProductList: IProductViewCardsWithApi = {
+    queryParam: {
+        initialSort: [_ProductSort.reviewCount__desc],
+        fixingFilter: {
+            status__eq: ProductStatus.OPEN,
+        },
+    },
+};
+
 export const BestProductList: IProductViewCardsWithApi = {
     queryParam: {
         initialSort: [_ProductSort.rating__desc, _ProductSort.createdAt__desc],
@@ -267,8 +276,8 @@ export const BestProductList: IProductViewCardsWithApi = {
 export const KPOPBestProductList: IProductViewCardsWithApi = {
     queryParam: {
         initialSort: [
-            _ProductSort.reviewCount__desc,
             _ProductSort.rating__desc,
+            _ProductSort.reviewCount__desc,
         ],
     },
 };
@@ -288,9 +297,7 @@ export const NewsProductList: IProductViewCardsWithApi = {
 //
 
 export const ProductsGroupRenders: React.FC = () => {
-    const { groupsNonIndex, commonProductFilter, l } = useContext(AppContext);
-
-    console.log(commonProductFilter);
+    const { groupsNonIndex, l } = useContext(AppContext);
 
     const evneryGroupProducts = groupsNonIndex?.flatMap(
         (group) => group.members

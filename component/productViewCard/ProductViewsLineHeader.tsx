@@ -69,7 +69,7 @@ export const ProductViewsLineHeader2: React.FC<IProp> = ({
     );
 };
 
-export const BestProductViewsLineHeader: React.FC<Partial<IProp>> = ({
+export const PopularProductViewsLineHeader: React.FC<Partial<IProp>> = ({
     title,
     description,
     onSeeMore,
@@ -82,6 +82,31 @@ export const BestProductViewsLineHeader: React.FC<Partial<IProp>> = ({
                 router.push(
                     searchPageQueryGenerate({
                         sort: [_ProductSort.reviewCount__desc],
+                    })
+                );
+            }}
+            description={s("popularTourDesc") || description || ""}
+            title={s("popularTourTitle") || title || ""}
+        />
+    );
+};
+
+export const BestProductViewsLineHeader: React.FC<Partial<IProp>> = ({
+    title,
+    description,
+    onSeeMore,
+}) => {
+    const { s } = useContext(AppContext);
+    const router = useRouter();
+    return (
+        <ProductViewsLineHeader
+            onSeeMore={() => {
+                router.push(
+                    searchPageQueryGenerate({
+                        sort: [
+                            _ProductSort.rating__desc,
+                            _ProductSort.createdAt__desc,
+                        ],
                     })
                 );
             }}

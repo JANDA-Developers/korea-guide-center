@@ -1479,11 +1479,23 @@ const utils_message = {
         ja: `最高のベストセラーツアー`,
         chi: `最佳旅游和旅行`,
     },
+    popularTourTitle: {
+        ko: "인기상품",
+        en: `Popular Product`,
+        ja: `人気商品`,
+        chi: `热销商品`,
+    },
+    popularTourDesc: {
+        ko: "코리아 가이드의 인기 상품을 만나보세요.",
+        en: `Meet the popular products of the Korea Guide.`,
+        ja: `コリアガイドの人気商品をご覧ください!`,
+        chi: `请欣赏韩国导游的人气商品!`,
+    },
     bestTourDesc: {
-        ko: "즐거움이 가득한 경기도로 떠나는 신나는 여행!",
-        en: `An exciting trip to Gyeonggi-do!`,
-        ja: `楽しさいっぱいの京畿道旅!`,
-        chi: `令人兴奋的京畿道之旅!`,
+        ko: "코리아가이드의 베스트 셀러!",
+        en: `Korea Guide's Best Seller!`,
+        ja: `コリアガイドのベストセラー！`,
+        chi: `韩国导游地畅销书！`,
     },
     bestKPOPTitle: {
         ko: "K-POP BEST 투어&여행 베스트셀러",
@@ -1492,10 +1504,10 @@ const utils_message = {
         chi: `K-POP BEST 最佳旅游和旅行`,
     },
     bestKPOPTourDesc: {
-        ko: "K-POP BEST 즐거움이 가득한 경기도로 떠나는 신나는 여행!",
-        en: `K-POP BEST  An exciting trip to Gyeonggi-do!`,
-        ja: `K-POP BEST  楽しさいっぱいの京畿道旅!`,
-        chi: `K-POP BEST  令人兴奋的京畿道之旅!`,
+        ko: "K-POP BEST 즐거움이 가득한 여행!",
+        en: `K-POP BEST A trip full of fun!`,
+        ja: `K-POP BEST  楽しさいっぱいの旅！`,
+        chi: `K-POP BEST  充满欢乐的旅行！`,
     },
     newTourDesc: {
         ko: "새롭게 기획된 최신 투어를 확인해보세요.",
