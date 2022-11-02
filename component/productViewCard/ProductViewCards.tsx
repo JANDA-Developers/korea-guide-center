@@ -266,7 +266,10 @@ export const BestProductList: IProductViewCardsWithApi = {
 
 export const KPOPBestProductList: IProductViewCardsWithApi = {
     queryParam: {
-        initialSort: [_ProductSort.reviewCount__desc],
+        initialSort: [
+            _ProductSort.reviewCount__desc,
+            _ProductSort.rating__desc,
+        ],
     },
 };
 

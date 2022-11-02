@@ -79,6 +79,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
                         },
                     }}
                 />
+                <Mb mb="largest" />
                 <ProductViewCardsWithHorizenCalendar />
             </JDcontainer>
         </BookLayout>
