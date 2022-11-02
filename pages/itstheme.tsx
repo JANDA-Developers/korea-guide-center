@@ -45,10 +45,7 @@ export const LocationalGuide: React.FC<IProp> = () => {
             <JDcontainer verticalPadding size={WindowSize.lg}>
                 <ItemMiniCategories />
                 <Mb mb="largest" />
-                <ProductViewCardsWithApi
-                    Head={<PopularProductViewsLineHeader />}
-                    {...PopularProductList}
-                />
+                <ProductsGroupRenders />
                 <Mb mb="largest" />
                 <ProductViewCardsWithApi
                     Head={<BestProductViewsLineHeader />}
