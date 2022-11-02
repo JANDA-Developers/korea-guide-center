@@ -1,5 +1,5 @@
 import "../utils/polifill";
-import React, { useMemo } from "react";
+import React from "react";
 import lazy from "next/dynamic";
 import "dayjs/locale/ko";
 import dayjs from "dayjs";
@@ -20,7 +20,7 @@ import { useGa4Next } from "../hook/useGa4Next";
 import { useDummyLogin } from "../hook/useDummyLogin";
 import { consoleCover } from "../utils/console-config";
 import { RecoilRoot } from "recoil";
-import dynamic from "next/dynamic";
+import router from "next/router";
 
 const PrivacyModal = lazy(
     () => import("../component/privacyModal/PrivacyModal")
@@ -85,6 +85,16 @@ function App({ Component, pageProps }: any) {
 
     dayjs.locale(locale);
     useEffect(() => {
+        import("react-facebook-pixel")
+            .then((x) => x.default)
+            .then((ReactPixel) => {
+                ReactPixel.init(`${process.env.NEXT_PUBLIC_FB_PIXEL_ID}`);
+                ReactPixel.pageView();
+
+                router.events.on("routeChangeComplete", () => {
+                    ReactPixel.pageView();
+                });
+            });
         if (isIE()) {
             const target = document.getElementById("KoreaGuideCeneter");
             if (target) target.className = "IE";
@@ -92,7 +102,7 @@ function App({ Component, pageProps }: any) {
         const outWidth = window.outerWidth;
         if (outWidth < 1000) setIsMobile(true);
         else setIsMobile(false);
-    }, []);
+    }, [router.events]);
 
     consoleCover();
     useRouterScroll();
