@@ -50,7 +50,6 @@ import {
     RegionProductViewsLineHeader,
     RegionProductViewsLineHeader2,
 } from "../../component/productViewCard/ProductViewsLineHeader";
-import { useHistory } from "react-router-dom";
 import { Galley } from "../../component/gallery/Gallery";
 import { Refund } from "../../types/const";
 import { Red } from "../../atom/shortCut/Short";

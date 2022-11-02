@@ -105,9 +105,7 @@ export const DetailNavCard: React.FC<IProp> = ({
                 <div>
                     <Flex vCenter between>
                         <Bold flex={{ vEnd: true }} size="h6">
-                            {autoComma(
-                                getMinimumPrice(tours) || priceAdult || 0
-                            )}
+                            {autoComma(priceAdult || 0)}
                             {s("money_unit")}
                             <Mr mr="small" />
                             <Thin size="normal" color="grey2">
