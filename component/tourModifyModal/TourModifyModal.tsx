@@ -92,7 +92,7 @@ export const TourModal: React.FC<IProp> = ({
                                 <div>{isPast && "날짜가 지났습니다"}</div>
                             </div>
 
-                            {updateAb && (
+                            {true && (
                                 <TableBtn
                                     mode="flat"
                                     thema="primary"
