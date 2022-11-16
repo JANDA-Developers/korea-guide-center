@@ -50,7 +50,7 @@ export const KGCBankHolderViewer: React.FC<Partial<IProp>> = ({ price }) => {
             }
             bankName="농협"
             bankHolder="코리아가이드센터(주)"
-            bankAccount={"351-1150-2295-63"}
+            bankAccount={"301-0308-0055-81"}
         />
     );
 };
