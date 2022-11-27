@@ -23,6 +23,7 @@ import { AppContext } from "../context/context";
 import { useSortBanner } from "../page/homepage/hook/useSortBanner";
 import { FileTagManager } from "../utils/tagManager";
 import { ProductType } from "../types/api";
+import Head from "next/head";
 
 interface IProp {}
 
@@ -42,6 +43,14 @@ export const LocationalGuide: React.FC<IProp> = () => {
 
     return (
         <BookLayout>
+            <Head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                gtag('event', 'conversion', {'send_to': '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}/QNJRCNLB7IIYEPH7irMo'});`,
+                    }}
+                ></script>
+            </Head>
             <JDcontainer verticalPadding size={WindowSize.lg}>
                 <ItemMiniCategories />
                 <Mb mb="largest" />

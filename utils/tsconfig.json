@@ -28,7 +28,7 @@
     "components/edit/UploadAdapter.js",
     "components/join/FormPartnerBusi[depreacted].deprecated", 
     "components/join/FormPartnerNormal[derpeacted]", 
-    "../pink-loader-server/src/types/email/emai"],
+    "../pink-loader-server/src/types/email/emai", "gtag.js"],
   "exclude": [
     "node_modules",
     "**/*.js",

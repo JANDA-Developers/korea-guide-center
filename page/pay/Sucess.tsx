@@ -1,4 +1,5 @@
 import { getFromUrl, JDcard, JDcontainer } from "@janda-com/front";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 import { useContext } from "react";
@@ -22,6 +23,16 @@ export const Sucess: React.FC<IProp> = () => {
     if (!item) return null;
     return (
         <JDcontainer verticalPadding>
+            <Head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                gtag('event', 'conversion', {'send_to': '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}/YvyVCMnB7IIYEPH7irMo'});`,
+                    }}
+                >
+                    {" "}
+                </script>
+            </Head>
             <JDcard
                 head={
                     <CardHead

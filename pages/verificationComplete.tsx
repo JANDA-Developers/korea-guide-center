@@ -7,6 +7,7 @@ import {
     Small,
     WindowSize,
 } from "@janda-com/front";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
@@ -26,6 +27,16 @@ export const VerificationPage: React.FC<IProp> = () => {
 
     return (
         <BookLayout>
+            <Head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                gtag('event', 'conversion', {'send_to': '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}/cG7eCMzB7IIYEPH7irMo'});`,
+                    }}
+                >
+                    {" "}
+                </script>
+            </Head>
             <JDcontainer verticalPadding size={WindowSize.sm}>
                 <JDcard
                     foot={

@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "page/board/BoardConfiger",
+    "page/board/BoardConfiger", "utils/gtag.js",
   ],
   
   "exclude": [
