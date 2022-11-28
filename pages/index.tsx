@@ -15,6 +15,7 @@ import RecommendGuide from "../component/RecommendGuide/RecommendGuide";
 import Aboutus from "../component/Aboutus/Aboutus";
 import FindGuide from "../component/FindGuide/FindGuide";
 import SNS from "../component/SNS/SNS";
+import Head from "next/head";
 
 const TourLayout = () => {
     const { s } = useContext(AppContext);
@@ -59,6 +60,14 @@ const TourLayout = () => {
 
     return (
         <BookLayout>
+            <Head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                gtag('event', 'conversion', {'send_to': '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}/KECOCPmRgYEYEPH7irMo'});`,
+                    }}
+                ></script>
+            </Head>
             {/* PC View */}
             <div className="tour">
                 <div className="tour__container">
