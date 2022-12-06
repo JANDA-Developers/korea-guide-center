@@ -76,15 +76,15 @@ const TourLayout = () => {
                     <div className="tour__searchBar">
                         <div className="tour__searchBarInnerBox">
                             <InputText
-                                onFocus={onSearchFocus}
                                 type="text"
                                 autoComplete="false"
-                                className="tour__searchInput"
+                                className="tour__searchInput text-black focus:text-black !important"
                                 placeholder={s("searchCitiesGuidesTours")}
                                 {...searchHook}
                                 onKeyDown={whenEnter(toSearchPage)}
                             ></InputText>
                             <svg
+                                onClick={toSearchPage}
                                 className="tour__searchIcon"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"
