@@ -67,7 +67,7 @@ class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-                <LoadingPage />
+                {/* <LoadingPage /> */}
                 <div id="SELECTBOX_PORTAL" />
                 <div id="MAP_PORTAL" />
             </Html>

@@ -1,5 +1,4 @@
 import React from "react";
-import { JDicon } from "../icons/Icons";
 import { Preloader } from "./Preloader";
 
 interface IProp {}
