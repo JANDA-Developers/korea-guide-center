@@ -11,7 +11,8 @@
     "codegen": "apollo codegen:generate types/api.ts --includes=apollo/gql/**/* --queries=apollo/gql/*.ts --addTypename --localSchemaFile=schema.json --target=typescript --outputFlat"
   },
   "browser": {
-    "fs": false
+    "fs": false,
+    "crypto" : false
   },
   "dependencies": {
     "@apollo/client": "^3.3.6",
