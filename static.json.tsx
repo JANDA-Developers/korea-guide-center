@@ -1540,7 +1540,7 @@ const utils_message = {
         chi: `按关键字搜索.`,
     },
     loginWeleComeMessage: {
-        ko: "한국가이드센터 로그인",
+        ko: "코리아가이드 센터 로그인",
         ja: `韓国ガイドセンターログイン`,
         en: `Korea Guide Center Login`,
         chi: `Korea Guide Center登录.`,
