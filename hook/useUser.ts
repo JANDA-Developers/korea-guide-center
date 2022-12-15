@@ -147,6 +147,7 @@ export const useuserFindById = generateFindQuery<
     userFindById_UserFindById
 >("userId", USER_FIND_BY_ID);
 
+// 이메일 찾기
 export const useEmailFind = generateMutationHook<
     userFindEmail,
     userFindEmailVariables
