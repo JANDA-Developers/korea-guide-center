@@ -159,7 +159,7 @@ export const MobileBookerSideBar: React.FC<IProp> = ({
                                     <JDbutton
                                         onClick={() => {
                                             router.push(
-                                                Paths.login + "?mode=signUp"
+                                                Paths.login + "?signUp=true"
                                             );
                                         }}
                                         br={"round"}

@@ -38,6 +38,7 @@ export const LoginForm: React.FC<IProp> = ({
     useEffect(() => {
         emailHook.onChange(urlEmail);
         setSignUpMode(!!signUp);
+        console.log(signUpMode);
     }, [urlEmail, signUp]);
 
     return (
