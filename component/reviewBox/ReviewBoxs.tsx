@@ -57,8 +57,8 @@ export const ReviewBoxs: React.FC<IProp> = ({
     const { l, s, confirmModalHook, isMaster, promptModalHook } =
         useContext(AppContext);
 
+    console.log(reviews);
     // 👇 Controller
-
     const Controller = (review: Freview) => {
         const { deleteAb, updateAb, myReview, replayAb, writeAb, iamTarget } =
             getReviewSummary(review);
@@ -181,6 +181,8 @@ export const ReviewBoxsWithApi: React.FC<IReviewBoxWithApi> = ({
         viewCount,
         getLoading,
     } = useReviewList(queryParam, queryControl);
+
+    console.log(queryParam);
 
     if (!getLoading && isEmpty(reviews)) return <Empty msg={s("non_review")} />;
 

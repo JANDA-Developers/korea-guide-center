@@ -85,6 +85,8 @@ export const DetailNavCard: React.FC<IProp> = ({
     const { reviewAb } = getTourSummary(context, tour);
     const router = useRouter();
 
+    console.log(tour);
+
     const { item: guide } = useuserFindById(guideId);
 
     const { handleToChatRoomOrCreate } = useStartChat(

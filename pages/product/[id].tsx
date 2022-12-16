@@ -65,6 +65,7 @@ import { cloneDeep } from "lodash";
 import RenderIfVisible from "../../component/renderIfVisible/RenderIfVisible";
 import LocationMarker from "./LocationMarker";
 import dayjs from "dayjs";
+import { getTourSummary } from "../../page/tour/components/TourTable";
 
 export interface IProductDetailQuery {
     tourId?: string;
@@ -85,6 +86,7 @@ export const ProductDetail: React.FC<IProp> = ({
     mode,
     product: propProduct,
 }) => {
+    const context = useContext(AppContext);
     const { isMaster, me } = useContext(AppContext);
     const router = useRouter();
     const id = propId || (router.query.id as string);
@@ -210,11 +212,13 @@ export const ProductDetail: React.FC<IProp> = ({
         marker,
     } = Tour?.productInfomation;
 
+    console.log(Tour);
+
     const { startDate } = Tour;
 
-    const isPast = dayjs(startDate).isBefore(new Date());
+    const { reviewAb } = getTourSummary(context, Tour);
 
-    const reviewAb = isMaster || isPast;
+    // const reviewAb = isMaster || (isPast && iBooked);
     return (
         <BookLayout layoutHide={isPreveiw}>
             <JDcontainer
