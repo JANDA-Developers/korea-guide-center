@@ -214,6 +214,7 @@ export const ProductDetail: React.FC<IProp> = ({
 
     console.log(Tour);
 
+
     const { startDate } = Tour;
 
     const { reviewAb } = getTourSummary(context, Tour);
@@ -378,7 +379,7 @@ export const ProductDetail: React.FC<IProp> = ({
                                     <ReviewBoxsWithApi
                                         queryParam={{
                                             fixingFilter: {
-                                                tourId__eq: Tour._id,
+                                                productCode__eq: product.code,
                                             },
                                         }}
                                     />
