@@ -17,7 +17,6 @@ export const BookerHeaderMobile: React.FC<IProp> = ({
     className,
     ...props
 }) => {
-    console.log("My Porps", props);
     return (
         <div className={`bookHeaderMobile ${className}`}>
             <Flex mb="large" vCenter between {...props}>
