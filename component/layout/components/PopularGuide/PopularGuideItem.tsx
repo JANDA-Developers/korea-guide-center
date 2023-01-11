@@ -1,6 +1,6 @@
 import React from "react";
 
-const PopularTourItem = () => {
+const PopularGuideItem = () => {
     return (
         <div className="item bloc-card free" data-linkall="a">
             <figure className="fit-cover o100">
@@ -33,4 +33,4 @@ const PopularTourItem = () => {
     );
 };
 
-export default React.memo(PopularTourItem);
+export default React.memo(PopularGuideItem);

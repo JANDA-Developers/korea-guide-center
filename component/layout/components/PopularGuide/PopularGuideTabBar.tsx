@@ -2,7 +2,7 @@ import React from "react";
 
 // 임시
 
-const PopularTourTabBar = () => {
+const PopularGuideTabBar = () => {
     return (
         <ul className="new-filtering">
             <li className="filter active" data-cat="AllTours">
@@ -60,4 +60,4 @@ const PopularTourTabBar = () => {
     );
 };
 
-export default React.memo(PopularTourTabBar);
+export default React.memo(PopularGuideTabBar);

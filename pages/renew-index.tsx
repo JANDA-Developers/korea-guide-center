@@ -10,12 +10,12 @@ import RegionTourSlider from "../component/layout/components/RegionTourSlider/Re
 import MiddleText from "../component/layout/components/MiddleText/MiddleText";
 import NewestTour from "../component/layout/components/NewestTour/NewestTour";
 import AboutSection from "../component/layout/components/AboutSection/AboutSection";
-import PopularTour from "../component/layout/components/PopularTour/PopularTour";
 import BecomeGuide from "../component/layout/components/BecomeGuide/BecomeGuide";
 import Social from "../component/layout/components/Social/Social";
 import Footer from "../component/layout/components/Footer/Footer";
 import BookLayout from "../component/layout/BookLayout";
 import Head from "next/head";
+import PopularGuide from "../component/layout/components/PopularGuide/PopularGuide";
 
 const TourLayout = () => {
     const { s } = useContext(AppContext);
@@ -62,7 +62,7 @@ const TourLayout = () => {
                 <MiddleText />
                 <NewestTour />
                 <AboutSection />
-                <PopularTour />
+                <PopularGuide />
                 <BecomeGuide />
                 <Social />
             </main>

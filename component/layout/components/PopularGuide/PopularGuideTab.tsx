@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import React from "react";
-import PopularTourItem from "./PopularTourItem";
+import PopularGuideItem from "./PopularGuideItem";
 const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
 
 const options = {
@@ -34,7 +34,7 @@ const options = {
     },
 };
 
-const PopularTourTab = () => {
+const PopularGuideTab = () => {
     return (
         <OwlCarousel
             id="tab-AllTours"
@@ -42,10 +42,10 @@ const PopularTourTab = () => {
             {...options}
         >
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => {
-                return <PopularTourItem key={index} />;
+                return <PopularGuideItem key={index} />;
             })}
         </OwlCarousel>
     );
 };
 
-export default React.memo(PopularTourTab);
+export default React.memo(PopularGuideTab);
