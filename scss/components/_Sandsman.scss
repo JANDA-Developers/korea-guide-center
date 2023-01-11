@@ -13341,7 +13341,7 @@ body:not(.no-hover) .right-submenu.layout-listing .item-vignette:hover .title {
   font-weight: 400;
   color: #000;
   line-height: 60px;
-  width: 700px;
+  width: 100%;
   height: 60px;
   float: left;
   -webkit-appearance: none;
@@ -13372,9 +13372,9 @@ body:not(.no-hover) .right-submenu.layout-listing .item-vignette:hover .title {
 @media screen and (max-width: 800px) {
   .page-homepage header form input {
     padding: 0 30px;
-    width: -webkit-calc(100% - 60px);
-    width: -moz-calc(100% - 60px);
-    width: calc(100% - 60px);
+    width: 100%;
+    width: 100%;
+    width: 100%;
     overflow: hidden;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -13383,9 +13383,9 @@ body:not(.no-hover) .right-submenu.layout-listing .item-vignette:hover .title {
 @media screen and (max-width: 320px) {
   .page-homepage header form input {
     padding: 0 50px 0 30px;
-    width: -webkit-calc(100% - 80px);
-    width: -moz-calc(100% - 80px);
-    width: calc(100% - 80px);
+    width: 100%;
+    width: 100%;
+    width: 100%;
   }
 }
 .page-homepage header form span {
