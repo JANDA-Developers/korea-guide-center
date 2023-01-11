@@ -2918,6 +2918,24 @@ const utils_message = {
         ja: `続ける`,
         chi: `继续`,
     },
+    MiddleTextTop: {
+        ko: "우리는 코리아가이드 입니다.",
+        en: "We are the Korea Guide.",
+        ja: "私たちはコリアガイドです。",
+        chi: "我们是韩国导游。",
+    },
+    MiddleTextMd: {
+        ko: "여행의 시작부터 끝까지 코리아가이드와 함께!",
+        en: "From the beginning to the end of the trip, with the Korea Guide!",
+        ja: "旅の始まりから最後までコリアガイドとともに！",
+        chi: "从旅行开始到结束，与韩国导游一起！",
+    },
+    MiddleTextBottom: {
+        ko: "가이드와 함께 대한민국 전역의 여행지에서 특별한 추억을 만들어보세요.",
+        en: "Make special memories at travel destinations all over Korea with your guide.",
+        ja: "ガイドと一緒に大韓民国全域の旅行先で特別な思い出を作ってみてください。",
+        chi: "和导游一起在大韩民国全境旅行地制造特别的回忆吧。",
+    },
     introHeaderTitle: {
         ko: (
             <span>
