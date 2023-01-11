@@ -34,18 +34,6 @@ const TourLayout = () => {
         },
     ];
 
-    const texts = [
-        {
-            title: "Local Tour",
-        },
-        {
-            title: "The Original Korea Guide Tour",
-        },
-        {
-            title: "Private Guide Tour",
-        },
-    ];
-
     const searchHook = useInput("");
 
     const onSearchFocus = () => {
