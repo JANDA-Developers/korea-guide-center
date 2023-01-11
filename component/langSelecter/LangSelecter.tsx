@@ -20,7 +20,6 @@ export const LanguageSelecter: React.FC<IProp> = ({ ...props }) => {
     return (
         <JDalign style={{ position: "relative" }} {...props}>
             <JDalign
-                hover
                 flex={{
                     vCenter: true,
                 }}

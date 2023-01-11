@@ -10,10 +10,10 @@ const BecomeGuideSliderItem = ({ url }: BecomeGuideSliderItemProps) => {
             <figure>
                 <picture>
                     <source
-                        data-srcSet={url}
+                        data-srcset={url}
                         media="(max-width: 800px) and (min-width: 421px)"
                     />
-                    <source data-srcSet={url} media="(max-width: 420px)" />
+                    <source data-srcset={url} media="(max-width: 420px)" />
                     <img
                         src={url}
                         data-src={url}

@@ -20,7 +20,7 @@ const MainBanner = ({ images }: IMainBannerProps) => {
                 loop={true}
                 items={1}
                 nav={false}
-                auto-width={false}
+                autoWidth={false}
                 autoplay={true}
                 autoplaySpeed={4000}
             >
