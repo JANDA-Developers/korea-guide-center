@@ -14,7 +14,7 @@ export const BookLayout: React.FC<IProp> = ({ children, layoutHide }) => {
             <BookHeader />
             <div>{children}</div>
             {/* Footer */}
-            <BookFooter />
+            {/* <BookFooter /> */}
         </div>
     );
 };
