@@ -1,9 +1,22 @@
+import { InputText, useInput } from "@janda-com/front";
 import React from "react";
+import { searchPageQueryGenerate } from "../../../../pages/cities/search";
+import { whenEnter } from "../../../../utils/whenEnter";
 
 const MainBannerSearchBox = () => {
+    const searchHook = useInput("");
+    const toSearchPage = () => {
+        const to = searchPageQueryGenerate({ title: searchHook.value });
+        location.href = to;
+        // router.push(to);
+    };
     return (
         <div className="content-wrapper caption aligncenter input-cursor">
-            <form action="index.php" method="get">
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault();
+                }}
+            >
                 <label
                     htmlFor="algoliaSearch"
                     aria-hidden="true"
@@ -11,15 +24,15 @@ const MainBannerSearchBox = () => {
                 >
                     Search cities, tours...
                 </label>
-                <input
+                <InputText
                     type="text"
-                    name="algoliaSearch"
-                    id="algoliaSearch"
                     placeholder="Search cities, tours..."
+                    {...searchHook}
+                    onKeyDown={whenEnter(toSearchPage)}
                 />
                 <span className="icon-ico-search">
                     <svg
-                        // onClick={toSearchPage}
+                        onClick={toSearchPage}
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
                         width="28"
