@@ -1,34 +1,80 @@
-import React from "react";
+import { Bold, Flex } from "@janda-com/front";
+import React, { useContext } from "react";
+import { AppContext } from "../../../../context/context";
+import { Logo } from "../../../logo/Logo";
 
 const FooterContact = () => {
+    const BottomInfo = ({ label, value }: { label: string; value: string }) => {
+        return (
+            <Flex vCenter mr>
+                <Bold mr="tiny">{label}</Bold> {value}
+            </Flex>
+        );
+    };
+    const { s } = useContext(AppContext);
+    const TitleText = s("itsguide").split(" ");
     return (
         <div className="col-50 footer-contact">
             <span className="footer-title">Contact</span>
-            <a href="https://www.neweuropetours.eu/">
-                <figure>
-                    <img
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                        data-src="https://www.neweuropetours.eu/wp-content/uploads/2018/06/logo-sandemans-white-2x-170x28.png"
-                        alt=""
-                        width="170"
-                        height="28"
-                        data-srcSet="https://www.neweuropetours.eu/wp-content/uploads/2018/06/logo-sandemans-white-2x-170x28.png 1x, https://www.neweuropetours.eu/wp-content/uploads/2018/06/logo-sandemans-white-2x-340x56.png 2x"
-                        className="lazy"
-                    />
-                </figure>
-            </a>
-            <div>
-                <p>SANDEMANs NEW Europe</p>
-                <a href="tel:+447447293760" className="tel">
-                    Tel: +44 7447293760
-                </a>
-            </div>
-            <a
-                href="https://www.neweuropetours.eu/contact-us/"
-                className="btn gtm-event-button-contact"
+            <div
+                style={{
+                    display: "flex",
+                }}
             >
-                Contact us
-            </a>
+                <Logo className="bookHeader__logo" />
+                <div className="logoTextContainer">
+                    <span
+                        className="logoText__top"
+                        style={{
+                            color: "white",
+                        }}
+                    >
+                        {s("joyful")}
+                    </span>
+                    <div className="logoText__bottom">
+                        <span
+                            style={{
+                                color: " #D0242B",
+                            }}
+                        >
+                            {TitleText[0]}
+                        </span>{" "}
+                        <span
+                            style={{
+                                color: "white",
+                            }}
+                        >
+                            {TitleText[1]}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div className="footer__infoDetail">
+                <BottomInfo label={s("footer_ceo")} value={s("itsguide_CEO")} />
+                <BottomInfo
+                    label={s("footer_transferNum")}
+                    value={"2020-부산영도-0215"}
+                />
+                <BottomInfo
+                    label={s("footer_businessNumber")}
+                    value={"863-86-01971"}
+                />
+                <div className="textTransformClear">
+                    <BottomInfo
+                        label={s("footer_email")}
+                        value={"kguidecenter@gmail.com"}
+                    />
+                </div>
+                <BottomInfo label={s("footer_fax")} value={s("itsguide_FAX")} />
+                <BottomInfo
+                    label={s("footer_address")}
+                    value={s("itsguide_adress")}
+                />
+                <BottomInfo
+                    label={s("footer_accountNum")}
+                    value={`301-0308-0055-81`}
+                />
+            </div>
         </div>
     );
 };
