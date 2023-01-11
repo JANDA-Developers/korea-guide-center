@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../../../context/context";
 
-const NewestTourItem = () => {
+interface NewestTourItemProps {
+    thumbNailUrl: string;
+    title: any;
+    description: any;
+    price: number;
+}
+
+const NewestTourItem = ({
+    thumbNailUrl,
+    title,
+    description,
+    price,
+}: NewestTourItemProps) => {
+    const { s, l } = useContext(AppContext);
+    const priceToString = (price: number) => {
+        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    };
+
     return (
         <div className="item bloc-card free" data-linkall="a">
             <figure className="fit-cover">
                 <img
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    src={thumbNailUrl}
                     data-src="https://www.neweuropetours.eu/wp-content/uploads/2018/08/amsterdam-walking-tours-05-335x335.jpg"
                     alt="amsterdam's famous canals and bridges during the amsterdam free walking tour"
                     width="335"
@@ -16,18 +34,20 @@ const NewestTourItem = () => {
             <div className="content">
                 <span className="category">Free Tour - Tips-based</span>
                 <a href="https://www.neweuropetours.eu/sandemans-tours/amsterdam/free-tour-of-amsterdam/">
-                    <h3>Free Tour of Amsterdam</h3>
+                    <h3>{l(title)}</h3>
                 </a>
                 <p>
-                    Book the original Amsterdam free walking tour and visit many
-                    of the citys highlights with a local g ...
+                    {" "}
+                    {l(description).length >= 70
+                        ? l(description).slice(0, 70) + "..."
+                        : l(description)}
                 </p>
             </div>
             <div className="info-bottom">
                 <span className="btn gtm-event-info-booking">
-                    Info & Booking
+                    {s("AboutAndSchedule")}
                 </span>
-                <span className="price">Free</span>
+                <span className="price">₩{priceToString(price)}</span>
             </div>
         </div>
     );

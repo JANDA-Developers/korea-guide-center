@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import NewestTourTabItem from "./NewestTourTabItem";
 import dynamic from "next/dynamic";
 const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
+import { NewsProductList } from "../../../productViewCard/ProductViewCards";
+import { AppContext } from "../../../../context/context";
+import { useProductList } from "../../../../hook/useProduct";
+import { isEmpty } from "@janda-com/front";
 
 const options = {
     stageOuterClass: "owl-stage-outer owl-height",
@@ -36,14 +40,34 @@ const options = {
 
 // id는 임시임 나중에 코리아 가이드에 적용할 때 신경 쓸 것
 const NewestTourTab = () => {
+    const { s, l, commonProductFilter } = useContext(AppContext);
+
+    const { items: products } = useProductList({
+        initialViewCount: 8,
+        ...NewsProductList.queryParam,
+        fixingFilter: {
+            ...NewsProductList.queryParam?.fixingFilter,
+            ...commonProductFilter,
+        },
+    });
+
+    if (isEmpty(products)) return null;
     return (
         <OwlCarousel
             id="tab-AllTours"
             className="owl-theme owl-tours owl-opacify active"
             {...options}
         >
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => {
-                return <NewestTourTabItem key={index} />;
+            {products.map((item, index) => {
+                return (
+                    <NewestTourTabItem
+                        key={item._id!}
+                        title={item?.title!}
+                        thumbNailUrl={item.thumbNail?.uri!}
+                        description={item.shortDecsription!}
+                        price={item.priceAdult!}
+                    />
+                );
             })}
         </OwlCarousel>
     );
