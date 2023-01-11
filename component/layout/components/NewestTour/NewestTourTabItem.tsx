@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../../../context/context";
+import { Paths } from "../../../../pages/index[depre]";
 
 interface NewestTourItemProps {
+    _id: string;
     thumbNailUrl: string;
     title: any;
     description: any;
@@ -9,6 +11,7 @@ interface NewestTourItemProps {
 }
 
 const NewestTourItem = ({
+    _id,
     thumbNailUrl,
     title,
     description,
@@ -20,20 +23,25 @@ const NewestTourItem = ({
     };
 
     return (
-        <div className="item bloc-card free" data-linkall="a">
+        <div
+            className="item bloc-card free"
+            data-linkall="a"
+            onClick={() => {
+                location.href = Paths.productDetailView + "/" + _id;
+            }}
+        >
             <figure className="fit-cover">
                 <img
                     src={thumbNailUrl}
-                    data-src="https://www.neweuropetours.eu/wp-content/uploads/2018/08/amsterdam-walking-tours-05-335x335.jpg"
-                    alt="amsterdam's famous canals and bridges during the amsterdam free walking tour"
+                    alt="Newest Tour"
                     width="335"
                     height="335"
                     className="lazy"
                 />
             </figure>
             <div className="content">
-                <span className="category">Free Tour - Tips-based</span>
-                <a href="https://www.neweuropetours.eu/sandemans-tours/amsterdam/free-tour-of-amsterdam/">
+                {/* <span className="category">Free Tour - Tips-based</span> */}
+                <a>
                     <h3>{l(title)}</h3>
                 </a>
                 <p>

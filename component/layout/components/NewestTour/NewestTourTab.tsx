@@ -62,6 +62,7 @@ const NewestTourTab = () => {
                 return (
                     <NewestTourTabItem
                         key={item._id!}
+                        _id={item._id}
                         title={item?.title!}
                         thumbNailUrl={item.thumbNail?.uri!}
                         description={item.shortDecsription!}
