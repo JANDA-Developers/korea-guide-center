@@ -1,7 +1,37 @@
+import { isEmpty } from "@janda-com/front";
+import { TElements } from "@janda-com/front/dist/types/interface";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 import React from "react";
+import { ListInitOptions } from "../../../../hook/useListQuery";
+import { useUserList } from "../../../../hook/useUser";
+import {
+    Fuser,
+    LANGUAGES,
+    userList,
+    userListVariables,
+    userList_UserList_items,
+    UserRole,
+    _IUserFilter,
+    _IUserSort,
+} from "../../../../types/api";
+import { genrateOption } from "../../../../utils/query";
+import { randomArraySort } from "../../../../utils/shuffle";
+import { IHorizenGriderProp } from "../../../horizenGrider/HorizenGrider";
 import PopularGuideItem from "./PopularGuideItem";
 const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
+
+interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
+    guides: Fuser[];
+}
+
+interface IGuideMovieCardsWithApi extends Omit<IProp, "guides"> {
+    queryParam?: Partial<ListInitOptions<_IUserFilter, _IUserSort>>;
+    queryControl?: genrateOption<userList, userListVariables>;
+    randomSort?: boolean;
+    Head?: TElements;
+    videoRelease?: boolean;
+}
 
 const options = {
     stageOuterClass: "owl-stage-outer owl-height",
@@ -34,15 +64,54 @@ const options = {
     },
 };
 
-const PopularGuideTab = () => {
+const PopularGuideTab: React.FC<IGuideMovieCardsWithApi> = ({
+    queryControl,
+    queryParam,
+    randomSort,
+    Head,
+    videoRelease,
+    ...props
+}) => {
+    const { locale } = useRouter();
+    const { items: users } = useUserList(
+        {
+            initialViewCount: 8,
+            ...queryParam,
+            fixingFilter: {
+                isDeleted__not_eq: true,
+                profileVideo__notNull: videoRelease ? undefined : "true",
+                role__not_in: [UserRole.BUYER, UserRole.ADMIN],
+                langs__in: [(locale as LANGUAGES) || LANGUAGES.ko],
+            },
+            random: true,
+        },
+        queryControl
+    );
+
+    const data: userList_UserList_items[] = users;
+
+    // const randomSorted = randomArraySort([...users]);
+
+    if (isEmpty(data)) return null;
+
     return (
         <OwlCarousel
             id="tab-AllTours"
             className="owl-carousel owl-theme owl-tours owl-opacify active"
             {...options}
         >
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => {
-                return <PopularGuideItem key={index} />;
+            {data.map((item) => {
+                return (
+                    <PopularGuideItem
+                        key={item?._id!}
+                        _id={item?._id!}
+                        name={item?.name!}
+                        image={item?.profileMediumImage?.uri!}
+                        introduce={item?.introduce!}
+                        categorys={item?.guideCategory!}
+                        role={item?.role!}
+                    />
+                );
             })}
         </OwlCarousel>
     );

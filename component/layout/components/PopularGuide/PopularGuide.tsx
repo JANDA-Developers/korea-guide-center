@@ -7,7 +7,7 @@ const PopularGuide = () => {
         <div className="bloc-slider-tours grouped-tours">
             <div className="content-wrapper bloc-medium">
                 <PopularGuideTextIntro />
-                <PopularGuideTab />
+                <PopularGuideTab randomSort />
             </div>
         </div>
     );

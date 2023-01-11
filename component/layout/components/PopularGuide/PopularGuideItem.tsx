@@ -1,33 +1,59 @@
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useContext } from "react";
+import { AppContext } from "../../../../context/context";
+import { Paths } from "../../../../pages/index[depre]";
 
-const PopularGuideItem = () => {
+interface IPopularGuideItem {
+    _id: string;
+    image: string;
+    name: string;
+    introduce: any;
+    categorys: any;
+    role: string;
+}
+
+const PopularGuideItem = ({
+    _id,
+    image,
+    name,
+    introduce,
+    categorys,
+    role,
+}: IPopularGuideItem) => {
+    const router = useRouter();
+    const { l } = useContext(AppContext);
     return (
-        <div className="item bloc-card free" data-linkall="a">
+        <div
+            className="item bloc-card free"
+            data-linkall="a"
+            onClick={() => {
+                router.push(Paths.profile + "/" + _id);
+            }}
+        >
             <figure className="fit-cover o100">
                 <img
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                    data-src="https://www.neweuropetours.eu/wp-content/uploads/2018/08/ams-ft-25-335x335.jpg"
-                    alt="Discovering the Red Light District in Amsterdam with SANDEMANs"
+                    src={image}
+                    alt="Profile Pic"
                     width="335"
                     height="335"
                     className="lazy"
                 />
             </figure>
             <div className="content">
-                <span className="category">Free Tour - Tips-based</span>
-                <a href="https://www.neweuropetours.eu/sandemans-tours/amsterdam/red-light-district-tour/">
-                    <h3>Red Lights and Dark Amsterdam Free Tour</h3>
+                <span className="category">{role}</span>
+                <a>
+                    <h3>{name}</h3>
                 </a>
                 <p>
-                    Experience the fascinating Amsterdam Red Light District with
-                    an expert local guide
+                    {" "}
+                    {l(introduce).length > 90
+                        ? l(introduce).slice(0, 90) + "..."
+                        : l(introduce)}
                 </p>
             </div>
             <div className="info-bottom">
-                <span className="btn gtm-event-info-booking">
-                    Info & Booking
-                </span>
-                <span className="price">Free</span>
+                <span className="btn gtm-event-info-booking">Profile</span>
+                {/* <span className="price">Free</span> */}
             </div>
         </div>
     );

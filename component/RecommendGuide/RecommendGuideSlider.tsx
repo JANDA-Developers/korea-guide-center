@@ -101,11 +101,7 @@ const RecommendGuideSlider: React.FC<IGuideMovieCardsWithApi> = ({
 
     const data: userList_UserList_items[] = users;
 
-    console.log(data);
-
     const randomSorted = randomArraySort([...users]);
-
-    console.log(randomSorted);
 
     const SliderVariants = {
         hover: {
