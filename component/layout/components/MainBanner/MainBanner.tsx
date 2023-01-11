@@ -6,7 +6,13 @@ import MainBannerSearchBox from "./MainBannerSearchBox";
 import "owl.carousel/dist/assets/owl.carousel.css";
 const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
 
-const MainBanner = () => {
+interface IMainBannerProps {
+    images: {
+        url: string;
+    }[];
+}
+
+const MainBanner = ({ images }: IMainBannerProps) => {
     return (
         <header>
             <OwlCarousel
@@ -18,10 +24,9 @@ const MainBanner = () => {
                 autoplay={true}
                 autoplaySpeed={4000}
             >
-                <MainBannerItem />
-                <MainBannerItem />
-                <MainBannerItem />
-                <MainBannerItem />
+                {images.map((item, index) => {
+                    return <MainBannerItem url={item.url} />;
+                })}
             </OwlCarousel>
             <MainBannerSearchBox />
             <MainBannerPhrases />

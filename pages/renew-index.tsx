@@ -15,6 +15,7 @@ import BecomeGuide from "../component/layout/components/BecomeGuide/BecomeGuide"
 import Social from "../component/layout/components/Social/Social";
 import Footer from "../component/layout/components/Footer/Footer";
 import BookLayout from "../component/layout/BookLayout";
+import Head from "next/head";
 
 const TourLayout = () => {
     const { s } = useContext(AppContext);
@@ -59,8 +60,16 @@ const TourLayout = () => {
 
     return (
         <BookLayout>
+            <Head>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                gtag('event', 'conversion', {'send_to': '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}/KECOCPmRgYEYEPH7irMo'});`,
+                    }}
+                ></script>
+            </Head>
             <main className="page-homepage">
-                <MainBanner />
+                <MainBanner images={images} />
                 <RegionTourSlider />
                 <MiddleText />
                 <NewestTour />
