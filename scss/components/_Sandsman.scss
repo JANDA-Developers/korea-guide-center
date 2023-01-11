@@ -452,19 +452,19 @@ main:after {
 .overlay-newsletter .content .frm_forms form input::-ms-clear {
   display: none;
 }
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  -moz-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-}
+// .center {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   -webkit-transform: translate(-50%, -50%);
+//   -moz-transform: translate(-50%, -50%);
+//   -ms-transform: translate(-50%, -50%);
+//   -o-transform: translate(-50%, -50%);
+//   transform: translate(-50%, -50%);
+//   -webkit-transform: translate3d(-50%, -50%, 0);
+//   -moz-transform: translate3d(-50%, -50%, 0);
+//   transform: translate3d(-50%, -50%, 0);
+// }
 .parallax-window {
   min-height: 400px;
 }

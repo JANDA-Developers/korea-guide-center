@@ -320,10 +320,13 @@
     &__title {
         font-weight: 600;
         font-size: 3rem;
+        color:white !important;
     }
 
     &__desc {
         font-size: 0.95rem;
+        color: white !important;
+        font-weight: 600 !important;
     }
 }
 
