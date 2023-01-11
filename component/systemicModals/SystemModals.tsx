@@ -19,23 +19,23 @@ export const SystemModals: React.FC<IProp> = () => {
         <div>
             <AlertModal
                 {...alertModalHook}
-                key={alertModalHook?.isOpen ? "opendAlert" : "closedAlert"}
+                // key={alertModalHook?.isOpen ? "opendAlert" : "closedAlert"}
             />
             <ConfirmModal
                 {...confirmModalHook}
-                key={
-                    confirmModalHook?.isOpen ? "opendConfirm" : "closedConfirm"
-                }
+                // key={
+                //     confirmModalHook?.isOpen ? "opendConfirm" : "closedConfirm"
+                // }
             />
             <PormptModal
                 modalHook={promptModalHook}
-                key={promptModalHook?.isOpen ? "opendPropmt" : "closedPropmt"}
+                // key={promptModalHook?.isOpen ? "opendPropmt" : "closedPropmt"}
             />
             <SliderModalModal
                 modalHook={imgSliderModalHook}
-                key={
-                    imgSliderModalHook?.isOpen ? "opendPropmt" : "closedPropmt"
-                }
+                // key={
+                //     imgSliderModalHook?.isOpen ? "opendPropmt" : "closedPropmt"
+                // }
             />
         </div>
     );
