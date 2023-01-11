@@ -6732,11 +6732,11 @@ a.mapboxgl-ctrl-logo {
 .slick-prev,
 .slick-next {
   position: absolute;
-  top: 50%;
+  top: 45%;
   z-index: 100;
   margin-top: -18px;
   font-size: 36px;
-  background: none;
+  background: none !important;
   border: none;
   outline: none;
   -webkit-transition: all 0.2s ease;

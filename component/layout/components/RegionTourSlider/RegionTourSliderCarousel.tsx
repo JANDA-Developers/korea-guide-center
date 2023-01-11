@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import RegionTourSliderItem from "./RegionTourSliderItem";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { AppContext } from "../../../../context/context";
 import { mapRegion, regionableData } from "../../../koreaMap/KoreaData";
@@ -12,6 +10,61 @@ export interface IRegionSliderItem {
     products?: number; // 혹시 몰라서 만들어둠
     imageUrl: string;
 }
+
+const SlickArrowLeft = ({ currentSlide, slideCount, ...props }: any) => (
+    <button
+        {...props}
+        className={"slick-prev slick-arrow"}
+        aria-hidden="true"
+        type="button"
+    >
+        <span>
+            <svg
+                width="50px"
+                height="50px"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                ></path>
+            </svg>
+        </span>
+    </button>
+);
+const SlickArrowRight = ({ currentSlide, slideCount, ...props }: any) => (
+    <button
+        {...props}
+        className={"slick-next slick-arrow"}
+        aria-hidden="true"
+        type="button"
+    >
+        <span>
+            <svg
+                width="50px"
+                height="50px"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                ></path>
+            </svg>
+        </span>
+    </button>
+);
 
 const RegionTourSliderCarousel = () => {
     const { s, l } = useContext(AppContext);
@@ -263,7 +316,8 @@ const RegionTourSliderCarousel = () => {
         centerMode: false,
         slidesToShow: 4,
         speed: 500,
-        initialSlide: 0,
+        nextArrow: <SlickArrowRight />,
+        prevArrow: <SlickArrowLeft />,
         responsive: [
             {
                 breakpoint: 1100,
@@ -298,6 +352,7 @@ const RegionTourSliderCarousel = () => {
             {regionData.map((item, index) => {
                 return (
                     <RegionTourSliderItem
+                        key={index}
                         title={item.title}
                         imageUrl={item.imageUrl}
                         queryTitle={item.queryTitle}
