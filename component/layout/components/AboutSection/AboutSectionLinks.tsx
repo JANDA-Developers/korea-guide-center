@@ -1,15 +1,15 @@
 import React from "react";
+import { Paths } from "../../../../pages/index[depre]";
 
 const AboutSectionLinks = () => {
     return (
         <div className="col-wrapper bloc-medium bloc-duo">
             <h2>ABOUT KOREA GUIDE</h2>
             <div className="wrapper-link">
-                <a href="https://www.neweuropetours.eu/sandemans-partner-network/">
+                <a>
                     <figure className="fit-cover o70">
                         <img
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            data-src="https://www.neweuropetours.eu/wp-content/uploads/2021/10/florence-views-photo-by-heidi-kaden-953x360.jpeg"
+                            src="img/aboutus/aboutuscity.jpg"
                             alt=""
                             width="953"
                             height="360"
@@ -17,15 +17,14 @@ const AboutSectionLinks = () => {
                         />
                     </figure>
                     <div className="caption">
-                        <h3>KoreaGuide Partner Network</h3>
-                        <span className="basic-link">Discover</span>
+                        {/* <h3>KoreaGuide Partner Network</h3>
+                        <span className="basic-link">Discover</span> */}
                     </div>
                 </a>
-                <a href="https://www.neweuropetours.eu/about-us/">
+                <a href={Paths.companyIntroduction}>
                     <figure className="fit-cover o70">
                         <img
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                            data-src="https://www.neweuropetours.eu/wp-content/uploads/2018/06/miniature-video-guide-1-953x360.jpg"
+                            src="img/aboutus/aboutusguide.jpg"
                             alt=""
                             width="953"
                             height="360"

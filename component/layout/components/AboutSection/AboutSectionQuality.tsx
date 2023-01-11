@@ -1,8 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCity, faPlane } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../../../context/context";
 
 const AboutSectionQuality = () => {
+    const { s } = useContext(AppContext);
     return (
         <div className="bloc-quality">
             <ul>
@@ -10,13 +12,14 @@ const AboutSectionQuality = () => {
                     <span>
                         <FontAwesomeIcon icon={faCity} />
                     </span>
-                    대한민국의 놀라운 도시들
+                    {s("aboutKoreaGuideAmazingCities")}
                 </li>
                 <li>
                     <span>
                         <FontAwesomeIcon icon={faPlane} />
                     </span>
-                    현지 가이드와 함께하는 최고급 투어
+
+                    {s("aboutKoreaGuideHighTour")}
                 </li>
             </ul>
         </div>
