@@ -1,173 +1,172 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../../../context/context";
 
 const FooterCities = () => {
+    const { s } = useContext(AppContext);
     return (
         <div className="col-50 footer-columns">
-            <span className="footer-title">Cities</span>
+            <span className="footer-title"> {s("footerCities")}</span>
             <ul>
                 <li>
-                    <a href="https://www.neweuropetours.eu/amsterdam-walking-tours/">
-                        Amsterdam
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=서울`;
+                        }}
+                    >
+                        {s("citySeoul")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/barcelona-walking-tours/">
-                        Barcelona
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=인천`;
+                        }}
+                    >
+                        {s("cityIncheon")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/berlin-walking-tours/">
-                        Berlin
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=부산`;
+                        }}
+                    >
+                        {s("cityBusan")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/bilbao-walking-tours/">
-                        Bilbao (Partner Network)
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=대구`;
+                        }}
+                    >
+                        {s("cityDaegu")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/brussels-walking-tours/">
-                        Brussels
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=울산`;
+                        }}
+                    >
+                        {s("cityUlsan")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/budapest-walking-tours/">
-                        Budapest (Partner Network)
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=대전`;
+                        }}
+                    >
+                        {s("cityDaejeon")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/cologne-walking-tours/">
-                        Cologne (Partner Network)
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=제주`;
+                        }}
+                    >
+                        {s("cityJeju")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/copenhagen-walking-tours/">
-                        Copenhagen
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=광주`;
+                        }}
+                    >
+                        {s("cityGwangju")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/cordoba-walking-tours/">
-                        Cordoba (Partner Network)
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=세종`;
+                        }}
+                    >
+                        {s("citySejong")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/dublin-walking-tours/">
-                        Dublin
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=경기`;
+                        }}
+                    >
+                        {s("cityGyeonggi")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/edinburgh-walking-tours/">
-                        Edinburgh
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=강원`;
+                        }}
+                    >
+                        {s("cityGangwon")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/florence-walking-tours/">
-                        Florence (Partner Network)
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=충북`;
+                        }}
+                    >
+                        {s("cityNorthChungCheon")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/granada-walking-tours/">
-                        Granada (Partner Network)
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=충남`;
+                        }}
+                    >
+                        {s("citySouthChungCheon")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/hamburg-walking-tours/">
-                        Hamburg
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=경북`;
+                        }}
+                    >
+                        {s("cityNorthGyeonSang")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/jerusalem-walking-tours/">
-                        Jerusalem
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=경남`;
+                        }}
+                    >
+                        {s("citySouthGyeonSang")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/lisbon-walking-tours/">
-                        Lisbon
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=전북`;
+                        }}
+                    >
+                        {s("cityNorthJeonla")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/liverpool-walking-tours/">
-                        Liverpool
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=전남`;
+                        }}
+                    >
+                        {s("citySouthJeonla")}
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.neweuropetours.eu/london-walking-tours/">
-                        London
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/madrid-walking-tours/">
-                        Madrid
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/malaga-walking-tours/">
-                        Málaga (Partner Network)
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/milan-walking-tours/">
-                        Milan (Partner Network)
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/munich-walking-tours/">
-                        Munich (Partner Network)
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/new-york-walking-tours/">
-                        New York
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/paris-walking-tours/">
-                        Paris
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/porto-walking-tours/">
-                        Porto
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/prague-walking-tours/">
-                        Prague
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/rome-walking-tours/">
-                        Rome (Partner Network)
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/walking-tours-san-sebastian/">
-                        San Sebastian (Partner Network)
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/santiago-de-compostela/">
-                        Santiago de Compostela (Partner Network)
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/seville-walking-tours/">
-                        Seville
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/tel-aviv-walking-tours/">
-                        Tel Aviv
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/valencia-walking-tours/">
-                        Valencia (Partner Network)
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.neweuropetours.eu/vienna-walking-tours/">
-                        Vienna (Partner Network)
+                    <a
+                        onClick={() => {
+                            location.href = `/cities/search?title=dmz`;
+                        }}
+                    >
+                        DMZ
                     </a>
                 </li>
             </ul>
