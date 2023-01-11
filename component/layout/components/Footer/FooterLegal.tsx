@@ -1,35 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../../../context/context";
+import { Paths } from "../../../../pages/index[depre]";
 
 // 법 관련 고지가 들어가는 부분인데 임시로 만들어놓음
 // 현재 코리아 가이드에서 뺴올 부분이 없음
 
 const FooterLegal = () => {
+    const { s } = useContext(AppContext);
     return (
         <div className="menu-legal">
             <div className="col-fluid">
                 <div>
                     <div>
-                        <a href="https://thuria.com">
-                            Made with love by Thuria
-                        </a>
-                        <a href="#rgpd">Cookies management</a>
-                        <a href="https://www.neweuropetours.eu/privacy-policy/">
-                            Privacy Policy
-                        </a>
-                        <a href="https://www.neweuropetours.eu/legal-information/">
-                            Legal
-                        </a>
+                        <a href={Paths.termsAndConditions}>{s("rule")}</a>
+                        <a href={Paths.privacyPolicy}> {s("privacy_policy")}</a>
+                        <a href="https://www.neweuropetours.eu/legal-information/"></a>
                         <span>
-                            © 2004-2019 SANDEMANs NEW Europe - All rights
-                            reserved
+                            Copyright © 2021 koreaguidecenter Co., Ltd. All
+                            rights reserved
                         </span>
                     </div>
                 </div>
-                <div className="security">
+                {/* <div className="security">
                     <p>
                         ssl encryption<span>secure payment</span>
                     </p>
-                </div>
+                </div> */}
             </div>
         </div>
     );
