@@ -21,7 +21,7 @@ const MainBanner = ({ images }: IMainBannerProps) => {
                 items={1}
                 nav={false}
                 autoWidth={false}
-                autoplay={true}
+                autoPlay={true}
                 autoplaySpeed={4000}
             >
                 {images.map((item, index) => {
