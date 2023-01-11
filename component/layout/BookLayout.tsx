@@ -1,6 +1,6 @@
 import React from "react";
-import { BookFooter } from "./BookFooter";
 import { BookHeader } from "./BookHeader";
+import Footer from "../../component/layout/components/Footer/Footer";
 
 interface IProp {
     layoutHide?: boolean;
@@ -14,7 +14,7 @@ export const BookLayout: React.FC<IProp> = ({ children, layoutHide }) => {
             <BookHeader />
             <div>{children}</div>
             {/* Footer */}
-            {/* <BookFooter /> */}
+            <Footer />
         </div>
     );
 };
