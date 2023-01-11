@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 module.exports = {
     eslint: {
         ignoreDuringBuilds: true,
@@ -15,7 +16,14 @@ module.exports = {
             "korea-guide-bucket.s3.ap-northeast-2.amazonaws.com",
         ],
     },
-    webpack: (config) => {
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+        config.plugins.push(
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery",
+                "window.jQuery": "jquery",
+            })
+        );
         config.resolve.fallback = { fs: false };
         return config;
     },
