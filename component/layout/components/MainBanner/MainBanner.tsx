@@ -25,7 +25,7 @@ const MainBanner = ({ images }: IMainBannerProps) => {
                 autoplaySpeed={4000}
             >
                 {images.map((item, index) => {
-                    return <MainBannerItem url={item.url} />;
+                    return <MainBannerItem url={item.url} key={index} />;
                 })}
             </OwlCarousel>
             <MainBannerSearchBox />
