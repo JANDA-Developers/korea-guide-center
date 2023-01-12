@@ -48,6 +48,7 @@ export const ProductViewCards: React.FC<IProp> = ({
     onClickProduct,
     ...props
 }) => {
+    console.log(products);
     const uniqKey = useS4();
     const [_align, _setAlign] = useState<number | null>(null);
     const { ref, width, height } = useResizeDetector();
@@ -202,6 +203,7 @@ export const ProductViewCardsWithApi: React.FC<IProductViewCardsWithApi> = ({
     Head,
     ...props
 }) => {
+    // queryParam 받아서 그 쿼리에 맞는 데이터를 출력
     const { commonProductFilter } = useContext(AppContext);
 
     const { items: products } = useProductList(
@@ -215,6 +217,8 @@ export const ProductViewCardsWithApi: React.FC<IProductViewCardsWithApi> = ({
         },
         queryControl
     );
+
+    console.log(products);
 
     if (isEmpty(products)) return null;
     return (

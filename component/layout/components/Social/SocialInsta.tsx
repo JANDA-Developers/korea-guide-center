@@ -22,6 +22,21 @@ const SocialInsta = () => {
                     Follow
                 </a>
             </span>
+            <a
+                target="_blank"
+                href="https://www.instagram.com/korea_guide_/"
+                rel="noopener noreferrer"
+            >
+                <figure className="fit-cover">
+                    <img
+                        src="/img/sns/instagramImage.jpeg"
+                        alt=""
+                        width="680"
+                        height="680"
+                        className="lazy"
+                    />
+                </figure>
+            </a>
         </div>
     );
 };
