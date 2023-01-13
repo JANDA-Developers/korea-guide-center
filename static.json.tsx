@@ -1948,10 +1948,12 @@ const utils_message = {
         chi: `上传`,
     },
     doNotSendPersonalInfo: {
-        ko: "개인연락처를 주고받지 마세요",
-        en: `Do not exchange personal contact information`,
-        ja: `個人の連絡先情報を交換しないでください`,
-        chi: `不要交换个人联系方式`,
+        ko: "개인 연락처를 주고 받지 마세요. 개인간의 거래는 책임지지 않습니다 • 날짜. 인원, 지역, 여행취향 또는 목적을 적어 주시면 가이드로부터 더욱 구체적인 회답을 받을수 있습니다.",
+        en: `Do not exchange personal contacts information. We are not responsible for personal transactions. 
+        •  If you write down the date, number of people, region, travel preferences, or purpose, you can get a more specific answer from the guide. `,
+        ja: `個人間の連絡先を交換しないでください。 個人の取引は責任を負いません。
+        •  日付、人数、地域、旅行の好み、または目的を書いていただければ、ガイドからより具体的な回答を受けることができます。`,
+        chi: `不要交换个人联系方式不负责个 人间的交易`,
     },
     seeMyCustomTour: {
         ko: "내가 작성한 커스텀 투어보기",
