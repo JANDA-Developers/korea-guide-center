@@ -49,7 +49,7 @@ export const SAMPLE_FILE = {
 };
 
 export const DEFAULT_PROFILE_IMG = "/img/profile_default160.gif";
-export const DEFAULT_BG_IMG = "/img/main_bg_03.jpg";
+export const DEFAULT_BG_IMG = "/img/main_bg_03.png";
 
 export const DEFAULT_PAGEINFO = {
     pageInfo: {},

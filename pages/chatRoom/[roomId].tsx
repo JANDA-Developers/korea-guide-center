@@ -50,6 +50,8 @@ const ChatRoom: React.FC<IGudeProfilePage> = () => {
         });
     };
 
+    console.log(item);
+
     return (
         <BookLayout>
             <div className="ChatRoom">
