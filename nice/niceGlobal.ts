@@ -72,7 +72,7 @@ function nicePay() {
         target.submit();
     } else {
         window.nicepaySubmit = PCnicepaySubmit;
-        window.goPay(target.get(0));
+        window.goPay(target?.get(0)!);
     }
 }
 

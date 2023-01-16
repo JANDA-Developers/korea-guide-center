@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import NewestTourTabItem from "./NewestTourTabItem";
+
 import dynamic from "next/dynamic";
 const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
 import { NewsProductList } from "../../../productViewCard/ProductViewCards";

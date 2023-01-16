@@ -1,3 +1,4 @@
+import $ from "jquery";
 import "../utils/polifill";
 import React from "react";
 import lazy from "next/dynamic";
