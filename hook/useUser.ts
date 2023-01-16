@@ -110,6 +110,7 @@ export const useUserList = generateListQueryHook<
     userListVariables,
     userList_UserList_items
 >(USER_LIST, { initialSort: [_IUserSort.createdAt__desc] });
+
 export const useSignUp = generateMutationHook<signUp, signUpVariables>(SIGN_UP);
 export const useSignIn = generateMutationHook<signIn, signInVariables>(
     SIGN_IN,
