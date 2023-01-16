@@ -1495,7 +1495,7 @@ const utils_message = {
         ko: "코리아가이드의 베스트 셀러!",
         en: `Korea Guide's Best Seller!`,
         ja: `コリアガイドのベストセラー！`,
-        chi: `韩国导游地畅销书！`,
+        chi: `韩国导游地畅销旅游！`,
     },
     bestKPOPTitle: {
         ko: "K-POP BEST 투어&여행 베스트셀러",
