@@ -2190,7 +2190,7 @@ const utils_message = {
     },
     regionGuide: {
         ko: "가이드",
-        en: `Guide.`,
+        en: `Guide`,
         ja: `ガイド`,
         chi: `指导`,
     },
