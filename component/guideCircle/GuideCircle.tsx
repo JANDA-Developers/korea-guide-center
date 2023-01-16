@@ -36,7 +36,7 @@ export const GuideCircle: React.FC<Iprops> = ({
             onClick={(e) => {
                 e.stopPropagation();
                 e.preventDefault();
-                router.push(Paths.profile + "/" + guideId);
+                !!props.guideNickName && router.push(Paths.profile + "/" + guideId);
             }}
             className="guideCircle"
             {...props}
