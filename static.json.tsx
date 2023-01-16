@@ -2192,7 +2192,7 @@ const utils_message = {
         ko: "가이드",
         en: `Guide`,
         ja: `ガイド`,
-        chi: `指导`,
+        chi: `导游`,
     },
     regionLineDesc: {
         ko: "선택 지역의 상품들을 만나보세요.",
