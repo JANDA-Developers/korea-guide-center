@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import React from "react";
 import BecomeGuideSliderItem from "./BecomeGuideSliderItem";
-const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
 const images = [
     { image: "/img/media/media-1.jpeg" },

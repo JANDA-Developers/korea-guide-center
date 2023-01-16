@@ -19,7 +19,7 @@ import { genrateOption } from "../../../../utils/query";
 import { randomArraySort } from "../../../../utils/shuffle";
 import { IHorizenGriderProp } from "../../../horizenGrider/HorizenGrider";
 import PopularGuideItem from "./PopularGuideItem";
-const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
 interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
     guides: Fuser[];

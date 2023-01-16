@@ -4,7 +4,7 @@ import MainBannerItem from "./MainBannerItem";
 import MainBannerPhrases from "./MainBannerPhrases";
 import MainBannerSearchBox from "./MainBannerSearchBox";
 import "owl.carousel/dist/assets/owl.carousel.css";
-const OwlCarousel = dynamic(import("react-owl-carousel"), { ssr: false });
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
 interface IMainBannerProps {
     images: {
