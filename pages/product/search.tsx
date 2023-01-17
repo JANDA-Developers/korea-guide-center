@@ -120,8 +120,13 @@ export const Search: React.FC<IProp> = () => {
     const urlSearchParam = getSearchPageQuery();
     const { title } = urlSearchParam;
     const { s, catMap, l } = useContext(AppContext);
+    const [reload, setReload] = useState<boolean>(false);
+
+    console.log("urlSearchParam", urlSearchParam)
 
     const { filter: _filter, sort: _sort } = generateFilter(urlSearchParam);
+
+    console.log("title", title)
 
     const productListHook = useProductList(
         {
@@ -151,6 +156,10 @@ export const Search: React.FC<IProp> = () => {
         networkStatus,
     } = productListHook;
 
+    useEffect(() => {
+        console.log("products", products)
+    }, [products])
+
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
         urlSearchParam.filter?.categoryMini__id__in?.[0] ===
@@ -160,12 +169,16 @@ export const Search: React.FC<IProp> = () => {
     );
 
     useEffect(() => {
-        if (!getLoading) {
-            productListHook.setFilter({
-                ...filter,
-            });
+        // if (!getLoading) {
+        //     productListHook.setFilter({
+        //         ...filter,
+        //     });
+        // }
+        if (reload) {
+            router.push(`/product/searchTemp?title=${title}`)
         }
-    }, [title]);
+        setReload((prev) => !prev)
+    }, [urlSearchParam.title]);
 
     if (networkStatus === 1) return null;
     return (
@@ -283,6 +296,7 @@ export const Search: React.FC<IProp> = () => {
                                     {s("searchHowAboutCustomLink")}
                                 </LinkText>
                             </InfoBox> */}
+
 
                             <ProductViewCards wrap products={products} />
                             {isEmpty(products) ? (
