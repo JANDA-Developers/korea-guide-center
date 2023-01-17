@@ -244,14 +244,20 @@ export const ProductDetail: React.FC<IProp> = ({
                         <Galley photos={Tour.productInfomation.images || []} />
                         <Mb />
                         <InfoCard>
-                            <Small style={{ whiteSpace: "pre-line" }}>
+                            <Small
+                                style={{ whiteSpace: "pre-line" }}
+                                className="ProductDetail__productDesc"
+                            >
                                 {l(shortDecsription)}
                             </Small>
                         </InfoCard>
                         <Mb />
                         {descriptionLarge && (
                             <>
-                                <Small style={{ whiteSpace: "pre-line" }}>
+                                <Small
+                                    style={{ whiteSpace: "pre-line" }}
+                                    className="ProductDetail__productDesc"
+                                >
                                     {l(descriptionLarge)}
                                 </Small>
                                 <Mb />
