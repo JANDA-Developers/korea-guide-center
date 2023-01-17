@@ -214,7 +214,6 @@ export const ProductDetail: React.FC<IProp> = ({
 
     console.log(Tour);
 
-
     const { startDate } = Tour;
 
     const { reviewAb } = getTourSummary(context, Tour);
