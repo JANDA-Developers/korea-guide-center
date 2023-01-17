@@ -5,6 +5,8 @@
     flex: 1;
     background: $side-bg;
     max-width: $main-menu-width;
+    height: 100vh;
+    max-height: 100vh;
 
     &__list {
         cursor: pointer;
