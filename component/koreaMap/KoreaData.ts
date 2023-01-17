@@ -670,4 +670,39 @@ export enum mapRegion {
     Cook = "CookTour",
 }
 
+export const mapRegion2: any = {
+    dmz: "dmz",
+    서울: "seoul",
+    부산: "busan",
+    대구: "daegu",
+    인천: "Incheon",
+    광주: "Gwangju",
+    대전: "Daejeon",
+    울산: "Ulsan",
+    세종: "Sejong",
+    제주: "Jeju",
+    경남: "SouthGyeongsang",
+    경북: "NorthGyeongsang",
+    전남: "SouthJeolla",
+    전북: "NorthJeolla",
+    충남: "SouthChungcheong",
+    충북: "NorthChungcheong",
+    강원: "Gangwon",
+    경기: "Gyeonggi",
+    //
+    Custom: "CustomTour",
+    Mice: "MICE",
+    Driving: "DrivingTour",
+    의료관광: "WellnessMedical",
+    축제: "LocalFestival",
+    //
+    통역: "InterpreterGuide",
+    "Barrier-Free": "BarrierFree",
+    VIP의전: "VIPexhibition",
+    부동산: "RealEstate",
+    유학: "StudyAbroad",
+    장기체류: "LongStay",
+    요리: "CookTour",
+};
+
 export const mapRegionArr = enumToArray(mapRegion);
