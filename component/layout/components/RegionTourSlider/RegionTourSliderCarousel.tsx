@@ -315,12 +315,17 @@ const RegionTourSliderCarousel = () => {
     const settings = {
         centerMode: false,
         slidesToShow: 4,
-        speed: 500,
+        slidestoScroll: 1,
+        slidesPerRow: 1,
+        speed: 250,
         nextArrow: <SlickArrowRight />,
         prevArrow: <SlickArrowLeft />,
+        loop: false,
+        infinite: false,
+        variableWidth: true,
         responsive: [
             {
-                breakpoint: 1100,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -328,7 +333,7 @@ const RegionTourSliderCarousel = () => {
                 },
             },
             {
-                breakpoint: 820,
+                breakpoint: 980,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -336,13 +341,11 @@ const RegionTourSliderCarousel = () => {
                 },
             },
             {
-                breakpoint: 520,
+                breakpoint: 599,
                 settings: {
                     centerMode: true,
-                    centerPadding: "100px",
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 1,
+                    rows: 1,
                 },
             },
         ],
