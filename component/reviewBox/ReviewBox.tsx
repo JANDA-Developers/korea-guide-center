@@ -83,7 +83,9 @@ export const ReviewBox: React.FC<IProp> = ({ review, Controller }) => {
                 </JDalign>
             )}
             <Flex vCenter style={{ alignItems: "start" }}>
-                <Small mr>{contents}</Small>
+                <Small mr className="reviewBox__review">
+                    {contents}
+                </Small>
                 {Controller?.(review)}
             </Flex>
             <div>

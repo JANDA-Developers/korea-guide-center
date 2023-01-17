@@ -18,7 +18,9 @@ export const DetailHeader: React.FC<IProp> = ({ tour, product }) => {
     const { rating, reviewCount } = product;
     return (
         <div>
-            <Bold size="h4">{l(title)}</Bold>
+            <Bold size="h4" className="ProductDetail__productHeader">
+                {l(title)}
+            </Bold>
             <Flex vCenter>
                 <JDbadge mr thema="point">
                     {l(category?.label)}

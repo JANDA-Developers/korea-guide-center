@@ -1,4 +1,12 @@
 .ProductDetail {
+    &__productHeader {
+        word-break: break-all !important;
+    }
+
+    &__productDesc {
+        word-break: break-all !important;
+    }
+
     &__navCard {
         position: sticky;
         top: space(1);
