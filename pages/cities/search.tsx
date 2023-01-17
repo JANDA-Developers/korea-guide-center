@@ -42,6 +42,7 @@ import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
 import {
     regionableData,
     mapRegionArr,
+    mapRegion2,
 } from "../../component/koreaMap/KoreaData";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "../../recoil/atoms";
@@ -53,68 +54,7 @@ interface ISearchPageQuery {
 }
 
 const translateKoreanToEnglish = (title: string) => {
-    // 하드코딩이라 죄송합니다 😭
-    if (title === "dmz") {
-        return mapRegionArr[0];
-    } else if (title === "서울") {
-        return mapRegionArr[1];
-    } else if (title === "부산") {
-        return mapRegionArr[2];
-    } else if (title === "대구") {
-        return mapRegionArr[3];
-    } else if (title === "인천") {
-        return mapRegionArr[4];
-    } else if (title === "광주") {
-        return mapRegionArr[5];
-    } else if (title === "대전") {
-        return mapRegionArr[6];
-    } else if (title === "울산") {
-        return mapRegionArr[7];
-    } else if (title === "세종") {
-        return mapRegionArr[8];
-    } else if (title === "제주") {
-        return mapRegionArr[9];
-    } else if (title === "경남") {
-        return mapRegionArr[10];
-    } else if (title === "경북") {
-        return mapRegionArr[11];
-    } else if (title === "전남") {
-        return mapRegionArr[12];
-    } else if (title === "전북") {
-        return mapRegionArr[13];
-    } else if (title === "충남") {
-        return mapRegionArr[14];
-    } else if (title === "충북") {
-        return mapRegionArr[15];
-    } else if (title === "강원") {
-        return mapRegionArr[16];
-    } else if (title === "경기") {
-        return mapRegionArr[17];
-    } else if (title === "Custom") {
-        return mapRegionArr[18];
-    } else if (title === "MICE") {
-        return mapRegionArr[19];
-    } else if (title === "DRIVING") {
-        return mapRegionArr[20];
-    } else if (title === "의료관광") {
-        return mapRegionArr[21];
-    } else if (title === "축제") {
-        return mapRegionArr[22];
-    } else if (title === "통역") {
-        return mapRegionArr[23];
-    } else if (title === "Barrier-Free") {
-        return mapRegionArr[24];
-    } else if (title === "VIP의전") {
-        return mapRegionArr[25];
-    } else if (title === "부동산") {
-        return mapRegionArr[26];
-    } else if (title === "유학") {
-        return mapRegionArr[27];
-    } else if (title === "장기체류") {
-        return mapRegionArr[28];
-    } else if (title === "요리") {
-        return mapRegionArr[29];
-    }
+    return mapRegion2[title]
 };
 
 export const getSearchPageQuery = () => {
@@ -153,7 +93,7 @@ const generateFilter = (searchParam?: ISearchPageQuery) => {
     return { filter, sort };
 };
 
-interface IProp {}
+interface IProp { }
 
 export const searchPageQueryGenerate = (query: ISearchPageQuery) => {
     const urlQueries: UrlParam[] = Object.entries(query).map(
@@ -230,7 +170,7 @@ export const Search: React.FC<IProp> = () => {
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
         urlSearchParam.filter?.categoryMini__id__in?.[0] ===
-            filter?.categoryMini__id__in?.[0];
+        filter?.categoryMini__id__in?.[0];
     const urlSerchCat = catMap.ITEM_SMALL.find(
         (cat) => cat._id === urlSearchParam.filter?.categoryMini__id__in?.[0]
     );
@@ -298,9 +238,8 @@ export const Search: React.FC<IProp> = () => {
                         }}
                         mode="border"
                         size="small"
-                        label={`${s("searchDetail")} ${
-                            detailSearch ? s("open") : s("close")
-                        } `}
+                        label={`${s("searchDetail")} ${detailSearch ? s("open") : s("close")
+                            } `}
                     />
                 </JDtypho>
                 <Flex oneone className="search__wrapper">
