@@ -782,10 +782,10 @@ const utils_message = {
         chi: "查询预订",
     },
     customTour: {
-        ko: "프라이빗 가이드투어",
-        en: "Private Guide Travel",
-        ja: "カスタムツアー",
-        chi: "定制旅行",
+        ko: "개별여행주문",
+        en: "Individual travel orders",
+        ja: "個別旅行注文",
+        chi: "个别旅游订单",
     },
     insert_link_plz: {
         ko: "링크 주소를 입력 해주세요.",
@@ -1462,10 +1462,10 @@ const utils_message = {
         chi: `本地导游`,
     },
     itsThemaTravel: {
-        ko: "테마여행",
-        en: `Theme Tour`,
-        ja: `テーマ旅行`,
-        chi: `主题旅游`,
+        ko: "투어 & 액티비티",
+        en: `Tours & Activities`,
+        ja: `ツアー&アクティビティ`,
+        chi: `旅游与活动`,
     },
     selectRegion: {
         ko: "지도에서 지역을 선택 해주세요.",
