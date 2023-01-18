@@ -12,6 +12,7 @@ import { ListInitOptions } from "../../hook/useListQuery";
 import { useProductList } from "../../hook/useProduct";
 import { useS4 } from "../../hook/useUniqkey";
 import {
+    Fgroup_label,
     Fproduct,
     productList,
     productListVariables,
@@ -312,6 +313,7 @@ export const ProductsGroupRenders: React.FC = () => {
     const gropsWithProducts = groupProductMap(products, groupsNonIndex || []);
     const filterd = gropsWithProducts.filter((gp) => !isEmpty(gp.products));
     const router = useRouter();
+    const { locale } = useRouter();
 
     return (
         <div>
@@ -322,9 +324,9 @@ export const ProductsGroupRenders: React.FC = () => {
                         description={l(gp.desc)}
                         onSeeMore={() => {
                             if (index == 0) {
-                                router.push(`/product/popularTour?title=${gp.label.ko}`)
+                                router.push(`/product/popularTour?title=${gp.label[locale as Locales]}`)
                             } else {
-                                router.push(`/product/localTour?title=${gp.label.ko}`)
+                                router.push(`/product/localTour?title=${gp.label[locale as Locales]}`)
                             }
 
                         }}
