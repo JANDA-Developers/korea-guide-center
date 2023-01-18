@@ -28,14 +28,15 @@ const RegionGuidesHeader: React.FC<IHyperProductGroupProp> = ({ hyper }) => {
                     " " +
                     s("regionGuide")}
             </div>
-            <div
+            {/* 더보기 부분 23.01.18 더보기 버튼 아래로 옮김 */}
+            {/* <div
                 className="regionGuides__header--seeMore"
                 onClick={() => {
                     push("/guides");
                 }}
             >
                 {s("seeMore")}
-            </div>
+            </div> */}
         </div>
     );
 };

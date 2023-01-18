@@ -85,6 +85,24 @@
             background-color: #D0242B;
         }
     }
+
+    &__jdButtonWidth4{
+        all: unset;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        color:white;
+        background-color: #5B5B5B;
+        height:40px;
+        width:100%;
+        border : 1px solid #5B5B5B;
+        cursor:pointer;
+        margin-top: 40px;
+
+        &:hover {
+            background-color: #4d4d4d;
+        }
+    }
     
     &__InfoboxWidth{
         width: 31vh;

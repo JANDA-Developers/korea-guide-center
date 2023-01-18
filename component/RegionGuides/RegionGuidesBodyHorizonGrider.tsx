@@ -2,8 +2,9 @@
 
 import { Flex, isEmpty } from "@janda-com/front";
 import classNames from "classnames";
-import { PropsWithChildren, useLayoutEffect, useState } from "react";
+import { PropsWithChildren, useContext, useLayoutEffect, useState } from "react";
 import { useResizeDetector } from "react-resize-detector";
+import { AppContext } from "../../context/context";
 import GuideIntro from "../horizenGrider/GuideIndtro";
 import { IHorizenGriderProp } from "../horizenGrider/HorizenGrider";
 import { AnimationOnScroll } from "../scrollAnimation/ScrollAnimation";
@@ -14,6 +15,8 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
     wrap,
     empty,
 }: PropsWithChildren<IHorizenGriderProp<T>>) => {
+    const context = useContext(AppContext);
+    const { s, l } = context;
     const [_align, _setAlign] = useState<number | null>(null);
     const { ref, width } = useResizeDetector();
     const Align = _align || align;
@@ -68,7 +71,16 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
                         mr
                         className="ProductViewCards__card ProductViewCards__card--placeholder"
                     /> */}
+                    <button
+                        className="detailNavCard__jdButtonWidth4"
+                        onClick={() => {
+                            // handleToChatRoomOrCreate();
+                        }}
+                    >
+                        {s("seeMore")}
+                    </button>
                 </Flex>
+
             </AnimationOnScroll>
         </div>
     );
