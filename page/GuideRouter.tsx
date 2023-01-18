@@ -36,7 +36,6 @@ import { BookingViewModal } from "./booking/components/bookingModal/BookingViewM
 import { BannerForm } from "./homepage/BannerForm";
 import { SettlementHistory } from "./settlementHistory/SettlementHistory";
 import { FeePolicy } from "./homepage/FeePolicy";
-import { s4 } from "@janda-com/front";
 import { JoinReady } from "./joinReady/JoinReady";
 import SuperBoardConfig from "./board/SuperBoardConfig";
 import SuperBoardConfigDetail from "./board/SuperBoardConfigDetail";

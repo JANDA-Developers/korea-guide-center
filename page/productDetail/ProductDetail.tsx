@@ -137,7 +137,6 @@ export const ProductDetail: React.FC<ITourDetailProp> = ({
     mode: defaultMode,
     updateComponent,
 }) => {
-    console.log({ product });
     const urlMode = getFromUrl("mode");
     const context = useContext(AppContext);
     const { confirmModalHook } = context;
@@ -1050,6 +1049,7 @@ export const ProductDetail: React.FC<ITourDetailProp> = ({
                                     />
                                 )}
 
+                                {/* 투어 추가 하기 */}
                                 {!isTourUpdate && (
                                     <div>
                                         <JDlabel txt="출발일자를 선택해주세요. (복수선택)" />
@@ -1058,13 +1058,14 @@ export const ProductDetail: React.FC<ITourDetailProp> = ({
                                             multiDays
                                             disabledDays={(day) => {
                                                 const hasAlready =
-                                                    !!fullDatesDisable.find(
+                                                    !!everyTourDates.find(
                                                         (ed) =>
                                                             dayjs(ed).isSame(
                                                                 day,
                                                                 "date"
                                                             )
                                                     );
+
                                                 return (
                                                     hasAlready ||
                                                     dayjs(day).isBefore(

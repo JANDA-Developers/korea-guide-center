@@ -31,8 +31,6 @@ export const MapSearcher: React.FC<IMapSearchComponentProp> = ({
 
     const { value, setValue, clearSuggestions } = autoCompleteHook;
 
-    console.log({ value });
-
     // https://developers.google.com/maps/documentation/javascript/reference/places-autocomplete-service#AutocompletionRequest
 
     const handleSelect = async (address: string) => {

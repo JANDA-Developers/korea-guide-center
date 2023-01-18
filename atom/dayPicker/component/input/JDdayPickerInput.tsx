@@ -132,5 +132,3 @@ const JDdayPickerInput: React.FC<IProps> = ({
 };
 
 export default JDdayPickerInput;
-
-

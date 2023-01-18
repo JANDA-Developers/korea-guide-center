@@ -155,6 +155,7 @@ const JDdayPicker: React.FC<IJDdayPickerProps> = React.memo(
         // handle --day : Click
         const handleDayClick = (rawDate: Date, modifiers: DayModifiers) => {
             const day = rawDate;
+
             if (readOnly) return;
             // 불가능한 날자를 눌럿을경우에
             if (modifiers.disabled) return;
@@ -344,7 +345,14 @@ const JDdayPicker: React.FC<IJDdayPickerProps> = React.memo(
                     arrowOnly={multiMonth}
                 />
             ),
-            captionElement: ({date,classNames}) => multiMonth ? <div className={classNames.caption}>{dayjs(date).format("YYYY MMM")}</div>: <div />,
+            captionElement: ({ date, classNames }) =>
+                multiMonth ? (
+                    <div className={classNames.caption}>
+                        {dayjs(date).format("YYYY MMM")}
+                    </div>
+                ) : (
+                    <div />
+                ),
         };
 
         return (
@@ -377,8 +385,3 @@ const JDdayPicker: React.FC<IJDdayPickerProps> = React.memo(
 );
 
 export default JDdayPicker;
-
-
-
-
-

@@ -39,7 +39,6 @@ export const InputWithGlobal: React.FC<IProp> = ({
         });
     };
 
-    console.log("langs.ko :" + langs.ko);
 
     return (
         <InputText
