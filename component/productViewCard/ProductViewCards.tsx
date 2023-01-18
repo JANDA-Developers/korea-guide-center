@@ -216,6 +216,7 @@ export const ProductViewCardsWithApi: React.FC<IProductViewCardsWithApi> = ({
         queryControl
     );
 
+
     if (isEmpty(products)) return null;
     return (
         <div>
@@ -310,14 +311,23 @@ export const ProductsGroupRenders: React.FC = () => {
 
     const gropsWithProducts = groupProductMap(products, groupsNonIndex || []);
     const filterd = gropsWithProducts.filter((gp) => !isEmpty(gp.products));
+    const router = useRouter();
 
     return (
         <div>
-            {filterd.map((gp) => (
+            {filterd.map((gp, index) => (
                 <JDalign mb="largest" key={gp._id}>
                     <ProductViewsLineHeader
                         title={l(gp.label)}
                         description={l(gp.desc)}
+                        onSeeMore={() => {
+                            if (index == 0) {
+                                router.push(`/product/popularTour?title=${gp.label.ko}`)
+                            } else {
+                                router.push(`/product/localTour?title=${gp.label.ko}`)
+                            }
+
+                        }}
                     />
                     <ProductViewCards products={gp.products} />
                 </JDalign>

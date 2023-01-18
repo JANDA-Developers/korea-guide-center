@@ -43,6 +43,8 @@ import { InfoBox } from "../../component/infoBox/InfoBox";
 import { LinkText } from "../../component/link/Link";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
+import { generateFilter, getSearchPageQuery } from "./search";
+import { groupProductMap } from "../../utils/categoryMap";
 
 interface ISearchPageQuery {
     title?: string;
@@ -50,68 +52,10 @@ interface ISearchPageQuery {
     sort?: _ProductSort[];
 }
 
-export const getSearchPageQuery = () => {
-    let { filter, sort, ...others } = getAllFromUrl() as ISearchPageQuery;
 
-    if (filter) filter = JSON.parse(decodeURIComponent(filter as string));
-
-    if (sort)
-        // @ts-ignore
-        sort = JSON.parse(decodeURIComponent(sort as string));
-
-    return { sort, filter, ...others };
-};
-
-export const generateFilter = (searchParam?: ISearchPageQuery) => {
-    const { locale } = useRouter();
-    const { title, filter: _filter, sort } = searchParam || {};
-
-    let filter: any = {};
-    if (title) {
-        filter.OR = [
-            {
-                [`title_${locale}__contains`]: title,
-            },
-            {
-                [`descriptionLarge_${locale}__contains`]: title,
-            },
-            {
-                [`shortDecsription_${locale}__contains`]: title,
-            },
-        ];
-    }
-    if (_filter) {
-        filter = _filter;
-    }
-    return { filter, sort };
-};
 
 interface IProp { }
 
-export const searchPageQueryGenerate = (query: ISearchPageQuery) => {
-    const urlQueries: UrlParam[] = Object.entries(query).map(
-        ([key, value]): UrlParam => {
-            let _value = value;
-            if (key === "filter" && value) {
-                _value = encodeURIComponent(JSON.stringify(value));
-            }
-            if (key === "sort" && value) {
-                _value = encodeURIComponent(JSON.stringify(value));
-            }
-            return { param: key, paramVal: _value };
-        }
-    );
-
-    let host = location.origin;
-    if (process.env.NODE_ENV === "production" && host.includes("localhost")) {
-        // host = "https://jungle.booking.stayjanda.cloud";
-        throw Error("--!");
-    }
-
-    // if( ) location.protocol + "://" + host +
-
-    return updateURLParameters(Paths.search, urlQueries);
-};
 
 export const Search: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
@@ -119,7 +63,7 @@ export const Search: React.FC<IProp> = () => {
     const [detailSearch, setDetailSearch] = useState<boolean>(true);
     const urlSearchParam = getSearchPageQuery();
     const { title } = urlSearchParam;
-    const { s, catMap, l } = useContext(AppContext);
+    const { s, catMap, l, groupsNonIndex } = useContext(AppContext);
     const [reload, setReload] = useState<boolean>(false);
 
     console.log("urlSearchParam", urlSearchParam)
@@ -157,8 +101,8 @@ export const Search: React.FC<IProp> = () => {
     } = productListHook;
 
     useEffect(() => {
-        console.log("products", products)
-    }, [products])
+        console.log("productListHook", productListHook)
+    }, [productListHook])
 
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
@@ -174,11 +118,31 @@ export const Search: React.FC<IProp> = () => {
         //         ...filter,
         //     });
         // }
-        if (reload) {
-            router.push(`/product/searchTemp?title=${title}`)
-        }
+        // if (reload) {
+        //     router.push(`/product/searchTemp?title=${title}`)
+        // }
         setReload((prev) => !prev)
     }, [urlSearchParam.title]);
+
+    // 🚧🚧🚧🚧🚧여긴 내가 만든 내세상이야!🚧🚧🚧🚧🚧
+    const evneryGroupProducts = groupsNonIndex?.flatMap(
+        (group) => group.members
+    );
+
+    console.log("evneryGroupProducts", evneryGroupProducts)
+
+    const { items: product } = useProductList({
+        fixingFilter: {
+            _id__in: evneryGroupProducts,
+        },
+    });
+
+    const gropsWithProducts = groupProductMap(product, groupsNonIndex || []);
+    const filterd = gropsWithProducts.filter((gp) => !isEmpty(gp.products));
+    console.log("gropsWithProducts", gropsWithProducts)
+    console.log("filterd", filterd)
+    // 🚧🚧🚧🚧🚧🚧
+
 
     if (networkStatus === 1) return null;
     return (
@@ -195,7 +159,6 @@ export const Search: React.FC<IProp> = () => {
                     size="h6"
                     weight={600}
                 >
-                    "{l(urlSerchCat?.label)}" {s("searchResult")}
                 </JDtypho>
                 <JDtypho
                     mr
@@ -205,19 +168,10 @@ export const Search: React.FC<IProp> = () => {
                     weight={600}
                 >
                     <Primary mr="tiny">{title}</Primary>
-                    {` `}
-                    {s("searchResult")} <Mr mr="small" />
-                    <JDbutton
-                        className="search__detailSearchBtn"
-                        onClick={() => {
-                            setDetailSearch(!detailSearch);
-                        }}
-                        mode="border"
-                        size="small"
-                        label={`${s("searchDetail")} ${detailSearch ? s("open") : s("close")
-                            } `}
-                    />
+
+
                 </JDtypho>
+
                 <Flex oneone className="search__wrapper">
                     <JDalign
                         hide={checkMobile() ? false : detailSearch}
@@ -242,18 +196,18 @@ export const Search: React.FC<IProp> = () => {
                                 size="h6"
                                 weight={600}
                             >
-                                <Primary mr="tiny">{title}</Primary>{" "}
+
                                 {s("searchResult")}
                             </JDtypho>
                             <Flex between>
                                 <Bold mb className="search__searchCount">
                                     <Primary mr="tiny">
-                                        {pageInfo.totalDocumentCount}{" "}
+                                        {filterd[0]?.products?.length}{" "}
                                     </Primary>
                                     {s("searchResult")}
                                 </Bold>
                                 <ScrollBox mb scrollSize="small">
-                                    <Flex mb>
+                                    {/* <Flex mb>
                                         <NewSorter
                                             mr
                                             sort={sort}
@@ -279,31 +233,34 @@ export const Search: React.FC<IProp> = () => {
                                             sort={sort}
                                             setSort={setSort}
                                         />
-                                    </Flex>
+                                    </Flex> */}
                                 </ScrollBox>
                             </Flex>
+
+
+                            {isEmpty(products) ? (
+                                <div>
+                                    {filterd[1] ?
+                                        <ProductViewCards wrap products={filterd[1]?.products} />
+                                        : null}
+
+                                    {/* {filterd[0]?.products ? filterd[0]?.products.map(fil => {
+                                        <div>123</div>
+                                    }) : null} */}
+
+                                </div>
+                            ) : null}
+
+
                             <EmptyInfo
-                                empty={isEmpty(products)}
+                                empty={isEmpty(gropsWithProducts[0]?.products)}
                                 msg="검색결과를 찾을 수 없습니다."
                                 padding={8}
                             />
-                            {/* <InfoBox hide={!isEmpty(products)} mb>
-                                <LinkText
-                                    onClick={() => {
-                                        router.push(Paths.offer);
-                                    }}
-                                >
-                                    {s("searchHowAboutCustomLink")}
-                                </LinkText>
-                            </InfoBox> */}
 
-
-                            <ProductViewCards wrap products={products} />
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />
-
-                                    <ProductViewCardsWithApi wrap />
                                 </div>
                             ) : null}
                             <Mb mb="largest" />
