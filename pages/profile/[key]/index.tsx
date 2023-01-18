@@ -1,18 +1,18 @@
 import { Flex, isEmpty, JDalign, JDbutton, Mb } from "@janda-com/front";
 import { useRouter } from "next/router";
 import { useContext } from "react";
-import { JDicon } from "../../component/icons/Icons";
-import BookLayout from "../../component/layout/BookLayout";
-import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCards";
-import { ProductViewsLineHeader } from "../../component/productViewCard/ProductViewsLineHeader";
-import { AppContext } from "../../context/context";
-import { useStartChat } from "../../hook/useChatRoom";
-import { useuserFindById } from "../../hook/useUser";
-import { LANGUAGES, userFindById_UserFindById } from "../../types/api";
-import { DEFAULT_PROFILE_IMG } from "../../types/const";
-import { filterVisibleProduct } from "../../utils/product";
-import { Badges } from "../../component/statusBadges/StatusBadges";
-import { Video } from "../../component/video/Video";
+import { JDicon } from "../../../component/icons/Icons";
+import BookLayout from "../../../component/layout/BookLayout";
+import { ProductViewCardsWithApi } from "../../../component/productViewCard/ProductViewCards";
+import { ProductViewsLineHeader } from "../../../component/productViewCard/ProductViewsLineHeader";
+import { AppContext } from "../../../context/context";
+import { useStartChat } from "../../../hook/useChatRoom";
+import { useuserFindById } from "../../../hook/useUser";
+import { LANGUAGES, userFindById_UserFindById } from "../../../types/api";
+import { DEFAULT_PROFILE_IMG } from "../../../types/const";
+import { filterVisibleProduct } from "../../../utils/product";
+import { Badges } from "../../../component/statusBadges/StatusBadges";
+import { Video } from "../../../component/video/Video";
 
 interface IGudeProfilePage {
     guideData: userFindById_UserFindById;
