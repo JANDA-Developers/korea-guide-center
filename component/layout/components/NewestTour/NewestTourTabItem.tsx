@@ -17,7 +17,7 @@ const NewestTourItem = ({
     description,
     price,
 }: NewestTourItemProps) => {
-    const { s, l } = useContext(AppContext);
+    const { s, l, locale } = useContext(AppContext);
     const priceToString = (price: number) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
@@ -27,7 +27,7 @@ const NewestTourItem = ({
             className="item bloc-card free"
             data-linkall="a"
             onClick={() => {
-                location.href = Paths.productDetailView + "/" + _id;
+                location.href = `${locale}/${Paths.productDetailView}/${_id}`;
             }}
         >
             <figure className="fit-cover">

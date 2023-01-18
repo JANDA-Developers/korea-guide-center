@@ -3,7 +3,12 @@ import { AppContext } from "../../../../context/context";
 
 interface RegionTourSliderItemProps {
     title: string;
-    queryTitle: string;
+    queryTitle: {
+        ko: string;
+        en: string;
+        ja: string;
+        chi: string;
+    };
     imageUrl: string;
 }
 
@@ -13,12 +18,15 @@ const RegionTourSliderItem = ({
     queryTitle,
     imageUrl,
 }: RegionTourSliderItemProps) => {
-    const { s } = useContext(AppContext);
+    const { s, locale } = useContext(AppContext);
+
     return (
         <div className="item">
             <a
                 onClick={() => {
-                    location.href = `/cities/search?title=${queryTitle}`;
+                    location.href = `/${locale}/cities/search?title=${
+                        queryTitle[locale! as "ko" | "en" | "ja" | "chi"]
+                    }`;
                 }}
             >
                 <figure className="o80">

@@ -6,7 +6,12 @@ import { mapRegion, regionableData } from "../../../koreaMap/KoreaData";
 
 export interface IRegionSliderItem {
     title: string;
-    queryTitle: string;
+    queryTitle: {
+        ko: string;
+        en: string;
+        ja: string;
+        chi: string;
+    };
     products?: number; // 혹시 몰라서 만들어둠
     imageUrl: string;
 }
@@ -74,7 +79,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.seoul as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "서울",
+            queryTitle: {
+                ko: "서울",
+                en: "Seoul",
+                ja: "ソウル",
+                chi: "汉城",
+            },
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
         },
@@ -83,7 +93,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.busan as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "부산",
+            queryTitle: {
+                ko: "부산",
+                en: "Busan",
+                ja: "釜山",
+                chi: "釜山",
+            },
             products: 0,
             imageUrl: "img/cities/busan.jpg",
         },
@@ -92,7 +107,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.daegu as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "대구",
+            queryTitle: {
+                ko: "대구",
+                en: "Dae-gu",
+                ja: "大邱",
+                chi: "大邱",
+            },
             products: 0,
             imageUrl: "img/cities/daegu.jpg",
         },
@@ -101,7 +121,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.Incheon as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "인천",
+            queryTitle: {
+                ko: "인천",
+                en: "Incheon",
+                ja: "仁川",
+                chi: "仁川",
+            },
             products: 0,
             imageUrl: "img/cities/Incheon.jpg",
         },
@@ -110,7 +135,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.Gwangju as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "광주",
+            queryTitle: {
+                ko: "광주",
+                en: "Gwangju",
+                ja: "光州",
+                chi: "光州",
+            },
             products: 0,
             imageUrl: "img/cities/Gwangju.jpg",
         },
@@ -119,7 +149,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.Daejeon as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "대전",
+            queryTitle: {
+                ko: "대전",
+                en: "Daejeon",
+                ja: "大田",
+                chi: "大田",
+            },
             products: 0,
             imageUrl: "img/cities/Daejeon.jpg",
         },
@@ -128,7 +163,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.Ulsan as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "울산",
+            queryTitle: {
+                ko: "울산",
+                en: "Ulsan",
+                ja: "蔚山",
+                chi: "蔚山",
+            },
             products: 0,
             imageUrl: "img/cities/Ulsan.jpg",
         },
@@ -137,7 +177,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.Sejong as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "세종",
+            queryTitle: {
+                ko: "세종시",
+                en: "Sejong City",
+                ja: "世宗市",
+                chi: "世宗",
+            },
             products: 0,
             imageUrl: "img/cities/Sejong.jpg",
         },
@@ -146,7 +191,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.Jeju as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "제주",
+            queryTitle: {
+                ko: "제주도",
+                en: "Jeju Island",
+                ja: "济州",
+                chi: "济州",
+            },
             products: 0,
             imageUrl: "img/cities/Jeju.jpg",
         },
@@ -156,7 +206,12 @@ const RegionTourSliderCarousel = () => {
                     mapRegion.SouthGyeongsang as keyof typeof regionableData
                 ].title
             ),
-            queryTitle: "경남",
+            queryTitle: {
+                ko: "경상남도",
+                en: "Gyeongsangnam-do",
+                ja: "慶尚南道",
+                chi: "庆尚南道",
+            },
             products: 0,
             imageUrl: "img/cities/SouthGyeongsang.jpg",
         },
@@ -166,7 +221,12 @@ const RegionTourSliderCarousel = () => {
                     mapRegion.NorthGyeongsang as keyof typeof regionableData
                 ].title
             ),
-            queryTitle: "경북",
+            queryTitle: {
+                ko: "경상북도",
+                en: "Gyeongsangbuk-do",
+                ja: "慶尚北道",
+                chi: "庆尚北道",
+            },
             products: 0,
             imageUrl: "img/cities/NorthGyeongsang.jpg",
         },
@@ -176,7 +236,12 @@ const RegionTourSliderCarousel = () => {
                     mapRegion.SouthJeolla as keyof typeof regionableData
                 ].title
             ),
-            queryTitle: "전남",
+            queryTitle: {
+                ko: "전라남도",
+                en: "Jeollanam-do",
+                ja: "全羅南道",
+                chi: "全罗南道",
+            },
             products: 0,
             imageUrl: "img/cities/SouthJeolla.jpg",
         },
@@ -186,7 +251,12 @@ const RegionTourSliderCarousel = () => {
                     mapRegion.NorthJeolla as keyof typeof regionableData
                 ].title
             ),
-            queryTitle: "전북",
+            queryTitle: {
+                ko: "전라북도",
+                en: "Jeollabuk-do",
+                ja: "全羅北道",
+                chi: "全罗北道",
+            },
             products: 0,
             imageUrl: "img/cities/NorthJeolla.jpg",
         },
@@ -196,7 +266,12 @@ const RegionTourSliderCarousel = () => {
                     mapRegion.SouthChungcheong as keyof typeof regionableData
                 ].title
             ),
-            queryTitle: "충남",
+            queryTitle: {
+                ko: "충청남도",
+                en: "Chungcheongnam-do",
+                ja: "忠清南道",
+                chi: "忠清南道",
+            },
             products: 0,
             imageUrl: "img/cities/SouthChungcheong.jpg",
         },
@@ -206,7 +281,12 @@ const RegionTourSliderCarousel = () => {
                     mapRegion.NorthChungcheong as keyof typeof regionableData
                 ].title
             ),
-            queryTitle: "충북",
+            queryTitle: {
+                ko: "충청북도",
+                en: "Chung-cheong bukdo",
+                ja: "忠清北道",
+                chi: "忠清北道",
+            },
             products: 0,
             imageUrl: "img/cities/NorthChungcheong.jpg",
         },
@@ -215,7 +295,12 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.Gangwon as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "강원",
+            queryTitle: {
+                ko: "강원도",
+                en: "Gangwon-do",
+                ja: "江原道",
+                chi: "江原道",
+            },
             products: 0,
             imageUrl: "img/cities/Gangwon.jpg",
         },
@@ -225,7 +310,12 @@ const RegionTourSliderCarousel = () => {
                     mapRegion.Gyeonggi as keyof typeof regionableData
                 ].title
             ),
-            queryTitle: "경기",
+            queryTitle: {
+                ko: "경기도",
+                en: "Gyeonggi-do",
+                ja: "京畿道",
+                chi: "京畿道",
+            },
             products: 0,
             imageUrl: "img/cities/Gyeonggi.jpg",
         },
@@ -234,79 +324,144 @@ const RegionTourSliderCarousel = () => {
                 regionableData[mapRegion.dmz as keyof typeof regionableData]
                     .title
             ),
-            queryTitle: "dmz",
+            queryTitle: {
+                ko: "DMZ",
+                en: "DMZ",
+                ja: "DMZ",
+                chi: "DMZ",
+            },
             products: 0,
             imageUrl: "img/cities/dmz.jpg",
         },
         {
             title: s("ServicesCustom"),
-            queryTitle: "Custom",
+            queryTitle: {
+                ko: "커스텀 투어",
+                en: "Customized Tour",
+                ja: "オーダーメイドツアー",
+                chi: "定制旅游",
+            },
             products: 0,
             imageUrl: "img/cities/CustomTour.jpg",
         },
         {
             title: s("ServicesMICE"),
-            queryTitle: "MICE",
+            queryTitle: {
+                ko: "MICE",
+                en: "MICE",
+                ja: "MICE",
+                chi: "MICE",
+            },
             products: 0,
             imageUrl: "img/cities/MICE.jpg",
         },
         {
             title: s("ServicesDriving"),
-            queryTitle: "DRIVING",
+            queryTitle: {
+                ko: "드라이빙가이드",
+                en: "Driving Guide",
+                ja: "ドライビングガイド",
+                chi: "驾驶导游",
+            },
             products: 0,
             imageUrl: "img/cities/DrivingTour.jpg",
         },
         {
             title: s("ServicesWellness"),
-            queryTitle: "의료관광",
+            queryTitle: {
+                ko: "의료관광",
+                en: "Medical tourism",
+                ja: "医療観光",
+                chi: "医疗观光",
+            },
             products: 0,
             imageUrl: "img/cities/WellnessMedical.jpg",
         },
         {
             title: s("ServicesLocalFestival"),
-            queryTitle: "축제",
+            queryTitle: {
+                ko: "로컬페스티벌",
+                en: "LocalFestival",
+                ja: "ローカルフェスティバル",
+                chi: "当地庆典",
+            },
             products: 0,
             imageUrl: "img/cities/LocalFestival.jpg",
         },
         {
             title: s("ServicesTranlate"),
-            queryTitle: "통역",
+            queryTitle: {
+                ko: "통역",
+                en: "interpreter",
+                ja: "通訳",
+                chi: "翻译",
+            },
             products: 0,
             imageUrl: "img/cities/InterpreterGuide.jpg",
         },
         {
             title: s("ServicesBarrierFree"),
-            queryTitle: "Barrier-Free",
+            queryTitle: {
+                ko: "Barrier-Free",
+                en: "Barrier-Free",
+                ja: "Barrier-Free",
+                chi: "Barrier-Free",
+            },
             products: 0,
             imageUrl: "img/cities/BarrierFree.jpg",
         },
         {
             title: s("ServicesVIP"),
-            queryTitle: "VIP의전",
+            queryTitle: {
+                ko: "VIP의전",
+                en: "VIP exhibition",
+                ja: "VIP儀典",
+                chi: "VIP礼宾",
+            },
             products: 0,
             imageUrl: "img/cities/VIPexhibition.jpg",
         },
         {
             title: s("ServicesRealEstate"),
-            queryTitle: "부동산",
+            queryTitle: {
+                ko: "부동산",
+                en: "Real estate",
+                ja: "不動産",
+                chi: "房地产",
+            },
             products: 0,
             imageUrl: "img/cities/RealEstate.jpg",
         },
         {
             title: s("ServicesStudyingAbroad"),
-            queryTitle: "유학",
+            queryTitle: {
+                ko: "유학",
+                en: "Studying abroad",
+                ja: "留学",
+                chi: "留学",
+            },
             products: 0,
             imageUrl: "img/cities/StudyAbroad.jpg",
         },
         {
             title: s("ServicesLongStay"),
-            queryTitle: "장기체류",
+            queryTitle: {
+                ko: "장기체류",
+                en: "LongStay",
+                ja: "長期滞在",
+                chi: "长期滞留",
+            },
             products: 0,
             imageUrl: "img/cities/LongStay.jpg",
         },
         {
             title: s("ServicesCook"),
-            queryTitle: "요리",
+            queryTitle: {
+                ko: "요리",
+                en: "Cooking",
+                ja: "料理",
+                chi: "料理",
+            },
             products: 0,
             imageUrl: "img/cities/CookTour.jpg",
         },
