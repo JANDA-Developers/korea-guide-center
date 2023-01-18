@@ -100,6 +100,29 @@
         margin-bottom: 1rem;
     }
 
+    &__tours {
+        cursor: pointer;
+        width: fit-content;
+        height: 50px;;
+        border: 1px solid #bebebe;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 50px;
+        .myTours{
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+        .tourCount {
+            font-size: 24px;
+            font-weight: 600;
+            margin-right: 20px;
+            color : #db1a1c;
+        }
+    }
+
     // &__infoarea{
     //     margin-right: 8px;  
     //     display: flex;
