@@ -11,6 +11,7 @@ import {
     JDbutton,
     useModal,
     toast,
+    Tiny,
 } from "@janda-com/front";
 import React, { useContext } from "react";
 import { CardBtn } from "../../component/btns/ModalBtn";
@@ -24,6 +25,7 @@ import { DEFAULT_PROFILE_IMG } from "../../types/const";
 import { ResignModal } from "../../component/components/ResignModal";
 import { CardHead, ModalHead } from "../../component/modalHead/ModalHead";
 import { BirthDayPicker } from "../../component/birthDayPicker/BirthDayPicker";
+import PasswordChecker from "../../component/passwordChecker/PasswordCheck";
 
 interface IProp {}
 
@@ -201,6 +203,9 @@ export const BookerProfile: React.FC<IProp> = () => {
                                 type="password"
                                 label={s("newPassword") || ""}
                             />
+                            <Tiny className="ITSpasswordChecker" mb>
+                                <PasswordChecker txt={passwordHook.value} />
+                            </Tiny>
                             <InputText
                                 mb
                                 {...passwordCheckHook}

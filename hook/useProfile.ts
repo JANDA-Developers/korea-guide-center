@@ -38,6 +38,7 @@ import { useGlobalInput } from "./useGlobalInput";
 import { usePolicyCheckers } from "./usePolicyCheckers";
 import { useSingleUpload } from "./useUpload";
 import { useDuplicateCheck, useSignUp, useUserUpdate } from "./useUser";
+import { isPassword } from "../utils/validation";
 
 type profileRole = "GuideProfile" | "BookerProfile" | "JoinGuide" | "SignUp";
 
@@ -262,18 +263,18 @@ export const useProfile = (role: profileRole) => {
             },
             {
                 value: bankImgHook.uri,
-                failMsg: "통장사진을 첨부 부탁드립니다",
+                failMsg: "통장사진 첨부 부탁드립니다",
                 id: "BankImgInput",
                 skip: !isGuideUpdate,
             },
             {
                 value: nameHook.value,
-                failMsg: "이름값 필수 입력 부탁드립니다",
+                failMsg: "이름 입력 부탁드립니다",
                 id: "NameInput",
             },
             {
                 value: nickNameHook.value,
-                failMsg: "닉네임값 필수 입력 부탁드립니다",
+                failMsg: "닉네임 입력 부탁드립니다",
                 id: "NickNameInput",
                 skip: !isGuideUpdate,
             },
@@ -285,7 +286,7 @@ export const useProfile = (role: profileRole) => {
             },
             {
                 value: isOauthProfiling || emailDuplicateChecked,
-                failMsg: "이메일 중복체크 해주세요.",
+                failMsg: "이메일 중복체크 부탁드립니다.",
                 id: "EmailInput",
                 skip: !isSingUp,
             },
@@ -302,20 +303,18 @@ export const useProfile = (role: profileRole) => {
             },
             {
                 value: !isEmpty(regionIds),
-                failMsg: "활동지역 필수 선택 부탁드립니다",
+                failMsg: "활동지역 선택 부탁드립니다",
                 id: "PhoneNumberInput",
                 skip: !isGuideUpdate,
             },
             {
-                value: isOauthProfiling || passwordHook.value.length > 7,
-                failMsg: "올바른 패스워드가 아닙니다",
+                value: isPassword(passwordHook.value),
+                failMsg: "올바른 비밀번호가 아닙니다",
                 id: "PasswordInput",
                 skip: !isSingUp,
             },
             {
-                value:
-                    isOauthProfiling ||
-                    passwordCheckHook.value === passwordHook.value,
+                value: passwordCheckHook.value === passwordHook.value,
                 failMsg: "비밀번호가 일치하지 않습니다",
                 id: "PasswordInput",
                 skip: !isSingUp,
@@ -400,8 +399,11 @@ export const useProfile = (role: profileRole) => {
                 if (isOauthProfiling) {
                     toast.success(s("wellcometxt"));
                     router.push(Paths.locationalGuide);
-                }
-                toast.success(profileUpdateCompleteMessage);
+                } else if (!isPassword(passwordHook.value))
+                    toast.warn("올바른 비밀번호를 입력해주세요.");
+                else if (!(passwordCheckHook.value === passwordHook.value))
+                    toast.warn("비밀번호가 일치하지 않습니다.");
+                else toast.success(profileUpdateCompleteMessage);
             });
         }
     };
