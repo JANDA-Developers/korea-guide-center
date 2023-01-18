@@ -10,14 +10,12 @@ import {
     ProductsGroupRenders,
     ProductViewCardsWithApi,
     KPOPBestProductList,
-    PopularProductList,
 } from "../component/productViewCard/ProductViewCards";
 import { ProductViewCardsWithHorizenCalendar } from "../component/productViewCard/ProductViewCardsWithHorizenCalendar";
 import {
     BestProductViewsLineHeader,
     KPOPBestProductViewsLineHeader,
     NewstProductViewsLineHeader,
-    PopularProductViewsLineHeader,
 } from "../component/productViewCard/ProductViewsLineHeader";
 import { AppContext } from "../context/context";
 import { useSortBanner } from "../page/homepage/hook/useSortBanner";
