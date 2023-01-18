@@ -2,6 +2,7 @@
 
 import { Flex, isEmpty } from "@janda-com/front";
 import classNames from "classnames";
+import { useRouter } from "next/router";
 import { PropsWithChildren, useContext, useLayoutEffect, useState } from "react";
 import { useResizeDetector } from "react-resize-detector";
 import { AppContext } from "../../context/context";
@@ -15,6 +16,7 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
     wrap,
     empty,
 }: PropsWithChildren<IHorizenGriderProp<T>>) => {
+    const { push } = useRouter()
     const context = useContext(AppContext);
     const { s, l } = context;
     const [_align, _setAlign] = useState<number | null>(null);
@@ -74,7 +76,7 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
                     <button
                         className="detailNavCard__jdButtonWidth4"
                         onClick={() => {
-                            // handleToChatRoomOrCreate();
+                            push(`/guides`)
                         }}
                     >
                         {s("seeMore")}
