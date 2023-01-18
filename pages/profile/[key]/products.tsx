@@ -44,8 +44,6 @@ interface IProp {}
 export const Products: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
     const router = useRouter();
-    const { s, catMap, l } = useContext(AppContext);
-    const [reload, setReload] = useState<boolean>(false);
 
     const productListHook = useProductList(
         {
@@ -60,18 +58,12 @@ export const Products: React.FC<IProp> = () => {
         }
     );
     const {
-        sort,
-        setSort,
         pageInfo,
         paginatorHook,
         items: products,
         getLoading,
         networkStatus,
     } = productListHook;
-
-    useEffect(() => {
-        console.log("products", products);
-    }, [products]);
 
     if (networkStatus === 1) return null;
     return (

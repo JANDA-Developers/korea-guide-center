@@ -183,6 +183,11 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             <div className="guideProfile__viewTours">
                                 <ProductViewsLineHeader
                                     title={s("viewGuideTours")}
+                                    onSeeMore={() => {
+                                        router.push(
+                                            `${router.query.key}/products`
+                                        );
+                                    }}
                                 />
                             </div>
                             <ProductViewCardsWithApi
