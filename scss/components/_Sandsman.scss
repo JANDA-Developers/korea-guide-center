@@ -2764,6 +2764,7 @@ body:not(.no-hover) .wrap-cat > a:focus {
   width: 100%;
 }
 .owl-carousel .owl-stage {
+  
   position: relative;
   -ms-touch-action: pan-Y;
 }
@@ -2795,6 +2796,7 @@ body:not(.no-hover) .wrap-cat > a:focus {
   -o-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
+  
 }
 .owl-carousel .owl-item img {
   display: block;
@@ -3236,7 +3238,7 @@ body:not(.no-hover) .wrap-cat > a:focus {
   color: #db1a1c;
 }
 .owl-carousel .owl-nav .owl-prev {
-  left: -40px;
+  left: -80px;
   // 원래 -80px;
 }
 @media screen and (max-width: 1280px) {
@@ -3250,8 +3252,8 @@ body:not(.no-hover) .wrap-cat > a:focus {
   }
 }
 .owl-carousel .owl-nav .owl-next {
-  right: -40px;
-  // 원래 -80px; 였음
+  right: -80px;
+  // 원래 -80px;
 }
 @media screen and (max-width: 1280px) {
   .owl-carousel .owl-nav .owl-next {
@@ -25609,6 +25611,7 @@ body:not(.no-hover) .bloc-slider-city .owl-carousel .item a:focus figure img {
 .bloc-slider-tours {
   overflow: hidden;
   padding: 20px 0 80px;
+  width: 100%;
 }
 .bloc-slider-tours .txt-intro {
   position: relative;
@@ -25768,6 +25771,7 @@ body:not(.no-hover) .bloc-slider-city .owl-carousel .item a:focus figure img {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  
 }
 .bloc-slider-tours .owl-tours .owl-stage-outer .owl-stage .item {
   height: 100%;

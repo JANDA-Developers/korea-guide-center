@@ -7,10 +7,10 @@ import { AppContext } from "../../context/context";
 import { Flangs } from "../../types/api";
 import { filterVisibleProduct } from "../../utils/product";
 import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
-import { ProductViewCardsWithApi2 } from "../productViewCard/ProductViewCards";
 import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
 import { LANGUAGES } from "../../types/api";
 import { Badges2 } from "../statusBadges/StatusBadges";
+import { ProductViewCardsWithApi } from "../productViewCard/ProductViewCards";
 
 function Info({ item }: any) {
     const router = useRouter();
@@ -84,7 +84,7 @@ function Info({ item }: any) {
                     <div style={{ marginTop: "1vh" }}>
                         <ProductViewsLineHeader title={s("guideTours")} />
                         <JDhorizen margin={2} />
-                        <ProductViewCardsWithApi2
+                        <ProductViewCardsWithApi
                             queryParam={{
                                 fixingFilter: {
                                     guideId__eq: item._id,
