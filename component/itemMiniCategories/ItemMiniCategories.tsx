@@ -40,6 +40,7 @@ export const ItemMiniCategoriesLinear: React.FC<IProp> = () => {
     );
 };
 
+// 상단에 카테고리 나오는 부분 (로컬투어 뭐 이런거)
 export const ItemMiniCategoriesGrid: React.FC<IProp> = () => {
     const router = useRouter();
     const { catMap, s, l } = useContext(AppContext);
@@ -52,14 +53,19 @@ export const ItemMiniCategoriesGrid: React.FC<IProp> = () => {
             })
         );
     };
+
     return (
         <Flex className="ItemMiniCategories" wrap oneone>
             {catMap.ITEM_SMALL.map((miniCat) => (
                 <JDbutton
-                    className="ItemMiniCategories__button"
+                    style={{
+                        borderRadius: "0px",
+                        border: "1px solid rgba(0,0,0,0.6)",
+                        fontWeight: 300,
+                    }}
                     mode="flat"
                     onClick={handleCatFilter(miniCat)}
-                    thema="grey1"
+                    thema="white"
                     mr
                     mb
                     key={miniCat._id + "ItemMiniCategories"}

@@ -3,7 +3,7 @@ import { AppContext } from "../../../../context/context";
 import { Paths } from "../../../../pages/index[depre]";
 
 interface NewestTourItemProps {
-    _id: string;
+    _id?: string;
     thumbNailUrl: string;
     title: any;
     description: any;

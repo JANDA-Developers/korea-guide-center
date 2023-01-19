@@ -1,6 +1,7 @@
 import { Flex, isEmpty, JDalign } from "@janda-com/front";
 import { TElements } from "@janda-com/front/dist/types/interface";
 import classNames from "classnames";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import React, { useLayoutEffect } from "react";
 import { useState } from "react";
@@ -26,12 +27,14 @@ import { groupProductMap } from "../../utils/categoryMap";
 import { genrateOption } from "../../utils/query";
 import { mapRegion } from "../koreaMap/KoreaData";
 import { AnimationOnScroll } from "../scrollAnimation/ScrollAnimation";
+import TourCardItem from "../TourCard/TourCardItem";
 import {
     IProductViewCard,
     ProductViewCard,
     ProductViewCard2,
 } from "./ProductViewCard";
 import { ProductViewsLineHeader } from "./ProductViewsLineHeader";
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
 interface IProp extends Partial<IProductViewCard> {
     align?: 1 | 2 | 3 | 4 | "auto" | "wrap";
@@ -75,40 +78,45 @@ export const ProductViewCards: React.FC<IProp> = ({
         }
     }, [width]);
 
+    const options = {
+        margin: 20,
+        items: 4,
+        dots: false,
+        nav: true,
+        navText: [
+            `<span><svg width="50px" height="100px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+      </svg></span>`,
+            `<span><svg width="50px" height="100px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+      </svg></span>`,
+        ],
+    };
+
+    // 카드
     return (
-        <div ref={ref}>
-            <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
-                <Flex oneone className={className} wrap={wrap}>
+        <div ref={ref} className="bloc-slider-tours grouped-tours">
+            <div className="content-wrapper bloc-medium">
+                <OwlCarousel
+                    id="tab-AllTours"
+                    className="owl-theme owl-tours owl-opacify active"
+                    {...options}
+                >
                     {isEmpty(products) && (
                         <div className="ProductViewCards__empty">{empty}</div>
                     )}
                     {products.map((product) => (
-                        <ProductViewCard
-                            mb={wrap ? "normal" : undefined}
+                        <TourCardItem
                             onClick={() => {
                                 onClickProduct?.(product);
                             }}
                             key={product._id + uniqKey}
-                            className="ProductViewCards__card"
-                            mr
                             {...props}
                             product={product}
                         />
                     ))}
-                    <JDalign
-                        mr
-                        className="ProductViewCards__card ProductViewCards__card--placeholder"
-                    />
-                    <JDalign
-                        mr
-                        className="ProductViewCards__card ProductViewCards__card--placeholder"
-                    />
-                    <JDalign
-                        mr
-                        className="ProductViewCards__card ProductViewCards__card--placeholder"
-                    />
-                </Flex>
-            </AnimationOnScroll>
+                </OwlCarousel>
+            </div>
         </div>
     );
 };
@@ -217,7 +225,6 @@ export const ProductViewCardsWithApi: React.FC<IProductViewCardsWithApi> = ({
         queryControl
     );
 
-
     if (isEmpty(products)) return null;
     return (
         <div>
@@ -298,6 +305,7 @@ export const NewsProductList: IProductViewCardsWithApi = {
 // 코리아가이드 추천상품
 //
 
+// 상품전시
 export const ProductsGroupRenders: React.FC = () => {
     const { groupsNonIndex, l } = useContext(AppContext);
 
@@ -324,11 +332,18 @@ export const ProductsGroupRenders: React.FC = () => {
                         description={l(gp.desc)}
                         onSeeMore={() => {
                             if (index == 0) {
-                                router.push(`/product/popularTour?title=${gp.label[locale as Locales]}`)
+                                router.push(
+                                    `/product/popularTour?title=${
+                                        gp.label[locale as Locales]
+                                    }`
+                                );
                             } else {
-                                router.push(`/product/localTour?title=${gp.label[locale as Locales]}`)
+                                router.push(
+                                    `/product/localTour?title=${
+                                        gp.label[locale as Locales]
+                                    }`
+                                );
                             }
-
                         }}
                     />
                     <ProductViewCards products={gp.products} />
