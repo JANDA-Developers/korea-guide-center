@@ -1599,6 +1599,12 @@ const utils_message = {
         en: `see more`,
         chi: `查看更多`,
     },
+    seeMoreGuides: {
+        ko: "전체 가이드 보기",
+        ja: "全体ガイドを見る",
+        en: "View the full guide",
+        chi: "查看完整向导",
+    },
     partyIsOvered: {
         ko: "모집이 마감되었어요.",
         ja: `募集が終了しました.`,
