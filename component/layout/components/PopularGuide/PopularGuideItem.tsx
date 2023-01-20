@@ -40,7 +40,15 @@ const PopularGuideItem = ({
                 />
             </figure>
             <div className="content">
-                <span className="category">{role}</span>
+                <span
+                    className="category"
+                    style={{
+                        borderColor: "#D15C2E",
+                        color: "#D15C2E",
+                    }}
+                >
+                    {role}
+                </span>
                 <a>
                     <h3>{name}</h3>
                 </a>
