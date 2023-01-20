@@ -30,10 +30,6 @@ const NewestTourTab = () => {
     const { items: products } = useProductList({
         initialViewCount: 8,
         ...NewsProductList.queryParam,
-        fixingFilter: {
-            ...NewsProductList.queryParam?.fixingFilter,
-            ...commonProductFilter,
-        },
     });
 
     if (isEmpty(products)) return null;

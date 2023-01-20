@@ -208,7 +208,11 @@ export const ProductsGroupRenders: React.FC = () => {
     const evneryGroupProducts = groupsNonIndex?.flatMap(
         (group) => group.members
     );
+    console.log(evneryGroupProducts);
     const { items: products } = useProductList({
+        initialFilter: {
+            _id__in: evneryGroupProducts,
+        },
         fixingFilter: {
             _id__in: evneryGroupProducts,
         },
