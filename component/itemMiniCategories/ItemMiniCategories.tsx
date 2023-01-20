@@ -25,10 +25,15 @@ export const ItemMiniCategoriesLinear: React.FC<IProp> = () => {
             <ScrollBox scrollSize="small">
                 {catMap.ITEM_SMALL.map((miniCat) => (
                     <JDbutton
+                        style={{
+                            borderRadius: "0px",
+                            border: "1px solid rgba(0,0,0,0.6)",
+                            fontWeight: 300,
+                        }}
                         className="itemMiniCategoriesLinear__button"
                         mode="flat"
                         onClick={handleCatFilter(miniCat)}
-                        thema="grey1"
+                        thema="white"
                         mr
                         mb
                     >
