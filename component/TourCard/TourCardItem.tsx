@@ -83,8 +83,8 @@ const TourCardItem: React.FC<IProductViewCard> = ({
                         className="category"
                         style={{
                             marginBottom: "0px",
-                            borderColor: "gray",
-                            color: "gray",
+                            borderColor: "#D15C2E",
+                            color: "#D15C2E",
                         }}
                     >
                         {l(category?.label)} · {l(region?.label)}

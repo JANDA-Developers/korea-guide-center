@@ -8,6 +8,8 @@ interface NewestTourItemProps {
     title: any;
     description: any;
     price: number;
+    category: string;
+    regionLabel: string;
 }
 
 const NewestTourItem = ({
@@ -16,6 +18,8 @@ const NewestTourItem = ({
     title,
     description,
     price,
+    category,
+    regionLabel,
 }: NewestTourItemProps) => {
     const { s, l, locale } = useContext(AppContext);
     const priceToString = (price: number) => {
@@ -43,7 +47,15 @@ const NewestTourItem = ({
                 />
             </figure>
             <div className="content">
-                {/* <span className="category">Free Tour - Tips-based</span> */}
+                <span
+                    className="category"
+                    style={{
+                        borderColor: "#D15C2E",
+                        color: "#D15C2E",
+                    }}
+                >
+                    {category + "·" + regionLabel}
+                </span>
                 <a>
                     <h3>{l(title)}</h3>
                 </a>

@@ -48,6 +48,8 @@ const NewestTourTab = () => {
                         thumbNailUrl={item.thumbNail?.uri!}
                         description={item.shortDecsription!}
                         price={item.priceAdult!}
+                        category={l(item.category?.label!)}
+                        regionLabel={l(item.region?.label!)}
                     />
                 );
             })}
