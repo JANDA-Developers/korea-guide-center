@@ -1,37 +1,40 @@
+import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import { AppContext } from "../../../../context/context";
+import { Paths } from "../../../../pages/index[depre]";
+import { mapRegion } from "../../../koreaMap/KoreaData";
+import { ILocalGuideSliderItem } from "../../../LocalGuideAndPrivateTour/LocalGuideSliderItem";
 
 interface RegionalGuideItemProps {
-    title: string;
-    queryTitle: {
-        ko: string;
-        en: string;
-        ja: string;
-        chi: string;
-    };
-    imageUrl: string;
+    item: ILocalGuideSliderItem;
+    onSelectRegion: (region: mapRegion) => void;
+    region: mapRegion;
+    selectedRegion: string;
 }
 
 // 캐러셀에 들어가는 요소들
 const RegionalGuideItem = ({
-    title,
-    queryTitle,
-    imageUrl,
+    item,
+    onSelectRegion,
+    selectedRegion,
 }: RegionalGuideItemProps) => {
+    const router = useRouter();
     const { s, locale } = useContext(AppContext);
+    const handleSelectRegion = (region: any) => {
+        onSelectRegion(region);
+    };
 
     return (
         <div className="item">
             <a
                 onClick={() => {
-                    location.href = `/${locale}/cities/search?title=${
-                        queryTitle[locale! as "ko" | "en" | "ja" | "chi"]
-                    }`;
+                    handleSelectRegion(selectedRegion);
+                    router.push(Paths.locationalGuide);
                 }}
             >
                 <figure className="o80">
                     <img
-                        src={imageUrl}
+                        src={item.imageUrl}
                         data-src="https://www.neweuropetours.eu/wp-content/uploads/2018/08/thio-sandemans-amsterdam-tours-240x260.jpg"
                         alt="Beautiful Cities"
                         width="240"
@@ -40,7 +43,7 @@ const RegionalGuideItem = ({
                     />
                 </figure>
                 <div className="caption">
-                    <h3>{title}</h3>
+                    <h3>{item.title}</h3>
                 </div>
                 <div className="tours-available">
                     <span>{s("LookAround")}</span>

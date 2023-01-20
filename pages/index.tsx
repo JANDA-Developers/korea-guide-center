@@ -63,7 +63,6 @@ const TourLayout = () => {
                 <NewestTour />
                 <AboutSection />
                 <RegionalGuide />
-
                 <PopularGuide />
                 <BecomeGuide />
                 <Social />
