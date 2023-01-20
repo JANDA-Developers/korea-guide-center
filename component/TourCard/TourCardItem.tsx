@@ -121,6 +121,8 @@ const TourCardItem: React.FC<IProductViewCard> = ({
                     className="price"
                     style={{
                         position: "relative",
+                        color: "black",
+                        fontWeight: 500,
                     }}
                 >
                     ₩{priceToString(product?.priceAdult!)}
