@@ -98,7 +98,11 @@ export const ProductViewCards: React.FC<IProp> = ({
     // 카드
     return (
         <div ref={ref} className="bloc-slider-tours grouped-tours">
-            <div className="content-wrapper bloc-medium">
+            <AnimationOnScroll
+                animateOnce
+                animateIn="animate__fadeIn"
+                className="content-wrapper bloc-medium"
+            >
                 <OwlCarousel
                     id="tab-AllTours"
                     className="owl-theme owl-tours owl-opacify active"
@@ -118,7 +122,7 @@ export const ProductViewCards: React.FC<IProp> = ({
                         />
                     ))}
                 </OwlCarousel>
-            </div>
+            </AnimationOnScroll>
         </div>
     );
 };
