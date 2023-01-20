@@ -20,7 +20,7 @@
             transition: 0.5s;
             filter: grayscale(0);
         }
-        
+
         .productViewCard__thumbImg {
             transition: 4s;
             transform: scale(1.07);
@@ -83,7 +83,7 @@
         // filter: grayscale(1);
         font-size: 1.1rem;
         position: absolute;
-        bottom: space(0);
+        bottom: space(2);
         right: space(1);
     }
 }

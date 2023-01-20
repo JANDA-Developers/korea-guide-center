@@ -12,6 +12,10 @@ interface NewestTourItemProps {
     regionLabel: string;
 }
 
+export const priceToString = (price: number) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
 const NewestTourItem = ({
     _id,
     thumbNailUrl,
@@ -22,9 +26,6 @@ const NewestTourItem = ({
     regionLabel,
 }: NewestTourItemProps) => {
     const { s, l, locale } = useContext(AppContext);
-    const priceToString = (price: number) => {
-        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    };
 
     return (
         <div

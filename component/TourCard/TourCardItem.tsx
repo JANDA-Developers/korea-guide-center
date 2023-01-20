@@ -94,13 +94,18 @@ const TourCardItem: React.FC<IProductViewCard> = ({
                     </Small>
                     {/* <Tiny color="grey3">({reviewCount})</Tiny> */}
                 </div>
-                <a>
+                <a
+                    style={{
+                        display: "inline-block",
+                        marginBottom: "20px",
+                        width: "100%",
+                    }}
+                >
                     <h3
                         style={{
                             color: "black",
                         }}
                     >
-                        {" "}
                         {l(product.title)}
                     </h3>
                 </a>
@@ -112,10 +117,29 @@ const TourCardItem: React.FC<IProductViewCard> = ({
                 </p> */}
             </div>
             <div className="info-bottom">
-                <span className="btn gtm-event-info-booking">
-                    ₩ {autoComma(product.priceAdult || 0)}
+                <div
+                    className="price"
+                    style={{
+                        position: "relative",
+                    }}
+                >
+                    ₩{priceToString(product?.priceAdult!)}
+                </div>
+                <span
+                    className="btn gtm-event-info-booking"
+                    style={{
+                        boxSizing: "border-box",
+                        width: "100%",
+                    }}
+                >
+                    {s("AboutAndSchedule")}
                 </span>
-                <div className="productViewCard__guide">
+                <div
+                    className="productViewCard__guide"
+                    style={{
+                        bottom: "3.2rem",
+                    }}
+                >
                     <Tip message={guideNickName || ""}>
                         <GuideCircle
                             className="productViewCard__guideCircle"
