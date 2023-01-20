@@ -83,6 +83,8 @@ const TourCardItem: React.FC<IProductViewCard> = ({
                         className="category"
                         style={{
                             marginBottom: "0px",
+                            borderColor: "gray",
+                            color: "gray",
                         }}
                     >
                         {l(category?.label)} · {l(region?.label)}
@@ -93,7 +95,14 @@ const TourCardItem: React.FC<IProductViewCard> = ({
                     {/* <Tiny color="grey3">({reviewCount})</Tiny> */}
                 </div>
                 <a>
-                    <h3> {l(product.title)}</h3>
+                    <h3
+                        style={{
+                            color: "black",
+                        }}
+                    >
+                        {" "}
+                        {l(product.title)}
+                    </h3>
                 </a>
                 {/* <p>
                     {" "}
