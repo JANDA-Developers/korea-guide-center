@@ -15,6 +15,7 @@ import Social from "../component/layout/components/Social/Social";
 import BookLayout from "../component/layout/BookLayout";
 import Head from "next/head";
 import PopularGuide from "../component/layout/components/PopularGuide/PopularGuide";
+import RegionalGuide from "../component/layout/components/RegionalGuide/RegionalGuide";
 
 const TourLayout = () => {
     const { s } = useContext(AppContext);
@@ -61,6 +62,8 @@ const TourLayout = () => {
                 <MiddleText />
                 <NewestTour />
                 <AboutSection />
+                <RegionalGuide />
+
                 <PopularGuide />
                 <BecomeGuide />
                 <Social />

@@ -25,6 +25,9 @@ const NewestTourItem = ({
     return (
         <div
             className="item bloc-card free"
+            style={{
+                position: "relative",
+            }}
             data-linkall="a"
             onClick={() => {
                 location.href = `${locale}/${Paths.productDetailView}/${_id}`;
@@ -45,17 +48,29 @@ const NewestTourItem = ({
                     <h3>{l(title)}</h3>
                 </a>
                 <p>
-                    {" "}
                     {l(description).length >= 70
                         ? l(description).slice(0, 70) + "..."
                         : l(description)}
                 </p>
             </div>
             <div className="info-bottom">
-                <span className="btn gtm-event-info-booking">
+                <div
+                    className="price"
+                    style={{
+                        position: "relative",
+                    }}
+                >
+                    ₩{priceToString(price)}
+                </div>
+                <span
+                    className="btn gtm-event-info-booking"
+                    style={{
+                        boxSizing: "border-box",
+                        width: "100%",
+                    }}
+                >
                     {s("AboutAndSchedule")}
                 </span>
-                <span className="price">₩{priceToString(price)}</span>
             </div>
         </div>
     );

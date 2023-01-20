@@ -52,7 +52,15 @@ const PopularGuideItem = ({
                 </p>
             </div>
             <div className="info-bottom">
-                <span className="btn gtm-event-info-booking">Profile</span>
+                <span
+                    className="btn gtm-event-info-booking"
+                    style={{
+                        boxSizing: "border-box",
+                        width: "100%",
+                    }}
+                >
+                    Profile
+                </span>
                 {/* <span className="price">Free</span> */}
             </div>
         </div>
