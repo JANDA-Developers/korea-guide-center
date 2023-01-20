@@ -17,7 +17,8 @@ a {
     .tour__container {
         height: 30vh !important;
     }
-    .tour__searchBar{
+
+    .tour__searchBar {
         display: none !important;
     }
 
@@ -26,31 +27,34 @@ a {
     }
 
     .tour__sliderText {
-        font-size:20px !important;
+        font-size: 20px !important;
         margin-top: 5rem !important;
     }
 
     .tour__sectionTitle {
-     font-size: 20px !important;
+        font-size: 20px !important;
     }
 
     .slider__ShortSliderItems {
         width: 12.875rem !important;
         height: 14.875rem !important;
         margin-right: 1.25rem !important;
-        padding : 0px !important
+        padding: 0px !important
     }
+
     .slider__ShortSliderContainer {
         width: 98vw !important;
         height: 14.875rem !important;
     }
+
     .slider__ShortSliderContentArea {
         display: flex !important;
     }
+
     .slider__LongSliderContentArea {
         display: flex !important;
     }
-    
+
     .slider__LongSliderItems {
         margin-right: 1.25rem !important;
         width: 12rem !important;
@@ -63,8 +67,7 @@ a {
 
     .slider__TourSliderItemImage {
         width: 12rem !important;
-        height: 13rem !important
-        ;
+        height: 13rem !important;
     }
 
     .slider__GuideSliderItemImage {
@@ -81,7 +84,7 @@ a {
     }
 
     .slider__TourSliderItemTextAndDesc p {
-        font-size : 0.9rem;
+        font-size: 0.9rem;
     }
 
     .slider__GuideBadgeAndNameContainer {
@@ -112,7 +115,7 @@ a {
     }
 
     .slider__TourSliderItemPrice {
-        font-size : 1rem;
+        font-size: 1rem;
     }
 
     .slider__RecommendGuideSectionTitle {
@@ -122,16 +125,16 @@ a {
     .aboutUs__Container {
         height: auto !important;
     }
-    
+
     .aboutUs__imageContainer {
         position: relative !important;
         flex-direction: column !important;
         align-items: center !important;
-        top : 0 !important
+        top: 0 !important
     }
 
     .aboutUs__imageFirst {
-        width:  90% !important;
+        width: 90% !important;
         height: 250px !important;
         margin-right: 0px !important;
         margin-bottom: 1.25rem !important;
@@ -189,12 +192,13 @@ a {
     }
 
     .findGuide__Container {
-    flex-direction: column !important;
+        flex-direction: column !important;
     }
 
     .findGuide__imageSliderContainer {
         width: 100% !important;
     }
+
     .findGuide__textContainer {
         width: 100% !important;
 
@@ -215,7 +219,7 @@ a {
         margin-bottom: 50px !important;
     }
 
-    .sns__insta{
+    .sns__insta {
         width: 100% !important;
         padding: 0px 10px !important;
     }
@@ -231,7 +235,7 @@ a {
         height: 80vh !important;
     }
 
-    .tour__searchBar{
+    .tour__searchBar {
         display: none !important;
     }
 
@@ -241,29 +245,34 @@ a {
     }
 
     .tour__sliderText {
-        font-size:40px !important;
+        font-size: 40px !important;
         margin-top: 5rem !important;
     }
 
     .tour__sectionTitle {
-     font-size: 20px !important;
+        font-size: 20px !important;
     }
+
     .slider__ShortSliderRightArrowContainer {
         width: 4.875rem !important;
     }
+
     .slider__ShortSliderLeftArrowContainer {
         width: 4.875rem !important;
     }
+
     .slider__ShortSliderItems {
         width: 12.875rem !important;
         height: 14.875rem !important;
-        padding : 0px !important;
+        padding: 0px !important;
         margin-right: 1.25rem !important;
     }
+
     .slider__ShortSliderContainer {
         width: 98vw !important;
         height: 14.875rem !important;
     }
+
     .slider__ShortSliderContentArea {
         display: flex !important;
     }
@@ -271,12 +280,15 @@ a {
     .slider__LongSliderLeftArrowContainer {
         width: 4.875rem !important;
     }
-    .slider__LongSliderRightArrowContainer{
+
+    .slider__LongSliderRightArrowContainer {
         width: 4.875rem !important;
     }
+
     .slider__LongSliderContentArea {
         display: flex !important;
     }
+
     .slider__LongSliderItems {
         margin-right: 1.25rem !important;
     }
@@ -296,7 +308,7 @@ a {
     .aboutUs__Container {
         height: auto !important;
     }
-    
+
     .aboutUs__imageContainer {
         position: relative !important;
         flex-direction: column !important;
@@ -305,7 +317,7 @@ a {
     }
 
     .aboutUs__imageFirst {
-        width:  50% !important;
+        width: 50% !important;
         height: 300px !important;
         margin-right: 0px !important;
         margin-bottom: 1.25rem !important;
@@ -349,12 +361,13 @@ a {
     }
 
     .findGuide__Container {
-    flex-direction: column !important;
+        flex-direction: column !important;
     }
 
     .findGuide__imageSliderContainer {
         width: 100% !important;
     }
+
     .findGuide__textContainer {
         width: 100% !important;
 
@@ -375,7 +388,7 @@ a {
         margin-bottom: 50px !important;
     }
 
-    .sns__insta{
+    .sns__insta {
         width: 100% !important;
         padding: 0px 10px !important;
     }
@@ -729,6 +742,7 @@ a {
         border-radius: 10px;
         overflow: hidden;
         padding: 0 10px;
+
         img {
             flex-shrink: 0;
             min-width: 100%;
@@ -758,7 +772,7 @@ a {
         display: flex;
         overflow-x: hidden;
         height: 19.875rem;
-        width: 70vw; 
+        width: 70vw;
     }
 
     &__ShortSliderContentArea {
@@ -956,8 +970,7 @@ a {
         place-items: center;
         overflow: hidden;
         padding-bottom: 5px;
-        padding : 5px 0px
-
+        padding: 5px 0px
     }
 
     &__LongSliderContainer {
@@ -965,7 +978,7 @@ a {
         display: flex;
         overflow-x: hidden;
         height: 32.875rem;
-        width: 70vw; 
+        width: 70vw;
         box-sizing: border-box;
     }
 
@@ -1038,16 +1051,16 @@ a {
 
         &::-webkit-input-placeholder {
             /* WebKit, Blink, Edge */
-            color: $grey-level4  !important;
+            color: $grey-level4 !important;
             font-size: $typho-normal;
         }
 
         &:focus {
-            color: $primary-color  !important;
+            color: $primary-color !important;
 
             &+.JDinput-iconWrap {
                 svg.JDicon {
-                    color: $primary-color  !important;
+                    color: $primary-color !important;
                 }
             }
 
@@ -1055,7 +1068,7 @@ a {
         }
 
         &+.JDinput-iconWrap .JDicon {
-            color: $grey-level4  !important;
+            color: $grey-level4 !important;
 
             path,
             line {
@@ -1313,4 +1326,8 @@ a {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.bloc-slider-tours .owl-carousel {
+    margin-left: -10px;
 }

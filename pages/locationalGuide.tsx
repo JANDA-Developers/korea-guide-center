@@ -5,7 +5,7 @@ import RegionTopImage from "../component/RegionTopImage/RegionTopImage";
 import RegionGuides from "../component/RegionGuides/RegionGuides";
 import Head from "next/head";
 
-interface IProp {}
+interface IProp { }
 
 export const LocationalGuide: React.FC<IProp> = () => {
     const globalKoreaHook = useGlobalKoreaMap();

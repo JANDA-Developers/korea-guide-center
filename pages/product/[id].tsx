@@ -24,15 +24,11 @@ import { DetailHeader } from "../../component/productDetailComponents/DetailHead
 import { useProductFindById } from "../../hook/useProduct";
 import { useTourList } from "../../hook/useTour";
 import { useState } from "react";
-import { Fproduct, Ftour, SettlementStatus, TourStatus } from "../../types/api";
+import { Fproduct, Ftour, SettlementStatus, TourStatus, _ProductFilter } from "../../types/api";
 import { useEffect } from "react";
 import { DetailPeopleSelecter } from "../../component/productDetailComponents/DetailPeopleSelecter";
 import { usePeopleCnt } from "../../hook/usePeopleCnt";
 import { ReviewBoxsWithApi } from "../../component/reviewBox/ReviewBoxs";
-import {
-    ProductViewCardsWithApi,
-    regionIn,
-} from "../../component/productViewCard/ProductViewCards";
 import { DetailPriceViewer } from "../../component/productDetailComponents/DetailPriceViwer";
 import { BookLayout } from "../../component/layout/BookLayout";
 import { DetailNavCard } from "../../component/productDetailComponents/DetailNavCard";
@@ -64,8 +60,8 @@ import { merge } from "../../utils/merge";
 import { cloneDeep } from "lodash";
 import RenderIfVisible from "../../component/renderIfVisible/RenderIfVisible";
 import LocationMarker from "./LocationMarker";
-import dayjs from "dayjs";
 import { getTourSummary } from "../../page/tour/components/TourTable";
+import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCardsWithApi";
 
 export interface IProductDetailQuery {
     tourId?: string;
@@ -80,6 +76,10 @@ interface IProp {
     mode?: "preview";
     id?: string;
 }
+
+export const regionIn = (regionId: string): _ProductFilter => ({
+    region__id__eq: regionId,
+});
 
 export const ProductDetail: React.FC<IProp> = ({
     id: propId,

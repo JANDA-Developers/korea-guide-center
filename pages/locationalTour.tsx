@@ -5,12 +5,12 @@ import { useContext } from "react";
 import { GuideMovieCardsWithApi } from "../component/guideMovieClicp/GuideMovieClipList";
 import { KoreaMap } from "../component/koreaMap/KoreaMap";
 import { BookLayout } from "../component/layout/BookLayout";
+import HyperRegionByProductViewCarsGroup from "../component/productViewCard/HyperRegionByProductViewCarsGroup";
 import {
     BestProductList,
-    HyperRegionByProductViewCarsGroup,
     NewsProductList,
-    ProductViewCardsWithApi,
 } from "../component/productViewCard/ProductViewCards";
+import { ProductViewCardsWithApi } from "../component/productViewCard/ProductViewCardsWithApi";
 import { ProductViewCardsWithHorizenCalendar } from "../component/productViewCard/ProductViewCardsWithHorizenCalendar";
 import {
     BestProductViewsLineHeader,
@@ -20,7 +20,7 @@ import { RegionDescriptionSecotr } from "../component/RegionDescriptionSector/Re
 import { AppContext } from "../context/context";
 import { useKoreaMap } from "../hook/useKoreaMap";
 
-interface IProp {}
+interface IProp { }
 
 export const LocationalGuide: React.FC<IProp> = () => {
     const { locale } = useRouter();

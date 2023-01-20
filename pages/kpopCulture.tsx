@@ -4,19 +4,14 @@ import { ItemMiniCategories } from "../component/itemMiniCategories/ItemMiniCate
 import { BookLayout } from "../component/layout/BookLayout";
 import {
     BestProductList,
-    NewsProductList,
-    ProductViewCardsWithApi,
 } from "../component/productViewCard/ProductViewCards";
+import { ProductViewCardsWithApi } from "../component/productViewCard/ProductViewCardsWithApi";
 import {
-    BestProductViewsLineHeader,
     KPOPBestProductViewsLineHeader,
-    KPOPNewestProductViewsLineHeader,
-    NewstProductViewsLineHeader,
 } from "../component/productViewCard/ProductViewsLineHeader";
-import { useKoreaMap } from "../hook/useKoreaMap";
 import { ProductType } from "../types/api";
 
-interface IProp {}
+interface IProp { }
 
 export const KPOPCulture: React.FC<IProp> = () => {
     const commonFilter = {

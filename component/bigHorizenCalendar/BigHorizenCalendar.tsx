@@ -57,7 +57,7 @@ export const BigHorizenCalendar: React.FC<IProp> = ({
                 icon="shortLeft"
             />
             <div ref={scrollWrapper} className="bigHorizenCalendar__daysWrap">
-                {dateArray.map((d) => {
+                {dateArray.map((d, index) => {
                     const isSelectedDay = selectedDay
                         ? isSameDate(selectedDay, d)
                         : false;
@@ -65,17 +65,16 @@ export const BigHorizenCalendar: React.FC<IProp> = ({
                     const hasTour = dates?.find((date) => isSameDate(d, date));
 
                     return (
-                        <Flex
+                        <Flex key={index.toString()}
                             onClick={() => {
                                 handleSelect?.(d);
                             }}
                             column
                             center
                             vCenter
-                            className={`bigHorizenCalendar__day ${
-                                isSelectedDay &&
+                            className={`bigHorizenCalendar__day ${isSelectedDay &&
                                 `bigHorizenCalendar__day--selected`
-                            } `}
+                                } `}
                         >
                             {hasTour && 1}
                             <Tiny color="grey2">

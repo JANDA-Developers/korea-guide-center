@@ -29,7 +29,6 @@ import {
 } from "../../component/productSorters/ProductSorters";
 import {
     ProductViewCards,
-    ProductViewCardsWithApi,
 } from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
@@ -41,11 +40,11 @@ import { EmptyInfo } from "../../atom/EmpyInfo";
 import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
 import {
     regionableData,
-    mapRegionArr,
     mapRegion2,
 } from "../../component/koreaMap/KoreaData";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "../../recoil/atoms";
+import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCardsWithApi";
 
 interface ISearchPageQuery {
     title?: string;
@@ -310,7 +309,6 @@ export const Search: React.FC<IProp> = () => {
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />
-
                                     <ProductViewCardsWithApi wrap />
                                 </div>
                             ) : null}

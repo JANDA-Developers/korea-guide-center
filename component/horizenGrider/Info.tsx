@@ -10,7 +10,7 @@ import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
 import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
 import { LANGUAGES } from "../../types/api";
 import { Badges2 } from "../statusBadges/StatusBadges";
-import { ProductViewCardsWithApi } from "../productViewCard/ProductViewCards";
+import { ProductViewCardsWithApi } from "../productViewCard/ProductViewCardsWithApi";
 
 function Info({ item }: any) {
     const router = useRouter();
@@ -81,18 +81,21 @@ function Info({ item }: any) {
                         (router.locale as LANGUAGES) || LANGUAGES.ko
                     )
                 ) && (
-                    <div style={{ marginTop: "1vh" }}>
-                        <ProductViewsLineHeader title={s("guideTours")} />
-                        <JDhorizen margin={2} />
-                        <ProductViewCardsWithApi
-                            queryParam={{
-                                fixingFilter: {
-                                    guideId__eq: item._id,
-                                },
-                            }}
-                        />
-                    </div>
-                )}
+                        <div style={{ marginTop: "1vh" }}>
+                            <ProductViewsLineHeader title={s("guideTours")} />
+                            <JDhorizen margin={2} />
+                            <ProductViewCardsWithApi
+                                width={280}
+                                count={3}
+                                margin={15}
+                                queryParam={{
+                                    fixingFilter: {
+                                        guideId__eq: item._id,
+                                    },
+                                }}
+                            />
+                        </div>
+                    )}
             </Flex>
         </Flex>
     );

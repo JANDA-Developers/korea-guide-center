@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import dayjs from "dayjs";
 import { BigHorizenCalendar } from "../bigHorizenCalendar/BigHorizenCalendar";
-import { ProductViewCardsWithApi } from "./ProductViewCards";
 import { ProductViewsLineHeader } from "./ProductViewsLineHeader";
 import { Empty } from "../../atom/Empty";
 import { AppContext } from "../../context/context";
+import { ProductViewCardsWithApi } from "./ProductViewCardsWithApi";
 
-interface IProp {}
+interface IProp { }
 
 export const ProductViewCardsWithHorizenCalendar: React.FC<IProp> = () => {
     const { s } = useContext(AppContext);

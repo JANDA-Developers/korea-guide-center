@@ -9,17 +9,15 @@ interface IProp extends Partial<IHorizenGriderProp<Fuser>> {
 
 const RegionGuidesBody: React.FC<IProp> = ({ guides, ...props }) => {
     return (
-        <>
-            <RegionGuidesBodyHorizonGrider
-                itemRedner={(item, props) => {
-                    return <GuideMovieClip2 user={item} {...props} />;
-                }}
-                items={guides}
-                align={"auto"}
-                wrap={props.align === "wrap"}
-                {...props}
-            />
-        </>
+        <RegionGuidesBodyHorizonGrider
+            itemRedner={(item, props) => {
+                return <GuideMovieClip2 user={item} {...props} />;
+            }}
+            items={guides}
+            align={"auto"}
+            wrap={props.align === "wrap"}
+            {...props}
+        />
     );
 };
 

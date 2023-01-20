@@ -7,7 +7,6 @@ import {
     JDbutton,
     JDcontainer,
     JDhorizen,
-    JDswitch,
     JDtypho,
     Mb,
     Mr,
@@ -20,7 +19,6 @@ import router, { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { Paths } from "../index[depre]";
-import { Empty } from "../../atom/Empty";
 import { GrandProductSearchFilter } from "../../component/grandProductSearchFilter/GrandProductSearchFilter";
 import Pagination from "../../component/pagination/Pagination";
 import {
@@ -32,17 +30,15 @@ import {
 } from "../../component/productSorters/ProductSorters";
 import {
     ProductViewCards,
-    ProductViewCardsWithApi,
 } from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
 import { updateURLParameters, UrlParam } from "../../utils/getUpdateUrlParam";
 import { ProductStatus, _ProductFilter, _ProductSort } from "../../types/api";
 import { ScrollBox } from "../../component/scrollBox/ScrollBox";
-import { InfoBox } from "../../component/infoBox/InfoBox";
-import { LinkText } from "../../component/link/Link";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
+import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCardsWithApi";
 
 interface ISearchPageQuery {
     title?: string;
@@ -302,7 +298,6 @@ export const Search: React.FC<IProp> = () => {
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />
-
                                     <ProductViewCardsWithApi wrap />
                                 </div>
                             ) : null}

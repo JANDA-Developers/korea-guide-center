@@ -7,9 +7,6 @@ import { BookLayout } from "../component/layout/BookLayout";
 import {
     BestProductList,
     NewsProductList,
-    ProductsGroupRenders,
-    ProductViewCardsWithApi,
-    KPOPBestProductList,
 } from "../component/productViewCard/ProductViewCards";
 import { ProductViewCardsWithHorizenCalendar } from "../component/productViewCard/ProductViewCardsWithHorizenCalendar";
 import {
@@ -20,10 +17,21 @@ import {
 import { AppContext } from "../context/context";
 import { useSortBanner } from "../page/homepage/hook/useSortBanner";
 import { FileTagManager } from "../utils/tagManager";
-import { ProductType } from "../types/api";
+import { ProductType, _ProductSort } from "../types/api";
 import Head from "next/head";
+import { IProductViewCardsWithApiProps, ProductViewCardsWithApi } from "../component/productViewCard/ProductViewCardsWithApi";
+import ProductsGroupRenders from "../component/productViewCard/ProductsGroupRenders";
 
-interface IProp {}
+const KPOPBestProductList: IProductViewCardsWithApiProps = {
+    queryParam: {
+        initialSort: [
+            _ProductSort.rating__desc,
+            _ProductSort.reviewCount__desc,
+        ],
+    },
+};
+
+interface IProp { }
 
 export const LocationalGuide: React.FC<IProp> = () => {
     const { locale } = useRouter();

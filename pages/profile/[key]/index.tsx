@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import { JDicon } from "../../../component/icons/Icons";
 import BookLayout from "../../../component/layout/BookLayout";
-import { ProductViewCardsWithApi } from "../../../component/productViewCard/ProductViewCards";
 import { ProductViewsLineHeader } from "../../../component/productViewCard/ProductViewsLineHeader";
 import { AppContext } from "../../../context/context";
 import { useStartChat } from "../../../hook/useChatRoom";
@@ -13,6 +12,7 @@ import { DEFAULT_PROFILE_IMG } from "../../../types/const";
 import { filterVisibleProduct } from "../../../utils/product";
 import { Badges } from "../../../component/statusBadges/StatusBadges";
 import { Video } from "../../../component/video/Video";
+import { ProductViewCardsWithApi } from "../../../component/productViewCard/ProductViewCardsWithApi";
 
 interface IGudeProfilePage {
     guideData: userFindById_UserFindById;
@@ -191,13 +191,13 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             (router.locale as LANGUAGES) || LANGUAGES.ko
                         )
                     ) && (
-                        <Flex hide={!profileVideo?.uri} mb="large">
-                            <Video
-                                className="guideProfile__video"
-                                src={profileVideo?.uri}
-                            />
-                        </Flex>
-                    )}
+                            <Flex hide={!profileVideo?.uri} mb="large">
+                                <Video
+                                    className="guideProfile__video"
+                                    src={profileVideo?.uri}
+                                />
+                            </Flex>
+                        )}
 
                     {!isEmpty(
                         filterVisibleProduct(
@@ -205,26 +205,26 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                             (router.locale as LANGUAGES) || LANGUAGES.ko
                         )
                     ) && (
-                        <div>
-                            <div className="guideProfile__viewTours">
-                                <ProductViewsLineHeader
-                                    title={s("viewGuideTours")}
-                                    onSeeMore={() => {
-                                        router.push(
-                                            `${router.query.key}/products`
-                                        );
+                            <div>
+                                <div className="guideProfile__viewTours">
+                                    <ProductViewsLineHeader
+                                        title={s("viewGuideTours")}
+                                        onSeeMore={() => {
+                                            router.push(
+                                                `${router.query.key}/products`
+                                            );
+                                        }}
+                                    />
+                                </div>
+                                <ProductViewCardsWithApi
+                                    queryParam={{
+                                        fixingFilter: {
+                                            guideId__eq: item._id,
+                                        },
                                     }}
                                 />
                             </div>
-                            <ProductViewCardsWithApi
-                                queryParam={{
-                                    fixingFilter: {
-                                        guideId__eq: item._id,
-                                    },
-                                }}
-                            />
-                        </div>
-                    )}
+                        )}
 
                     <Mb mb="largest" />
                 </div>

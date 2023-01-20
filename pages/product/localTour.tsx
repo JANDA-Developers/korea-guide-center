@@ -1,13 +1,10 @@
 import {
     Bold,
     Flex,
-    getAllFromUrl,
     isEmpty,
     JDalign,
-    JDbutton,
     JDcontainer,
     JDhorizen,
-    JDswitch,
     JDtypho,
     Mb,
     Mr,
@@ -16,50 +13,27 @@ import {
     WindowSize,
 } from "@janda-com/front";
 import { BookLayout } from "../../component/layout/BookLayout";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
-import { Paths } from "../index[depre]";
-import { Empty } from "../../atom/Empty";
 import { GrandProductSearchFilter } from "../../component/grandProductSearchFilter/GrandProductSearchFilter";
 import Pagination from "../../component/pagination/Pagination";
 import {
-    NewSorter,
-    PriceSortLarge,
-    PriceSortMin,
-    RatingSort,
-    ReviwCountSort,
-} from "../../component/productSorters/ProductSorters";
-import {
     ProductViewCards,
-    ProductViewCardsWithApi,
 } from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
-import { updateURLParameters, UrlParam } from "../../utils/getUpdateUrlParam";
 import { ProductStatus, _ProductFilter, _ProductSort } from "../../types/api";
 import { ScrollBox } from "../../component/scrollBox/ScrollBox";
-import { InfoBox } from "../../component/infoBox/InfoBox";
-import { LinkText } from "../../component/link/Link";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
 import { generateFilter, getSearchPageQuery } from "./search";
 import { groupProductMap } from "../../utils/categoryMap";
 
-interface ISearchPageQuery {
-    title?: string;
-    filter?: _ProductFilter;
-    sort?: _ProductSort[];
-}
-
-
-
 interface IProp { }
-
 
 export const Search: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
-    const router = useRouter();
     const [detailSearch, setDetailSearch] = useState<boolean>(true);
     const urlSearchParam = getSearchPageQuery();
     const { title } = urlSearchParam;
@@ -89,9 +63,6 @@ export const Search: React.FC<IProp> = () => {
         }
     );
     const {
-        sort,
-        setSort,
-        page,
         pageInfo,
         paginatorHook,
         items: products,

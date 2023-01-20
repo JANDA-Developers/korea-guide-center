@@ -3,14 +3,14 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { Empty } from "../../atom/Empty";
-import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCards";
+import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCardsWithApi";
 import { ProductViewsLineHeader } from "../../component/productViewCard/ProductViewsLineHeader";
 import { AppContext } from "../../context/context";
 import { myWishListKey, useMyWishList } from "../../hook/useUser";
 import LocalManager from "../../utils/localManager";
 import { LocalCustomStorage } from "../../utils/storage";
 
-interface IProp {}
+interface IProp { }
 
 export const WishPage: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
