@@ -1,7 +1,12 @@
-import { Flex, JDhorizen } from "@janda-com/front";
+import { Flex, isEmpty, JDhorizen } from "@janda-com/front";
+import { useRouter } from "next/router";
 import { useContext } from "react";
 import { AppContext } from "../../context/context";
 import { useStartChat } from "../../hook/useChatRoom";
+import { LANGUAGES } from "../../types/api";
+import { filterVisibleProduct } from "../../utils/product";
+import { ProductViewCardsWithApi } from "../productViewCard/ProductViewCardsWithApi";
+import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
 import Info from "./Info";
 import LeftFlex from "./LeftFlex";
 
@@ -10,6 +15,7 @@ interface IGuideIntroProps {
 }
 
 function GuideIntro({ item }: IGuideIntroProps) {
+    const router = useRouter();
     const context = useContext(AppContext);
     const { s, l } = context;
     const guideId = item._id;
@@ -31,6 +37,32 @@ function GuideIntro({ item }: IGuideIntroProps) {
                         <Info item={item}></Info>
                     </div>
                 </Flex>
+                <div
+                    style={{
+                        width: "100vw",
+                    }}
+                >
+                    {!isEmpty(
+                        filterVisibleProduct(
+                            item.products || [],
+                            (router.locale as LANGUAGES) || LANGUAGES.ko
+                        )
+                    ) && (
+                        <div style={{ marginTop: "1vh", padding: "24px" }}>
+                            <ProductViewsLineHeader title={s("guideTours")} />
+                            <JDhorizen margin={2} />
+                            <ProductViewCardsWithApi
+                                setMarginZero={true}
+                                setPaddingZero={true}
+                                queryParam={{
+                                    fixingFilter: {
+                                        guideId__eq: item._id,
+                                    },
+                                }}
+                            />
+                        </div>
+                    )}
+                </div>
             </Flex>
             <button
                 className="detailNavCard__jdButtonWidth3"

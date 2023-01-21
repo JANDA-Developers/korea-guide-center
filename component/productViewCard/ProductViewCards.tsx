@@ -1,10 +1,8 @@
-import { isEmpty, JDalign } from "@janda-com/front";
+import { isEmpty } from "@janda-com/front";
 import { TElements } from "@janda-com/front/dist/types/interface";
 import dynamic from "next/dynamic";
-import React, { useLayoutEffect } from "react";
-import { useState } from "react";
+import React from "react";
 import { OwlCarouselProps } from "react-owl-carousel";
-import { useResizeDetector } from "react-resize-detector";
 import { useS4 } from "../../hook/useUniqkey";
 import {
     Fproduct,
@@ -26,6 +24,8 @@ export interface IProductViewCardsProp extends Partial<IProductViewCard> {
     width?: number;
     margin?: number;
     count?: number;
+    setPaddingZero?: boolean;
+    setMarginZero?: boolean;
 }
 
 export const ProductViewCards: React.FunctionComponent<
@@ -37,6 +37,8 @@ export const ProductViewCards: React.FunctionComponent<
     width = 310,
     margin = 30,
     count = 4,
+    setMarginZero,
+    setPaddingZero,
     ...props
 }) => {
     const uniqKey = useS4();
@@ -77,7 +79,7 @@ export const ProductViewCards: React.FunctionComponent<
     const options = React.useMemo<Partial<OwlCarouselProps>>(() => {
         return {
             stageOuterClass: "owl-stage-outer owl-height",
-            responsiveClass: "true",
+            responsiveClass: true,
             items: 4,
             dots: false,
             nav: true,
@@ -115,13 +117,25 @@ export const ProductViewCards: React.FunctionComponent<
         };
     }, []);
 
+    console.log(setPaddingZero);
+    console.log(setMarginZero);
+
     // 카드
     return (
-        <div ref={toursRef} className="bloc-slider-tours grouped-tours">
+        <div
+            ref={toursRef}
+            className="bloc-slider-tours grouped-tours"
+            style={{
+                padding: `${setPaddingZero && "0px"}`,
+            }}
+        >
             <AnimationOnScroll
                 animateOnce
                 animateIn="animate__fadeIn"
                 className="content-wrapper bloc-medium"
+                style={{
+                    margin: `${setMarginZero && "0px"}`,
+                }}
             >
                 <OwlCarousel
                     id="tab-AllTours"

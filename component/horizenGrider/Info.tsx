@@ -1,16 +1,13 @@
-import { Flex, isEmpty, JDhorizen } from "@janda-com/front";
+import { Flex, isEmpty } from "@janda-com/front";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { Info2 } from "../../atom/Info";
-import { LineCutter } from "../../atom/LineCutter";
 import { AppContext } from "../../context/context";
 import { Flangs } from "../../types/api";
-import { filterVisibleProduct } from "../../utils/product";
-import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
-import { ProductViewsLineHeader } from "../productViewCard/ProductViewsLineHeader";
-import { LANGUAGES } from "../../types/api";
 import { Badges2 } from "../statusBadges/StatusBadges";
 import { ProductViewCardsWithApi } from "../productViewCard/ProductViewCardsWithApi";
+import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
+import { LineCutter } from "../../atom/LineCutter";
 
 function Info({ item }: any) {
     const router = useRouter();
@@ -51,7 +48,6 @@ function Info({ item }: any) {
                     </Badges2>
                 }
             />
-
             {item?.guideCategory && (
                 <Info2
                     mb="tiny"
@@ -69,34 +65,11 @@ function Info({ item }: any) {
                     }
                 />
             )}
-            <Flex mb column>
-                <Introduce2
-                    children={
-                        <LineCutter line={5}>{l(item.introduce)} </LineCutter>
-                    }
-                />
-                {!isEmpty(
-                    filterVisibleProduct(
-                        item.products || [],
-                        (router.locale as LANGUAGES) || LANGUAGES.ko
-                    )
-                ) && (
-                        <div style={{ marginTop: "1vh" }}>
-                            <ProductViewsLineHeader title={s("guideTours")} />
-                            <JDhorizen margin={2} />
-                            <ProductViewCardsWithApi
-                                width={280}
-                                count={3}
-                                margin={15}
-                                queryParam={{
-                                    fixingFilter: {
-                                        guideId__eq: item._id,
-                                    },
-                                }}
-                            />
-                        </div>
-                    )}
-            </Flex>
+            <Introduce2
+                children={
+                    <LineCutter line={5}>{l(item.introduce)} </LineCutter>
+                }
+            />
         </Flex>
     );
 }

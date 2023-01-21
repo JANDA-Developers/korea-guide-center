@@ -28,6 +28,8 @@ export interface IProductViewCard extends IJDalignProp {
     product: Fproduct;
     withoutLink?: boolean;
     hideWishIcon?: boolean;
+    setPaddingZero?: boolean;
+    setMarginZero?: boolean;
 }
 
 export const ProductViewCard: React.FC<IProductViewCard> = ({

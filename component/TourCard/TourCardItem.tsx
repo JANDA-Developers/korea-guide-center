@@ -2,14 +2,13 @@ import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/context";
 import { Paths } from "../../pages/index[depre]";
 import { IProductViewCard } from "../productViewCard/ProductViewCard";
-import { autoComma } from "../../utils/formatter";
 import { GuideCircle } from "../guideCircle/GuideCircle";
 import { RatingStar } from "../rating/Rating";
 import { WishIcon } from "../wisthIcon/WishIcon";
 import { useRouter } from "next/router";
 import { beforeExtention } from "../../utils/fileExtendDivider";
 import { Tip } from "../../atom/tip/Tip";
-import { Flex, Small } from "@janda-com/front";
+import { Small } from "@janda-com/front";
 
 const TourCardItem: React.FC<IProductViewCard> = ({
     product,
