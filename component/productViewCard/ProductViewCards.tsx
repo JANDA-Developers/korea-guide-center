@@ -56,22 +56,35 @@ export interface IProductViewCardsProp extends Partial<IProductViewCard> {
     setMarginZero?: boolean;
 }
 
-export const ProductViewCards: React.FunctionComponent<
-    IProductViewCardsProp
-> = ({
+export const ProductViewCards: React.FunctionComponent<IProp> = ({
     products,
     empty = null,
     onClickProduct,
-    width = 310,
-    margin = 30,
-    count = 4,
+    wrap,
+    // width = 310,
+    // margin = 30,
+    // count = 4,
     setMarginZero,
     setPaddingZero,
+    align = "auto",
     ...props
 }) => {
     const uniqKey = useS4();
 
     const toursRef = React.useRef<HTMLDivElement>(null);
+
+    const [_align, _setAlign] = useState<number | null>(null);
+    const { ref, width, height } = useResizeDetector();
+    const Align = _align || align;
+
+    const className = classNames("ProductViewCards", undefined, {
+        "ProductViewCards--1": Align === 1,
+        "ProductViewCards--2": Align === 2,
+        "ProductViewCards--3": Align === 3,
+        "ProductViewCards--4": Align === 4,
+        "ProductViewCards--wrap": Align === "wrap",
+        "ProductViewCards--empty": isEmpty(products),
+    });
 
     // const maxWidth = React.useMemo(
     //     () =>
@@ -110,7 +123,7 @@ export const ProductViewCards: React.FunctionComponent<
             responsiveClass: true,
             items: 4,
             dots: false,
-            nav: true,
+            nav: false,
             navText: [
                 `<span><svg width="50px" height="100px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
@@ -121,16 +134,16 @@ export const ProductViewCards: React.FunctionComponent<
             ],
             responsive: {
                 0: {
-                    items: 1,
-                    margin: -20,
+                    items: 2,
+                    margin: 10,
                 },
                 300: {
-                    items: 1,
-                    margin: -20,
+                    items: 2,
+                    margin: 10,
                 },
                 400: {
-                    items: 1,
-                    margin: -60,
+                    items: 2,
+                    margin: 10,
                 },
                 560: {
                     items: 2,
@@ -150,37 +163,41 @@ export const ProductViewCards: React.FunctionComponent<
         <div
             ref={toursRef}
             className="bloc-slider-tours grouped-tours"
-            style={{
-                padding: `${setPaddingZero && "0px"}`,
-            }}
+            // style={{
+            //     padding: `${setPaddingZero && "0px"}`,
+            // }}
         >
             <AnimationOnScroll
                 animateOnce
                 animateIn="animate__fadeIn"
-                className="content-wrapper bloc-medium"
-                style={{
-                    margin: `${setMarginZero && "0px"}`,
-                }}
+                // className="content-wrapper bloc-medium"
+                // style={{
+                //     margin: `${setMarginZero && "0px"}`,
+                // }}
             >
-                <OwlCarousel
-                    id="tab-AllTours"
-                    className="owl-theme owl-tours owl-opacify active"
-                    {...options}
-                >
+                <Flex oneone className={className} wrap={wrap}>
                     {isEmpty(products) && (
                         <div className="ProductViewCards__empty">{empty}</div>
                     )}
-                    {products.map((product) => (
-                        <TourCardItem
-                            onClick={() => {
-                                onClickProduct?.(product);
-                            }}
-                            key={product._id + uniqKey}
-                            {...props}
-                            product={product}
-                        />
-                    ))}
-                </OwlCarousel>
+                    <OwlCarousel
+                        id="tab-AllTours"
+                        className="owl-theme owl-tours owl-opacify active"
+                        {...options}
+                    >
+                        {products.map((product) => (
+                            <ProductViewCard
+                                onClick={() => {
+                                    onClickProduct?.(product);
+                                }}
+                                key={product._id + uniqKey}
+                                className="ProductViewCards__card"
+                                mr
+                                {...props}
+                                product={product}
+                            />
+                        ))}
+                    </OwlCarousel>
+                </Flex>
             </AnimationOnScroll>
         </div>
     );
@@ -249,7 +266,8 @@ export const ProductViewCardsForMorePage: React.FunctionComponent<
                             ))}
                         </div>
                     </div>
-                </div>
+                </div>{" "}
+                //
             </AnimationOnScroll>
         </div>
     );

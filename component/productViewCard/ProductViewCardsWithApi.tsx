@@ -45,7 +45,12 @@ export const ProductViewCardsWithApi =
             return (
                 <div>
                     {Head}
-                    <ProductViewCards {...props} products={products} />
+                    <ProductViewCards
+                        {...props}
+                        products={products}
+                        wrap
+                        align={4}
+                    />
                 </div>
             );
         }
