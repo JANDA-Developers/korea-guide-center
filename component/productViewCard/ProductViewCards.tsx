@@ -15,9 +15,7 @@ import {
 } from "../../types/api";
 import { AnimationOnScroll } from "../scrollAnimation/ScrollAnimation";
 import TourCardItem from "../TourCard/TourCardItem";
-import {
-    IProductViewCard,
-} from "./ProductViewCard";
+import { IProductViewCard } from "./ProductViewCard";
 import { IProductViewCardsWithApiProps } from "./ProductViewCardsWithApi";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
@@ -30,7 +28,9 @@ export interface IProductViewCardsProp extends Partial<IProductViewCard> {
     count?: number;
 }
 
-export const ProductViewCards: React.FunctionComponent<IProductViewCardsProp> = ({
+export const ProductViewCards: React.FunctionComponent<
+    IProductViewCardsProp
+> = ({
     products,
     empty = null,
     onClickProduct,
@@ -44,12 +44,18 @@ export const ProductViewCards: React.FunctionComponent<IProductViewCardsProp> = 
     const toursRef = React.useRef<HTMLDivElement>(null);
 
     const maxWidth = React.useMemo(
-        () => toursRef.current?.clientWidth ?? window?.innerWidth ?? (width + margin),
+        () =>
+            toursRef.current?.clientWidth ??
+            window?.innerWidth ??
+            width + margin,
         [toursRef.current, width, margin]
     );
 
     const calcItemCount = React.useCallback(() => {
-        return Math.min(Math.max(Math.ceil(maxWidth / (width + margin)), 1), count);
+        return Math.min(
+            Math.max(Math.ceil(maxWidth / (width + margin)), 1),
+            count
+        );
     }, [maxWidth, products.length, count, margin, width]);
 
     const [itemCount, setItemCount] = useState<number>(calcItemCount());
@@ -61,20 +67,20 @@ export const ProductViewCards: React.FunctionComponent<IProductViewCardsProp> = 
     React.useEffect(() => {
         const handleResize = () => {
             setItemCount(calcItemCount());
-        }
+        };
         window?.addEventListener("resize", handleResize);
         return () => {
             window?.removeEventListener("resize", handleResize);
-        }
+        };
     }, [calcItemCount]);
 
     const options = React.useMemo<Partial<OwlCarouselProps>>(() => {
-        return ({
-            margin: margin,
-            items: itemCount,
+        return {
+            stageOuterClass: "owl-stage-outer owl-height",
+            responsiveClass: "true",
+            items: 4,
             dots: false,
             nav: true,
-            width: width,
             navText: [
                 `<span><svg width="50px" height="100px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
@@ -83,9 +89,31 @@ export const ProductViewCards: React.FunctionComponent<IProductViewCardsProp> = 
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
           </svg></span>`,
             ],
-        })
-    }, [width, itemCount])
-
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: -20,
+                },
+                300: {
+                    items: 1,
+                    margin: -20,
+                },
+                400: {
+                    items: 1,
+                    margin: -60,
+                },
+                560: {
+                    items: 2,
+                },
+                800: {
+                    items: 3,
+                },
+                1200: {
+                    items: 4,
+                },
+            },
+        };
+    }, [width, itemCount]);
 
     // 카드
     return (
@@ -118,7 +146,6 @@ export const ProductViewCards: React.FunctionComponent<IProductViewCardsProp> = 
         </div>
     );
 };
-
 
 export const BestProductList: IProductViewCardsWithApiProps = {
     queryParam: {
