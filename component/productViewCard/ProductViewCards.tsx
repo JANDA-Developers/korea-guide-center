@@ -43,36 +43,36 @@ export const ProductViewCards: React.FunctionComponent<
 
     const toursRef = React.useRef<HTMLDivElement>(null);
 
-    const maxWidth = React.useMemo(
-        () =>
-            toursRef.current?.clientWidth ??
-            window?.innerWidth ??
-            width + margin,
-        [toursRef.current, width, margin]
-    );
+    // const maxWidth = React.useMemo(
+    //     () =>
+    //         toursRef.current?.clientWidth ??
+    //         window?.innerWidth ??
+    //         width + margin,
+    //     [toursRef.current, width, margin]
+    // );
 
-    const calcItemCount = React.useCallback(() => {
-        return Math.min(
-            Math.max(Math.ceil(maxWidth / (width + margin)), 1),
-            count
-        );
-    }, [maxWidth, products.length, count, margin, width]);
+    // const calcItemCount = React.useCallback(() => {
+    //     return Math.min(
+    //         Math.max(Math.ceil(maxWidth / (width + margin)), 1),
+    //         count
+    //     );
+    // }, [maxWidth, products.length, count, margin, width]);
 
-    const [itemCount, setItemCount] = useState<number>(calcItemCount());
+    // const [itemCount, setItemCount] = useState<number>(calcItemCount());
 
-    React.useCallback(() => {
-        setItemCount(calcItemCount());
-    }, [width]);
+    // React.useCallback(() => {
+    //     setItemCount(calcItemCount());
+    // }, [width]);
 
-    React.useEffect(() => {
-        const handleResize = () => {
-            setItemCount(calcItemCount());
-        };
-        window?.addEventListener("resize", handleResize);
-        return () => {
-            window?.removeEventListener("resize", handleResize);
-        };
-    }, [calcItemCount]);
+    // React.useEffect(() => {
+    //     const handleResize = () => {
+    //         setItemCount(calcItemCount());
+    //     };
+    //     window?.addEventListener("resize", handleResize);
+    //     return () => {
+    //         window?.removeEventListener("resize", handleResize);
+    //     };
+    // }, [calcItemCount]);
 
     const options = React.useMemo<Partial<OwlCarouselProps>>(() => {
         return {
@@ -113,7 +113,7 @@ export const ProductViewCards: React.FunctionComponent<
                 },
             },
         };
-    }, [width, itemCount]);
+    }, []);
 
     // 카드
     return (
