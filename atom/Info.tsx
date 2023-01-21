@@ -1,13 +1,4 @@
-import {
-    autoComma,
-    Bold,
-    Flex,
-    IJDalignProp,
-    JDalign,
-    JDlabel,
-    JDtypho,
-    Thin,
-} from "@janda-com/front";
+import { IJDalignProp, JDalign, JDtypho } from "@janda-com/front";
 import { TElements } from "@janda-com/front/dist/types/interface";
 import React from "react";
 
@@ -49,9 +40,9 @@ export const Info2: React.FC<IProp> = ({
         <JDalign {...props} style={{ display: "flex" }}>
             <JDtypho size="small" color="black" style={{ display: "flex" }}>
                 <div style={{ marginRight: "0.5vh", flexShrink: "0" }}>
-                    {label}
+                    {label}:
                 </div>
-                {value || children}
+                <span style={{ fontWeight: 400 }}>{value || children}</span>
             </JDtypho>
         </JDalign>
     );

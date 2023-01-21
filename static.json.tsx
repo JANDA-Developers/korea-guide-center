@@ -1941,6 +1941,12 @@ const utils_message = {
         ja: `ガイドタイプ :`,
         chi: `导游类型 :`,
     },
+    guideIntroduce: {
+        ko: "가이드 소개",
+        en: "Guide Introduction",
+        ja: "ガイド紹介",
+        chi: "导游介绍",
+    },
     fileUpload: {
         ko: "파일 업로드",
         en: `File Upload`,

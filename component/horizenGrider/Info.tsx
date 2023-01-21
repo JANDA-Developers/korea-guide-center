@@ -65,9 +65,18 @@ function Info({ item }: any) {
                     }
                 />
             )}
+            {s("guideIntroduce")}
             <Introduce2
                 children={
-                    <LineCutter line={5}>{l(item.introduce)} </LineCutter>
+                    <LineCutter
+                        line={5}
+                        style={{
+                            fontWeight: 400,
+                            fontSize: "0.8rem",
+                        }}
+                    >
+                        {l(item.introduce)}
+                    </LineCutter>
                 }
             />
         </Flex>
