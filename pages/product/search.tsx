@@ -300,7 +300,7 @@ export const Search: React.FC<IProp> = () => {
                                 </LinkText>
                             </InfoBox> */}
 
-                            <ProductViewCards2 products={products} />
+                            <ProductViewCards2 products={products} wrap />
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />

@@ -22,7 +22,11 @@ import { genrateOption } from "../../utils/query";
 
 import { AnimationOnScroll } from "../scrollAnimation/ScrollAnimation";
 import TourCardItem from "../TourCard/TourCardItem";
-import { IProductViewCard, ProductViewCard2 } from "./ProductViewCard";
+import {
+    IProductViewCard,
+    ProductViewCard,
+    ProductViewCard2,
+} from "./ProductViewCard";
 import { IProductViewCardsWithApiProps } from "./ProductViewCardsWithApi";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
@@ -288,17 +292,12 @@ export const ProductViewCards2: React.FC<IProp> = ({
     return (
         <div ref={ref}>
             <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
-                <Flex
-                    oneone
-                    className={className}
-                    wrap={wrap}
-                    style={{ flexDirection: "column" }}
-                >
+                <Flex oneone className={className} wrap={wrap}>
                     {isEmpty(products) && (
                         <div className="ProductViewCards__empty">{empty}</div>
                     )}
                     {products.map((product) => (
-                        <ProductViewCard2
+                        <ProductViewCard
                             mb={wrap ? "normal" : undefined}
                             onClick={() => {
                                 onClickProduct?.(product);

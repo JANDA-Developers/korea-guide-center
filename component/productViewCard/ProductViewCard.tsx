@@ -101,9 +101,15 @@ export const ProductViewCard: React.FC<IProductViewCard> = ({
                         between
                     >
                         <div className="productViewCard__inTop">
-                            <Tiny color="grey2">
+                            <span
+                                className="category"
+                                style={{
+                                    borderColor: "#D15C2E",
+                                    color: "#D15C2E",
+                                }}
+                            >
                                 {l(category?.label)} · {l(region?.label)}
-                            </Tiny>
+                            </span>
                             <Bold flex mb>
                                 <LineCutter line={2}>
                                     {l(product.title)}
