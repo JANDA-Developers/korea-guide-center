@@ -30,6 +30,9 @@ import {
 } from "../../component/productSorters/ProductSorters";
 import {
     ProductViewCards,
+    ProductViewCards2,
+    ProductViewCardsForMorePage,
+    ProductViewCardsWithApi2,
 } from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
@@ -38,7 +41,10 @@ import { ProductStatus, _ProductFilter, _ProductSort } from "../../types/api";
 import { ScrollBox } from "../../component/scrollBox/ScrollBox";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
-import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCardsWithApi";
+import {
+    ProductViewCardsWithApi,
+    ProductViewCardsWithApiForMorePage,
+} from "../../component/productViewCard/ProductViewCardsWithApi";
 
 interface ISearchPageQuery {
     title?: string;
@@ -82,7 +88,7 @@ export const generateFilter = (searchParam?: ISearchPageQuery) => {
     return { filter, sort };
 };
 
-interface IProp { }
+interface IProp {}
 
 export const searchPageQueryGenerate = (query: ISearchPageQuery) => {
     const urlQueries: UrlParam[] = Object.entries(query).map(
@@ -118,11 +124,11 @@ export const Search: React.FC<IProp> = () => {
     const { s, catMap, l } = useContext(AppContext);
     const [reload, setReload] = useState<boolean>(false);
 
-    console.log("urlSearchParam", urlSearchParam)
+    console.log("urlSearchParam", urlSearchParam);
 
     const { filter: _filter, sort: _sort } = generateFilter(urlSearchParam);
 
-    console.log("title", title)
+    console.log("title", title);
 
     const productListHook = useProductList(
         {
@@ -153,13 +159,13 @@ export const Search: React.FC<IProp> = () => {
     } = productListHook;
 
     useEffect(() => {
-        console.log("products", products)
-    }, [products])
+        console.log("products", products);
+    }, [products]);
 
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
         urlSearchParam.filter?.categoryMini__id__in?.[0] ===
-        filter?.categoryMini__id__in?.[0];
+            filter?.categoryMini__id__in?.[0];
     const urlSerchCat = catMap.ITEM_SMALL.find(
         (cat) => cat._id === urlSearchParam.filter?.categoryMini__id__in?.[0]
     );
@@ -171,9 +177,9 @@ export const Search: React.FC<IProp> = () => {
         //     });
         // }
         if (reload) {
-            router.push(`/product/searchTemp?title=${title}`)
+            router.push(`/product/searchTemp?title=${title}`);
         }
-        setReload((prev) => !prev)
+        setReload((prev) => !prev);
     }, [urlSearchParam.title]);
 
     if (networkStatus === 1) return null;
@@ -210,8 +216,9 @@ export const Search: React.FC<IProp> = () => {
                         }}
                         mode="border"
                         size="small"
-                        label={`${s("searchDetail")} ${detailSearch ? s("open") : s("close")
-                            } `}
+                        label={`${s("searchDetail")} ${
+                            detailSearch ? s("open") : s("close")
+                        } `}
                     />
                 </JDtypho>
                 <Flex oneone className="search__wrapper">
@@ -293,12 +300,11 @@ export const Search: React.FC<IProp> = () => {
                                 </LinkText>
                             </InfoBox> */}
 
-
-                            <ProductViewCards wrap products={products} />
+                            <ProductViewCards2 products={products} />
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />
-                                    <ProductViewCardsWithApi wrap />
+                                    <ProductViewCardsWithApi2 wrap />
                                 </div>
                             ) : null}
                             <Mb mb="largest" />

@@ -30,6 +30,8 @@ export interface IProductViewCard extends IJDalignProp {
     hideWishIcon?: boolean;
     setPaddingZero?: boolean;
     setMarginZero?: boolean;
+    setMarginRight?: string;
+    setPaddingVertical?: string;
 }
 
 export const ProductViewCard: React.FC<IProductViewCard> = ({

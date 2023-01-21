@@ -15,6 +15,10 @@ const TourCardItem: React.FC<IProductViewCard> = ({
     className,
     hideWishIcon = false,
     withoutLink = false,
+    setMarginZero,
+    setPaddingZero,
+    setPaddingVertical,
+    setMarginRight,
     ...alignProp
 }) => {
     const [imgLoaded, setImgLoaded] = useState(false);
@@ -37,6 +41,10 @@ const TourCardItem: React.FC<IProductViewCard> = ({
     return (
         <div
             className="item bloc-card free"
+            style={{
+                margin: `${setMarginZero ? "0px" : setMarginRight}`,
+                padding: `${setPaddingVertical}`,
+            }}
             data-linkall="a"
             onClick={(e) => {
                 alignProp.onClick?.(e);
