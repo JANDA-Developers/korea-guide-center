@@ -37,11 +37,7 @@ function GuideIntro({ item }: IGuideIntroProps) {
                         <Info item={item}></Info>
                     </div>
                 </Flex>
-                <div
-                    style={{
-                        width: "100vw",
-                    }}
-                >
+                <div>
                     {!isEmpty(
                         filterVisibleProduct(
                             item.products || [],
@@ -52,8 +48,6 @@ function GuideIntro({ item }: IGuideIntroProps) {
                             <ProductViewsLineHeader title={s("guideTours")} />
                             <JDhorizen margin={2} />
                             <ProductViewCardsWithApi
-                                setMarginZero={true}
-                                setPaddingZero={true}
                                 queryParam={{
                                     fixingFilter: {
                                         guideId__eq: item._id,
