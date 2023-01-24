@@ -106,6 +106,7 @@ export const ProductViewCard: React.FC<IProductViewCard> = ({
                                 style={{
                                     borderColor: "#D15C2E",
                                     color: "#D15C2E",
+                                    marginBottom: "3px",
                                 }}
                             >
                                 {l(category?.label)} · {l(region?.label)}
@@ -133,7 +134,15 @@ export const ProductViewCard: React.FC<IProductViewCard> = ({
                                 </JDtypho>
                                 <Tiny color="grey3">{s("money_unit")}</Tiny>
                             </Flex>
-                            <div className="productViewCard__guide">
+                            <div
+                                className="productViewCard__guide"
+                                style={{
+                                    marginBottom:
+                                        router.pathname !== "/guide"
+                                            ? "3.3rem"
+                                            : "",
+                                }}
+                            >
                                 <Tip message={guideNickName || ""}>
                                     <GuideCircle
                                         className="productViewCard__guideCircle"
@@ -145,6 +154,24 @@ export const ProductViewCard: React.FC<IProductViewCard> = ({
                                     />
                                 </Tip>
                             </div>
+                            {router.pathname !== "/guide" ? (
+                                <div
+                                    className="info-bottom"
+                                    style={{
+                                        marginTop: "5px",
+                                    }}
+                                >
+                                    <span
+                                        className="btn gtm-event-info-booking"
+                                        style={{
+                                            boxSizing: "border-box",
+                                            width: "100%",
+                                        }}
+                                    >
+                                        {s("AboutAndSchedule")}
+                                    </span>
+                                </div>
+                            ) : null}
                         </div>
                     </Flex>
                 </div>
