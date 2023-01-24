@@ -137,9 +137,9 @@ export const ProductViewCard: React.FC<IProductViewCard> = ({
                             <div
                                 className="productViewCard__guide"
                                 style={{
-                                    marginBottom:
+                                    bottom:
                                         router.pathname !== "/guide"
-                                            ? "3.3rem"
+                                            ? "3.7rem"
                                             : "",
                                 }}
                             >
