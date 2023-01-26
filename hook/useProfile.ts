@@ -23,6 +23,7 @@ import { UsePolicy } from "../policies/UsePolicy";
 import {
     Ffile,
     Gender,
+    KakaoTemplateStatus,
     LANGUAGES,
     UserRole,
     UserSignUpInput,
@@ -399,9 +400,12 @@ export const useProfile = (role: profileRole) => {
                 if (isOauthProfiling) {
                     toast.success(s("wellcometxt"));
                     router.push(Paths.locationalGuide);
-                } else if (!isPassword(passwordHook.value))
+                } else if (!isPassword(passwordHook.value)) {
+                    if (KakaoTemplateStatus) {
+                        return toast.success(profileUpdateCompleteMessage);
+                    }
                     toast.warn("올바른 비밀번호를 입력해주세요.");
-                else if (!(passwordCheckHook.value === passwordHook.value))
+                } else if (!(passwordCheckHook.value === passwordHook.value))
                     toast.warn("비밀번호가 일치하지 않습니다.");
                 else toast.success(profileUpdateCompleteMessage);
             });
