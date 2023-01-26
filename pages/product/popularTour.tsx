@@ -32,7 +32,7 @@ import {
 } from "../../component/productSorters/ProductSorters";
 import {
     ProductViewCards,
-    ProductViewCardsWithApi,
+
 } from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";

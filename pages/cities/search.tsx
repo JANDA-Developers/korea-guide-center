@@ -27,9 +27,7 @@ import {
     RatingSort,
     ReviwCountSort,
 } from "../../component/productSorters/ProductSorters";
-import {
-    ProductViewCards,
-} from "../../component/productViewCard/ProductViewCards";
+import { ProductViewCards } from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
 import { updateURLParameters, UrlParam } from "../../utils/getUpdateUrlParam";
@@ -38,10 +36,7 @@ import { ScrollBox } from "../../component/scrollBox/ScrollBox";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
 import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
-import {
-    regionableData,
-    mapRegion2,
-} from "../../component/koreaMap/KoreaData";
+import { regionableData, mapRegion2 } from "../../component/koreaMap/KoreaData";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "../../recoil/atoms";
 import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCardsWithApi";
@@ -53,7 +48,7 @@ interface ISearchPageQuery {
 }
 
 const translateKoreanToEnglish = (title: string) => {
-    return mapRegion2[title]
+    return mapRegion2[title];
 };
 
 export const getSearchPageQuery = () => {
@@ -92,7 +87,7 @@ const generateFilter = (searchParam?: ISearchPageQuery) => {
     return { filter, sort };
 };
 
-interface IProp { }
+interface IProp {}
 
 export const searchPageQueryGenerate = (query: ISearchPageQuery) => {
     const urlQueries: UrlParam[] = Object.entries(query).map(
@@ -169,7 +164,7 @@ export const Search: React.FC<IProp> = () => {
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
         urlSearchParam.filter?.categoryMini__id__in?.[0] ===
-        filter?.categoryMini__id__in?.[0];
+            filter?.categoryMini__id__in?.[0];
     const urlSerchCat = catMap.ITEM_SMALL.find(
         (cat) => cat._id === urlSearchParam.filter?.categoryMini__id__in?.[0]
     );
@@ -237,8 +232,9 @@ export const Search: React.FC<IProp> = () => {
                         }}
                         mode="border"
                         size="small"
-                        label={`${s("searchDetail")} ${detailSearch ? s("open") : s("close")
-                            } `}
+                        label={`${s("searchDetail")} ${
+                            detailSearch ? s("open") : s("close")
+                        } `}
                     />
                 </JDtypho>
                 <Flex oneone className="search__wrapper">
@@ -309,7 +305,7 @@ export const Search: React.FC<IProp> = () => {
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />
-                                    <ProductViewCardsWithApi wrap />
+                                    <ProductViewCardsWithApi />
                                 </div>
                             ) : null}
                             <Mb mb="largest" />
