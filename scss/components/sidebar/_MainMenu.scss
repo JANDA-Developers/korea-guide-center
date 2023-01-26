@@ -1,12 +1,9 @@
-
-
-
 .mainMenu {
     flex: 1;
     background: $side-bg;
     max-width: $main-menu-width;
-    height: 100vh;
-    max-height: 100vh;
+    min-height: 687.8px;
+    max-height: 160vh;
 
     &__list {
         cursor: pointer;
@@ -18,16 +15,16 @@
         color: $primary-color-light2-ie;
         color: $primary-color-light2;
         display: block;
-        margin: space(2) 0 ;
+        margin: space(2) 0;
         margin-left: space(1);
-        
+
         border-radius: 5px 0px 0px 5px;
-        &:hover {
-        }
+
+        &:hover {}
 
 
         &--active {
-            background: $side-second-bg!important;
+            background: $side-second-bg !important;
             border-radius: $br4 0px 0px $br4;
             color: $primary-color-ie;
             color: $primary-color;

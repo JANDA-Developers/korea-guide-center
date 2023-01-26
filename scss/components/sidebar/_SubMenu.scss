@@ -1,15 +1,16 @@
-
 .subMenu {
-    height: 100vh;
+    max-height: 100vh;
+    min-height: 687.8px;
     background-color: $side-second-bg;
+
     &__list {
         display: flex;
         align-items: center;
         padding: space(2) space(4);
         margin: space(2);
         margin-right: 0px;
-        border-top-right-radius: 0px!important;
-        border-bottom-right-radius: 0px!important;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
         color: $grey-level3;
         border-radius: $br4;
         cursor: pointer;
@@ -20,9 +21,10 @@
             background-color: $primary-color-light2-ie;
             background-color: $primary-color-light2;
         }
-        
+
         &--disabled {
             color: $grey-level2;
+
             &:hover {
                 background-color: inherit;
             }
@@ -34,6 +36,6 @@
             color: $primary-color-ie;
             color: $primary-color;
         }
-        
+
     }
 }
