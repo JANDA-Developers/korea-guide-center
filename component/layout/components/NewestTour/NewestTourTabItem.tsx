@@ -47,7 +47,13 @@ const NewestTourItem = ({
                     className="lazy"
                 />
             </figure>
-            <div className="content">
+            <div
+                className="content"
+                style={{
+                    padding: "30px 0",
+                    paddingTop: "10px",
+                }}
+            >
                 <span
                     className="category"
                     style={{
@@ -61,8 +67,8 @@ const NewestTourItem = ({
                     <h3>{l(title)}</h3>
                 </a>
                 <p>
-                    {l(description).length >= 70
-                        ? l(description).slice(0, 70) + "..."
+                    {l(description).length >= 35
+                        ? l(description).slice(0, 35) + "..."
                         : l(description)}
                 </p>
             </div>
