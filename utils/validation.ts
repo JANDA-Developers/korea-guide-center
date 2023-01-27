@@ -6,7 +6,6 @@ const isUrl = (string: string): boolean | "" => {
         /^http(s)?:\/\/(www\.)?[a-z0-9]+([-.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
     return regExp.test(string);
 };
-
 const isPhone = (string: string): boolean | "" => {
     if (string === "") return "";
     const result = string.replace(/[\s-]+/g, "");
@@ -67,9 +66,9 @@ const isMaxOver = (string: string, max: number): boolean | "" => {
 
 const isPassword = (string: string): boolean | "" => {
     if (string === "") return "";
-    // 특수문자 1개이상 숫자가 포함된 8~16 자리의 영문 숫자 조합
+    // 특수문자 1개이상 숫자가 포함된 7~15 자리의 영문 숫자 조합
     const regExp =
-        /^(?=.*[0-9])(?=.*[!@#$%^&*_\-~;?/])[a-zA-Z0-9!@#$%^&*_\-~;?/]{8,16}$/gi;
+        /^(?=.*[0-9])(?=.*[!@#$%^&*_\-~;?/])[a-zA-Z0-9!@#$%^&*_\-~;?/]{7,15}$/gi;
     return regExp.test(string);
 };
 

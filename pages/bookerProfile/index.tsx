@@ -203,9 +203,6 @@ export const BookerProfile: React.FC<IProp> = () => {
                                 type="password"
                                 label={s("newPassword") || ""}
                             />
-                            <Tiny className="ITSpasswordChecker" mb>
-                                <PasswordChecker txt={passwordHook.value} />
-                            </Tiny>
                             <InputText
                                 mb
                                 {...passwordCheckHook}

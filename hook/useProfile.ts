@@ -23,7 +23,6 @@ import { UsePolicy } from "../policies/UsePolicy";
 import {
     Ffile,
     Gender,
-    KakaoTemplateStatus,
     LANGUAGES,
     UserRole,
     UserSignUpInput,
@@ -39,7 +38,6 @@ import { useGlobalInput } from "./useGlobalInput";
 import { usePolicyCheckers } from "./usePolicyCheckers";
 import { useSingleUpload } from "./useUpload";
 import { useDuplicateCheck, useSignUp, useUserUpdate } from "./useUser";
-import { isPassword } from "../utils/validation";
 
 type profileRole = "GuideProfile" | "BookerProfile" | "JoinGuide" | "SignUp";
 
@@ -309,13 +307,15 @@ export const useProfile = (role: profileRole) => {
                 skip: !isGuideUpdate,
             },
             {
-                value: isPassword(passwordHook.value),
+                value: isOauthProfiling || passwordHook.value.length > 7,
                 failMsg: "올바른 비밀번호가 아닙니다",
                 id: "PasswordInput",
                 skip: !isSingUp,
             },
             {
-                value: passwordCheckHook.value === passwordHook.value,
+                value:
+                    isOauthProfiling ||
+                    passwordCheckHook.value === passwordHook.value,
                 failMsg: "비밀번호가 일치하지 않습니다",
                 id: "PasswordInput",
                 skip: !isSingUp,
@@ -400,14 +400,8 @@ export const useProfile = (role: profileRole) => {
                 if (isOauthProfiling) {
                     toast.success(s("wellcometxt"));
                     router.push(Paths.locationalGuide);
-                } else if (!isPassword(passwordHook.value)) {
-                    if (KakaoTemplateStatus) {
-                        return toast.success(profileUpdateCompleteMessage);
-                    }
-                    toast.warn("올바른 비밀번호를 입력해주세요.");
-                } else if (!(passwordCheckHook.value === passwordHook.value))
-                    toast.warn("비밀번호가 일치하지 않습니다.");
-                else toast.success(profileUpdateCompleteMessage);
+                }
+                toast.success(profileUpdateCompleteMessage);
             });
         }
     };
