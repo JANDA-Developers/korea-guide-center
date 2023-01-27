@@ -16,7 +16,7 @@ const PasswordChecker: React.FC<Iprops> = ({ txt }) => {
     useEffect(() => {
         setPasswordCondition({
             enAndNumber: isHaveNumber(txt),
-            length: isLengthIn(txt, 15, 7),
+            length: isLengthIn(txt, 16, 7),
             special: isHaveScharacter(txt),
         });
     }, [txt]);
