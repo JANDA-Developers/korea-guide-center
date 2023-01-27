@@ -23,7 +23,6 @@ import { UsePolicy } from "../policies/UsePolicy";
 import {
     Ffile,
     Gender,
-    KakaoTemplateStatus,
     LANGUAGES,
     UserRole,
     UserSignUpInput,
