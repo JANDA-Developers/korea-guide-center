@@ -9,7 +9,7 @@ const RegionalGuideTextIntro = () => {
             }}
         >
             <h2>
-                <strong>Guides</strong> by Region
+                <strong>GUIDES</strong> BY REGION
             </h2>
         </div>
     );

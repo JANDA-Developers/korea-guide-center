@@ -26648,7 +26648,7 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
 }
 
 .txt-intro {
-  margin-bottom: 40px;
+  margin: 80px 0px 40px 0px;
 }
 
 .txt-intro h2 {
@@ -26658,6 +26658,19 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
   width: 70%;
   margin-bottom: 0;
 }
+
+#newest-tour:after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  right: 0;
+  bottom: -5px;
+  height: 4px;
+  width: 340px;
+  background: #db1a1c;
+}
+
+
 
 @media screen and (max-width: 980px) {
   .txt-intro h2 {
@@ -26681,6 +26694,17 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
   line-height: 50px;
   display: block;
   text-transform: none;
+}
+
+#popular-guides:after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  right: 0;
+  bottom: -5px;
+  height: 4px;
+  width: 405px;
+  background: #db1a1c;
 }
 
 @media screen and (max-width: 599px) {
@@ -27538,7 +27562,7 @@ body:not(.no-hover) .bloc-slider-city .owl-carousel .item a:focus figure img {
 
 .bloc-slider-tours .owl-tours {
   display: none;
-  padding-top: 30px;
+  padding-top: 10px;
   margin-top: -30px;
   min-height: 460px;
 }
