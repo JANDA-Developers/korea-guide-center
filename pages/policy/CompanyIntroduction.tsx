@@ -64,7 +64,12 @@ const Introduction = () => {
                             <h5 className="introHeader__leftTitle">
                                 {s("introHeaderTitle")}
                             </h5>
-                            <p className="introHeader__leftDetail">
+                            <p
+                                className="introHeader__leftDetail"
+                                style={{
+                                    color: "white",
+                                }}
+                            >
                                 {s("introHeaderExplain")}
                             </p>
                         </div>

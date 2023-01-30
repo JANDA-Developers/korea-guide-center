@@ -8,7 +8,13 @@ const AboutSectionDetailText = () => {
             <h2>
                 <span>{s("aboutKoreaGuideTop")}</span>
             </h2>
-            <p>{s("aboutKoreaGuideBottom")}</p>
+            <p
+                style={{
+                    marginBottom: "10px",
+                }}
+            >
+                {s("aboutKoreaGuideBottom")}
+            </p>
         </div>
     );
 };

@@ -4,7 +4,19 @@ const PopularGuideTextIntro = () => {
     return (
         <div className="txt-intro">
             <h2>
-                OUR <span id="popular-guides">&nbsp;&nbsp;&nbsp;POPULAR GUIDES</span>
+                WITH
+                <span id="popular-guides">
+                    &nbsp;&nbsp;&nbsp;
+                    <span
+                        style={{
+                            color: "#db1a1c",
+                            display: "inline",
+                        }}
+                    >
+                        POPULAR
+                    </span>{" "}
+                    GUIDES
+                </span>
             </h2>
             <div className="align-btn-right"></div>
         </div>

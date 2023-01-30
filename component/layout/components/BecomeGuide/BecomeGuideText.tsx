@@ -13,8 +13,21 @@ const BecomeGuideText = () => {
     return (
         <div className="bloc-texte">
             <div>
-                <h2>{s("findGuidesTitle")}</h2>
-                <p>{s("findGuidesDesc")}</p>
+                <h2
+                    style={{
+                        color: "black",
+                        fontWeight: 600,
+                    }}
+                >
+                    {s("findGuidesTitle")}
+                </h2>
+                <p
+                    style={{
+                        color: "black",
+                    }}
+                >
+                    {s("findGuidesDesc")}
+                </p>
                 <a
                     onClick={() => {
                         if (isLogin || isMaster) {
