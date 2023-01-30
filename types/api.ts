@@ -13809,6 +13809,7 @@ export interface userUpdate_UserUpdate_data {
   phoneNumber: string | null;
   passportNumber: string | null;
   countryCode: string | null;
+  isPasswordChange: string | null;
   /**
    * Oauth로 작성된 유저의 경우 필수 정보들이 전부 들어있고 활동이 가능한 상태인지 확인합니다
    */

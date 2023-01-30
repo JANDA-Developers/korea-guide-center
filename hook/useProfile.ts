@@ -37,7 +37,7 @@ import { useBankInfo } from "./useBankInfo";
 import { useGlobalInput } from "./useGlobalInput";
 import { usePolicyCheckers } from "./usePolicyCheckers";
 import { useSingleUpload } from "./useUpload";
-import { useDuplicateCheck, useSignUp, useUserUpdate } from "./useUser";
+import { useDuplicateCheck, useSignIn, useSignUp, useUserUpdate } from "./useUser";
 import { isPassword } from "../utils/validation";
 
 type profileRole = "GuideProfile" | "BookerProfile" | "JoinGuide" | "SignUp";
@@ -387,20 +387,38 @@ export const useProfile = (role: profileRole) => {
                 passportNumber,
                 profileImage: omitsAuto(profile),
             };
-
             updateMu({
+                // 백엔드에 요청을 합니다.
+                // 프로필 업데이트 함수 
                 variables: {
                     input: {
                         ...omitTypeName(nextData),
                     },
                     userId: me?._id,
+                    // me 로그인 객체 
                 },
+                // 위 정보를 벡엔드에 보냅니다.
             }).then((res) => {
+
+                // 무조건 프로필 변경에 대한 로직
+                console.log(res);
                 if (isOauthProfiling) {
+                    // 회원가입 페이지인지 확인하는 소스
                     toast.success(s("wellcometxt"));
                     router.push(Paths.locationalGuide);
                 }
-                toast.success(profileUpdateCompleteMessage);
+                if (res.data?.UserUpdate.data?.isPasswordChange === "Y") {
+                    // 비밀번호 변경 성공
+                    toast.success(s("passwordChangeSuccessMessage"));
+                    toast.success(profileUpdateCompleteMessage);
+                } else if (res.data?.UserUpdate.data?.isPasswordChange === "N") {
+                    // 비밀번호 바꿀건데 실패
+                    toast.success(s("passwordChangeFailMessage"));
+                } else if (res.data?.UserUpdate.data?.isPasswordChange === "") {
+                    // 비밀번호 안바꿈
+                    toast.success(profileUpdateCompleteMessage);
+                }
+
             });
         }
     };

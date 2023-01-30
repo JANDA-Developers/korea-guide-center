@@ -463,6 +463,18 @@ const utils_message = {
         ja: `パスワード確認`,
         chi: `确认密码`,
     },
+    passwordChangeFailMessage: {
+        ko: "비밀번호 변경을 실패했습니다.",
+        en: "Password change failed.",
+        ja: "パスワードの変更に失敗しました。",
+        chi: "更改密码失败。"
+    },
+    passwordChangeSuccessMessage: {
+        ko: "비밀번호가 변경되었습니다.",
+        en: "Password change succeded",
+        ja: "パスワードが変更されました。",
+        chi: "密码已更改。"
+    },
     logOut: {
         ko: "로그아웃",
         en: `Logout`,
@@ -2996,7 +3008,7 @@ const utils_message = {
             <span>
                 Let ‘KoreaGuide’ start a special trip focused on the visitors
                 to Korea <br />
-                to provide both exiting fun and deep impression. 
+                to provide both exiting fun and deep impression.
                 <br /> The travel schedule has no commission shopping from the
                 beginning to the end.
                 <br /> Korean travel planners and professional premium guides
@@ -3034,8 +3046,8 @@ const utils_message = {
                 韩国的传统文化 美食 人文社会  还可 欣赏韩国美丽的本土山水等.{" "}
                 <br />
                 我们旅行社从来不要求游客强行购物   <br />
-                 我们旅行社为了接待尊贵游客们的行程 <br />
-                 我们准备好了专业的旅游行程规划和优秀的导游会为尊贵的游客们提供最优质的服务.
+                我们旅行社为了接待尊贵游客们的行程 <br />
+                我们准备好了专业的旅游行程规划和优秀的导游会为尊贵的游客们提供最优质的服务.
             </span>
         ),
     },
@@ -3248,10 +3260,10 @@ const utils_message = {
             <span>
                 是不是 游客们对韩国的历史特别感兴趣
                 <br />
-                 但是导游只给游客们讲购物的的事情呢? <br />
+                但是导游只给游客们讲购物的的事情呢? <br />
                 是不是游客喜欢购物 <br />
-                 但是 导游只讲韩国历史 <br />
-                 所以感到 旅行很乏味没有意思呢? <br />
+                但是 导游只讲韩国历史 <br />
+                所以感到 旅行很乏味没有意思呢? <br />
                 尊敬的游客您们
                 <br /> 觉得美丽而匆满活力的韩国本土旅游怎么开始好呢?
                 <br />

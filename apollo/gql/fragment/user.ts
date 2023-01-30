@@ -9,6 +9,7 @@ export const F_USER = gql`
         _id
         updatedAt
         createdAt
+        isPasswordChange
         stop
         name
         nickName
