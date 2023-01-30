@@ -3649,6 +3649,7 @@ body:not(.no-hover) .wrap-cat>a:focus {
 .owl-carousel .owl-item .item img {
   -o-object-fit: cover;
   object-fit: cover;
+  opacity: 0.7;
 }
 
 .owl-carousel .owl-item .item .caption h2,
@@ -26659,16 +26660,7 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
   margin-bottom: 0;
 }
 
-#newest-tour:after {
-  content: "";
-  position: absolute;
-  left: 50px;
-  right: 0;
-  bottom: -5px;
-  height: 4px;
-  width: 340px;
-  background: #db1a1c;
-}
+
 
 
 
@@ -26696,21 +26688,10 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
   text-transform: none;
 }
 
-#popular-guides:after {
-  content: "";
-  position: absolute;
-  left: 50px;
-  right: 0;
-  bottom: -5px;
-  height: 4px;
-  width: 405px;
-  background: #db1a1c;
-}
-
 @media screen and (max-width: 599px) {
   .txt-intro h2 span {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 35px;
+    line-height: 40px;
   }
 }
 
@@ -27199,7 +27180,7 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
 
 .bloc-slider-city .txt-intro {
   width: 60%;
-  text-align: right;
+  text-align: center;
   margin: 20px 0 40px 40%;
 }
 
@@ -33173,9 +33154,8 @@ body:not(.no-hover) .bloc-reviews .owl-carousel .owl-nav .owl-next span:hover {
 
 @media screen and (max-width: 599px) {
   .bloc-duo h2 {
-    font-size: 30px;
-    line-height: 40px;
-    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 35px;
   }
 }
 
