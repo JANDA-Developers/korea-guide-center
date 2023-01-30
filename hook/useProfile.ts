@@ -399,14 +399,8 @@ export const useProfile = (role: profileRole) => {
                 if (isOauthProfiling) {
                     toast.success(s("wellcometxt"));
                     router.push(Paths.locationalGuide);
-                } else if (!isPassword(passwordHook.value)) {
-                    console.log("passwordHook.value : ", passwordHook.value);
-                    toast.warn("올바른 비밀번호를 입력해주세요.");
-                } else if (!(passwordCheckHook.value === passwordHook.value)) {
-                    toast.warn("비밀번호가 일치하지 않습니다.");
-                } else {
-                    toast.success(profileUpdateCompleteMessage);
                 }
+                toast.success(profileUpdateCompleteMessage);
             });
         }
     };
