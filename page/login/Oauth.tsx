@@ -6,8 +6,6 @@ import { useEffect } from "react";
 import { SERVER_URI } from "../../apollo/uri";
 import { JDicon } from "../../component/icons/Icons";
 import { AppContext } from "../../context/context";
-import { Paths } from "../../pages/index[depre]";
-import { updateURLParameters } from "../../utils/getUpdateUrlParam";
 import { removeUrlParameter } from "../../utils/url";
 
 interface IProp {
