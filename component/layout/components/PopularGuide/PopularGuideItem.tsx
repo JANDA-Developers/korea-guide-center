@@ -21,7 +21,7 @@ const PopularGuideItem = ({
     role,
 }: IPopularGuideItem) => {
     const router = useRouter();
-    const { l } = useContext(AppContext);
+    const { s, l } = useContext(AppContext);
     return (
         <div
             className="item bloc-card free"
@@ -67,7 +67,7 @@ const PopularGuideItem = ({
                         width: "100%",
                     }}
                 >
-                    Profile
+                    {s("seeMoreAboutGuide")}
                 </span>
                 {/* <span className="price">Free</span> */}
             </div>

@@ -467,13 +467,13 @@ const utils_message = {
         ko: "비밀번호 변경을 실패했습니다.",
         en: "Password change failed.",
         ja: "パスワードの変更に失敗しました。",
-        chi: "更改密码失败。"
+        chi: "更改密码失败。",
     },
     passwordChangeSuccessMessage: {
         ko: "비밀번호가 변경되었습니다.",
         en: "Password change succeded",
         ja: "パスワードが変更されました。",
-        chi: "密码已更改。"
+        chi: "密码已更改。",
     },
     logOut: {
         ko: "로그아웃",
@@ -3900,7 +3900,7 @@ const utils_message = {
         chi: "Korea Guide Center为连接全世界明智的旅行者提供了无限的可能性。 导游可以呼吸新鲜空气,漫步于心爱的那个地区,与喜欢旅行的人一起发现迷人的地区文化、历史和快乐,同时带来与全世界人民共享的最有意义和快乐。 请在Korea Guide Center上展开对城市及其历史的深切关心和对讲故事的素质,以有魅力、有趣的方式传达信息的能力。 请与Korea Guide Center一起宣传导游的旅行。 我们将与世界分享您的地区，旅行！",
     },
     findGuidesButton: {
-        ko: "가이드 등록하기",
+        ko: "가이드 지원하기",
         en: "To register a Guide",
         ja: "ガイド登録",
         chi: "注册向导",
