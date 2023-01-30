@@ -6,21 +6,6 @@ const AboutSectionLinks = () => {
         <div className="col-wrapper bloc-medium bloc-duo">
             <h2>ABOUT KOREA GUIDE</h2>
             <div className="wrapper-link">
-                <a>
-                    <figure className="fit-cover o70">
-                        <img
-                            src="img/aboutus/aboutuscity.jpg"
-                            alt=""
-                            width="953"
-                            height="360"
-                            className="lazy"
-                        />
-                    </figure>
-                    <div className="caption">
-                        {/* <h3>KoreaGuide Partner Network</h3>
-                        <span className="basic-link">Discover</span> */}
-                    </div>
-                </a>
                 <a href={Paths.companyIntroduction}>
                     <figure className="fit-cover o70">
                         <img
