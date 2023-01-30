@@ -4,7 +4,7 @@ const RegionTourSliderTextIntro = () => {
     return (
         <div className="txt-intro">
             <h2>
-                KOREA <strong>GUIDE</strong>
+                <strong>KOREA GUIDE</strong>
             </h2>
         </div>
     );
