@@ -33309,6 +33309,10 @@ body:not(.no-hover) .bloc-duo .wrapper-link>*:focus .caption .basic-link:after {
   margin-bottom: 5px;
 }
 
+.min-zero {
+  min-height: 0px !important;
+}
+
 @media screen and (max-width: 599px) {
   .bloc-duo .wrapper-link>* .caption h3 {
     font-size: 24px;

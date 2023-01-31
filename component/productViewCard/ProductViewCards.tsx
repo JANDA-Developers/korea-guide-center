@@ -120,6 +120,7 @@ export const ProductViewCards: React.FunctionComponent<IProp> = ({
     const options = React.useMemo<Partial<OwlCarouselProps>>(() => {
         return {
             stageOuterClass: "owl-stage-outer owl-height",
+            loadedClass: "min-zero",
             responsiveClass: true,
             items: 4,
             dots: false,
