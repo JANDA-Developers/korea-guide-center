@@ -32,7 +32,7 @@ import {
 } from "../../component/productSorters/ProductSorters";
 import {
     ProductViewCards,
-
+    ProductViewCards2,
 } from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
@@ -52,10 +52,7 @@ interface ISearchPageQuery {
     sort?: _ProductSort[];
 }
 
-
-
-interface IProp { }
-
+interface IProp {}
 
 export const Search: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
@@ -66,11 +63,11 @@ export const Search: React.FC<IProp> = () => {
     const { s, catMap, l, groupsNonIndex } = useContext(AppContext);
     const [reload, setReload] = useState<boolean>(false);
 
-    console.log("urlSearchParam", urlSearchParam)
+    console.log("urlSearchParam", urlSearchParam);
 
     const { filter: _filter, sort: _sort } = generateFilter(urlSearchParam);
 
-    console.log("title", title)
+    console.log("title", title);
 
     const productListHook = useProductList(
         {
@@ -101,13 +98,13 @@ export const Search: React.FC<IProp> = () => {
     } = productListHook;
 
     useEffect(() => {
-        console.log("productListHook", productListHook)
-    }, [productListHook])
+        console.log("productListHook", productListHook);
+    }, [productListHook]);
 
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
         urlSearchParam.filter?.categoryMini__id__in?.[0] ===
-        filter?.categoryMini__id__in?.[0];
+            filter?.categoryMini__id__in?.[0];
     const urlSerchCat = catMap.ITEM_SMALL.find(
         (cat) => cat._id === urlSearchParam.filter?.categoryMini__id__in?.[0]
     );
@@ -121,7 +118,7 @@ export const Search: React.FC<IProp> = () => {
         // if (reload) {
         //     router.push(`/product/searchTemp?title=${title}`)
         // }
-        setReload((prev) => !prev)
+        setReload((prev) => !prev);
     }, [urlSearchParam.title]);
 
     // 🚧🚧🚧🚧🚧여긴 내가 만든 내세상이야!🚧🚧🚧🚧🚧
@@ -129,7 +126,7 @@ export const Search: React.FC<IProp> = () => {
         (group) => group.members
     );
 
-    console.log("evneryGroupProducts", evneryGroupProducts)
+    console.log("evneryGroupProducts", evneryGroupProducts);
 
     const { items: product } = useProductList({
         fixingFilter: {
@@ -139,10 +136,9 @@ export const Search: React.FC<IProp> = () => {
 
     const gropsWithProducts = groupProductMap(product, groupsNonIndex || []);
     const filterd = gropsWithProducts.filter((gp) => !isEmpty(gp.products));
-    console.log("gropsWithProducts", gropsWithProducts)
-    console.log("filterd", filterd)
+    console.log("gropsWithProducts", gropsWithProducts);
+    console.log("filterd", filterd);
     // 🚧🚧🚧🚧🚧🚧
-
 
     if (networkStatus === 1) return null;
     return (
@@ -158,8 +154,7 @@ export const Search: React.FC<IProp> = () => {
                     hide={!hasUrlCatMiniFilter || !urlSerchCat?.label}
                     size="h6"
                     weight={600}
-                >
-                </JDtypho>
+                ></JDtypho>
                 <JDtypho
                     mr
                     className="search__searchCount"
@@ -168,8 +163,6 @@ export const Search: React.FC<IProp> = () => {
                     weight={600}
                 >
                     <Primary mr="tiny">{title}</Primary>
-
-
                 </JDtypho>
 
                 <Flex oneone className="search__wrapper">
@@ -196,7 +189,6 @@ export const Search: React.FC<IProp> = () => {
                                 size="h6"
                                 weight={600}
                             >
-
                                 {s("searchResult")}
                             </JDtypho>
                             <Flex between>
@@ -237,20 +229,20 @@ export const Search: React.FC<IProp> = () => {
                                 </ScrollBox>
                             </Flex>
 
-
                             {isEmpty(products) ? (
                                 <div>
-                                    {filterd[0] ?
-                                        <ProductViewCards wrap products={filterd[0]?.products} />
-                                        : null}
+                                    {filterd[0] ? (
+                                        <ProductViewCards2
+                                            wrap
+                                            products={filterd[0]?.products}
+                                        />
+                                    ) : null}
 
                                     {/* {filterd[0]?.products ? filterd[0]?.products.map(fil => {
                                         <div>123</div>
                                     }) : null} */}
-
                                 </div>
                             ) : null}
-
 
                             <EmptyInfo
                                 empty={isEmpty(gropsWithProducts[0]?.products)}
