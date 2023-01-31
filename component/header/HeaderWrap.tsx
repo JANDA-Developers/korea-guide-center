@@ -107,6 +107,7 @@ export const HeaderWrap: React.FC<IProp> = ({ setSide, sideOpen }) => {
             onMenuClick={() => {
                 setSide(!sideOpen);
             }}
+            isHideIcon={isBooker}
         >
             <Flex style={{ flex: 1, position: "relative", width: "100%" }} center vCenter>
                 <div style={{
@@ -118,6 +119,7 @@ export const HeaderWrap: React.FC<IProp> = ({ setSide, sideOpen }) => {
                         코리아 가이드센터의 가이드가 되어 활동 해보세요.
                     </Bold>
                     <Bold hide={!isMaster}>마스터계정</Bold>
+
                 </div>
 
                 {/* 로고 및 홈으로 가는 배너 */}
