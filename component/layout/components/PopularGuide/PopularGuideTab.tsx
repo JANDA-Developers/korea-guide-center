@@ -38,7 +38,6 @@ const options = {
     items: 4,
     dots: false,
     nav: true,
-    autoWidth: true,
     navText: [
         `<span><svg width="50px" height="100px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
@@ -47,6 +46,51 @@ const options = {
     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
   </svg></span>`,
     ],
+    responsive: {
+        0: {
+            items: 2,
+            margin: 200,
+        },
+        300: {
+            items: 2,
+            margin: 250,
+        },
+        400: {
+            items: 2,
+            margin: 200,
+        },
+        560: {
+            items: 2,
+            margin: -100,
+        },
+        600: {
+            items: 2,
+            margin: 5,
+        },
+        688: {
+            items: 2,
+            margin: -100,
+        },
+        700: {
+            items: 2,
+            margin: -200,
+        },
+        800: {
+            items: 3,
+            margin: 20,
+        },
+        1024: {
+            items: 3,
+            margin: -100,
+        },
+        1280: {
+            items: 4,
+            margin: -50,
+        },
+        1400: {
+            items: 4,
+        },
+    },
 };
 
 const PopularGuideTab: React.FC<IGuideMovieCardsWithApi> = ({
