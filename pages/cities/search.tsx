@@ -165,9 +165,7 @@ export const Search: React.FC<IProp> = () => {
     const { selectedCitiesRegion, onClick: selectCitiesRegion } =
         citiesKoreaHook;
 
-    console.log(region);
     const data = regionableData[mapRegion[region!]];
-    console.log(mapRegion[region!]);
 
     const productListHook = useProductList(
         {
