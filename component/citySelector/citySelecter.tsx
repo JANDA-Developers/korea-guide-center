@@ -61,7 +61,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                 <ItemList>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.seoul as keyof typeof regionableData
                                 ].queryTitle![
@@ -78,7 +78,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.busan as keyof typeof regionableData
                                 ].queryTitle![
@@ -95,7 +95,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.daegu as keyof typeof regionableData
                                 ].queryTitle![
@@ -112,7 +112,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.Incheon as keyof typeof regionableData
                                 ].queryTitle![
@@ -129,7 +129,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.Gwangju as keyof typeof regionableData
                                 ].queryTitle![
@@ -146,7 +146,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.Daejeon as keyof typeof regionableData
                                 ].queryTitle![
@@ -163,7 +163,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.Ulsan as keyof typeof regionableData
                                 ].queryTitle![
@@ -180,7 +180,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.Sejong as keyof typeof regionableData
                                 ].queryTitle![
@@ -197,7 +197,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.Jeju as keyof typeof regionableData
                                 ].queryTitle![
@@ -214,7 +214,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.SouthGyeongsang as keyof typeof regionableData
                                 ].queryTitle![
@@ -231,7 +231,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.NorthGyeongsang as keyof typeof regionableData
                                 ].queryTitle![
@@ -248,7 +248,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.SouthJeolla as keyof typeof regionableData
                                 ].queryTitle![
@@ -265,7 +265,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.NorthJeolla as keyof typeof regionableData
                                 ].queryTitle![
@@ -282,7 +282,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.SouthChungcheong as keyof typeof regionableData
                                 ].queryTitle![
@@ -299,7 +299,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.NorthChungcheong as keyof typeof regionableData
                                 ].queryTitle![
@@ -316,7 +316,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.Gangwon as keyof typeof regionableData
                                 ].queryTitle![
@@ -333,7 +333,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                     </Item>
                     <Item
                         onClick={() => {
-                            location.href = `${locale}/cities/search?title=${
+                            location.href = `/${locale}/cities/search?title=${
                                 regionableData[
                                     mapRegion.Gyeonggi as keyof typeof regionableData
                                 ].queryTitle![

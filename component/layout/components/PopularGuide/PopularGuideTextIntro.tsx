@@ -1,6 +1,13 @@
+import { useRouter } from "next/router";
 import React from "react";
+import { SeeMore } from "../../../../atom/SeeMore";
+import NewestTourTabBar from "../NewestTour/NewestTourTabBar";
 
 const PopularGuideTextIntro = () => {
+    const router = useRouter();
+    const onClick = () => {
+        router.push("/guides");
+    };
     return (
         <div className="txt-intro">
             <h2>
@@ -18,7 +25,9 @@ const PopularGuideTextIntro = () => {
                     GUIDES
                 </span>
             </h2>
+
             <div className="align-btn-right"></div>
+            <SeeMore onSeeMore={onClick} />
         </div>
     );
 };

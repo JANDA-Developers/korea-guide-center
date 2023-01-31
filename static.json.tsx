@@ -73,6 +73,12 @@ const utils_message = {
         ja: `Joyful Korea Trip`,
         chi: `Joyful Korea Trip`,
     },
+    city: {
+        ko: "도시",
+        en: "City",
+        ja: "都市",
+        chi: "城市",
+    },
     selectCity: {
         ko: "도시 선택",
         en: `Select a City`,

@@ -137,7 +137,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
         partnerNetwork: false,
         searchBar: false,
     });
-    const { s, l } = useContext(AppContext);
+    const { s, l, locale } = useContext(AppContext);
     const searchHook = useInput("");
     const toSearchPage = () => {
         const to = searchPageQueryGenerate({ title: searchHook.value });
@@ -188,7 +188,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                             onClick={onClickMenus}
                             isSelected={view.cities}
                         >
-                            도시
+                            {s("city")}
                         </SideNavItem>
                     </SideNav>
                     <SearchAndCities>
@@ -228,7 +228,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/seoul.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=서울`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.seoul as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -240,7 +250,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/busan.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=부산`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.busan as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -252,7 +272,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/daegu.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=대구`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.daegu as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -266,7 +296,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Incheon.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=인천`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.Incheon as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -278,7 +318,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Gwangju.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=광주`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.Gwangju as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -290,7 +340,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Daejeon.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=대전`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.Daejeon as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -304,7 +364,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Ulsan.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=울산`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.Ulsan as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -316,7 +386,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Sejong.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=세종`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.Sejong as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -328,7 +408,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Jeju.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=제주`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.Jeju as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -342,7 +432,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/SouthGyeongsang.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=경남`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.SouthGyeongsang as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -354,7 +454,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/NorthGyeongsang.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=경북`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.NorthGyeongsang as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -366,7 +476,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/SouthJeolla.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=전남`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.SouthJeolla as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -380,7 +500,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/NorthJeolla.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=전북`;
+                                            location.href = `/${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.NorthJeolla as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -392,7 +522,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/SouthChungcheong.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=충남`;
+                                            location.href = `${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.SouthChungcheong as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -404,7 +544,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/NorthChungcheong.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=충북`;
+                                            location.href = `${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.NorthChungcheong as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -418,7 +568,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Gangwon.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=강원`;
+                                            location.href = `${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.Gangwon as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(
@@ -430,7 +590,17 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Gyeonggi.jpg"
                                         onClick={() => {
-                                            location.href = `/cities/search?title=경기`;
+                                            location.href = `${locale}/cities/search?title=${
+                                                regionableData[
+                                                    mapRegion.Gyeonggi as keyof typeof regionableData
+                                                ].queryTitle![
+                                                    locale! as
+                                                        | "ko"
+                                                        | "en"
+                                                        | "ja"
+                                                        | "chi"
+                                                ]
+                                            }`;
                                         }}
                                     >
                                         {l(

@@ -26667,6 +26667,36 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
   margin-bottom: 0;
 }
 
+.txt-intro-more {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.txt-intro-more-button {
+  margin: 0;
+  margin-top: 0px;
+padding: 15px 50px;
+border-radius: 4px;
+background-color: #db1a1c;
+font-family: "Coco Gothic", Sans-Serif;
+font-size: 14px;
+font-weight: 700;
+color: #fff;
+line-height: 24px;
+text-decoration: none;
+cursor: pointer;
+transition: all 0.3s ease;
+border-color: #fff;
+min-width: 100px;
+text-align: center;
+padding: 5px 10px;
+position: relative;
+display: inline-block;
+transition: all 0.2s ease;
+}
+
 
 
 

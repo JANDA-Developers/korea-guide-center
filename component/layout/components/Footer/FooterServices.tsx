@@ -151,7 +151,7 @@ const FooterServices = () => {
                         <li key={index}>
                             <a
                                 onClick={() => {
-                                    location.href = `${locale}/cities/search?title=${
+                                    location.href = `/${locale}/cities/search?title=${
                                         item.queryTitle[
                                             locale! as
                                                 | "ko"
