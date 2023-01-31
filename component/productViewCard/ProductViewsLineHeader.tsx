@@ -20,7 +20,7 @@ export const ProductViewsLineHeader: React.FC<IProp> = ({
     onSeeMore,
 }) => {
     return (
-        <JDalign className="productViewsLineHeader">
+        <JDalign className="productViewsLineHeader2">
             <Flex>
                 <Flex
                     style={{
@@ -38,6 +38,7 @@ export const ProductViewsLineHeader: React.FC<IProp> = ({
                     />
                 )}
             </Flex>
+
             <JDtypho mb hide={!description} color="grey3">
                 {description}
             </JDtypho>

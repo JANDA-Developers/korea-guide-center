@@ -9,6 +9,17 @@
     }
 }
 
+.productViewsLineHeader2 {
+    position: relative;
+    margin-bottom: 1.3rem;
+    .productViewsLineHeader__seeMore {
+        font-size: 16px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
 .regionGuideButton{
     border-radius: 30px;
     background-color: #D0242B;
@@ -18,5 +29,4 @@
     color:white;
     font-size: 18px;
     font-weight: 500;
-
 }
