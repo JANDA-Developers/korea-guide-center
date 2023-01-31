@@ -20,6 +20,7 @@ import ProfileModal, { Tservice } from "../profile/ProfileModal";
 import Header from "./Header";
 import { Paths } from "../../pages/index[depre]";
 import { useRouter } from "next/router";
+import { Logo } from "../logo/Logo";
 
 interface IProp {
     key?: string;
@@ -28,10 +29,13 @@ interface IProp {
 }
 
 export const HeaderWrap: React.FC<IProp> = ({ setSide, sideOpen }) => {
+
     const router = useRouter();
     const history = useHistory();
     const profileDropBoxHook = useDropDown();
     const notiDropDownHook = useDropDown();
+
+
 
     const context = useContext(GuideContext);
     const { me, isLogin, alertModalHook, isBooker, isGuide, isMaster } =
@@ -45,6 +49,7 @@ export const HeaderWrap: React.FC<IProp> = ({ setSide, sideOpen }) => {
         },
     });
 
+
     const [read] = useSystemNotiRead();
     const { data } = useUnReadNotifiFind({
         skip: !isLogin,
@@ -54,8 +59,8 @@ export const HeaderWrap: React.FC<IProp> = ({ setSide, sideOpen }) => {
 
     const seriousNoti = unReadLength
         ? (unReadNoties || []).find(
-              (d) => d.severity === SystemNotiSeverity.Serious
-          )
+            (d) => d.severity === SystemNotiSeverity.Serious
+        )
         : undefined;
 
     useEffect(() => {
@@ -95,6 +100,7 @@ export const HeaderWrap: React.FC<IProp> = ({ setSide, sideOpen }) => {
         },
     ];
 
+
     return (
         <Header
             sideOpen={sideOpen}
@@ -102,17 +108,34 @@ export const HeaderWrap: React.FC<IProp> = ({ setSide, sideOpen }) => {
                 setSide(!sideOpen);
             }}
         >
-            <Flex style={{ flex: 1 }} between vCenter>
-                <div>
+            <Flex style={{ flex: 1, position: "relative", width: "100%" }} center vCenter>
+                <div style={{
+                    position: "absolute",
+                    left: 0,
+                    width: "fit-content"
+                }}>
                     <Bold className="header__welecomMessage" hide={!isBooker}>
                         코리아 가이드센터의 가이드가 되어 활동 해보세요.
                     </Bold>
                     <Bold hide={!isMaster}>마스터계정</Bold>
                 </div>
+
+                {/* 로고 및 홈으로 가는 배너 */}
+                <JDalign
+                    onClick={() => {
+                        router.push("/");
+                    }} >
+                    <div className="logoContainer">
+                        <Logo className="bookHeader__logo" />
+                    </div>
+                </JDalign>
+
                 <JDalign
                     hide={!isLogin}
                     style={{
-                        position: "relative",
+                        position: "absolute",
+                        right: 0
+
                     }}
                     flex={{
                         vCenter: true,
