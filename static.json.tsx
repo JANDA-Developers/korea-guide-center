@@ -471,7 +471,7 @@ const utils_message = {
     },
     passwordChangeSuccessMessage: {
         ko: "비밀번호가 변경되었습니다.",
-        en: "Password change succeded",
+        en: "Password change succeeded",
         ja: "パスワードが変更されました。",
         chi: "密码已更改。",
     },
