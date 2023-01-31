@@ -1196,8 +1196,15 @@ body:not(.no-hover) .basic-link:focus:after {
 @media screen and (max-width: 599px) {
   .btn {
     padding: 7px 25px;
+    font-size : 12px;
   }
 }
+
+
+
+
+
+
 
 body:not(.no-hover) .btn:hover,
 body:not(.no-hover) .btn:focus {
