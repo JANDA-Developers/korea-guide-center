@@ -18,9 +18,9 @@ export const whenMultiKeyPress =
                 const withkeyTriggered = ctrlAB || altAB || shiftAB;
                 const keyMatched = e.key === key;
 
-                console.log("e.ky", e.key);
+                // console.log("e.ky", e.key);
 
-                console.log("keyMatched", keyMatched);
+                // console.log("keyMatched", keyMatched);
 
                 if (withkeyTriggered && keyMatched) {
                     callBack(e, key, withKey);
