@@ -27,8 +27,13 @@ export const password_condition = (
     const { s } = useContext(AppContext);
     return (
         <span>
-            <span className={length && enAndNumber ? "" : "JDtextColor--point"}>
-                비밀번호는 숫자가 포함된 8~16{s("digit")}로 되어야 합니다.
+            <span
+                className={
+                    length && special && enAndNumber ? "" : "JDtextColor--point"
+                }
+            >
+                비밀번호는 특수문자 1개, 숫자가 포함된 8~16{s("digit")}로 되어야
+                합니다.
             </span>
         </span>
     );
