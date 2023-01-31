@@ -191,7 +191,7 @@ export const Search: React.FC<IProp> = () => {
                     size="h6"
                     weight={600}
                 >
-                    <span style={{ color: "#D0242B" }}>{l(urlSerchCat?.label)}&nbsp;</span> {s("searchResult")}
+                    <Primary mr="tiny">{l(urlSerchCat?.label)}</Primary>{` `} {s("searchResult")}
                 </JDtypho>
                 <JDtypho
                     mr
