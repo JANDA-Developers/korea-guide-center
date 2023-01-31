@@ -74,13 +74,13 @@ export const HeaderWrap: React.FC<IProp> = ({ setSide, sideOpen }) => {
 
     const services: Tservice[] = [
         {
-            title: "여행자페이지",
+            title: "계정프로필",
             onClick: () => {
-                router.push(Paths.itstheme);
+                router.push(Paths.bookerProfile);
             },
         },
         {
-            title: "마이페이지",
+            title: "가이드프로필",
             onClick: () => {
                 history.push("/");
             },
