@@ -27,7 +27,10 @@ import {
     RatingSort,
     ReviwCountSort,
 } from "../../component/productSorters/ProductSorters";
-import { ProductViewCards } from "../../component/productViewCard/ProductViewCards";
+import {
+    ProductViewCards,
+    ProductViewCards2,
+} from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
 import { useProductList } from "../../hook/useProduct";
 import { updateURLParameters, UrlParam } from "../../utils/getUpdateUrlParam";
@@ -40,6 +43,7 @@ import { regionableData, mapRegion2 } from "../../component/koreaMap/KoreaData";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "../../recoil/atoms";
 import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCardsWithApi";
+import { ProductViewCard2 } from "../../component/productViewCard/ProductViewCard";
 
 interface ISearchPageQuery {
     title?: string;
@@ -301,7 +305,7 @@ export const Search: React.FC<IProp> = () => {
                                 padding={8}
                             />
 
-                            <ProductViewCards wrap products={products} />
+                            <ProductViewCards2 wrap products={products} />
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />
