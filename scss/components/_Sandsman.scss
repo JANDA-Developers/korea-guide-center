@@ -33318,6 +33318,9 @@ body:not(.no-hover) .bloc-duo .wrapper-link>*:focus .caption .basic-link:after {
 
 .min-zero {
   min-height: 0px !important;
+  white-space:unset !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
 }
 
 @media screen and (max-width: 599px) {
