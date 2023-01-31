@@ -10,6 +10,7 @@ interface RegionTourSliderItemProps {
         chi: string;
     };
     imageUrl: string;
+    region?: string;
 }
 
 // 캐러셀에 들어가는 요소들
@@ -17,6 +18,7 @@ const RegionTourSliderItem = ({
     title,
     queryTitle,
     imageUrl,
+    region,
 }: RegionTourSliderItemProps) => {
     const { s, locale } = useContext(AppContext);
 
@@ -26,7 +28,7 @@ const RegionTourSliderItem = ({
                 onClick={() => {
                     location.href = `/${locale}/cities/search?title=${
                         queryTitle[locale! as "ko" | "en" | "ja" | "chi"]
-                    }`;
+                    }&region=${region}`;
                 }}
             >
                 <figure className="o80">

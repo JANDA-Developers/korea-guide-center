@@ -67,7 +67,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=seoul`;
                         }}
                     >
                         {l(
@@ -84,7 +84,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=busan`;
                         }}
                     >
                         {l(
@@ -101,7 +101,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=daegu`;
                         }}
                     >
                         {l(
@@ -118,7 +118,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=Incheon`;
                         }}
                     >
                         {l(
@@ -135,7 +135,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=Gwangju`;
                         }}
                     >
                         {l(
@@ -152,7 +152,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=Daejeon`;
                         }}
                     >
                         {l(
@@ -169,7 +169,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=Ulsan`;
                         }}
                     >
                         {l(
@@ -186,7 +186,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=Sejong`;
                         }}
                     >
                         {l(
@@ -203,7 +203,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=Jeju`;
                         }}
                     >
                         {l(
@@ -220,7 +220,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=SouthGyeongsang`;
                         }}
                     >
                         {l(
@@ -237,7 +237,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=NorthGyeongsang`;
                         }}
                     >
                         {l(
@@ -254,7 +254,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=SouthJeolla`;
                         }}
                     >
                         {l(
@@ -271,7 +271,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=NorthJeolla`;
                         }}
                     >
                         {l(
@@ -288,7 +288,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=SouthChungcheong`;
                         }}
                     >
                         {l(
@@ -305,7 +305,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=NorthChungcheong`;
                         }}
                     >
                         {l(
@@ -322,7 +322,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=Gangwon`;
                         }}
                     >
                         {l(
@@ -339,7 +339,7 @@ export const CitySelecter: React.FC<IProp> = ({ ...props }) => {
                                 ].queryTitle![
                                     locale! as "ko" | "en" | "ja" | "chi"
                                 ]
-                            }`;
+                            }&region=Gyeonggi`;
                         }}
                     >
                         {l(

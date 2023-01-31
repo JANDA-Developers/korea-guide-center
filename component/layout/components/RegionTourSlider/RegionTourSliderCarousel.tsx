@@ -14,6 +14,7 @@ export interface IRegionSliderItem {
     };
     products?: number; // 혹시 몰라서 만들어둠
     imageUrl: string;
+    region?: string;
 }
 
 const SlickArrowLeft = ({ currentSlide, slideCount, ...props }: any) => (
@@ -87,6 +88,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
+            region: "seoul",
         },
         {
             title: l(
@@ -101,6 +103,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/busan.jpg",
+            region: "busan",
         },
         {
             title: l(
@@ -115,6 +118,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/daegu.jpg",
+            region: "daegu",
         },
         {
             title: l(
@@ -129,6 +133,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/Incheon.jpg",
+            region: "Incheon",
         },
         {
             title: l(
@@ -143,6 +148,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/Gwangju.jpg",
+            region: "Gwangju",
         },
         {
             title: l(
@@ -157,6 +163,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/Daejeon.jpg",
+            region: "Daejeon",
         },
         {
             title: l(
@@ -171,6 +178,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/Ulsan.jpg",
+            region: "Ulsan",
         },
         {
             title: l(
@@ -185,6 +193,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/Sejong.jpg",
+            region: "Sejong",
         },
         {
             title: l(
@@ -199,6 +208,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/Jeju.jpg",
+            region: "Jeju",
         },
         {
             title: l(
@@ -214,6 +224,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/SouthGyeongsang.jpg",
+            region: "SouthGyeongsang",
         },
         {
             title: l(
@@ -229,6 +240,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/NorthGyeongsang.jpg",
+            region: "NorthGyeongsang",
         },
         {
             title: l(
@@ -244,6 +256,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/SouthJeolla.jpg",
+            region: "SouthJeolla",
         },
         {
             title: l(
@@ -259,6 +272,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/NorthJeolla.jpg",
+            region: "NorthJeolla",
         },
         {
             title: l(
@@ -274,6 +288,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/SouthChungcheong.jpg",
+            region: "SouthChungcheong",
         },
         {
             title: l(
@@ -289,6 +304,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/NorthChungcheong.jpg",
+            region: "NorthChungcheong",
         },
         {
             title: l(
@@ -303,6 +319,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/Gangwon.jpg",
+            region: "Gangwon",
         },
         {
             title: l(
@@ -318,6 +335,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/Gyeonggi.jpg",
+            region: "Gyeonggi",
         },
         {
             title: l(
@@ -332,6 +350,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/dmz.jpg",
+            region: "dmz",
         },
         {
             title: s("ServicesCustom"),
@@ -343,6 +362,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/CustomTour.jpg",
+            region: "Custom",
         },
         {
             title: s("ServicesMICE"),
@@ -354,6 +374,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/MICE.jpg",
+            region: "Mice",
         },
         {
             title: s("ServicesDriving"),
@@ -365,6 +386,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/DrivingTour.jpg",
+            region: "Driving",
         },
         {
             title: s("ServicesWellness"),
@@ -376,6 +398,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/WellnessMedical.jpg",
+            region: "WellnessMedical",
         },
         {
             title: s("ServicesLocalFestival"),
@@ -387,6 +410,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/LocalFestival.jpg",
+            region: "LocalFestival",
         },
         {
             title: s("ServicesTranlate"),
@@ -398,6 +422,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/InterpreterGuide.jpg",
+            region: "Interpreter",
         },
         {
             title: s("ServicesBarrierFree"),
@@ -409,6 +434,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/BarrierFree.jpg",
+            region: "BarrierFree",
         },
         {
             title: s("ServicesVIP"),
@@ -420,6 +446,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/VIPexhibition.jpg",
+            region: "VIPexhibition",
         },
         {
             title: s("ServicesRealEstate"),
@@ -431,6 +458,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/RealEstate.jpg",
+            region: "RealEstate",
         },
         {
             title: s("ServicesStudyingAbroad"),
@@ -442,6 +470,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/StudyAbroad.jpg",
+            region: "StudyAbroad",
         },
         {
             title: s("ServicesLongStay"),
@@ -453,6 +482,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/LongStay.jpg",
+            region: "LongStay",
         },
         {
             title: s("ServicesCook"),
@@ -464,6 +494,7 @@ const RegionTourSliderCarousel = () => {
             },
             products: 0,
             imageUrl: "img/cities/CookTour.jpg",
+            region: "Cook",
         },
     ];
 
@@ -512,6 +543,7 @@ const RegionTourSliderCarousel = () => {
                         title={item.title}
                         imageUrl={item.imageUrl}
                         queryTitle={item.queryTitle}
+                        region={item.region}
                     />
                 );
             })}

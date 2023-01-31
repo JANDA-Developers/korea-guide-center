@@ -36,13 +36,48 @@ import { ScrollBox } from "../../component/scrollBox/ScrollBox";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
 import { useCitiesKoreaMap } from "../../hook/useKoreaMap";
-import { regionableData, mapRegion2 } from "../../component/koreaMap/KoreaData";
+import {
+    regionableData,
+    mapRegion2,
+    mapRegion,
+} from "../../component/koreaMap/KoreaData";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "../../recoil/atoms";
 import { ProductViewCardsWithApi } from "../../component/productViewCard/ProductViewCardsWithApi";
 
 interface ISearchPageQuery {
     title?: string;
+    region?:
+        | "dmz"
+        | "seoul"
+        | "busan"
+        | "daegu"
+        | "Incheon"
+        | "Gwangju"
+        | "Daejeon"
+        | "Ulsan"
+        | "Sejong"
+        | "Jeju"
+        | "SouthGyeongsang"
+        | "NorthGyeongsang"
+        | "SouthJeolla"
+        | "NorthJeolla"
+        | "SouthChungcheong"
+        | "NorthChungcheong"
+        | "Gangwon"
+        | "Gyeonggi"
+        | "Custom"
+        | "Mice"
+        | "Driving"
+        | "WellnessMedical"
+        | "LocalFestival"
+        | "Interpreter"
+        | "BarrierFree"
+        | "VIPexhibition"
+        | "RealEstate"
+        | "StudyAbroad"
+        | "LongStay"
+        | "Cook";
     filter?: _ProductFilter;
     sort?: _ProductSort[];
 }
@@ -119,8 +154,8 @@ export const Search: React.FC<IProp> = () => {
     const [detailSearch, setDetailSearch] = useState<boolean>(true);
     const urlSearchParam = getSearchPageQuery();
 
-    const { title } = urlSearchParam;
-    const { s, catMap, l } = useContext(AppContext);
+    const { title, region } = urlSearchParam;
+    const { s, catMap, l, locale } = useContext(AppContext);
     const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
 
     const { filter: _filter, sort: _sort } = generateFilter(urlSearchParam);
@@ -130,7 +165,9 @@ export const Search: React.FC<IProp> = () => {
     const { selectedCitiesRegion, onClick: selectCitiesRegion } =
         citiesKoreaHook;
 
-    const data = regionableData[selectedCitiesRegion];
+    console.log(region);
+    const data = regionableData[mapRegion[region!]];
+    console.log(mapRegion[region!]);
 
     const productListHook = useProductList(
         {
@@ -173,11 +210,11 @@ export const Search: React.FC<IProp> = () => {
                 ...filter,
             });
             setMenuOpen(false);
-            selectCitiesRegion(translateKoreanToEnglish(title!));
+            selectCitiesRegion(mapRegion[region!]);
         }
     }, [title]);
 
-    console.log("selectedCitiesRegion : " + selectedCitiesRegion);
+    console.log(data);
 
     if (networkStatus === 1) return null;
     return (

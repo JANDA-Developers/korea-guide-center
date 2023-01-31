@@ -238,7 +238,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=seoul`;
                                         }}
                                     >
                                         {l(
@@ -260,7 +260,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=busan`;
                                         }}
                                     >
                                         {l(
@@ -282,7 +282,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=daegu`;
                                         }}
                                     >
                                         {l(
@@ -306,7 +306,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=Incheon`;
                                         }}
                                     >
                                         {l(
@@ -328,7 +328,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=Gwangju`;
                                         }}
                                     >
                                         {l(
@@ -350,7 +350,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=Daejeon`;
                                         }}
                                     >
                                         {l(
@@ -374,7 +374,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=Ulsan`;
                                         }}
                                     >
                                         {l(
@@ -396,7 +396,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=Sejong`;
                                         }}
                                     >
                                         {l(
@@ -418,7 +418,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=Jeju`;
                                         }}
                                     >
                                         {l(
@@ -442,7 +442,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=SouthGyeongsang`;
                                         }}
                                     >
                                         {l(
@@ -464,7 +464,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=NorthGyeongsang`;
                                         }}
                                     >
                                         {l(
@@ -486,7 +486,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=SouthJeolla`;
                                         }}
                                     >
                                         {l(
@@ -510,7 +510,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=NorthJeolla`;
                                         }}
                                     >
                                         {l(
@@ -532,7 +532,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=SouthChungcheong`;
                                         }}
                                     >
                                         {l(
@@ -554,7 +554,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=NorthChungcheong`;
                                         }}
                                     >
                                         {l(
@@ -578,7 +578,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=Gangwon`;
                                         }}
                                     >
                                         {l(
@@ -600,7 +600,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                                         | "ja"
                                                         | "chi"
                                                 ]
-                                            }`;
+                                            }&region=Gyeonggi`;
                                         }}
                                     >
                                         {l(

@@ -19,6 +19,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/seoul.jpg",
+            region: "seoul",
         },
         {
             title: l(
@@ -33,6 +34,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/busan.jpg",
+            region: "busan",
         },
         {
             title: l(
@@ -47,6 +49,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/daegu.jpg",
+            region: "daegu",
         },
         {
             title: l(
@@ -61,6 +64,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/Incheon.jpg",
+            region: "Incheon",
         },
         {
             title: l(
@@ -75,6 +79,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/Gwangju.jpg",
+            region: "Gwangju",
         },
         {
             title: l(
@@ -89,6 +94,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/Daejeon.jpg",
+            region: "Daejeon",
         },
         {
             title: l(
@@ -103,6 +109,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/Ulsan.jpg",
+            region: "Ulsan",
         },
         {
             title: l(
@@ -117,6 +124,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/Sejong.jpg",
+            region: "Sejong",
         },
         {
             title: l(
@@ -131,6 +139,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/Jeju.jpg",
+            region: "Jeju",
         },
         {
             title: l(
@@ -146,6 +155,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/SouthGyeongsang.jpg",
+            region: "SouthGyeongsang",
         },
         {
             title: l(
@@ -161,6 +171,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/NorthGyeongsang.jpg",
+            region: "NorthGyeongsang",
         },
         {
             title: l(
@@ -176,6 +187,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/SouthJeolla.jpg",
+            region: "SouthJeolla",
         },
         {
             title: l(
@@ -191,6 +203,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/NorthJeolla.jpg",
+            region: "NorthJeolla",
         },
         {
             title: l(
@@ -206,6 +219,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/SouthChungcheong.jpg",
+            region: "SouthChungcheong",
         },
         {
             title: l(
@@ -221,6 +235,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/NorthChungcheong.jpg",
+            region: "NorthChungcheong",
         },
         {
             title: l(
@@ -235,6 +250,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/Gangwon.jpg",
+            region: "Gangwon",
         },
         {
             title: l(
@@ -250,6 +266,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/Gyeonggi.jpg",
+            region: "Gyeonggi",
         },
         {
             title: l(
@@ -264,6 +281,7 @@ const FooterCities = () => {
             },
             products: 0,
             imageUrl: "img/cities/dmz.jpg",
+            region: "dmz",
         },
     ];
     return (
@@ -283,7 +301,7 @@ const FooterCities = () => {
                                                 | "ja"
                                                 | "chi"
                                         ]
-                                    }`;
+                                    }&region=${item.region}`;
                                 }}
                             >
                                 {

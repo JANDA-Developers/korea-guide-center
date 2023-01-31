@@ -17,6 +17,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/CustomTour.jpg",
+            region: "Custom",
         },
         {
             title: s("ServicesMICE"),
@@ -28,6 +29,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/MICE.jpg",
+            region: "Mice",
         },
         {
             title: s("ServicesDriving"),
@@ -39,6 +41,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/DrivingTour.jpg",
+            region: "Driving",
         },
         {
             title: s("ServicesWellness"),
@@ -50,6 +53,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/WellnessMedical.jpg",
+            region: "WellnessMedical",
         },
         {
             title: s("ServicesLocalFestival"),
@@ -61,6 +65,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/LocalFestival.jpg",
+            region: "LocalFestival",
         },
         {
             title: s("ServicesTranlate"),
@@ -72,6 +77,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/InterpreterGuide.jpg",
+            region: "Interpreter",
         },
         {
             title: s("ServicesBarrierFree"),
@@ -83,6 +89,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/BarrierFree.jpg",
+            region: "BarrierFree",
         },
         {
             title: s("ServicesVIP"),
@@ -94,6 +101,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/VIPexhibition.jpg",
+            region: "VIPexhibition",
         },
         {
             title: s("ServicesRealEstate"),
@@ -105,6 +113,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/RealEstate.jpg",
+            region: "RealEstate",
         },
         {
             title: s("ServicesStudyingAbroad"),
@@ -116,6 +125,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/StudyAbroad.jpg",
+            region: "StudyAbroad",
         },
         {
             title: s("ServicesLongStay"),
@@ -127,6 +137,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/LongStay.jpg",
+            region: "LongStay",
         },
         {
             title: s("ServicesCook"),
@@ -138,6 +149,7 @@ const FooterServices = () => {
             },
             products: 0,
             imageUrl: "img/cities/CookTour.jpg",
+            region: "Cook",
         },
     ];
 
@@ -159,7 +171,7 @@ const FooterServices = () => {
                                                 | "ja"
                                                 | "chi"
                                         ]
-                                    }`;
+                                    }&region=${item.region}`;
                                 }}
                             >
                                 {item.title}

@@ -11,6 +11,7 @@ interface IRegionableaData {
         ja: string;
         chi: string;
     };
+    backgroundUrl?: string;
 }
 
 export const regionableData: Record<mapRegion, IRegionableaData> = {
@@ -46,6 +47,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "大田",
             chi: "大田",
         },
+        backgroundUrl: "img/cities/Daejeon.jpg",
     },
     Gangwon: {
         description: {
@@ -79,6 +81,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "江原道",
             chi: "江原道",
         },
+        backgroundUrl: "img/cities/Gangwon.jpg",
     },
 
     Gwangju: {
@@ -113,6 +116,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "光州",
             chi: "光州",
         },
+        backgroundUrl: "img/cities/Gwangju.jpg",
     },
     Gyeonggi: {
         description: {
@@ -146,6 +150,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "京畿道",
             chi: "京畿道",
         },
+        backgroundUrl: "img/cities/Gyeonggi.jpg",
     },
     Incheon: {
         description: {
@@ -179,6 +184,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "仁川",
             chi: "仁川",
         },
+        backgroundUrl: "img/cities/Incheon.jpg",
     },
     Jeju: {
         description: {
@@ -212,6 +218,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "济州",
             chi: "济州",
         },
+        backgroundUrl: "img/cities/Jeju.jpg",
     },
     NorthChungcheong: {
         description: {
@@ -245,6 +252,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "忠清北道",
             chi: "忠清北道",
         },
+        backgroundUrl: "img/cities/NorthChungcheong.jpg",
     },
     NorthGyeongsang: {
         description: {
@@ -278,6 +286,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "慶尚北道",
             chi: "庆尚北道",
         },
+        backgroundUrl: "img/cities/NorthGyeongsang.jpg",
     },
     NorthJeolla: {
         description: {
@@ -311,6 +320,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "全羅北道",
             chi: "全罗北道",
         },
+        backgroundUrl: "img/cities/NorthJeolla.jpg",
     },
     Sejong: {
         description: {
@@ -344,6 +354,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "世宗市",
             chi: "世宗",
         },
+        backgroundUrl: "img/cities/Sejong.jpg",
     },
     SouthChungcheong: {
         description: {
@@ -377,6 +388,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "忠清南道",
             chi: "忠清南道",
         },
+        backgroundUrl: "img/cities/SouthChungcheong.jpg",
     },
     SouthGyeongsang: {
         description: {
@@ -410,6 +422,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "慶尚南道",
             chi: "庆尚南道",
         },
+        backgroundUrl: "img/cities/SouthGyeongsang.jpg",
     },
     SouthJeolla: {
         description: {
@@ -443,6 +456,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "全羅南道",
             chi: "全罗南道",
         },
+        backgroundUrl: "img/cities/SouthJeolla.jpg",
     },
     Ulsan: {
         description: {
@@ -476,6 +490,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "蔚山",
             chi: "蔚山",
         },
+        backgroundUrl: "img/cities/Ulsan.jpg",
     },
     busan: {
         description: {
@@ -509,6 +524,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "釜山",
             chi: "釜山",
         },
+        backgroundUrl: "img/cities/busan.jpg",
     },
     daegu: {
         description: {
@@ -542,6 +558,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "大邱",
             chi: "大邱",
         },
+        backgroundUrl: "img/cities/daegu.jpg",
     },
     seoul: {
         description: {
@@ -577,6 +594,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "ソウル",
             chi: "汉城",
         },
+        backgroundUrl: "img/cities/seoul.jpg",
     },
     dmz: {
         description: {
@@ -610,6 +628,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: "DMZ",
             chi: "DMZ",
         },
+        backgroundUrl: "img/cities/dmz.jpg",
     },
     CustomTour: {
         description: {
@@ -627,6 +646,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Custom Tour`,
             ja: `Custom Tour`,
         },
+        backgroundUrl: "img/cities/CustomTour.jpg",
     },
     MICE: {
         description: {
@@ -638,6 +658,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
         },
         photos: [],
         title: { en: `MICE`, ot: `MICE`, ko: `MICE`, chi: `MICE`, ja: `MICE` },
+        backgroundUrl: "img/cities/MICE.jpg",
     },
     DrivingTour: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -649,6 +670,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Driving Tour`,
             ja: `Driving Tour`,
         },
+        backgroundUrl: "img/cities/DrivingTour.jpg",
     },
     WellnessMedical: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -660,6 +682,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Wellness&Medical`,
             ja: `Wellness&Medical`,
         },
+        backgroundUrl: "img/cities/WellnessMedical.jpg",
     },
     LocalFestival: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -671,6 +694,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Local Festival`,
             ja: `Local Festival`,
         },
+        backgroundUrl: "img/cities/LocalFestival.jpg",
     },
     InterpreterGuide: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -682,6 +706,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Interpreter Guide`,
             ja: `Interpreter Guide`,
         },
+        backgroundUrl: "img/cities/InterpreterGuide.jpg",
     },
     BarrierFree: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -693,6 +718,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `BarrierFree`,
             ja: `BarrierFree`,
         },
+        backgroundUrl: "img/cities/BarrierFree.jpg",
     },
     VIPexhibition: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -704,6 +730,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `VIP exhibition`,
             ja: `VIP exhibition`,
         },
+        backgroundUrl: "img/cities/VIPexhibition.jpg",
     },
     RealEstate: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -715,6 +742,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Real Estate`,
             ja: `Real Estate`,
         },
+        backgroundUrl: "img/cities/RealEstate.jpg",
     },
     StudyAbroad: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -726,6 +754,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Study Abroad`,
             ja: `Study Abroad`,
         },
+        backgroundUrl: "img/cities/StudyAbroad.jpg",
     },
     LongStay: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -737,6 +766,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Long Stay`,
             ja: `Long Stay`,
         },
+        backgroundUrl: "img/cities/LongStay.jpg",
     },
     CookTour: {
         description: { chi: ``, en: ``, ot: ``, ja: ``, ko: `` },
@@ -748,6 +778,7 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             chi: `Cooking Tour`,
             ja: `Cooking Tour`,
         },
+        backgroundUrl: "img/cities/CookTour.jpg",
     },
 };
 
