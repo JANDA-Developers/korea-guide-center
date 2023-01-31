@@ -3876,16 +3876,16 @@ const utils_message = {
         chi: "慶尚南道",
     },
     cityNorthJeonla: {
-        ko: "전라남도",
-        en: "Jeonlanam-Do",
-        ja: "全羅南道",
-        chi: "全羅南道",
-    },
-    citySouthJeonla: {
         ko: "전라북도",
         en: "Jeonlabuk-Do",
         ja: "全羅北道",
         chi: "全羅北道",
+    },
+    citySouthJeonla: {
+        ko: "전라남도",
+        en: "Jeonlanam-Do",
+        ja: "全羅南道",
+        chi: "全羅南道",
     },
     findGuidesTitle: {
         ko: "파트너 가이드를 찾습니다.",
