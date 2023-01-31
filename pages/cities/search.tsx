@@ -87,7 +87,7 @@ const generateFilter = (searchParam?: ISearchPageQuery) => {
     return { filter, sort };
 };
 
-interface IProp {}
+interface IProp { }
 
 export const searchPageQueryGenerate = (query: ISearchPageQuery) => {
     const urlQueries: UrlParam[] = Object.entries(query).map(
@@ -159,12 +159,9 @@ export const Search: React.FC<IProp> = () => {
         networkStatus,
     } = productListHook;
 
-    console.log(title);
-
     const hasUrlCatMiniFilter =
         urlSearchParam.filter?.categoryMini__id__in?.[0] &&
-        urlSearchParam.filter?.categoryMini__id__in?.[0] ===
-            filter?.categoryMini__id__in?.[0];
+        urlSearchParam.filter?.categoryMini__id__in?.[0] === filter?.categoryMini__id__in?.[0];
     const urlSerchCat = catMap.ITEM_SMALL.find(
         (cat) => cat._id === urlSearchParam.filter?.categoryMini__id__in?.[0]
     );
@@ -213,7 +210,7 @@ export const Search: React.FC<IProp> = () => {
                     size="h6"
                     weight={600}
                 >
-                    "{l(urlSerchCat?.label)}" {s("searchResult")}
+                    <span style={{ color: "#D0242B" }}>{l(urlSerchCat?.label)}</span> {s("searchResult")}
                 </JDtypho>
                 <JDtypho
                     mr
@@ -232,9 +229,8 @@ export const Search: React.FC<IProp> = () => {
                         }}
                         mode="border"
                         size="small"
-                        label={`${s("searchDetail")} ${
-                            detailSearch ? s("open") : s("close")
-                        } `}
+                        label={`${s("searchDetail")} ${detailSearch ? s("open") : s("close")
+                            } `}
                     />
                 </JDtypho>
                 <Flex oneone className="search__wrapper">
