@@ -56,7 +56,7 @@ const utils_message = {
         chi: `先生`,
     },
     wellcometxt: {
-        ko: "환영합니다",
+        ko: "환영합니다.",
         en: `Welcome`,
         ja: `歓迎致します`,
         chi: `欢迎光临`,
@@ -134,7 +134,7 @@ const utils_message = {
         chi: `介绍网页`,
     },
     enter_placeholder: {
-        ko: "검색어를 입력해주세요",
+        ko: "검색어를 입력해주세요.",
         en: `Please enter a search term`,
         ja: `検索キーワードを入力してください`,
         chi: `请您输入一下检索语`,
@@ -302,7 +302,7 @@ const utils_message = {
         chi: `留言的地方`,
     },
     non_review: {
-        ko: "작성된 리뷰가 없습니다",
+        ko: "작성된 리뷰가 없습니다.",
         en: "There are no reviews written.",
         ja: `作成されたレビュー&評価がありません。`,
         chi: "没有评论",
@@ -578,7 +578,7 @@ const utils_message = {
         chi: `推荐给以下各位。`,
     },
     guidance_and_notes: {
-        ko: "이런분께 추천드려요",
+        ko: "이런분께 추천드려요.",
         en: `Recommended for those who like`,
         ja: `おすすめ致します`,
         chi: `推荐给以下各位`,
@@ -692,7 +692,7 @@ const utils_message = {
         chi: "产品状态",
     },
     noProductData: {
-        ko: "아직 등록한 상품이 없습니다",
+        ko: "아직 등록한 상품이 없습니다.",
         en: "No Regiseted Product yet",
         ja: "まだ登録商品がありません。",
         chi: "还没有旅游商品。",
@@ -806,7 +806,7 @@ const utils_message = {
         chi: `请您输入一下链接地址。`,
     },
     time_over_resv_period: {
-        ko: "예약가능 기간이 지났습니다",
+        ko: "예약가능 기간이 지났습니다.",
         en: `The reservation period has passed.`,
         ja: `予約可能期間が過ぎました。`,
         chi: `已经过去了可以预订的期间了。`,
@@ -860,7 +860,7 @@ const utils_message = {
         chi: `真的想要初始化购物车吗？`,
     },
     basket_is_empty: {
-        ko: "장바구니에 상품이 존재하지 않습니다",
+        ko: "장바구니에 상품이 존재하지 않습니다.",
         en: `Product does not exist in the shopping cart.`,
         ja: `ショッピング内容に商品がありません。。`,
         chi: `购物车上没有产品。`,
@@ -1126,7 +1126,7 @@ const utils_message = {
         chi: `快捷键`,
     },
     noData: {
-        ko: "게시글이 없습니다",
+        ko: "게시글이 없습니다.",
         en: `There is no post.`,
         ja: `掲示された内容がありません`,
         chi: `没有写的传兰。`,
@@ -1342,7 +1342,7 @@ const utils_message = {
         chi: `旅客信息`,
     },
     description: {
-        ko: "여행자 정보를 입력해주세요. 대표자는 필수로 입력 하셔야합니다",
+        ko: "여행자 정보를 입력해주세요. 대표자는 필수로 입력 하셔야합니다.",
         en: `Please enter your traveler information. Representative must be entered`,
         ja: `旅行者情報を入力してください。予約代表者入力は必須です`,
         chi: `请输入您的旅客信息。必须输入预约代表`,
@@ -1354,7 +1354,7 @@ const utils_message = {
         chi: `护照号`,
     },
     buyerNameRequired: {
-        ko: "구매자 이름은 필수 입니다",
+        ko: "구매자 이름은 필수 입니다.",
         en: `Buyer name is required`,
         ja: `購入者の名前は必須です`,
         chi: `必须要填购买者的姓名`,
@@ -1390,7 +1390,7 @@ const utils_message = {
         chi: `全部同意`,
     },
     bankExpireMessage: {
-        ko: "무통장 입금은 24시간 이내에 입금하지 않으시면 예약이 자동취소 됩니다",
+        ko: "무통장 입금은 24시간 이내에 입금하지 않으시면 예약이 자동취소 됩니다.",
         en: `If the deposit is not made within 24 hours, the reservation will be automatically canceled.`,
         ja: `振込は、24時間以内に振込されないと予約が自動にキャンセルされます`,
         chi: `如果24 小时内不支付押金，预订会自动取消。`,
@@ -1402,7 +1402,7 @@ const utils_message = {
         chi: `检查您的预订详情`,
     },
     resvWillCompleteIf: {
-        ko: "입금을 해주시면 예약이 완료됩니다",
+        ko: "입금을 해주시면 예약이 완료됩니다.",
         en: `Reservation is complete upon payment.`,
         ja: `送金していただければ予約が完了します。`,
         chi: `付款后预订完成。`,
@@ -1600,7 +1600,7 @@ const utils_message = {
         chi: `登录好了`,
     },
     noDataMore: {
-        ko: "데이터가 없습니다",
+        ko: "데이터가 없습니다.",
         ja: `データがありません.`,
         en: `No data.`,
         chi: `没有数据.`,
@@ -1624,7 +1624,7 @@ const utils_message = {
         chi: `招聘结束了.`,
     },
     additionalCallMessage: {
-        ko: "추가 예약은 전화 부탁드립니다",
+        ko: "추가 예약은 전화 부탁드립니다.",
         ja: `追加予約は電話でお願いします`,
         en: `For further reservations, please call.`,
         chi: `如需更多预订，请您给我们打电话一下.`,
@@ -1654,7 +1654,7 @@ const utils_message = {
         chi: `取消和退款政策`,
     },
     noTourDayCanSelect: {
-        ko: "선택 가능한 투어날짜가 없습니다",
+        ko: "선택 가능한 투어날짜가 없습니다.",
         ja: `利用可能なツアー日がありません`,
         en: `There are no available tour dates`,
         chi: `没有可用的旅游日期`,
@@ -1678,7 +1678,7 @@ const utils_message = {
         chi: `产品评论`,
     },
     plesaeWriteReview: {
-        ko: "후기를 작성해 주세요",
+        ko: "후기를 작성해 주세요.",
         ja: `後書きをお願いします`,
         en: `Please write a review`,
         chi: `请您写一下评论`,
@@ -1690,7 +1690,7 @@ const utils_message = {
         chi: `对这次旅行满意吗？`,
     },
     thanksForYourReview: {
-        ko: "상품 후기를 남겨주셔서 감사합니다",
+        ko: "상품 후기를 남겨주셔서 감사합니다.",
         ja: `商品の後書き感謝いたします。`,
         en: `Thanks for leaving a review.`,
         chi: `感谢您留下评论.`,
@@ -1774,13 +1774,13 @@ const utils_message = {
         chi: `退款账户信息`,
     },
     refundAccountDesc: {
-        ko: "환불 상황이 되면 아래계좌로 전송 해드립니다",
+        ko: "환불 상황이 되면 아래계좌로 전송 해드립니다.",
         ja: `返金の場合、以下の口座に送金されます.`,
         en: `In case of refund, money will be sent to the account below.`,
         chi: `如有退款，汇款到以下账户.`,
     },
     agree: {
-        ko: "동의합니다",
+        ko: "동의합니다.",
         ja: `同意`,
         en: `agree`,
         chi: `同意`,
@@ -1822,7 +1822,7 @@ const utils_message = {
         chi: `天气和自然灾害`,
     },
     cancelReason2: {
-        ko: "원하는 가격대가 아닙니다",
+        ko: "원하는 가격대가 아닙니다.",
         en: `not the price you want.`,
         ja: `望む価格ではありません.`,
         chi: `不是你想要的价格.`,
@@ -1840,8 +1840,8 @@ const utils_message = {
         chi: `其他`,
     },
     cancelTitle: {
-        ko: "정말로 여행을 취소하시나요?.",
-        en: `Are you really canceling your trip?.`,
+        ko: "정말로 여행을 취소하시나요?",
+        en: `Are you really canceling your trip?`,
         ja: `本当にあなたの旅行をキャンセルしますか？`,
         chi: `你真的要取消旅行吗？`,
     },
@@ -1888,7 +1888,7 @@ const utils_message = {
         chi: `旅客详情`,
     },
     bookingCompleted: {
-        ko: "예약이 완료되었습니다",
+        ko: "예약이 완료되었습니다.",
         en: `Reservation complete.`,
         ja: `予約完了.`,
         chi: `预订好了.`,
@@ -1906,13 +1906,13 @@ const utils_message = {
         chi: `预订确认`,
     },
     bookingConfirmeCompleted: {
-        ko: "예약이 승인되었습니다",
+        ko: "예약이 승인되었습니다.",
         en: `reservation confirmed.`,
         ja: `予約確定`,
         chi: `预订确认.`,
     },
     guideCheckingThisBooking: {
-        ko: "가이드가 예약가능여부를 확인하고 있습니다",
+        ko: "가이드가 예약가능여부를 확인하고 있습니다.",
         en: `guide is checking availability.`,
         ja: `ガイドが予約状況を確認しています`,
         chi: `导游正在确认是否可以预订.`,
@@ -1986,13 +1986,13 @@ const utils_message = {
         chi: `查看我制造的旅行`,
     },
     customTourCreateTitle: {
-        ko: `"나만의 여행을 만들어보세요.",(개인여행을 희망하신다면 적어주세요)`,
+        ko: `"나만의 여행을 만들어보세요." (개인여행을 희망하신다면 적어주세요.)`,
         en: `Create your own trip.`,
         ja: `個人旅行をご希望でしたらご注文を書いてください`,
         chi: `如果您想个人旅行，请填写订单.`,
     },
     customTourCreateDesc: {
-        ko: "신청을 완료하시면 한국현지가이드들이 응답을 보내드립니다",
+        ko: "신청을 완료하시면 한국현지가이드들이 응답을 보내드립니다.",
         en: `When you submit customized tour,guides will send you offers`,
         ja: `申し込みが完了すると、韓国現地ガイドより、ご返信お送りします`,
         chi: `申请好的话，看韩国导游的建议并回复您.`,
@@ -2100,19 +2100,19 @@ const utils_message = {
         chi: `修改密码`,
     },
     plesaeResginTitle: {
-        ko: "계정인증후 진행 해주세요",
+        ko: "계정인증후 진행 해주세요.",
         en: `Please proceed after account verification`,
         ja: `アカウント認証後に進めてください`,
         chi: `进行一下`,
     },
     plesaeResginDesc: {
-        ko: "계정을 인증한후 진행 가능합니다",
+        ko: "계정을 인증한후 진행 가능합니다.",
         en: `You can proceed after verifying your account.`,
         ja: `アカウントを確認してから進行できます。`,
         chi: `账号之后可以进行`,
     },
     AccountConfirmCompleted: {
-        ko: "계정인증이 완료되었습니다",
+        ko: "계정인증이 완료되었습니다.",
         en: `Account verification complete.`,
         ja: `アカウントの確認が完了しました.`,
         chi: `账号验证好了`,
@@ -2130,7 +2130,7 @@ const utils_message = {
         chi: `退出`,
     },
     resignTitle: {
-        ko: "이용해 주셔서 감사합니다",
+        ko: "이용해 주셔서 감사합니다.",
         en: `Thank you for using.`,
         ja: `ご利用いただきありがとうございます.`,
         chi: ` 谢谢您的使用`,
@@ -2148,7 +2148,7 @@ const utils_message = {
         chi: `为了更好的服务，请您写一下推出的理由.`,
     },
     resignReason1: {
-        ko: "재 가입을 원합니다",
+        ko: "재가입을 원합니다.",
         en: `I want to rejoin`,
         ja: `再加入します`,
         chi: `我想在注册`,
@@ -2177,7 +2177,7 @@ const utils_message = {
         营业时间 上午 9 点至下午 6 点（周末和节假日除外）`,
     },
     noIntroductionForLanguage: {
-        ko: "해당언어에 자기소개가 없습니다",
+        ko: "해당언어에 자기소개가 없습니다.",
         en: `There is no introduction in this language.`,
         ja: `この言語での紹介はありません.`,
         chi: `[中]这个语言，没有自我介绍.`,
@@ -2201,7 +2201,7 @@ const utils_message = {
         chi: `[中]请您选择一下旅行人数 `,
     },
     peopleSelectDesc: {
-        ko: "원하는 인원 만큼 선택할 수 없을경우에 문의 부탁드립니다",
+        ko: "원하는 인원 만큼 선택할 수 없을경우에 문의 부탁드립니다.",
         en: `If you cannot select the number of people you want, please contact us.`,
         ja: `希望人数の選択が不可能な場合、お問い合わせください。`,
         chi: `如果您无法选择您想要的人数，请与我们联系。`,
@@ -2269,13 +2269,13 @@ const utils_message = {
         chi: `通知目录`,
     },
     noNewNotificationList: {
-        ko: "새로운 알림이 존재하지 않습니다",
+        ko: "새로운 알림이 존재하지 않습니다.",
         en: `no new notifications.`,
         ja: `新しい通知はありません.`,
         chi: `没有新通知.`,
     },
     noMessage: {
-        ko: "대화 내용이 없습니다",
+        ko: "대화 내용이 없습니다.",
         en: `No message.`,
         ja: `メッセージなし.`,
         chi: `没有对话内容.`,
@@ -2347,7 +2347,7 @@ const utils_message = {
         chi: `要求了`,
     },
     noWishList: {
-        ko: "위시리스트에 추가된 상품이 없습니다",
+        ko: "위시리스트에 추가된 상품이 없습니다.",
         en: `No products have been added to your wishlist.`,
         ja: `ウウィッシュリストに追加された商品がありません.`,
         chi: `在您的愿望清单没有任何添加产品.`,
@@ -2359,7 +2359,7 @@ const utils_message = {
         chi: `想要的内容`,
     },
     customTourCreateCompleted: {
-        ko: "커스텀 투어 신청이 완료되었습니다",
+        ko: "커스텀 투어 신청이 완료되었습니다.",
         en: `Your custom tour request has been completed.`,
         ja: `カスタムツアー申し込み完了しました.`,
         chi: `您的定制旅游请求已完成了.`,
@@ -2402,25 +2402,25 @@ const utils_message = {
         chi: `寻找密码`,
     },
     emailFindDescription: {
-        ko: "핸드폰 번호로 이메일을 발송 될겁니다",
+        ko: "핸드폰 번호로 이메일이 발송 됩니다.",
         en: `An email will be sent to your mobile number.`,
         ja: `あなたの携帯電話にメールが送信されます。`,
         chi: `邮件地址即将会到您的手机号码`,
     },
     pwFindDescription: {
-        ko: "이메일로 임시 비밀번호를 보내드립니다",
+        ko: "이메일로 임시 비밀번호를 보내드립니다.",
         en: `We will send you a temporary password by email.`,
         ja: `メールで臨時番号をお送りします`,
         chi: `我们将通过电子邮件向您发送一个临时密码。`,
     },
     emailSendedByPhone: {
-        ko: "핸드폰 번호로 이메일이 발송 되었습니다",
+        ko: "핸드폰 번호로 이메일이 발송 되었습니다.",
         en: `An email has been sent to your mobile number.`,
         ja: `携帯電話にメールが送信されました。`,
         chi: `把邮件地址已经发到您的手机号码了`,
     },
     pwSendedByEmail: {
-        ko: "가입 하셨던 이메일로 임시 비밀번호를 발송했습니다. \n 임시 비밀번호는 일회용이니 로그인후 비밀번호를 변경하시길 바랍니다",
+        ko: "가입 하셨던 이메일로 임시 비밀번호를 발송했습니다. \n 임시 비밀번호는 일회용이니 로그인후 비밀번호를 변경하시길 바랍니다.",
         en: `A temporary password has been sent to the email you registered with. \n The temporary password is one-time only, so please change the password after logging in.`,
         ja: `登録したメールに臨時パスワードを送信しました。 臨時パスワードなので、ログインした後、パスワードを変更してください`,
         chi: `把临时密码已经发到您注册的时候写的邮件了。临时密码是一次性的，所以登录之后，请您把密码改变一下`,
@@ -2444,7 +2444,7 @@ const utils_message = {
         chi: `请您进行一下邮件验证`,
     },
     emailVerificationDesc: {
-        ko: "이메일 로 보내드린 링크를 승인 하시면 됩니다",
+        ko: "이메일로 보내드린 링크를 승인 하시면 됩니다.",
         en: `Please confirm the link sent to you by e-mail.`,
         ja: `メールでお送りしたリンクを承認ください`,
         chi: `把我们发给您的邮件上的链接地址，请您承认一下`,
@@ -2480,7 +2480,7 @@ const utils_message = {
         chi: `过去的旅行`,
     },
     mainTitle: {
-        ko: "이메일과 이름을 확인해주세요.",
+        ko: "이메일/이름을 확인해주세요.",
         en: `Please check your email/name.`,
         ja: `メール/名前を確認してください。`,
         chi: `请检查您的电子邮件/姓名。`,
@@ -2492,13 +2492,13 @@ const utils_message = {
         chi: `取消的行程`,
     },
     tourDiffByDateWarn: {
-        ko: "투어 날짜별 내용이 조금씩 차이날 수 있습니다",
+        ko: "투어 날짜별 내용이 조금씩 차이날 수 있습니다.",
         en: `The contents of each tour date may slightly different.`,
         ja: `ツアー日によって内容が異なる場合があります`,
         chi: `每个旅游日期的内容可能略有不同.`,
     },
     travelPolicy: {
-        ko: "투어 날짜별 내용이 조금씩 차이날 수 있습니다",
+        ko: "투어 날짜별 내용이 조금씩 차이날 수 있습니다.",
         en: `The contents of each tour date may slightly different.`,
         ja: `ツアー日によって内容が異なる場合があります`,
         chi: `每个旅游日期的内容可能略有不同.`,
@@ -2516,25 +2516,25 @@ const utils_message = {
         chi: `请登录后重试.`,
     },
     pleaseLoginDesc: {
-        ko: "로그인 하셔야 이용하실 수 있습니다",
+        ko: "로그인 하셔야 이용하실 수 있습니다.",
         en: `You must sign in for the service.`,
         ja: `ログインしてからサービスが利用可能です`,
         chi: `您必须登录才能使用该服务.`,
     },
     bookNameIsRequired: {
-        ko: "여행자의 성함은 필수 입니다",
+        ko: "여행자의 성함은 필수 입니다.",
         en: `Traveler's name is required.`,
         ja: `旅行者の名前は必要です.`,
         chi: `旅客姓名为必填项.`,
     },
     representerContactIsRequired: {
-        ko: "예약대표자의 연락처는 필수 입니다",
+        ko: "예약대표자의 연락처는 필수 입니다.",
         en: `Representative contact information is required.`,
         ja: `予約代表者の連絡先情報が必要です.`,
         chi: `需要代表联系信息.`,
     },
     representerBirthDateIsRequired: {
-        ko: "예약대표자의 생년월일은 필수 입니다",
+        ko: "예약대표자의 생년월일은 필수 입니다.",
         en: `The date of birth of the representative is required.`,
         ja: `予約代表者の生年月日が必要です.`,
         chi: `代表的出生日期是必需的.`,
@@ -2576,7 +2576,7 @@ const utils_message = {
         chi: `收到的您申请的目录`,
     },
     proposalListDesc: {
-        ko: "가이드가 보내준 제안목록 입니다",
+        ko: "가이드가 보내준 제안목록 입니다.",
         en: `List of suggestions sent by the guides.`,
         ja: `ガイドから送られた提案のリスト.`,
         chi: `导游发送的建议目录.`,
@@ -2636,7 +2636,7 @@ const utils_message = {
         chi: `paypal`,
     },
     bookingHasCanceld: {
-        ko: "예약을 취소하였습니다",
+        ko: "예약을 취소하였습니다.",
         en: `reservation cancellation.`,
         ja: `予約キャンセル.`,
         chi: `预订取消了.`,
@@ -2686,7 +2686,7 @@ const utils_message = {
         chi: "旅客信息",
     },
     noProductInArea: {
-        ko: "해당지역에 상품이 없습니다",
+        ko: "해당지역에 상품이 없습니다.",
         en: "There are no products in your chosen area.",
         ja: "該当地域の商品がありません",
         chi: "该地区没有旅游商品.",
@@ -2704,7 +2704,7 @@ const utils_message = {
         chi: "编写自己游览",
     },
     noSuggestOffer: {
-        ko: "제안하신 맞춤 상품이 없습니다",
+        ko: "제안하신 맞춤 상품이 없습니다.",
         en: "There is no custom product you have suggested.",
         ja: "ご希望のオーダーメイド商品がありません",
         chi: "您想要的定制商品不存在。",
@@ -2735,13 +2735,13 @@ const utils_message = {
         chi: `(+82) 051-715-0727`,
     },
     noBookedTour: {
-        ko: "에약하신 투어가 없습니다",
+        ko: "에약하신 투어가 없습니다.",
         ja: `データなし.`,
         en: `There are no tours booked..`,
         chi: `没有数据.`,
     },
     customTourRequestSucessed: {
-        ko: "성공적으로 맞춤투어 신청이 신청 되었습니다",
+        ko: "성공적으로 맞춤투어 신청이 신청 되었습니다.",
         ja: `カスタムツアーアプリケーションが正常に適用されました。.`,
         en: `Your custom tour application has been successfully applied.`,
         chi: `您的自定义游览应用程序已成功应用。.`,
@@ -2843,7 +2843,7 @@ const utils_message = {
         chi: `Kakao Pay `,
     },
     ifOverPeople: {
-        ko: "예약가능한 최대인원보다 더 많은 예약을 원하시면 고객센터로 전화문의 (051-715-0727) 부탁드립니다",
+        ko: "예약가능한 최대인원보다 더 많은 예약을 원하시면 고객센터로 전화문의 (051-715-0727) 부탁드립니다.",
         en: `If you would like to make a reservation for more than the maximum number of people available, please call us.(051-715-0727)`,
         ja: `予約可能な最大人数よりも多くの予約をご希望の場合は、お問い合わせください。(051-715-0727)`,
         chi: `如果您想预订的人数超过最大人数，请致电我们。(051-715-0727)`,
@@ -2885,13 +2885,13 @@ const utils_message = {
         chi: `Naver`,
     },
     logOutCompleted: {
-        ko: "로그아웃 되었습니다",
+        ko: "로그아웃 되었습니다.",
         en: `You are logged out.`,
         ja: `ログアウトしました。`,
         chi: `您已注销。`,
     },
     profileHasChanged: {
-        ko: "프로필이 변경되었습니다",
+        ko: "프로필이 변경되었습니다.",
         en: `Your profile has changed.`,
         ja: `あなたのプロフィールが変更されました。`,
         chi: `您的个人资料已更改。`,
@@ -2903,31 +2903,31 @@ const utils_message = {
         chi: `必需的`,
     },
     isAlreadyUseNickName: {
-        ko: "은 이미 생성된 닉네임 입니다",
+        ko: "은 이미 생성된 닉네임 입니다.",
         en: ` is an name that has already been created.`,
         ja: `はすでに作成されているメールです。`,
         chi: `是已经创建的电子邮件。`,
     },
     isAlreadyUseEmail: {
-        ko: "은 이미 생성된 이메일 입니다",
+        ko: "은 이미 생성된 이메일 입니다.",
         en: ` is an email that has already been created.`,
         ja: `はすでに作成されているメールです。`,
         chi: `是已经创建的电子邮件。`,
     },
     isAvailable: {
-        ko: "은 사용 가능합니다",
+        ko: "은 사용 가능합니다.",
         en: ` is available`,
         ja: `利用可能です`,
         chi: `可用`,
     },
     signUpCompleted: {
-        ko: "회원가입이 완료되었습니다",
+        ko: "회원가입이 완료되었습니다.",
         en: ` is available`,
         ja: `利用可能です`,
         chi: `可用`,
     },
     signUpCompletedMessage: {
-        ko: "회원가입이 완료되어 코리아 가이드센터의 모든 기능을 이용하실 수 있습니다. 활동하실 수 있습니다",
+        ko: "회원가입이 완료되어 코리아 가이드센터의 모든 기능을 이용하실 수 있습니다. 활동하실 수 있습니다.",
         en: `You can use all the features of the Korea Guide Center. can be active after login`,
         ja: `韓国ガイドセンターのすべての機能を使用できます。ログイン後にアクティブにすることができます`,
         chi: `您可以使用韩国指南中心的所有功能。登录后可以激活`,
@@ -3203,7 +3203,7 @@ const utils_message = {
                 <br /> 리얼한 한국로컬여행,
                 <br /> 현지인에게도 인기있는 <br />
                 한국 도시 명소 여행, <br />
-                여행자 중심 여행을 <br /> 만끽하시기 바랍니다
+                여행자 중심 여행을 <br /> 만끽하시기 바랍니다.
             </span>
         ),
         en: (
