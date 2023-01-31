@@ -72,7 +72,8 @@ const NewestTourTab = () => {
     const { s, l, commonProductFilter } = useContext(AppContext);
 
     const { items: products } = useProductList({
-        initialViewCount: 8,
+        fixingFilter: commonProductFilter,
+        initialViewCount: 20,
         ...NewsProductList.queryParam,
     });
 
