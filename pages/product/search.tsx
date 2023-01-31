@@ -29,9 +29,7 @@ import {
     ReviwCountSort,
 } from "../../component/productSorters/ProductSorters";
 import {
-    ProductViewCards,
     ProductViewCards2,
-    ProductViewCardsForMorePage,
     ProductViewCardsWithApi2,
 } from "../../component/productViewCard/ProductViewCards";
 import { AppContext } from "../../context/context";
@@ -41,10 +39,6 @@ import { ProductStatus, _ProductFilter, _ProductSort } from "../../types/api";
 import { ScrollBox } from "../../component/scrollBox/ScrollBox";
 import { checkMobile } from "../../utils/isMobile";
 import { EmptyInfo } from "../../atom/EmpyInfo";
-import {
-    ProductViewCardsWithApi,
-    ProductViewCardsWithApiForMorePage,
-} from "../../component/productViewCard/ProductViewCardsWithApi";
 
 interface ISearchPageQuery {
     title?: string;
@@ -300,7 +294,7 @@ export const Search: React.FC<IProp> = () => {
                                 </LinkText>
                             </InfoBox> */}
 
-                            <ProductViewCards products={products} wrap />
+                            <ProductViewCards2 products={products} wrap />
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />

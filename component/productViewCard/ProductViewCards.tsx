@@ -26,6 +26,7 @@ import {
     IProductViewCard,
     ProductViewCard,
     ProductViewCard2,
+    ProductViewCardForSearchPage,
 } from "./ProductViewCard";
 import { IProductViewCardsWithApiProps } from "./ProductViewCardsWithApi";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
@@ -253,22 +254,21 @@ export const ProductViewCardsForMorePage: React.FunctionComponent<
                             )}
                             {products.map((product) => (
                                 <div className="owl-item active">
-                                    <TourCardItem
+                                    <ProductViewCard
                                         onClick={() => {
                                             onClickProduct?.(product);
                                         }}
                                         key={product._id + uniqKey}
+                                        className="ProductViewCards__card"
+                                        mr
                                         {...props}
                                         product={product}
-                                        setMarginRight="10px"
-                                        setPaddingVertical="30px 0"
                                     />
                                 </div>
                             ))}
                         </div>
                     </div>
-                </div>{" "}
-                //
+                </div>
             </AnimationOnScroll>
         </div>
     );
@@ -316,7 +316,7 @@ export const ProductViewCards2: React.FC<IProp> = ({
                         <div className="ProductViewCards__empty">{empty}</div>
                     )}
                     {products.map((product) => (
-                        <ProductViewCard
+                        <ProductViewCardForSearchPage
                             mb={wrap ? "normal" : undefined}
                             onClick={() => {
                                 onClickProduct?.(product);

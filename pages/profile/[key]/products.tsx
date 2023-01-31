@@ -13,7 +13,10 @@ import React from "react";
 
 import Pagination from "../../../component/pagination/Pagination";
 
-import { ProductViewCards } from "../../../component/productViewCard/ProductViewCards";
+import {
+    ProductViewCards,
+    ProductViewCards2,
+} from "../../../component/productViewCard/ProductViewCards";
 import { useProductList } from "../../../hook/useProduct";
 import { _ProductFilter, _ProductSort } from "../../../types/api";
 
@@ -54,7 +57,7 @@ export const Products: React.FC<IProp> = () => {
                 <Flex oneone className="search__wrapper">
                     <SkipUpdate skip={getLoading}>
                         <div>
-                            <ProductViewCards wrap products={products} />
+                            <ProductViewCards2 wrap products={products} />
                             {isEmpty(products) ? (
                                 <div>
                                     <JDhorizen margin={5} />
