@@ -228,7 +228,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/seoul.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.seoul as keyof typeof regionableData
                                                 ].queryTitle![
@@ -250,7 +250,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/busan.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.busan as keyof typeof regionableData
                                                 ].queryTitle![
@@ -272,7 +272,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/daegu.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.daegu as keyof typeof regionableData
                                                 ].queryTitle![
@@ -296,7 +296,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Incheon.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.Incheon as keyof typeof regionableData
                                                 ].queryTitle![
@@ -318,7 +318,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Gwangju.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.Gwangju as keyof typeof regionableData
                                                 ].queryTitle![
@@ -340,7 +340,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Daejeon.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.Daejeon as keyof typeof regionableData
                                                 ].queryTitle![
@@ -364,7 +364,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Ulsan.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.Ulsan as keyof typeof regionableData
                                                 ].queryTitle![
@@ -386,7 +386,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Sejong.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.Sejong as keyof typeof regionableData
                                                 ].queryTitle![
@@ -408,7 +408,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/Jeju.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.Jeju as keyof typeof regionableData
                                                 ].queryTitle![
@@ -432,7 +432,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/SouthGyeongsang.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.SouthGyeongsang as keyof typeof regionableData
                                                 ].queryTitle![
@@ -454,7 +454,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/NorthGyeongsang.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.NorthGyeongsang as keyof typeof regionableData
                                                 ].queryTitle![
@@ -476,7 +476,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/SouthJeolla.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.SouthJeolla as keyof typeof regionableData
                                                 ].queryTitle![
@@ -500,7 +500,7 @@ function MenuScreen({ onClickMenu, menuOpen }: IMenuScreenProps) {
                                     <City
                                         background="/img/cities/NorthJeolla.jpg"
                                         onClick={() => {
-                                            location.href = `${locale}/cities/search?title=${
+                                            location.href = `/${locale}/cities/search?title=${
                                                 regionableData[
                                                     mapRegion.NorthJeolla as keyof typeof regionableData
                                                 ].queryTitle![
