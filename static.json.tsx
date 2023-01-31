@@ -1756,7 +1756,7 @@ const utils_message = {
         chi: `通知`,
     },
     bookerInfoDesc: {
-        ko: "대표자님의 여행자 정보는 필수 입니다",
+        ko: "대표자님의 여행자 정보는 필수 입니다.",
         ja: `代表の旅行者情報は必須です`,
         en: `The representative's traveler information is essential.`,
         chi: `代表的旅客信息是必须要的.`,
@@ -1786,7 +1786,7 @@ const utils_message = {
         chi: `同意`,
     },
     close: {
-        ko: "닫기.",
+        ko: "닫기",
         en: `close`,
         ja: `close`,
         chi: `关闭`,
