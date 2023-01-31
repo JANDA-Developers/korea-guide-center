@@ -6,9 +6,10 @@ import GuideContext from "../../page/context";
 interface IProps {
     sideOpen?: boolean;
     onMenuClick?: () => void;
+    isHideIcon?: boolean;
 }
 
-const Header: React.FC<IProps> = ({ children, onMenuClick, sideOpen }) => {
+const Header: React.FC<IProps> = ({ children, onMenuClick, sideOpen, isHideIcon }) => {
     const context = useContext(GuideContext);
     const { isLogin } = context;
 
@@ -23,7 +24,7 @@ const Header: React.FC<IProps> = ({ children, onMenuClick, sideOpen }) => {
                 }}
                 className="header__items"
             >
-                <Flex hide={!isLogin} vCenter>
+                <Flex hide={!isLogin || isHideIcon} vCenter>
                     <JDicon
                         mr="huge"
                         size="small"
