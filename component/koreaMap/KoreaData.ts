@@ -5,6 +5,12 @@ interface IRegionableaData {
     title: Omit<Flangs, "__typename">;
     description: Omit<Flangs, "__typename">;
     photos: string[];
+    queryTitle?: {
+        ko: string;
+        en: string;
+        ja: string;
+        chi: string;
+    };
 }
 
 export const regionableData: Record<mapRegion, IRegionableaData> = {
@@ -34,6 +40,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             大田広域市
             `,
         },
+        queryTitle: {
+            ko: "대전",
+            en: "Daejeon",
+            ja: "大田",
+            chi: "大田",
+        },
     },
     Gangwon: {
         description: {
@@ -60,6 +72,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `
             江原道
             `,
+        },
+        queryTitle: {
+            ko: "강원도",
+            en: "Gangwon-do",
+            ja: "江原道",
+            chi: "江原道",
         },
     },
 
@@ -89,6 +107,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             光州広域市
             `,
         },
+        queryTitle: {
+            ko: "광주",
+            en: "Gwangju",
+            ja: "光州",
+            chi: "光州",
+        },
     },
     Gyeonggi: {
         description: {
@@ -110,11 +134,17 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             경기도
             `,
             chi: `
-            Gyeonggi-do
+            京畿道
             `,
             ja: `
-            Gyeonggi-do
+            京畿道
             `,
+        },
+        queryTitle: {
+            ko: "경기도",
+            en: "Gyeonggi-do",
+            ja: "京畿道",
+            chi: "京畿道",
         },
     },
     Incheon: {
@@ -143,6 +173,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             仁川広域市
             `,
         },
+        queryTitle: {
+            ko: "인천",
+            en: "Incheon",
+            ja: "仁川",
+            chi: "仁川",
+        },
     },
     Jeju: {
         description: {
@@ -169,6 +205,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `
             済州市
             `,
+        },
+        queryTitle: {
+            ko: "제주도",
+            en: "Jeju Island",
+            ja: "济州",
+            chi: "济州",
         },
     },
     NorthChungcheong: {
@@ -197,6 +239,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             忠清北道
             `,
         },
+        queryTitle: {
+            ko: "충청북도",
+            en: "Chung-cheong bukdo",
+            ja: "忠清北道",
+            chi: "忠清北道",
+        },
     },
     NorthGyeongsang: {
         description: {
@@ -223,6 +271,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `
             慶尚北道
             `,
+        },
+        queryTitle: {
+            ko: "경상북도",
+            en: "Gyeongsangbuk-do",
+            ja: "慶尚北道",
+            chi: "庆尚北道",
         },
     },
     NorthJeolla: {
@@ -251,6 +305,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             全羅北道
             `,
         },
+        queryTitle: {
+            ko: "전라북도",
+            en: "Jeollabuk-do",
+            ja: "全羅北道",
+            chi: "全罗北道",
+        },
     },
     Sejong: {
         description: {
@@ -277,6 +337,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `
             世宗市
             `,
+        },
+        queryTitle: {
+            ko: "세종시",
+            en: "Sejong City",
+            ja: "世宗市",
+            chi: "世宗",
         },
     },
     SouthChungcheong: {
@@ -305,6 +371,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             忠清南道
             `,
         },
+        queryTitle: {
+            ko: "충청남도",
+            en: "Chungcheongnam-do",
+            ja: "忠清南道",
+            chi: "忠清南道",
+        },
     },
     SouthGyeongsang: {
         description: {
@@ -331,6 +403,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `
             慶尚南道
             `,
+        },
+        queryTitle: {
+            ko: "경상남도",
+            en: "Gyeongsangnam-do",
+            ja: "慶尚南道",
+            chi: "庆尚南道",
         },
     },
     SouthJeolla: {
@@ -359,6 +437,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             全羅南道
             `,
         },
+        queryTitle: {
+            ko: "전라남도",
+            en: "Jeollanam-do",
+            ja: "全羅南道",
+            chi: "全罗南道",
+        },
     },
     Ulsan: {
         description: {
@@ -385,6 +469,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `
             蔚山広域市
             `,
+        },
+        queryTitle: {
+            ko: "울산",
+            en: "Ulsan",
+            ja: "蔚山",
+            chi: "蔚山",
         },
     },
     busan: {
@@ -413,6 +503,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             釜山広域市
             `,
         },
+        queryTitle: {
+            ko: "부산",
+            en: "Busan",
+            ja: "釜山",
+            chi: "釜山",
+        },
     },
     daegu: {
         description: {
@@ -439,6 +535,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `
             大邱広域市
             `,
+        },
+        queryTitle: {
+            ko: "대구",
+            en: "Dae-gu",
+            ja: "大邱",
+            chi: "大邱",
         },
     },
     seoul: {
@@ -469,6 +571,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ソウル特別市
             `,
         },
+        queryTitle: {
+            ko: "서울",
+            en: "Seoul",
+            ja: "ソウル",
+            chi: "汉城",
+        },
     },
     dmz: {
         description: {
@@ -495,6 +603,12 @@ export const regionableData: Record<mapRegion, IRegionableaData> = {
             ja: `
             DMZ
             `,
+        },
+        queryTitle: {
+            ko: "DMZ",
+            en: "DMZ",
+            ja: "DMZ",
+            chi: "DMZ",
         },
     },
     CustomTour: {
