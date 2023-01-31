@@ -104,7 +104,7 @@ const PopularGuideTab: React.FC<IGuideMovieCardsWithApi> = ({
     const { locale } = useRouter();
     const { items: users } = useUserList(
         {
-            initialViewCount: 8,
+            initialViewCount: 20,
             ...queryParam,
             fixingFilter: {
                 isDeleted__not_eq: true,
