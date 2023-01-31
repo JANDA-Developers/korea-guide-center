@@ -26,6 +26,7 @@ import { boardKeys } from "../types/const";
 import { yyyymmddHHmm } from "../utils/dateFormat";
 import { TRouteChange } from "./BoardList";
 import { useBoardRoute } from "../hook/useBoardRoute";
+import { useRouter } from "next/router";
 
 export const getBoardDocSummary = (
     boardFactory: IBoardFacotry,
@@ -68,13 +69,14 @@ export const BoardDocView: React.FC<IProp> = ({
     if (!docId) docId = getFromUrl("docId") || "";
 
     const history = useHistory();
+    const router = useRouter();
     const { handleToList, handleToWrite } = useBoardRoute({
         boardKey: boardKey as boardKeys,
         routerChange,
     });
     const [deleteMu] = useBoardDocDelete({
         onCompleteSucess: () => {
-            history.go(-1);
+            router.push("/BoardList?boardKey=question");
         },
     });
     const { handleCreate: handleCommentWrite } = useCommentManage();
