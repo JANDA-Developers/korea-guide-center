@@ -2807,7 +2807,7 @@ const utils_message = {
         chi: `5分`,
     },
     selectDates: {
-        ko: "날짜선택하기",
+        ko: "날짜 선택하기",
         ja: `日付を選択`,
         en: `Choose Date`,
         chi: `选择日期`,
