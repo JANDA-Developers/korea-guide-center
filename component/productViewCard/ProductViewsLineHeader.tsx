@@ -37,7 +37,7 @@ export const ProductViewsLineHeader: React.FC<IProp> = ({
                     />
                 )}
             </Flex>
-            <JDtypho mb hide={!description} color="grey3" size="normal">
+            <JDtypho mb hide={!description} color="grey3" size="small">
                 {description}
             </JDtypho>
         </JDalign>
