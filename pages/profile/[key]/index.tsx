@@ -165,7 +165,9 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                     router.push(`${router.query.key}/products`);
                                 }}
                             >
-                                <span className="myTours">운영중인 투어</span>
+                                <span className="myTours">
+                                    {s("guideTourList")}
+                                </span>
                                 <span className="tourCount">
                                     {products?.length}
                                 </span>
