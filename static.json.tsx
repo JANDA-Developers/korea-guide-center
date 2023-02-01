@@ -493,6 +493,13 @@ const utils_message = {
         ja: "パスワードが変更されました。",
         chi: "密码已更改。",
     },
+
+    passwordDifferentSoFailMessage: {
+        ko: "입력하신 새 비밀번호와 새 비밀번호 확인이 다릅니다.",
+        en: "The new password you entered is different from the new password confirmation.",
+        ja: "入力された新しいパスワードと新しいパスワードの確認が異なります。",
+        chi: "您输入的新密码和新密码确认不同。",
+    },
     logOut: {
         ko: "로그아웃",
         en: `Logout`,
