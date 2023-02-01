@@ -73,6 +73,12 @@ const utils_message = {
         ja: `Joyful Korea Trip`,
         chi: `Joyful Korea Trip`,
     },
+    profilePageSliderNoti: {
+        ko: "👇 슬라이드하여 상품을 더 볼 수 있습니다.",
+        en: "👇 You can slide and see more of the product.",
+        ja: "👇 スライドして商品をもっと見ることができます。",
+        chi: "👇 你可以通过幻灯片再看一些商品。",
+    },
     city: {
         ko: "도시",
         en: "City",

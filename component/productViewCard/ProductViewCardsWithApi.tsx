@@ -15,6 +15,7 @@ import {
     IProductViewCardsProp,
     ProductViewCards,
     ProductViewCardsForMorePage,
+    ProductViewCardsForProfilePage,
 } from "./ProductViewCards";
 
 export interface IProductViewCardsWithApiProps
@@ -46,6 +47,38 @@ export const ProductViewCardsWithApi =
                 <div>
                     {Head}
                     <ProductViewCards
+                        {...props}
+                        products={products}
+                        wrap
+                        align={4}
+                    />
+                </div>
+            );
+        }
+    );
+
+export const ProductViewCardsWithApiProfilePage =
+    React.memo<IProductViewCardsWithApiProps>(
+        ({ queryControl, queryParam, Head, ...props }) => {
+            // queryParam 받아서 그 쿼리에 맞는 데이터를 출력
+            const { commonProductFilter } = React.useContext(AppContext);
+            const { items: products } = useProductList(
+                {
+                    initialViewCount: 8,
+                    ...queryParam,
+                    fixingFilter: {
+                        ...queryParam?.fixingFilter,
+                        ...commonProductFilter,
+                    },
+                },
+                queryControl
+            );
+
+            if (isEmpty(products)) return null;
+            return (
+                <div>
+                    {Head}
+                    <ProductViewCardsForProfilePage
                         {...props}
                         products={products}
                         wrap

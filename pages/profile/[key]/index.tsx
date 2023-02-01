@@ -12,7 +12,10 @@ import { DEFAULT_PROFILE_IMG } from "../../../types/const";
 import { filterVisibleProduct } from "../../../utils/product";
 import { Badges } from "../../../component/statusBadges/StatusBadges";
 import { Video } from "../../../component/video/Video";
-import { ProductViewCardsWithApi } from "../../../component/productViewCard/ProductViewCardsWithApi";
+import {
+    ProductViewCardsWithApi,
+    ProductViewCardsWithApiProfilePage,
+} from "../../../component/productViewCard/ProductViewCardsWithApi";
 
 interface IGudeProfilePage {
     guideData: userFindById_UserFindById;
@@ -213,9 +216,10 @@ const GuideProfile: React.FC<IGudeProfilePage> = () => {
                                             `${router.query.key}/products`
                                         );
                                     }}
+                                    description={s("profilePageSliderNoti")}
                                 />
                             </div>
-                            <ProductViewCardsWithApi
+                            <ProductViewCardsWithApiProfilePage
                                 queryParam={{
                                     fixingFilter: {
                                         guideId__eq: item._id,

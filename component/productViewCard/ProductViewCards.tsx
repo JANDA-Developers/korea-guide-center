@@ -207,6 +207,109 @@ export const ProductViewCards: React.FunctionComponent<IProp> = ({
     );
 };
 
+export const ProductViewCardsForProfilePage: React.FunctionComponent<IProp> = ({
+    products,
+    empty = null,
+    onClickProduct,
+    wrap,
+    setMarginZero,
+    setPaddingZero,
+    align = "auto",
+    ...props
+}) => {
+    const uniqKey = useS4();
+
+    const toursRef = React.useRef<HTMLDivElement>(null);
+
+    const [_align, _setAlign] = useState<number | null>(null);
+    const { ref, width, height } = useResizeDetector();
+    const Align = _align || align;
+
+    const className = classNames("ProductViewCards", undefined, {
+        "ProductViewCards--1": Align === 1,
+        "ProductViewCards--2": Align === 2,
+        "ProductViewCards--3": Align === 3,
+        "ProductViewCards--4": Align === 4,
+        "ProductViewCards--wrap": Align === "wrap",
+        "ProductViewCards--empty": isEmpty(products),
+    });
+
+    const options = React.useMemo<Partial<OwlCarouselProps>>(() => {
+        return {
+            stageOuterClass: "owl-stage-outer owl-height",
+            loadedClass: "min-zero",
+            responsiveClass: true,
+            navClass: ["profile-nav-istheme-left", "profile-nav-istheme-right"],
+            items: 4,
+            dots: false,
+            nav: false,
+
+            navText: [
+                `<span><svg width="40px" height="40px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+          </svg></span>`,
+                `<span><svg width="40px" height="40px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg></span>`,
+            ],
+            responsive: {
+                0: {
+                    items: 2,
+                    margin: 10,
+                },
+                300: {
+                    items: 2,
+                    margin: 10,
+                },
+                400: {
+                    items: 2,
+                    margin: 10,
+                },
+                560: {
+                    items: 2,
+                },
+                800: {
+                    items: 3,
+                },
+                1200: {
+                    items: 4,
+                },
+            },
+        };
+    }, []);
+
+    // 카드
+    return (
+        <div ref={toursRef} className="bloc-slider-tours grouped-tours">
+            <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
+                <Flex oneone className={className} wrap={wrap}>
+                    {isEmpty(products) && (
+                        <div className="ProductViewCards__empty">{empty}</div>
+                    )}
+                    <OwlCarousel
+                        id="tab-AllTours"
+                        className="owl-theme owl-tours owl-opacify active"
+                        {...options}
+                    >
+                        {products.map((product) => (
+                            <ProductViewCard
+                                onClick={() => {
+                                    onClickProduct?.(product);
+                                }}
+                                key={product._id + uniqKey}
+                                className="ProductViewCards__card"
+                                mr
+                                {...props}
+                                product={product}
+                            />
+                        ))}
+                    </OwlCarousel>
+                </Flex>
+            </AnimationOnScroll>
+        </div>
+    );
+};
+
 export const ProductViewCardsForMorePage: React.FunctionComponent<
     IProductViewCardsProp
 > = ({

@@ -30,7 +30,6 @@ export const ProductViewsLineHeader: React.FC<IProp> = ({
                 >
                     {title}
                 </Flex>
-
                 {onSeeMore && (
                     <SeeMore
                         className="productViewsLineHeader__seeMore"
@@ -38,8 +37,7 @@ export const ProductViewsLineHeader: React.FC<IProp> = ({
                     />
                 )}
             </Flex>
-
-            <JDtypho mb hide={!description} color="grey3">
+            <JDtypho mb hide={!description} color="grey3" size="normal">
                 {description}
             </JDtypho>
         </JDalign>
