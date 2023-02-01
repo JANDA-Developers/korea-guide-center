@@ -27832,6 +27832,45 @@ body:not(.no-hover) .bloc-slider-tours .owl-tours .item:hover figure img {
   opacity: 0;
 }
 
+.nav-istheme-left,
+.nav-istheme-right {
+  position: absolute;
+  transition: all 0.2s ease;
+  background:none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-istheme-left svg,
+.nav-istheme-right svg {
+  color: red;
+  background: white;
+  border-radius: 100%;
+  width:20px;
+  height:20px;
+  padding:10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+
+.nav-istheme-left,
+.nav-istheme-right {
+  top:0;
+  margin-top: 170px;
+}
+
+.nav-istheme-left {
+  left: 10px;
+}
+
+.nav-istheme-right {
+  right: 20px;
+}
+
+.nav-istheme-left.disabled,
+.nav-istheme-right.disabled {
+  opacity: 0
+}
+
 .bloc-slider-tours .owl-tours .private-custom {
   white-space: normal;
   display: inline-block;

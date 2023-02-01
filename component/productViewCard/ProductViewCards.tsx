@@ -123,14 +123,16 @@ export const ProductViewCards: React.FunctionComponent<IProp> = ({
             stageOuterClass: "owl-stage-outer owl-height",
             loadedClass: "min-zero",
             responsiveClass: true,
+            navClass: ["nav-istheme-left", "nav-istheme-right"],
             items: 4,
             dots: false,
-            nav: false,
+            nav: true,
+
             navText: [
-                `<span><svg width="50px" height="100px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                `<span><svg width="40px" height="40px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
           </svg></span>`,
-                `<span><svg width="50px" height="100px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                `<span><svg width="40px" height="40px" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
           </svg></span>`,
             ],
