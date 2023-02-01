@@ -247,6 +247,12 @@ const utils_message = {
         ja: `選択`,
         chi: `[中] 选择`,
     },
+    guideTourList: {
+        ko: "운영중인 투어",
+        en: `Tour in operation`,
+        ja: `運営中のツアー`,
+        chi: `巡回演出`,
+    },
     talkWith: {
         ko: "이 가이드와 상담하기",
         en: `Start chat`,
