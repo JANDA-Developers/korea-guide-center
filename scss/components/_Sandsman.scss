@@ -27870,6 +27870,14 @@ body:not(.no-hover) .bloc-slider-tours .owl-tours .item:hover figure img {
   right:70px;
 }
 
+// 테마여행 슬라이더 버튼 반응형
+@media screen and (max-width: 420px) {
+  .nav-istheme-left,
+  .nav-istheme-right{
+    display: none;
+  }
+}
+
 .nav-istheme-left {
   left: 10px;
 }
