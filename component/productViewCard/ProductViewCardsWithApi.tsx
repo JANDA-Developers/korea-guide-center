@@ -43,7 +43,7 @@ export const ProductViewCardsWithApi =
             );
 
             if (isEmpty(products))
-                return (props?.empty as any) ? props.empty : null;
+                return props?.empty ? (props.empty as any) : null;
             return (
                 <div>
                     {Head}
