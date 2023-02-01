@@ -42,7 +42,8 @@ export const ProductViewCardsWithApi =
                 queryControl
             );
 
-            if (isEmpty(products)) return null;
+            if (isEmpty(products))
+                return (props?.empty as any) ? props.empty : null;
             return (
                 <div>
                     {Head}
