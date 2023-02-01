@@ -171,7 +171,7 @@ const utils_message = {
     },
     notification: {
         ko: "알림",
-        en: `Noti`,
+        en: `Notice`,
         ja: `お知らせ`,
         chi: `通知`,
     },
