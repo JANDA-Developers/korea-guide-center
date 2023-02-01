@@ -426,7 +426,6 @@ export const ProductDetail: React.FC<IProp> = ({
                 </Flex>
                 {!isPreveiw && (
                     <div>
-                        여행자들이 본 상품
                         <ProductViewsLineHeader
                             title={s("TravelerwithProduct")}
                         />
