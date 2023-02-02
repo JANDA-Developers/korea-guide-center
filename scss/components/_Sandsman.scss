@@ -26696,6 +26696,8 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
   content:"";
 }
 
+
+
 .txt-intro h2 {
   font-size: 40px;
   font-weight: 400;
@@ -27554,6 +27556,7 @@ body:not(.no-hover) .bloc-slider-city .owl-carousel .item a:focus figure img {
   position: relative;
 }
 
+
 .bloc-slider-tours .txt-intro .align-btn-right {
   position: absolute;
   right: 0;
@@ -27600,7 +27603,7 @@ body:not(.no-hover) .bloc-slider-city .owl-carousel .item a:focus figure img {
 }
 
 .bloc-slider-tours .txt-intro h2 {
-  width: 85%;
+  width: fit-content;
 }
 
 @media screen and (max-width: 1200px) {

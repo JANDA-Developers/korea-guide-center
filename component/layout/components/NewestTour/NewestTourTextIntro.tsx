@@ -16,7 +16,13 @@ const NewestTourTextIntro = () => {
         );
     };
     return (
-        <div className="txt-intro">
+        <div
+            className="txt-intro"
+            style={{
+                display: "flex",
+                alignItems: "center",
+            }}
+        >
             <h2>
                 <span id="newest-tour">
                     <span
@@ -30,9 +36,14 @@ const NewestTourTextIntro = () => {
                     {s("TourText")}
                 </span>
             </h2>
-
-            <div className="align-btn-right"></div>
-            <SeeMore onSeeMore={onClick} />
+            <div
+                style={{
+                    width: "70%",
+                    height: "2px",
+                    background: "black",
+                    marginLeft: "10px",
+                }}
+            ></div>
         </div>
     );
 };

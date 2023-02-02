@@ -1,4 +1,4 @@
-import { isEmpty } from "@janda-com/front";
+import { isEmpty, JDicon } from "@janda-com/front";
 import { TElements } from "@janda-com/front/dist/types/interface";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
@@ -101,6 +101,7 @@ const PopularGuideTab: React.FC<IGuideMovieCardsWithApi> = ({
     videoRelease,
     ...props
 }) => {
+    const router = useRouter();
     const { locale } = useRouter();
     const { items: users } = useUserList(
         {
@@ -142,6 +143,21 @@ const PopularGuideTab: React.FC<IGuideMovieCardsWithApi> = ({
                     />
                 );
             })}
+            <div
+                className="private-custom"
+                style={{
+                    cursor: "pointer",
+                }}
+                onClick={() => {
+                    router.push("/guides");
+                }}
+            >
+                <div className="content">
+                    <div className="title">
+                        가이드 더보기 <JDicon size="normal" icon="arrowRight" />
+                    </div>
+                </div>
+            </div>
         </OwlCarousel>
     );
 };

@@ -5,7 +5,10 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 import { NewsProductList } from "../../../productViewCard/ProductViewCards";
 import { AppContext } from "../../../../context/context";
 import { useProductList } from "../../../../hook/useProduct";
-import { isEmpty } from "@janda-com/front";
+import { isEmpty, JDicon } from "@janda-com/front";
+import { useRouter } from "next/router";
+import { searchPageQueryGenerate } from "../../../../pages/cities/search";
+import { _ProductSort } from "../../../../types/api";
 
 const options = {
     margin: 40,
@@ -69,6 +72,7 @@ const options = {
 
 // id는 임시임 나중에 코리아 가이드에 적용할 때 신경 쓸 것
 const NewestTourTab = () => {
+    const router = useRouter();
     const { s, l, commonProductFilter } = useContext(AppContext);
 
     const { items: products } = useProductList({
@@ -98,6 +102,28 @@ const NewestTourTab = () => {
                     />
                 );
             })}
+            <div
+                className="private-custom"
+                style={{
+                    cursor: "pointer",
+                }}
+                onClick={() => {
+                    router.push(
+                        searchPageQueryGenerate({
+                            sort: [
+                                _ProductSort.rating__desc,
+                                _ProductSort.createdAt__desc,
+                            ],
+                        })
+                    );
+                }}
+            >
+                <div className="content">
+                    <div className="title">
+                        투어 더보기 <JDicon size="normal" icon="arrowRight" />
+                    </div>
+                </div>
+            </div>
         </OwlCarousel>
     );
 };

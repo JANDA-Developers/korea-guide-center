@@ -10,24 +10,37 @@ const PopularGuideTextIntro = () => {
         router.push("/guides");
     };
     return (
-        <div className="txt-intro">
-            <h2>
-                <span id="popular-guides">
-                    <span
-                        style={{
-                            color: "#db1a1c",
-                            display: "inline",
-                        }}
-                    >
-                        {s("Popular")}
-                    </span>{" "}
-                    {s("GuidesText")}
-                </span>
-            </h2>
-
-            <div className="align-btn-right"></div>
-            <SeeMore onSeeMore={onClick} />
-        </div>
+        <>
+            <div
+                className="txt-intro"
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                }}
+            >
+                <h2>
+                    <span id="popular-guides">
+                        <span
+                            style={{
+                                color: "#db1a1c",
+                                display: "inline",
+                            }}
+                        >
+                            {s("Popular")}
+                        </span>{" "}
+                        {s("GuidesText")}
+                    </span>
+                </h2>
+                <div
+                    style={{
+                        width: "70%",
+                        height: "2px",
+                        background: "black",
+                        marginLeft: "10px",
+                    }}
+                ></div>
+            </div>
+        </>
     );
 };
 
