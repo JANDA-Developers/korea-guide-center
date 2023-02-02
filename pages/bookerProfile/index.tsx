@@ -133,9 +133,7 @@ export const BookerProfile: React.FC<IProp> = () => {
                                 thema="primary"
                                 onClick={() => {
                                     // console.log(
-                                    //     "securityInfoChange : ",
-                                    //     securityInfoChange
-                                    // );
+                                    //     "securityInfoChange : ${securityInfoChange}");
                                     if (securityInfoChange === true) {
                                         // console.log(`passwordHook : ${passwordHook.value} , passwordCheckHook : ${passwordCheckHook.value}`);
                                         // 새 비밀번호와 새 비밀번호 확인이 다를 때
