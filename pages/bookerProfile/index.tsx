@@ -132,7 +132,7 @@ export const BookerProfile: React.FC<IProp> = () => {
                             <CardBtn
                                 thema="primary"
                                 onClick={() => {
-                                    console.log(`passwordHook : ${passwordHook.value} , passwordCheckHook : ${passwordCheckHook.value}`);
+                                    // console.log(`passwordHook : ${passwordHook.value} , passwordCheckHook : ${passwordCheckHook.value}`);
                                     // 새 비밀번호와 새 비밀번호 확인이 다를 때
                                     if (passwordHook.value !== passwordCheckHook.value) {
                                         toast.success(s("passwordDifferentSoFailMessage"));
@@ -140,7 +140,7 @@ export const BookerProfile: React.FC<IProp> = () => {
                                     //  새 비밀번호와 새 비밀번호 확인이 같으면서, ||||| 특수문자 1개, 숫자가 포함된 8-16자리 비번이라면, hanldeUpdateBookerProfile() 
                                     else {
                                         const passwordValidationToken = /(?=^.{8,16}$)(?=.*\d)(?=.*[ !@ #$%^ &*()_+}{":;'?/>.<,])(?!.*\s).*$/;
-                                        console.log(`비밀번호 유효성 검사 테스트 결과 : ${passwordValidationToken.test(passwordHook.value)}`);
+                                        // console.log(`비밀번호 유효성 검사 테스트 결과 : ${passwordValidationToken.test(passwordHook.value)}`);
                                         (passwordValidationToken.test(passwordHook.value)) ? hanldeUpdateBookerProfile() : toast.success(s("passwordMustIncludeMessage"));
                                     }
                                 }}
