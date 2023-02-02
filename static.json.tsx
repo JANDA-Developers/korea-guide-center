@@ -500,6 +500,12 @@ const utils_message = {
         ja: "入力された新しいパスワードと新しいパスワードの確認が異なります。",
         chi: "您输入的新密码和新密码确认不同。",
     },
+    passwordMustIncludeMessage: {
+        ko: "비밀번호는 최소 1개의 숫자, 1개의 특수 문자기 필요하며 길이는 8-16자 사이여야 합니다.",
+        en: "Passwords must be at least one number, one special character, and must be between 8 and 16 characters long.",
+        ja: "パスワードは最低1つの数字、1つの特殊文字機が必要で、長さは8~16文字の間でなければなりません。",
+        chi: "密码至少要求一个数字，一个专用字母，长度应在8-16字之间。",
+    },
     logOut: {
         ko: "로그아웃",
         en: `Logout`,
