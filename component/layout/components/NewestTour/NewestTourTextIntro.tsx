@@ -17,9 +17,7 @@ const NewestTourTextIntro = () => {
     return (
         <div className="txt-intro">
             <h2>
-                BOOK
                 <span id="newest-tour">
-                    &nbsp;&nbsp;&nbsp;
                     <span
                         style={{
                             color: "#db1a1c",

@@ -11,9 +11,7 @@ const PopularGuideTextIntro = () => {
     return (
         <div className="txt-intro">
             <h2>
-                WITH
                 <span id="popular-guides">
-                    &nbsp;&nbsp;&nbsp;
                     <span
                         style={{
                             color: "#db1a1c",
