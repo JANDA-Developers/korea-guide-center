@@ -24,13 +24,13 @@ const TourLayout = () => {
 
     const images = [
         {
-            url: "/img/bgmain/bgmain1.jpg",
+            url: "/img/bgmain/bgmain1.png",
         },
         {
-            url: "/img/bgmain/bgmain2.jpg",
+            url: "/img/bgmain/bgmain2.png",
         },
         {
-            url: "/img/bgmain/bgmain3.jpg",
+            url: "/img/bgmain/bgmain3.png",
         },
     ];
 
