@@ -33278,15 +33278,26 @@ body:not(.no-hover) .bloc-reviews .owl-carousel .owl-nav .owl-next span:hover {
 }
 
 .bloc-duo h2 {
-  font-size: 40px;
+  font-size: 36px;
   line-height: 50px;
   margin-bottom: 10px;
 }
+
+.about-small-title {
+  font-size: 30px;
+  color: #DB1A1C;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
 
 @media screen and (max-width: 599px) {
   .bloc-duo h2 {
     font-size: 25px;
     line-height: 35px;
+  }
+  .about-small-title {
+    font-size: 7px;
   }
 }
 
@@ -33467,9 +33478,13 @@ body:not(.no-hover) .bloc-duo .wrapper-link>*:focus .caption .basic-link:after {
 }
 
 .bloc-section-about {
-  background: #1A1A1A;
-  padding: 110px 0 50px 0;
-  margin-top: -110px;
+  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/aboutus/aboutbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding: 110px 0 110px 0;
+  // margin-top: -110px;
   margin-bottom: 40px;
 }
 
@@ -33483,10 +33498,25 @@ body:not(.no-hover) .bloc-duo .wrapper-link>*:focus .caption .basic-link:after {
   clear: both;
 }
 
+
+
+.about-text::after {
+  display:none;
+}
+
+
+
+
+.about-text-top-h2 {
+  margin: 0 !important;
+  font-size: 60px !important;
+}
+
+
 .bloc-section-about .bloc-quality,
 .bloc-section-about .bloc-texte {
   float: left;
-  width: 50%;
+  width: 60%;
   clear: none;
   padding: 0 10px;
 }
@@ -33537,7 +33567,7 @@ body:not(.no-hover) .bloc-duo .wrapper-link>*:focus .caption .basic-link:after {
 }
 
 .bloc-section-about .bloc-texte {
-  float: right;
+  float: left;
 }
 
 @media screen and (max-width: 599px) {

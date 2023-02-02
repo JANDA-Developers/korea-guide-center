@@ -27,7 +27,7 @@ import { CardHead, ModalHead } from "../../component/modalHead/ModalHead";
 import { BirthDayPicker } from "../../component/birthDayPicker/BirthDayPicker";
 import PasswordChecker from "../../component/passwordChecker/PasswordCheck";
 
-interface IProp { }
+interface IProp {}
 
 export const BookerProfile: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
@@ -132,8 +132,14 @@ export const BookerProfile: React.FC<IProp> = () => {
                             <CardBtn
                                 thema="primary"
                                 onClick={() => {
-                                    console.log(`passwordHook : ${passwordHook.value} , passwordCheckHook : ${passwordCheckHook.value}`);
-                                    passwordHook.value === passwordCheckHook.value ? hanldeUpdateBookerProfile() : toast.success(s("passwordDifferentSoFailMessage"));
+                                    passwordHook.value ===
+                                    passwordCheckHook.value
+                                        ? hanldeUpdateBookerProfile()
+                                        : toast.success(
+                                              s(
+                                                  "passwordDifferentSoFailMessage"
+                                              )
+                                          );
                                 }}
                                 size="large"
                             >

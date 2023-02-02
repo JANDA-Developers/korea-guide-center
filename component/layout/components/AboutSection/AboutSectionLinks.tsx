@@ -3,14 +3,22 @@ import { Paths } from "../../../../pages/index[depre]";
 
 const AboutSectionLinks = () => {
     return (
-        <div className="col-wrapper bloc-medium bloc-duo">
+        <div
+            className="col-wrapper bloc-medium bloc-duo"
+            style={{
+                padding: 0,
+            }}
+        >
+            <span className="about-small-title">KOREA GUIDE</span>
             <h2
+                className="about-text about-text-top-h2"
                 style={{
                     color: "white",
                     fontWeight: 600,
+                    lineHeight: 1,
                 }}
             >
-                ABOUT KOREA GUIDE
+                ABOUT
             </h2>
             {/* <div
                 className="wrapper-link"

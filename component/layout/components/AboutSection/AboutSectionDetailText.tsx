@@ -5,9 +5,7 @@ const AboutSectionDetailText = () => {
     const { s } = useContext(AppContext);
     return (
         <div className="bloc-texte">
-            <h2>
-                <span>{s("aboutKoreaGuideTop")}</span>
-            </h2>
+            <h2 className="about-text">{s("aboutKoreaGuideTop")}</h2>
             <p
                 style={{
                     marginBottom: "10px",
