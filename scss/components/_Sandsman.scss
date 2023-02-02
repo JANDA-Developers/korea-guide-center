@@ -23145,11 +23145,35 @@ body:not(.no-hover) .bloc-card.partner-tour .category:hover {
 }
 
 .bloc-texte.bloc-texte-homepage h2 {
-  font-size: 22px;
-  color: #db1a1c;
+  font-size: 39px;
+  font-weight: 600;
   line-height: 30px;
   width: 70%;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 40px auto;
+}
+
+.bloc-texte.bloc-texte-homepage h2::before {
+  position: absolute;
+  left:0;
+  bottom:0;
+  background-image: url("/img/middleDecoLeft.png");
+  background-size: 100px 100px;
+  display: inline-block;
+  width: 100px; 
+  height: 100px;
+  content:"";
+}
+
+.bloc-texte.bloc-texte-homepage h2::after {
+ position: absolute;
+ right:0;
+ top:0;
+ background-image: url("/img/middleDecoRight.png");
+ background-size: 100px 100px;
+ display: inline-block;
+ width: 100px; 
+ height: 100px;
+ content:"";
 }
 
 @media screen and (max-width: 599px) {

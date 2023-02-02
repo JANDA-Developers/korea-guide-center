@@ -2975,8 +2975,21 @@ const utils_message = {
         ja: `続ける`,
         chi: `继续`,
     },
+
     MiddleTextTop: {
-        ko: "우리는 코리아가이드 입니다.",
+        ko: (
+            <span className="middleTextTop">
+                우리는{" "}
+                <span
+                    style={{
+                        color: "#DB1A1C",
+                    }}
+                >
+                    코리아가이드
+                </span>{" "}
+                입니다.
+            </span>
+        ),
         en: "We are the Korea Guide.",
         ja: "私たちはコリアガイドです。",
         chi: "我们是韩国导游。",
