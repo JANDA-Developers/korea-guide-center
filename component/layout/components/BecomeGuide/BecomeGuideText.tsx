@@ -12,22 +12,31 @@ const BecomeGuideText = () => {
 
     return (
         <div className="bloc-texte">
-            <div>
-                <h2
+            <div
+                style={{
+                    position: "relative",
+                }}
+            >
+                <span
+                    className="about-small-title"
                     style={{
-                        color: "black",
+                        lineHeight: "1rem",
+                        color: "#DB1A1C",
+                    }}
+                >
+                    KOREA GUIDE
+                </span>
+                <h2
+                    className="find-guides-title"
+                    style={{
                         fontWeight: 600,
+                        marginTop: 0,
+                        marginBottom: "30px",
                     }}
                 >
                     {s("findGuidesTitle")}
                 </h2>
-                <p
-                    style={{
-                        color: "black",
-                    }}
-                >
-                    {s("findGuidesDesc")}
-                </p>
+                <p>{s("findGuidesDesc")}</p>
                 <a
                     onClick={() => {
                         if (isLogin || isMaster) {

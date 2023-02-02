@@ -23242,6 +23242,18 @@ body:not(.no-hover) .bloc-card.partner-tour .category:hover {
   margin-bottom: 10px;
 }
 
+.find-guides-title::after {
+  position: absolute;
+  top:-20px;
+  background-image: url("/img/mainIcon/koreaguideCenterLogo.png");
+  background-size: 87px 64px;
+  display: inline-block;
+  width: 87px; 
+  height: 63px;
+  transform:rotateZ(-20deg);
+  content:"";
+}
+
 .bloc-texte h2.accroche {
   font-size: 22px;
   color: #db1a1c;
@@ -33664,8 +33676,12 @@ body:not(.no-hover) .bloc-section-about .btn:focus {
 
 .bloc-become-a-guide {
   position: relative;
-  background: #1a1a1a;
-  max-width: 1920px;
+  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("/img/becomeGuidebg.png");
+  // max-width: 1920px;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  padding: 110px 0 110px 0;
   margin: 60px auto;
 }
 
@@ -33676,7 +33692,7 @@ body:not(.no-hover) .bloc-section-about .btn:focus {
 }
 
 .bloc-become-a-guide>* {
-  float: left;
+  // float: left;
 }
 
 .bloc-become-a-guide .wrapper-slider {
@@ -33804,7 +33820,9 @@ body:not(.no-hover) .bloc-section-about .btn:focus {
 
 .bloc-become-a-guide .bloc-texte {
   width: 40%;
+  color: white;
   clear: none;
+  margin: 0 auto;
   padding: 40px 60px;
   height: 100%;
 }
@@ -33831,7 +33849,7 @@ body:not(.no-hover) .bloc-section-about .btn:focus {
 
 .bloc-become-a-guide .bloc-texte>* {
   position: relative;
-  max-width: 450px;
+  // max-width: 450px;
 }
 
 @media screen and (max-width: 980px) {
