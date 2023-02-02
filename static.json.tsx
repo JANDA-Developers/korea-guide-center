@@ -2975,6 +2975,31 @@ const utils_message = {
         ja: `続ける`,
         chi: `继续`,
     },
+    Newest: {
+        ko: "최신",
+        en: "NEWEST",
+        ja: "最新",
+        chi: "最新",
+    },
+    Popular: {
+        ko: "인기",
+        en: "Popular",
+        ja: "人気",
+        chi: "受欢迎",
+    },
+
+    TourText: {
+        ko: "투어",
+        en: "Tour",
+        ja: "ツアー",
+        chi: "巡游",
+    },
+    GuidesText: {
+        ko: "가이드",
+        en: "Guides",
+        ja: "ガイド",
+        chi: "指南",
+    },
 
     MiddleTextTop: {
         ko: (

@@ -1,12 +1,13 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useContext } from "react";
 import { SeeMore } from "../../../../atom/SeeMore";
+import { AppContext } from "../../../../context/context";
 import { searchPageQueryGenerate } from "../../../../pages/cities/search";
 import { _ProductSort } from "../../../../types/api";
-import NewestTourTabBar from "./NewestTourTabBar";
 
 const NewestTourTextIntro = () => {
     const router = useRouter();
+    const { s } = useContext(AppContext);
     const onClick = () => {
         router.push(
             searchPageQueryGenerate({
@@ -24,9 +25,9 @@ const NewestTourTextIntro = () => {
                             display: "inline",
                         }}
                     >
-                        NEWEST
+                        {s("Newest")}
                     </span>{" "}
-                    TOUR
+                    {s("TourText")}
                 </span>
             </h2>
 

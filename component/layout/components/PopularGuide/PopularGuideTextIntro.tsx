@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useContext } from "react";
 import { SeeMore } from "../../../../atom/SeeMore";
-import NewestTourTabBar from "../NewestTour/NewestTourTabBar";
+import { AppContext } from "../../../../context/context";
 
 const PopularGuideTextIntro = () => {
+    const { s } = useContext(AppContext);
     const router = useRouter();
     const onClick = () => {
         router.push("/guides");
@@ -18,9 +19,9 @@ const PopularGuideTextIntro = () => {
                             display: "inline",
                         }}
                     >
-                        POPULAR
+                        {s("Popular")}
                     </span>{" "}
-                    GUIDES
+                    {s("GuidesText")}
                 </span>
             </h2>
 
