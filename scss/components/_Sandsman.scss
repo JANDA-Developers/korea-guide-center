@@ -26684,6 +26684,18 @@ body:not(.no-hover) .bloc-pagination .pagination .pagination-number>a.active {
   margin: 80px 0px 40px 0px;
 }
 
+#popular-guides::before, #newest-tour::before {
+  position: absolute;
+  left:0;
+  bottom:0;
+  background-image: url("/img/title-underline.png");
+  background-size: 190px 34px;
+  display: inline-block;
+  width: 190px; 
+  height: 34px;
+  content:"";
+}
+
 .txt-intro h2 {
   font-size: 40px;
   font-weight: 400;
