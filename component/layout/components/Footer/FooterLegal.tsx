@@ -18,6 +18,7 @@ const FooterLegal = () => {
         >
             <div className="col-fluid">
                 <div
+                    className="footer-rule"
                     style={{
                         display: "flex",
                         height: "auto",
@@ -32,23 +33,34 @@ const FooterLegal = () => {
                     </a>
                 </div>
                 <div
+                    className="footer-info"
                     style={{
-                        lineHeight: "1.2rem",
                         color: "#737373",
                     }}
                 >
-                    <div>
-                        {s("footer_ceo")}:{s("itsguide_CEO")} |{" "}
-                        {s("footer_businessNumber")}: 863-86-01971 |{" "}
-                        {s("footer_address")}: {s("itsguide_adress")} |{" "}
-                        {s("footer_email")}: kguidecenter@gmail.com |{" "}
-                        {s("footer_fax")}:{s("itsguide_FAX")}
-                    </div>
-                    <div>
-                        {s("footer_transferNum")}: 2020-부산영도-0215 |{" "}
-                        {s("footer_accountNum")}
-                        {`301-0308-0055-81`}
-                    </div>
+                    {s("footer_ceo")}:{s("itsguide_CEO")}
+                    <br />
+                    {s("footer_businessNumber")}: 863-86-01971
+                    <br />
+                    {s("footer_address")}: {s("itsguide_adress")}
+                    <br />
+                    {s("footer_email")}: kguidecenter@gmail.com
+                    <br />
+                    {s("footer_fax")}:{s("itsguide_FAX")}
+                    <br />
+                    {s("footer_transferNum")}: 2020-부산영도-0215 <br />
+                    {s("footer_accountNum")}:{`301-0308-0055-81`}
+                    <br />
+                </div>
+                <div className="footer-copyright">
+                    <span
+                        style={{
+                            color: "#737373",
+                        }}
+                    >
+                        COPYRIGHT © 2021 KOREAGUIDECENTER CO., LTD. ALL RIGHTS
+                        RESERVED
+                    </span>
                 </div>
             </div>
         </div>
