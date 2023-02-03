@@ -504,6 +504,7 @@ figure {
 }
 
 .mainFitCoverInsta {
+  // position: absolute;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -30460,10 +30461,20 @@ body:not(.no-hover) .bloc-social-wall .instagram>a:focus figure img {
 }
 
 .instaContents {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
+.instaContentsCard {
+  width: 100%;
+  position: relative;
+}
+.CardContainer::after {
+      display: block;
+      content: "";
+      padding-bottom: 100%;
+    }
 
 .bloc-social-wall .instagram .btn-insta {
   font-family: "Coco Gothic", Sans-Serif;
