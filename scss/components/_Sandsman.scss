@@ -10758,11 +10758,11 @@ body:not(.no-hover) .newsletter button:focus span {
 #footer .footer-title {
   position: relative;
   display: block;
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   // font-family: "Nunito", Sans-Serif;
   font-size: 22px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
   line-height: 32px;
 }
 
@@ -10815,8 +10815,14 @@ body:not(.no-hover) #footer ul li a.strong-link:focus:after {
   background: #db1a1c;
 }
 
+
+
 #footer .col-fluid {
   position: relative;
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto !important;
+  width: 50%;
 }
 
 #footer .col-fluid>div {
@@ -10863,9 +10869,9 @@ body:not(.no-hover) #footer .col-fluid>div:nth-child(2) ul li:first-child a:focu
 
 #footer .footer-columns ul {
   width: 100%;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  columns: 2;
+  -webkit-columns: 4;
+  -moz-columns: 4;
+  columns: 4;
 }
 
 #footer .footer-columns ul:after {
@@ -11008,6 +11014,7 @@ body:not(.no-hover) #footer .footer-contact .tel:focus {
 
 #footer .menu-legal {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px 0;
 }
 
 @media screen and (max-width: 980px) {
@@ -11150,13 +11157,15 @@ body:not(.no-hover) #footer .menu-legal>.col-fluid>div>div>a:first-child:focus {
   }
 }
 
+
+
 #footer .menu-legal span,
 #footer .menu-legal a {
   position: relative;
   // font-family: "Nunito", Sans-Serif;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
-  color: #999;
+  color: #B4B4B4;
   line-height: 20px;
   text-transform: uppercase;
   display: inline-block;
@@ -11166,6 +11175,10 @@ body:not(.no-hover) #footer .menu-legal>.col-fluid>div>div>a:first-child:focus {
   -o-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+
+.menu-link {
+  margin-right: 50px !important;
 }
 
 #footer .menu-legal span:after,

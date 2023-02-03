@@ -1,9 +1,10 @@
 import { Bold, Flex } from "@janda-com/front";
 import React, { useContext } from "react";
 import { AppContext } from "../../../../context/context";
-import { Logo } from "../../../logo/Logo";
 
 const FooterContact = () => {
+    const { s } = useContext(AppContext);
+
     const BottomInfo = ({ label, value }: { label: string; value: string }) => {
         return (
             <Flex vCenter mr>
@@ -11,44 +12,9 @@ const FooterContact = () => {
             </Flex>
         );
     };
-    const { s } = useContext(AppContext);
-    const TitleText = s("itsguide").split(" ");
+
     return (
         <div className="col-50 footer-contact">
-            <span className="footer-title">Contact</span>
-            <div
-                style={{
-                    display: "flex",
-                }}
-            >
-                <Logo className="bookHeader__logo" />
-                <div className="logoTextContainer">
-                    <span
-                        className="logoText__top"
-                        style={{
-                            color: "white",
-                        }}
-                    >
-                        {s("joyful")}
-                    </span>
-                    <div className="logoText__bottom">
-                        <span
-                            style={{
-                                color: " #D0242B",
-                            }}
-                        >
-                            {TitleText[0]}
-                        </span>{" "}
-                        <span
-                            style={{
-                                color: "white",
-                            }}
-                        >
-                            {TitleText[1]}
-                        </span>
-                    </div>
-                </div>
-            </div>
             <div className="footer__infoDetail">
                 <BottomInfo label={s("footer_ceo")} value={s("itsguide_CEO")} />
                 <BottomInfo

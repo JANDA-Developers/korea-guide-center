@@ -153,9 +153,13 @@ const FooterServices = () => {
         },
     ];
 
-    console.log(regionData.length);
     return (
-        <div className="col-25">
+        <div
+            className="col-50 footer-columns"
+            style={{
+                width: "100%",
+            }}
+        >
             <span className="footer-title"> {s("footerServices")}</span>
             <ul>
                 {regionData.map((item, index) => {

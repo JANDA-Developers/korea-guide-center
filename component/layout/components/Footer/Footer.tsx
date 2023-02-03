@@ -1,6 +1,7 @@
 import React from "react";
 import FooterContents from "./FooterContents";
 import FooterLegal from "./FooterLegal";
+import FooterLogo from "./FooterLogo";
 
 const Footer = () => {
     return (

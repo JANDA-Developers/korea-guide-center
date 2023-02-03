@@ -285,7 +285,12 @@ const FooterCities = () => {
         },
     ];
     return (
-        <div className="col-50 footer-columns">
+        <div
+            className="col-50 footer-columns"
+            style={{
+                width: "100%",
+            }}
+        >
             <span className="footer-title"> {s("footerCities")}</span>
             <ul>
                 {regionData.map((item, index) => {
