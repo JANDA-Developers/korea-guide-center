@@ -3004,7 +3004,8 @@ const utils_message = {
     MiddleTextTop: {
         ko: (
             <span className="middleTextTop">
-                우리는{" "}
+                우리는
+                <br />
                 <span
                     style={{
                         color: "#DB1A1C",

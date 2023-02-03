@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context/context";
+import React from "react";
 import { useInput } from "@janda-com/front";
 import { searchPageQueryGenerate } from "./product/search";
 import { useRecoilState } from "recoil";
 import { menuOpenState } from "../recoil/atoms";
-import { useRouter } from "next/router";
 import MainBanner from "../component/layout/components/MainBanner/MainBanner";
 import RegionTourSlider from "../component/layout/components/RegionTourSlider/RegionTourSlider";
 import MiddleText from "../component/layout/components/MiddleText/MiddleText";
@@ -18,8 +16,6 @@ import PopularGuide from "../component/layout/components/PopularGuide/PopularGui
 import RegionalGuide from "../component/layout/components/RegionalGuide/RegionalGuide";
 
 const TourLayout = () => {
-    const { s } = useContext(AppContext);
-    const { locale } = useRouter();
     const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
 
     const images = [

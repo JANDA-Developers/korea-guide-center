@@ -23166,10 +23166,14 @@ body:not(.no-hover) .bloc-card.partner-tour .category:hover {
   margin: 0 auto 40px auto;
 }
 
+.middleTextTop{
+  line-height: 3rem;
+}
+
 .bloc-texte.bloc-texte-homepage h2::before {
   position: absolute;
-  left:0;
-  bottom:0;
+  left:50px;
+  bottom:30px;
   background-image: url("/img/middleDecoLeft.png");
   background-size: 100px 100px;
   display: inline-block;
@@ -23180,8 +23184,8 @@ body:not(.no-hover) .bloc-card.partner-tour .category:hover {
 
 .bloc-texte.bloc-texte-homepage h2::after {
  position: absolute;
- right:0;
- top:0;
+ right:50px;
+ top:30px;
  background-image: url("/img/middleDecoRight.png");
  background-size: 100px 100px;
  display: inline-block;
@@ -23192,8 +23196,57 @@ body:not(.no-hover) .bloc-card.partner-tour .category:hover {
 
 @media screen and (max-width: 599px) {
   .bloc-texte.bloc-texte-homepage h2 {
+    font-size: 24px;
     width: 100%;
   }
+
+  .middleTextTop{
+    line-height: 1rem;
+  }
+
+  .bloc-texte.bloc-texte-homepage h2::before{
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    left:30px;
+    bottom:30px;
+  }
+
+  .bloc-texte.bloc-texte-homepage h2::after{
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    right:30px;
+    top:30px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .bloc-texte.bloc-texte-homepage h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .middleTextTop{
+    line-height: 1rem;
+  }
+
+  .bloc-texte.bloc-texte-homepage h2::before{
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    left:20px;
+    bottom:30px;
+  }
+
+  .bloc-texte.bloc-texte-homepage h2::after{
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    right:20px;
+    top:30px;
+  }
+
 }
 
 .bloc-texte.bloc-texte-colonne.text-columns {
