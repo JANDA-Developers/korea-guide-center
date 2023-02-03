@@ -31,12 +31,12 @@ const SocialInsta = () => {
                 <div className="instaContentsCard">
                     <a
                         target="_blank"
-                        href="https://www.instagram.com/korea_guide_/"
+                        href="https://www.instagram.com/p/CaYXZA-v4pQ/"
                         rel="noopener noreferrer"
                     >
                         <figure className="mainFitCover">
                             <img
-                                src="/img/sns/instagramImage.jpeg"
+                                src="/img/sns/instagramImage1.jpg"
                                 alt=""
                                 className="mainFitCoverInsta"
                             />
@@ -51,7 +51,7 @@ const SocialInsta = () => {
                     >
                         <figure className="mainFitCover">
                             <img
-                                src="/img/sns/instagramImage.jpeg"
+                                src="/img/sns/instagramImage2.jpg"
                                 alt=""
                                 className="mainFitCoverInsta"
                             />
@@ -66,7 +66,7 @@ const SocialInsta = () => {
                     >
                         <figure className="mainFitCover">
                             <img
-                                src="/img/sns/instagramImage.jpeg"
+                                src="/img/sns/instagramImage3.jpg"
                                 alt=""
                                 className="mainFitCoverInsta"
                             />
