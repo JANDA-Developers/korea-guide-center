@@ -33462,7 +33462,7 @@ body:not(.no-hover) .bloc-reviews .owl-carousel .owl-nav .owl-next span:hover {
     line-height: 35px;
   }
   .about-small-title {
-    font-size: 7px;
+    font-size: 24px;
   }
 }
 
@@ -33749,6 +33749,17 @@ body:not(.no-hover) .bloc-duo .wrapper-link>*:focus .caption .basic-link:after {
   line-height: 35px;
   padding-bottom: 10px;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 599px) {
+  .bloc-section-about h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom:0;
+  }
+  .bloc-section-about p {
+    font-size:14px;
+  }
 }
 
 .bloc-section-about h2:after {
