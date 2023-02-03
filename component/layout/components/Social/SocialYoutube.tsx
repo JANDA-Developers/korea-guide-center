@@ -23,8 +23,6 @@ const SocialYouTube = () => {
                     <img
                         src="/img/sns/youtubeImage.jpeg"
                         alt=""
-                        width="680"
-                        height="680"
                         className="lazy"
                     />
                 </figure>
