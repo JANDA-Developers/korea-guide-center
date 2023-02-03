@@ -13,14 +13,14 @@ const SocialInsta = () => {
                 >
                     @korea_guide_
                 </a>
-                <a
+                {/* <a
                     href="https://www.instagram.com/korea_guide_/"
                     target="_blank"
                     className="btn-insta"
                     rel="noopener noreferrer"
                 >
                     Follow
-                </a>
+                </a> */}
             </span>
             <a
                 target="_blank"
