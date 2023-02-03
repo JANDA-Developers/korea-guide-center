@@ -4,7 +4,7 @@ import SocialYoutube from "./SocialYoutube";
 
 const Social = () => {
     return (
-        <div className="col-wrapper bloc bloc-medium bloc-social-wall">
+        <div className="bloc-social-wall homeSocial">
             <SocialYoutube />
             <SocialInsta />
         </div>
