@@ -36,7 +36,7 @@ const BecomeGuideText = () => {
                 >
                     {s("findGuidesTitle")}
                 </h2>
-                <p>{s("findGuidesDesc")}</p>
+                <p className="find-guide-desc">{s("findGuidesDesc")}</p>
                 <a
                     onClick={() => {
                         if (isLogin || isMaster) {
