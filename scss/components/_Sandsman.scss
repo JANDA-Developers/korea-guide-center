@@ -23130,6 +23130,7 @@ body:not(.no-hover) .bloc-card.partner-tour .category:hover {
 @media screen and (max-width: 599px) {
   .bloc.bloc-small {
     margin: 0 20px !important;
+    margin-top: 100px !important;
   }
 }
 
@@ -26828,9 +26829,6 @@ transition: all 0.2s ease;
 }
 
 
-
-
-
 @media screen and (max-width: 980px) {
   .txt-intro h2 {
     width: 100%;
@@ -26839,9 +26837,20 @@ transition: all 0.2s ease;
 }
 
 @media screen and (max-width: 599px) {
+  .txt-intro {
+    margin-bottom: 20px;
+  }
+
   .txt-intro h2 {
     font-size: 25px;
     line-height: 35px;
+
+  }
+
+  #popular-guides::before, #newest-tour::before {
+    background-size: 120px 17px;
+    width: 120px; 
+    height: 17px;
   }
 }
 
@@ -26858,6 +26867,13 @@ transition: all 0.2s ease;
 @media screen and (max-width: 599px) {
   .txt-intro h2 span {
     font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .txt-intro h2 span {
+    font-size: 28px;
     line-height: 40px;
   }
 }
