@@ -2,7 +2,7 @@ import React from "react";
 
 const SocialInsta = () => {
     return (
-        <div className="col-50 instagram">
+        <div className="col-66 instagram">
             <div className="title">
                 <img
                     src="img/sns/instagramIcon.png"
