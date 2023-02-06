@@ -209,7 +209,7 @@ body {
 .bloc-facette>* .wrapper-cat>.wrapper-select select,
 .bloc-facette>* .wrapper-cat .dropdown>a:after,
 .bloc-social-wall .facebook>a figure img,
-.bloc-social-wall .instagram>a figure img,
+.bloc-social-wall .instagram>div div a figure img,
 .bloc-commentaire .identification-form form .field label,
 .bloc-reviews .owl-carousel .item .header-reviews .author-name .no-photo span,
 .bloc-duo .wrapper-link>* figure img,
@@ -314,7 +314,7 @@ main:after {
 .bloc-facette>* .wrapper-cat>.wrapper-select select,
 .bloc-facette>* .wrapper-cat .dropdown>a:after,
 .bloc-social-wall .facebook>a figure img,
-.bloc-social-wall .instagram>a figure img,
+.bloc-social-wall .instagram>div div a figure img,
 .bloc-commentaire .identification-form form .field label,
 .bloc-reviews .owl-carousel .item .header-reviews .author-name .no-photo span,
 .bloc-duo .wrapper-link>* figure img,
@@ -30404,7 +30404,8 @@ body:not(.no-hover) .bloc-facette>* .wrapper-cat .dropdown>a:focus:after {
 
 @media screen and (max-width: 599px) {
   .bloc-social-wall .facebook {
-    margin-bottom: 40px;
+    // margin-bottom: 20px;
+    padding: 1rem;
   }
 }
 
@@ -30464,7 +30465,11 @@ body:not(.no-hover) .bloc-social-wall .facebook>a:focus figure img {
 
 .bloc-social-wall .instagram {
   position: relative;
-
+}
+@media screen and (max-width: 599px) {
+  .bloc-social-wall .instagram {
+    padding: 1rem;
+  }
 }
 
 .bloc-social-wall .instagram:after {
@@ -30479,17 +30484,17 @@ body:not(.no-hover) .bloc-social-wall .facebook>a:focus figure img {
   float: left;
 }
 
-body:not(.no-hover) .bloc-social-wall .instagram>a:hover figure img,
-body:not(.no-hover) .bloc-social-wall .instagram>a:focus figure img {
+body:not(.no-hover) .bloc-social-wall .instagram>div div a:hover figure img,
+body:not(.no-hover) .bloc-social-wall .instagram>div div a:focus figure img {
   opacity: 0.8;
 }
 
-.bloc-social-wall .instagram>a figure {
+.bloc-social-wall .instagram>div div a figure {
   position: relative;
   overflow: hidden;
 }
 
-.bloc-social-wall .instagram>a figure:before {
+.bloc-social-wall .instagram>div div a figure:before {
   display: block;
   content: "";
   width: 100%;
@@ -30498,8 +30503,8 @@ body:not(.no-hover) .bloc-social-wall .instagram>a:focus figure img {
   padding-top: 100%;
 }
 
-.bloc-social-wall .instagram>a figure>.content,
-.bloc-social-wall .instagram>a figure>.wrapper {
+.bloc-social-wall .instagram>div div a figure>.content,
+.bloc-social-wall .instagram>div div a figure>.wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -30507,7 +30512,7 @@ body:not(.no-hover) .bloc-social-wall .instagram>a:focus figure img {
   bottom: 0;
 }
 
-.bloc-social-wall .instagram>a figure img {
+.bloc-social-wall .instagram>div div a figure img {
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.2s ease;
