@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const SocialYouTube = () => {
+    const [data, setData] = useState();
+
+    useEffect(() => {
+        const getData = async () => {
+            await fetch("/api/getYoutube")
+                .then(async (response) => {
+                    const result = await response.json();
+                    setData(result);
+                })
+                .catch((error) => console.log("error:", error));
+        };
+        getData();
+    }, []);
+
+    console.log(data);
     return (
         <div className="col-66 facebook">
             <span className="title">
