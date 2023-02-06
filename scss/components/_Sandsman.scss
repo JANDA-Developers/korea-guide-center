@@ -30391,8 +30391,11 @@ body:not(.no-hover) .bloc-facette>* .wrapper-cat .dropdown>a:focus:after {
 
 .bloc-social-wall .youtubeContents .youtubeContentsCard .youtubeTitle {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   padding: 0.5rem;
+  @media screen and (max-width: 1280px) {
+    font-size: 18px;
+  }
   @media screen and (max-width: 1024px) {
     font-size: 16px;
   }
@@ -30402,14 +30405,17 @@ body:not(.no-hover) .bloc-facette>* .wrapper-cat .dropdown>a:focus:after {
 }
 .bloc-social-wall .youtubeContents .youtubeContentsCard .youtubeStatistics {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: #939393;
   padding-top: 0.5rem;
+  @media screen and (max-width: 1280px) {
+    font-size: 16px;
+  }
   @media screen and (max-width: 1024px) {
     font-size: 14px;
   }
   @media screen and (max-width: 599px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
