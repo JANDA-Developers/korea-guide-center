@@ -33,7 +33,6 @@ const SocialYouTube = () => {
         getData();
     }, []);
 
-    console.log(data);
     return (
         <div className="col-66 facebook">
             <span className="title">
