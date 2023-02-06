@@ -7,8 +7,6 @@ import { AppContext } from "../../../../context/context";
 import { useProductList } from "../../../../hook/useProduct";
 import { isEmpty, JDicon } from "@janda-com/front";
 import { useRouter } from "next/router";
-import { searchPageQueryGenerate } from "../../../../pages/cities/search";
-import { _ProductSort } from "../../../../types/api";
 
 const options = {
     margin: 40,
@@ -25,20 +23,20 @@ const options = {
     ],
     responsive: {
         0: {
-            items: 2,
-            margin: 200,
+            items: 1,
+            margin: 30,
         },
         300: {
-            items: 2,
-            margin: 250,
+            items: 1,
+            margin: -50,
         },
         400: {
-            items: 2,
-            margin: 200,
+            items: 1,
+            margin: -80,
         },
-        560: {
+        540: {
             items: 2,
-            margin: -100,
+            margin: 30,
         },
         600: {
             items: 2,
@@ -108,19 +106,12 @@ const NewestTourTab = () => {
                     cursor: "pointer",
                 }}
                 onClick={() => {
-                    router.push(
-                        searchPageQueryGenerate({
-                            sort: [
-                                _ProductSort.rating__desc,
-                                _ProductSort.createdAt__desc,
-                            ],
-                        })
-                    );
+                    router.push("/guides");
                 }}
             >
                 <div className="content">
                     <div className="title">
-                        투어 더보기 <JDicon size="normal" icon="arrowRight" />
+                        더보기 <JDicon size="normal" icon="arrowRight" />
                     </div>
                 </div>
             </div>

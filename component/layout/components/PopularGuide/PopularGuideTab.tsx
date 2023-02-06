@@ -48,20 +48,20 @@ const options = {
     ],
     responsive: {
         0: {
-            items: 2,
-            margin: 200,
+            items: 1,
+            margin: 30,
         },
         300: {
-            items: 2,
-            margin: 250,
+            items: 1,
+            margin: -50,
         },
         400: {
-            items: 2,
-            margin: 200,
+            items: 1,
+            margin: -80,
         },
-        560: {
+        540: {
             items: 2,
-            margin: -100,
+            margin: 30,
         },
         600: {
             items: 2,
