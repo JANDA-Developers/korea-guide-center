@@ -2,7 +2,7 @@ import React from "react";
 
 const SocialYouTube = () => {
     return (
-        <div className="col-50 facebook">
+        <div className="col-66 facebook">
             <span className="title">
                 <img src="img/sns/youtubeIcon.png" width="35px" height="25px" />
                 YOUTUBE

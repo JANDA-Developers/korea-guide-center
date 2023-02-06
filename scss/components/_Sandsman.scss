@@ -30404,7 +30404,8 @@ body:not(.no-hover) .bloc-facette>* .wrapper-cat .dropdown>a:focus:after {
 
 @media screen and (max-width: 599px) {
   .bloc-social-wall .facebook {
-    margin-bottom: 40px;
+    // margin-bottom: 20px;
+    padding: 1rem;
   }
 }
 
