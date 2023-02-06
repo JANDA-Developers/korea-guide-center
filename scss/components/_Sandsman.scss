@@ -208,7 +208,7 @@ body {
 .bloc-facette>* .wrapper-cat input,
 .bloc-facette>* .wrapper-cat>.wrapper-select select,
 .bloc-facette>* .wrapper-cat .dropdown>a:after,
-.bloc-social-wall .facebook>a figure img,
+.bloc-social-wall .facebook>div div a figure img,
 .bloc-social-wall .instagram>div div a figure img,
 .bloc-commentaire .identification-form form .field label,
 .bloc-reviews .owl-carousel .item .header-reviews .author-name .no-photo span,
@@ -313,7 +313,7 @@ main:after {
 .bloc-facette>* .wrapper-cat input,
 .bloc-facette>* .wrapper-cat>.wrapper-select select,
 .bloc-facette>* .wrapper-cat .dropdown>a:after,
-.bloc-social-wall .facebook>a figure img,
+.bloc-social-wall .facebook>div div a figure img,
 .bloc-social-wall .instagram>div div a figure img,
 .bloc-commentaire .identification-form form .field label,
 .bloc-reviews .owl-carousel .item .header-reviews .author-name .no-photo span,
@@ -30371,6 +30371,45 @@ body:not(.no-hover) .bloc-facette>* .wrapper-cat .dropdown>a:focus:after {
   transition: all 0.2s ease;
   color: #308DEE;
 }
+.bloc-social-wall .title .youtubeChannel {
+  display: flex;
+}
+.bloc-social-wall .title .youtubeChannelName {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+.bloc-social-wall .title .youtubeSubscribe {
+  font-size: 16px;
+  font-weight: 400;
+  color: #939393;
+}
+
+.bloc-social-wall .youtubeContents .youtubeContentsCard .youtubeTitle {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0.5rem;
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 599px) {
+    font-size: 14px;
+  }
+}
+.bloc-social-wall .youtubeContents .youtubeContentsCard .youtubeStatistics {
+  font-weight: 400;
+  font-size: 16px;
+  color: #939393;
+  padding-top: 0.5rem;
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 599px) {
+    font-size: 12px;
+  }
+}
 
 // body:not(.no-hover) .bloc-social-wall .title a:hover,
 // body:not(.no-hover) .bloc-social-wall .title a:focus {
@@ -30409,12 +30448,32 @@ body:not(.no-hover) .bloc-facette>* .wrapper-cat .dropdown>a:focus:after {
   }
 }
 
-body:not(.no-hover) .bloc-social-wall .facebook>a:hover figure img,
-body:not(.no-hover) .bloc-social-wall .facebook>a:focus figure img {
-  opacity: 0.7;
+.youtubeContents {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.youtubeContentsCard {
+  width: 100%;
+  position: relative;
 }
 
-.bloc-social-wall .facebook>a figure {
+.mainFitCoverYoutube {
+  // position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+body:not(.no-hover) .bloc-social-wall .facebook>div div a:hover figure img,
+body:not(.no-hover) .bloc-social-wall .facebook>div div a:focus figure img {
+  opacity: 0.8;
+}
+
+.bloc-social-wall .facebook>div div a figure {
   position: relative;
   overflow: hidden;
   -webkit-transition: all 0.2s ease;
@@ -30423,7 +30482,7 @@ body:not(.no-hover) .bloc-social-wall .facebook>a:focus figure img {
   transition: all 0.2s ease;
 }
 
-.bloc-social-wall .facebook>a figure:before {
+.bloc-social-wall .facebook>div div a figure:before {
   display: block;
   content: "";
   width: 100%;
@@ -30431,8 +30490,8 @@ body:not(.no-hover) .bloc-social-wall .facebook>a:focus figure img {
   padding-top: 100%;
 }
 
-.bloc-social-wall .facebook>a figure>.content,
-.bloc-social-wall .facebook>a figure>.wrapper {
+.bloc-social-wall .facebook>div div a figure>.content,
+.bloc-social-wall .facebook>div div a figure>.wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -30440,7 +30499,7 @@ body:not(.no-hover) .bloc-social-wall .facebook>a:focus figure img {
   bottom: 0;
 }
 
-.bloc-social-wall .facebook>a figure img {
+.bloc-social-wall .facebook>div a figure img {
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.2s ease;
