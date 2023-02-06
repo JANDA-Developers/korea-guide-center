@@ -43,13 +43,6 @@ const SocialYouTube = () => {
                         <div className="youtubeChannelName">
                             {data?.result.title}
                         </div>
-                        {/* <a
-                    href="https://www.youtube.com/channel/UCaqfo9iu08Nz53fri_oHmCQ/videos"
-                    target="_blank"
-                    rel="nofollow noreferrer"
-                >
-                    Korea Guide
-                </a> */}
                         <span className="youtubeSubscribe">
                             {data?.result.subscriberCount}명
                         </span>
@@ -57,7 +50,7 @@ const SocialYouTube = () => {
                 </div>
             </span>
             <div className="youtubeContents">
-                {data?.result.videos.map((item, index) => {
+                {data?.result.videos.map((item) => {
                     return (
                         <div className="youtubeContentsCard" key={item.id}>
                             <a
