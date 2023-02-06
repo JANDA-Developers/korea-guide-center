@@ -25,19 +25,19 @@ const SocialYouTube = () => {
             </span>
             <div className="youtubeContents">
                 <div className="youtubeContentsCard">
-                    {/* <a
+                    <a
                         target="_blank"
-                        href="https://www.instagram.com/p/CaYXZA-v4pQ/"
+                        href="https://www.youtube.com/watch?v=Z-HZlqkPwH4"
                         rel="noopener noreferrer"
-                    > */}
-                    <figure className="mainFitCover">
-                        <img
-                            src="/img/sns/maxresdefault.jpg"
-                            alt=""
-                            className="mainFitCoverYoutube"
-                        />
-                    </figure>
-                    {/* </a> */}
+                    >
+                        <figure className="mainFitCover">
+                            <img
+                                src="/img/sns/maxresdefault.jpg"
+                                alt=""
+                                className="mainFitCoverYoutube"
+                            />
+                        </figure>
+                    </a>
                     <div className="youtubeTitle">
                         <span>제목 타이틀</span>
                         <div className="youtubeStatistics">
@@ -47,19 +47,19 @@ const SocialYouTube = () => {
                     </div>
                 </div>
                 <div className="youtubeContentsCard">
-                    {/* <a
+                    <a
                         target="_blank"
-                        href="https://www.instagram.com/p/CgMgsxxP-M3/"
+                        href="https://www.youtube.com/watch?v=Z-HZlqkPwH4"
                         rel="noopener noreferrer"
-                    > */}
-                    <figure className="mainFitCover">
-                        <img
-                            src="/img/sns/maxresdefault.jpg"
-                            alt=""
-                            className="mainFitCoverYoutube"
-                        />
-                    </figure>
-                    {/* </a> */}
+                    >
+                        <figure className="mainFitCover">
+                            <img
+                                src="/img/sns/maxresdefault.jpg"
+                                alt=""
+                                className="mainFitCoverYoutube"
+                            />
+                        </figure>
+                    </a>
                     <div className="youtubeTitle">
                         <span>제목 타이틀</span>
                         <div className="youtubeStatistics">
@@ -69,19 +69,19 @@ const SocialYouTube = () => {
                     </div>
                 </div>
                 <div className="youtubeContentsCard">
-                    {/* <a
+                    <a
                         target="_blank"
-                        href="https://www.instagram.com/p/CagutJWlkOO/"
+                        href="https://www.youtube.com/watch?v=Z-HZlqkPwH4"
                         rel="noopener noreferrer"
-                    > */}
-                    <figure className="mainFitCover">
-                        <img
-                            src="/img/sns/maxresdefault.jpg"
-                            alt=""
-                            className="mainFitCoverYoutube"
-                        />
-                    </figure>
-                    {/* </a> */}
+                    >
+                        <figure className="mainFitCover">
+                            <img
+                                src="/img/sns/maxresdefault.jpg"
+                                alt=""
+                                className="mainFitCoverYoutube"
+                            />
+                        </figure>
+                    </a>
                     <div className="youtubeTitle">
                         <span>제목 타이틀</span>
                         <div className="youtubeStatistics">

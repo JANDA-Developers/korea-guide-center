@@ -208,7 +208,7 @@ body {
 .bloc-facette>* .wrapper-cat input,
 .bloc-facette>* .wrapper-cat>.wrapper-select select,
 .bloc-facette>* .wrapper-cat .dropdown>a:after,
-.bloc-social-wall .facebook>div div a figure img,
+// .bloc-social-wall .facebook>div div a figure img,
 .bloc-social-wall .instagram>div div a figure img,
 .bloc-commentaire .identification-form form .field label,
 .bloc-reviews .owl-carousel .item .header-reviews .author-name .no-photo span,
@@ -220,6 +220,7 @@ body {
   right: 0;
   bottom: 0;
 }
+
 
 .bloc-explanations .explanations li {
   display: -webkit-box;
@@ -313,7 +314,7 @@ main:after {
 .bloc-facette>* .wrapper-cat input,
 .bloc-facette>* .wrapper-cat>.wrapper-select select,
 .bloc-facette>* .wrapper-cat .dropdown>a:after,
-.bloc-social-wall .facebook>div div a figure img,
+// .bloc-social-wall .facebook>div div a figure img,
 .bloc-social-wall .instagram>div div a figure img,
 .bloc-commentaire .identification-form form .field label,
 .bloc-reviews .owl-carousel .item .header-reviews .author-name .no-photo span,
@@ -327,6 +328,7 @@ main:after {
   width: 100%;
   height: 100%;
 }
+
 
 .bloc-explanations .explanations li {
   display: -webkit-box;
@@ -30484,7 +30486,7 @@ body:not(.no-hover) .bloc-social-wall .facebook>div div a:focus figure img {
 
 .bloc-social-wall .facebook>div div a figure:before {
   display: block;
-  content: "";
+  // content: "";
   width: 100%;
   padding-bottom: 0px;
   padding-top: 100%;
