@@ -250,7 +250,7 @@ export const useDuplicateCheck = (defaultCheck: boolean = false) => {
 
     const checkNickNameDuplicateCheck = (nickName: string) => {
         setMessage({
-            fail: `${nickName}${s("isAlreadyUseEmail")}`,
+            fail: `${nickName}${s("isAlreadyUseNickName")}`,
             success: `${nickName}${s("isAvailable")}`,
         });
 
