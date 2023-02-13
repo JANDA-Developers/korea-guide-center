@@ -1,4 +1,3 @@
-import { Bold, Flex } from "@janda-com/front";
 import React, { useContext } from "react";
 import { AppContext } from "../../../../context/context";
 import { Paths } from "../../../../pages/index[depre]";

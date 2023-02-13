@@ -27,7 +27,7 @@ import { CardHead, ModalHead } from "../../component/modalHead/ModalHead";
 import { BirthDayPicker } from "../../component/birthDayPicker/BirthDayPicker";
 import PasswordChecker from "../../component/passwordChecker/PasswordCheck";
 
-interface IProp { }
+interface IProp {}
 
 export const BookerProfile: React.FC<IProp> = () => {
     if (typeof window === "undefined") return null;
@@ -76,27 +76,7 @@ export const BookerProfile: React.FC<IProp> = () => {
         );
     };
     const handleResgin = () => {
-        loginAnd(
-            () => {
-                toast.success(s("AccountConfirmCompleted"));
-                resginModalHook.openModal();
-            },
-            {
-                forceLogin: true,
-                modalInfo: {
-                    modalProps: {
-                        head: {
-                            element: (
-                                <ModalHead
-                                    title={s("plesaeResginTitle")}
-                                    description={s("plesaeResginDesc")}
-                                />
-                            ),
-                        },
-                    },
-                },
-            }
-        );
+        resginModalHook.openModal();
     };
 
     return (
@@ -132,19 +112,31 @@ export const BookerProfile: React.FC<IProp> = () => {
                             <CardBtn
                                 thema="primary"
                                 onClick={() => {
-
                                     if (securityInfoChange === true) {
+                                        if (
+                                            passwordHook.value !==
+                                            passwordCheckHook.value
+                                        ) {
+                                            toast.warn(
+                                                s(
+                                                    "passwordDifferentSoFailMessage"
+                                                )
+                                            );
+                                        } else {
+                                            const passwordValidationToken =
+                                                /(?=^.{8,16}$)(?=.*\d)(?=.*[ !@ #$%^ &*()_+}{":;'?/>.<,])(?!.*\s).*$/;
 
-
-
-                                        if (passwordHook.value !== passwordCheckHook.value) {
-                                            toast.warn(s("passwordDifferentSoFailMessage"));
-                                        }
-
-                                        else {
-                                            const passwordValidationToken = /(?=^.{8,16}$)(?=.*\d)(?=.*[ !@ #$%^ &*()_+}{":;'?/>.<,])(?!.*\s).*$/;
-
-                                            { passwordValidationToken.test(passwordHook.value) ? hanldeUpdateBookerProfile() : toast.warn(s("passwordMustIncludeMessage")); }
+                                            {
+                                                passwordValidationToken.test(
+                                                    passwordHook.value
+                                                )
+                                                    ? hanldeUpdateBookerProfile()
+                                                    : toast.warn(
+                                                          s(
+                                                              "passwordMustIncludeMessage"
+                                                          )
+                                                      );
+                                            }
                                         }
                                     }
                                 }}
