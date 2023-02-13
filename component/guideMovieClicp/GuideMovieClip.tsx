@@ -10,7 +10,7 @@ import React, { useContext } from "react";
 import { LineCutter } from "../../atom/LineCutter";
 import { AppContext } from "../../context/context";
 import { usePaths } from "../../hook/usePaths";
-import { Fuser } from "../../types/api";
+import { Fuser, UserRole } from "../../types/api";
 import { MovieClipCard } from "../mouseMovieClip/MovieClipCard";
 
 interface IProp extends IJDalignProp {
@@ -23,14 +23,17 @@ export const GuideMovieClip: React.FC<IProp> = ({ user, ...props }) => {
     const { l } = useContext(AppContext);
     const {
         _id,
+        profileImage,
         introduce,
         profileMediumImage,
         profileVideo,
         regions,
         nickName,
         guideCategory,
+        role,
     } = user;
-    if (!profileMediumImage?.uri && !profileVideo?.uri) return null;
+    if (!profileMediumImage?.uri && !profileImage?.uri) return null;
+    if (role === UserRole.ADMIN) return null;
 
     const isVideo = profileVideo?.fileType === "VIDEO";
 
@@ -41,7 +44,14 @@ export const GuideMovieClip: React.FC<IProp> = ({ user, ...props }) => {
                     toGuideProfileDetail(_id);
                 }}
                 secondImg={isVideo ? undefined : profileVideo?.uri}
-                img={profileMediumImage?.uri}
+                style={{
+                    height: "auto",
+                }}
+                img={
+                    profileMediumImage
+                        ? profileMediumImage?.uri
+                        : profileImage?.uri
+                }
                 video={isVideo ? profileVideo?.uri : undefined}
                 Body={
                     <JDalign text="left">
