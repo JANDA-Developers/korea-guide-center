@@ -324,6 +324,12 @@ export const useProfile = (role: profileRole) => {
                 id: "PasswordInput",
                 skip: !isSingUp,
             },
+            {
+                value: mediumImageHook.uri,
+                failMsg: "중간 사이즈 프로필 사진 필수 입력 부탁드립니다",
+                id: "MediumImageInput",
+                skip: !isGuideUpdate,
+            },
         ]);
 
     const handleChangeToGuide = () => {

@@ -243,7 +243,7 @@ export const ProfileForm: React.FC<IProp> = ({ profileHook }) => {
                 onChange={setGuideLicenses}
             />
             <Head
-                title={"프로필사진 중간 사이즈(선택사항)"}
+                title={"프로필사진 중간 사이즈(필수)"}
                 require
                 description={"중간 사이즈의 프로필 및 비디오 등록 (선택사항)"}
             />
