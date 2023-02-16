@@ -115,6 +115,7 @@ function App({ Component, pageProps }: any) {
             style={{
                 maxHeight: "100vh",
                 overflowY: "auto",
+                overflowX: "hidden",
             }}
             id="APP"
             className={"App" + (isMobile ? " App--mobile" : "")}
