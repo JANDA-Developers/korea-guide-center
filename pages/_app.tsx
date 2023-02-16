@@ -113,9 +113,10 @@ function App({ Component, pageProps }: any) {
         <div
             key={appContext.me?._id + locale}
             style={{
-                maxHeight: "100vh",
-                overflowY: "auto",
-                overflowX: "hidden",
+                width: "100%"
+                //  maxHeight: "100vh",
+                //   overflowY: "auto",
+                //   overflowX: "hidden",
             }}
             id="APP"
             className={"App" + (isMobile ? " App--mobile" : "")}
