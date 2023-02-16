@@ -127,7 +127,7 @@ function App({ Component, pageProps }: any) {
                         content="코리아 가이드센터 한국여행 가이드여행 전문 한국가이드 찾기"
                     />
                 )}
-                <title>Koreaguide Center</title>
+                <title>코리아가이드센터 - Koreaguide Center</title>
             </Head>
             <AppContext.Provider
                 key={appContext.me?._id}
