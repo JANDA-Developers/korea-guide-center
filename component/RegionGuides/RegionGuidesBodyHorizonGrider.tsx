@@ -1,6 +1,7 @@
 // HorizonGrider 복사본입니다.
 
 import { Flex, isEmpty } from "@janda-com/front";
+import { maxWidth } from "@mui/system";
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import {
@@ -55,7 +56,7 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
         <div ref={ref}>
             <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
                 <Flex
-                    style={{ flexDirection: "column", paddingRight: "20px" }}
+                    style={{ flexDirection: "column", width: "96vw", paddingRight: "1vw" }}
                     oneone
                     className={className}
                     wrap={wrap}
@@ -68,6 +69,7 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
                     ))}
                     <button
                         className="detailNavCard__jdButtonWidth4"
+                        style={{ width: "99%" }}
                         onClick={() => {
                             push(`/guides`);
                         }}
