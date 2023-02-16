@@ -57,15 +57,15 @@ function GuideIntro({ item }: IGuideIntroProps) {
                         </div>
                     )}
                 </div>
+                <button
+                    className="detailNavCard__jdButtonWidth3"
+                    onClick={() => {
+                        handleToChatRoomOrCreate();
+                    }}
+                >
+                    {s("talkWith")}
+                </button>
             </Flex>
-            <button
-                className="detailNavCard__jdButtonWidth3"
-                onClick={() => {
-                    handleToChatRoomOrCreate();
-                }}
-            >
-                {s("talkWith")}
-            </button>
         </Flex>
     );
 }
