@@ -25,14 +25,14 @@ class MyDocument extends Document {
 
                     <meta
                         property="og:title"
-                        content="Koreaguide Center"
+                        content="코리아가이드센터 - Koreaguide Center"
                         key="title"
                     />
                     <meta
                         property="og:description"
                         content="한국 가이드 여행의 모든것"
                     />
-                    <title>Koreaguide Center</title>
+                    <title>코리아가이드센터 - Koreaguide Center</title>
                     <meta
                         name="description"
                         content="Korea Guide Center Korea Travel GuideFind a professional travel guide 코리아가이드센터"
