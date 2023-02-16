@@ -22,6 +22,7 @@ class MyDocument extends Document {
                         as="font"
                         type="fonts/ttf"
                     />
+
                     <meta
                         property="og:title"
                         content="Koreaguide Center"
@@ -39,7 +40,7 @@ class MyDocument extends Document {
                     <meta name="keywords" content="Korea, Guide, Travel" />
                     <meta
                         name="naver-site-verification"
-                        content="5bedfa81bf9ae5dfce4d804a14bfb04c74e4cb8a"
+                        content="1a6c047bd032992b86444ad02dfd0219f12084dc"
                     />
                     <meta
                         name="google-site-verification"
