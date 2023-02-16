@@ -56,7 +56,7 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
         <div ref={ref}>
             <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
                 <Flex
-                    style={{ flexDirection: "column", width: "96vw", paddingRight: "1vw" }}
+                    style={{ flexDirection: "column", width: "96vw" }}
                     oneone
                     className={className}
                     wrap={wrap}
