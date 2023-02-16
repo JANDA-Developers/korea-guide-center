@@ -129,11 +129,6 @@ function App({ Component, pageProps }: any) {
                     />
                 )}
                 <title>Koreaguide Center</title>
-                <meta
-                    name="naver-site-verification"
-                    content="669e41d134b60d5e16e6d2c4b237dc528218e483"
-                />
-                <meta httpEquiv="x-ua-compatible" content="IE=edge" />
             </Head>
             <AppContext.Provider
                 key={appContext.me?._id}

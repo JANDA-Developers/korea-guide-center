@@ -35,7 +35,7 @@ class MyDocument extends Document {
                     <title>Koreaguide Center</title>
                     <meta
                         name="description"
-                        content="Korea Guide Center Korea Travel GuideFind a professional travel guide"
+                        content="Korea Guide Center Korea Travel GuideFind a professional travel guide 코리아가이드센터"
                     />
                     <meta name="keywords" content="Korea, Guide, Travel" />
                     <meta
