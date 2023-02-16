@@ -56,7 +56,7 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
         <div ref={ref}>
             <AnimationOnScroll animateOnce animateIn="animate__fadeIn">
                 <Flex
-                    style={{ flexDirection: "column", width: "96vw" }}
+                    style={{ flexDirection: "column" }}
                     oneone
                     className={className}
                     wrap={wrap}
@@ -69,7 +69,6 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
                     ))}
                     <button
                         className="detailNavCard__jdButtonWidth4"
-                        style={{ width: "99%" }}
                         onClick={() => {
                             push(`/guides`);
                         }}
