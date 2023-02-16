@@ -66,18 +66,6 @@ const RegionGuidesBodyHorizonGrider = <_, T>({
                     {items.map((item) => (
                         <GuideIntro item={item}></GuideIntro>
                     ))}
-                    {/* <JDalign
-                        mr
-                        className="ProductViewCards__card ProductViewCards__card--placeholder"
-                    />
-                    <JDalign
-                        mr
-                        className="ProductViewCards__card ProductViewCards__card--placeholder"
-                    />
-                    <JDalign
-                        mr
-                        className="ProductViewCards__card ProductViewCards__card--placeholder"
-                    /> */}
                     <button
                         className="detailNavCard__jdButtonWidth4"
                         onClick={() => {

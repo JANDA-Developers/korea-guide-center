@@ -5,7 +5,6 @@ import { Info2 } from "../../atom/Info";
 import { AppContext } from "../../context/context";
 import { Flangs } from "../../types/api";
 import { Badges2 } from "../statusBadges/StatusBadges";
-import { ProductViewCardsWithApi } from "../productViewCard/ProductViewCardsWithApi";
 import { Introduce2 } from "../productDetailComponents/DetailNavCardIntroduce";
 import { LineCutter } from "../../atom/LineCutter";
 
