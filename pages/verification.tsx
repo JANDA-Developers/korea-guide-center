@@ -10,14 +10,11 @@ import {
     WindowSize,
 } from "@janda-com/front";
 import { useRouter } from "next/router";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import BookLayout from "../component/layout/BookLayout";
 import { CardHead } from "../component/modalHead/ModalHead";
 import { AppContext } from "../context/context";
-import {
-    useVerification,
-    useVerificationSignInPhoneNumber,
-} from "../hook/useVerification";
+import { useVerificationSignInPhoneNumber } from "../hook/useVerification";
 import { VerificationEvent, VerificationTarget } from "../types/api";
 import { emailVerificationLink } from "../types/const";
 import { whenMultiKeyPress } from "../utils/multiKeyPress";

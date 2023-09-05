@@ -1,6 +1,5 @@
 import "../utils/console-config";
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { LoadingPage } from "../component/pageLoading/PageLoading";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx: any) {
@@ -32,7 +31,7 @@ class MyDocument extends Document {
                         property="og:description"
                         content="한국 가이드 여행의 모든것"
                     />
-                    <title>코리아가이드센터 - Koreaguide Center</title>
+                    {/* <title>코리아가이드센터 - Koreaguide Center</title> */}
                     <meta
                         name="description"
                         content="Korea Guide Center Korea Travel GuideFind a professional travel guide - 코리아가이드센터"
