@@ -729,10 +729,10 @@ const utils_message = {
         chi: "还没有旅游商品。",
     },
     itsguide_adress: {
-        ko: "부산광역시 영도구 봉래나루로 33",
-        en: `(49037) 33 Bongnaenaru-ro, Yeongdo-gu, Busan, Republic of Korea`,
-        ja: `(49037) 33 Bongnaenaru-ro, Yeongdo-gu, Busan, Republic of Korea`,
-        chi: `釜山广域市 影岛区 Bongnaenaru路 33 (49037)`,
+        ko: "부산시 영도구 태종로 39. 해안루미너스1107호",
+        en: `1107, Haean Luminus, 39, Taejong-ro, Yeongdo-gu, Busan, South Korea`,
+        ja: `1107, Haean Luminus, 39, Taejong-ro, Yeongdo-gu, Busan, South Korea`,
+        chi: `韩国釜山市泳堂区太宗路39号 海岸Luminus 1107室`,
     },
     itsguide_name: {
         ko: "코리아가이드센터(주)",
