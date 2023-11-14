@@ -1,5 +1,4 @@
 import {
-    autoComma,
     Bold,
     getAllFromUrl,
     JDbutton,
@@ -12,7 +11,6 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { BankInfoInput } from "../../component/bankComponents/BankInfoInput";
-import { Logo } from "../../component/logo/Logo";
 import { PaymethodRadios } from "../../component/PaymethodRadio";
 import { PolicyCheckers } from "../../component/policyViewer/PolicyChecker";
 import { DetailPriceViewer } from "../../component/productDetailComponents/DetailPriceViwer";
@@ -26,13 +24,10 @@ import { getNiceProperty } from "../../nice/getNiceProperty";
 import NiceElments from "../../nice/NiceElments";
 import { PaypalButtonLoader } from "../../paypal/PaypalButtonLoader";
 import { Paymethod } from "../../types/api";
-import {
-    ITS_GUIDE_LOGO,
-    ITS_GUIDE_LOGO_LONG,
-    payMethodKr,
-} from "../../types/const";
+import { ITS_GUIDE_LOGO_LONG, payMethodKr } from "../../types/const";
 import { withWon } from "../../utils/formatter";
 import { BookerInfoBlock } from "../booking/components/bookingModal/BookerInfoBlock";
+import TossCheckOut from "../../component/Toss/TossCheckOut";
 
 export interface IBuyPageQuery {
     tourId?: string;
@@ -66,6 +61,7 @@ export const Pay: React.FC<IProp> = () => {
     const { l, s } = useContext(AppContext);
 
     const {
+        isToss,
         isPayPal,
         totalPrice,
         bookerContactHook,
@@ -152,6 +148,7 @@ export const Pay: React.FC<IProp> = () => {
                             callBackApprove={handleCreate}
                         />
                     )}
+                    {isToss && <TossCheckOut />}
                 </div>
             </JDcard>
             <NiceElments
@@ -165,16 +162,18 @@ export const Pay: React.FC<IProp> = () => {
                 })}
                 logo={location.origin + ITS_GUIDE_LOGO_LONG}
             />
-            <JDbutton
-                br="square"
-                hide={isPayPal}
-                size="large"
-                onClick={handleCreate}
-                thema="primary"
-                mode="flat"
-            >
-                {withWon(totalPrice)} {s("doPay")}
-            </JDbutton>
+            {!isToss && (
+                <JDbutton
+                    br="square"
+                    hide={isPayPal}
+                    size="large"
+                    onClick={handleCreate}
+                    thema="primary"
+                    mode="flat"
+                >
+                    {withWon(totalPrice)} {s("doPay")}
+                </JDbutton>
+            )}
         </JDcontainer>
     );
 };

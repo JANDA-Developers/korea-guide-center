@@ -134,7 +134,8 @@ export const useBookingWrite = (defaultBooking?: Partial<Fbooking>) => {
     const isBankPay = nextData.paymethod === Paymethod.BANK_TRANSFER;
     const isNCpay = isNicePayMethod(nextData.paymethod as any);
     const isPayPal = nextData.paymethod === Paymethod.PAY_PAL;
-    const paymethodSelected = isBankPay || isNCpay || isPayPal;
+    const isToss = nextData.paymethod === Paymethod.TOSS;
+    const paymethodSelected = isBankPay || isNCpay || isPayPal || isToss;
 
     const { validate: bookingValidate } = new Validater([
         ...bookingCreatePolicy.policyCheckNodes,
@@ -229,6 +230,7 @@ export const useBookingWrite = (defaultBooking?: Partial<Fbooking>) => {
     return {
         isNCpay,
         isPayPal,
+        isToss,
         isBankPay,
         tourHook,
         paymethodHook,

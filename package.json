@@ -27,6 +27,8 @@
     "@janda-com/front": "^4.0.7",
     "@mui/material": "^5.9.0",
     "@react-google-maps/api": "^2.5.0",
+    "@tanstack/react-query": "^4.24.10",
+    "@tosspayments/payment-widget-sdk": "^0.10.0",
     "@types/react-image-gallery": "^1.0.5",
     "aos": "^2.3.4",
     "apollo-client": "^2.6.10",

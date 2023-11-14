@@ -1444,6 +1444,12 @@ const utils_message = {
         ja: `Paypal`,
         chi: `贝宝`,
     },
+    toss: {
+        ko: "토스",
+        en: "TOSS",
+        ja: "TOSS",
+        chi: "TOSS",
+    },
     ratingOrder: {
         ko: "평점순",
         en: `Popular`,

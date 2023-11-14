@@ -955,6 +955,59 @@
     "exenv" "^1.2.2"
     "prop-types" "^15.6.2"
 
+"@tanstack/query-core@4.36.1":
+  "integrity" "sha512-DJSilV5+ytBP1FbFcEJovv4rnnm/CokuVvrBEtW/Va9DvuJ3HksbXUJEpI0aV1KtuL4ZoO9AVE6PyNLzF7tLeA=="
+  "resolved" "https://registry.npmjs.org/@tanstack/query-core/-/query-core-4.36.1.tgz"
+  "version" "4.36.1"
+
+"@tanstack/react-query@^4.24.10":
+  "integrity" "sha512-y7ySVHFyyQblPl3J3eQBWpXZkliroki3ARnBKsdJchlgt7yJLRDUcf4B8soufgiYt3pEQIkBWBx1N9/ZPIeUWw=="
+  "resolved" "https://registry.npmjs.org/@tanstack/react-query/-/react-query-4.36.1.tgz"
+  "version" "4.36.1"
+  dependencies:
+    "@tanstack/query-core" "4.36.1"
+    "use-sync-external-store" "^1.2.0"
+
+"@tosspayments/brandpay-types@^0.2.6":
+  "integrity" "sha512-FY8aOm/2rqtXjYux9ZdNTL6GC5+VNIw8eOQ7TP01dS2uGWSzAtR6uuw9HVsgkmJtSyJgmo97tjmbio5oyeyFlg=="
+  "resolved" "https://registry.npmjs.org/@tosspayments/brandpay-types/-/brandpay-types-0.2.6.tgz"
+  "version" "0.2.6"
+
+"@tosspayments/payment__types@^1.66.2":
+  "integrity" "sha512-DE3nzEptEj8f3UHrUllNZANRetho6lRnhIPMhDkpm4/u7EW/WS3IeS+gwvNj5vUThTX8i7giAsdd80ZuWcQ6jg=="
+  "resolved" "https://registry.npmjs.org/@tosspayments/payment__types/-/payment__types-1.66.2.tgz"
+  "version" "1.66.2"
+  dependencies:
+    "@tosspayments/sdk-constants" "^0.2.2"
+
+"@tosspayments/payment-widget__types@^0.3.0":
+  "integrity" "sha512-+G918GyIsGu0tkzIv+dpmypbDY6r0issKCGEvzckILq/qggS7QAymh5dUiyicfDOx+IMPHjReMvj9V08q1VYIg=="
+  "resolved" "https://registry.npmjs.org/@tosspayments/payment-widget__types/-/payment-widget__types-0.3.0.tgz"
+  "version" "0.3.0"
+  dependencies:
+    "@tosspayments/brandpay-types" "^0.2.6"
+    "@tosspayments/payment__types" "^1.66.2"
+    "@tosspayments/payment-widget-types" "^0.0.5"
+
+"@tosspayments/payment-widget-sdk@^0.10.0":
+  "integrity" "sha512-xTZFUm76/dTxabaZ2w1ec5skIUNhA+myTpcMuFkxf/AnuksYgzOB3mAt4siZM77Re8SEtQpbllPDM1fnX04XSw=="
+  "resolved" "https://registry.npmjs.org/@tosspayments/payment-widget-sdk/-/payment-widget-sdk-0.10.0.tgz"
+  "version" "0.10.0"
+  dependencies:
+    "@tosspayments/payment-widget__types" "^0.3.0"
+
+"@tosspayments/payment-widget-types@^0.0.5":
+  "integrity" "sha512-Daaui9u7aRPzJhw4omJIUAbYBSmNAFNjWWkuUnX9uHxzE3gtjcJHIpGrjlzmCFm+j3ZH4rgyrgv4pkazVYH3OQ=="
+  "resolved" "https://registry.npmjs.org/@tosspayments/payment-widget-types/-/payment-widget-types-0.0.5.tgz"
+  "version" "0.0.5"
+
+"@tosspayments/sdk-constants@^0.2.2":
+  "integrity" "sha512-qTIcD9JnVtN65/yiW5sPAlvK5fpQtDluv4IEyslubncbQLQKE+ePSnGZU1fLNPxcchv6QTnwmgj9Ndm6EN/Ymg=="
+  "resolved" "https://registry.npmjs.org/@tosspayments/sdk-constants/-/sdk-constants-0.2.2.tgz"
+  "version" "0.2.2"
+  dependencies:
+    "type-fest" "^2.11.2"
+
 "@types/aos@^3.0.4":
   "integrity" "sha512-mna6Jd6bdK1NpwarLopGvXOgUoCfj0470IwLxuVOFDElTGI0JTd7xSGQ0AjbAEnHErC/b3fA9t2uB3IXVKmckA=="
   "resolved" "https://registry.npmjs.org/@types/aos/-/aos-3.0.4.tgz"
@@ -7522,15 +7575,20 @@
   "resolved" "https://registry.npmjs.org/type-fest/-/type-fest-0.7.1.tgz"
   "version" "0.7.1"
 
+"type-fest@^2.11.2":
+  "integrity" "sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA=="
+  "resolved" "https://registry.npmjs.org/type-fest/-/type-fest-2.19.0.tgz"
+  "version" "2.19.0"
+
 "typedarray@^0.0.6":
   "integrity" "sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c= sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA=="
   "resolved" "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
 
-"typescript@^4.4.3", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
-  "integrity" "sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA=="
-  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.4.3.tgz"
-  "version" "4.4.3"
+"typescript@^4.1.0", "typescript@^4.4.3", "typescript@^4.7.4", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta":
+  "integrity" "sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g=="
+  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
+  "version" "4.9.5"
 
 "unbox-primitive@^1.0.2":
   "integrity" "sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw=="
@@ -7655,6 +7713,11 @@
   "version" "1.5.1"
   dependencies:
     "object-assign" "^4.1.1"
+
+"use-sync-external-store@^1.2.0":
+  "integrity" "sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA=="
+  "resolved" "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz"
+  "version" "1.2.0"
 
 "use@^3.1.0":
   "integrity" "sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ=="
