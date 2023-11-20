@@ -273,7 +273,6 @@ export const NotificationDefaultSenderOp: Record<
 };
 
 export const payMethodKr: Record<Paymethod, string> = {
-    TOSS: "토스",
     BANK_TRANSFER: "계좌이체",
     CARD: "카드결제",
     CASH: "현금결제",
@@ -284,7 +283,6 @@ export const payMethodKr: Record<Paymethod, string> = {
 };
 
 export const payMethodLang: Record<Paymethod, string> = {
-    TOSS: "토스",
     BANK_TRANSFER: "계좌이체",
     CARD: "카드결제",
     CASH: "현금결제",
@@ -324,11 +322,6 @@ export const PAY_METHOD_LANGS_OPS = (s: any) => [
         label: s("bankPay"),
         value: Paymethod.BANK_TRANSFER,
         icon: "/img/payments/bankbook.png",
-    },
-    {
-        label: s("toss"),
-        value: Paymethod.TOSS,
-        icon: "/img/payments/credit-card.png",
     },
 ];
 

@@ -20993,7 +20993,6 @@ export enum OrderAbleTarget {
 
 export enum Paymethod {
     BANK_TRANSFER = "BANK_TRANSFER",
-    TOSS = "TOSS",
     CARD = "CARD",
     CASH = "CASH",
     KAKAO = "KAKAO",

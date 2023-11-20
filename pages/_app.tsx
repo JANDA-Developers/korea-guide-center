@@ -22,7 +22,6 @@ import { useDummyLogin } from "../hook/useDummyLogin";
 import { consoleCover } from "../utils/console-config";
 import { RecoilRoot } from "recoil";
 import router from "next/router";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const PrivacyModal = lazy(
     () => import("../component/privacyModal/PrivacyModal")
@@ -203,16 +202,13 @@ function App({ Component, pageProps }: any) {
     );
 }
 export const AppWrap = (props: any) => {
-    const [queryClient] = useState(() => new QueryClient());
     return (
         <div>
-            <QueryClientProvider client={queryClient}>
-                <RecoilRoot>
-                    <ApolloProvider client={apolloClient}>
-                        <App {...props} />
-                    </ApolloProvider>
-                </RecoilRoot>
-            </QueryClientProvider>
+            <RecoilRoot>
+                <ApolloProvider client={apolloClient}>
+                    <App {...props} />
+                </ApolloProvider>
+            </RecoilRoot>
         </div>
     );
 };

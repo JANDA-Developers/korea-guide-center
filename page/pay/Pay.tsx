@@ -27,7 +27,6 @@ import { Paymethod } from "../../types/api";
 import { ITS_GUIDE_LOGO_LONG, payMethodKr } from "../../types/const";
 import { withWon } from "../../utils/formatter";
 import { BookerInfoBlock } from "../booking/components/bookingModal/BookerInfoBlock";
-import TossCheckOut from "../../component/Toss/TossCheckOut";
 
 export interface IBuyPageQuery {
     tourId?: string;
@@ -61,7 +60,6 @@ export const Pay: React.FC<IProp> = () => {
     const { l, s } = useContext(AppContext);
 
     const {
-        isToss,
         isPayPal,
         totalPrice,
         bookerContactHook,
@@ -148,7 +146,6 @@ export const Pay: React.FC<IProp> = () => {
                             callBackApprove={handleCreate}
                         />
                     )}
-                    {isToss && <TossCheckOut />}
                 </div>
             </JDcard>
             <NiceElments
@@ -162,18 +159,17 @@ export const Pay: React.FC<IProp> = () => {
                 })}
                 logo={location.origin + ITS_GUIDE_LOGO_LONG}
             />
-            {!isToss && (
-                <JDbutton
-                    br="square"
-                    hide={isPayPal}
-                    size="large"
-                    onClick={handleCreate}
-                    thema="primary"
-                    mode="flat"
-                >
-                    {withWon(totalPrice)} {s("doPay")}
-                </JDbutton>
-            )}
+
+            <JDbutton
+                br="square"
+                hide={isPayPal}
+                size="large"
+                onClick={handleCreate}
+                thema="primary"
+                mode="flat"
+            >
+                {withWon(totalPrice)} {s("doPay")}
+            </JDbutton>
         </JDcontainer>
     );
 };
