@@ -15,6 +15,7 @@
     "crypto": false
   },
   "dependencies": {
+    "file-saver": "git+https://github.com/JANDA-Developers/file-saver.git#main",
     "@apollo/client": "^3.3.6",
     "@ckeditor/ckeditor5-react": "^3.0.0",
     "@ffmpeg/core": "^0.10.0",
