@@ -20,11 +20,8 @@ import { TravelersForm } from "../../component/traveler/TravlerForm";
 import { AppContext } from "../../context/context";
 import { useBookingWrite } from "../../hook/useBookingWrite";
 import { useTourFindById } from "../../hook/useTour";
-import { getNiceProperty } from "../../nice/getNiceProperty";
-import NiceElments from "../../nice/NiceElments";
 import { PaypalButtonLoader } from "../../paypal/PaypalButtonLoader";
-import { Paymethod } from "../../types/api";
-import { ITS_GUIDE_LOGO_LONG, payMethodKr } from "../../types/const";
+import { payMethodKr } from "../../types/const";
 import { withWon } from "../../utils/formatter";
 import { BookerInfoBlock } from "../booking/components/bookingModal/BookerInfoBlock";
 
@@ -60,6 +57,7 @@ export const Pay: React.FC<IProp> = () => {
     const { l, s } = useContext(AppContext);
 
     const {
+        isPGpay,
         isPayPal,
         totalPrice,
         bookerContactHook,
@@ -148,7 +146,14 @@ export const Pay: React.FC<IProp> = () => {
                     )}
                 </div>
             </JDcard>
-            <NiceElments
+            <div
+                style={{
+                    display: isPGpay ? undefined : "none",
+                }}
+                id="payment-widget"
+            ></div>
+            <div id="agreement"></div>
+            {/* <NiceElments
                 {...getNiceProperty({
                     email: bookerEmailHook.value,
                     goodsName: l(title),
@@ -158,7 +163,7 @@ export const Pay: React.FC<IProp> = () => {
                     paymethod: paymethodHook[0] || Paymethod.CARD,
                 })}
                 logo={location.origin + ITS_GUIDE_LOGO_LONG}
-            />
+            /> */}
 
             <JDbutton
                 br="square"

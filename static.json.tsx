@@ -4060,6 +4060,18 @@ const utils_message = {
         ja: "カスタムツアー",
         chi: "定制旅游",
     },
+    paymentFailed: {
+        ko: "결제에 실패하였습니다.",
+        en: "Payment failed.",
+        ja: "支払いに失敗しました。",
+        chi: "支付失败。",
+    },
+    paymentFailedDesc: {
+        ko: "결제에 실패하였습니다. 다시 시도해주세요.",
+        en: "Payment failed. Please try again.",
+        ja: "支払いに失敗しました。もう一度お試しください。",
+        chi: "支付失败。请再试一次。",
+    },
 };
 
 export const info = {

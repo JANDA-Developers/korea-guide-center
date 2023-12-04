@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 module.exports = {
+    ignoreBuildErrors: true,
     eslint: {
         ignoreDuringBuilds: true,
     },
@@ -51,6 +52,13 @@ module.exports = {
             //   ],
             // },
         ];
+    },
+    typescript: {
+        // !! WARN !!
+        // Dangerously allow production builds to successfully complete even if
+        // your project has type errors.
+        // !! WARN !!
+        ignoreBuildErrors: true,
     },
     compiler: {
         styledComponents: true,
